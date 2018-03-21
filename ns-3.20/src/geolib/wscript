@@ -1,0 +1,51 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+# def options(opt):
+#     pass
+
+# def configure(conf):
+#     conf.check_nonfatal(header_name='stdint.h', define_name='HAVE_STDINT_H')
+
+def build(bld):
+    module = bld.create_ns3_module('geolib', ['core'])
+    module.source = [
+        'model/AzimuthalEquidistant.cpp',
+        'model/CassiniSoldner.cpp',
+        'model/DMS.cpp',
+        'model/EllipticFunction.cpp',
+        'model/Geocentric.cpp',
+        'model/GeoCoords.cpp',
+        'model/Geodesic.cpp',
+        'model/Geoid.cpp',
+        'model/LambertConformalConic.cpp',
+        'model/LocalCartesian.cpp',
+        'model/MGRS.cpp',
+        'model/PolarStereographic.cpp',
+        'model/TransverseMercator.cpp',
+        'model/TransverseMercatorExact.cpp',
+        'model/UTMUPS.cpp',
+        ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'geolib'
+    headers.source = [
+        'model/AzimuthalEquidistant.hpp',
+        'model/CassiniSoldner.hpp',
+        'model/DMS.hpp',
+        'model/EllipticFunction.hpp',
+        'model/Geocentric.hpp',
+        'model/GeoCoords.hpp',
+        'model/Geodesic.hpp',
+        'model/Geoid.hpp',
+        'model/LambertConformalConic.hpp',
+        'model/LocalCartesian.hpp',
+        'model/MGRS.hpp',
+        'model/PolarStereographic.hpp',
+        'model/TransverseMercator.hpp',
+        'model/TransverseMercatorExact.hpp',
+        'model/UTMUPS.hpp',
+        'model/Constants.hpp',
+        ]
+
+    # bld.ns3_python_bindings()
+

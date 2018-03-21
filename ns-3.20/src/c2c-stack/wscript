@@ -1,0 +1,132 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+import os
+import sys
+
+# WAF modules
+from waflib import Utils, Scripting, Configure, Build, Options, TaskGen, Context, Task, Logs, Errors
+from waflib.Errors import WafError
+
+# Required NSC version
+NSC_RELEASE_NAME = "nsc-0.5.1"
+
+def options(opt):
+    opt.add_option('--with-nsc',
+                   help=('Use Network Simulation Cradle, given by the indicated path,'
+                         ' to allow the use of real-world network stacks'),
+                   default='', dest='with_nsc')
+
+def configure(conf):
+    conf.env['ENABLE_NSC'] = False
+    # Check for the location of NSC
+    if Options.options.with_nsc:
+        if os.path.isdir(Options.options.with_nsc):
+            # chek_message e' stato eliminato, scrivo diversamente
+            #conf.check_message("NSC location", '', True, ("%s (given)" % Options.options.with_nsc))
+	    conf.msg("NSC location", ("%s (given)" % Options.options.with_nsc))
+	    conf.env['WITH_NSC'] = os.path.abspath(Options.options.with_nsc)
+    else:
+        nsc_dir = os.path.join('..', "nsc")
+        if os.path.isdir(nsc_dir):
+	    # chek_message e' stato eliminato, scrivo diversamente
+            #conf.check_message("NSC location", '', True, ("%s (guessed)" % nsc_dir))
+	    conf.msg("NSC location", ("%s (guessed)" % Options.options.with_nsc))
+	    conf.env['WITH_NSC'] = os.path.abspath(nsc_dir)
+        del nsc_dir
+    if not conf.env['WITH_NSC']:
+        #conf.check_message("NSC location", '', False)
+	conf.msg("NSC location", "False")	
+	conf.report_optional_feature("nsc", "Network Simulation Cradle", False,
+                                     "NSC not found (see option --with-nsc)")
+	return
+    
+    if sys.platform in ['linux2']:
+        arch = os.uname()[4]
+    else:
+        arch = None
+    ok = False
+    if arch == 'x86_64' or arch == 'i686' or arch == 'i586' or arch == 'i486' or arch == 'i386':
+        conf.env['NSC_ENABLED'] = 'yes'
+        conf.env.append_value('CXXDEFINES', 'NETWORK_SIMULATION_CRADLE')
+        conf.check(mandatory=True, lib='dl', define_name='HAVE_DL', uselib='DL')
+        ok = True
+    conf.check_message('NSC supported architecture', arch, ok)
+    conf.report_optional_feature("nsc", "Network Simulation Cradle", ok,
+                                 "architecture %r not supported" % arch)
+
+    # append the NSC kernel dirs to the module path so that these dirs
+    # will end up in the LD_LIBRARY_PATH, thus allowing the NSC NS-3
+    # module to find the necessary NSC shared libraries.
+    for nsc_module in ['linux-2.6.18', 'linux-2.6.26']:
+        conf.env.append_value('NS3_MODULE_PATH',
+                              os.path.abspath(os.path.join(conf.env['WITH_NSC'], nsc_module)))
+
+
+def build(bld):
+    module = bld.create_ns3_module('c2c-stack', ['internet'])
+    module.source = [
+        'model/c2c-l3-protocol.cc',
+        'model/c2c-l4-protocol.cc',
+        'model/c2c-transport.cc',
+        'model/c2cl4T-socket-factory-impl.cc',
+        'model/c2cl4T-socket-impl.cc',
+        'model/c2c-end-point-demux.cc',
+        'model/c2c-end-point.cc',
+        'model/c2c-interface.cc',
+        'model/traffic-class-tag.cc',
+        'model/mcs-tag.cc',
+        'model/tx-power-tag.cc',
+        'model/c2cTransport-header.cc',
+	'model/beaconing-protocol.cc',
+        'model/node-id-tag.cc',
+        'model/time-stamp-tag.cc',
+        'model/time-step-tag.cc',
+        'model/TStep-sequence-number-tag.cc',
+        'model/app-index-tag.cc',
+	'helper/c2c-interface-helper.cc',
+		# aggiunto, fa parte di itetris
+	'helper/c2c-interface-container.cc',
+		# aggiunto, fa parte di itetris
+        ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'c2c-stack'
+    headers.source = [
+        'model/c2c-l3-protocol.h',
+        'model/c2c-l4-protocol.h',
+        'model/c2c-transport.h',
+        'model/c2cl4T-socket-factory-impl.h',
+        'model/c2cl4T-socket-impl.h',        
+        'model/c2c-end-point-demux.h',
+        'model/c2c-end-point.h',
+        'model/c2c-interface.h',
+        'model/traffic-class-tag.h',
+        'model/mcs-tag.h',
+        'model/tx-power-tag.h',
+        'model/itetris-technologies.h', 
+        'model/c2cTransport-header.h',
+	'model/beaconing-protocol.h',
+        'model/node-id-tag.h',
+        'model/time-stamp-tag.h',
+        'model/time-step-tag.h',
+        'model/TStep-sequence-number-tag.h',
+        'model/app-index-tag.h',
+	'helper/c2c-interface-helper.h',
+		# aggiunto, fa parte di itetris
+	'helper/c2c-interface-container.h',
+		# aggiunto, fa parte di itetris
+        ]
+
+    if bld.env.ENABLE_EXAMPLES:
+        bld.recurse('examples')
+
+    if bld.env['NSC_ENABLED']:
+        obj.source.append ('nsc-tcp-socket-impl.cc')
+        obj.source.append ('nsc-tcp-l4-protocol.cc')
+        obj.source.append ('nsc-tcp-socket-factory-impl.cc')
+        obj.source.append ('nsc-sysctl.cc')
+        headers.source.append('nsc-tcp-l4-protocol.h')
+        obj.uselib = 'DL'
+
+    # bld.ns3_python_bindings()
+

@@ -1,0 +1,26 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('inci', ['tcpip'])
+    module.source = [
+        'model/ns3-server.cc',
+        'model/ns3-commands.cc',
+        'model/message-schedule.cc',
+        'model/message-id-tag.cc',
+        ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'inci'
+    headers.source = [
+	'model/ns3-comm-constants.h',
+        'model/ns3-server.h',
+        'model/ns3-commands.h',
+        'model/message-schedule.h',
+        'model/message-id-tag.h',
+        ]
+
+    if bld.env.ENABLE_EXAMPLES:
+        bld.recurse('examples')
+
+    # bld.ns3_python_bindings()
+

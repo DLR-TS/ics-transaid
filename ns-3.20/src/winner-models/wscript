@@ -1,0 +1,51 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+# def options(opt):
+#     pass
+
+# def configure(conf):
+#     conf.check_nonfatal(header_name='stdint.h', define_name='HAVE_STDINT_H')
+
+def build(bld):
+    module = bld.create_ns3_module('winner-models', ['core'])
+    module.source = [
+        'model/winner-loss-model.cc',
+        'model/winner-b1-loss-model.cc',
+        'model/winner-d1-loss-model.cc',
+        'model/winner-c2-loss-model.cc',
+        'model/visibility-model.cc',
+        'model/visibility-map-model.cc',
+        'model/building-map-model.cc',
+        'model/visibility-prob-d1.cc',
+        'model/visibility-prob-b1.cc',
+        'model/visibility-prob-c2.cc',
+        'model/shadowing-model.cc',
+        'model/spline.cc',
+        'model/shadowing-spline.cc',
+        'model/fading-model.cc',
+        'model/cheng-loss-model.cc',
+        ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'winner-models'
+    headers.source = [
+        'model/winner-loss-model.h',
+        'model/winner-b1-loss-model.h',
+        'model/winner-d1-loss-model.h',
+        'model/winner-c2-loss-model.h',
+        'model/visibility-model.h',
+        'model/visibility-map-model.h',
+        'model/building-map-model.h',
+        'model/visibility-prob-d1.h',
+        'model/visibility-prob-b1.h',
+        'model/visibility-prob-c2.h',
+        'model/shadowing-model.h',
+        'model/spline.h',
+        'model/shadowing-spline.h',
+        'model/fading-model.h',
+        'model/cheng-loss-model.h',
+        ]
+
+
+    # bld.ns3_python_bindings()
+

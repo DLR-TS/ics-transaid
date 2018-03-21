@@ -1,0 +1,103 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+# def options(opt):
+#     pass
+
+def configure(conf):
+    have_libxml2 = conf.check_cfg(package='libxml-2.0', atleast_version='2.7', 
+				  args=['--cflags', '--libs'], uselib_store='LIBXML2',
+				  mandatory=False)
+    if have_libxml2:
+        conf.define('HAVE_LIBXML2', 1)
+
+    conf.env['ENABLE_LIBXML2'] = have_libxml2
+    conf.report_optional_feature("XmlIo", "XmlIo",
+                                 conf.env['ENABLE_LIBXML2'],
+                                 "library 'libxml-2.0 >= 2.7' not found")
+def build(bld):
+    module = bld.create_ns3_module('inci-utils', ['core'])
+    module.source = [
+        'model/comm-module-installer.cc',
+        'model/configuration-manager-xml.cc',
+		'model/dvbh-bs-installer.cc',
+		'model/dvbh-installer.cc',
+		'model/dvbh-vehicle-installer.cc',
+		'model/facilities-installer.cc',
+        'model/inci-packet.cc',
+        'model/inci-packet-list.cc',
+        'model/ip-interface-list.cc',
+        'model/itetris-network-transport-installer.cc',
+        'model/iTETRISNodeManager.cc',
+        'model/mobility-model-installer.cc',
+        'model/packet-manager.cc',
+		'model/tmc-installer.cc',
+		'model/umts-bs-installer.cc',
+		'model/umts-installer.cc',
+		'model/umts-vehicle-installer.cc',
+        'model/wave-installer.cc',
+        'model/wave-rsu-installer.cc',
+        'model/wave-vehicle-installer.cc',
+        'model/wifi-bs-installer.cc',
+        'model/wifi-installer.cc',
+        'model/wifi-ip-installer.cc',
+        'model/wifi-vehicle-installer.cc',
+		'model/wimax-bs-installer.cc',
+		'model/wimax-installer.cc',
+		'model/wimax-vehicle-installer.cc',
+		'helper/dvbh-helper.cc',
+		'helper/Umts-App-helper.cc',
+		'helper/umts-helper.cc',
+		'helper/wimax-command-manager-helper.cc',
+       'model/lte-installer.cc', 
+	'model/lte-bs-installer.cc', 
+	'model/lte-vehicle-installer.cc', 
+        ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'inci-utils'
+    headers.source = [
+        'model/comm-module-installer.h',
+        'model/configuration-manager-xml.h',
+		'model/dvbh-bs-installer.h',
+		'model/dvbh-installer.h',
+		'model/dvbh-vehicle-installer.h',
+		'model/facilities-installer.h',
+        'model/inci-packet.h',
+        'model/inci-packet-list.h',
+        'model/ip-interface-list.h',
+        'model/itetris-network-transport-installer.h',
+        'model/iTETRISNodeManager.h',
+        'model/itetris-types.h',
+        'model/mobility-model-installer.h',
+        'model/packet-manager.h',
+		'model/tmc-installer.h',
+		'model/umts-bs-installer.h',
+		'model/umts-installer.h',
+		'model/umts-vehicle-installer.h',
+        'model/wave-installer.h',
+        'model/wave-rsu-installer.h',
+        'model/wave-vehicle-installer.h',
+        'model/wifi-bs-installer.h',
+        'model/wifi-installer.h',
+        'model/wifi-ip-installer.h',
+        'model/wifi-vehicle-installer.h',
+		'model/wimax-bs-installer.h',
+		'model/wimax-installer.h',
+		'model/wimax-vehicle-installer.h',
+		'helper/dvbh-helper.h',
+		'helper/Umts-App-helper.h',
+		'helper/umts-helper.h',
+		'helper/wimax-command-manager-helper.h',
+        	'model/lte-installer.h', 
+	        'model/lte-bs-installer.h', 
+        	'model/lte-vehicle-installer.h' 
+        ]
+
+    if bld.env.ENABLE_EXAMPLES:
+        bld.recurse('examples')
+        
+    if bld.env['ENABLE_LIBXML2']:
+        module.uselib = 'LIBXML2'
+
+    # bld.ns3_python_bindings()
+

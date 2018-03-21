@@ -1,0 +1,24 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+# def options(opt):
+#     pass
+
+# def configure(conf):
+#     conf.check_nonfatal(header_name='stdint.h', define_name='HAVE_STDINT_H')
+
+def build(bld):
+    module = bld.create_ns3_module('c2c-list-routing', ['core', 'internet'])
+    module.source = [
+	'model/c2c-list-routing.cc',
+	'helper/c2c-list-routing-helper.cc',
+        ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'c2c-list-routing'
+    headers.source = [
+	'model/c2c-list-routing.h',
+	'helper/c2c-list-routing-helper.h',
+        ]
+
+    # bld.ns3_python_bindings()
+

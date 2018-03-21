@@ -1,0 +1,57 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+# def options(opt):
+#     pass
+
+# def configure(conf):
+#     conf.check_nonfatal(header_name='stdint.h', define_name='HAVE_STDINT_H')
+
+def build(bld):
+    module = bld.create_ns3_module('dvb-h', ['internet'])
+    module.source = [
+        'model/dvbh-controlpacket.cc',
+	#'model/dvbh-netdevice-UserEquip.cc',
+	#'model/dvbh-netdevice-BaseStation.cc',
+	'model/dvbh-queue.cc',
+	'model/dvbh-manager-BaseStation.cc',
+	'model/dvbh-manager-UserEquip.cc',
+	'model/dvbh-link-layer-UserEquip.cc',
+	'model/dvbh-link-layer-BaseStation.cc',
+	'model/dvbh-phy-layer-BaseStation.cc',
+	'model/dvbh-phy-layer-UserEquip.cc',
+	'model/dvbh-channel.cc',
+	'model/dvbh-ofdm-layer.cc',
+	'model/mpe-header.cc',
+	'model/ts-header.cc',
+	'model/pes-header.cc',
+	'model/dvbh-tags.cc',
+	'model/dvbh-net-device.cc',
+	'model/dvbh-ip-per.cc',
+        ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'dvb-h'
+    headers.source = [
+        'model/dvbh-manager.h',
+	'model/dvbh-controlpacket.h',
+	'model/dvbh-queue.h',
+	'model/dvbh-link-layer-UserEquip.h',
+	'model/dvbh-link-layer-BaseStation.h',
+	'model/dvbh-phy-layer-BaseStation.h',
+	'model/dvbh-phy-layer-UserEquip.h',
+	'model/dvbh-ofdm-layer.h',
+	'model/dvbh-manager-BaseStation.h',
+	'model/dvbh-manager-UserEquip.h',
+	#'model/dvbh-netdevice-UserEquip.h',
+	#'model/dvbh-netdevice-BaseStation.h',
+	'model/dvbh-channel.h',
+	'model/mpe-header.h',
+	'model/ts-header.h',
+	'model/pes-header.h',
+	'model/dvbh-tags.h',
+	'model/dvbh-net-device.h',
+	'model/dvbh-ip-per.h',
+        ]
+
+    # bld.ns3_python_bindings()
+
