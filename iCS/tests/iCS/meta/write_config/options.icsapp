@@ -1,0 +1,1 @@
+--save-configuration config.cfg --traffic-port 1 --traffic-file foo.xml --communication-port 1 --app-config-file bar

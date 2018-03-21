@@ -1,0 +1,86 @@
+#!/bin/bash
+PREFIX=$1
+export FILEPREFIX=$2
+export SMTP_SERVER=$3
+REMOTEDIR=$4
+MAKELOG=$PREFIX/${FILEPREFIX}make.log
+MAKEALLLOG=$PREFIX/${FILEPREFIX}makealloptions.log
+STATUSLOG=$PREFIX/${FILEPREFIX}status.log
+TESTLOG=$PREFIX/${FILEPREFIX}test.log
+export ICS_BATCH_RESULT=$PREFIX/${FILEPREFIX}batch_result
+export ICS_REPORT=$PREFIX/${FILEPREFIX}report
+export ICS_BIN=$PREFIX/bin
+if test $# -ge 5; then
+  NIGHTDIR=$5
+fi
+
+rm -f $STATUSLOG
+echo -n "$FILEPREFIX, " > $STATUSLOG
+date >> $STATUSLOG
+echo "--" >> $STATUSLOG
+cd $PREFIX
+make distclean &> /dev/null
+make -f Makefile.cvs clean &> /dev/null
+basename $MAKELOG >> $STATUSLOG
+svn up &> $MAKELOG || (echo "svn up failed" | tee -a $STATUSLOG; tail -10 $MAKELOG)
+#if test `wc -l < $MAKELOG` -le 13; then # this number needs an extra +4 for every external reference
+#  echo "no changes since last run, skipping build and test"
+#  exit
+#fi
+#if test -d "$NIGHTDIR"; then
+#  tools/build/checkSvnProps.py
+#fi
+make -f Makefile.cvs >> $MAKELOG 2>&1 || (echo "autoreconf failed" | tee -a $STATUSLOG; tail -10 $MAKELOG)
+./configure --prefix=$PREFIX --with-gtest=$HOME --with-geographic=$HOME >> $MAKELOG 2>&1 || (echo "configure failed" | tee -a $STATUSLOG; tail -10 $MAKELOG)
+if make >> $MAKELOG 2>&1; then
+  $PREFIX/src/unittest/ics-unittest >> $MAKELOG 2>&1 || (echo "unit tests failed" | tee -a $STATUSLOG; tail -10 $MAKELOG)
+  if make install >> $MAKELOG 2>&1; then
+    if test -d "$NIGHTDIR"; then
+      make distcheck >> $MAKELOG 2>&1 || (echo "make distcheck failed" | tee -a $STATUSLOG; tail -10 $MAKELOG)
+#      if make dist-complete >> $MAKELOG 2>&1; then
+#        for f in $PREFIX/sumo/sumo-*.tar.* $PREFIX/sumo/sumo-*.zip; do
+#          if test $f -nt $PREFIX/sumo/configure; then
+#            cp $f $NIGHTDIR
+#            scp -q $f $REMOTEDIR
+#          fi
+#        done
+#        rsync -r $PREFIX/sumo/docs/wiki/docs $REMOTEDIR
+#        rsync -r $PREFIX/sumo/docs/pydoc $PREFIX/sumo/docs/doxygen $REMOTEDIR/docs
+#      else
+#        echo "make dist-complete failed" | tee -a $STATUSLOG; tail -10 $MAKELOG
+#      fi
+    fi
+  else
+    echo "make install failed" | tee -a $STATUSLOG; tail -10 $MAKELOG
+  fi
+else
+  echo "make failed" | tee -a $STATUSLOG; tail -20 $MAKELOG
+fi
+echo `grep -c '[Ww]arn[iu]ng:' $MAKELOG` warnings >> $STATUSLOG
+scp -q $MAKELOG $REMOTEDIR
+
+echo "--" >> $STATUSLOG
+if test -e $ICS_BIN/iCS -a $ICS_BIN/iCS -nt $PREFIX/configure; then
+  # run tests
+  export TEXTTEST_TMP=$PREFIX/texttesttmp
+  rm -rf $ICS_REPORT/* $TEXTTEST_TMP/*
+  tests/runTests.sh -b $FILEPREFIX &> $TESTLOG
+  tests/runTests.sh -b $FILEPREFIX -coll >> $TESTLOG 2>&1
+  find $TEXTTEST_TMP -name batchreport."*" -exec echo -n '{} ' \; -exec head -1 '{}' \; | sort >> $STATUSLOG
+  rsync -r $ICS_REPORT $REMOTEDIR
+fi
+
+echo "--" >> $STATUSLOG
+basename $MAKEALLLOG >> $STATUSLOG
+export CXXFLAGS="-Wall -W -pedantic -Wno-long-long -Wformat -Wformat-security"
+./configure --prefix=$PREFIX --with-geographic=$HOME --disable-sumo --disable-ns3 --disable-applications --disable-log --enable-double-precision \
+  --enable-debug &> $MAKEALLLOG || (echo "configure with all options failed" | tee -a $STATUSLOG; tail -10 $MAKEALLLOG)
+if make >> $MAKEALLLOG 2>&1; then
+  make install >> $MAKEALLLOG 2>&1 || (echo "make install with all options failed" | tee -a $STATUSLOG; tail -10 $MAKEALLLOG)
+else
+  echo "make with all options failed" | tee -a $STATUSLOG; tail -20 $MAKEALLLOG
+fi
+echo `grep -c '[Ww]arn[iu]ng:' $MAKEALLLOG` warnings >> $STATUSLOG
+scp -q $MAKEALLLOG $REMOTEDIR
+echo "--" >> $STATUSLOG
+scp -q $STATUSLOG $REMOTEDIR

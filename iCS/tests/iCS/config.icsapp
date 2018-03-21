@@ -1,0 +1,10 @@
+import_config_file:../config_all
+binary:$ICSAPP_BINARY
+
+[collate_file]
+cfg:config.cfg
+log:log.txt
+
+[run_dependent_text]
+output:iCS.exe{REPLACE iCS}
+

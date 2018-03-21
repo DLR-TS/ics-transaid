@@ -1,0 +1,69 @@
+def build(bld):
+
+	#2. Storage
+	bld.new_task_gen(
+		features = 'cxx cshlib',
+		source = 'storage.cpp',
+		target = 'storage',		
+		)
+
+	#3. Socket
+	bld.new_task_gen(
+		features = 'cxx cshlib',
+		source = 'socket.cpp',
+		target = 'socket',		
+		)
+
+	#4. Traci-Client
+	bld.new_task_gen(
+		features = 'cxx cshlib',
+		source = 'traci-client.cpp',
+		target = 'traciclient',
+		uselib_local = 'storage socket itetrisnode',
+		)
+
+	#5. NS3-Client
+	bld.new_task_gen(
+		features = 'cxx cshlib',
+		source = 'ns3-client.cpp',
+		target = 'ns3client',
+		uselib_local = 'storage socket',
+		)
+
+	#. Mobile station
+	bld.new_task_gen(
+		features = 'cxx cshlib',
+		source = 'mobile-station.cpp',
+		target = 'mobilestation',
+		)
+
+	#6. iTetris Node
+	bld.new_task_gen(
+		features = 'cxx cshlib',
+		source = 'itetris-node.cpp',
+		target = 'itetrisnode',
+		uselib_local = 'utilities mobilestation',
+		)
+
+	#7. Utilities
+	bld.new_task_gen(
+		features = 'cxx cshlib',
+		source = 'utilities.cpp',
+		target = 'utilities',		
+		)
+
+	#8. Sync Manager
+	bld.new_task_gen(
+		features = 'cxx cshlib',
+		source = 'sync-manager.cpp',
+		target = 'syncmanager',
+		uselib_local = 'ns3client traciclient itetrisnode',
+		)
+
+	#9. ICS
+	bld.new_task_gen(
+		features = 'cxx cshlib',
+		source = 'ics.cpp',
+		target = 'ics',
+		uselib_local = 'syncmanager',
+		)

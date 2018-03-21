@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<!-- generated on 07/05/10 08:53:33 by SUMO netconvert Version dev-SVN-r8163
+<configuration>
+
+    <input>
+        <xml-node-files value="droomdorp.nod.xml"/>
+        <xml-edge-files value="droomdorp.edg.xml"/>
+    </input>
+
+    <output>
+        <output-file value="t1.net.xml"/>
+    </output>
+
+</configuration>
+-->
+
+<net>
+
+  <edge id=":xp1_0" function="internal">
+    <lanes>
+      <lane id=":xp1_0_0" depart="0" maxspeed="13.90" length="10.88" shape="282.75,262.35 282.56,258.11 281.97,255.08 281.01,253.26 279.65,252.65"/>
+    </lanes>
+  </edge>
+ 
+</net>

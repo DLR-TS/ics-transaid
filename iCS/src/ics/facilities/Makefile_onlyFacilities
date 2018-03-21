@@ -1,0 +1,76 @@
+##*****************************************************************************
+## Revisions  :
+## Date        Version  Author  Description
+## 2010/04/29  0.1      PC      First release
+## 2010/07/02  0.2      PC      Modified CFLAGS and SOURCES
+##*****************************************************************************
+
+CC=g++
+
+CFLAGS=-c -g -Wall -DSUMO_ON -D_DEBUG -D_DEB_MAP -D_DEBUG_STATIONS -D_DEBUG_MESSAGE_STORAGE -D_DEBUG_LDM -DLOG_ON
+CPPFLAGS=-I/usr/include -I/usr/local
+LDFLAGS=-L/usr/lib -lxerces-c -lGeographic
+#CPPFLAGS=-I/homes/cataldi/Simulators/sumo/include
+#LDFLAGS=-L/homes/cataldi/Simulators/sumo/lib -lxerces-c
+
+SOURCES= $(wildcard *.cpp */*.cpp */*/*.cpp ../Facilities*.cpp ../testFacilities.cpp ../configfile_parsers/*.cpp ../configfile_parsers/sumoMapParser/*.cpp  ../../utils/ics/*.cpp ../../utils/ics/geometric/*.cpp)
+
+OBJECTS=$(SOURCES:.cpp=.o)
+
+EXECUTABLE=../../../bin/testFacilities
+
+all: $(SOURCES) $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJECTS) 
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+
+.cpp.o:
+	$(CC) $(CPPFLAGS) $(CFLAGS) $< -o $@
+
+cleanEXE:
+	rm -f $(EXECUTABLE)
+
+cleanOBJS:
+	rm -R -f $(OBJECTS)
+
+clean:
+	make cleanEXE
+	make cleanOBJS
+
+redo:
+	make clean
+	make all
+	make cleanOBJS
+
+
+
+
+#SOURCES= $(wildcard *.cpp */*.cpp */*/*.cpp ../Facilities*.cpp ../configfile-parsers/*.cpp ../configfile-parsers/SUMOmapParser/*.cpp  ../../utils/ics/iCSRandom.cpp)
+#
+#OBJECTS=$(SOURCES:.cpp=.o)
+#
+#
+#LIBNAME=libicsfacilities.a
+#
+#all: $(SOURCES) $(LIBNAME)
+#	rm -f $(OBJECTS)
+#	
+#$(LIBNAME): $(OBJECTS) 
+#	ar rc $@ $(LDFLAGS) $(OBJECTS)
+#	ar r $(LIBNAME) $(OBJECTS)
+#	ranlib $@
+#	
+#.cpp.o:
+#	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@ 
+#
+#clean: 
+#	rm -f $(OBJECTS)
+#	rm -f $(LIBNAME)	
+#
+#redo:
+#	make clean
+#	make all
+
+
+
+

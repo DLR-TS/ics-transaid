@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!-- generated on 07/05/10 08:53:33 by SUMO netconvert Version dev-SVN-r8163
+<configuration>
+
+    <input>
+        <xml-node-files value="droomdorp.nod.xml"/>
+        <xml-edge-files value="droomdorp.edg.xml"/>
+    </input>
+
+    <output>
+        <output-file value="t1.net.xml"/>
+    </output>
+
+</configuration>
+-->
+
+<net>
+
+   <location netOffset="501.00,251.00" convBoundary="0.00,0.00,1002.00,502.00" origBoundary="-501.00,-251.00,501.00,251.00" projParameter="!"/>
+
+ 
+</net>

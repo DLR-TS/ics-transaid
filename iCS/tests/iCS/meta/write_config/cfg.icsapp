@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/iCSConfiguration.xsd">
+
+    <trafficsim>
+        <traffic-file value="foo.xml"/>
+        <traffic-port value="1"/>
+    </trafficsim>
+
+    <communicationsim>
+        <communication-port value="1"/>
+    </communicationsim>
+
+    <applications>
+        <app-config-file value="bar"/>
+    </applications>
+
+</configuration>
