@@ -1,0 +1,12 @@
+<map id="toString" name="toString">
+<area shape="rect" id="node2" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#ac5509d1ab247483f93e37480448d62be" title="protocol::server::NodeHandler\l::askForSubscription" alt="" coords="121,5,317,46"/>
+<area shape="rect" id="node3" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a425bd8506ca2873d75f64b7a60a7a8e3" title="protocol::server::NodeHandler\l::mobilityInformation" alt="" coords="121,70,317,111"/>
+<area shape="rect" id="node4" href="$d4/d0f/classprotocol_1_1server_1_1Server.html#a67ed7f17e3644ebf86ea5639e0168dff" title="protocol::server::Server\l::updateTimeStep" alt="" coords="139,135,298,177"/>
+<area shape="rect" id="node5" href="$d4/d0f/classprotocol_1_1server_1_1Server.html#a48b389fd774e5e5bdeb7a702fefc5abb" title="protocol::server::Server\l::createMobileNode" alt="" coords="139,201,298,242"/>
+<area shape="rect" id="node6" href="$d4/d0f/classprotocol_1_1server_1_1Server.html#a5cf8e90a183b00dee6d4d4323b65a550" title="protocol::server::Server\l::askForSubscription" alt="" coords="139,266,298,307"/>
+<area shape="rect" id="node7" href="$d4/d0f/classprotocol_1_1server_1_1Server.html#adff08ad2b8f38176d1050baa676ff4dc" title="protocol::server::Server\l::endSubscription" alt="" coords="139,331,298,373"/>
+<area shape="rect" id="node8" href="$d4/d0f/classprotocol_1_1server_1_1Server.html#a5df2d79770c0f351fb779aee41e81223" title="protocol::server::Server\l::mobilityInformation" alt="" coords="139,397,298,438"/>
+<area shape="rect" id="node9" href="$df/df6/classprotocol_1_1application_1_1TrafficLight.html#ab2ca71045b04d0cd68068382981ff352" title="protocol::application\l::TrafficLight::CreateTraffic\lLight" alt="" coords="129,461,308,517"/>
+<area shape="rect" id="node10" href="$d1/d60/classprotocol_1_1application_1_1FixedStation.html#a2847e4189e43225a19c7fc24eb529549" title="Called with the updated information about the traffic light. " alt="" coords="366,461,538,517"/>
+<area shape="rect" id="node11" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a277392315eaeec477657639cdf7614e2" title="protocol::server::NodeHandler\l::trafficLightInformation" alt="" coords="587,469,783,510"/>
+</map>

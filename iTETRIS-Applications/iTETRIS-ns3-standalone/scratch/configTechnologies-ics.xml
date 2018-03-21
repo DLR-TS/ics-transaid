@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ns3Configuration>
+  <randomGenerators>
+      <randomGenerator seed="1" runNumber="1" />
+  </randomGenerators>
+  <installers>	
+      <installer type="ns3::WaveVehicleInstaller" name="WaveVehicle" file="confWaveVehicle.xml" default="false" />    
+      <installer type="ns3::WaveRsuInstaller" name="WaveRsu" file="confWaveRsu.xml" relatedInstaller="WaveVehicle" default="false" />
+      <installer type="ns3::LteBsInstaller" name="LteBs" file="confLteBs.xml" default="false" />
+      <installer type="ns3::LteVehicleInstaller" name="LteVehicle" file="confLteVehicle.xml" default="false" />
+      <installer type="ns3::TmcInstaller" name="TMC" default="false" />
+      <installer type="ns3::ItetrisNetworkTransportInstaller" name="NetTrans" default="true" />
+      <installer type="ns3::MobilityModelInstaller" name="Mobility" default="true" />
+  </installers>
+</ns3Configuration>

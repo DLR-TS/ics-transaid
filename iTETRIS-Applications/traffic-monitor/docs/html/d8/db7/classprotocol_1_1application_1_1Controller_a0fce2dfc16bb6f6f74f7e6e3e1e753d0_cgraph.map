@@ -1,0 +1,5 @@
+<map id="protocol::application::Controller::LogNode" name="protocol::application::Controller::LogNode">
+<area shape="rect" id="node2" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a3b67fdd7e58dfb8b455d171c4da64f31" title="protocol::application\l::Controller::NodeName" alt="" coords="200,38,360,79"/>
+<area shape="rect" id="node3" href="$d9/d3d/namespaceprotocol_1_1application.html#a39db3f7aadf97ba8fce456d5016bff46" title="protocol::application\l::IsNodeType" alt="" coords="408,5,547,46"/>
+<area shape="rect" id="node4" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a444338899434c9a151acfcfd7b8e1a2f" title="protocol::application\l::Node::getId" alt="" coords="408,70,547,111"/>
+</map>

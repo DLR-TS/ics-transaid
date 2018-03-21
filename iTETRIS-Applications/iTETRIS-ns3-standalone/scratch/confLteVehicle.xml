@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<lteVehicle>
+
+   <LtePhy name="ueNode">
+  </LtePhy>
+  
+    <ipConfiguration>
+    <ip address="10.1.4.1" mask="255.255.255.0"/>
+  </ipConfiguration>
+  
+  <applications> 
+    <application> 
+      <LteApp itetrisName="serviceIdUnicast"/>       
+      <LteApp attribute="PortIP" value="7080"/>  
+      <LteApp attribute="Frequency" value="2"/>  
+      <LteApp attribute="PacketSize" value="30"/>  
+      <LteApp attribute="ApplicationType" value="UM-NON_FRAG"/>               
+    </application> 
+    <application> 
+      <LteApp itetrisName="serviceIdBroadcast"/>       
+      <LteApp attribute="PortIP" value="7090"/>  
+      <LteApp attribute="Frequency" value="2"/>  
+      <LteApp attribute="PacketSize" value="30"/>  
+      <LteApp attribute="ApplicationType" value="BROADCAST"/>              
+    </application> 
+  </applications>
+
+  
+</lteVehicle>

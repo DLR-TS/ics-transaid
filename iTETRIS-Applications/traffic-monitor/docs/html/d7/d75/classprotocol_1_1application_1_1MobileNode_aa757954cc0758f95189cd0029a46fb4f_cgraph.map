@@ -1,0 +1,4 @@
+<map id="protocol::application::MobileNode::updateMobilityInformation" name="protocol::application::MobileNode::updateMobilityInformation">
+<area shape="rect" id="node2" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#abc29ea66ab963ef3c0c00157e0896469" title="Get the sampler instance. It introduces errors to the position to simulate the imprecision of the dev..." alt="" coords="245,5,456,46"/>
+<area shape="rect" id="node3" href="$d8/dd8/classprotocol_1_1application_1_1NodeSampler.html#aacfda0e8ae1501bd1d4cc5ecf86e7efd" title="protocol::application\l::NodeSampler::UpdatePosition" alt="" coords="247,70,454,111"/>
+</map>

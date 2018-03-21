@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['select_5ftype_5farg1',['SELECT_TYPE_ARG1',['../db/d16/config_8h.html#a9f4c30db127f8c10d9b4f0eaed1d6e8f',1,'config.h']]],
+  ['select_5ftype_5farg234',['SELECT_TYPE_ARG234',['../db/d16/config_8h.html#a2c1fd0e84b7aaf9617b67596ef9b274f',1,'config.h']]],
+  ['select_5ftype_5farg5',['SELECT_TYPE_ARG5',['../db/d16/config_8h.html#af3f6c94b1def9d6d936270c458f586a0',1,'config.h']]],
+  ['speed',['SPEED',['../db/d7b/app-commands-subscriptions-constants_8h.html#aac3553b3932cbfeeac4526ce7ca0336b',1,'app-commands-subscriptions-constants.h']]],
+  ['stdc_5fheaders',['STDC_HEADERS',['../db/d16/config_8h.html#a550e5c272cc3cf3814651721167dcd23',1,'config.h']]],
+  ['sub_5fapp_5fcmd_5ftraff_5fsim',['SUB_APP_CMD_TRAFF_SIM',['../db/d7b/app-commands-subscriptions-constants_8h.html#a3956568450f28ed1027b72df7f559fb2',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5fapp_5fmsg_5freceive',['SUB_APP_MSG_RECEIVE',['../db/d7b/app-commands-subscriptions-constants_8h.html#a45b415c9ef463e444330643ab7b943f9',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5fapp_5fmsg_5fsend',['SUB_APP_MSG_SEND',['../db/d7b/app-commands-subscriptions-constants_8h.html#a72f26cccf9f7ea3099333a90b2a8171c',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5fapp_5fresult_5ftraff_5fsim',['SUB_APP_RESULT_TRAFF_SIM',['../db/d7b/app-commands-subscriptions-constants_8h.html#a7df801233bc2186c9813abb31097aaf9',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5ffacilities_5finformation',['SUB_FACILITIES_INFORMATION',['../db/d7b/app-commands-subscriptions-constants_8h.html#ad544291a0ff33fd0aa41d277ebd5967a',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5fmobility_5finformation',['SUB_MOBILITY_INFORMATION',['../db/d7b/app-commands-subscriptions-constants_8h.html#acc2d8b39389df2593b246544c935c64c',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5freceived_5fcam_5finfo',['SUB_RECEIVED_CAM_INFO',['../db/d7b/app-commands-subscriptions-constants_8h.html#afafe18d709b7c4e2d577e3baf7738516',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5freq_5freceived_5fmessages_5fstatus',['SUB_REQ_RECEIVED_MESSAGES_STATUS',['../db/d7b/app-commands-subscriptions-constants_8h.html#a1a38b14efe3e53a1ca08b7e385f81cc1',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5freturns_5fcars_5fin_5fzone',['SUB_RETURNS_CARS_IN_ZONE',['../db/d7b/app-commands-subscriptions-constants_8h.html#a00411270bd9967615eef77ba4b782551',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5fset_5fcam_5farea',['SUB_SET_CAM_AREA',['../db/d7b/app-commands-subscriptions-constants_8h.html#a39b54a935855071b39077aebfdd67be3',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5fsumo_5ftraci_5fcommand',['SUB_SUMO_TRACI_COMMAND',['../db/d7b/app-commands-subscriptions-constants_8h.html#ad22f1e7bba289e4e25e41d9eb380ddfc',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5ftraffic_5flight_5finformation',['SUB_TRAFFIC_LIGHT_INFORMATION',['../db/d7b/app-commands-subscriptions-constants_8h.html#a0e189941b37f092a01b154f8a089a805',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5ftravel_5ftime_5festimation',['SUB_TRAVEL_TIME_ESTIMATION',['../db/d7b/app-commands-subscriptions-constants_8h.html#af6086aa750f390afaa4ac30ec6a234c6',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5ftravel_5ftime_5festimation_5fend',['SUB_TRAVEL_TIME_ESTIMATION_END',['../db/d7b/app-commands-subscriptions-constants_8h.html#a8ffd1570480bd692746b805eec143e67',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5ftravel_5ftime_5festimation_5fstart',['SUB_TRAVEL_TIME_ESTIMATION_START',['../db/d7b/app-commands-subscriptions-constants_8h.html#acca21fd01a91dfabea133b75236435f2',1,'app-commands-subscriptions-constants.h']]],
+  ['sub_5fx_5fapplication_5fdata',['SUB_X_APPLICATION_DATA',['../db/d7b/app-commands-subscriptions-constants_8h.html#aac016371dfbf6a62e7a19f9306911c5e',1,'app-commands-subscriptions-constants.h']]],
+  ['sumo_5frtype_5ferr',['SUMO_RTYPE_ERR',['../d6/d55/traci-helper_8h.html#a360fef259d90b4041d7e9b2c0c27ee3e',1,'traci-helper.h']]],
+  ['sumo_5frtype_5fnotimplemented',['SUMO_RTYPE_NOTIMPLEMENTED',['../d6/d55/traci-helper_8h.html#a339c74b5be8a899be625083c8bfb5f7a',1,'traci-helper.h']]],
+  ['sumo_5frtype_5fok',['SUMO_RTYPE_OK',['../d6/d55/traci-helper_8h.html#a1f2791b8c1de842fc07080b609bda13a',1,'traci-helper.h']]],
+  ['sumoreal',['SUMOReal',['../db/d16/config_8h.html#a2481f526aef497857d2b407bc09129fd',1,'SUMOReal():&#160;config.h'],['../d1/d70/windows-config_8h.html#a2481f526aef497857d2b407bc09129fd',1,'SUMOReal():&#160;windows-config.h']]]
+];

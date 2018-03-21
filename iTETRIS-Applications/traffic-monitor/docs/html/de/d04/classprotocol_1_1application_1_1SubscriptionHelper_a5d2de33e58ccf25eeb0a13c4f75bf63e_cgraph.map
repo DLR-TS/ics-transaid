@@ -1,0 +1,4 @@
+<map id="protocol::application::SubscriptionHelper::SetCamArea" name="protocol::application::SubscriptionHelper::SetCamArea">
+<area shape="rect" id="node2" href="$db/d00/classtcpip_1_1Storage.html#a5a42840a57331704c2fdc30e3d1d2a54" title="tcpip::Storage::writeUnsignedByte" alt="" coords="195,5,416,32"/>
+<area shape="rect" id="node3" href="$db/d00/classtcpip_1_1Storage.html#ab4fc84f48f0c54fa75bedd69d7293c4c" title="tcpip::Storage::writeFloat" alt="" coords="221,56,389,83"/>
+</map>

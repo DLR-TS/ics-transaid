@@ -1,0 +1,15 @@
+<map id="tinyxml2::XMLElement::SetText" name="tinyxml2::XMLElement::SetText">
+<area shape="rect" id="node2" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a3cd6c703d49b9d51bdf0f4ff6aa021c7" title="tinyxml2::XMLUtil::\lToStr" alt="" coords="218,93,353,134"/>
+<area shape="rect" id="node3" href="$d5/d83/classtinyxml2_1_1XMLElement.html#a1f9c2cd61b72af5ae708d37b7ad283ce" title="tinyxml2::XMLElement\l::SetText" alt="" coords="208,158,363,199"/>
+<area shape="rect" id="node4" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a60e923d13d7dc01f45ab90a2f948b02a" title="Get the first child node, or null if none exists. " alt="" coords="422,5,567,46"/>
+<area shape="rect" id="node5" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a41c55dab9162d1eb62db2008430e376b" title="Safely cast to Text, or null. " alt="" coords="422,70,567,111"/>
+<area shape="rect" id="node6" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a09dd68cf9eae137579f6e50f36487513" title="tinyxml2::XMLNode::\lSetValue" alt="" coords="627,174,773,215"/>
+<area shape="rect" id="node10" href="$d6/de3/classtinyxml2_1_1XMLNode.html#add244bca368083fa29698db8dcf147ca" title="Get the XMLDocument that owns this XMLNode. " alt="" coords="422,187,567,229"/>
+<area shape="rect" id="node11" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#acece5de77a0819f2341b08c1e1ed9987" title="tinyxml2::XMLDocument\l::NewText" alt="" coords="411,253,578,294"/>
+<area shape="rect" id="node12" href="$d6/de3/classtinyxml2_1_1XMLNode.html#ac609a8f3ea949027f439280c640bbaf2" title="tinyxml2::XMLNode::\lInsertFirstChild" alt="" coords="422,318,567,359"/>
+<area shape="rect" id="node7" href="$d5/dcd/classtinyxml2_1_1StrPair.html#a2baf6230e18333e02ab65d0897ee3941" title="tinyxml2::StrPair::\lSetInternedStr" alt="" coords="822,141,949,182"/>
+<area shape="rect" id="node9" href="$d5/dcd/classtinyxml2_1_1StrPair.html#a1f82ec6b5bee35ee7466d8565e43b1de" title="tinyxml2::StrPair::\lSetStr" alt="" coords="822,206,949,247"/>
+<area shape="rect" id="node8" href="$d5/dcd/classtinyxml2_1_1StrPair.html#a80c1b3bd99bf62ae85c94a29ce537125" title="tinyxml2::StrPair::\lReset" alt="" coords="998,174,1125,215"/>
+<area shape="rect" id="node13" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a9546e242b6a4f232415befb1cfe0fdd4" title="tinyxml2::XMLNode::\lUnlink" alt="" coords="627,285,773,326"/>
+<area shape="rect" id="node14" href="$db/d69/classtinyxml2_1_1MemPool.html#ac5804dd1387b2e4de5eef710076a0db1" title="tinyxml2::MemPool::\lSetTracked" alt="" coords="629,350,771,391"/>
+</map>

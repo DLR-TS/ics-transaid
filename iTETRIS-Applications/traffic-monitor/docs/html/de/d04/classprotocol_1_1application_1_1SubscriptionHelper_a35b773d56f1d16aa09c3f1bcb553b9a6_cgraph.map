@@ -1,0 +1,4 @@
+<map id="protocol::application::SubscriptionHelper::SetTrafficLight" name="protocol::application::SubscriptionHelper::SetTrafficLight">
+<area shape="rect" id="node2" href="$db/d00/classtcpip_1_1Storage.html#a5a42840a57331704c2fdc30e3d1d2a54" title="tcpip::Storage::writeUnsignedByte" alt="" coords="195,5,416,32"/>
+<area shape="rect" id="node3" href="$db/d00/classtcpip_1_1Storage.html#a07b6d4f8db8f1893aa4ed419be5a5d25" title="tcpip::Storage::writeString" alt="" coords="219,56,392,83"/>
+</map>

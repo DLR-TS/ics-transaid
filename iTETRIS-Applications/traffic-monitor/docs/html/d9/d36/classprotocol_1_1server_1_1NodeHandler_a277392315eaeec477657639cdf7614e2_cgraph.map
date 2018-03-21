@@ -1,0 +1,23 @@
+<map id="protocol::server::NodeHandler::trafficLightInformation" name="protocol::server::NodeHandler::trafficLightInformation">
+<area shape="rect" id="node2" href="$d1/d60/classprotocol_1_1application_1_1FixedStation.html#a2847e4189e43225a19c7fc24eb529549" title="Called with the updated information about the traffic light. " alt="" coords="251,342,423,398"/>
+<area shape="rect" id="node3" href="$df/df2/namespaceprotocol.html#a86040db733a7ba0fa10e65456d9d75a1" title="protocol::split" alt="" coords="767,87,867,114"/>
+<area shape="rect" id="node4" href="$d0/d77/classLog.html#a419e58c8f6350bdaaae789a041aae356" title="Log::Write" alt="" coords="1044,11,1127,38"/>
+<area shape="rect" id="node5" href="$d9/d3d/namespaceprotocol_1_1application.html#ae4767c6607e9e90ca718a7e7433bfc3c" title="protocol::application\l::stringToInt" alt="" coords="492,385,631,426"/>
+<area shape="rect" id="node6" href="$d8/d78/classprotocol_1_1application_1_1Node.html#ae75387d8eabfafbe17bf8e62f166964c" title="That subscription will be cancelled when iCS ask which subscriptions to remove. " alt="" coords="474,450,649,492"/>
+<area shape="rect" id="node8" href="$df/df6/classprotocol_1_1application_1_1TrafficLight.html#ab2ca71045b04d0cd68068382981ff352" title="protocol::application\l::TrafficLight::CreateTraffic\lLight" alt="" coords="472,306,651,362"/>
+<area shape="rect" id="node10" href="$d0/d77/classLog.html#a3cce67763de1ce3985d15c9c8d6d33d6" title="Log::WriteLog" alt="" coords="766,36,869,63"/>
+<area shape="rect" id="node20" href="$df/df6/classprotocol_1_1application_1_1TrafficLight.html#a9556440e2f217a4a271be5690159f44b" title="protocol::application\l::TrafficLight::setState" alt="" coords="485,516,637,557"/>
+<area shape="rect" id="node22" href="$df/df6/classprotocol_1_1application_1_1TrafficLight.html#afcf13df8b3e6a120ba6626f0142763df" title="protocol::application\l::TrafficLight::getState" alt="" coords="485,581,637,622"/>
+<area shape="rect" id="node7" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a743445c1c5b97d0678ebe748778d6b26" title="Gets a subscription from the id. " alt="" coords="736,764,899,805"/>
+<area shape="rect" id="node9" href="$df/df6/classprotocol_1_1application_1_1TrafficLight.html#a936f7576bb523fbf907609f6077f149e" title="TrafficLight implementation. " alt="" coords="733,437,901,478"/>
+<area shape="rect" id="node11" href="$d9/d8c/classprotocol_1_1application_1_1TrafficLightLane.html#a108f6143d3dbec74711837418b091e20" title="protocol::application\l::TrafficLightLane::setControlledLane" alt="" coords="699,502,935,544"/>
+<area shape="rect" id="node12" href="$d9/d8c/classprotocol_1_1application_1_1TrafficLightLane.html#aa9ec6f83d55b600e363ee16e9498eaa6" title="protocol::application\l::TrafficLightLane::setFollowingLane" alt="" coords="701,568,933,609"/>
+<area shape="rect" id="node13" href="$d9/d8c/classprotocol_1_1application_1_1TrafficLightLane.html#ac186c7ad32b1c406670c5291b06a0380" title="protocol::application\l::TrafficLightLane::setDirection" alt="" coords="717,633,918,674"/>
+<area shape="rect" id="node14" href="$df/df6/classprotocol_1_1application_1_1TrafficLight.html#ae051e96855df187e2192369079d8f33a" title="protocol::application\l::TrafficLight::addTrafficLightLane" alt="" coords="709,698,926,740"/>
+<area shape="rect" id="node15" href="$d9/d8c/classprotocol_1_1application_1_1TrafficLightLane.html#a090e7978888a812638a7ec6ad4f631db" title="protocol::application\l::TrafficLightLane::getDirection" alt="" coords="985,414,1186,456"/>
+<area shape="rect" id="node16" href="$d9/d8c/classprotocol_1_1application_1_1TrafficLightLane.html#afdd01853e24984b59206c19441124765" title="protocol::application\l::TrafficLightLane::getControlledLane" alt="" coords="699,189,935,230"/>
+<area shape="rect" id="node17" href="$d9/d8c/classprotocol_1_1application_1_1TrafficLightLane.html#a8d50df03368945f4366259979aca5f8e" title="protocol::application\l::TrafficLightLane::getFollowingLane" alt="" coords="701,254,933,296"/>
+<area shape="rect" id="node18" href="$d4/def/ToString_8h.html#ab049b672e9259a06bc28b9befa5b8b23" title="toString" alt="" coords="784,320,851,347"/>
+<area shape="rect" id="node19" href="$d9/d8c/classprotocol_1_1application_1_1TrafficLightLane.html#ae26873bf434ddaa3a0b3ef138dca8682" title="protocol::application\l::TrafficLightLane::getFriendlyName" alt="" coords="702,372,933,413"/>
+<area shape="rect" id="node21" href="$df/df6/classprotocol_1_1application_1_1TrafficLight.html#ac6e1381d4b044f0706f5c8a1e69d5444" title="protocol::application\l::TrafficLight::GetStatusFromChar" alt="" coords="707,829,927,870"/>
+</map>

@@ -1,0 +1,51 @@
+<map id="protocol::application::BehaviourRsu::Start" name="protocol::application::BehaviourRsu::Start">
+<area shape="rect" id="node2" href="$d0/db2/classprotocol_1_1application_1_1Behaviour.html#acb4f94cc2c093d7f5e1b8724ab57afea" title="protocol::application\l::Behaviour::Log" alt="" coords="777,56,916,98"/>
+<area shape="rect" id="node9" href="$d1/d4a/classprotocol_1_1application_1_1Scheduler.html#aaf9d13434c7b6fb53c06d4ca74e031c7" title="protocol::application\l::Scheduler::Schedule" alt="" coords="503,172,654,214"/>
+<area shape="rect" id="node11" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a16c7658bab3242eaf9a60f17875174ba" title="protocol::application\l::BehaviourRsu::EventBeacon" alt="" coords="203,335,402,376"/>
+<area shape="rect" id="node48" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a120e17518dbc0afe003d106a54a20a0e" title="protocol::application\l::BehaviourRsu::EventCheck" alt="" coords="207,107,399,148"/>
+<area shape="rect" id="node50" href="$d0/db2/classprotocol_1_1application_1_1Behaviour.html#a8d6698fd3431ca26c4f6c877ffbc9133" title="Contains the actions to be executed when the behavior starts. " alt="" coords="233,24,372,66"/>
+<area shape="rect" id="node3" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a0af962af5533461bc8d583690eab993e" title="Name of the node. For logging. " alt="" coords="1014,142,1191,183"/>
+<area shape="rect" id="node6" href="$d9/d3d/namespaceprotocol_1_1application.html#a0511c2c9c2fd3d9fc2898a3deeb3e514" title="protocol::application\l::ToString" alt="" coords="1033,7,1172,48"/>
+<area shape="rect" id="node7" href="$d0/db2/classprotocol_1_1application_1_1Behaviour.html#ab98ebaf49fa279e553e5dd47844163a8" title="protocol::application\l::Behaviour::GetType" alt="" coords="1029,72,1176,114"/>
+<area shape="rect" id="node4" href="$d9/d3d/namespaceprotocol_1_1application.html#a39db3f7aadf97ba8fce456d5016bff46" title="protocol::application\l::IsNodeType" alt="" coords="1296,142,1435,183"/>
+<area shape="rect" id="node5" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a444338899434c9a151acfcfd7b8e1a2f" title="protocol::application\l::Node::getId" alt="" coords="1296,331,1435,372"/>
+<area shape="rect" id="node8" href="$d0/db2/classprotocol_1_1application_1_1Behaviour.html#aff88107c7a7520f05d3ee45a423f0804" title="protocol::application\l::Behaviour::Type" alt="" coords="1296,72,1435,114"/>
+<area shape="rect" id="node10" href="$df/da7/classprotocol_1_1CurrentTime.html#aa9b02aba52dc79bac7f1624aec798771" title="protocol::CurrentTime::Now" alt="" coords="755,152,938,178"/>
+<area shape="rect" id="node12" href="$d8/de1/classprotocol_1_1application_1_1BeaconHeader.html#a2ce24e8897a7f93b50c4f90e9f43e4fb" title="protocol::application\l::BeaconHeader::setDirection" alt="" coords="481,303,676,344"/>
+<area shape="rect" id="node13" href="$d8/de1/classprotocol_1_1application_1_1BeaconHeader.html#a315e9d23248607f52387df5a80610549" title="protocol::application\l::BeaconHeader::setVehicleMovement" alt="" coords="455,368,702,410"/>
+<area shape="rect" id="node14" href="$d8/de1/classprotocol_1_1application_1_1BeaconHeader.html#a2980a07e04bd5e29a2a534a5ff055dbd" title="protocol::application\l::BeaconHeader::setMaxResponseTime" alt="" coords="451,434,706,475"/>
+<area shape="rect" id="node15" href="$d0/db2/classprotocol_1_1application_1_1Behaviour.html#ac73b3ed659929aa9a9be71500219d527" title="protocol::application\l::Behaviour::GetController" alt="" coords="492,238,665,279"/>
+<area shape="rect" id="node16" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a224f01c440a8987869d11f0330e7697a" title="Used to send a Geobroadcast message. " alt="" coords="508,551,649,592"/>
+<area shape="rect" id="node17" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#aec73eff8654a9ef3a0621c41e8612982" title="Common code called by Send and SendTo. " alt="" coords="767,526,926,567"/>
+<area shape="rect" id="node44" href="$d1/d4a/classprotocol_1_1application_1_1Scheduler.html#a4a034ac0655b6b10cea9c1260be67b4a" title="protocol::application\l::Scheduler::GetCurrentTime" alt="" coords="1008,207,1197,248"/>
+<area shape="rect" id="node45" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#aa6fac7650cc7c5e246017bf8f3d6ddd2" title="Utility method to get the node name. Used in the logs. " alt="" coords="765,254,928,295"/>
+<area shape="rect" id="node46" href="$d9/d3d/namespaceprotocol_1_1application.html#a84be17eb54cf078414febf1567418167" title="protocol::application\l::PrintHeader" alt="" coords="777,591,916,632"/>
+<area shape="rect" id="node47" href="$d1/d2c/classprotocol_1_1application_1_1Header.html#ae893223791daf99d6c0dd8822e8cd664" title="protocol::application\l::Header::Name" alt="" coords="777,656,916,698"/>
+<area shape="rect" id="node18" href="$db/db1/classprotocol_1_1application_1_1CommHeader.html#ab13144d221a287f3d018942b36415063" title="protocol::application\l::CommHeader::setProtocolId" alt="" coords="1005,978,1201,1019"/>
+<area shape="rect" id="node19" href="$db/db1/classprotocol_1_1application_1_1CommHeader.html#a10ba211ecb040e07c76090d6668ed0a5" title="protocol::application\l::CommHeader::setSourceType" alt="" coords="999,272,1206,314"/>
+<area shape="rect" id="node20" href="$db/db1/classprotocol_1_1application_1_1CommHeader.html#a8c0cf34bb98b42fad20a07e17159a253" title="protocol::application\l::CommHeader::setSourceId" alt="" coords="1008,338,1197,379"/>
+<area shape="rect" id="node21" href="$db/db1/classprotocol_1_1application_1_1CommHeader.html#a8993537278b8c55197a7094af3f3721c" title="protocol::application\l::CommHeader::setSourcePosition" alt="" coords="990,403,1215,444"/>
+<area shape="rect" id="node22" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a0a5267886ac8d916239c10b50910536b" title="protocol::application\l::iCSInterface::GetPosition" alt="" coords="1013,520,1192,562"/>
+<area shape="rect" id="node25" href="$db/db1/classprotocol_1_1application_1_1CommHeader.html#afb8fa3948c5974ccb91afb1da0a54299" title="protocol::application\l::CommHeader::setDestinationType" alt="" coords="987,651,1219,692"/>
+<area shape="rect" id="node26" href="$db/db1/classprotocol_1_1application_1_1CommHeader.html#a4b43e5c2a67e4067737a4493c382b161" title="protocol::application\l::CommHeader::setDestinationId" alt="" coords="995,716,1210,758"/>
+<area shape="rect" id="node27" href="$db/db1/classprotocol_1_1application_1_1CommHeader.html#a10eae58dcbb32239742098ba37b2134c" title="protocol::application\l::CommHeader::setMessageType" alt="" coords="993,782,1212,823"/>
+<area shape="rect" id="node28" href="$d1/d2c/classprotocol_1_1application_1_1Header.html#aa4f213e237b638d0a6fd8801b85006ee" title="protocol::application\l::Header::getMessageType" alt="" coords="1013,847,1193,888"/>
+<area shape="rect" id="node29" href="$d2/d94/classprotocol_1_1server_1_1Payload.html#a36228ebd23e59fd575272e2a141dbb91" title="protocol::server::Payload\l::addHeader" alt="" coords="1019,586,1186,627"/>
+<area shape="rect" id="node30" href="$d8/d78/classprotocol_1_1application_1_1Node.html#ac96f42e7e4ffbceb21fcd18f0073b877" title="Send a geobroadcast message. " alt="" coords="1033,912,1172,954"/>
+<area shape="rect" id="node23" href="$d8/d78/classprotocol_1_1application_1_1Node.html#afc8cf43b5a8e323bfa9ae17216124607" title="protocol::application\l::Node::getPosition" alt="" coords="1296,622,1435,663"/>
+<area shape="rect" id="node24" href="$d8/dd8/classprotocol_1_1application_1_1NodeSampler.html#a967b0dd6b96853af740320e7e7e3a361" title="protocol::application\l::NodeSampler::GetPosition" alt="" coords="1273,520,1458,562"/>
+<area shape="rect" id="node31" href="$d4/d0f/classprotocol_1_1server_1_1Server.html#a35e2fc0c6f26d3407d3f28c451825fd8" title="protocol::server::Server\l::GetNodeHandler" alt="" coords="1286,755,1445,796"/>
+<area shape="rect" id="node32" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a55aebfa3d7c2f7a197b98e8c9e1e2849" title="protocol::server::NodeHandler\l::insertPayload" alt="" coords="1267,820,1463,862"/>
+<area shape="rect" id="node33" href="$d0/d77/classLog.html#a3cce67763de1ce3985d15c9c8d6d33d6" title="Log::WriteLog" alt="" coords="1314,886,1417,913"/>
+<area shape="rect" id="node35" href="$de/d04/classprotocol_1_1application_1_1SubscriptionHelper.html#aa8e7e3fedb34fb870e15fdb2c2f4b1c4" title="To create a AppMessageSend subscription to send a geobroadcast message. " alt="" coords="1295,937,1436,993"/>
+<area shape="rect" id="node42" href="$d2/d94/classprotocol_1_1server_1_1Payload.html#a900b58532292603be76d3a5906a59605" title="protocol::server::Payload\l::size" alt="" coords="1282,1016,1449,1058"/>
+<area shape="rect" id="node43" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a66db80d2ee77fd44165a835c7f0e9f4f" title="protocol::application\l::Node::getPropagationRadius" alt="" coords="1267,1082,1464,1123"/>
+<area shape="rect" id="node34" href="$d0/d77/classLog.html#a419e58c8f6350bdaaae789a041aae356" title="Log::Write" alt="" coords="1581,800,1664,826"/>
+<area shape="rect" id="node36" href="$db/d00/classtcpip_1_1Storage.html#a5a42840a57331704c2fdc30e3d1d2a54" title="tcpip::Storage::writeUnsignedByte" alt="" coords="1512,952,1733,978"/>
+<area shape="rect" id="node37" href="$db/d00/classtcpip_1_1Storage.html#a1babffd3cee462277796bc5b4ef6bb1a" title="tcpip::Storage::writeInt" alt="" coords="1545,1002,1700,1029"/>
+<area shape="rect" id="node38" href="$db/d00/classtcpip_1_1Storage.html#afb0fc2b3b7f32ac7cba3d885965e417e" title="tcpip::Storage::writeDouble" alt="" coords="1533,1053,1713,1080"/>
+<area shape="rect" id="node39" href="$db/d00/classtcpip_1_1Storage.html#ae7af58d12716f7119877efb7919813f4" title="tcpip::Storage::writeShort" alt="" coords="1537,1104,1708,1130"/>
+<area shape="rect" id="node40" href="$db/d00/classtcpip_1_1Storage.html#ab4fc84f48f0c54fa75bedd69d7293c4c" title="tcpip::Storage::writeFloat" alt="" coords="1539,850,1707,877"/>
+<area shape="rect" id="node41" href="$db/d00/classtcpip_1_1Storage.html#a07b6d4f8db8f1893aa4ed419be5a5d25" title="tcpip::Storage::writeString" alt="" coords="1536,901,1709,928"/>
+<area shape="rect" id="node49" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#af632a0826e18c05af9049f9929cf194d" title="Periodically check if a node has timed out. " alt="" coords="476,107,681,148"/>
+</map>

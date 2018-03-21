@@ -1,0 +1,7 @@
+<map id="protocol::application::BeaconResponseHeader::setCurrentSpeed" name="protocol::application::BeaconResponseHeader::setCurrentSpeed">
+<area shape="rect" id="node2" href="$db/d21/classprotocol_1_1application_1_1BehaviourNodeWithSink.html#a017c86ea07ee3aeedd4c28b18a83a15b" title="Called by the receive after a random timeout when a beacon message is received. " alt="" coords="239,4,411,60"/>
+<area shape="rect" id="node4" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#aada84e8ddeb6bc3c36624841949c7bae" title="Called by the EventSendResponse if the node has not yet passed the intersection. " alt="" coords="230,84,421,140"/>
+<area shape="rect" id="node3" href="$db/d21/classprotocol_1_1application_1_1BehaviourNodeWithSink.html#af1bd316f2fecd352c7a2e4144e42a7c7" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="479,4,651,60"/>
+<area shape="rect" id="node5" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a94a2feb4d2c64580d1ed460ef5caa57d" title="Called by the receive after a random timeout when a beacon message is received. " alt="" coords="470,84,661,140"/>
+<area shape="rect" id="node6" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a373a1080ed9cb0ff94fd9559b98987d5" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="710,84,901,140"/>
+</map>

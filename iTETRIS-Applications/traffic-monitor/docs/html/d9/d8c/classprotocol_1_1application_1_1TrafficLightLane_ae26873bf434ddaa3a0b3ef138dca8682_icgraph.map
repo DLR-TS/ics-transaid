@@ -1,0 +1,5 @@
+<map id="protocol::application::TrafficLightLane::getFriendlyName" name="protocol::application::TrafficLightLane::getFriendlyName">
+<area shape="rect" id="node2" href="$df/df6/classprotocol_1_1application_1_1TrafficLight.html#ab2ca71045b04d0cd68068382981ff352" title="protocol::application\l::TrafficLight::CreateTraffic\lLight" alt="" coords="285,4,464,60"/>
+<area shape="rect" id="node3" href="$d1/d60/classprotocol_1_1application_1_1FixedStation.html#a2847e4189e43225a19c7fc24eb529549" title="Called with the updated information about the traffic light. " alt="" coords="513,4,685,60"/>
+<area shape="rect" id="node4" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a277392315eaeec477657639cdf7614e2" title="protocol::server::NodeHandler\l::trafficLightInformation" alt="" coords="734,11,930,53"/>
+</map>

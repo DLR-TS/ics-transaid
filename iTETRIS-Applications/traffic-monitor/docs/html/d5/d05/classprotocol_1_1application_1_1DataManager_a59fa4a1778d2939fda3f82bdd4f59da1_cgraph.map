@@ -1,0 +1,5 @@
+<map id="protocol::application::DataManager::DataManager" name="protocol::application::DataManager::DataManager">
+<area shape="rect" id="node2" href="$d1/d4c/classprotocol_1_1application_1_1ExecuteBase.html#a868aecb75baeffcbb348d94cb59725dd" title="ExecuteBase. " alt="" coords="248,5,483,46"/>
+<area shape="rect" id="node3" href="$db/d11/classprotocol_1_1application_1_1TraceManager.html#ac37477c6344d8c137a35362097b85f1a" title="protocol::application\l::TraceManager::RegisterTrace" alt="" coords="264,70,467,111"/>
+<area shape="rect" id="node4" href="$d6/d38/classprotocol_1_1application_1_1TracedCallbackBase.html#a7418fc0fc7aa2da2a764a3f035aaea66" title="protocol::application\l::TracedCallbackBase\l::SetName" alt="" coords="531,63,682,119"/>
+</map>

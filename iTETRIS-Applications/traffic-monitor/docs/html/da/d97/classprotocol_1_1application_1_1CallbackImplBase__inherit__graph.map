@@ -1,0 +1,8 @@
+<map id="protocol::application::CallbackImplBase" name="protocol::application::CallbackImplBase">
+<area shape="rect" id="node2" href="$d4/de4/classprotocol_1_1application_1_1CallbackImpl.html" title="protocol::application\l::CallbackImpl\&lt; R, T1,\l T2, T3, T4 \&gt;" alt="" coords="203,5,357,61"/>
+<area shape="rect" id="node4" href="$da/d6c/classprotocol_1_1application_1_1CallbackImpl_3_01R_00_01empty_00_01empty_00_01empty_00_01empty_01_4.html" title="protocol::application\l::CallbackImpl\&lt; R, empty,\l empty, empty, empty \&gt;" alt="" coords="192,85,368,141"/>
+<area shape="rect" id="node5" href="$df/da0/classprotocol_1_1application_1_1CallbackImpl_3_01R_00_01T1_00_01empty_00_01empty_00_01empty_01_4.html" title="protocol::application\l::CallbackImpl\&lt; R, T1,\l empty, empty, empty \&gt;" alt="" coords="199,165,361,221"/>
+<area shape="rect" id="node6" href="$d7/dc5/classprotocol_1_1application_1_1CallbackImpl_3_01R_00_01T1_00_01T2_00_01empty_00_01empty_01_4.html" title="protocol::application\l::CallbackImpl\&lt; R, T1,\l T2, empty, empty \&gt;" alt="" coords="203,245,357,301"/>
+<area shape="rect" id="node7" href="$dd/d46/classprotocol_1_1application_1_1CallbackImpl_3_01R_00_01T1_00_01T2_00_01T3_00_01empty_01_4.html" title="protocol::application\l::CallbackImpl\&lt; R, T1,\l T2, T3, empty \&gt;" alt="" coords="203,325,357,381"/>
+<area shape="rect" id="node3" href="$df/d03/classprotocol_1_1application_1_1MemPtrCallbackImpl.html" title="protocol::application\l::MemPtrCallbackImpl\l\&lt; R, T1, T2, T3, T4 \&gt;" alt="" coords="416,5,568,61"/>
+</map>

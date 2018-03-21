@@ -1,0 +1,6 @@
+<map id="protocol::application::SubscriptionHelper::ReceiveUnicast" name="protocol::application::SubscriptionHelper::ReceiveUnicast">
+<area shape="rect" id="node2" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a73bf7177966cbe56070f8fa54a0f05cc" title="protocol::application\l::Node::addSubscriptions" alt="" coords="195,38,365,79"/>
+<area shape="rect" id="node3" href="$d1/d60/classprotocol_1_1application_1_1FixedStation.html#aee246ee1302625f789a18bfcf54a3e29" title="protocol::application\l::FixedStation::addSubscriptions" alt="" coords="413,5,624,46"/>
+<area shape="rect" id="node4" href="$d8/d78/classprotocol_1_1application_1_1Node.html#abb8b689b292f3f0e691e76f6bb49d4bf" title="Adds the scheduled subscriptions in m_toSubscribe. " alt="" coords="428,70,609,111"/>
+<area shape="rect" id="node5" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#ac5509d1ab247483f93e37480448d62be" title="protocol::server::NodeHandler\l::askForSubscription" alt="" coords="673,70,869,111"/>
+</map>

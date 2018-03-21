@@ -1,0 +1,5 @@
+<map id="protocol::application::Node::addSubscription" name="protocol::application::Node::addSubscription">
+<area shape="rect" id="node2" href="$d8/d78/classprotocol_1_1application_1_1Node.html#af8c3a5cf21429201e47be43d91eaeec6" title="Adds a subscription from the arguments. " alt="" coords="225,5,388,46"/>
+<area shape="rect" id="node3" href="$d8/d78/classprotocol_1_1application_1_1Node.html#abb8b689b292f3f0e691e76f6bb49d4bf" title="Adds the scheduled subscriptions in m_toSubscribe. " alt="" coords="216,70,397,111"/>
+<area shape="rect" id="node4" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#ac5509d1ab247483f93e37480448d62be" title="protocol::server::NodeHandler\l::askForSubscription" alt="" coords="446,70,642,111"/>
+</map>

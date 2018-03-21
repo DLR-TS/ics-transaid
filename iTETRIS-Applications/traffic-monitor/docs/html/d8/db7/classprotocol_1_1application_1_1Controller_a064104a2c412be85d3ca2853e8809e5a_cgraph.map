@@ -1,0 +1,14 @@
+<map id="protocol::application::Controller::Receive" name="protocol::application::Controller::Receive">
+<area shape="rect" id="node2" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a625f92b77a24c8f7bd740c7e1bf4b0f8" title="protocol::application\l::Controller::GetHeader" alt="" coords="235,100,392,141"/>
+<area shape="rect" id="node4" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a0fce2dfc16bb6f6f74f7e6e3e1e753d0" title="protocol::application\l::Controller::LogNode" alt="" coords="488,150,635,192"/>
+<area shape="rect" id="node6" href="$d9/d3d/namespaceprotocol_1_1application.html#a39db3f7aadf97ba8fce456d5016bff46" title="protocol::application\l::IsNodeType" alt="" coords="901,70,1040,112"/>
+<area shape="rect" id="node7" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a444338899434c9a151acfcfd7b8e1a2f" title="protocol::application\l::Node::getId" alt="" coords="901,180,1040,221"/>
+<area shape="rect" id="node8" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a484f7ed2ca34d838a6ef4babf1ad0ed6" title="protocol::application\l::Controller::GetNodeType" alt="" coords="226,268,401,309"/>
+<area shape="rect" id="node9" href="$db/db1/classprotocol_1_1application_1_1CommHeader.html#a300562da6fbe884ae7a3ff94176084ba" title="protocol::application\l::CommHeader::getDestinationType" alt="" coords="197,333,429,374"/>
+<area shape="rect" id="node10" href="$db/db1/classprotocol_1_1application_1_1CommHeader.html#afb99968f29d73783432115a79e81a261" title="protocol::application\l::CommHeader::getDestinationId" alt="" coords="206,398,421,440"/>
+<area shape="rect" id="node11" href="$d9/d3d/namespaceprotocol_1_1application.html#a84be17eb54cf078414febf1567418167" title="protocol::application\l::PrintHeader" alt="" coords="244,464,383,505"/>
+<area shape="rect" id="node12" href="$db/db1/classprotocol_1_1application_1_1CommHeader.html#a673aa4a56b23d3cf7373bfaec9ff3bd6" title="protocol::application\l::CommHeader::getProtocolId" alt="" coords="215,529,411,570"/>
+<area shape="rect" id="node13" href="$d9/d3d/namespaceprotocol_1_1application.html#a0511c2c9c2fd3d9fc2898a3deeb3e514" title="protocol::application\l::ToString" alt="" coords="244,594,383,636"/>
+<area shape="rect" id="node3" href="$d2/d94/classprotocol_1_1server_1_1Payload.html#a507f8763993ab558ccb73425ace87edc" title="protocol::server::Payload\l::getHeader" alt="" coords="478,85,645,126"/>
+<area shape="rect" id="node5" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a3b67fdd7e58dfb8b455d171c4da64f31" title="protocol::application\l::Controller::NodeName" alt="" coords="693,150,853,192"/>
+</map>

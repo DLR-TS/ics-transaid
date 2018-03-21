@@ -1,0 +1,8 @@
+<map id="protocol::application::MobileNode::selectNodeType" name="protocol::application::MobileNode::selectNodeType">
+<area shape="rect" id="node2" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a32f826bbcc932714b2a4454feafeb39d" title="protocol::application\l::Node::GetRandomNodeType" alt="" coords="257,5,455,46"/>
+<area shape="rect" id="node6" href="$d0/d77/classLog.html#a3cce67763de1ce3985d15c9c8d6d33d6" title="Log::WriteLog" alt="" coords="305,71,407,97"/>
+<area shape="rect" id="node3" href="$df/d17/classns3_1_1UniformVariable.html#abeced2950ea9f6e5111d05ae99ef3baa" title="call RandomVariable::GetValue " alt="" coords="504,5,648,46"/>
+<area shape="rect" id="node4" href="$d3/dad/classns3_1_1RandomVariable.html#a515e141bf41f254bbef6969519928307" title="Returns a random double from the underlying distribution. " alt="" coords="696,5,843,46"/>
+<area shape="rect" id="node5" href="$dc/dab/classns3_1_1RandomVariableBase.html#a1bdfa75b98a2f034a31e2efa1e718674" title="ns3::RandomVariableBase\l::GetValue" alt="" coords="891,5,1069,46"/>
+<area shape="rect" id="node7" href="$d0/d77/classLog.html#a419e58c8f6350bdaaae789a041aae356" title="Log::Write" alt="" coords="535,71,617,97"/>
+</map>

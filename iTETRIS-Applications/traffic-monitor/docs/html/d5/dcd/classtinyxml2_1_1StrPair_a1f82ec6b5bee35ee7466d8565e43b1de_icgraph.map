@@ -1,0 +1,18 @@
+<map id="tinyxml2::StrPair::SetStr" name="tinyxml2::StrPair::SetStr">
+<area shape="rect" id="node2" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a09dd68cf9eae137579f6e50f36487513" title="tinyxml2::XMLNode::\lSetValue" alt="" coords="186,162,331,203"/>
+<area shape="rect" id="node13" href="$db/d8e/classtinyxml2_1_1XMLAttribute.html#a469c2363600007f49e62a8048a362d57" title="tinyxml2::XMLAttribute\l::SetName" alt="" coords="181,322,336,363"/>
+<area shape="rect" id="node15" href="$db/d8e/classtinyxml2_1_1XMLAttribute.html#a406d2c4a13c7af99a65edb59dd9f7581" title="Set the attribute to a string value. " alt="" coords="181,387,336,429"/>
+<area shape="rect" id="node3" href="$d5/d83/classtinyxml2_1_1XMLElement.html#a1f9c2cd61b72af5ae708d37b7ad283ce" title="tinyxml2::XMLElement\l::SetText" alt="" coords="609,135,764,177"/>
+<area shape="rect" id="node5" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#a386df0befd06aadb5e0cd21381aa955a" title="tinyxml2::XMLDocument\l::NewComment" alt="" coords="385,257,551,298"/>
+<area shape="rect" id="node7" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#acece5de77a0819f2341b08c1e1ed9987" title="tinyxml2::XMLDocument\l::NewText" alt="" coords="385,191,551,233"/>
+<area shape="rect" id="node9" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#ae519030c0262fa2daff8993681990e16" title="tinyxml2::XMLDocument\l::NewDeclaration" alt="" coords="385,5,551,46"/>
+<area shape="rect" id="node11" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#a4954f502c5fd7f49de54c3c0c99bb73d" title="tinyxml2::XMLDocument\l::NewUnknown" alt="" coords="385,71,551,113"/>
+<area shape="rect" id="node4" href="$d5/d83/classtinyxml2_1_1XMLElement.html#aeae8917b5ea6060b3c08d4e3d8d632d7" title="Convenience method for setting text inside and element. See SetText() for important limitations..." alt="" coords="821,135,976,177"/>
+<area shape="rect" id="node6" href="$dd/dcb/classtinyxml2_1_1XMLComment.html#a90bb60193a691b484f5e1b487857016d" title="tinyxml2::XMLComment\l::ShallowClone" alt="" coords="605,266,768,307"/>
+<area shape="rect" id="node8" href="$da/de6/classtinyxml2_1_1XMLText.html#af5115f8cc83de2947ed6a9d13e2f88c8" title="tinyxml2::XMLText::\lShallowClone" alt="" coords="617,201,757,242"/>
+<area shape="rect" id="node10" href="$d7/dde/classtinyxml2_1_1XMLDeclaration.html#a39458732ee6796cfc85dd35d3c488e0b" title="tinyxml2::XMLDeclaration\l::ShallowClone" alt="" coords="601,5,773,46"/>
+<area shape="rect" id="node12" href="$d0/d4c/classtinyxml2_1_1XMLUnknown.html#aa09fc7cb0cd64d6bb9c5ae00ffc549ec" title="tinyxml2::XMLUnknown\l::ShallowClone" alt="" coords="606,70,767,111"/>
+<area shape="rect" id="node14" href="$d5/d83/classtinyxml2_1_1XMLElement.html#ac9d8fc849ec8acf46678217de011e896" title="tinyxml2::XMLElement\l::FindOrCreateAttribute" alt="" coords="389,322,547,363"/>
+<area shape="rect" id="node16" href="$d5/d83/classtinyxml2_1_1XMLElement.html#a11943abf2d0831548c3790dd5d9f119c" title="Sets the named attribute to value. " alt="" coords="391,387,545,429"/>
+<area shape="rect" id="node17" href="$d5/d83/classtinyxml2_1_1XMLElement.html#a85d85e32c18863fff1eeed53ae1ce23d" title="tinyxml2::XMLElement\l::ShallowClone" alt="" coords="609,387,764,429"/>
+</map>

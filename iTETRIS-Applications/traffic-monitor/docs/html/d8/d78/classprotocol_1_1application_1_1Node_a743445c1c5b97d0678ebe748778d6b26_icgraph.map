@@ -1,0 +1,9 @@
+<map id="protocol::application::Node::findSubscription" name="protocol::application::Node::findSubscription">
+<area shape="rect" id="node2" href="$d8/d78/classprotocol_1_1application_1_1Node.html#ae75387d8eabfafbe17bf8e62f166964c" title="That subscription will be cancelled when iCS ask which subscriptions to remove. " alt="" coords="217,101,391,142"/>
+<area shape="rect" id="node7" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a8f2625beb1c3b9ba75a0d22878d50618" title="Whatever a subscription is to remove. " alt="" coords="221,182,387,223"/>
+<area shape="rect" id="node3" href="$d1/d60/classprotocol_1_1application_1_1FixedStation.html#a2847e4189e43225a19c7fc24eb529549" title="Called with the updated information about the traffic light. " alt="" coords="453,4,625,60"/>
+<area shape="rect" id="node5" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a9e297935b35a9901725a88b5d0c5a7c1" title="protocol::server::NodeHandler\l::ConfirmSubscription" alt="" coords="441,83,637,125"/>
+<area shape="rect" id="node6" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#aa0e04743e3271a780df5fa75f75dec3e" title="protocol::server::NodeHandler\l::setToUnsubscribe" alt="" coords="441,149,637,190"/>
+<area shape="rect" id="node4" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a277392315eaeec477657639cdf7614e2" title="protocol::server::NodeHandler\l::trafficLightInformation" alt="" coords="686,11,882,53"/>
+<area shape="rect" id="node8" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#afca0d66f413561be9d93abab7a8fad8e" title="protocol::server::NodeHandler\l::endSubscription" alt="" coords="441,214,637,255"/>
+</map>

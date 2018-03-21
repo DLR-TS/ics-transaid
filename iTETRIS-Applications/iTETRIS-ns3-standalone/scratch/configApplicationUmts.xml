@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umtsServices>
+	
+    <service type="BROADCAST" name="EmergencyInfo" ip="10.3.0.6" id="2000" waitTime="3" burstSize="1000" rate="1000000" />
+    
+</umtsServices>

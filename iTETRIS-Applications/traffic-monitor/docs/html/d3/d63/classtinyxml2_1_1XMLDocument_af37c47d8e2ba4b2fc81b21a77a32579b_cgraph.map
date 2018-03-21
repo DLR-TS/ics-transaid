@@ -1,0 +1,8 @@
+<map id="tinyxml2::XMLDocument::~XMLDocument" name="tinyxml2::XMLDocument::~XMLDocument">
+<area shape="rect" id="node2" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a0360085cc54df5bff85d5c5da13afdce" title="tinyxml2::XMLNode::\lDeleteChildren" alt="" coords="233,30,378,71"/>
+<area shape="rect" id="node7" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#abf0f9ac4c3aa5698a785937f71f7a69f" title="Return true if there was an error parsing the document. " alt="" coords="222,95,389,137"/>
+<area shape="rect" id="node3" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a9546e242b6a4f232415befb1cfe0fdd4" title="tinyxml2::XMLNode::\lUnlink" alt="" coords="849,5,994,46"/>
+<area shape="rect" id="node4" href="$d6/de3/classtinyxml2_1_1XMLNode.html#ab0b21951f2343534c5c67f23dffdc7e6" title="tinyxml2::XMLNode::\lDeleteNode" alt="" coords="438,89,583,130"/>
+<area shape="rect" id="node5" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a8f41e898cdd4da4cdbb7f05b0c7d9f69" title="tinyxml2::XMLNode::\l~XMLNode" alt="" coords="643,34,789,75"/>
+<area shape="rect" id="node6" href="$db/d69/classtinyxml2_1_1MemPool.html#a49e3bfac2cba2ebd6776b31e571f64f7" title="tinyxml2::MemPool::Free" alt="" coords="632,100,800,127"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="protocol::server::Server" name="protocol::server::Server">
+<area shape="rect" id="node2" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html" title="protocol::server::NodeHandler" alt="" coords="85,112,280,139"/>
+<area shape="rect" id="node3" href="$d6/def/classprotocol_1_1server_1_1PayloadStorage.html" title="protocol::server::Payload\lStorage" alt="" coords="5,6,171,47"/>
+<area shape="rect" id="node4" href="$dd/d97/classprotocol_1_1server_1_1CircularBuffer.html" title="protocol::server::Circular\lBuffer\&lt; int \&gt;" alt="" coords="196,6,360,47"/>
+<area shape="rect" id="node5" href="$db/d00/classtcpip_1_1Storage.html" title="tcpip::Storage" alt="" coords="305,112,407,139"/>
+<area shape="rect" id="node6" href="$d6/d95/classtcpip_1_1Socket.html" title="tcpip::Socket" alt="" coords="441,112,540,139"/>
+</map>

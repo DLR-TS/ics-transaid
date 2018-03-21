@@ -1,0 +1,5 @@
+<map id="protocol::application::BehaviourRsu::Stop" name="protocol::application::BehaviourRsu::Stop">
+<area shape="rect" id="node2" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a6b1a81f316a41560b8a8a7345188d205" title="Called by the ics interface to add the relevant direction. " alt="" coords="200,38,403,79"/>
+<area shape="rect" id="node3" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a98373c53208f53499effa865df9f1153" title="protocol::application\l::Controller::Controller" alt="" coords="467,5,618,46"/>
+<area shape="rect" id="node4" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#ade24e9843c1a2211cfe117b56bc6beb3" title="protocol::application\l::iCSInterface::iCSInterface" alt="" coords="451,70,635,111"/>
+</map>

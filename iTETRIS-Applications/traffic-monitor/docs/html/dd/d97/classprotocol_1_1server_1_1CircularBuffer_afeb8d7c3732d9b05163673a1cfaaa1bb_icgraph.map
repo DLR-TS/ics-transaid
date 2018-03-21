@@ -1,0 +1,5 @@
+<map id="protocol::server::CircularBuffer::front" name="protocol::server::CircularBuffer::front">
+<area shape="rect" id="node2" href="$d8/dd8/classprotocol_1_1application_1_1NodeSampler.html#a32791e8b35bdb7a7490f478b35451c31" title="protocol::application\l::NodeSampler::Sample" alt="" coords="219,5,381,46"/>
+<area shape="rect" id="node3" href="$d8/dd8/classprotocol_1_1application_1_1NodeSampler.html#a6a548923a45e113baa2031c7f0965b36" title="protocol::application\l::NodeSampler::OnStateChange" alt="" coords="429,5,640,46"/>
+<area shape="rect" id="node4" href="$d8/dd8/classprotocol_1_1application_1_1NodeSampler.html#a853ba0ddd9ad35c0fc662a869f941af4" title="protocol::application\l::NodeSampler::NodeSampler" alt="" coords="689,5,885,46"/>
+</map>

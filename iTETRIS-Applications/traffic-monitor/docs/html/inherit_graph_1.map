@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$d1/d8f/classBoolFormatException.html" title="BoolFormatException" alt="" coords="163,5,309,32"/>
+<area shape="rect" id="node3" href="$db/d89/classEmptyData.html" title="EmptyData" alt="" coords="192,56,280,83"/>
+<area shape="rect" id="node4" href="$d3/db9/classInvalidArgument.html" title="InvalidArgument" alt="" coords="178,107,294,133"/>
+<area shape="rect" id="node5" href="$df/d4c/classNumberFormatException.html" title="NumberFormatException" alt="" coords="153,157,319,184"/>
+<area shape="rect" id="node6" href="$d3/d4c/classOutOfBoundsException.html" title="OutOfBoundsException" alt="" coords="157,208,315,235"/>
+<area shape="rect" id="node7" href="$dc/d6e/classProcessError.html" title="ProcessError" alt="" coords="187,259,285,285"/>
+<area shape="rect" id="node9" href="$de/d06/classUnknownElement.html" title="UnknownElement" alt="" coords="173,309,299,336"/>
+<area shape="rect" id="node8" href="$d3/df1/classIOError.html" title="IOError" alt="" coords="368,259,432,285"/>
+</map>

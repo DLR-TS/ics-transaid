@@ -1,0 +1,24 @@
+<map id="tinyxml2::XMLNode::ParseDeep" name="tinyxml2::XMLNode::ParseDeep">
+<area shape="rect" id="node2" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#a25827d1bec509ad566a107e5853ed040" title="tinyxml2::XMLDocument\l::Identify" alt="" coords="201,229,367,270"/>
+<area shape="rect" id="node4" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#acfcd287cacfd2533e1bc9ea4dfb56602" title="tinyxml2::XMLUtil::\lStringEqual" alt="" coords="433,255,567,297"/>
+<area shape="rect" id="node6" href="$d6/de3/classtinyxml2_1_1XMLNode.html#ab0b21951f2343534c5c67f23dffdc7e6" title="tinyxml2::XMLNode::\lDeleteNode" alt="" coords="211,347,357,389"/>
+<area shape="rect" id="node11" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#abf0f9ac4c3aa5698a785937f71f7a69f" title="Return true if there was an error parsing the document. " alt="" coords="201,530,367,571"/>
+<area shape="rect" id="node12" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#ae38d194e47336e4c96677ac77e2ac5d4" title="tinyxml2::XMLDocument\l::SetError" alt="" coords="201,595,367,637"/>
+<area shape="rect" id="node13" href="$d6/de3/classtinyxml2_1_1XMLNode.html#aab516e699567f75cc9ab2ef2eee501e8" title="Safely cast to an Element, or null. " alt="" coords="211,661,357,702"/>
+<area shape="rect" id="node14" href="$d5/d83/classtinyxml2_1_1XMLElement.html#a2e3d9f938307a05963d7c4b8cd55754e" title="tinyxml2::XMLElement\l::ClosingType" alt="" coords="207,726,361,767"/>
+<area shape="rect" id="node15" href="$db/d69/classtinyxml2_1_1MemPool.html#ac5804dd1387b2e4de5eef710076a0db1" title="tinyxml2::MemPool::\lSetTracked" alt="" coords="429,539,571,581"/>
+<area shape="rect" id="node16" href="$d5/dcd/classtinyxml2_1_1StrPair.html#affa1043e73a18f05d5d2faec055725a7" title="tinyxml2::StrPair::\lEmpty" alt="" coords="221,791,347,833"/>
+<area shape="rect" id="node17" href="$d5/dcd/classtinyxml2_1_1StrPair.html#ad87e3d11330f5e689ba1e7e54c023b57" title="tinyxml2::StrPair::\lGetStr" alt="" coords="437,73,563,114"/>
+<area shape="rect" id="node22" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a92835c779871918f9af569bfe9669fe6" title="tinyxml2::XMLNode::\lValue" alt="" coords="211,161,357,202"/>
+<area shape="rect" id="node23" href="$d6/de3/classtinyxml2_1_1XMLNode.html#ae3b422e98914d6002ca99bb1d2837103" title="tinyxml2::XMLNode::\lInsertEndChild" alt="" coords="211,413,357,454"/>
+<area shape="rect" id="node3" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a9333d20f2a34325b5115ca45849c4b2a" title="tinyxml2::XMLUtil::\lSkipWhiteSpace" alt="" coords="838,135,973,177"/>
+<area shape="rect" id="node5" href="$da/de6/classtinyxml2_1_1XMLText.html#ad080357d76ab7cc59d7651249949329d" title="Declare whether this should be CDATA or standard text. " alt="" coords="430,190,570,231"/>
+<area shape="rect" id="node7" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a8f41e898cdd4da4cdbb7f05b0c7d9f69" title="tinyxml2::XMLNode::\l~XMLNode" alt="" coords="427,321,573,362"/>
+<area shape="rect" id="node10" href="$db/d69/classtinyxml2_1_1MemPool.html#a49e3bfac2cba2ebd6776b31e571f64f7" title="tinyxml2::MemPool::Free" alt="" coords="416,437,584,464"/>
+<area shape="rect" id="node8" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a0360085cc54df5bff85d5c5da13afdce" title="tinyxml2::XMLNode::\lDeleteChildren" alt="" coords="633,379,778,421"/>
+<area shape="rect" id="node9" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a9546e242b6a4f232415befb1cfe0fdd4" title="tinyxml2::XMLNode::\lUnlink" alt="" coords="833,379,978,421"/>
+<area shape="rect" id="node18" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a5a96e5144a8d693dc4bcd783d9964648" title="tinyxml2::XMLUtil::\lGetCharacterRef" alt="" coords="638,5,773,46"/>
+<area shape="rect" id="node20" href="$d5/dcd/classtinyxml2_1_1StrPair.html#ade1469025e6b4cac74397a82a7429337" title="tinyxml2::StrPair::\lCollapseWhitespace" alt="" coords="634,73,777,114"/>
+<area shape="rect" id="node19" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a31c00d5c5dfb38382de1dfcaf4be3595" title="tinyxml2::XMLUtil::\lConvertUTF32ToUTF8" alt="" coords="827,5,983,46"/>
+<area shape="rect" id="node21" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a357ec3af8fc433d19023a815f45e8e33" title="tinyxml2::XMLUtil::\lIsWhiteSpace" alt="" coords="838,70,973,111"/>
+</map>

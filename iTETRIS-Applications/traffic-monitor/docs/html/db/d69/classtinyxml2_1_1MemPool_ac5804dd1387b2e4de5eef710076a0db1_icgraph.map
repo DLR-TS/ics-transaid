@@ -1,0 +1,12 @@
+<map id="tinyxml2::MemPool::SetTracked" name="tinyxml2::MemPool::SetTracked">
+<area shape="rect" id="node2" href="$d6/de3/classtinyxml2_1_1XMLNode.html#ae3b422e98914d6002ca99bb1d2837103" title="tinyxml2::XMLNode::\lInsertEndChild" alt="" coords="202,53,347,94"/>
+<area shape="rect" id="node3" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a9275138a1b8dd5d8e2c26789bdc23ac8" title="tinyxml2::XMLNode::\lInsertAfterChild" alt="" coords="405,5,550,46"/>
+<area shape="rect" id="node4" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a7610d0f603e8b603d2078521811a23c1" title="tinyxml2::XMLNode::\lParseDeep" alt="" coords="405,105,550,146"/>
+<area shape="rect" id="node8" href="$d6/de3/classtinyxml2_1_1XMLNode.html#ac609a8f3ea949027f439280c640bbaf2" title="tinyxml2::XMLNode::\lInsertFirstChild" alt="" coords="202,235,347,277"/>
+<area shape="rect" id="node11" href="$d5/d83/classtinyxml2_1_1XMLElement.html#a9c931bc32d6e78b84c98f736fa8aafe2" title="tinyxml2::XMLElement\l::ParseAttributes" alt="" coords="197,170,352,211"/>
+<area shape="rect" id="node5" href="$d5/d83/classtinyxml2_1_1XMLElement.html#aaafdd2a5618abe80a2c1839ad3ccd492" title="tinyxml2::XMLElement\l::ParseDeep" alt="" coords="609,170,764,211"/>
+<area shape="rect" id="node6" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#a5f1d330fad44c52f3d265338dd2a6dc2" title="tinyxml2::XMLDocument\l::LoadFile" alt="" coords="603,39,770,81"/>
+<area shape="rect" id="node7" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#a1819bd34f540a7304c105a6232d25a1f" title="tinyxml2::XMLDocument\l::Parse" alt="" coords="603,105,770,146"/>
+<area shape="rect" id="node9" href="$d5/d83/classtinyxml2_1_1XMLElement.html#a1f9c2cd61b72af5ae708d37b7ad283ce" title="tinyxml2::XMLElement\l::SetText" alt="" coords="400,235,555,277"/>
+<area shape="rect" id="node10" href="$d5/d83/classtinyxml2_1_1XMLElement.html#aeae8917b5ea6060b3c08d4e3d8d632d7" title="Convenience method for setting text inside and element. See SetText() for important limitations..." alt="" coords="609,235,764,277"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="protocol::ProgramConfiguration::LoadConfiguration" name="protocol::ProgramConfiguration::LoadConfiguration">
+<area shape="rect" id="node2" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#a2ebd4647a8af5fc6831b294ac26a150a" title="tinyxml2::XMLDocument\l::LoadFile" alt="" coords="257,98,423,139"/>
+<area shape="rect" id="node11" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#ad2b70320d3c2a071c2f36928edff3e1c" title="tinyxml2::XMLDocument\l::RootElement" alt="" coords="257,178,423,219"/>
+<area shape="rect" id="node12" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a20f48e99b03e9c17487944f229bee130" title="tinyxml2::XMLNode::\lFirstChildElement" alt="" coords="267,273,413,314"/>
+<area shape="rect" id="node3" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#a65656b0b2cbc822708eb351504178aaf" title="Clear the document, resetting it to the initial state. " alt="" coords="473,31,639,73"/>
+<area shape="rect" id="node9" href="$da/dce/namespacetinyxml2.html#a3634a81ca725ead6204f08cbaa5ad58f" title="tinyxml2::callfopen" alt="" coords="491,97,621,124"/>
+<area shape="rect" id="node10" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#ae38d194e47336e4c96677ac77e2ac5d4" title="tinyxml2::XMLDocument\l::SetError" alt="" coords="473,149,639,190"/>
+<area shape="rect" id="node4" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a0360085cc54df5bff85d5c5da13afdce" title="tinyxml2::XMLNode::\lDeleteChildren" alt="" coords="689,31,834,73"/>
+<area shape="rect" id="node5" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a9546e242b6a4f232415befb1cfe0fdd4" title="tinyxml2::XMLNode::\lUnlink" alt="" coords="1294,6,1439,47"/>
+<area shape="rect" id="node6" href="$d6/de3/classtinyxml2_1_1XMLNode.html#ab0b21951f2343534c5c67f23dffdc7e6" title="tinyxml2::XMLNode::\lDeleteNode" alt="" coords="883,90,1029,131"/>
+<area shape="rect" id="node7" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a8f41e898cdd4da4cdbb7f05b0c7d9f69" title="tinyxml2::XMLNode::\l~XMLNode" alt="" coords="1089,35,1234,77"/>
+<area shape="rect" id="node8" href="$db/d69/classtinyxml2_1_1MemPool.html#a49e3bfac2cba2ebd6776b31e571f64f7" title="tinyxml2::MemPool::Free" alt="" coords="1077,101,1245,128"/>
+<area shape="rect" id="node13" href="$d5/d83/classtinyxml2_1_1XMLElement.html#ad9ff5c2dbc15df36cf664ce1b0ea0a5d" title="Safely cast to an Element, or null. " alt="" coords="479,214,633,255"/>
+<area shape="rect" id="node14" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#acfcd287cacfd2533e1bc9ea4dfb56602" title="tinyxml2::XMLUtil::\lStringEqual" alt="" coords="489,279,623,321"/>
+<area shape="rect" id="node15" href="$d5/d83/classtinyxml2_1_1XMLElement.html#a8bff355472bce2c60d4b50a212bf7f5f" title="Get the name of an element (which is the Value() of the node.) " alt="" coords="479,345,633,386"/>
+</map>

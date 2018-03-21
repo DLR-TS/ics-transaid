@@ -1,0 +1,4 @@
+<map id="protocol::application::BehaviourNodeWithoutSink::SendNoLongerConformant" name="protocol::application::BehaviourNodeWithoutSink::SendNoLongerConformant">
+<area shape="rect" id="node2" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a94a2feb4d2c64580d1ed460ef5caa57d" title="Called by the receive after a random timeout when a beacon message is received. " alt="" coords="246,4,437,60"/>
+<area shape="rect" id="node3" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a373a1080ed9cb0ff94fd9559b98987d5" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="486,4,677,60"/>
+</map>
