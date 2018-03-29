@@ -272,10 +272,14 @@ bool TraCIClient::ReportResultState(tcpip::Storage& inMsg, int command)
     cout << ".. Sent command is not implemented (" << cmdId << "), [description: " << msg << "]" << endl;
     return false;
   case RTYPE_OK:
+  {
 #ifdef LOG_ON
-    cout << ".. Command acknowledged (" << cmdId << "), [description: " << msg << "]" << endl;
+     stringstream log;
+     log << ".. Command acknowledged (" << cmdId << "), [description: " << msg << "]" << endl;
+     IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
-    break;
+     break;
+  }
   default:
     cout << ".. Answered with unknown result code(" << resultType << ") to command(" << cmdId << "), [description: "
         << msg << "]" << endl;

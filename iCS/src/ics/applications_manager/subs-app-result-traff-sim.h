@@ -84,8 +84,8 @@ namespace ics
         #define VALUE_GET_EDGE_TRAVELTIME       0x02
         #define VALUE_RE_ROUTE   	    		0x03
         #define VALUE_GET_ROUTE_VARIABLE	 	0x04
-        tcpip::Storage             m_msg;
-
+        tcpip::Storage            m_msg;
+        tcpip::Storage            m_message;
 	};
 
 }

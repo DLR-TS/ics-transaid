@@ -455,21 +455,6 @@ vector<stationID_t>* FacilitiesManager::getStationsIDsInArea(GeometricShape &are
   delete stations;
   return stationsIDs;
 }
-/*
-//TTN (9/3/17)
-vector<Station*>* FacilitiesManager::getStationsInArea(GeometricShape &area)
-{
-  map<stationID_t, const Station*>* stations = getStationsInArea(area);
-  vector<Station*>* stationsVec = new vector<Station*>();
-  for (map<stationID_t, const Station*>::const_iterator it = stations->begin(); it != stations->end(); it++)
-  {
-    if (it->second != NULL)
-    	stationsVec->push_back(it->second);
-  }
-  delete stations;
-  return stationsVec;
-}
-*/
 
 vector<stationID_t>* FacilitiesManager::getStationsIDsInArea(vector<RoadElement*> &area)
 {
@@ -1360,7 +1345,6 @@ unsigned char FacilitiesManager::getApplicationMessagePreferredTechnologies(acti
   return appPayload->getPreferredTechnologies();
 }
 
-//TODO: replace NULL with another value that indicates invalid message
 unsigned short FacilitiesManager::getApplicationMessageLength(actionID_t actionID)
 {
   FacilityMessagePayload* facPayload = getReceivedMessagePayload(actionID);

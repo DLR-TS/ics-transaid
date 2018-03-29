@@ -25,9 +25,40 @@
  ***************************************************************************************/
 
 /****************************************************************************************
- * Modified to support the LTE extensions from ns-3.20
- * Author: Jin Yan <jin.yan@renault.com>
- * RENAULT 2017
+ * Copyright (c) 2016 EURECOM
+ * This code has been developed in the context of the
+ * SINETIC project
+ * ....
+ * All rights reserved.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *  Additional permission under GNU GPL version 3 section 7
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation and/or
+ * other materials provided with the distribution.
+ * 3. All advertising materials mentioning features or use of this software must display
+ * the following acknowledgment: 'This product includes software developed by
+ * EURECOM and its contributors'.
+ * 4. Neither the name of EURECOM nor the names of its contributors may be used to
+ * endorse or promote products derived from this software without specific prior written
+ * permission.
  *
  ***************************************************************************************/
 
@@ -85,7 +116,6 @@
 #include "config.h"
 #endif
 #define SUMO_TIMESTEP 100
-//#define _DEBUG_TIME_EXECUTION
 using namespace std;
 
 namespace ics
@@ -151,7 +181,7 @@ V2xMessageManager* SyncManager::m_v2xMessageTracker;
 // ===========================================================================
 SyncManager::SyncManager(int ns3Port, int sumoPort, string sumoHost, string ns3Host, int beginTime, int endTime,
 		int resolution) :
-									m_firstTimeStep(beginTime * 1000), m_lastTimeStep(endTime * 1000)
+											m_firstTimeStep(beginTime * 1000), m_lastTimeStep(endTime * 1000)
 {
 	m_ns3Client.m_port = ns3Port;
 	m_ns3Client.m_host = ns3Host;
@@ -206,7 +236,6 @@ int SyncManager::Run(bool interactive)
 	log_msgNumber = -1;
 	log_stepTime = -1;
 	log_ns3Time = -1;
-	log_icsTime = -1;
 	//Set facilities clock to zero
 	m_facilitiesManager->updateClock(m_simStep);
 	while (m_lastTimeStep >= m_simStep)
@@ -229,20 +258,6 @@ int SyncManager::Run(bool interactive)
 		log_stepTime = GetMilliCount();
 		log_msgNumber = 0;
 		//			IcsLog::Log("*************************************************************************************");
-#endif
-
-#ifdef _DEBUG_TIME_EXECUTION
-		cout << "Tics=" << m_simStep;
-		if (log_stepTime != -1)
-		{
-			log_stepTime = GetMilliSpan(log_stepTime);
-			cout << " StepT=" << log_stepTime;
-			cout << " ns3T=" << log_ns3Time;
-			cout << " %ns3=" << (((float) log_ns3Time) / log_stepTime * 100);
-		}
-		cout <<"\n";
-		log_stepTime = GetMilliCount();
-		log_msgNumber = 0;
 #endif
 
 		if (interactive)
@@ -274,18 +289,11 @@ int SyncManager::Run(bool interactive)
 				return EXIT_FAILURE;
 			}
 			log_ns3Time = GetMilliSpan(log_ns3Time);
-#ifdef _DEBUG_TIME_EXECUTION
-			cout << " RunOneNs3TimeStep time " << log_ns3Time << "\n";
-			log_icsTime = GetMilliCount();
-#endif
 			if (GetDataFromNs3() == EXIT_FAILURE)
 			{
 				utils::Conversion::Wait("iCS --> [ERROR] GetDataFromNs3()");
 				return EXIT_FAILURE;
 			}
-#ifdef _DEBUG_TIME_EXECUTION
-			cout << " GetDataFromNs3 time " << GetMilliSpan(log_icsTime) << "\n";
-#endif
 		}
 #endif
 
@@ -310,17 +318,11 @@ int SyncManager::Run(bool interactive)
 #ifdef SUMO_ON
 		if (m_simStep % SUMO_TIMESTEP == 0)
 		{
-#ifdef _DEBUG_TIME_EXECUTION
-			log_icsTime = GetMilliCount();
-#endif
 			if (RunOneSumoTimeStep() == EXIT_FAILURE)
 			{
 				utils::Conversion::Wait("iCS --> [ERROR] RunOneSumoTimeStep()");
 				return EXIT_FAILURE;
 			}
-#ifdef _DEBUG_TIME_EXECUTION
-			cout << " RunOneSumoTimeStep time " << GetMilliSpan(log_icsTime) << "\n";
-#endif
 		}
 #endif
 
@@ -344,17 +346,11 @@ int SyncManager::Run(bool interactive)
 #ifdef APPLICATIONS_ON
 		if (m_simStep >= m_firstTimeStep)
 		{
-#ifdef _DEBUG_TIME_EXECUTION
-			log_icsTime = GetMilliCount();
-#endif
 			if (RunApplicationLogic() == EXIT_FAILURE)
 			{
 				utils::Conversion::Wait("iCS --> [ERROR] RunApplicationLogic()");
 				return EXIT_FAILURE;
 			}
-#ifdef _DEBUG_TIME_EXECUTION
-			cout << " RunApplicationLogic time " << GetMilliSpan(log_icsTime) << "\n";
-#endif
 		}
 #endif
 
@@ -377,18 +373,13 @@ int SyncManager::Run(bool interactive)
 #ifdef APPLICATIONS_ON
 		if (m_simStep >= m_firstTimeStep)
 		{
-#ifdef _DEBUG_TIME_EXECUTION
-			log_icsTime = GetMilliCount();
-#endif
+
 			if (ProcessApplicationResults() == EXIT_FAILURE)
 			{
 				//                 utils::Conversion::Wait(
 				cout << "iCS --> [ERROR] ProcessApplicationResults()" << endl/*)*/;
 				return EXIT_FAILURE;
 			}
-#ifdef _DEBUG_TIME_EXECUTION
-			cout << " ProcessApplicationResults time1 " << GetMilliSpan(log_icsTime) << "\n";
-#endif
 		}
 #endif
 
@@ -413,29 +404,18 @@ int SyncManager::Run(bool interactive)
 #ifdef NS3_ON
 		if (m_simStep >= m_firstTimeStep)
 		{
-#ifdef _DEBUG_TIME_EXECUTION
-			log_icsTime = GetMilliCount();
-#endif
 			if (ScheduleV2xMessages() == EXIT_FAILURE)
 			{
 				utils::Conversion::Wait("iCS --> [ERROR] ScheduleV2xMessages()");
 				return EXIT_FAILURE;
 			}
-#ifdef _DEBUG_TIME_EXECUTION
-			cout << " ScheduleV2xMessages time " << GetMilliSpan(log_icsTime) << "\n";
-#endif
 		}
-#ifdef _DEBUG_TIME_EXECUTION
-		log_icsTime = GetMilliCount();
-#endif
+
 		if (UpdatePositionsInNs3() == EXIT_FAILURE)
 		{
 			utils::Conversion::Wait("iCS --> [ERROR] UpdatePositionsInNs3()");
 			return EXIT_FAILURE;
 		}
-#ifdef _DEBUG_TIME_EXECUTION
-		cout << " UpdatePositionsInNs3 time " << GetMilliSpan(log_icsTime) << "\n";
-#endif
 
 #endif
 
@@ -640,55 +620,33 @@ int SyncManager::RunOneSumoTimeStep()
 
 			// Create the node in ns-3
 #ifdef NS3_ON
-			int32_t id = 1;
-			if (ActiveNodeInNS3 (vehicle)){
-				id = m_wirelessComSimCommunicator->CommandCreateNode2(vehicle->GetPositionX(), vehicle->GetPositionY(),
-				vehicle->GetSpeed(), vehicle->GetHeading(), vehicle->GetLane(), techList);
-			}
+			int32_t id = m_wirelessComSimCommunicator->CommandCreateNode2(vehicle->GetPositionX(), vehicle->GetPositionY(),
+					vehicle->GetSpeed(), vehicle->GetHeading(), vehicle->GetLane(), techList);
 #else
 			int32_t id = 1;
 #endif
-			if (ActiveNodeInNS3 (vehicle)){
 			vehicle->m_nsId = id; // Assign the ns-3 node ID returned by ns-3
-			}
-
 			AddNode(vehicle);
-			if (ActiveNodeInNS3 (vehicle)){
-				nodesToActivateInNs3.push_back(vehicle->m_nsId);  // Add vehicle to activate
-			}
-
+			nodesToActivateInNs3.push_back(vehicle->m_nsId);  // Add vehicle to activate
 		}
 	}
 
 	// Activate the new nodes in wireless
 #ifdef NS3_ON
 	m_wirelessComSimCommunicator->CommandActivateNode(nodesToActivateInNs3);
-
 #endif
-	m_vehiclesToBeUpdated.clear();
-	// update positions + other data
+		// update positions + other data
 	for (NodeMap::const_iterator it = m_iTetrisNodeMap->begin(); it != m_iTetrisNodeMap->end(); ++it)
 	{
-
 		if (it->second->m_type != staType_CAR)
 			continue;
 		VehicleNode* vehicle = (VehicleNode*) it->second;
 
-		//Deactivate nodes outside of zone
-		if (!ActiveNodeInNS3(vehicle))
-			m_vehiclesToBeDeactivated.push_back(vehicle->m_nsId);
-
 		// Get additional info from SUMO and Create the new station in the facilities
 		std::pair<float, float> pos = m_trafficSimCommunicator->GetPosition(*vehicle);
-
-		//If node is at the specified NS-3 zone at this step/previous step, add to the list and update the node position
-		if (ActiveNodeInNS3(vehicle))
-		{
-			m_vehiclesToBeUpdated.push_back(vehicle);
-			vehicle->m_moved = true;
-		}
-		// Get additional info from SUMO and Create the new station in the facilities
+		vehicle->CheckPosition(pos);
 		float speed = m_trafficSimCommunicator->GetSpeed(*vehicle);
+
 		TMobileStationDynamicInfo info;
 		info.speed = speed;
 		info.acceleration = vehicle->ChangeSpeed(speed);
@@ -936,7 +894,6 @@ int SyncManager::CloseApps()
 int SyncManager::SetFixedStationInNs3()
 {
 
-
 	if (m_iTetrisNodeMap->size() == 0)
 	{
 
@@ -1008,22 +965,26 @@ int SyncManager::UpdatePositionsInNs3()
 
 		}
 	}
+
 	// Update the position of the vehicles.
-		for (vector<VehicleNode*>::const_iterator nodeIt = m_vehiclesToBeUpdated.begin(); nodeIt != m_vehiclesToBeUpdated.end(); ++nodeIt)
+	for (NodeMap::iterator nodeIt = m_iTetrisNodeMap->begin(); nodeIt != m_iTetrisNodeMap->end(); ++nodeIt)
+	{
+		// Discard the node that are not mobile
+		if (nodeIt->second->m_type == staType_CAR)
 		{
-			VehicleNode* vehicle = (*nodeIt);
-			// Discard the node that are not mobile
-			if (vehicle->m_type == staType_CAR)
+			VehicleNode* vehicle = static_cast<VehicleNode*>(nodeIt->second);
+			if (vehicle->m_moved)
 			{
 				if (m_wirelessComSimCommunicator->CommandUpdateNodePosition2(vehicle->m_nsId, vehicle->GetPositionX(),
-							vehicle->GetPositionY(), vehicle->GetSpeed(), vehicle->GetHeading(), vehicle->GetLane()) == EXIT_FAILURE)
-					{
-						return EXIT_FAILURE;
-					}
-					// Reset the moved info value
-					vehicle->m_moved = false;
+						vehicle->GetPositionY(), vehicle->GetSpeed(), vehicle->GetHeading(), vehicle->GetLane()) == EXIT_FAILURE)
+				{
+					return EXIT_FAILURE;
 				}
+				// Reset the moved info value
+				vehicle->m_moved = false;
+			}
 		}
+	}
 
 	return EXIT_SUCCESS;
 
@@ -1110,7 +1071,7 @@ int SyncManager::ForwardSubscribedDataToApplication(ITetrisNode *node)
 			}
 		}
 		/*
-		 * JHNote(05/12/2013): the SubsGetFacilitiesInfo is a single shot subscription. But it cannot be unsubscribed right after having
+		 *  the SubsGetFacilitiesInfo is a single shot subscription. But it cannot be unsubscribed right after having
 		 *                     been subscribed, as it is triggered in the "SendSubscribedData" phase of iCS, after the askForUnsubscribe.
 		 *                     So, we have to manually erase it, as the iCS consideres it as a recuring subscription otherwise.
 		 */
@@ -1478,7 +1439,6 @@ void SyncManager::RemoveNodeInTheArea(ITetrisNode* node)
 		V2xCamArea* camArea = *camAreasIt;
 		int subscriptionId = camArea->m_subscriptionId;
 		Subscription* subscription = NULL;
-		//vector<Subscription*>::iterator subIt;
 		for (vector<Subscription*>::iterator  subIt = m_subscriptionCollectionManager->begin(); subIt < m_subscriptionCollectionManager->end(); subIt++)
 		{
 			subscription = *subIt;
@@ -2931,31 +2891,6 @@ void SyncManager::UpdateNodeId(ITetrisNode * node, bool addNs3, bool addSumo)
 #ifdef LOG_ON
     IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
-}
-
-
-bool SyncManager::ActiveNodeInNS3(VehicleNode* vehicle){
-
-	// update node position for only the node which is in one specific area (Ns3-Zone) in the previous timestep or this timestep
-	// Get additional info from SUMO and Create the new station in the facilities
-	std::pair<float, float> pos = m_trafficSimCommunicator->GetPosition(*vehicle);
-	Point2D currPos (pos.first, pos.second);
-    //get position of the node in the previous timestep
-	Point2D prePos = m_facilitiesManager->getStationPosition(vehicle->m_icsId);
-
-	//verify whether the node is in the active-zone or not
-	if (m_activeZoneNs3.getRadius() > 0)
-	{
-		//If node is in zone at this step/previous step, add to the list
-		if (m_activeZoneNs3.isInternal(prePos) || m_activeZoneNs3.isInternal(currPos)){
-			return true;
-		}else {
-			return false;
-		}
-	}
-	else{ //if radius is equal or less than 0, consider the active zone is whole NS-3 environment
-	 return true;
-	}
 }
 
 }  //syncmanager

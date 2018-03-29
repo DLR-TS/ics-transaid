@@ -60,7 +60,6 @@
  * permission.
  *
  ***************************************************************************************/
-
 #ifdef _MSC_VER
 #include <windows_config.h>
 #else
@@ -68,9 +67,7 @@
 #endif
 
 #include <iostream>
-//jin
 #include <string>
-
 #include <iomanip>
 #include <fstream>
 #include <sstream>
@@ -315,7 +312,6 @@ namespace ics
 		return EXIT_SUCCESS;
 	}
 
-
 	int Ns3Client::CommandCreateNode(float x, float y, std::vector<std::string> techList)
 	{
 		StorageNs3 outMsg;
@@ -354,36 +350,30 @@ namespace ics
 		outMsg.writeFloat(y);
 		// rat type
 		outMsg.writeStringList(techList);
-		cout<<"jin <iCS/ns3-client.cc> techList="<<techList[0] <<endl;
-
 
 		// send request message
 		try
-		{cout<<"jin <iCS/ns3-client.cc>	CMD CREATE NODE, send request"<<endl;
+		{
 			m_socket->sendExact(outMsg);
 		} catch (SocketException e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
-			
 			return -1;
 		}
 
 		// receive answer message
 		try
-		{cout<<"jin <iCS/ns3-client.cc>CMD CREATE NODE, receive answer"<<endl;
+		{
 			m_socket->receiveExact(inMsg);
 		} catch (SocketException e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
-			
 			return -1;
 		}
 
-
 		// validate result state
 		if (!ReportResultState(inMsg, CMD_CREATENODE))
-		{	//Jin
-			cout<<"Jin <iCS/ns3-client.cc>error 3" <<endl;
+		{
 			return -1;
 		}
 

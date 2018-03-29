@@ -81,7 +81,7 @@ public:
     * @return EXIT_FAILURE: If an error occurs.
     * @return EXIT_SUCCESS: If the parsing is successful.
     */
-    int Setup(std::string facilitiesConfigFile, std::string appConfigFile, std::string activeZonesConfigFile);
+    int Setup(std::string facilitiesConfigFile, std::string appConfigFile);
 
     /**
     * @brief Starts iTETRIS run time-phase.
@@ -114,8 +114,6 @@ private:
     * @return EXIT_SUCCESS: If the parsing is successful.
     */
     int ReadAppConfigFile(std::string filePath);
-    int ReadActiveZonesConfigFile(std::string filePath);
-
 
     /// @brief Member of the iCS related to synchronizing issues.
     SyncManager *m_syncManager;

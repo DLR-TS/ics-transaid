@@ -81,8 +81,6 @@ SubsAppMessageReceive::SubsAppMessageReceive(int appId, ics_types::stationID_t s
     unsigned char* msg, int msgSize) :
     Subscription(stationId), m_msg(msg, msgSize)
 {
-//jin added
-cout<<"jin test ics subs-app-message-receive SubsAppMessageReceive"<<endl;
   // Read parameters
   m_id = ++m_subscriptionCounter;
 
@@ -112,8 +110,7 @@ SubsAppMessageReceive::~SubsAppMessageReceive()
 
 int SubsAppMessageReceive::pull(SyncManager* syncManager)
 {
-//jin added
-cout<<"jin test ics subs-app-message-receive pull"<<endl;
+
   unsigned int index = 0;
 
   m_appMsgType = m_msg.readChar();                   // HEADER__APP_MSG_TYPE
@@ -143,8 +140,6 @@ cout<<"jin test ics subs-app-message-receive pull"<<endl;
   {
   case EXT_HEADER_TYPE_TOPOBROADCAST:
   {
-//jin added
-cout<<"jin test ics subs-app-message-receive pull :EXT_HEADER_TYPE_TOPOBROADCAST"<<endl;
     stringstream log;
     log << "iCS --> SubAppMsgReceive: Communication mode: TOPOBROADCAST";
     IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
@@ -164,7 +159,6 @@ cout<<"jin test ics subs-app-message-receive pull :EXT_HEADER_TYPE_TOPOBROADCAST
   }
   case EXT_HEADER_TYPE_UNICAST:
   {
-
     stringstream log;
     log << "iCS --> SubAppMsgReceive: Communication mode: UNICAST";
     IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
@@ -187,14 +181,9 @@ cout<<"jin test ics subs-app-message-receive pull :EXT_HEADER_TYPE_TOPOBROADCAST
     }
 
     break;
-//jin added
-cout<<"jin test ics subs-app-message-receive pull : EXT_HEADER_TYPE_UNICAST"<<endl;
-
   }
   case EXT_HEADER_TYPE_MULTICAST:
   {
-//jin added
-cout<<"jin test ics subs-app-message-receive pull :EXT_HEADER_TYPE_MULTICAST"<<endl;
     stringstream log;
     log << "iCS --> SubAppMsgReceive: Communication mode: MULTICAST";
     IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
@@ -218,7 +207,6 @@ cout<<"jin test ics subs-app-message-receive pull :EXT_HEADER_TYPE_MULTICAST"<<e
   }
   case EXT_HEADER_TYPE_GEOBROADCAST:
   {
-
     stringstream log;
     log << "iCS --> SubAppMsgReceive: Communication mode: GEOBROADCAST";
     IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
@@ -233,14 +221,11 @@ cout<<"jin test ics subs-app-message-receive pull :EXT_HEADER_TYPE_MULTICAST"<<e
       log << "iCS --> SubAppMsgReceive: Receiving a GEOBROADCAST message from any dissemination area.";
       IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
     }
-//jin added
-cout<<"jin test ics subs-app-message-receive pull :EXT_HEADER_TYPE_GEOBROADCAST"<<endl;
 
     break;
   }
   case EXT_HEADER_TYPE_GEOUNICAST:
   {
-
     stringstream log;
     log << "iCS --> SubAppMsgReceive: Communication mode: GEOUNICAST";
     IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
@@ -339,8 +324,6 @@ bool SubsAppMessageReceive::returnStatus()
 
 int SubsAppMessageReceive::ProcessReceivedAppMessage(Message& message, SyncManager* syncManager)
 {
-//jin added
-cout<<"jin test ics subs-app-message-receive ProcessReceivedAppMessage "<<endl;
 	m_lastMessageAddedToReceived = false;
   if (syncManager == NULL)
   {

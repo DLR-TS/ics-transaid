@@ -124,6 +124,8 @@ namespace protocol
 			MobilityInfo(tcpip::Storage & storage)
 			{
 				id = storage.readInt();
+            nsId = storage.readInt(); //added the ns3 ID support
+            tsId = storage.readString(); //added the SUMO ID support
 				double x = storage.readFloat();
 				double y = storage.readFloat();
 				//Don not read inline x and y because it will read y before...
@@ -139,6 +141,8 @@ namespace protocol
 			}
 
 			int id;
+         int nsId;
+         std::string tsId;
 			application::Vector2D position;
 			bool isMobile;
 			float speed;

@@ -33,6 +33,13 @@
  * Author Federico Caselli <f.caselli@unibo.it>
  * University of Bologna
  ***************************************************************************************/
+/****************************************************************************************
+ * Modified and Adapted for SINETIC
+ * Author: Tien-Thinh Nguyen (tien-thinh.nguyen@eurecom.fr)
+ * EURECOM 2016
+ * SINETIC project
+ *
+ ***************************************************************************************/
 
 #include "subs-get-mobility-info.h"
 #include "app-message-manager.h"

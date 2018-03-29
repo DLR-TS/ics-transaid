@@ -259,7 +259,7 @@ bool StationFacilities::updateMobileStationDynamicInformation(stationID_t statio
 		// Update the position history of the node, if it is required
 		if (recordMobilityHistory){
 			updateMobilityHistory(curr->getID(), info.timeStep, Point2D(info.positionX, info.positionY));
-#ifdef LOG_ON
+#ifdef _DEBUG_STATIONS
 			std::cout<<"updateMobilityHistory::info.positionX"<<info.positionX<<":Y:"<<info.positionY<<std::endl;
 #endif
 
@@ -586,16 +586,16 @@ void StationFacilities::updateMobilityHistory(stationID_t vehicleId, icstime_t t
 	it = mobilityHistory.find(time);
 	if (it != mobilityHistory.end()) {
 		it->second.push_back(pair<stationID_t, Point2D>(vehicleId, pos));
-#ifdef LOG_ON
-std::cout<<"[StationFacilities][updateMobilityHistory] UPDATE Time "<<time<<", pos x "<<pos.x()<<", y "<<pos.y()<<std::endl;
+#ifdef _DEBUG_STATIONS
+   std::cout<<"[StationFacilities][updateMobilityHistory] UPDATE Time "<<time<<", pos x "<<pos.x()<<", y "<<pos.y()<<std::endl;
 #endif
 	}
 	else {
 		vector<pair<stationID_t, Point2D> > posHistory;
 		posHistory.push_back(pair<stationID_t, Point2D>(vehicleId, pos));
 		mobilityHistory.insert(pair<icstime_t, vector<pair<stationID_t, Point2D> > >(time, posHistory));
-#ifdef LOG_ON
-		std::cout<<"[StationFacilities][updateMobilityHistory] INSERT Time "<<time<<", pos x "<<pos.x()<<", y "<<pos.y()<<std::endl;
+#ifdef _DEBUG_STATIONS
+   std::cout<<"[StationFacilities][updateMobilityHistory] INSERT Time "<<time<<", pos x "<<pos.x()<<", y "<<pos.y()<<std::endl;
 #endif
 	}
 
@@ -645,7 +645,7 @@ Point2D StationFacilities::getNodePositionFromMobilityHistory( icstime_t time, s
 			if(time == rit->first ) {
 				for (int unsigned it=(rit->second.size()-1); it>0 ; --it) {
 					if (stationId == rit->second[it].first){
-#ifdef LOG_ON
+#ifdef _DEBUG_STATIONS
 						std::cout<<"[StationFacilities][getPositionFromMobilityHistory] timestep "<<rit->first <<", id "<< rit->second[it].first<<", pos x "<<rit->second[it].second.x()<<std::endl;
 #endif
 						return rit->second[it].second;
@@ -653,7 +653,7 @@ Point2D StationFacilities::getNodePositionFromMobilityHistory( icstime_t time, s
 				}
 
 				if (stationId == rit->second[0].first){
-#ifdef LOG_ON
+#ifdef _DEBUG_STATIONS
 					std::cout<<"[StationFacilities][getPositionFromMobilityHistory] item 0 timestep "<<rit->first <<", id "<< rit->second[0].first<<", pos x"<<rit->second[0].second.x()<<std::endl;
 #endif
 					return  rit->second[0].second;

@@ -161,12 +161,12 @@ std::pair<float, float>  SubsAppControlTraci::getPositionFromMsg()
 		    	out_msg.readUnsignedByte();
 		    	//tmpMsg.writeUnsignedByte(TYPE_STRING);
 		    	out_msg.readString();
-		    	//tmpMsg.writeString(node->tsId);//TTN Edge??
+		    	//tmpMsg.writeString(node->tsId);//Edge
 
 		    	out_msg.readUnsignedByte();
 		    	//tmpMsg.writeUnsignedByte(TYPE_INTEGER);
 		    	out_msg.readInt();
-		    	//tmpMsg.writeInt(std::stoi(node->lane, nullptr)); //TTN - convert from string to int
+		    	//tmpMsg.writeInt(std::stoi(node->lane, nullptr)); //convert from string to int
 
 		    	out_msg.readUnsignedByte();
 		    	//tmpMsg.writeUnsignedByte(TYPE_DOUBLE);
@@ -199,12 +199,12 @@ std::pair<float, float>  SubsAppControlTraci::getPositionFromMsg()
 		    	out_msg.readUnsignedByte();
 		    	//tmpMsg.writeUnsignedByte(TYPE_STRING);
 		    	out_msg.readString();
-		    	//tmpMsg.writeString(node->tsId);//TTN Edge??
+		    	//tmpMsg.writeString(node->tsId);//Edge
 
 		    	out_msg.readUnsignedByte();
 		    	//tmpMsg.writeUnsignedByte(TYPE_INTEGER);
 		    	out_msg.readInt();
-		    	//tmpMsg.writeInt(std::stoi(node->lane, nullptr)); //TTN - convert from string to int
+		    	//tmpMsg.writeInt(std::stoi(node->lane, nullptr)); //convert from string to int
 
 		    	out_msg.readUnsignedByte();
 		    	//tmpMsg.writeUnsignedByte(TYPE_DOUBLE);

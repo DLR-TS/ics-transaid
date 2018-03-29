@@ -309,11 +309,9 @@ namespace ics
 			{
 			case SUB_RETURNS_CARS_IN_ZONE:
 			{
-				float baseX, baseY, radius;
-				baseX = inMsg.readFloat();
-				baseY = inMsg.readFloat();
-				radius = inMsg.readFloat();
-
+				float baseX = inMsg.readFloat();
+				float baseY = inMsg.readFloat();
+				float radius = inMsg.readFloat();
 #ifdef LOG_ON
 				stringstream log;
 				log << "[INFO] AppMessageManager::CommandGetNewSubscriptions() Subscribed to Return Cars In Zone " << baseX
@@ -327,11 +325,10 @@ namespace ics
 			}
 			case SUB_SET_CAM_AREA:
 			{
-				float baseX, baseY, radius, frequency;
-				baseX = inMsg.readFloat();
-				baseY = inMsg.readFloat();
-				radius = inMsg.readFloat();
-				frequency = inMsg.readFloat();
+				float baseX = inMsg.readFloat();
+				float baseY = inMsg.readFloat();
+				float radius = inMsg.readFloat();
+				float frequency = inMsg.readFloat();
 				int infoType = inMsg.readUnsignedByte();
 #ifdef LOG_ON
 				stringstream log;
@@ -631,6 +628,7 @@ namespace ics
 				noMoreSubs = true;
 				break;
 			}
+
 			case SUB_SUMO_TRACI_COMMAND:
 			{
 #ifdef LOG_ON
@@ -858,7 +856,7 @@ namespace ics
 		int numberOfCarsSize = numberOfCars * (4 + 4 + 4 + 4 + 4 + 4);
 
 		// command length
-		outMsg.writeInt(4 + 1 + 4 + 4 +  numberOfCarsSize);
+		outMsg.writeInt(4 + 1 + 4 + 4 + 4 + 4 + numberOfCarsSize);
 		// command id
 		outMsg.writeUnsignedByte(CMD_CARS_IN_ZONE);
 		// simulation timestep
@@ -866,17 +864,16 @@ namespace ics
 		// subscribed node id
 		outMsg.writeInt(nodeId);
 		// subscribed subscriptionId
-		outMsg.writeInt(m_id); //TTN (13/04/2016)
+		outMsg.writeInt(m_id); 
 		// number of cars
-		outMsg.writeInt((int) carsInZone->size());
+		outMsg.writeInt(numberOfCars);
 
 		if (nodeId == 0)
 		{
 			cout << "Node id 0" << endl;
 		}
 
-		vector<VehicleNode*>::iterator nodeIt;
-		for (nodeIt = carsInZone->begin(); nodeIt < carsInZone->end(); nodeIt++)
+		for (vector<VehicleNode*>::iterator  nodeIt = carsInZone->begin(); nodeIt < carsInZone->end(); nodeIt++)
 		{
 			VehicleNode* node = *nodeIt;
 			//car identifier
@@ -1597,8 +1594,8 @@ namespace ics
 			messNum++;
 			// subscribed node id. I used the timeStep field
 			tmpMsg.writeInt(it->timeStep);                            // bytes: 9-12
-             tmpMsg.writeInt(m_syncManager->GetNodeByIcsId(it->timeStep)->m_nsId);  // The ns3 ID for transparent subscriptions from APP
-                tmpMsg.writeString(m_syncManager->GetNodeByIcsId(it->timeStep)->m_tsId); // The SUMO ID for transparent subscriptions from APP
+            tmpMsg.writeInt(m_syncManager->GetNodeByIcsId(it->timeStep)->m_nsId);  // The ns3 ID for transparent subscriptions from APP
+            tmpMsg.writeString(m_syncManager->GetNodeByIcsId(it->timeStep)->m_tsId); // The SUMO ID for transparent subscriptions from APP
 
 			tmpMsg.writeFloat(it->positionX);
 			tmpMsg.writeFloat(it->positionY);

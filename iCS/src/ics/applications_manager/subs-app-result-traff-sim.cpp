@@ -23,9 +23,10 @@
 
 #include "subs-app-result-traff-sim.h"
 #include "subscriptions-helper.h"
+#include "subscriptions-type-constants.h"
 #include "../sync-manager.h"
 #include "../../utils/ics/log/ics-log.h"
-#include "utils/ics/iCStypes.h"
+#include "../itetris-node.h"
 
 namespace ics
 {

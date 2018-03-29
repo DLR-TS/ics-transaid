@@ -194,10 +194,7 @@ throw(std::runtime_error) {
 
                                     const XMLCh* xmlch_MobRATtype = currentElement->getAttribute(ATTR_MobRATtype);
                                     char *type_ch = XMLString::transcode(xmlch_MobRATtype);
-                                    //int type = (bool)TplConvert::_2int(type_ch);
-                                    //int type = TplConvert<char>::_2int(type_ch);
-                                    //TODO JHNNOTE: check this...
-                                    int type = TplConvert::_2int(type_ch);
+                                    int type = (bool)TplConvert::_2int(type_ch);
                                     delete[] type_ch;
 
                                     const XMLCh* xmlch_PenetrationRate = currentElement->getAttribute(ATTR_PenetrationRate);

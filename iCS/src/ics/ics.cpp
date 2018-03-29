@@ -87,7 +87,6 @@
 #include "../utils/ics/log/ics-log.h"
 #include "../utils/common/FileHelpers.h"
 #include <utils/common/TplConvert.h>
-#include "configfile_parsers/ns3-active-zones-configfile-parser.h"
 
 #ifdef _WIN32
 #include <windows.h> // needed for Sleep
@@ -149,7 +148,7 @@ ICS::~ICS()
 }
 
 int
-ICS::Setup(string facilitiesConfigFile, string appConfigFile, string activeZonesConfigFile)
+ICS::Setup(string facilitiesConfigFile, string appConfigFile)
 {
 	if (m_Interactive) {
 		utils::Conversion::Wait("Press <Enter> to continue...");
@@ -224,12 +223,6 @@ ICS::Setup(string facilitiesConfigFile, string appConfigFile, string activeZones
 	}
 	cout << "iCS --> Connected to ns-3" << endl;
 	cout << endl;
-
-	if (ReadActiveZonesConfigFile(activeZonesConfigFile) == EXIT_FAILURE) {
-		cout << "iCS --> ERROR reading ns-3 active zones configuration file." << endl;
-		cout << endl;
-		return EXIT_FAILURE;
-	}
 
 	Sleep(1000); //This sleep is just to be sure the next line is always showed after the ns3-server message
 #endif
@@ -355,31 +348,6 @@ ICS::ReadFacilitiesConfigFile(string& filePath)
 }
 
 int
-ICS::ReadActiveZonesConfigFile(string filePath)
-{
-	Ns3ActiveZonesConfigFileParse activeZonesConfig;
-	try {
-		activeZonesConfig.readConfigFile(filePath);
-	} catch (std::runtime_error e) {
-		cout << "[ReadActiveZonesConfigFile] " << e.what() << endl;
-		return EXIT_FAILURE;
-	}
-
-	//set active zone for SyncManager
-	//for instance, we only have 1 zone
-	float xpos,ypos,radius;
-	for (int i = 0; i < activeZonesConfig.GetNs3ActiveZonesConfig()->size(); i++) {
-		xpos = activeZonesConfig.GetNs3ActiveZonesConfig()->at(i)->m_xpos;
-		ypos = activeZonesConfig.GetNs3ActiveZonesConfig()->at(i)->m_ypos;
-		radius = activeZonesConfig.GetNs3ActiveZonesConfig()->at(i)->m_radius;
-	}
-	Point2D pointActiveZone = Point2D (xpos,ypos);
-	m_syncManager->m_activeZoneNs3 = Circle(pointActiveZone,radius);
-	return EXIT_SUCCESS;
-}
-
-
-int
 ICS::ReadAppConfigFile(string filePath)
 {
 	AppConfigFileParse appConfig;
@@ -462,9 +430,9 @@ ICS::ReadAppConfigFile(string filePath)
 			node = m_syncManager->GetNodeByIcsId(auxi);
 			if (node == NULL) {
 #ifdef LOG_ON
-stringstream log;
-cout << "ReadAppConfigFile() The ID defined in the configuration file does not match with any vehicle or infrastructure" << endl;
-IcsLog::LogLevel((log.str()).c_str(), kLogLevelWarning);
+    stringstream log;
+    cout << "ReadAppConfigFile() The ID defined in the configuration file does not match with any vehicle or infrastructure" << endl;
+    IcsLog::LogLevel((log.str()).c_str(), kLogLevelWarning);
 #endif
 			} else {
 				node->m_applicationHandlerInstalled->push_back(appHandler);

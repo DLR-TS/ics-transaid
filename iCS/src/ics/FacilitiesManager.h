@@ -904,9 +904,6 @@ public:
    */
   const TrafficLight* getTrafficLight(trafficLightID_t trafficLightID) const;
 
-  //TTN (18/06/2016)
-  //map<stationID_t, Point2D > getAllStationsPositionsFromMobilityHistory();
-  //TTN (18/06/2016)
   Point2D  getStationPositionsFromMobilityHistory(icstime_t time,stationID_t stationId);
 
   map<stationID_t, const Station*>* getStationsInArea(GeometricShape &area);

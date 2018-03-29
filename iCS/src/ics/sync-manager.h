@@ -116,15 +116,10 @@ namespace ics
 			void DeleteNode(ITetrisNode *);
 			void RefreshScheduledMessageMap();
 
-			bool ActiveNodeInNS3(VehicleNode* vehicle);
-
 //			logging
 			int log_stepTime;
 			int log_ns3Time;
 			int log_msgNumber;
-			int log_icsTime;
-
-			Circle m_activeZoneNs3;
 
 			/**
 			 * @brief Constructor.
@@ -633,9 +628,6 @@ namespace ics
 
 			/// @brief Vehicles that left the simulation that are going to tell wireless simulator to deactivate.
 			std::vector<int> m_vehiclesToBeDeactivated;
-
-			std::vector<VehicleNode*> m_vehiclesToBeUpdated; //TTN (9/3/17)
-
 
 			/// @brief Testing purposes only.
 			void TestInciPrimitives();

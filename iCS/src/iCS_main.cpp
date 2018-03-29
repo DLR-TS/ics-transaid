@@ -110,7 +110,6 @@ void fillOptions()
   // insert options sub-topics
   SystemFrame::addConfigurationOptions(oc);
   oc.addOptionSubTopic("Scenario");
-  oc.addOptionSubTopic("ns3-active-zone");
   oc.addOptionSubTopic("TrafficSim");
   oc.addOptionSubTopic("CommunicationSim");
   oc.addOptionSubTopic("Applications");
@@ -140,14 +139,6 @@ void fillOptions()
 
   oc.doRegister("interactive", new Option_Bool(false));
   oc.addDescription("interactive", "Scenario", "Whether iCS shall be run in interactive mode");
-
-  //Insert options for ns3-active-zone which is a circle with 3 parameter xpos, ypos and radius
-  oc.doRegister("xpos", new Option_Float());
-  oc.addDescription("xpos", "ns3-active-zone", "Define Xpos for the active zone of NS-3");
-  oc.doRegister("ypos", new Option_Float());
-  oc.addDescription("ypos", "ns3-active-zone", "Define ypos for the active zone of NS-3");
-  oc.doRegister("radius", new Option_Float(0));
-  oc.addDescription("radius", "ns3-active-zone", "Define radius for the active zone of NS-3");
 
   // insert options for traffic simulation
   oc.doRegister("traffic-executable", new Option_String());
@@ -181,11 +172,6 @@ void fillOptions()
   oc.doRegister("communication-config-technologies-file", new Option_String());
   oc.addDescription("communication-config-technologies-file", "CommunicationSim",
       "Defines the communication technologies configuration in ns-3");
-
-  oc.doRegister("active-zones-config-file", new Option_String());
-  oc.addDescription("active-zones-config-file", "CommunicationSim",
-      "Defines the communication zones in ns-3");
-
 
   // insert options for applications
   oc.doRegister("app-config-file", 'a', new Option_FileName());
@@ -298,15 +284,6 @@ bool checkOptions()
         "Missing definition of the technologies configuration file of the communication simulator.");
     ret = false;
   }
-
-  // check active zone parameters file
-  if (!oc.isSet("active-zones-config-file"))
-  {
-    MsgHandler::getErrorInstance()->inform(
-        "Missing definition of the active zone configuration file of the communication simulator.");
-    ret = false;
-  }
-
 #endif
 
 #ifdef APPLICATIONS_ON
@@ -356,7 +333,7 @@ launchIcsThreadless()
 
   ics::ITetrisSimulationConfig::m_scheduleMessageCleanUp = oc.getInt("message-reception-window") * oc.getInt("resolution");
 
-  if (ics->Setup(oc.getString("facilities-config-file"), oc.getString("apps"), oc.getString("active-zones-config-file")) == EXIT_SUCCESS)
+  if (ics->Setup(oc.getString("facilities-config-file"), oc.getString("apps")) == EXIT_SUCCESS)
   {
     ics->Run();
   }

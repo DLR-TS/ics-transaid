@@ -1371,7 +1371,7 @@ vector<stationID_t>* LDMLogic::getReceiversOnRelevantDirection(vector<stationID_
   for (unsigned int i = 0; i < receivers.size(); i++)
   {
     Station *currStation = (Station*) staFac->getStation(receivers[i]);
-    // Stations are not affected by this search. Also stations that do not have the direction defined are not analyzed.
+    // FIXED stations are not affected by this search. Also stations that do not have the direction defined are not analyzed.
     if ((currStation->getType() == STATION_FIXED) || (((MobileStation*) currStation)->getDirection() != NAN))
     relevantReceivers->push_back(receivers[i]);
     // Only MOBILE stations that are moving in the relevant direction (with defined accuracy) are considered
