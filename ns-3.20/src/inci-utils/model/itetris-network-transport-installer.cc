@@ -47,8 +47,6 @@ ItetrisNetworkTransportInstaller::ItetrisNetworkTransportInstaller ()
 
 void
 ItetrisNetworkTransportInstaller::Install (NodeContainer container) {
-  
-//std::cout<<"ItetrisNetworkTransportInstaller::Install!!!!!!!!!!!!!!!!!"<<std::endl;
   stack.Install (container);
 
 }

@@ -228,7 +228,6 @@ public:
   //it returns a node from a nodeid
   Ptr<Node> GetById (uint32_t id) const; 
 
-
   /**
    * \brief Create n nodes and append pointers to them to the end of this 
    * NodeContainer.

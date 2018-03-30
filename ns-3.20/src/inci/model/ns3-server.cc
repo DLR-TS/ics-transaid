@@ -174,7 +174,6 @@ namespace ns3
 		int commandStart = myInputStorage.position();
 		int commandLength = myInputStorage.readInt();
 		int commandId = myInputStorage.readUnsignedByte();
-		cout << "jin commandLength=" <<commandLength<<" commandId="<<commandId<<"  CMD_CREATENODE="<<CMD_CREATENODE <<endl;
 		bool success = false;
 
 		ostringstream log;

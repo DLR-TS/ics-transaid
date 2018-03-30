@@ -61,8 +61,6 @@ uint32_t iTETRISNodeManager::CreateItetrisNode ( Vector position)
   return node->GetId();	
 }
 
-
-
 uint32_t iTETRISNodeManager::CreateItetrisNode (const Vector &position, const float &speed, const float & heading, const std::string &laneId)
 {
   CreateItetrisNode ();
@@ -78,8 +76,6 @@ uint32_t iTETRISNodeManager::CreateItetrisNode (const Vector &position, const fl
   Vector newPos= itetrisMobModel->GetPosition();
   NS_LOG_DEBUG ( "ns-3 server --> node position= ("<< newPos.x << ", " << newPos.y << ")" );
   return node->GetId();	
-
-
 }
 
 void iTETRISNodeManager::CreateItetrisNode (uint32_t numNodes)

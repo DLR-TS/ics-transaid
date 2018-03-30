@@ -46,7 +46,7 @@ BeaconingProtocol::BeaconingProtocol ()
 {
   NS_LOG_FUNCTION(this);
   //DISABLE
-  //Simulator::Schedule (Seconds(2.0), &BeaconingProtocol::ScheduleBeaconSending, this);
+  Simulator::Schedule (Seconds(2.0), &BeaconingProtocol::ScheduleBeaconSending, this); //activated by TTN (22/04/2015)
 }
 
 BeaconingProtocol::~BeaconingProtocol ()

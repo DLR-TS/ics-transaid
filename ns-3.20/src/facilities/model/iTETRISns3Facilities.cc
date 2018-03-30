@@ -217,8 +217,6 @@ namespace ns3
 							stacktodest->tech = (char*) malloc(6 * sizeof(char));
 							stacktodest->tech = (char*) "Wimax-";
 						}
-
-                                                // jin : addd lteBs here.??? what number of malloc ??
 						if ((technologies.front() == "LteVehicle"))
 						{
 							stacktodest->tech = (char*) malloc(4 * sizeof(char));
@@ -239,7 +237,7 @@ namespace ns3
 											<< ": DVB-H uplink txon on a vehicle is not supported");
 							return;
 						}
-						if ((technologies.front() == "DvbhBs")) //disabled by Jin
+						if ((technologies.front() == "DvbhBs"))
 						{
 							NS_FATAL_ERROR(
 									"wrong use of the function InitiateIdBasedTxon for node " << m_node->GetId()
@@ -297,8 +295,9 @@ namespace ns3
 			} else if (stacktodest->stack == IPv6)
 			{
 				Ipv6Address* IPaddress = m_AddressingSupport->getIPv6address(stacktodest->destination);
-
-				if (IPaddress != NULL)
+   			    Ptr<Ipv6Interface> interface = m_node->GetObject<Ipv6Interface> ();
+				Simulator::Schedule (Seconds (0.), &Icmpv6L4Protocol::DoDAD, icmpv6, interface->GetLinkLocalAddress().GetAddress(), interface);*/
+					if (IPaddress != NULL)
 				{
 					NS_LOG_LOGIC(
 							"[ns-3][iTETRISns3Facilities] on node " << m_node->GetId() << " Ipv6 address found for destination node "

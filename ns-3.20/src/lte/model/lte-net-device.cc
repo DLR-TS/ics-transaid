@@ -277,16 +277,6 @@ LteNetDevice::SetPromiscReceiveCallback (PromiscReceiveCallback cb)
   NS_LOG_WARN ("Promisc mode not supported");
 }
 
-//Jin added set Mobility, regarding to error in lte-helper.cc in lte/model
-/*
-void
-LteNetDevice::SetMobility(Ptr<MobilityModel> mobility)
-{    
-//jin add 09/10
-  
- // m_nodeType->SetMobility(mobility);
-}
-*/
 void
 LteNetDevice::Receive (Ptr<Packet> p)
 {

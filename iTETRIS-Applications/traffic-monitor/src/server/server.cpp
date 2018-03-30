@@ -153,80 +153,46 @@ namespace protocol
 			if (commandId != CMD_APP_CLOSE)
 				updateTimeStep(m_inputStorage.readInt());
 
-			//  ostringstream log;
-			//  log << "### Time " << m_currentTimeStep << " Command: ";
-
 			bool success = false;
 			// dispatch commands
 			switch (commandId)
 			{
 			case CMD_CREATE_MOBILE_NODE:
-				//    log << "CMD_CREATE_NODE";
 				success = createMobileNode();
 				break;
 			case CMD_ASK_FOR_SUBSCRIPTION:
-				//    log << "CMD_ASK_FOR_SUBSCRIPTION";
 				success = askForSubscription();
 				break;
 			case CMD_END_SUBSCRIPTION:
-				//    log << "CMD_END_SUBSCRIPTION";
 				success = endSubscription();
 				break;
 			case CMD_MOBILITY_INFORMATION:
-				//    log << "CMD_MOBILITY_INFORMATION";
 				success = mobilityInformation();
 				break;
 			case CMD_TRAFFIC_LIGHT_INFORMATION:
-				//    log << "CMD_TRAFFIC_LIGHT_INFORMATION";
 				success = trafficLightInformation();
 				break;
 			case CMD_APP_MSG_RECEIVE:
-				//    log << "CMD_APP_MSG_RECEIVE";
 				success = applicationMessageReceive();
 				break;
 			case CMD_APP_MSG_SEND:
 			case CMD_APP_CMD_TRAFF_SIM:
-				//    log << "ConfirmSubscription";
 				success = applicationConfirmSubscription(commandId);
 				break;
 			case CMD_NOTIFY_APP_EXECUTE:
-				//    log << "CMD_NOTIFY_APP_EXECUTE";
 				success = applicationExecute();
 				break;
 			case CMD_APP_CLOSE:
-				//    log << "CMD_APP_CLOSE";
 				m_closeConnection = true;
 				writeStatusCmd(CMD_APP_CLOSE, APP_RTYPE_OK, "Closing");
 				break;
 			case CMD_SUMO_TRACI_COMMAND:
-				//    log << "CMD_SUMO_TRACI_COMMAND";
 				success = sumoTraciCommand();
 				break;
 
-				//Don't need it
-				//  case CMD_APP_CMD_TRAFF_SIM:
-				////    log << "CMD_APP_CMD_TRAFF_SIM";
-				//    success = commandTrafficSimulation();
-				//    break;
-				//  case CMD_APP_RESULT_TRAFF_SIM:
-				//    //    log << "CMD_APP_RESULT_TRAFF_SIM";
-				//    success = resultTrafficSimulation();
-				//    break;
-				//  case CMD_X_APPLICATION_DATA:
-				////    log << "CMD_X_APPLICATION_DATA";
-				//    success = xApplicationData();
-				//    break;
-				//  case CMD_NOTIFY_APP_MESSAGE_STATUS:
-				////    log << "CMD_NOTIFY_APP_MESSAGE_STATUS";
-				//    success = notifyApplicationMessageStatus();
-				//    break;
-
 			default:
-				//    log << "N/A";
 				writeStatusCmd(commandId, APP_RTYPE_NOTIMPLEMENTED, "Command not implemented");
 			}
-			//  log << " node " << nodeId;
-			//  Log::WriteLog(log);
 			if (!success)
 			{
 				while (m_inputStorage.valid_pos() && m_inputStorage.position() < commandStart + commandLength)
@@ -242,8 +208,6 @@ namespace protocol
 				msg << " Expected command length was " << commandLength;
 				msg << " but " << m_inputStorage.position() - commandStart << " Bytes were read.";
 				Console::Warning(msg.str());
-				//writeStatusCmd(commandId, APP_RTYPE_ERR, msg.str());
-				//m_closeConnection = true;
 			}
 
 			return commandId;
@@ -352,8 +316,6 @@ namespace protocol
 			short numStations = m_inputStorage.readShort();
 			vector<MobilityInfo*> stations;
 			stations.reserve(numStations);
-			//for (short i = 0; i < numStations; ++i)
-			//  stations.push_back(new MobilityInfo(m_inputStorage));
 			ostringstream oss;
 			oss << "Mobility info on nodes: ";
 			for (short i = 0; i < numStations; ++i)
@@ -531,30 +493,6 @@ namespace protocol
 				}
 			}
 		}
-
-	//Don't need it
-	//bool Server::commandTrafficSimulation()
-	//{
-	//  //TOD O check if it can be used to confirm a simulation sent by a specific subscription
-	//  int nodeId = m_inputStorage.readInt();
-	//  int status = m_inputStorage.readUnsignedByte();
-	//  writeStatusCmd(CMD_APP_CMD_TRAFF_SIM, APP_RTYPE_OK,
-	//      "CMD_APP_CMD_TRAFF_SIM confirmed: " + (status == 1 ? "true" : "false"));
-	//  return true;
-	//}
-	//bool Server::resultTrafficSimulation()
-	//{
-	//  return true;
-	//}
-	//
-	//bool Server::xApplicationData()
-	//{
-	//  return true;
-	//}
-	//bool Server::notifyApplicationMessageStatus()
-	//{
-	//  return true;
-	//}
 
 	} /* namespace server */
 } /* namespace protocol */

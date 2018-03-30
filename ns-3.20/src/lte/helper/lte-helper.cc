@@ -202,7 +202,6 @@ LteHelper::DoDispose ()
 
 
 void 
-
 LteHelper::SetEpcHelper (Ptr<EpcHelper> h)
 {
   NS_LOG_FUNCTION (this << h);
@@ -381,18 +380,12 @@ LteHelper::InstallEnbDevice (NodeContainer c,std::string nodeType)
   for (NodeContainer::Iterator i = c.Begin (); i != c.End (); ++i)
     { 
       Ptr<Node> node = *i;
-
-        //jin error here!!!
       Ptr<NetDevice> device = InstallSingleEnbDevice (node);
-
       (DynamicCast<LteNetDevice>(device))->SetNodeType(nodeType);
       devices.Add (device);
-
     }
-
   return devices;
 }
-
 
 NetDeviceContainer
 LteHelper::InstallUeDevice (NodeContainer c,std::string nodeType) 
@@ -409,8 +402,6 @@ LteHelper::InstallUeDevice (NodeContainer c,std::string nodeType)
   return devices;
 
 }
-//Jin : adding ends here
-
 
 NetDeviceContainer
 LteHelper::InstallUeDevice (NodeContainer c)

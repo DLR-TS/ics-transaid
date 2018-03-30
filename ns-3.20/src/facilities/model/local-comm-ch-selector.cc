@@ -754,7 +754,6 @@ LocalCOMMchSelector::GetCommunicationCh(uint32_t commProfile, TechnologyList tec
             break;
           }
       }
-        //jin end
       else if (technologies[i] == "DvbhVehicle")
       {
          IpNetDeviceList::iterator iter = vsta->GetIPDeviceList().find ("DvbhVehicle"); 

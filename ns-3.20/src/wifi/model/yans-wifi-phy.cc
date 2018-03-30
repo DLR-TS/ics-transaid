@@ -485,7 +485,7 @@ YansWifiPhy::StartReceivePacket (Ptr<Packet> packet,
       NS_LOG_DEBUG ("drop packet because of channel switching");
       if (rxPowerW > m_edThresholdW)
 			{
-				Ns3Server::myfile<<Simulator::Now().GetSeconds() <<" Collision node "<<node->GetId()<<" SWITCHING "<< rxPowerDbm <<std::endl;
+				//Ns3Server::myfile<<Simulator::Now().GetSeconds() <<" Collision node "<<node->GetId()<<" SWITCHING "<< rxPowerDbm <<std::endl;
 				//NS_LOG_INFO(Simulator::Now().GetSeconds() <<" #*#* Collision node "<<node->GetId()<<" SWITCHING "<< rxPowerDbm);
 			}
       NotifyRxDrop (packet);

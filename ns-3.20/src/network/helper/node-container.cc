@@ -90,7 +90,7 @@ NodeContainer::Get (uint32_t i) const
 {
   return m_nodes[i];
 }
-//jin : added ref .diff
+
 Ptr<Node> 
 NodeContainer::GetById (uint32_t id) const
 { 

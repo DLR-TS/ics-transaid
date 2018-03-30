@@ -178,16 +178,16 @@ c2cl4TSocketImpl::DoSend (Ptr<Packet> p)
 int
 c2cl4TSocketImpl::DoSendTo (Ptr<Packet> p, Ptr <c2cAddress> daddr, uint16_t dport, uint8_t lt, uint8_t tc, uint16_t sn)
 {
-  // Source position vector
-  Ptr<MobilityModel> model = m_node->GetObject<MobilityModel> ();
-  c2cCommonHeader::LongPositionVector sourcePosVector;
-  sourcePosVector.gnAddr = m_node->GetId ();
-  sourcePosVector.Lat = (uint32_t) model->GetPosition().x;
-  sourcePosVector.Long = (uint32_t) model->GetPosition().y;
-  sourcePosVector.Alt = 0;
-  sourcePosVector.Speed = (uint16_t) model->GetVelocity().x;
-  sourcePosVector.Ts = (static_cast<uint32_t>(Simulator::Now ().GetSeconds()));
-  //TODO retrieve the rest of source position vector data from the mobility model.
+	// Source position vector
+	Ptr<MobilityModel> model = m_node->GetObject<MobilityModel> ();
+	c2cCommonHeader::LongPositionVector sourcePosVector;
+	sourcePosVector.gnAddr = m_node->GetId ();
+	sourcePosVector.Lat = (uint32_t) (model->GetPosition().x<0?0:model->GetPosition().x);
+	sourcePosVector.Long = (uint32_t) (model->GetPosition().y<0?0:model->GetPosition().y);
+	sourcePosVector.Alt = 0;
+	sourcePosVector.Speed = (uint16_t) model->GetVelocity().x;
+	sourcePosVector.Ts = (static_cast<uint32_t>(Simulator::Now ().GetSeconds()));
+	//TODO retrieve the rest of source position vector data from the mobility model.
 
   if (m_endPoint == 0)
     {
@@ -230,17 +230,19 @@ c2cl4TSocketImpl::DoSendTo (Ptr<Packet> p, uint64_t dnodeId, uint16_t dport)
   Ptr<c2cAddress> daddr = CreateObject<c2cAddress> ();
   daddr->Set (c2cAddress::BROAD, ttl);
 
-  // Source position vector
-  Ptr<MobilityModel> model = m_node->GetObject<MobilityModel> ();
-  c2cCommonHeader::LongPositionVector sourcePosVector;
-  sourcePosVector.gnAddr = m_node->GetId ();
-  sourcePosVector.Lat = (uint32_t) model->GetPosition().x;
-  sourcePosVector.Long = (uint32_t) model->GetPosition().y;
-  sourcePosVector.Alt = 0;
-  sourcePosVector.Speed = (uint16_t) model->GetVelocity().x;
-  sourcePosVector.Ts = (static_cast<uint32_t>(Simulator::Now ().GetSeconds()));
-  //TODO retrieve the rest of source position vector data from the mobility model.
-  //**daddr, sn, lt and tc are hard coded just to test**//
+	// Source position vector
+	Ptr<MobilityModel> model = m_node->GetObject<MobilityModel> ();
+	c2cCommonHeader::LongPositionVector sourcePosVector;
+	sourcePosVector.gnAddr = m_node->GetId ();
+	//sourcePosVector.Lat = (uint32_t) model->GetPosition().x;
+	// sourcePosVector.Long = (uint32_t) model->GetPosition().y;
+	sourcePosVector.Lat = (uint32_t) (model->GetPosition().x<0?0:model->GetPosition().x);
+	sourcePosVector.Long = (uint32_t) (model->GetPosition().y<0?0:model->GetPosition().y);
+	sourcePosVector.Alt = 0;
+	sourcePosVector.Speed = (uint16_t) model->GetVelocity().x;
+	sourcePosVector.Ts = (static_cast<uint32_t>(Simulator::Now ().GetSeconds()));
+	//TODO retrieve the rest of source position vector data from the mobility model.
+	//**daddr, sn, lt and tc are hard coded just to test**//
 
   if (m_endPoint == 0)
     {

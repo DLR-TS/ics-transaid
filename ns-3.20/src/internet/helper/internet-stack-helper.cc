@@ -463,9 +463,8 @@ InternetStackHelper::Install (Ptr<Node> node) const
 
       if (node->GetObject<Ipv4> () != 0)
         {
-        //  NS_FATAL_ERROR ("InternetStackHelper::Install (): Aggregating " 
-          //                "an InternetStack to a node with an existing Ipv4 object");
-       
+          NS_FATAL_ERROR ("InternetStackHelper::Install (): Aggregating " 
+                          "an InternetStack to a node with an existing Ipv4 object");
           return;
         }
 
@@ -479,13 +478,10 @@ InternetStackHelper::Install (Ptr<Node> node) const
           arp->SetAttribute ("RequestJitter", StringValue ("ns3::ConstantRandomVariable[Constant=0.0]"));
         }
       // Set routing
-
       Ptr<Ipv4> ipv4 = node->GetObject<Ipv4> ();
       Ptr<Ipv4RoutingProtocol> ipv4Routing = m_routing->Create (node);
-      ipv4->SetRoutingProtocol (ipv4Routing);
-     
+      ipv4->SetRoutingProtocol (ipv4Routing);     
     }
-
 
   if (m_ipv6Enabled)
     {
@@ -496,9 +492,8 @@ InternetStackHelper::Install (Ptr<Node> node) const
 
       if (node->GetObject<Ipv6> () != 0)
         {
-//jin comment this
-     //     NS_FATAL_ERROR ("InternetStackHelper::Install (): Aggregating " 
-      //                    "an InternetStack to a node with an existing Ipv6 object");
+          NS_FATAL_ERROR ("InternetStackHelper::Install (): Aggregating " 
+                          "an InternetStack to a node with an existing Ipv6 object");
           return;
         }
 
@@ -518,7 +513,6 @@ InternetStackHelper::Install (Ptr<Node> node) const
       /* register IPv6 extensions and options */
       ipv6->RegisterExtensions ();
       ipv6->RegisterOptions ();
-         
     }
 
   if (m_c2cEnabled)

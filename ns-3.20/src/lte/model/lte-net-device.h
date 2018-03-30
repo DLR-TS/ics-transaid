@@ -88,10 +88,7 @@ public:
    * \param p the packet
    */
   void Receive (Ptr<Packet> p);
-        //jin added this 
-        void SetMobility(Ptr<MobilityModel> mobility);  
-
-
+  void SetMobility(Ptr<MobilityModel> mobility); 
 protected:
   
   NetDevice::ReceiveCallback m_rxCallback;
