@@ -2,10 +2,10 @@
 
 Quick guide on how to install the iTETRIS platform.  
 The current version of iCS will work with ns3.20 and the applications provided in the svn  
-The platform should work with any version of Sumo. Tested with sumo0.22
+The platform should work with any version of Sumo. Tested with sumo0.23
 
 ### Version
-2015-04-08
+2018-03-20
 
 ### Prerequisites
 
