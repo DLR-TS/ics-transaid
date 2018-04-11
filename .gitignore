@@ -1,0 +1,15 @@
+**.o
+**.a
+Makefile.in
+Makefile
+.deps
+autom4te.cache
+ns-3.20/build/
+ns-3.20/.lock-waf*
+ns-3.20/.waf*
+iCS/config.log
+iCS/config.status
+iCS/libtool
+iCS/src/config.h
+iCS/src/config.h.in
+iCS/src/stamp-h1
