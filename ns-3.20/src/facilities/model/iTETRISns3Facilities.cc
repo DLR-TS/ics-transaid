@@ -296,7 +296,7 @@ namespace ns3
 			{
 				Ipv6Address* IPaddress = m_AddressingSupport->getIPv6address(stacktodest->destination);
    			    Ptr<Ipv6Interface> interface = m_node->GetObject<Ipv6Interface> ();
-				Simulator::Schedule (Seconds (0.), &Icmpv6L4Protocol::DoDAD, icmpv6, interface->GetLinkLocalAddress().GetAddress(), interface);*/
+				/*Simulator::Schedule (Seconds (0.), &Icmpv6L4Protocol::DoDAD, icmpv6, interface->GetLinkLocalAddress().GetAddress(), interface);*/
 					if (IPaddress != NULL)
 				{
 					NS_LOG_LOGIC(
