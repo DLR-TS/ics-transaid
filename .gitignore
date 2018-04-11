@@ -1,5 +1,6 @@
 **.o
 **.a
+**.pyc
 Makefile.in
 Makefile
 .deps
@@ -13,3 +14,6 @@ iCS/libtool
 iCS/src/config.h
 iCS/src/config.h.in
 iCS/src/stamp-h1
+iCS/configure
+iCS/ltmain.sh
+aclocal.m4
