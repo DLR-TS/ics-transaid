@@ -24,6 +24,7 @@
 #include <netdb.h>
 #include <errno.h>
 #include <fcntl.h>
+#include <unistd.h>
 #else
 #ifdef ERROR
 #undef ERROR
@@ -45,9 +46,6 @@
 #include <string>
 #include <algorithm>
 #include <string.h>
-#if (__GNUC__ == 4 && __GNUC_MINOR__ > 6)
-  #include <unistd.h>
-#endif
 
 using namespace std;
 
