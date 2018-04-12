@@ -46,7 +46,7 @@ std::vector <double>
 GeoCentrToGeoConvert (double x, double y, double z) {
     std::vector<double> result;
     Math::real lat, lon, h;
-    const Geocentric& ec = Geocentric::WGS84;
+    const Geocentric& ec = Geocentric::WGS84();
 
     ec.Reverse(x, y, z, lat, lon, h);
     result.push_back(lat);
@@ -101,7 +101,7 @@ std::vector <double>
 GeoToGeoCentrConvert(double lat, double lon, double h) {
   std::vector<double> result;
   double x, y, z;
-  const Geocentric& ec = Geocentric::WGS84;
+  const Geocentric& ec = Geocentric::WGS84();
 
   ec.Forward(lat, lon, h, x, y, z);
   result.push_back(x);
