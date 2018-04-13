@@ -17,6 +17,9 @@ install-sh
 libtool
 ltmain.sh
 missing
+/bin
+/lib
+/include
 ns-3.20/build/
 ns-3.20/.lock-waf*
 ns-3.20/.waf*
