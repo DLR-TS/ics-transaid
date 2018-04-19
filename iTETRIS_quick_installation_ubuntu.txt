@@ -5,9 +5,10 @@ all following steps do not require sudo
 
 --------------------------------
 Step 2 - Get the source from git
-$ git clone --recursive https://gitlab.com/transaid/transaid.git
+$ git clone --recursive https://gitlab.imet.gr/root/transaid
 $ cd transaid
 $ git checkout transaid-dev
+$ git submodule update --init
 
 or alternatively use the "original" (does not contain latest fixes and does not contain sumo)
 
