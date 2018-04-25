@@ -1,5 +1,7 @@
 import_config_file:../config_all
-binary:$ICSAPP_BINARY
+binary:$TEXTTEST_HOME/iCSrunner.py
+
+copy_test_path_merge:data
 
 [collate_file]
 cfg:config.cfg
@@ -7,4 +9,3 @@ log:log.txt
 
 [run_dependent_text]
 output:iCS.exe{REPLACE iCS}
-

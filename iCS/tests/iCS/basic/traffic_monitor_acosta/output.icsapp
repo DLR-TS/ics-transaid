@@ -1,0 +1,95 @@
+iTETRIS Control System Version 0.1.0
+ (c) iTETRIS consortium 2008-2010; http://www.ict-itetris.eu/
+ (c) COLOMBO consortium 2012-2015; http://www.colombo-fp7.eu/
+ (c) DLR 2001-2010; http://sumo.dlr.de
+The 'iTETRIS Control System'.
+
+Usage: iCS [OPTION]*
+Configuration Options:
+  -c, --configuration-file FILE        Loads the named config on startup
+  --save-configuration FILE            Saves current configuration into FILE
+  --save-template FILE                 Saves a configuration template (empty)
+                                         into FILE
+  --save-schema FILE                   Saves the configuration schema into FILE
+  --save-commented                     Adds comments to saved template,
+                                         configuration, or schema
+
+Scenario Options:
+  -b, --begin INT                      Defines the begin time of the scenario
+                                         simulation
+  -e, --end INT                        Defines the end time of the scenario
+                                         simulation
+  --resolution INT                     Time resolution of every simulation step
+                                         (ms)
+  -r, --penetration-rate INT           Defines the percentage of vehicles
+                                         equiped with a RAT
+  -f, --facilities-config-file FILE    The entry point file for the facilities
+                                         block configuration.
+  -m, --message-reception-window INT   Defines the time the iCS will keep
+                                         schedule messages in the internal
+                                         tables. That time window past, they are
+                                         erased.
+  --interactive                        Whether iCS shall be run in interactive
+                                         mode
+
+TrafficSim Options:
+  --traffic-executable STR             Defines the traffic simulation
+                                         executable
+  --traffic-file FILE                  Defines the traffic simulation
+                                         configuration
+  --traffic-host STR                   Defines the host the traffic simulation
+                                         shall run on
+  --traffic-port INT                   Defines the port the traffic simulation
+                                         shall use
+
+CommunicationSim Options:
+  --communication-executable STR       Defines the communication simulation
+                                         executable
+  --communication-host STR             Defines the host the communication
+                                         simulation shall run on
+  --communication-port INT             Defines the port the communication
+                                         simulation shall use
+  --communication-general-params-file STR  Defines the general ns-3 script
+                                         configuration.
+  --communication-config-technologies-file STR  Defines the communication
+                                         technologies configuration in ns-3
+
+Applications Options:
+  -a, --app-config-file FILE           Defines the Application configurations
+
+Logs Options:
+  --ics-log-path FILE                  Defines the place where the iCS log file
+                                         will be stored
+  --ics-log-time-size STR              Defines the time step amount for each
+                                         log file.
+  --ics-log-level STR                  Defines the output level of the log
+                                         [ERROR, WARNING, INFO]
+  --ns3-log-path FILE                  Defines the place where the ns-3 log
+                                         file will be stored
+
+Report Options:
+  -v, --verbose                        Switches to verbose output
+  -p, --print-options                  Prints option values before processing
+  -?, --help                           Prints this screen
+  -V, --version                        Prints the current version
+  -X, --xml-validation                 Enable schema validation of XML inputs
+  -W, --no-warnings                    Disables output of warnings
+  -l, --log FILE                       Writes all messages to FILE (implies
+                                         verbose)
+  --message-log FILE                   Writes all non-error messages to FILE
+                                         (implies verbose)
+  --error-log FILE                     Writes all warnings and errors to FILE
+
+Random Number Options:
+  --random                             Initialises the random number generator
+                                         with the current system time
+  --seed INT                           Initialises the random number generator
+                                         with the given value
+
+
+Examples:
+  iCS -c <CONFIGURATION>
+    
+
+Report bugs at <http://sourceforge.net/apps/trac/sumo/>.
+Get in contact via <sumo-user@lists.sourceforge.net>.
