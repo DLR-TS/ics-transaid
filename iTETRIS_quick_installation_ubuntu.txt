@@ -1,5 +1,6 @@
 Step 1 - Install required libraries
-$ sudo apt-get install libxerces-c-dev autoconf automake libtool libfox-1.6-dev libgl1-mesa-dev libglu1-mesa-dev libgdal-dev libproj-dev libgeographic-dev
+$ sudo apt-get install libxerces-c-dev autoconf automake libtool libfox-1.6-dev libgl1-mesa-dev libglu1-mesa-dev libgdal-dev libproj-dev libgeographic-dev python-pip
+$ sudo pip install texttest
 
 all following steps do not require sudo
 
@@ -19,8 +20,9 @@ $ git clone https://github.com/eclipse/sumo
 --------------------------------
 Step 3 - Build SUMO
 $ cd sumo
+$ autoreconf -i
 $ ./configure
-$ make
+$ make -j
 $ export SUMO_HOME=$PWD
 $ cd ..
 
@@ -28,16 +30,16 @@ $ cd ..
 Step 4 - Build NS-3.20
 $ cd ns-3.20
 $ ./waf configure --prefix=$PWD/..
-$ ./waf
+$ ./waf -j8
 $ ./waf install
 $ cd ..
 
 --------------------------------
 Step 5 - Build ICS
 $ cd iCS
-$ make -f Makefile.cvs
+$ autoreconf -i
 $ ./configure
-$ make
+$ make -j
 $ make install prefix=$PWD/..
 $ cd ..
 
@@ -46,7 +48,7 @@ Step 6 - Build iTETRIS app
 $ cd iTETRIS-Applications/traffic-monitor
 $ autoreconf -i
 $ ./configure
-$ make
+$ make -j
 $ make install prefix=$PWD/../..
 $ cd ../..
 
@@ -56,3 +58,9 @@ $ export PATH=$SUMO_HOME/bin:$PWD/bin:$PATH
 $ export LD_LIBRARY_PATH=$PWD/lib
 $ cd iTETRIS-Applications/traffic-monitor/acosta
 $ iCS -c itetris-config-file-gui-ns3.20.xml
+
+--------------------------------
+Step 8 - Run the tests
+$ cd iCS/tests/
+$ ./runTests.sh
+
