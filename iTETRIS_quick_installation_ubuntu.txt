@@ -6,16 +6,12 @@ all following steps do not require sudo
 
 --------------------------------
 Step 2 - Get the source from git
-$ git clone --recursive https://gitlab.imet.gr/root/transaid
+$ git clone --recursive https://gitlab.imet.gr/hit/transaid
 $ cd transaid
 $ git checkout transaid-dev
 $ git submodule update --init
 
-or alternatively use the "original" (does not contain latest fixes and does not contain sumo)
-
-$ git clone git@gitlab.eurecom.fr:iTETRIS/iTETRIS-release.git
-$ cd iTETRIS-release
-$ git clone https://github.com/eclipse/sumo
+The "original" repository containing the master branch for iTetris is located at https://gitlab.eurecom.fr/iTETRIS/iTETRIS-release
 
 --------------------------------
 Step 3 - Build SUMO
