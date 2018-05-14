@@ -1,4 +1,5 @@
 Step 1 - Install required libraries
+$ sudo apt-get update
 $ sudo apt-get install libxerces-c-dev autoconf automake libtool libfox-1.6-dev libgl1-mesa-dev libglu1-mesa-dev libgdal-dev libproj-dev libgeographic-dev python-pip
 $ sudo pip install texttest
 
