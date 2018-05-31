@@ -64,6 +64,12 @@ Logs Options:
                                          log file.
   --ics-log-level STR                  Defines the output level of the log
                                          [ERROR, WARNING, INFO]
+  --ics-log-begin INT                  Defines the time for the start of the
+                                         ics-log in [ms].
+  --ics-log-end INT                    Defines the time for the end of the
+                                         ics-log in [ms].
+  --ics-log-omit-systime               Whether system time shall be omitted in
+                                         logging output
   --ns3-log-path FILE                  Defines the place where the ns-3 log
                                          file will be stored
 

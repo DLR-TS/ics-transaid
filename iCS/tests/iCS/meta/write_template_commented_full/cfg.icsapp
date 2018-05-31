@@ -93,6 +93,15 @@
         <!-- Defines the output level of the log [ERROR, WARNING, INFO] -->
         <ics-log-level value="" type="STR"/>
 
+        <!-- Defines the time for the start of the ics-log in [ms]. -->
+        <ics-log-begin value="" type="INT"/>
+
+        <!-- Defines the time for the end of the ics-log in [ms]. -->
+        <ics-log-end value="" type="INT"/>
+
+        <!-- Whether system time shall be omitted in logging output -->
+        <ics-log-omit-systime value="" type="BOOL"/>
+
         <!-- Defines the place where the ns-3 log file will be stored -->
         <ns3-log-path value="" type="FILE"/>
 

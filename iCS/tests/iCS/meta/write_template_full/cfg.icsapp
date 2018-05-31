@@ -43,6 +43,9 @@
         <ics-log-path value="" type="FILE" help="Defines the place where the iCS log file will be stored"/>
         <ics-log-time-size value="" type="STR" help="Defines the time step amount for each log file."/>
         <ics-log-level value="" type="STR" help="Defines the output level of the log [ERROR, WARNING, INFO]"/>
+        <ics-log-begin value="" type="INT" help="Defines the time for the start of the ics-log in [ms]."/>
+        <ics-log-end value="" type="INT" help="Defines the time for the end of the ics-log in [ms]."/>
+        <ics-log-omit-systime value="" type="BOOL" help="Whether system time shall be omitted in logging output"/>
         <ns3-log-path value="" type="FILE" help="Defines the place where the ns-3 log file will be stored"/>
     </logs>
 
