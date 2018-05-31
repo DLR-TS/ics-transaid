@@ -24,6 +24,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include "../iCStypes.h"
 
 namespace ics {
 
@@ -61,7 +62,7 @@ public:
     * @param [in] path The path in which the messages will be written.
     * @return EXIT_SUCCESS if the file was correctly created, -1 otherwise.
     */
-    static int StartLog(std::string path, std::string timeThreshold);
+    static int StartLog(std::string path, std::string timeThreshold, ics_types::icstime_t logStart, ics_types::icstime_t logEnd, bool omitSysTime);
 
     /**
     * @brief Establishes the log level with the input of the user.
@@ -108,13 +109,20 @@ private:
     * @brief
     * @param [in]
     */
-    IcsLog(std::string path, std::string timeThreshold);
+    IcsLog(std::string path, std::string timeThreshold, ics_types::icstime_t logStart, ics_types::icstime_t logEnd, bool omitSysTime);
     
     /// @brief File for the iCS loggin.
     std::ofstream myfile_;
 
     /// @brief Path of the file
     std::string path_;
+
+    /// @brief start and end of logging
+    static ics_types::icstime_t gLogStart;
+    static ics_types::icstime_t gLogEnd;
+
+    /// @brief Whether to print the system time for all log lines
+    static bool gOmitSystemTime;
 
     /// @brief Singleton instance
     static IcsLog* instance_;
@@ -135,6 +143,9 @@ private:
 
     /// @brief Closes and opens a new log file.
     int StartNewFile();
+
+    /// @brief whether logging is active (t \in [logStart, logEnd])
+    static bool isActive();
 };
 
 }

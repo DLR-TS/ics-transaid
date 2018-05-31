@@ -48,13 +48,16 @@ namespace ics
 
 IcsLog* IcsLog::instance_ = 0;
 long IcsLog::lineCounter_ = 0;
+ics_types::icstime_t IcsLog::gLogStart=-1;
+ics_types::icstime_t IcsLog::gLogEnd=-1;
+bool IcsLog::gOmitSystemTime=false;
 ics::LogLevel IcsLog::logLevel_;
 long IcsLog::timeStepThreshold_;
 long IcsLog::nextTimeStepThreshold_;
 int IcsLog::currentNumberLogFiles_ = 0;
 string name, ext;
 
-IcsLog::IcsLog(string path, string timeThreshold)
+IcsLog::IcsLog(string path, string timeThreshold, ics_types::icstime_t logStart, ics_types::icstime_t logEnd, bool omitSysTime)
 {
   path_ = path;
   unsigned pointPos = path.rfind(".");
@@ -74,13 +77,16 @@ IcsLog::IcsLog(string path, string timeThreshold)
   //Using ms instead of seconds for the timestep
   timeStepThreshold_ *= 1000;
   nextTimeStepThreshold_ = timeStepThreshold_ - 1;
+  gLogStart = logStart;
+  gLogEnd = logEnd;
+  gOmitSystemTime = omitSysTime;
 }
 
-int IcsLog::StartLog(string path, string timeThreshold)
+int IcsLog::StartLog(string path, string timeThreshold, ics_types::icstime_t logStart, ics_types::icstime_t logEnd, bool omitSysTime)
 {
   if (instance_ == 0)
   {
-    instance_ = new IcsLog(path, timeThreshold);
+    instance_ = new IcsLog(path, timeThreshold, logStart, logEnd, omitSysTime);
     return EXIT_SUCCESS;
   }
 
@@ -205,11 +211,20 @@ bool IcsLog::Log(const char* message)
    return false;
    }*/
 
-  instance_->myfile_ << "[" << getTime() << "] " << "[" << getTimeStep() << "] " << message << endl;
-
-  lineCounter_++;
+  if (isActive()) {
+      if (!gOmitSystemTime) {
+          instance_->myfile_ << "[" << getTime() << "] ";
+      }
+      instance_->myfile_ << "[" << getTimeStep() << "] " << message << endl;
+      lineCounter_++;
+  }
 
   return true;
+}
+
+bool
+IcsLog::isActive() {
+    return SyncManager::m_simStep > gLogStart && (gLogEnd == -1 || SyncManager::m_simStep < gLogEnd);
 }
 
 bool IcsLog::LogLevel(const char* message, ics::LogLevel messageLogLevel)
@@ -279,7 +294,12 @@ bool IcsLog::LogLevel(const char* message, ics::LogLevel messageLogLevel)
    }*/
 
 #ifdef LOG_ON
-  instance_->myfile_ << "[" << getTime() << "] " << "[" << getTimeStep() << "] " << levelName << message << endl;
+  if (isActive()) {
+      if (!gOmitSystemTime) {
+          instance_->myfile_ << "[" << getTime() << "] ";
+      }
+      instance_->myfile_ << "[" << getTimeStep() << "] " << levelName << message << endl;
+  }
 #endif
 
   lineCounter_++;

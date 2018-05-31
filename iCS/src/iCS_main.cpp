@@ -190,6 +190,16 @@ void fillOptions()
   oc.doRegister("ics-log-level", new Option_String());
   oc.addDescription("ics-log-level", "Logs", "Defines the output level of the log [ERROR, WARNING, INFO]");
 
+  // insert option for log start and end (to slice a small part for tests)
+  oc.doRegister("ics-log-begin", new Option_Integer());
+  oc.addDescription("ics-log-begin", "Logs", "Defines the time for the start of the ics-log in [ms].");
+
+  oc.doRegister("ics-log-end", new Option_Integer());
+  oc.addDescription("ics-log-end", "Logs", "Defines the time for the end of the ics-log in [ms].");
+
+  oc.doRegister("ics-log-omit-systime", new Option_Bool());
+  oc.addDescription("ics-log-omit-systime", "Logs", "Whether system time shall be omitted in logging output");
+
   // insert option for ns3 log file
   oc.doRegister("ns3-log-path", new Option_FileName());
   oc.addDescription("ns3-log-path", "Logs", "Defines the place where the ns-3 log file will be stored");
@@ -408,7 +418,27 @@ int main(int argc, char **argv)
 
     if (logOn)
     {
-      IcsLog::StartLog(oc.getString("ics-log-path"), oc.getString("ics-log-time-size"));
+      // parse log start and end
+      icstime_t logStart, logEnd ;
+      if (oc.isDefault("ics-log-begin")) {
+            logStart = -1;
+        } else {
+            logStart = oc.getInt("ics-log-begin");
+        }
+      if (oc.isDefault("ics-log-end")) {
+            logEnd = -1;
+        } else {
+            logEnd = oc.getInt("ics-log-end");
+        }
+      bool omitSysTime;
+      if (oc.isDefault("ics-log-omit-systime")) {
+          omitSysTime = false;
+        } else {
+          omitSysTime = oc.getBool("ics-log-omit-systime");
+        }
+
+
+      IcsLog::StartLog(oc.getString("ics-log-path"), oc.getString("ics-log-time-size"), logStart, logEnd, omitSysTime);
       string loglevel = oc.getString("ics-log-level");
       std::transform(loglevel.begin(), loglevel.end(), loglevel.begin(), ::toupper);
       if (loglevel == "INFO")
