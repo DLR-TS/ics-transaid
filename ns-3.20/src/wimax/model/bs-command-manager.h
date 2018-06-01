@@ -142,8 +142,8 @@ private:
   bool m_bsPhyOn;
   uint32_t m_sfidIndex;
   uint32_t m_bsId;
-  uint8_t m_nSSgroup[];
   uint8_t m_noGroups;
+  uint8_t m_nSSgroup[];
 
   Ptr<SsCommandManager> GetSsManager (uint32_t index);
   Ptr<SsCommandManager> GetSsManager (Mac48Address ssAdress);
