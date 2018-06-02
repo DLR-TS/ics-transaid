@@ -279,7 +279,7 @@ namespace protocol
 			GetHeader(payload, server::PAYLOAD_FRONT, header);
 
 			double snr = 110;
-			if (!isnan(payload->snr))
+			if (!std::isnan(payload->snr))
 				snr = payload->snr;
 			// discard unwanted packets
 			if (!IsNodeType(GetNodeType(), header->getDestinationType()))
