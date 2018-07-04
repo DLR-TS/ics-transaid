@@ -1,0 +1,11 @@
+<map id="protocol::server::Payload::getHeader" name="protocol::server::Payload::getHeader">
+<area shape="rect" id="node2" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a625f92b77a24c8f7bd740c7e1bf4b0f8" title="protocol::application\l::Controller::GetHeader" alt="" coords="231,49,388,90"/>
+<area shape="rect" id="node4" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a1903a0fb9fab283cf482ae6870eb0500" title="Utility method to retrieve a header from a payload. " alt="" coords="222,157,397,198"/>
+<area shape="rect" id="node3" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a064104a2c412be85d3ca2853e8809e5a" title="protocol::application\l::Controller::Receive" alt="" coords="470,5,613,46"/>
+<area shape="rect" id="node5" href="$db/d21/classprotocol_1_1application_1_1BehaviourNodeWithSink.html#af1bd316f2fecd352c7a2e4144e42a7c7" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="455,69,627,125"/>
+<area shape="rect" id="node6" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a373a1080ed9cb0ff94fd9559b98987d5" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="446,149,637,205"/>
+<area shape="rect" id="node7" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a5b535594b073afc81aea37ec7a1064db" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="457,229,625,270"/>
+<area shape="rect" id="node8" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#af6c8dbc30e0da766bcaf47889305c10c" title="Called by the node class when the node has received the message from iCS. " alt="" coords="462,294,621,335"/>
+<area shape="rect" id="node9" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a995cb41c45ecd8bde7d9f68d34c45451" title="The node has received a message. This method will call iCSInferface::Receive. " alt="" coords="685,294,917,335"/>
+<area shape="rect" id="node10" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a6427065d5105c9456b28f5550033023f" title="protocol::server::NodeHandler\l::applicationMessageReceive" alt="" coords="966,294,1162,335"/>
+</map>

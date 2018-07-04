@@ -1,0 +1,4 @@
+<map id="protocol::application::BehaviourRsu::BehaviourRsu" name="protocol::application::BehaviourRsu::BehaviourRsu">
+<area shape="rect" id="node2" href="$db/d11/classprotocol_1_1application_1_1TraceManager.html#ac37477c6344d8c137a35362097b85f1a" title="protocol::application\l::TraceManager::RegisterTrace" alt="" coords="256,11,459,53"/>
+<area shape="rect" id="node3" href="$d6/d38/classprotocol_1_1application_1_1TracedCallbackBase.html#a7418fc0fc7aa2da2a764a3f035aaea66" title="protocol::application\l::TracedCallbackBase\l::SetName" alt="" coords="507,4,658,60"/>
+</map>

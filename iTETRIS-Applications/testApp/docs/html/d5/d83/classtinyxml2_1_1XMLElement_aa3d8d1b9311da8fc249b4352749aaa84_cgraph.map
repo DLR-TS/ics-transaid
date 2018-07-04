@@ -1,0 +1,11 @@
+<map id="tinyxml2::XMLElement::QueryUnsignedAttribute" name="tinyxml2::XMLElement::QueryUnsignedAttribute">
+<area shape="rect" id="node2" href="$db/d8e/classtinyxml2_1_1XMLAttribute.html#ac93f5981adfd62ac4ea76bfa668ee2b4" title="See QueryIntValue. " alt="" coords="224,38,379,79"/>
+<area shape="rect" id="node3" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a210c8637d5eb4ce3d4625294af0efc2f" title="tinyxml2::XMLUtil::\lToUnsigned" alt="" coords="437,5,571,46"/>
+<area shape="rect" id="node4" href="$db/d8e/classtinyxml2_1_1XMLAttribute.html#aa9b08c6e592b0c88117c46666dcc1af2" title="The value of the attribute. " alt="" coords="427,70,581,111"/>
+<area shape="rect" id="node5" href="$d5/dcd/classtinyxml2_1_1StrPair.html#ad87e3d11330f5e689ba1e7e54c023b57" title="tinyxml2::StrPair::\lGetStr" alt="" coords="630,70,757,111"/>
+<area shape="rect" id="node6" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a5a96e5144a8d693dc4bcd783d9964648" title="tinyxml2::XMLUtil::\lGetCharacterRef" alt="" coords="810,37,945,78"/>
+<area shape="rect" id="node8" href="$d5/dcd/classtinyxml2_1_1StrPair.html#ade1469025e6b4cac74397a82a7429337" title="tinyxml2::StrPair::\lCollapseWhitespace" alt="" coords="806,102,949,143"/>
+<area shape="rect" id="node7" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a31c00d5c5dfb38382de1dfcaf4be3595" title="tinyxml2::XMLUtil::\lConvertUTF32ToUTF8" alt="" coords="998,37,1154,78"/>
+<area shape="rect" id="node9" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a9333d20f2a34325b5115ca45849c4b2a" title="tinyxml2::XMLUtil::\lSkipWhiteSpace" alt="" coords="1009,102,1143,143"/>
+<area shape="rect" id="node10" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a357ec3af8fc433d19023a815f45e8e33" title="tinyxml2::XMLUtil::\lIsWhiteSpace" alt="" coords="1009,167,1143,209"/>
+</map>

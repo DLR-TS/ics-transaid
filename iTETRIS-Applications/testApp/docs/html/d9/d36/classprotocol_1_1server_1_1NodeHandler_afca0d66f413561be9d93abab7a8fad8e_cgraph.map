@@ -1,0 +1,7 @@
+<map id="protocol::server::NodeHandler::endSubscription" name="protocol::server::NodeHandler::endSubscription">
+<area shape="rect" id="node2" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a8f2625beb1c3b9ba75a0d22878d50618" title="Whatever a subscription is to remove. " alt="" coords="259,5,426,46"/>
+<area shape="rect" id="node4" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a892bbbd9a4fc8d64e685be212110d3f8" title="Removes the subscription with that id. " alt="" coords="251,70,435,111"/>
+<area shape="rect" id="node3" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a743445c1c5b97d0678ebe748778d6b26" title="Gets a subscription from the id. " alt="" coords="483,5,645,46"/>
+<area shape="rect" id="node5" href="$d0/d77/classLog.html#a3cce67763de1ce3985d15c9c8d6d33d6" title="Log::WriteLog" alt="" coords="513,77,615,104"/>
+<area shape="rect" id="node6" href="$d0/d77/classLog.html#a419e58c8f6350bdaaae789a041aae356" title="Log::Write" alt="" coords="693,77,776,104"/>
+</map>

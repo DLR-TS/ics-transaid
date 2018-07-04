@@ -1,0 +1,4 @@
+<map id="protocol::application::NoLongerConformantHeader::getVehicleMovement" name="protocol::application::NoLongerConformantHeader::getVehicleMovement">
+<area shape="rect" id="node2" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#aa781422580b159b44fba34f699bdfeb7" title="Called when a no longer conformant is received. " alt="" coords="251,11,512,53"/>
+<area shape="rect" id="node3" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a5b535594b073afc81aea37ec7a1064db" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="560,11,728,53"/>
+</map>

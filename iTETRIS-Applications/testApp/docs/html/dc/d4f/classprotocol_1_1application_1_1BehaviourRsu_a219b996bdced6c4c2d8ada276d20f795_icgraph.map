@@ -1,0 +1,10 @@
+<map id="protocol::application::BehaviourRsu::Type" name="protocol::application::BehaviourRsu::Type">
+<area shape="rect" id="node2" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a2dbf9d6fa7dea46757e7702b8265fdf1" title="protocol::application\l::BehaviourRsu::GetType" alt="" coords="203,5,373,46"/>
+<area shape="rect" id="node3" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a7cd182d5bb9e360133c9304be473b5da" title="Contains the actions to be executed when the behavior starts. " alt="" coords="216,70,360,111"/>
+<area shape="rect" id="node4" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a7e42df36f94c718d93067533e18beed3" title="Contains the actions to be executed when the behavior stops. " alt="" coords="217,135,359,177"/>
+<area shape="rect" id="node5" href="$dd/d18/classprotocol_1_1application_1_1OutputHelperWrapper.html#a5aa6954906173f38af96137e0d7355e2" title="protocol::application\l::OutputHelperWrapper\l::DisconnectCallbacks" alt="" coords="210,200,366,256"/>
+<area shape="rect" id="node7" href="$dd/d18/classprotocol_1_1application_1_1OutputHelperWrapper.html#a01dee9cbfe47633d629b9ea43360dcc4" title="protocol::application\l::OutputHelperWrapper\l::RegisterCallbacks" alt="" coords="426,301,582,357"/>
+<area shape="rect" id="node9" href="$d6/d45/classprotocol_1_1application_1_1OutputHelper.html#a9576ebe75331a2e5ddb68b78d66ffd89" title="protocol::application\l::OutputHelper::AddRsu" alt="" coords="207,331,369,373"/>
+<area shape="rect" id="node6" href="$dd/d18/classprotocol_1_1application_1_1OutputHelperWrapper.html#a6530a7215e2f3298bdcc354418b59249" title="protocol::application\l::OutputHelperWrapper\l::~OutputHelperWrapper" alt="" coords="422,200,586,256"/>
+<area shape="rect" id="node8" href="$dd/d18/classprotocol_1_1application_1_1OutputHelperWrapper.html#a7fccdb3c5ff6dd535805179acae14b44" title="protocol::application\l::OutputHelperWrapper\l::OutputHelperWrapper" alt="" coords="635,301,791,357"/>
+</map>

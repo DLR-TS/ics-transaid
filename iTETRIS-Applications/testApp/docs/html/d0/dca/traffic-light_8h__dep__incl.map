@@ -1,0 +1,6 @@
+<map id="traffic&#45;light.h" name="traffic&#45;light.h">
+<area shape="rect" id="node2" href="$d7/d57/fixed-station_8h.html" title="fixed&#45;station.h" alt="" coords="84,80,188,107"/>
+<area shape="rect" id="node5" href="$df/d20/traffic-light_8cpp.html" title="traffic&#45;light.cpp" alt="" coords="213,80,320,107"/>
+<area shape="rect" id="node3" href="$d4/d50/fixed-station_8cpp.html" title="fixed&#45;station.cpp" alt="" coords="5,155,123,181"/>
+<area shape="rect" id="node4" href="$dc/d0b/node-handler_8cpp.html" title="node&#45;handler.cpp" alt="" coords="147,155,268,181"/>
+</map>

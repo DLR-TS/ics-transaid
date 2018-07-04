@@ -1,0 +1,6 @@
+<map id="protocol::server::Server::Server" name="protocol::server::Server::Server">
+<area shape="rect" id="node2" href="$da/dc8/classprotocol_1_1ProgramConfiguration.html#a0a1701a45810cf424bedcc23b9ad6caf" title="protocol::ProgramConfiguration\l::GetSocketPort" alt="" coords="213,5,416,46"/>
+<area shape="rect" id="node3" href="$d3/dfd/classprotocol_1_1Console.html#a23d38c6e3a45f593c62def7d29b3e034" title="protocol::Console::Log" alt="" coords="238,71,391,97"/>
+<area shape="rect" id="node4" href="$d3/dfd/classprotocol_1_1Console.html#a2ce564004d124a17bb9741bd97ad5564" title="protocol::Console::\lError" alt="" coords="249,122,381,163"/>
+<area shape="rect" id="node5" href="$d0/d13/classtcpip_1_1SocketException.html#a84c78a1eb617334f72edd17b8b5fee7c" title="tcpip::SocketException\l::what" alt="" coords="236,187,393,229"/>
+</map>

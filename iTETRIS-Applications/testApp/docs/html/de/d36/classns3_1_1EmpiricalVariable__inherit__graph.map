@@ -1,0 +1,4 @@
+<map id="ns3::EmpiricalVariable" name="ns3::EmpiricalVariable">
+<area shape="rect" id="node3" href="$d5/ddb/classns3_1_1IntEmpiricalVariable.html" title="Integer&#45;based empirical distributionDefines an empirical distribution where all values are integers..." alt="" coords="5,155,171,181"/>
+<area shape="rect" id="node2" href="$d3/dad/classns3_1_1RandomVariable.html" title="The basic RNG for NS&#45;3.Note: The underlying random number generation method used by NS&#45;3 is the RngSt..." alt="" coords="15,5,161,32"/>
+</map>

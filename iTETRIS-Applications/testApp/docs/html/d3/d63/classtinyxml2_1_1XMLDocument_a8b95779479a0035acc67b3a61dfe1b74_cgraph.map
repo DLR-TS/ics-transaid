@@ -1,0 +1,8 @@
+<map id="tinyxml2::XMLDocument::SaveFile" name="tinyxml2::XMLDocument::SaveFile">
+<area shape="rect" id="node2" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#a686ea28672c0e0c60383ec28148c1ac0" title="tinyxml2::XMLDocument\l::Print" alt="" coords="222,103,389,145"/>
+<area shape="rect" id="node3" href="$d3/d63/classtinyxml2_1_1XMLDocument.html#aa08503d24898bf9992ae5e5fb8b0cf87" title="tinyxml2::XMLDocument\l::Accept" alt="" coords="438,103,605,145"/>
+<area shape="rect" id="node4" href="$d8/d5b/classtinyxml2_1_1XMLVisitor.html#acb3c22fc5f60eb9db98f533f2761f67d" title="Visit a document. " alt="" coords="655,5,798,46"/>
+<area shape="rect" id="node5" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a60e923d13d7dc01f45ab90a2f948b02a" title="Get the first child node, or null if none exists. " alt="" coords="654,70,799,111"/>
+<area shape="rect" id="node6" href="$d6/de3/classtinyxml2_1_1XMLNode.html#abba1df37581d89dccc45acdc55750ba2" title="Get the next (right) sibling node of this node. " alt="" coords="654,135,799,177"/>
+<area shape="rect" id="node7" href="$d8/d5b/classtinyxml2_1_1XMLVisitor.html#a170e9989cd046ba904f302d087e07086" title="Visit a document. " alt="" coords="655,201,798,242"/>
+</map>

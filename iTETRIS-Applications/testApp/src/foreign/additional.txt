@@ -1,0 +1,8 @@
+The subfolders contain additional libraries used by iTETRIS:
+
+- tcpip
+ Simple TCP/IP Socket Class to communicate with other programs
+ Used Version: always the most recent one (included via svn:externals)
+ Modifications: none
+ Original Page: http://shawn.sf.net
+ 

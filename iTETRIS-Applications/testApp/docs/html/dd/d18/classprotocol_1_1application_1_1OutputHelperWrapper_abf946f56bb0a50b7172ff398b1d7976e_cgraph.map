@@ -1,0 +1,10 @@
+<map id="protocol::application::OutputHelperWrapper::OnPacketReceive" name="protocol::application::OutputHelperWrapper::OnPacketReceive">
+<area shape="rect" id="node2" href="$d6/d45/classprotocol_1_1application_1_1OutputHelper.html#ad0e8b7f85dd3c4228cb4977b1786833e" title="protocol::application\l::OutputHelper::Instance" alt="" coords="239,25,404,66"/>
+<area shape="rect" id="node3" href="$d6/d45/classprotocol_1_1application_1_1OutputHelper.html#a2b9d3fb0923a7579743b87ce7f789da5" title="protocol::application\l::OutputHelper::OnPacketReceive" alt="" coords="211,90,432,131"/>
+<area shape="rect" id="node4" href="$d6/d45/classprotocol_1_1application_1_1OutputHelper.html#aaeb7b4a51cdddc1151cd74741fd32a2e" title="protocol::application\l::OutputHelper::Log" alt="" coords="480,90,619,131"/>
+<area shape="rect" id="node5" href="$df/da7/classprotocol_1_1CurrentTime.html#aa9b02aba52dc79bac7f1624aec798771" title="protocol::CurrentTime::Now" alt="" coords="671,5,854,32"/>
+<area shape="rect" id="node6" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#ad28b2b4cde700efa7809b802a3070645" title="protocol::application\l::iCSInterface::GetNodeType" alt="" coords="667,57,859,98"/>
+<area shape="rect" id="node7" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a2b9d9bd031e4ca9db3c302ab48cfe298" title="Get the id of the node. " alt="" coords="691,122,834,163"/>
+<area shape="rect" id="node9" href="$d9/d3d/namespaceprotocol_1_1application.html#a39db3f7aadf97ba8fce456d5016bff46" title="protocol::application\l::IsNodeType" alt="" coords="693,187,832,229"/>
+<area shape="rect" id="node8" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a444338899434c9a151acfcfd7b8e1a2f" title="protocol::application\l::Node::getId" alt="" coords="907,122,1045,163"/>
+</map>

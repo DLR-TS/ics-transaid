@@ -1,0 +1,6 @@
+<map id="protocol::application::Callback::DoCheckType" name="protocol::application::Callback::DoCheckType">
+<area shape="rect" id="node2" href="$d3/db1/group__callbackimpl.html#gaa65db7c55ff5c7c6ad877fbb0a33a768" title="protocol::application\l::Callback::CheckType" alt="" coords="227,5,383,46"/>
+<area shape="rect" id="node3" href="$d3/db1/group__callbackimpl.html#ga0104d98b7cddf8c40a3ef3010417eb71" title="protocol::application\l::Callback::DoAssign" alt="" coords="232,70,379,111"/>
+<area shape="rect" id="node4" href="$d3/db1/group__callbackimpl.html#gab8a4b81783add8e27d4271766bc32e15" title="protocol::application\l::Callback::Assign" alt="" coords="432,70,571,111"/>
+<area shape="rect" id="node5" href="$dc/da6/classprotocol_1_1application_1_1TracedCallback.html#af8b5612f3ac929b986a0f6744665a9e2" title="protocol::application\l::TracedCallback::Connect" alt="" coords="619,70,797,111"/>
+</map>

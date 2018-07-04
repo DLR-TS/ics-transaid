@@ -1,0 +1,5 @@
+<map id="protocol::application::TrafficLight::GetStatusFromChar" name="protocol::application::TrafficLight::GetStatusFromChar">
+<area shape="rect" id="node2" href="$df/df6/classprotocol_1_1application_1_1TrafficLight.html#a9556440e2f217a4a271be5690159f44b" title="protocol::application\l::TrafficLight::setState" alt="" coords="275,11,427,53"/>
+<area shape="rect" id="node3" href="$d1/d60/classprotocol_1_1application_1_1FixedStation.html#a2847e4189e43225a19c7fc24eb529549" title="Called with the updated information about the traffic light. " alt="" coords="475,4,647,60"/>
+<area shape="rect" id="node4" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a277392315eaeec477657639cdf7614e2" title="protocol::server::NodeHandler\l::trafficLightInformation" alt="" coords="697,11,893,53"/>
+</map>

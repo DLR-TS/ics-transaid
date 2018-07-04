@@ -1,0 +1,5 @@
+<map id="protocol::application::CentralizedProtocol" name="protocol::application::CentralizedProtocol">
+<area shape="rect" id="node2" href="$d1/d4c/classprotocol_1_1application_1_1ExecuteBase.html" title="protocol::application\l::ExecuteBase" alt="" coords="225,5,364,46"/>
+<area shape="rect" id="node3" href="$dc/da6/classprotocol_1_1application_1_1TracedCallback.html" title="protocol::application\l::TracedCallback\&lt; std\l::vector\&lt; std::string \&gt; &amp; \&gt;" alt="" coords="208,69,381,125"/>
+<area shape="rect" id="node4" href="$d6/d38/classprotocol_1_1application_1_1TracedCallbackBase.html" title="protocol::application\l::TracedCallbackBase" alt="" coords="6,77,157,118"/>
+</map>

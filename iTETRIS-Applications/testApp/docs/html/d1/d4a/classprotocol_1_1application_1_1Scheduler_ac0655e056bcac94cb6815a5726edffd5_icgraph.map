@@ -1,0 +1,16 @@
+<map id="protocol::application::Scheduler::Cancel" name="protocol::application::Scheduler::Cancel">
+<area shape="rect" id="node2" href="$d8/de6/classprotocol_1_1application_1_1BehaviourNode.html#a6ae6a7f42044e8f7fdaf42fac90ab8a3" title="protocol::application\l::BehaviourNode::~BehaviourNode" alt="" coords="192,5,416,46"/>
+<area shape="rect" id="node3" href="$d8/de6/classprotocol_1_1application_1_1BehaviourNode.html#af16ea7702d46cc37c07b869cecfd1b84" title="Contains the actions to be executed when the behavior stops. " alt="" coords="227,70,381,111"/>
+<area shape="rect" id="node4" href="$db/d21/classprotocol_1_1application_1_1BehaviourNodeWithSink.html#af1bd316f2fecd352c7a2e4144e42a7c7" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="218,135,390,191"/>
+<area shape="rect" id="node5" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a373a1080ed9cb0ff94fd9559b98987d5" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="209,215,399,271"/>
+<area shape="rect" id="node6" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a92e66fbc47aae41d5e5b462169aa172c" title="protocol::application\l::BehaviourRsu::~BehaviourRsu" alt="" coords="199,294,409,335"/>
+<area shape="rect" id="node7" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a2aebafafb7b836144c0accab063939df" title="Contains the actions to be executed when the behavior stops. " alt="" coords="231,359,377,401"/>
+<area shape="rect" id="node11" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a50d0d21fb4d3b9da28901497cccc819a" title="protocol::application\l::DataManager::~DataManager" alt="" coords="203,425,405,466"/>
+<area shape="rect" id="node12" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a7e42df36f94c718d93067533e18beed3" title="Contains the actions to be executed when the behavior stops. " alt="" coords="233,490,375,531"/>
+<area shape="rect" id="node13" href="$d8/dd8/classprotocol_1_1application_1_1NodeSampler.html#a4a8864d3a40028081edfdfb38feb6771" title="protocol::application\l::NodeSampler::~NodeSampler" alt="" coords="202,555,406,597"/>
+<area shape="rect" id="node14" href="$d8/dd8/classprotocol_1_1application_1_1NodeSampler.html#a6a548923a45e113baa2031c7f0965b36" title="protocol::application\l::NodeSampler::OnStateChange" alt="" coords="199,621,409,662"/>
+<area shape="rect" id="node8" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a6b1a81f316a41560b8a8a7345188d205" title="Called by the ics interface to add the relevant direction. " alt="" coords="464,359,667,401"/>
+<area shape="rect" id="node9" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a98373c53208f53499effa865df9f1153" title="protocol::application\l::Controller::Controller" alt="" coords="731,327,882,369"/>
+<area shape="rect" id="node10" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#ade24e9843c1a2211cfe117b56bc6beb3" title="protocol::application\l::iCSInterface::iCSInterface" alt="" coords="715,393,899,434"/>
+<area shape="rect" id="node15" href="$d8/dd8/classprotocol_1_1application_1_1NodeSampler.html#a853ba0ddd9ad35c0fc662a869f941af4" title="protocol::application\l::NodeSampler::NodeSampler" alt="" coords="467,621,663,662"/>
+</map>

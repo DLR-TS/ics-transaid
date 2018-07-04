@@ -1,0 +1,12 @@
+<map id="protocol::application::TraciHelper::HasCommand" name="protocol::application::TraciHelper::HasCommand">
+<area shape="rect" id="node2" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#ac0e41716bd5da684b218a93213d724a6" title="Get a command. " alt="" coords="243,173,429,214"/>
+<area shape="rect" id="node3" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a5cb90ba67b0b886989647e3ea9a15878" title="Called by the node class when the reply from a sumo command is received. " alt="" coords="1013,260,1213,316"/>
+<area shape="rect" id="node6" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#ad3205f4ab49f191d147706944f2a2edf" title="Get a commandId. " alt="" coords="487,42,684,84"/>
+<area shape="rect" id="node7" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#a91eafb51bffbb806f84fc14fa75aca3c" title="Get a command type. " alt="" coords="478,108,693,149"/>
+<area shape="rect" id="node8" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#a80d3a6959e9f8abf4fa96510df0e99ae" title="Checks if the id is a value retrieval command. " alt="" coords="487,173,684,214"/>
+<area shape="rect" id="node9" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#a45ca0e26755abd44200ffd1abfe86564" title="Checks if the id is a state change command. " alt="" coords="487,238,683,280"/>
+<area shape="rect" id="node10" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#a98d639a5e04726b22d6d2d8421eaba58" title="Verifies the sumo reply of a command. " alt="" coords="486,304,685,345"/>
+<area shape="rect" id="node11" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#a5506d26918b7430bfe726de4a7e81f6d" title="Starts the retrieve process if a value retrieval command. " alt="" coords="742,326,965,382"/>
+<area shape="rect" id="node4" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a2370797616a53e43b194f1ccf6bbce5e" title="The result of a sumo command has been received. This method will call iCSInferface::SumoTraciCommandR..." alt="" coords="1262,268,1490,309"/>
+<area shape="rect" id="node5" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a7c579de70966c388a78d4d510dce44ae" title="protocol::server::NodeHandler\l::sumoTraciCommandResult" alt="" coords="1539,268,1735,309"/>
+</map>

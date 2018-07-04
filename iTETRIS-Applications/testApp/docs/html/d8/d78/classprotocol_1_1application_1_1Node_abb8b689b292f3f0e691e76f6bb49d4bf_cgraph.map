@@ -1,0 +1,12 @@
+<map id="protocol::application::Node::askForSubscription" name="protocol::application::Node::askForSubscription">
+<area shape="rect" id="node2" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a73bf7177966cbe56070f8fa54a0f05cc" title="protocol::application\l::Node::addSubscriptions" alt="" coords="235,129,405,170"/>
+<area shape="rect" id="node9" href="$d8/d78/classprotocol_1_1application_1_1Node.html#acc3c8df0736c243f589415c83d737b3a" title="Adds a subscription. " alt="" coords="239,197,401,238"/>
+<area shape="rect" id="node3" href="$de/d04/classprotocol_1_1application_1_1SubscriptionHelper.html#a3ec1c7c161550b0cc877a3f1684fb7d7" title="To create a AppMessageReceive subscription for unicast messages. " alt="" coords="463,41,603,97"/>
+<area shape="rect" id="node7" href="$de/d04/classprotocol_1_1application_1_1SubscriptionHelper.html#a4004d8b599464ffad7fa48cbe579c83a" title="To create a AppMessageReceive subscription for geobroadcast messages. " alt="" coords="454,121,613,177"/>
+<area shape="rect" id="node4" href="$db/d00/classtcpip_1_1Storage.html#a5a42840a57331704c2fdc30e3d1d2a54" title="tcpip::Storage::writeUnsignedByte" alt="" coords="661,56,883,83"/>
+<area shape="rect" id="node5" href="$db/d00/classtcpip_1_1Storage.html#a1babffd3cee462277796bc5b4ef6bb1a" title="tcpip::Storage::writeInt" alt="" coords="695,5,849,32"/>
+<area shape="rect" id="node6" href="$db/d00/classtcpip_1_1Storage.html#ae7af58d12716f7119877efb7919813f4" title="tcpip::Storage::writeShort" alt="" coords="687,107,857,133"/>
+<area shape="rect" id="node8" href="$db/d00/classtcpip_1_1Storage.html#ab4fc84f48f0c54fa75bedd69d7293c4c" title="tcpip::Storage::writeFloat" alt="" coords="688,157,856,184"/>
+<area shape="rect" id="node10" href="$d0/d77/classLog.html#a3cce67763de1ce3985d15c9c8d6d33d6" title="Log::WriteLog" alt="" coords="482,205,585,232"/>
+<area shape="rect" id="node11" href="$d0/d77/classLog.html#a419e58c8f6350bdaaae789a041aae356" title="Log::Write" alt="" coords="731,208,813,235"/>
+</map>

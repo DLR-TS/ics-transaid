@@ -1,0 +1,7 @@
+<map id="protocol::application::iCSInterface::IsConformantDirection" name="protocol::application::iCSInterface::IsConformantDirection">
+<area shape="rect" id="node2" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#ab8066f1be8a10299dacd18b648ce932d" title="protocol::application\l::iCSInterface::GetDirection" alt="" coords="257,70,441,111"/>
+<area shape="rect" id="node5" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#abf3a7037cb165afaec521f2ff6eb7879" title="Static method to check if two direction differ by less than the tolerance. " alt="" coords="245,135,453,177"/>
+<area shape="rect" id="node3" href="$d9/d3d/namespaceprotocol_1_1application.html#a87454148f7ff99b551f06f227ac36083" title="protocol::application\l::IsVehicle" alt="" coords="528,5,667,46"/>
+<area shape="rect" id="node4" href="$d8/dd8/classprotocol_1_1application_1_1NodeSampler.html#ac30f5c76cf448ba585becbb78423c7aa" title="protocol::application\l::NodeSampler::GetDirection" alt="" coords="502,70,693,111"/>
+<area shape="rect" id="node6" href="$d9/d3d/namespaceprotocol_1_1application.html#aa6d197810e0373ad31c827590da6a6d9" title="protocol::application\l::NormalizeDirection" alt="" coords="527,135,668,177"/>
+</map>

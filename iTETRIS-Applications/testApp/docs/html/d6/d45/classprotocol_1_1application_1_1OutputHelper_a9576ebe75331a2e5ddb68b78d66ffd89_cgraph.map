@@ -1,0 +1,6 @@
+<map id="protocol::application::OutputHelper::AddRsu" name="protocol::application::OutputHelper::AddRsu">
+<area shape="rect" id="node2" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a7d4e3b9746abc1d3d9ce38cf23bdb6e8" title="Get a Behaviour from its type. " alt="" coords="221,5,411,46"/>
+<area shape="rect" id="node3" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a219b996bdced6c4c2d8ada276d20f795" title="protocol::application\l::BehaviourRsu::Type" alt="" coords="241,70,391,111"/>
+<area shape="rect" id="node4" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a07ca7bd191994fdc5af25010da0b75ec" title="protocol::application\l::BehaviourRsu::GetDirections" alt="" coords="216,135,416,177"/>
+<area shape="rect" id="node5" href="$d6/d45/classprotocol_1_1application_1_1OutputHelper.html#a3e2c471c6a51489e3ba5a1d816344006" title="protocol::application\l::OutputHelper::OnSimulation\lStart" alt="" coords="219,200,413,256"/>
+</map>

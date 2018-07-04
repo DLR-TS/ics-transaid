@@ -1,0 +1,16 @@
+Warning: The option 'sloppy-insert' is deprecated, because it is now activated by default, see the new option 'eager-insert'.
+Loading net-file from '/home/colombo/COLOMBO/scenarios/iTETRIS_acosta/acosta_buslanes.net.xml'...  done (70ms).
+Loading additional-files from '/home/colombo/COLOMBO/scenarios/iTETRIS_acosta/acosta_vtypes.add.xml'...  done (1ms).
+Loading additional-files from '/home/colombo/COLOMBO/scenarios/iTETRIS_acosta/acosta_detectors.add.xml'...  done (1ms).
+Loading additional-files from '/home/colombo/COLOMBO/scenarios/iTETRIS_acosta/acosta_bus_stops.add.xml'...  done (1ms).
+Loading additional-files from '/home/colombo/COLOMBO/scenarios/iTETRIS_acosta/acosta_tls.add.xml'...  done (1ms).
+Loading done.
+Performance: 
+ Duration: 35916 ms
+ Real time factor: 0
+ UPS: 0.000000
+Vehicles: 
+ Emitted: 0 (Loaded: 507)
+ Running: 0
+ Waiting: 0
+

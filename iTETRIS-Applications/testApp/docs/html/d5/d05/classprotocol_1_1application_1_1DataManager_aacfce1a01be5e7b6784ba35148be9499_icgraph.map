@@ -1,0 +1,8 @@
+<map id="protocol::application::DataManager::RemoveData" name="protocol::application::DataManager::RemoveData">
+<area shape="rect" id="node2" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#ac2dafeca4692ca1c5aa07db1fed10c1e" title="protocol::application\l::DataManager::RemoveAll" alt="" coords="266,5,446,46"/>
+<area shape="rect" id="node5" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a3d64cf54decba42cf592e33eaf2e1a81" title="Calls every protocol so in can execute. " alt="" coords="274,70,438,111"/>
+<area shape="rect" id="node6" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#ae2d0c71551e9e954a4b630bbc72bb004" title="Called when a node times out. " alt="" coords="249,135,463,177"/>
+<area shape="rect" id="node3" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a50d0d21fb4d3b9da28901497cccc819a" title="protocol::application\l::DataManager::~DataManager" alt="" coords="512,5,715,46"/>
+<area shape="rect" id="node4" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a7e42df36f94c718d93067533e18beed3" title="Contains the actions to be executed when the behavior stops. " alt="" coords="542,70,685,111"/>
+<area shape="rect" id="node7" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a7cd182d5bb9e360133c9304be473b5da" title="Contains the actions to be executed when the behavior starts. " alt="" coords="541,135,685,177"/>
+</map>

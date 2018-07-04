@@ -1,0 +1,12 @@
+<map id="tinyxml2::XMLElement::QueryUnsignedText" name="tinyxml2::XMLElement::QueryUnsignedText">
+<area shape="rect" id="node2" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a60e923d13d7dc01f45ab90a2f948b02a" title="Get the first child node, or null if none exists. " alt="" coords="209,5,354,46"/>
+<area shape="rect" id="node3" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a41c55dab9162d1eb62db2008430e376b" title="Safely cast to Text, or null. " alt="" coords="209,70,354,111"/>
+<area shape="rect" id="node4" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a92835c779871918f9af569bfe9669fe6" title="tinyxml2::XMLNode::\lValue" alt="" coords="209,135,354,177"/>
+<area shape="rect" id="node11" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a210c8637d5eb4ce3d4625294af0efc2f" title="tinyxml2::XMLUtil::\lToUnsigned" alt="" coords="214,201,349,242"/>
+<area shape="rect" id="node5" href="$d5/dcd/classtinyxml2_1_1StrPair.html#ad87e3d11330f5e689ba1e7e54c023b57" title="tinyxml2::StrPair::\lGetStr" alt="" coords="403,135,530,177"/>
+<area shape="rect" id="node6" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a5a96e5144a8d693dc4bcd783d9964648" title="tinyxml2::XMLUtil::\lGetCharacterRef" alt="" coords="583,102,718,143"/>
+<area shape="rect" id="node8" href="$d5/dcd/classtinyxml2_1_1StrPair.html#ade1469025e6b4cac74397a82a7429337" title="tinyxml2::StrPair::\lCollapseWhitespace" alt="" coords="579,167,722,209"/>
+<area shape="rect" id="node7" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a31c00d5c5dfb38382de1dfcaf4be3595" title="tinyxml2::XMLUtil::\lConvertUTF32ToUTF8" alt="" coords="771,102,927,143"/>
+<area shape="rect" id="node9" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a9333d20f2a34325b5115ca45849c4b2a" title="tinyxml2::XMLUtil::\lSkipWhiteSpace" alt="" coords="782,167,917,209"/>
+<area shape="rect" id="node10" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a357ec3af8fc433d19023a815f45e8e33" title="tinyxml2::XMLUtil::\lIsWhiteSpace" alt="" coords="782,233,917,274"/>
+</map>

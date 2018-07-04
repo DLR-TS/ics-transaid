@@ -1,0 +1,20 @@
+<map id="protocol::application::OutputHelper" name="protocol::application::OutputHelper">
+<area shape="rect" id="node2" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html" title="protocol::application\l::iCSInterface" alt="" coords="971,183,1109,225"/>
+<area shape="rect" id="node4" href="$d8/d78/classprotocol_1_1application_1_1Node.html" title="protocol::application\l::Node" alt="" coords="1315,134,1453,175"/>
+<area shape="rect" id="node11" href="$d8/dd8/classprotocol_1_1application_1_1NodeSampler.html" title="protocol::application\l::NodeSampler" alt="" coords="1315,473,1453,514"/>
+<area shape="rect" id="node3" href="$db/d11/classprotocol_1_1application_1_1TraceManager.html" title="Utility class to be extended to allow push model interaction. " alt="" coords="560,295,699,337"/>
+<area shape="rect" id="node5" href="$df/d17/classns3_1_1UniformVariable.html" title="The uniform distribution RNG for NS&#45;3.This class supports the creation of objects that return random ..." alt="" coords="968,416,1112,443"/>
+<area shape="rect" id="node6" href="$d3/dad/classns3_1_1RandomVariable.html" title="The basic RNG for NS&#45;3.Note: The underlying random number generation method used by NS&#45;3 is the RngSt..." alt="" coords="556,419,703,445"/>
+<area shape="rect" id="node15" href="$d3/d3c/classns3_1_1NormalVariable.html" title="Class NormalVariable defines a random variable with a normal (Gaussian) distribution.This class supports the creation of objects that return random numbers from a fixed normal distribution. It also supports the generation of single random numbers from various normal distributions. " alt="" coords="970,467,1110,493"/>
+<area shape="rect" id="node7" href="$dc/dab/classns3_1_1RandomVariableBase.html" title="ns3::RandomVariableBase" alt="" coords="249,419,426,445"/>
+<area shape="rect" id="node8" href="$da/d35/classns3_1_1RngStream.html" title="Combined Multiple&#45;Recursive Generator MRG32k3a. " alt="" coords="5,419,123,445"/>
+<area shape="rect" id="node9" href="$dc/da6/classprotocol_1_1application_1_1TracedCallback.html" title="protocol::application\l::TracedCallback\&lt; bool \&gt;" alt="" coords="545,151,714,193"/>
+<area shape="rect" id="node10" href="$d6/d38/classprotocol_1_1application_1_1TracedCallbackBase.html" title="protocol::application\l::TracedCallbackBase" alt="" coords="262,313,413,354"/>
+<area shape="rect" id="node14" href="$dc/da6/classprotocol_1_1application_1_1TracedCallback.html" title="protocol::application\l::TracedCallback\&lt; protocol\l::application::Vector2D \&gt;" alt="" coords="741,769,920,825"/>
+<area shape="rect" id="node17" href="$dc/da6/classprotocol_1_1application_1_1TracedCallback.html" title="protocol::application\l::TracedCallback\&lt; double \&gt;" alt="" coords="739,350,922,391"/>
+<area shape="rect" id="node19" href="$dc/da6/classprotocol_1_1application_1_1TracedCallback.html" title="protocol::application\l::TracedCallback\&lt; server\l::Payload * \&gt;" alt="" coords="545,216,714,272"/>
+<area shape="rect" id="node12" href="$d6/d0d/structprotocol_1_1MobilityInfo.html" title="protocol::MobilityInfo" alt="" coords="969,663,1111,689"/>
+<area shape="rect" id="node13" href="$d5/d78/classprotocol_1_1application_1_1Vector2D.html" title="protocol::application\l::Vector2D" alt="" coords="560,655,699,697"/>
+<area shape="rect" id="node16" href="$dd/d97/classprotocol_1_1server_1_1CircularBuffer.html" title="protocol::server::Circular\lBuffer\&lt; protocol::application\l::Vector2D \&gt;" alt="" coords="947,583,1133,639"/>
+<area shape="rect" id="node18" href="$dd/d97/classprotocol_1_1server_1_1CircularBuffer.html" title="protocol::server::Circular\lBuffer\&lt; double \&gt;" alt="" coords="957,518,1123,559"/>
+</map>

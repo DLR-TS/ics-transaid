@@ -1,0 +1,6 @@
+<map id="protocol::application::DataManager::GetNodeCollection" name="protocol::application::DataManager::GetNodeCollection">
+<area shape="rect" id="node2" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#ae014ff59a31f699faf0fbf5d6d29a610" title="Called when a no longer conformant message from a node is received. " alt="" coords="280,5,533,46"/>
+<area shape="rect" id="node5" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#af2ac6f067188544f788237404e89d1f0" title="Called when the last repose message from a node is received. " alt="" coords="285,70,528,111"/>
+<area shape="rect" id="node3" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a7cd182d5bb9e360133c9304be473b5da" title="Contains the actions to be executed when the behavior starts. " alt="" coords="581,5,725,46"/>
+<area shape="rect" id="node4" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a7e42df36f94c718d93067533e18beed3" title="Contains the actions to be executed when the behavior stops. " alt="" coords="582,70,725,111"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="protocol::application::Controller::GetRoadSize" name="protocol::application::Controller::GetRoadSize">
+<area shape="rect" id="node2" href="$da/dc8/classprotocol_1_1ProgramConfiguration.html#aace5c69f154d9d13a051678c612717a9" title="protocol::ProgramConfiguration\l::GetRsuData" alt="" coords="227,5,429,46"/>
+<area shape="rect" id="node3" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#ad54c0f9d7d0fab25a7d143a81eedf2b0" title="protocol::application\l::Controller::GetId" alt="" coords="259,70,397,111"/>
+<area shape="rect" id="node4" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a444338899434c9a151acfcfd7b8e1a2f" title="protocol::application\l::Node::getId" alt="" coords="477,70,616,111"/>
+</map>

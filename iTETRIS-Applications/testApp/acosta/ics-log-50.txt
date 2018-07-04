@@ -1,0 +1,97 @@
+[2018-05-31T15:49:32.761] [-1,000] Log level is INFO
+[2018-05-31T15:49:32.761] [-1,000] WELCOME TO iTETRIS
+[2018-05-31T15:49:33.632] [-1,000] [INFO] SUMO launched.
+[2018-05-31T15:49:33.636] [-1,000] [INFO] AddNode() Added node. icsId=0, ns3Id=-1, sumoId=-1. Assing=1
+[2018-05-31T15:49:35.070] [-1,000] [INFO] [iCS - Facilities] - map loaded from ./sumo/acosta_buslanes.net.xml
+[2018-05-31T15:49:35.070] [-1,000] [INFO] [iCS - Facilities] - stations settings loaded from stations-config-file.xml
+[2018-05-31T15:49:35.070] [-1,000] [INFO] [iCS - Facilities] - LDM settings loaded from LDMrules-config-file.xml
+[2018-05-31T15:49:35.071] [-1,000] [INFO] [iCS - Facilities] - iCS Facilities configuration completed.
+[2018-05-31T15:49:35.071] [-1,000] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2018-05-31T15:49:35.071] [-1,000] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2018-05-31T15:49:35.071] [-1,000] [INFO] ReadFacilitiesConfigFile() fixedStationID: 5000 position: 582.66,1062.7 RAT: WaveRsu
+[2018-05-31T15:49:35.071] [-1,000] [INFO] AddNode() Added node. icsId=5000, ns3Id=0, sumoId=. Assing=0
+[2018-05-31T15:49:36.410] [-1,000] [INFO] .. Command acknowledged (219), [description: ]
+
+[2018-05-31T15:49:38.013] [-1,000] [INFO] .. Command acknowledged (8), [description: CreateNode()]
+
+[2018-05-31T15:49:38.013] [-1,000] [INFO] UpdateNodeId() Update node 5000. Added ns3Id=0
+[2018-05-31T15:49:38.013] [-1,000] [INFO] iCS --> Asking new subscriptions to node 5000 at TS -1000 
+[2018-05-31T15:49:38.014] [-1,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2018-05-31T15:49:38.014] [-1,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 58
+[2018-05-31T15:49:38.014] [-1,000] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to receive an Application message.
+[2018-05-31T15:49:38.014] [-1,000] [INFO] iCS --> SubAppMsgReceive: Communication mode: UNICAST
+[2018-05-31T15:49:38.014] [-1,000] [INFO] iCS --> SubAppMsgReceive: Receiving a UNICAST message from any source ID.
+[2018-05-31T15:49:38.014] [-1,000] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
+[2018-05-31T15:49:38.014] [-1,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2018-05-31T15:49:38.014] [-1,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 58
+[2018-05-31T15:49:38.014] [-1,000] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to receive an Application message.
+[2018-05-31T15:49:38.014] [-1,000] [INFO] iCS --> SubAppMsgReceive: Communication mode: GEOBROADCAST
+[2018-05-31T15:49:38.014] [-1,000] [INFO] iCS --> SubAppMsgReceive: Receiving a GEOBROADCAST message from any dissemination area.
+[2018-05-31T15:49:38.014] [-1,000] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
+[2018-05-31T15:49:38.014] [-1,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2018-05-31T15:49:38.014] [-1,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 66
+[2018-05-31T15:49:38.014] [-1,000] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to get mobility information
+[2018-05-31T15:49:38.014] [-1,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2018-05-31T15:49:38.015] [-1,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 68
+[2018-05-31T15:49:38.015] [-1,000] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to get traffic light information
+[2018-05-31T15:49:38.015] [-1,000] [INFO] .. Command acknowledged (162), [description: ]
+
+[2018-05-31T15:49:38.015] [-1,000] [INFO] .. Command acknowledged (163), [description: ]
+
+[2018-05-31T15:49:38.016] [-1,000] [INFO] .. Command acknowledged (162), [description: ]
+
+[2018-05-31T15:49:38.016] [-1,000] [INFO] .. Command acknowledged (162), [description: ]
+
+[2018-05-31T15:49:38.017] [-1,000] [INFO] .. Command acknowledged (162), [description: ]
+
+[2018-05-31T15:49:38.017] [-1,000] [INFO] SubsGetTrafficLightInfo::SelectTrafficLight() New traffic light found 219
+[2018-05-31T15:49:38.017] [-1,000] [INFO] .. Command acknowledged (162), [description: ]
+
+[2018-05-31T15:49:38.018] [-1,000] [INFO] .. Command acknowledged (162), [description: ]
+
+[2018-05-31T15:49:38.018] [-1,000] [INFO] .. Command acknowledged (162), [description: ]
+
+[2018-05-31T15:49:38.019] [-1,000] [INFO] .. Command acknowledged (162), [description: ]
+
+[2018-05-31T15:49:38.019] [-1,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2018-05-31T15:49:38.019] [-1,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
+[2018-05-31T15:49:38.019] [-1,000] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2018-05-31T15:49:38.019] [-1,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2018-05-31T15:49:38.019] [-1,000] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2018-05-31T15:49:38.020] [-1,000] [INFO] AskForUnsubscriptions() subscription 1 in node [iCD-ID] [5000] is alive.
+[2018-05-31T15:49:38.020] [-1,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2018-05-31T15:49:38.020] [-1,000] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2018-05-31T15:49:38.020] [-1,000] [INFO] AskForUnsubscriptions() subscription 2 in node [iCD-ID] [5000] is alive.
+[2018-05-31T15:49:38.020] [-1,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 3
+[2018-05-31T15:49:38.020] [-1,000] [INFO] .. Command acknowledged (8), [description: Subscription 3 kept]
+[2018-05-31T15:49:38.020] [-1,000] [INFO] AskForUnsubscriptions() subscription 3 in node [iCD-ID] [5000] is alive.
+[2018-05-31T15:49:38.020] [-1,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 4
+[2018-05-31T15:49:38.020] [-1,000] [INFO] .. Command acknowledged (8), [description: Subscription 4 kept]
+[2018-05-31T15:49:38.020] [-1,000] [INFO] AskForUnsubscriptions() subscription 4 in node [iCD-ID] [5000] is alive.
+[2018-05-31T15:49:38.020] [-1,000] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCD-ID] [5000] getting facilities data.
+[2018-05-31T15:49:38.020] [-1,000] [INFO] SendSubscribedData() Subscription SubsAppMessageReceive processing.
+[2018-05-31T15:49:38.020] [-1,000] [INFO] SubsAppMessageReceive() Node 5000 will Pull the Communication Simulator for received data.
+[2018-05-31T15:49:38.020] [-1,000] [INFO] InformApp() No information about SubsAppMessageReceive will be sent to app.
+[2018-05-31T15:49:38.020] [-1,000] [INFO] SendSubscribedData() Subscription SubsAppMessageReceive processing.
+[2018-05-31T15:49:38.020] [-1,000] [INFO] SubsAppMessageReceive() Node 5000 will Pull the Communication Simulator for received data.
+[2018-05-31T15:49:38.020] [-1,000] [INFO] InformApp() No information about SubsAppMessageReceive will be sent to app.
+[2018-05-31T15:49:38.020] [-1,000] [INFO] SendSubscribedData() Subscription SubsGetMobilityInfo processing.
+[2018-05-31T15:49:38.020] [-1,000] [INFO] [GetAllID] get position from SUMO
+[2018-05-31T15:49:38.020] [-1,000] [INFO] [CommandSendSubscriptionMobilityInfo] time step-1000nodeID: position x582.66:y:1062.7
+[2018-05-31T15:49:38.021] [-1,000] [INFO] .. Command acknowledged (65), [description: CMD_MOBILITY_INFORMATION: Added 0 stations]
+[2018-05-31T15:49:38.021] [-1,000] [INFO] SendSubscribedData() Subscription SubsGetTrafficLightInfo processing.
+[2018-05-31T15:49:38.021] [-1,000] [INFO] SendMessageStatus() The application does not send message status.
+[2018-05-31T15:49:38.021] [-1,000] [INFO] iCS --> executing application (node 5000)
+[2018-05-31T15:49:38.021] [-1,000] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2018-05-31T15:49:38.021] [-1,000] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2018-05-31T15:49:38.624] [0,000] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2018-05-31T15:49:38.624] [0,000] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2018-05-31T15:49:38.624] [0,000] Tics=0 MsgQueue=0
+[2018-05-31T15:49:40.100] [0,000] [INFO] Reached CommandSimulationStep... = 
+[2018-05-31T15:49:40.100] [0,000] [INFO] Message Sent...
+[2018-05-31T15:49:40.101] [0,000] [INFO] Message Received.
+[2018-05-31T15:49:40.101] [0,000] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2018-05-31T15:49:40.102] [0,000] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2018-05-31T15:49:40.102] [0,000] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.

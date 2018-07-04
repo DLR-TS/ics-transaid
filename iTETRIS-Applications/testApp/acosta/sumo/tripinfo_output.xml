@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Do 31 Mai 2018 18:57:59 CEST by Eclipse SUMO GUI Version 2395938
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="./sumo/acosta_buslanes.net.xml"/>
+        <route-files value="./sumo/acosta.rou.xml,./sumo/acosta_busses.rou.xml"/>
+        <additional-files value="./sumo/acosta_vtypes.add.xml,./sumo/acosta_detectors.add.xml,./sumo/acosta_bus_stops.add.xml,./sumo/acosta_tls.add.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="./sumo/tripinfo_output.xml"/>
+    </output>
+
+    <traci_server>
+        <remote-port value="5500"/>
+    </traci_server>
+
+    <gui_only>
+        <quit-on-end value="true"/>
+        <start value="true"/>
+    </gui_only>
+
+</configuration>
