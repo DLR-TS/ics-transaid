@@ -2,7 +2,7 @@
 
     <scenario>
         <begin value="0"/>
-        <end value="200"/>
+        <end value="25"/>
 	<resolution  value="50" />
         <penetration-rate value="100"/>                
         <facilities-config-file value="facilities-config-file.xml"/>
@@ -11,7 +11,7 @@
     </scenario>
 
     <trafficsim>
-	<traffic-executable value="sumo-gui -c"/>
+	<traffic-executable value="../../../sumo/bin/sumo-gui -c"/>
 	<traffic-file value="./sumo/test.sumocfg"/>
 	<traffic-host value="localhost"/>
         <traffic-port value="5500"/>
