@@ -42,6 +42,11 @@ iTETRIS-Applications/testApp/src/config.h
 iTETRIS-Applications/testApp/src/config.h.in
 iTETRIS-Applications/testApp/src/testApp
 iTETRIS-Applications/testApp/src/stamp-h1
+iTETRIS-Applications/testApp/testScenario/app-data.txt
+iTETRIS-Applications/testApp/testScenario/app-log.txt
+iTETRIS-Applications/testApp/testScenario/app-ns-log.txt
+iTETRIS-Applications/testApp/testScenario/ics-log-50.txt
+iTETRIS-Applications/testApp/testScenario/ns3-log-50.txt
 iCS/docs/man/
 iCS/docs/html/
 iCS/docs/latex/
