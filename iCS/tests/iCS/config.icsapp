@@ -8,4 +8,6 @@ cfg:config.cfg
 log:log.txt
 
 [run_dependent_text]
+errors:no process found
 output:iCS.exe{REPLACE iCS}
+log:StepT=[0-9]
