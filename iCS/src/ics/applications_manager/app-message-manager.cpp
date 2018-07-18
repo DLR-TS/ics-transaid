@@ -322,7 +322,7 @@ namespace ics
 				subscriptions->push_back(subscription);
 #ifdef LOG_ON
                 log.clear();
-                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                log << " New subscription ID is " << subscription->m_id << ".";
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
                 noMoreSubs = false;
@@ -345,7 +345,7 @@ namespace ics
 				subscriptions->push_back(subscription);
 #ifdef LOG_ON
                 log.clear();
-                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                log << " New subscription ID is " << subscription->m_id << ".";
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
                 noMoreSubs = false;
@@ -434,7 +434,7 @@ namespace ics
 				subscriptions->push_back(subscription);
 #ifdef LOG_ON
 				log.clear();
-                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                log << " New subscription ID is " << subscription->m_id << ".";
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
                 noMoreSubs = false;
@@ -460,7 +460,7 @@ namespace ics
 				subscriptions->push_back(subscription);
 #ifdef LOG_ON
                 log.clear();
-                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                log << " New subscription ID is " << subscription->m_id << ".";
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
 				noMoreSubs = false;
@@ -486,7 +486,7 @@ namespace ics
 				subscriptions->push_back(subscription);
 #ifdef LOG_ON
                 log.clear();
-                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                log << " New subscription ID is " << subscription->m_id << ".";
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
 				noMoreSubs = false;
@@ -512,7 +512,7 @@ namespace ics
 				subscriptions->push_back(subscription);
 #ifdef LOG_ON
                 log.clear();
-                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                log << " New subscription ID is " << subscription->m_id << ".";
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
                 noMoreSubs = false;
@@ -537,7 +537,7 @@ namespace ics
 				subscriptions->push_back(subscription);
 #ifdef LOG_ON
                 log.clear();
-                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                log << " New subscription ID is " << subscription->m_id << ".";
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
 				noMoreSubs = false;
@@ -562,7 +562,7 @@ namespace ics
 				subscriptions->push_back(subscription);
 #ifdef LOG_ON
                 log.clear();
-                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                log << " New subscription ID is " << subscription->m_id << ".";
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
                 noMoreSubs = false;
@@ -587,7 +587,7 @@ namespace ics
 				subscriptions->push_back(subscription);
 #ifdef LOG_ON
                 log.clear();
-                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                log << " New subscription ID is " << subscription->m_id << ".";
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
                 noMoreSubs = false;
@@ -611,7 +611,7 @@ namespace ics
 				subscriptions->push_back(subscription);
 #ifdef LOG_ON
                 log.clear();
-                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                log << " New subscription ID is " << subscription->m_id << ".";
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
                 noMoreSubs = false;
@@ -635,7 +635,7 @@ namespace ics
 				subscriptions->push_back(subscription);
 #ifdef LOG_ON
                 log.clear();
-                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                log << " New subscription ID is " << subscription->m_id << ".";
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
                 noMoreSubs = false;
@@ -671,7 +671,7 @@ namespace ics
 
 #ifdef LOG_ON
                 log.clear();
-                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                log << " New subscription ID is " << subscription->m_id << ".";
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
                 noMoreSubs = false;
@@ -707,7 +707,7 @@ namespace ics
 				subscriptions->push_back(subscription);
 #ifdef LOG_ON
                 log.clear();
-                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                log << " New subscription ID is " << subscription->m_id << ".";
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
                 noMoreSubs = false;

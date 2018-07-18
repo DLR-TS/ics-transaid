@@ -1,7 +1,7 @@
 [28,250] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 4
 [28,250] [INFO] [facilities] messages to be deleted this time: 000000500000094,
 [28,250] [INFO] [LDMLogic::cleanup] IFMT size 3, removed 1. IFPT size 1, removed 0
-[28,250] Tics=28250 StepT=166 ns3T=14 %ns3=8.43373 DispMsgs=14 MsgQueue=4
+[28,250] Tics=28250 StepT=173 ns3T=15 %ns3=8.67052 DispMsgs=14 MsgQueue=4
 [28,250] [INFO] Reached CommandSimulationStep... = 
 [28,250] [INFO] Message Sent...
 [28,250] [INFO] Message Received.
@@ -3688,7 +3688,7 @@ Node 84 received 1 msgs. [99->0, ]
 
 [28,250] [INFO] ScheduleV2xGeobroadcastMessages() Geobroadcast message scheduled. MsgId=100
 [28,250] [INFO] Sub-app-message-send() - The message was correctly sent!!!
-[28,250] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to send an Application message.CommandGetNewSubscriptions() Station 5000: New subscription ID is 428
+[28,250] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to send an Application message. New subscription ID is 428.
 [28,250] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
 [28,250] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [28,250] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
@@ -4221,7 +4221,7 @@ Node 84 received 1 msgs. [99->0, ]
 [28,500] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 4
 [28,500] [INFO] [facilities] messages to be deleted this time: 000000500000095,
 [28,500] [INFO] [LDMLogic::cleanup] IFMT size 3, removed 1. IFPT size 1, removed 0
-[28,500] Tics=28500 StepT=74 ns3T=14 %ns3=18.9189 DispMsgs=15 MsgQueue=4
+[28,500] Tics=28500 StepT=77 ns3T=15 %ns3=19.4805 DispMsgs=15 MsgQueue=4
 [28,500] [INFO] Reached CommandSimulationStep... = 
 [28,500] [INFO] Message Sent...
 [28,500] [INFO] Message Received.
@@ -9934,14 +9934,14 @@ Node 84 received 1 msgs. [100->0, ]
 [28,500] [INFO] iCS --> SubAppMsgReceive: Communication mode: UNICAST
 [28,500] [INFO] iCS --> SubAppMsgReceive: Receiving a UNICAST message from any source ID.
 [28,500] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[28,500] [INFO] CommandGetNewSubscriptions() Station 164 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 164: New subscription ID is 429
+[28,500] [INFO] CommandGetNewSubscriptions() Station 164 subscribed to receive an Application message. New subscription ID is 429.
 [28,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 164]
 [28,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 58
 [28,500] [INFO] CommandGetNewSubscriptions() Station 164 subscribed to receive an Application message.
 [28,500] [INFO] iCS --> SubAppMsgReceive: Communication mode: GEOBROADCAST
 [28,500] [INFO] iCS --> SubAppMsgReceive: Receiving a GEOBROADCAST message from any dissemination area.
 [28,500] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[28,500] [INFO] CommandGetNewSubscriptions() Station 164 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 164: New subscription ID is 430
+[28,500] [INFO] CommandGetNewSubscriptions() Station 164 subscribed to receive an Application message. New subscription ID is 430.
 [28,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 164]
 [28,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [28,500] [INFO] CommandGetNewSubscriptions() No more requests from node 164
@@ -9969,14 +9969,14 @@ Node 84 received 1 msgs. [100->0, ]
 [28,500] [INFO] iCS --> SubAppMsgReceive: Communication mode: UNICAST
 [28,500] [INFO] iCS --> SubAppMsgReceive: Receiving a UNICAST message from any source ID.
 [28,500] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[28,500] [INFO] CommandGetNewSubscriptions() Station 165 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 165: New subscription ID is 431
+[28,500] [INFO] CommandGetNewSubscriptions() Station 165 subscribed to receive an Application message. New subscription ID is 431.
 [28,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 165]
 [28,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 58
 [28,500] [INFO] CommandGetNewSubscriptions() Station 165 subscribed to receive an Application message.
 [28,500] [INFO] iCS --> SubAppMsgReceive: Communication mode: GEOBROADCAST
 [28,500] [INFO] iCS --> SubAppMsgReceive: Receiving a GEOBROADCAST message from any dissemination area.
 [28,500] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[28,500] [INFO] CommandGetNewSubscriptions() Station 165 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 165: New subscription ID is 432
+[28,500] [INFO] CommandGetNewSubscriptions() Station 165 subscribed to receive an Application message. New subscription ID is 432.
 [28,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 165]
 [28,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [28,500] [INFO] CommandGetNewSubscriptions() No more requests from node 165
@@ -10010,7 +10010,7 @@ Node 84 received 1 msgs. [100->0, ]
 
 [28,500] [INFO] ScheduleV2xGeobroadcastMessages() Geobroadcast message scheduled. MsgId=101
 [28,500] [INFO] Sub-app-message-send() - The message was correctly sent!!!
-[28,500] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to send an Application message.CommandGetNewSubscriptions() Station 5000: New subscription ID is 433
+[28,500] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to send an Application message. New subscription ID is 433.
 [28,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
 [28,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [28,500] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
@@ -10866,7 +10866,7 @@ Node 84 received 1 msgs. [100->0, ]
 
 [28,750] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 4
 [28,750] [INFO] [LDMLogic::cleanup] IFMT size 4, removed 0. IFPT size 1, removed 0
-[28,750] Tics=28750 StepT=210 ns3T=14 %ns3=6.66667 DispMsgs=15 MsgQueue=5
+[28,750] Tics=28750 StepT=206 ns3T=15 %ns3=7.28155 DispMsgs=15 MsgQueue=5
 [28,750] [INFO] Reached CommandSimulationStep... = 
 [28,750] [INFO] Message Sent...
 [28,750] [INFO] Message Received.
@@ -14601,7 +14601,7 @@ Node 84 received 1 msgs. [101->0, ]
 
 [28,750] [INFO] ScheduleV2xGeobroadcastMessages() Geobroadcast message scheduled. MsgId=102
 [28,750] [INFO] Sub-app-message-send() - The message was correctly sent!!!
-[28,750] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to send an Application message.CommandGetNewSubscriptions() Station 5000: New subscription ID is 434
+[28,750] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to send an Application message. New subscription ID is 434.
 [28,750] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
 [28,750] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [28,750] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
@@ -15140,7 +15140,7 @@ Node 84 received 1 msgs. [101->0, ]
 [29,000] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 5
 [29,000] [INFO] [facilities] messages to be deleted this time: 000000500000096,
 [29,000] [INFO] [LDMLogic::cleanup] IFMT size 4, removed 1. IFPT size 1, removed 0
-[29,000] Tics=29000 StepT=75 ns3T=14 %ns3=18.6667 DispMsgs=15 MsgQueue=5
+[29,000] Tics=29000 StepT=76 ns3T=14 %ns3=18.4211 DispMsgs=15 MsgQueue=5
 [29,000] [INFO] Reached CommandSimulationStep... = 
 [29,000] [INFO] Message Sent...
 [29,000] [INFO] Message Received.
@@ -20925,14 +20925,14 @@ Node 84 received 1 msgs. [102->0, ]
 [29,000] [INFO] iCS --> SubAppMsgReceive: Communication mode: UNICAST
 [29,000] [INFO] iCS --> SubAppMsgReceive: Receiving a UNICAST message from any source ID.
 [29,000] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[29,000] [INFO] CommandGetNewSubscriptions() Station 166 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 166: New subscription ID is 435
+[29,000] [INFO] CommandGetNewSubscriptions() Station 166 subscribed to receive an Application message. New subscription ID is 435.
 [29,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 166]
 [29,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 58
 [29,000] [INFO] CommandGetNewSubscriptions() Station 166 subscribed to receive an Application message.
 [29,000] [INFO] iCS --> SubAppMsgReceive: Communication mode: GEOBROADCAST
 [29,000] [INFO] iCS --> SubAppMsgReceive: Receiving a GEOBROADCAST message from any dissemination area.
 [29,000] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[29,000] [INFO] CommandGetNewSubscriptions() Station 166 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 166: New subscription ID is 436
+[29,000] [INFO] CommandGetNewSubscriptions() Station 166 subscribed to receive an Application message. New subscription ID is 436.
 [29,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 166]
 [29,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [29,000] [INFO] CommandGetNewSubscriptions() No more requests from node 166
@@ -20960,14 +20960,14 @@ Node 84 received 1 msgs. [102->0, ]
 [29,000] [INFO] iCS --> SubAppMsgReceive: Communication mode: UNICAST
 [29,000] [INFO] iCS --> SubAppMsgReceive: Receiving a UNICAST message from any source ID.
 [29,000] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[29,000] [INFO] CommandGetNewSubscriptions() Station 167 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 167: New subscription ID is 437
+[29,000] [INFO] CommandGetNewSubscriptions() Station 167 subscribed to receive an Application message. New subscription ID is 437.
 [29,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 167]
 [29,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 58
 [29,000] [INFO] CommandGetNewSubscriptions() Station 167 subscribed to receive an Application message.
 [29,000] [INFO] iCS --> SubAppMsgReceive: Communication mode: GEOBROADCAST
 [29,000] [INFO] iCS --> SubAppMsgReceive: Receiving a GEOBROADCAST message from any dissemination area.
 [29,000] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[29,000] [INFO] CommandGetNewSubscriptions() Station 167 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 167: New subscription ID is 438
+[29,000] [INFO] CommandGetNewSubscriptions() Station 167 subscribed to receive an Application message. New subscription ID is 438.
 [29,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 167]
 [29,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [29,000] [INFO] CommandGetNewSubscriptions() No more requests from node 167
@@ -21001,7 +21001,7 @@ Node 84 received 1 msgs. [102->0, ]
 
 [29,000] [INFO] ScheduleV2xGeobroadcastMessages() Geobroadcast message scheduled. MsgId=103
 [29,000] [INFO] Sub-app-message-send() - The message was correctly sent!!!
-[29,000] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to send an Application message.CommandGetNewSubscriptions() Station 5000: New subscription ID is 439
+[29,000] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to send an Application message. New subscription ID is 439.
 [29,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
 [29,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [29,000] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
@@ -21546,7 +21546,7 @@ Node 84 received 1 msgs. [102->0, ]
 [29,250] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 5
 [29,250] [INFO] [facilities] messages to be deleted this time: 000000500000097,
 [29,250] [INFO] [LDMLogic::cleanup] IFMT size 4, removed 1. IFPT size 1, removed 0
-[29,250] Tics=29250 StepT=187 ns3T=15 %ns3=8.02139 DispMsgs=15 MsgQueue=5
+[29,250] Tics=29250 StepT=194 ns3T=15 %ns3=7.73196 DispMsgs=15 MsgQueue=5
 [29,250] [INFO] Reached CommandSimulationStep... = 
 [29,250] [INFO] Message Sent...
 [29,250] [INFO] Message Received.
@@ -25852,7 +25852,7 @@ Node 84 received 1 msgs. [103->0, ]
 [29,500] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 5
 [29,500] [INFO] [facilities] messages to be deleted this time: 000000500000098,
 [29,500] [INFO] [LDMLogic::cleanup] IFMT size 4, removed 1. IFPT size 0, removed 0
-[29,500] Tics=29500 StepT=75 ns3T=14 %ns3=18.6667 DispMsgs=15 MsgQueue=4
+[29,500] Tics=29500 StepT=84 ns3T=19 %ns3=22.619 DispMsgs=15 MsgQueue=4
 [29,500] [INFO] Reached CommandSimulationStep... = 
 [29,500] [INFO] Message Sent...
 [29,500] [INFO] Message Received.
@@ -28515,7 +28515,7 @@ Node 84 received 1 msgs. [103->0, ]
 
 [29,500] [INFO] ScheduleV2xGeobroadcastMessages() Geobroadcast message scheduled. MsgId=104
 [29,500] [INFO] Sub-app-message-send() - The message was correctly sent!!!
-[29,500] [INFO] CommandGetNewSubscriptions() Station 26 subscribed to send an Application message.CommandGetNewSubscriptions() Station 26: New subscription ID is 440
+[29,500] [INFO] CommandGetNewSubscriptions() Station 26 subscribed to send an Application message. New subscription ID is 440.
 [29,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 26]
 [29,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [29,500] [INFO] CommandGetNewSubscriptions() No more requests from node 26
@@ -31651,14 +31651,14 @@ Node 84 received 1 msgs. [103->0, ]
 [29,500] [INFO] iCS --> SubAppMsgReceive: Communication mode: UNICAST
 [29,500] [INFO] iCS --> SubAppMsgReceive: Receiving a UNICAST message from any source ID.
 [29,500] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[29,500] [INFO] CommandGetNewSubscriptions() Station 168 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 168: New subscription ID is 441
+[29,500] [INFO] CommandGetNewSubscriptions() Station 168 subscribed to receive an Application message. New subscription ID is 441.
 [29,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 168]
 [29,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 58
 [29,500] [INFO] CommandGetNewSubscriptions() Station 168 subscribed to receive an Application message.
 [29,500] [INFO] iCS --> SubAppMsgReceive: Communication mode: GEOBROADCAST
 [29,500] [INFO] iCS --> SubAppMsgReceive: Receiving a GEOBROADCAST message from any dissemination area.
 [29,500] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[29,500] [INFO] CommandGetNewSubscriptions() Station 168 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 168: New subscription ID is 442
+[29,500] [INFO] CommandGetNewSubscriptions() Station 168 subscribed to receive an Application message. New subscription ID is 442.
 [29,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 168]
 [29,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [29,500] [INFO] CommandGetNewSubscriptions() No more requests from node 168
@@ -31686,14 +31686,14 @@ Node 84 received 1 msgs. [103->0, ]
 [29,500] [INFO] iCS --> SubAppMsgReceive: Communication mode: UNICAST
 [29,500] [INFO] iCS --> SubAppMsgReceive: Receiving a UNICAST message from any source ID.
 [29,500] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[29,500] [INFO] CommandGetNewSubscriptions() Station 169 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 169: New subscription ID is 443
+[29,500] [INFO] CommandGetNewSubscriptions() Station 169 subscribed to receive an Application message. New subscription ID is 443.
 [29,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 169]
 [29,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 58
 [29,500] [INFO] CommandGetNewSubscriptions() Station 169 subscribed to receive an Application message.
 [29,500] [INFO] iCS --> SubAppMsgReceive: Communication mode: GEOBROADCAST
 [29,500] [INFO] iCS --> SubAppMsgReceive: Receiving a GEOBROADCAST message from any dissemination area.
 [29,500] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[29,500] [INFO] CommandGetNewSubscriptions() Station 169 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 169: New subscription ID is 444
+[29,500] [INFO] CommandGetNewSubscriptions() Station 169 subscribed to receive an Application message. New subscription ID is 444.
 [29,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 169]
 [29,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [29,500] [INFO] CommandGetNewSubscriptions() No more requests from node 169
@@ -31721,14 +31721,14 @@ Node 84 received 1 msgs. [103->0, ]
 [29,500] [INFO] iCS --> SubAppMsgReceive: Communication mode: UNICAST
 [29,500] [INFO] iCS --> SubAppMsgReceive: Receiving a UNICAST message from any source ID.
 [29,500] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[29,500] [INFO] CommandGetNewSubscriptions() Station 170 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 170: New subscription ID is 445
+[29,500] [INFO] CommandGetNewSubscriptions() Station 170 subscribed to receive an Application message. New subscription ID is 445.
 [29,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 170]
 [29,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 58
 [29,500] [INFO] CommandGetNewSubscriptions() Station 170 subscribed to receive an Application message.
 [29,500] [INFO] iCS --> SubAppMsgReceive: Communication mode: GEOBROADCAST
 [29,500] [INFO] iCS --> SubAppMsgReceive: Receiving a GEOBROADCAST message from any dissemination area.
 [29,500] [INFO] iCS --> SubAppMsgReceive: [DEB] - The message was correctly scheduled for reception!!!
-[29,500] [INFO] CommandGetNewSubscriptions() Station 170 subscribed to receive an Application message.CommandGetNewSubscriptions() Station 170: New subscription ID is 446
+[29,500] [INFO] CommandGetNewSubscriptions() Station 170 subscribed to receive an Application message. New subscription ID is 446.
 [29,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 170]
 [29,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [29,500] [INFO] CommandGetNewSubscriptions() No more requests from node 170
@@ -31762,7 +31762,7 @@ Node 84 received 1 msgs. [103->0, ]
 
 [29,500] [INFO] ScheduleV2xGeobroadcastMessages() Geobroadcast message scheduled. MsgId=105
 [29,500] [INFO] Sub-app-message-send() - The message was correctly sent!!!
-[29,500] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to send an Application message.CommandGetNewSubscriptions() Station 5000: New subscription ID is 447
+[29,500] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to send an Application message. New subscription ID is 447.
 [29,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
 [29,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [29,500] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
@@ -32633,7 +32633,7 @@ Node 84 received 1 msgs. [103->0, ]
 [29,750] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 4
 [29,750] [INFO] [facilities] messages to be deleted this time: 000000500000099,
 [29,750] [INFO] [LDMLogic::cleanup] IFMT size 3, removed 1. IFPT size 2, removed 0
-[29,750] Tics=29750 StepT=209 ns3T=12 %ns3=5.74163 DispMsgs=0 MsgQueue=5
+[29,750] Tics=29750 StepT=219 ns3T=12 %ns3=5.47945 DispMsgs=0 MsgQueue=5
 [29,750] [INFO] Reached CommandSimulationStep... = 
 [29,750] [INFO] Message Sent...
 [29,750] [INFO] Message Received.
@@ -32925,7 +32925,7 @@ Node 84 received 2 msgs. [105->0, 104->25, ]
 
 [29,750] [INFO] ScheduleV2xGeobroadcastMessages() Geobroadcast message scheduled. MsgId=106
 [29,750] [INFO] Sub-app-message-send() - The message was correctly sent!!!
-[29,750] [INFO] CommandGetNewSubscriptions() Station 6 subscribed to send an Application message.CommandGetNewSubscriptions() Station 6: New subscription ID is 448
+[29,750] [INFO] CommandGetNewSubscriptions() Station 6 subscribed to send an Application message. New subscription ID is 448.
 [29,750] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 6]
 [29,750] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [29,750] [INFO] CommandGetNewSubscriptions() No more requests from node 6
@@ -36576,7 +36576,7 @@ Node 84 received 2 msgs. [105->0, 104->25, ]
 
 [29,750] [INFO] ScheduleV2xGeobroadcastMessages() Geobroadcast message scheduled. MsgId=107
 [29,750] [INFO] Sub-app-message-send() - The message was correctly sent!!!
-[29,750] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to send an Application message.CommandGetNewSubscriptions() Station 5000: New subscription ID is 449
+[29,750] [INFO] CommandGetNewSubscriptions() Station 5000 subscribed to send an Application message. New subscription ID is 449.
 [29,750] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
 [29,750] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 11
 [29,750] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
