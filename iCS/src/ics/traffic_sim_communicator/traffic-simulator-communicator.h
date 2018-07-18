@@ -79,6 +79,12 @@ public:
     virtual int CommandClose() = 0;
 
     /**
+    * @brief Query the simulation steplength of the simulator
+    * @return The simulation step length in millisecs
+    */
+    virtual int getSimstepLength() = 0;
+
+    /**
     * @brief S6 Sends a message to SUMO in order to establish the value of the maximum speed for a certain vehicle.
     * @param[in] node The node
     * @param[in] maxSeep The value of the maximum speed to assign to the node

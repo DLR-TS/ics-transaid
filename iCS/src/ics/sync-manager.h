@@ -217,6 +217,11 @@ namespace ics
 			int ConnectSumo();
 
 			/**
+             * @brief Sets the sync_manager's traffic simulation time step SUMO's simstep
+             */
+			void setTrafficSimstep();
+
+			/**
 			 * @brief Closes the connection with SUMO
 			 * @return 0: If an error occurs
 			 * @return 1: If the connection with SUMO closes successfully
@@ -490,6 +495,9 @@ namespace ics
 		private:
 
 			int m_messageId;
+
+			/// @brief The length of one traffic simulation simulation step in ms.
+			int m_trafficSimstep;
 
 			/// @brief The timestep in which the simulation will end.
 			int m_lastTimeStep;

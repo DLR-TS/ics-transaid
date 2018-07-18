@@ -635,6 +635,8 @@
 // ids of arrived vehicles (get: simulation)
 #define VAR_ARRIVED_VEHICLES_IDS 0x7a
 
+// delta t (get: simulation)
+#define VAR_DELTA_T 0x7b
 
 
 

@@ -114,6 +114,14 @@ public:
    */
   int CommandClose();
 
+
+  /**
+  * @brief Query the simulation steplength of the simulator
+  * @return The simulation step length in millisecs
+  */
+  int getSimstepLength();
+
+
   /**
    * @brief Sends a message to SUMO in order to establish the value of the maximum speed for a certain vehicle.
    * @param[in,out] &node The node to establish its maximum speed value.

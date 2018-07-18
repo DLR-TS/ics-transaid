@@ -58,7 +58,8 @@ namespace ics
 // member method definitions
 // ===========================================================================
 TraCIClient::TraCIClient() :
-    m_socket(0)
+    m_socket(0),
+    m_port(-1000)
 {
 }
 
@@ -125,7 +126,7 @@ bool TraCIClient::Connect()
         cout << "Error while receiving command: " << e.what();
         return false;
       }
-    } catch (SocketException e)
+    } catch (SocketException& e)
     {
       cout << "iCS --> No connection to SUMO; waiting..." << e.what() << endl;
       Sleep(3000);
@@ -163,7 +164,7 @@ int TraCIClient::CommandSimulationStep(int time, std::vector<std::string> &depar
   try
   {
     m_socket->sendExact(outMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> #Error while sending command to SUMO: " << e.what() << endl;
     return EXIT_FAILURE;
@@ -173,7 +174,7 @@ int TraCIClient::CommandSimulationStep(int time, std::vector<std::string> &depar
   try
   {
     m_socket->receiveExact(inMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> #Error while receiving command from SUMO: " << e.what() << endl;
     return EXIT_FAILURE;
@@ -226,7 +227,7 @@ bool TraCIClient::processSubscriptions(tcpip::Storage &inMsg, std::vector<std::s
         }
       }
     }
-  } catch (std::invalid_argument e)
+  } catch (invalid_argument& e)
   {
     cout << "#Error while reading message:" << e.what() << std::endl;
     return false;
@@ -255,7 +256,7 @@ bool TraCIClient::ReportResultState(tcpip::Storage& inMsg, int command)
     }
     resultType = inMsg.readUnsignedByte();
     msg = inMsg.readString();
-  } catch (std::invalid_argument e)
+  } catch (invalid_argument& e)
   {
     cout << "SUMO --> iCS #Error: an exception was thrown while reading result state message" << endl;
     return false;
@@ -315,7 +316,7 @@ int TraCIClient::CommandClose()
   try
   {
     m_socket->sendExact(outMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> Error while sending command: " << e.what() << endl;
     return EXIT_FAILURE;
@@ -325,7 +326,7 @@ int TraCIClient::CommandClose()
   try
   {
     m_socket->receiveExact(inMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> #Error while receiving command: " << e.what() << endl;
     return EXIT_FAILURE;
@@ -338,6 +339,15 @@ int TraCIClient::CommandClose()
   }
 
   return EXIT_SUCCESS;
+}
+
+int
+TraCIClient::getSimstepLength() {
+    int commandID = CMD_GET_SIM_VARIABLE;
+    tcpip::Storage inMsg;
+    beginValueRetrieval("", VAR_DELTA_T, inMsg, commandID);
+    const int simstepLength = inMsg.readInt();
+    return simstepLength;
 }
 
 int TraCIClient::CommandSetMaximumSpeed(const ITetrisNode &node, float maxSpeed)
@@ -356,13 +366,13 @@ int TraCIClient::CommandSetMaximumSpeed(const ITetrisNode &node, float maxSpeed)
   tmpMsg.writeDouble((double) maxSpeed); // value
 
   outMsg.writeUnsignedByte(0); // command length -> extended
-  outMsg.writeInt(1 + 4 + tmpMsg.size());
+  outMsg.writeInt(1 + 4 + (int) tmpMsg.size());
   outMsg.writeStorage(tmpMsg);
 
   try
   {
     m_socket->sendExact(outMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> Error while sending command: " << e.what() << endl;
     return EXIT_FAILURE;
@@ -378,7 +388,7 @@ int TraCIClient::CommandSetMaximumSpeed(const ITetrisNode &node, float maxSpeed)
   try
   {
     m_socket->receiveExact(inMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> #Error while receiving command: " << e.what() << endl;
     return EXIT_FAILURE;
@@ -482,7 +492,7 @@ bool TraCIClient::ReRoute(const ITetrisNode &node, vector<string> route)
   try
   {
     m_socket->sendExact(outMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> Error while sending command: " << e.what() << endl;
     return false;
@@ -495,7 +505,7 @@ bool TraCIClient::ReRoute(const ITetrisNode &node, vector<string> route)
   try
   {
     m_socket->receiveExact(inMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> #Error while receiving command: " << e.what() << endl;
     return false;
@@ -520,7 +530,7 @@ bool TraCIClient::ReRoute(const ITetrisNode &node)
   try
   {
     m_socket->sendExact(outMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> Error while sending command: " << e.what() << endl;
     return false;
@@ -533,7 +543,7 @@ bool TraCIClient::ReRoute(const ITetrisNode &node)
   try
   {
     m_socket->receiveExact(inMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> #Error while receiving command: " << e.what() << endl;
     return false;
@@ -562,7 +572,7 @@ bool TraCIClient::ChangeTrafficLightStatus(string trafficLightId, string lightSt
   try
   {
     m_socket->sendExact(outMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> Error while sending command: " << e.what() << endl;
     return false;
@@ -575,7 +585,7 @@ bool TraCIClient::ChangeTrafficLightStatus(string trafficLightId, string lightSt
   try
   {
     m_socket->receiveExact(inMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> #Error while receiving command: " << e.what() << endl;
     return false;
@@ -605,7 +615,7 @@ bool TraCIClient::ChangeEdgeWeight(const ITetrisNode &node, string edgeId, float
   try
   {
     m_socket->sendExact(outMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> Error while sending command: " << e.what() << endl;
     return false;
@@ -618,7 +628,7 @@ bool TraCIClient::ChangeEdgeWeight(const ITetrisNode &node, string edgeId, float
   try
   {
     m_socket->receiveExact(inMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> #Error while receiving command: " << e.what() << endl;
     return false;
@@ -649,7 +659,7 @@ bool TraCIClient::SetEdgeWeight(string edgeId, float weight)
   try
   {
     m_socket->sendExact(outMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> Error while sending command: " << e.what() << endl;
     return false;
@@ -662,7 +672,7 @@ bool TraCIClient::SetEdgeWeight(string edgeId, float weight)
   try
   {
     m_socket->receiveExact(inMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
     cout << "iCS --> #Error while receiving command in TraCIClient::SetEdgeWeight(): " << e.what() << endl;
     return false;
@@ -709,7 +719,7 @@ void TraCIClient::beginValueRetrieval(const std::string &objID, int varID, tcpip
   try
   {
     m_socket->sendExact(outMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
   	cerr << "iCS --> #Error while sending command: " << e.what() << endl;
     throw SocketException("Socket is closed");
@@ -719,7 +729,7 @@ void TraCIClient::beginValueRetrieval(const std::string &objID, int varID, tcpip
   try
   {
     m_socket->receiveExact(inMsg);
-  } catch (SocketException e)
+  } catch (SocketException& e)
   {
   	cerr << "iCS --> #Error while receiving command: " << e.what() << endl;
   }
@@ -758,7 +768,7 @@ TraCIClient::controlTraCI(tcpip::Storage &inMsg, tcpip::Storage &outMsg)
     // send request message
     try {
         m_socket->sendExact(outMsg);// no interpretation, just forward
-    } catch (SocketException e) {
+    } catch (SocketException& e) {
         cout << "iCS --> #Error while sending command: " << e.what() << endl;
         throw SocketException("Socket is closed");
     }
@@ -766,7 +776,7 @@ TraCIClient::controlTraCI(tcpip::Storage &inMsg, tcpip::Storage &outMsg)
     // receive answer message
     try {
         m_socket->receiveExact(inMsg);
-    } catch (SocketException e) {
+    } catch (SocketException& e) {
         cout << "iCS --> #Error while receiving command: " << e.what() << endl;
     }
 }
@@ -874,7 +884,7 @@ int TraCIClient::TraciCommand(tcpip::Storage & command,tcpip::Storage & result)
 	try
 	{
 		m_socket->sendExact(command);
-	} catch (SocketException e)
+	} catch (SocketException& e)
 	{
 		cerr << "iCS --> #Error while sending command: " << e.what() << endl;
 		throw SocketException("Error while sending command");
@@ -884,7 +894,7 @@ int TraCIClient::TraciCommand(tcpip::Storage & command,tcpip::Storage & result)
 	try
 	{
 		m_socket->receiveExact(result);
-	} catch (SocketException e)
+	} catch (SocketException& e)
 	{
 		cerr << "iCS --> #Error while receiving command: " << e.what() << endl;
 		throw SocketException("Error while receiving command");

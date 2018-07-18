@@ -115,7 +115,6 @@
 #ifndef _WIN32
 #include "config.h"
 #endif
-#define SUMO_TIMESTEP 100
 using namespace std;
 
 namespace ics
@@ -181,7 +180,9 @@ V2xMessageManager* SyncManager::m_v2xMessageTracker;
 // ===========================================================================
 SyncManager::SyncManager(int ns3Port, int sumoPort, string sumoHost, string ns3Host, int beginTime, int endTime,
 		int resolution) :
-											m_firstTimeStep(beginTime * 1000), m_lastTimeStep(endTime * 1000)
+		m_firstTimeStep(beginTime * 1000),
+		m_lastTimeStep(endTime * 1000),
+		m_trafficSimstep(-1)
 {
 	m_ns3Client.m_port = ns3Port;
 	m_ns3Client.m_host = ns3Host;
@@ -316,7 +317,7 @@ int SyncManager::Run(bool interactive)
 		}
 
 #ifdef SUMO_ON
-		if (m_simStep % SUMO_TIMESTEP == 0)
+		if (m_simStep % m_trafficSimstep == 0)
 		{
 			if (RunOneSumoTimeStep() == EXIT_FAILURE)
 			{
@@ -506,7 +507,7 @@ int SyncManager::RunOneSumoTimeStep()
 		{
 #ifdef LOG_ON
 			stringstream log;
-			log << "RunOneSumoTimeStep() Left the simulation: " << node->m_icsId;
+			log << "RunOneSumoTimeStep() Node " << node->m_icsId << "('" << node->m_tsId << "') left the simulation.";
 			IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
 			((Station *) m_facilitiesManager->getStation(node->m_icsId))->isActive = false;
@@ -538,7 +539,7 @@ int SyncManager::RunOneSumoTimeStep()
 			{
 #ifdef LOG_ON
 				stringstream log;
-				log << "RunOneSumoTimeStep() vehicle " << vehicle->m_icsId << "  entered the simulation.";
+				log << "RunOneSumoTimeStep() vehicle " << vehicle->m_tsId << "  entered the simulation. Assigned iCS-ID " << vehicle->m_icsId;
 				IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
 			}
@@ -821,9 +822,15 @@ int SyncManager::CloseNs3()
 int SyncManager::ConnectSumo()
 {
 	if (m_trafficSimCommunicator->Connect())
+	    setTrafficSimstep();
 		return EXIT_SUCCESS;
 
 	return EXIT_FAILURE;
+}
+
+void SyncManager::setTrafficSimstep() {
+    // TODO: check whether traffic simstep is a multiple of the iCS simstep, fail otherwise
+    m_trafficSimstep = m_trafficSimCommunicator->getSimstepLength();
 }
 
 int SyncManager::CloseSumo()
