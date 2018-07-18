@@ -443,13 +443,10 @@ ICS::ReadAppConfigFile(string filePath)
 			}
 		}
 
-		/* Add breakpoint here and start testApp
-		 *
 		// Execute the application in a separate thread
 		pthread_t myThread;
 		m_applicationsThreads.push_back(myThread);
 		pthread_create(&(m_applicationsThreads[i]), NULL, launchApplication,(void *) executable);
-		*/
 		Sleep(1000);
 	}
 
