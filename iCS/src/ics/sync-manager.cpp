@@ -1404,6 +1404,9 @@ int SyncManager::ProcessApplicationResults()
 #ifdef LOG_ON
 				stringstream log;
 				log << "iCS --> [ProcessApplicationResults] on node " << node->m_icsId << " ";
+                if (node->m_tsId != "") {
+                    log << " (SUMO-id " << node->m_tsId << ")";
+                }
 				IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
 				if (result->ApplyResult(GetAddress(), appHandler) == EXIT_FAILURE)
@@ -1414,7 +1417,11 @@ int SyncManager::ProcessApplicationResults()
 			{
 #ifdef LOG_ON
 				stringstream log;
-				log << "iCS --> [ProcessApplicationResults] on node " << node->m_icsId << " NO RESULTS TO PROCESS";
+				log << "iCS --> [ProcessApplicationResults] on node " << node->m_icsId;
+                if (node->m_tsId != "") {
+                    log << " (SUMO-id " << node->m_tsId << ")";
+                }
+                log << " NO RESULTS TO PROCESS";
 				IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
 			}
