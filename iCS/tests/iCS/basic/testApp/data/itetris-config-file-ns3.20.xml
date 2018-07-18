@@ -30,7 +30,7 @@
     </applications>
 
     <logs>
-        <ics-log-path value="ics-log-50.txt"/>
+        <ics-log-path value="../log.txt"/>
 <!--	<ics-log-path value="/dev/null" />-->
         <ics-log-level value="INFO"/><!-- INFO,ERROR,WARNING -->
         <ics-log-time-size value="5000"/>
