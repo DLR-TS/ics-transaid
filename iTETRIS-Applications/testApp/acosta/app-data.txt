@@ -1,4 +1,0 @@
-
-  @-2147483648
-end tot_nodes_rsu=0 tot_nodes_rsu_shadow=0 tot_nodes_rsu_medium=0 tot_nodes_rsu_full=0 tot_packets_sent=0 tot_packets_recv=0 max_dens_rsu=0 avg_dens_rsu=-nan
-

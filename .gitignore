@@ -36,6 +36,12 @@ iTETRIS-Applications/traffic-monitor/src/protocolspeed
 iTETRIS-Applications/traffic-monitor/src/stamp-h1
 iTETRIS-Applications/traffic-monitor/acosta/*.txt
 iTETRIS-Applications/traffic-monitor/acosta/sumo/*_output.xml
+iTETRIS-Applications/testApp/acosta/*.txt
+iTETRIS-Applications/testApp/acosta/sumo/*_output.xml
+iTETRIS-Applications/testApp/src/config.h
+iTETRIS-Applications/testApp/src/config.h.in
+iTETRIS-Applications/testApp/src/testApp
+iTETRIS-Applications/testApp/src/stamp-h1
 iCS/docs/man/
 iCS/docs/html/
 iCS/docs/latex/
