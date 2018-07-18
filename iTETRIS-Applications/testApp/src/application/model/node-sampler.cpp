@@ -42,7 +42,7 @@
 #include "log/log.h"
 #include "structs.h"
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

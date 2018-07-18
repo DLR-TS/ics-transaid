@@ -42,7 +42,7 @@
 #include "random-variable.h"
 #include <map>
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

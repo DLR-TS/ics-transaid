@@ -37,7 +37,7 @@
 #ifndef SPLIT_H_
 #define SPLIT_H_
 
-namespace protocol
+namespace testapp
 {
 
 //struct split

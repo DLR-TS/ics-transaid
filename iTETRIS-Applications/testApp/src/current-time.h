@@ -36,7 +36,7 @@
 #ifndef CURRENT_TIME_H_
 #define CURRENT_TIME_H_
 
-namespace protocol
+namespace testapp
 {
 namespace server
 {

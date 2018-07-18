@@ -40,7 +40,7 @@
 #include <sstream>
 #include "model/ics-interface.h"
 
-namespace protocol
+namespace testapp
 {
 
 	namespace application

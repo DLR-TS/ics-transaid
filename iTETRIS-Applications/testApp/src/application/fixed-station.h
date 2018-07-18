@@ -44,7 +44,7 @@
 #include "traffic-light.h"
 #include <map>
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

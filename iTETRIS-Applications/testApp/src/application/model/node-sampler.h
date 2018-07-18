@@ -44,7 +44,7 @@
 #include "circular-buffer.h"
 #include "ics-interface.h"
 
-namespace protocol
+namespace testapp
 {
 
 struct MobilityInfo;

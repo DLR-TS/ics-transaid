@@ -39,7 +39,7 @@
 
 #include <string>
 
-namespace protocol
+namespace testapp
 {
 
 class Console

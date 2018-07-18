@@ -38,7 +38,7 @@
 
 using namespace std;
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

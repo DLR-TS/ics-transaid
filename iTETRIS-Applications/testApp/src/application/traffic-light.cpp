@@ -39,7 +39,7 @@
 #include "log/ToString.h"
 #include "split.h"
 
-namespace protocol
+namespace testapp
 {
 namespace application
 {

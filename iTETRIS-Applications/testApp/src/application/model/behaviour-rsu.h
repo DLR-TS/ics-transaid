@@ -41,7 +41,7 @@
 #include "program-configuration.h"
 #include <map>
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

@@ -39,7 +39,7 @@
 
 #include "data-manager.h"
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

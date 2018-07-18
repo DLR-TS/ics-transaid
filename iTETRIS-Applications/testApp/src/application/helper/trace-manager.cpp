@@ -36,7 +36,7 @@
 #include "trace-manager.h"
 #include "log/log.h"
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

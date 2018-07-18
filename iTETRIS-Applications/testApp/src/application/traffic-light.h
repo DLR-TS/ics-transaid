@@ -41,7 +41,7 @@
 #include <string>
 #include "program-configuration.h"
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

@@ -37,7 +37,7 @@
 #include <cmath>
 #include <sstream>
 
-namespace protocol
+namespace testapp
 {
 
 namespace application

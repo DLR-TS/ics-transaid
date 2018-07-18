@@ -42,7 +42,7 @@
 #include "cmath"
 #include <stdint.h>
 
-namespace protocol
+namespace testapp
 {
 namespace application
 {

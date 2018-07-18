@@ -36,7 +36,7 @@
 
 #include "current-time.h"
 
-namespace protocol
+namespace testapp
 {
 
 int CurrentTime::m_currentTime = -2147483648LL;

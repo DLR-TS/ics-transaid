@@ -44,7 +44,7 @@
 #include <vector>
 #include "vector.h"
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

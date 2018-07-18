@@ -30,7 +30,7 @@
 #include <typeinfo>
 #include <string>
 
-namespace protocol
+namespace testapp
 {
 namespace application
 {

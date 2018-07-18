@@ -45,7 +45,7 @@
 #include <sstream>
 #include <climits>
 
-namespace protocol
+namespace testapp
 {
 	namespace server
 	{

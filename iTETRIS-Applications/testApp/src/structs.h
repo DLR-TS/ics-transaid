@@ -44,7 +44,7 @@
 #include <stdint.h>
 #include <map>
 
-namespace protocol
+namespace testapp
 {
 
 	typedef enum

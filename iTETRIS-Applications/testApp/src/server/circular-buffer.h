@@ -37,7 +37,7 @@
 #ifndef RING_BUFFER_H_
 #define RING_BUFFER_H_
 
-namespace protocol
+namespace testapp
 {
 namespace server
 {

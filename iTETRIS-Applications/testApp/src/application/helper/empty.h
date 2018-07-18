@@ -37,7 +37,7 @@
 #ifndef EMPTY_H
 #define EMPTY_H
 
-namespace protocol
+namespace testapp
 {
 namespace application
 {

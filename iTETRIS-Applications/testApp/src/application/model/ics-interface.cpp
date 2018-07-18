@@ -46,7 +46,7 @@
 #include <cmath>
 #include "ics-interface.h"
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

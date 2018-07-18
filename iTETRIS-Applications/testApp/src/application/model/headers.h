@@ -40,7 +40,7 @@
 #include "common.h"
 #include <stdint.h>
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

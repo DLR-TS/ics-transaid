@@ -67,7 +67,7 @@
 // variable: max speed
 #define VARIABLE_MAX_SPEED 0x41
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

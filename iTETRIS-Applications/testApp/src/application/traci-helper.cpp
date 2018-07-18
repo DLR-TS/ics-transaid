@@ -38,7 +38,7 @@
 #include "log/log.h"
 #include <sstream>
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

@@ -44,7 +44,7 @@
 #include "structs.h"
 #include "traci-helper.h"
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

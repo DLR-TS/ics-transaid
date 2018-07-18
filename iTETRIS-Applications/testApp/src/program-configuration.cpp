@@ -50,7 +50,7 @@
 
 using namespace std;
 
-namespace protocol
+namespace testapp
 {
 
 	using namespace tinyxml2;

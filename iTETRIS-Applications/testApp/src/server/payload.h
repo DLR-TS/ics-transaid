@@ -40,7 +40,7 @@
 #include <list>
 #include "headers.h"
 
-namespace protocol
+namespace testapp
 {
   namespace server
   {

@@ -46,7 +46,7 @@
 #include "scheduler.h"
 #include <cstring>
 
-namespace protocol
+namespace testapp
 {
 	namespace server
 	{

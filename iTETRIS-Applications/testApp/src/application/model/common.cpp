@@ -38,7 +38,7 @@
 #include "common.h"
 #include <sstream>
 
-namespace protocol
+namespace testapp
 {
 namespace application
 {

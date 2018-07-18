@@ -52,7 +52,7 @@
 // used namespaces
 // ===========================================================================
 using namespace std;
-using namespace protocol;
+using namespace testapp;
 
 // ===========================================================================
 // functions
@@ -151,7 +151,7 @@ int main(int argc, char **argv)
   try
   {
     // start-up
-    Console::Log("Starting Protocol speed");
+    Console::Log("Starting iTetris test app");
     if (ProgramConfiguration::LoadConfiguration(configFile) == EXIT_FAILURE)
       throw ProcessError("Could not load configuration file");
 
@@ -161,12 +161,12 @@ int main(int argc, char **argv)
     if (ProgramConfiguration::GetLogFileName(LOG_FILE, log))
     {
       Log::StartLog(LOG_FILE, log);
-      Log::WriteHeader(LOG_FILE, "Protocol speed Log File");
+      Log::WriteHeader(LOG_FILE, "Test App Log File");
     }
     if (ProgramConfiguration::GetLogFileName(NS_LOG_FILE, log))
     {
       Log::StartLog(NS_LOG_FILE, log);
-      Log::WriteHeader(NS_LOG_FILE, "Protocol speed NS-Log File");
+      Log::WriteHeader(NS_LOG_FILE, "Test App NS-Log File");
     }
     if (ProgramConfiguration::GetLogFileName(DATA_FILE, log))
     {

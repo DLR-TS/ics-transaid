@@ -38,7 +38,7 @@
 #include "subscription-helper.h"
 #include "../app-commands-subscriptions-constants.h"
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

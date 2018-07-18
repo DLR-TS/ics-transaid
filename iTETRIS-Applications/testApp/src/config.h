@@ -125,19 +125,19 @@
 #define OUTPUT_ACCURACY 2
 
 /* Name of package */
-#define PACKAGE "protocol-speed"
+#define PACKAGE "test-app"
 
 /* Define to the address where bug reports for this package should be sent. */
 #define PACKAGE_BUGREPORT ""
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "protocol speed"
+#define PACKAGE_NAME "test app"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "protocol speed 0.1"
+#define PACKAGE_STRING "test app 0.1"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "protocol-speed"
+#define PACKAGE_TARNAME "test-app"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL ""

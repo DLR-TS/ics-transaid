@@ -31,7 +31,7 @@
 #include <iostream>
 #include "log/log.h"
 
-namespace protocol
+namespace testapp
 {
 namespace application
 {

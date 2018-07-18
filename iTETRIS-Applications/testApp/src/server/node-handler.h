@@ -44,7 +44,7 @@
 #include "node.h"
 #include "mobile-node.h"
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

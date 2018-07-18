@@ -39,7 +39,7 @@
 #include "ics-interface.h"
 #include "node-sampler.h"
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

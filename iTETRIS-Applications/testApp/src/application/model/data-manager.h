@@ -42,7 +42,7 @@
 #include <set>
 #include <vector>
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

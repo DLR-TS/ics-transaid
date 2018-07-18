@@ -39,7 +39,7 @@
 
 #include <iostream>
 
-namespace protocol
+namespace testapp
 {
 namespace application
 {

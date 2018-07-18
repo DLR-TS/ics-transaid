@@ -38,11 +38,11 @@
 #include <iostream>
 #include <sstream>
 
-namespace protocol
+namespace testapp
 {
 using namespace std;
 
-string Console::m_appName = "Protocol Speed -> ";
+string Console::m_appName = "testApp -> ";
 
 void Console::Log(const string & msg, const int & msg2)
 {

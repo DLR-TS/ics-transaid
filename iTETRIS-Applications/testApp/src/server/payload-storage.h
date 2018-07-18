@@ -41,7 +41,7 @@
 #include <string>
 #include "payload.h"
 
-namespace protocol
+namespace testapp
 {
 namespace server
 {

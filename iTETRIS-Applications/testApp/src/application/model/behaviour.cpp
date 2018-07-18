@@ -39,7 +39,7 @@
 #include "ics-interface.h"
 #include "log/log.h"
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{

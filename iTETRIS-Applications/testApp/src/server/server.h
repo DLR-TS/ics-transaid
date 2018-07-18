@@ -41,7 +41,7 @@
 #include "tcpip/storage.h"
 #include "node-handler.h"
 
-namespace protocol
+namespace testapp
 {
 	namespace server
 	{

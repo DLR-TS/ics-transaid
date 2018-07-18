@@ -45,7 +45,7 @@
 #include <map>
 #include <vector>
 
-namespace protocol
+namespace testapp
 {
 	namespace application
 	{
