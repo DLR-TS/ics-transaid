@@ -6,6 +6,6 @@
         <remote-port>5500</remote-port>
     </traci_server>
     <output>
-        <!-- tripinfo-output value="tripinfo_output.xml" / -->
+         <tripinfo-output value="tripinfo_output.xml" /> 
     </output>
 </configuration>
