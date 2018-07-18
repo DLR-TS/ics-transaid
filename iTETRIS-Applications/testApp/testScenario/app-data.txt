@@ -1,5 +1,0 @@
-dirs 0:a,0:l,90:a,90:l,180:a,180:l,-90:a,-90:l,
-  @1000
-#5000 real totc=0 : 0:a=0;0;0 0:l=0;0;0 90:a=0;0;0 90:l=0;0;0 180:a=0;0;0 180:l=0;0;0 -90:a=0;0;0 -90:l=0;0;0 
-  @1150
-end tot_nodes_rsu=0 tot_nodes_rsu_shadow=0 tot_nodes_rsu_medium=0 tot_nodes_rsu_full=0 tot_packets_sent=8 tot_packets_recv=0 max_dens_rsu=0 avg_dens_rsu=0

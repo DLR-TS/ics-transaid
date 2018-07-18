@@ -59,3 +59,4 @@ protocolspeed
 **.pydevproject
 **language.settings.xml
 iTETRIS-Applications/testApp/testScenario/sumo/*.xml
+iTETRIS-Applications/testApp/testScenario/*.txt
