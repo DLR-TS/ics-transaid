@@ -155,7 +155,7 @@ bool ApplicationHandler::AskForUnsubscriptions(int nodeId, vector<Subscription*>
     {
 #ifdef LOG_ON
       stringstream log;
-      log << "AskForUnsubscriptions() subscription " << (*it)->m_id << " in node [iCD-ID] [" << nodeId << "] is alive.";
+      log << "AskForUnsubscriptions() subscription " << (*it)->m_id << " in node [iCS-ID] [" << nodeId << "] is alive.";
       IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
       break;
@@ -168,7 +168,7 @@ bool ApplicationHandler::AskForUnsubscriptions(int nodeId, vector<Subscription*>
       it--;
 #ifdef LOG_ON
       stringstream log;
-      log << "AskForUnsubscriptions() unsubscribing " << id << " in node [iCD-ID] [" << nodeId << "]";
+      log << "AskForUnsubscriptions() unsubscribing " << id << " in node [iCS-ID] [" << nodeId << "]";
       IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
       break;
@@ -177,10 +177,10 @@ bool ApplicationHandler::AskForUnsubscriptions(int nodeId, vector<Subscription*>
     {
 #ifdef LOG_ON
       stringstream log;
-      log << "AskForUnsubscriptions() error unsubscribing " << (*it)->m_id << " in node [iCD-ID] [" << nodeId << "]";
+      log << "AskForUnsubscriptions() error unsubscribing " << (*it)->m_id << " in node [iCS-ID] [" << nodeId << "]";
       IcsLog::LogLevel((log.str()).c_str(), kLogLevelError);
 #endif
-      cerr << "iCS --> [ERROR] AskForUnsubscriptions() unsubscribing node [iCD-ID] [" << nodeId << "]" << endl;
+      cerr << "iCS --> [ERROR] AskForUnsubscriptions() unsubscribing node [iCS-ID] [" << nodeId << "]" << endl;
       return false;
     }
     default:

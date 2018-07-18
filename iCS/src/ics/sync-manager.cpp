@@ -1036,7 +1036,7 @@ int SyncManager::ForwardSubscribedDataToApplication(ITetrisNode *node)
 #ifdef LOG_ON
 {
     stringstream log;
-	log << "ForwardSubscribedDataToApplication() subscription in node [iCD-ID] [" << node->m_icsId
+	log << "ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [" << node->m_icsId
 			<< "] getting facilities data.";
 	IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 }
