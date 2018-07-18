@@ -13,32 +13,27 @@
 	
 	<infrastructure>
 		<rsu id="5000" xpos="50.00" ypos="100.00" >
-<!--
-			<direction value="170" approaching="true" leaving="true" approaching-time="150" leaving-time="150" >
-				<lane friendly-name="right" controlled-lane="71_0" following-lane="84_0" />
-				<lane friendly-name="straight" controlled-lane="71_0" following-lane="86_0" />
-				<lane friendly-name="straight" controlled-lane="71_1" following-lane="86_1" />
-				<lane friendly-name="left" controlled-lane="71_2" following-lane="67_1" />
-			</direction>
-			<direction value="68" approaching="true" leaving="true" approaching-time="200" leaving-time="100" >
-				<lane friendly-name="right" controlled-lane="11_0" following-lane="72[0]_0" />
-				<lane friendly-name="straight" controlled-lane="11_0" following-lane="84_0" />
-				<lane friendly-name="left" controlled-lane="11_1" following-lane="86_1" />
-				<lane friendly-name="left" controlled-lane="11_2" following-lane="86_2" />
-			</direction>
-			<direction value="-8" approaching="true" leaving="true" approaching-time="300" leaving-time="150" >
-				<lane friendly-name="right" controlled-lane="85_0" following-lane="67_0" />
-				<lane friendly-name="straight" controlled-lane="85_0" following-lane="72[0]_0" />
-				<lane friendly-name="straight" controlled-lane="85_1" following-lane="72[0]_1" />
-				<lane friendly-name="left" controlled-lane="85_2" following-lane="84_0" />
-			</direction>
-			<direction value="-112" approaching="false" leaving="true" approaching-time="100" leaving-time="150" >
-				<lane friendly-name="right" controlled-lane="12_0" following-lane="86_0" />
-				<lane friendly-name="straight" controlled-lane="12_1" following-lane="67_0" />
-				<lane friendly-name="straight" controlled-lane="12_2" following-lane="67_1" />
-			</direction>
--->
-		</rsu>
+            <direction value="0" approaching="true" leaving="true" approaching-time="150" leaving-time="150" >
+                <lane friendly-name="right" controlled-lane="WC_0" following-lane="CS_0" />
+                <lane friendly-name="straight" controlled-lane="WC_0" following-lane="CE_0" />
+                <lane friendly-name="left" controlled-lane="WC_0" following-lane="CN_0" />
+            </direction>
+            <direction value="90" approaching="true" leaving="true" approaching-time="150" leaving-time="150" >
+                <lane friendly-name="right" controlled-lane="SC_0" following-lane="CE_0" />
+                <lane friendly-name="straight" controlled-lane="SC_0" following-lane="CN_0" />
+                <lane friendly-name="left" controlled-lane="SC_0" following-lane="CW_0" />
+            </direction>
+            <direction value="180" approaching="true" leaving="true" approaching-time="150" leaving-time="150" >
+                <lane friendly-name="right" controlled-lane="EC_0" following-lane="CN_0" />
+                <lane friendly-name="straight" controlled-lane="EC_0" following-lane="CW_0" />
+                <lane friendly-name="left" controlled-lane="EC_0" following-lane="CS_0" />
+            </direction>
+            <direction value="-90" approaching="true" leaving="true" approaching-time="150" leaving-time="150" >
+                <lane friendly-name="right" controlled-lane="NC_0" following-lane="CW_0" />
+                <lane friendly-name="straight" controlled-lane="NC_0" following-lane="CS_0" />
+                <lane friendly-name="left" controlled-lane="NC_0" following-lane="CE_0" />
+            </direction>
+        </rsu>
 	</infrastructure>    
 	
 	<setup>
