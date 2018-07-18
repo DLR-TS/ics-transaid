@@ -320,7 +320,12 @@ namespace ics
 #endif
 				SubsReturnsCarInZone *subscription = new SubsReturnsCarInZone(appId, nodeId, baseX, baseY, radius);
 				subscriptions->push_back(subscription);
-				noMoreSubs = false;
+#ifdef LOG_ON
+                log.clear();
+                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
+                noMoreSubs = false;
 				break;
 			}
 			case SUB_SET_CAM_AREA:
@@ -338,7 +343,12 @@ namespace ics
 #endif
 				SubsSetCamArea *subscription = new SubsSetCamArea(appId, nodeId, baseX, baseY, radius, frequency, infoType);
 				subscriptions->push_back(subscription);
-				noMoreSubs = false;
+#ifdef LOG_ON
+                log.clear();
+                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
+                noMoreSubs = false;
 				break;
 			}
 			case SUB_TRAVEL_TIME_ESTIMATION_START:
@@ -422,7 +432,12 @@ namespace ics
 #endif
 				SubsGetReceivedCamInfo *subscription = new SubsGetReceivedCamInfo(appId, nodeId);
 				subscriptions->push_back(subscription);
-				noMoreSubs = false;
+#ifdef LOG_ON
+				log.clear();
+                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
+                noMoreSubs = false;
 				break;
 			}
 			case SUB_FACILITIES_INFORMATION:
@@ -443,6 +458,11 @@ namespace ics
 				SubsGetFacilitiesInfo *subscription = new SubsGetFacilitiesInfo(appId, nodeId, packet, cmdLength - 3); //packet);
 				delete[] packet;
 				subscriptions->push_back(subscription);
+#ifdef LOG_ON
+                log.clear();
+                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
 				noMoreSubs = false;
 				break;
 			}
@@ -464,6 +484,11 @@ namespace ics
 				SubsAppMessageSend *subscription = new SubsAppMessageSend(appId, nodeId, m_syncManager, packet, cmdLength - 3);
 				delete[] packet;
 				subscriptions->push_back(subscription);
+#ifdef LOG_ON
+                log.clear();
+                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
 				noMoreSubs = false;
 				break;
 			}
@@ -485,7 +510,12 @@ namespace ics
 						cmdLength - 3);
 				delete[] packet;
 				subscriptions->push_back(subscription);
-				noMoreSubs = false;
+#ifdef LOG_ON
+                log.clear();
+                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
+                noMoreSubs = false;
 				break;
 			}
 			case SUB_APP_CMD_TRAFF_SIM:
@@ -505,6 +535,11 @@ namespace ics
 				SubsAppCmdTraffSim *subscription = new SubsAppCmdTraffSim(appId, nodeId, m_syncManager, packet, cmdLength - 3);
 				delete[] packet;
 				subscriptions->push_back(subscription);
+#ifdef LOG_ON
+                log.clear();
+                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
 				noMoreSubs = false;
 				break;
 			}
@@ -525,7 +560,12 @@ namespace ics
 				SubsAppResultTraffSim *subscription = new SubsAppResultTraffSim(appId, nodeId, packet, cmdLength - 3);
 				delete[] packet;
 				subscriptions->push_back(subscription);
-				noMoreSubs = false;
+#ifdef LOG_ON
+                log.clear();
+                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
+                noMoreSubs = false;
 				break;
 			}
 			case SUB_X_APPLICATION_DATA:
@@ -545,7 +585,12 @@ namespace ics
 						cmdLength - 3);
 				delete[] packet;
 				subscriptions->push_back(subscription);
-				noMoreSubs = false;
+#ifdef LOG_ON
+                log.clear();
+                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
+                noMoreSubs = false;
 				break;
 			}
 			case SUB_MOBILITY_INFORMATION:
@@ -564,7 +609,12 @@ namespace ics
 				SubsGetMobilityInfo *subscription = new SubsGetMobilityInfo(appId, nodeId, packet, cmdLength - 3);
 				delete[] packet;
 				subscriptions->push_back(subscription);
-				noMoreSubs = false;
+#ifdef LOG_ON
+                log.clear();
+                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
+                noMoreSubs = false;
 				break;
 			}
 			case SUB_TRAFFIC_LIGHT_INFORMATION:
@@ -583,7 +633,12 @@ namespace ics
 				SubsGetTrafficLightInfo *subscription = new SubsGetTrafficLightInfo(appId, nodeId, packet, cmdLength - 3);
 				delete[] packet;
 				subscriptions->push_back(subscription);
-				noMoreSubs = false;
+#ifdef LOG_ON
+                log.clear();
+                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
+                noMoreSubs = false;
 				break;
 			}
             //New Generic TRACI subscription - direct TRACI subscription, no local Ics interpretation (23/04/2016)
@@ -614,7 +669,12 @@ namespace ics
 				//  subscription->InformApp(this);
 
 
-				noMoreSubs = false;
+#ifdef LOG_ON
+                log.clear();
+                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
+                noMoreSubs = false;
 			      break;
 			    }
 
@@ -645,7 +705,12 @@ namespace ics
 				SubsSumoTraciCommand *subscription = new SubsSumoTraciCommand(appId, nodeId, packet, cmdLength - 3);
 				delete[] packet;
 				subscriptions->push_back(subscription);
-				noMoreSubs = false;
+#ifdef LOG_ON
+                log.clear();
+                log << "CommandGetNewSubscriptions() Station " << nodeId << ": New subscription ID is " << subscription->m_id;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
+                noMoreSubs = false;
 				break;
 			}
 			default:
@@ -659,7 +724,7 @@ namespace ics
 			cout << "App --> iCS #Error: an exception was thrown while reading result state message. (Subscription code: "
 					<< subscriptionCode << ")" << endl;
 			cout << e.what() << endl;
-			noMoreSubs = true;
+            noMoreSubs = true;
 			return false;
 		}
 
