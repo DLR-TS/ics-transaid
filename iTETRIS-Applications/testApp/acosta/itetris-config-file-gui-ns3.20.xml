@@ -32,7 +32,7 @@
     <logs>
         <ics-log-path value="ics-log-50.txt"/>
 <!--	<ics-log-path value="/dev/null" />-->
-	<ics-log-level value="ERROR"/><!-- INFO,ERROR,WARNING -->
+	<ics-log-level value="INFO"/><!-- INFO,ERROR,WARNING -->
 	<ics-log-time-size value="5000"/>
 	<ns3-log-path value="ns3-log-50.txt"/>
 <!--	<ns3-log-path value="/dev/null" />-->
