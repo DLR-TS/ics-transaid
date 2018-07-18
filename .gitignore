@@ -54,3 +54,7 @@ iCS/docs/html/
 iCS/docs/latex/
 protocolspeed
 .project
+**.project
+**.cproject
+**.pydevproject
+**language.settings.xml
