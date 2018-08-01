@@ -53,7 +53,14 @@ namespace testapp
 enum
 {
   LOG_FILE = 0, DATA_FILE = 2, NS_LOG_FILE = 1
-}typedef LogType;
+} typedef LogType;
+
+
+enum
+{
+    TEST_CASE_NONE = 0, TEST_CASE_SETVTYPE = 1
+} typedef TestCase;
+
 
 struct TLLane
 {
@@ -106,6 +113,17 @@ public:
   {
     return m_messageLifetime;
   }
+
+  static TestCase GetTestCase()
+  {
+    return m_testCase;
+  }
+
+  static void SetTestCase(TestCase tc)
+  {
+    m_testCase = tc;
+  }
+
   static bool GetLogFileName(LogType type, std::string & fileName);
   static bool IsRsu(const int id);
   static const RsuData & GetRsuData(const int id);
@@ -122,6 +140,7 @@ private:
   static int m_start;
   static int m_socket;
   static unsigned m_messageLifetime;
+  static TestCase m_testCase;
   static std::map<int, RsuData> m_rsus;
   static std::map<LogType, std::string> m_logs;
 };

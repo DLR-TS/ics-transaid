@@ -92,7 +92,7 @@ void loadOptionFile()
   inFile.open(file.c_str());
   if (!inFile.good())
   {
-    Console::Warning("No option file found. Must be named option.txt");
+    Console::Warning(" No option file found. Must be named option.txt");
   }
   else
   {
@@ -118,6 +118,15 @@ void loadOptionFile()
       {
         Node::ProbabilityMedium = stringToDouble(value);
         Console::Log("ProbMed set to ", value.c_str());
+      } else if (key == "test") {
+          if(ProgramConfiguration::GetTestCase() != TEST_CASE_NONE) {
+              Console::Warning(" Test case already set. Ignoring further values '"+value+"'");
+          } else if (value=="setVType"){
+              ProgramConfiguration::SetTestCase(TEST_CASE_SETVTYPE);
+              Console::Log(" Test case set to ", value.c_str());
+          } else {
+              Console::Warning(" No test case '"+value+"' exists. Ignoring option.");
+          }
       }
     }
   }

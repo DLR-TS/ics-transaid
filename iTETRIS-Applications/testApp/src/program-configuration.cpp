@@ -57,6 +57,7 @@ namespace testapp
 
 	int ProgramConfiguration::m_start;
 	int ProgramConfiguration::m_socket;
+	TestCase ProgramConfiguration::m_testCase = TEST_CASE_NONE;
 	unsigned ProgramConfiguration::m_messageLifetime = 10;
 	std::map<int, RsuData> ProgramConfiguration::m_rsus;
 	std::map<LogType, std::string> ProgramConfiguration::m_logs;
