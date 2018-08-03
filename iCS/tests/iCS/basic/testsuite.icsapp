@@ -6,3 +6,6 @@ traffic_monitor_acosta_infolog
 
 # Tests testApp execution
 testApp
+
+# Runs testApp test case "setVType"
+testApp_setSUMOVType
