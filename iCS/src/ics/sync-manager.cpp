@@ -629,6 +629,9 @@ int SyncManager::RunOneSumoTimeStep()
 			vehicle->m_nsId = id; // Assign the ns-3 node ID returned by ns-3
 			AddNode(vehicle);
 			nodesToActivateInNs3.push_back(vehicle->m_nsId);  // Add vehicle to activate
+
+			// Inform Apps of mobile node creation
+			CreateNodeApplication(vehicle);
 		}
 	}
 
