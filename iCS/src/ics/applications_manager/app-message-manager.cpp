@@ -301,7 +301,7 @@ namespace ics
 
 #ifdef LOG_ON
 			stringstream log;
-			log << "[INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is " << subscriptionCode;
+			log << "[INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is " << IcsLog::toHex(subscriptionCode,2);
 			IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
 
