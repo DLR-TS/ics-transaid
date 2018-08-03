@@ -134,6 +134,8 @@ public:
   }
   static bool WriteHeader(const int index, const char* message);
 
+  static std::string toHex(const int i, std::streamsize numDigits = 0);
+
 private:
   Log();
 

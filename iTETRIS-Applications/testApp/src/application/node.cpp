@@ -96,8 +96,8 @@ namespace testapp
 		void Node::addSubscription(Subscription * subscription)
 		{
 			ostringstream log;
-			log << "[None " << m_id << "] added subscription " << subscription->m_id << " type "
-					<< subscription->m_subscriptionType;
+			log << "[Node " << m_id << "] added subscription " << subscription->m_id << " type "
+					<< Log::toHex(subscription->m_subscriptionType, 2);
 			Log::WriteLog(log);
 			m_subscriptions.insert(make_pair(subscription->m_id, subscription));
 		}
@@ -111,7 +111,7 @@ namespace testapp
 			if (it == m_subscriptions.end())
 				return false;
 			ostringstream log;
-			log << "[None " << m_id << "] removed subscription " << it->first;
+			log << "[Node " << m_id << "] removed subscription " << it->first;
 			Log::WriteLog(log);
 			delete it->second;
 			m_subscriptions.erase(it);

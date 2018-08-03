@@ -35,6 +35,7 @@
  ***************************************************************************************/
 #include <time.h>
 #include <cstdlib>
+#include <iomanip>
 #include <sys/time.h>
 #include "log.h"
 
@@ -163,4 +164,13 @@ bool Log::WriteHeader(const int index, const char* message)
 	(*fs) << message << endl;
 	(*fs) << "===============================" << endl;
 	return true;
+}
+
+
+std::string
+Log::toHex(const int i, std::streamsize numDigits) {
+    // taken from http://stackoverflow.com/questions/5100718/int-to-hex-string-in-c
+    std::stringstream stream;
+    stream << "0x" << std::setfill('0') << std::setw(numDigits == 0 ? sizeof(int) * 2 : numDigits) << std::hex << i;
+    return stream.str();
 }
