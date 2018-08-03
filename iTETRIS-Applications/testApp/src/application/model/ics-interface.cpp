@@ -43,7 +43,6 @@
 #include "node.h"
 #include "node-sampler.h"
 #include "output-helper.h"
-#include <cmath>
 #include "ics-interface.h"
 
 namespace testapp
