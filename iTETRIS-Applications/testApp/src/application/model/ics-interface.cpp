@@ -235,7 +235,7 @@ namespace testapp
 			}
 			m_traceStateChange(true);
 			//Example use of a traci command subscription
-			AddTraciSubscription();
+			//AddTraciSubscription();
 		}
 
 		void iCSInterface::Deactivate()
@@ -372,7 +372,7 @@ namespace testapp
 				return;
 			}
 			NS_LOG_INFO(
-					LogNode() << "iCSInferface::TraciCommandResult executionId " << executionId << " command " << command.commandId << " type " << (command.type == GET_COMMAND ? "GET" : "SET"));
+					LogNode() << "iCSInferface::TraciCommandResult executionId " << executionId << " command " << Log::toHex(command.commandId,2) << " type " << (command.type == GET_COMMAND ? "GET" : "SET"));
 			if (executionId == traciGetSpeed)
 			{
 
