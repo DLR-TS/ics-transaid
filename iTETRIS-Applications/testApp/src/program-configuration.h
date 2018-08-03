@@ -58,7 +58,7 @@ enum
 
 enum
 {
-    TEST_CASE_NONE = 0, TEST_CASE_SETVTYPE = 1
+    TEST_CASE_NONE = 0, TEST_CASE_SETVTYPE, TEST_CASE_EXECUTE
 } typedef TestCase;
 
 
