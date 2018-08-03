@@ -235,7 +235,7 @@ namespace testapp
 			}
 			m_traceStateChange(true);
 			//Example use of a traci command subscription
-			//AddTraciSubscription();
+			AddTraciSubscription();
 		}
 
 		void iCSInterface::Deactivate()
