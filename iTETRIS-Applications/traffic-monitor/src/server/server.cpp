@@ -32,6 +32,7 @@
 /****************************************************************************************
  * Author Federico Caselli <f.caselli@unibo.it>
  * University of Bologna
+ * Author Leonhard Luecken <leonhard.luecken@dlr.de>
  ***************************************************************************************/
 
 #include "server.h"
@@ -268,13 +269,21 @@ namespace protocol
 			std::string sumoNodeId = m_inputStorage.readString();
 			std::string sumoType = m_inputStorage.readString();
 			std::string sumoClass = m_inputStorage.readString();
-			if (!m_nodeHandler->createMobileNode(nodeId, ns3NodeId, sumoNodeId, sumoType, sumoClass))
-			{
-				writeStatusCmd(CMD_CREATE_MOBILE_NODE, APP_RTYPE_ERR, "Node " + toString(nodeId) + " already exists");
-				return false;
-			}
-			writeStatusCmd(CMD_CREATE_MOBILE_NODE, APP_RTYPE_OK, "Create node " + toString(nodeId));
+			writeStatusCmd(CMD_CREATE_MOBILE_NODE, APP_RTYPE_OK, "Ignoring node creation for " + toString(nodeId));
 			return true;
+
+			// Ignoring this to preserve behavior of test after
+            // reactivating node creation notification on iCS side.
+            // For this case, the node creation happens implicit in
+            // askSubscription (Leo, 2018-08-03).
+
+//			if (!m_nodeHandler->createMobileNode(nodeId, ns3NodeId, sumoNodeId, sumoType, sumoClass))
+//			{
+//				writeStatusCmd(CMD_CREATE_MOBILE_NODE, APP_RTYPE_ERR, "Node " + toString(nodeId) + " already exists");
+//				return false;
+//			}
+//			writeStatusCmd(CMD_CREATE_MOBILE_NODE, APP_RTYPE_OK, "Create node " + toString(nodeId));
+//			return true;
 		}
 
 		bool Server::askForSubscription()
