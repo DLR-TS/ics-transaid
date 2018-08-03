@@ -5,9 +5,9 @@
     <general>
         <start value="5"/>
         <socket value="1987"/>
-	    <log-file value="app-log.txt"/>
-		<ns-log-file value="app-ns-log.txt"/>
-		<data-file value="app-data.txt"/>
+	    <log-file value="../app-log.txt"/>
+		<ns-log-file value="../app-ns-log.txt"/>
+		<data-file value="../app-data.txt"/>
         <message-lifetime value="10" />
     </general>
 	
