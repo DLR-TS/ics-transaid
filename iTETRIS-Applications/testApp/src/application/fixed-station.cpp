@@ -69,10 +69,14 @@ namespace testapp
 				m_mobilitySubscription = true;
 				m_toSubscribe.push(SubscriptionHelper::GetMobilityInformation());
 			}
-			if (!m_trafficLightSubscription)
-			{
-				m_trafficLightSubscription = true;
-				m_toSubscribe.push(SubscriptionHelper::GetTrafficLightInformation());
+
+			if (ProgramConfiguration::GetTestCase() != TEST_CASE_NONE) {
+			    // in original demo-app this was included, but not needed for most simple test cases
+                if (!m_trafficLightSubscription)
+                {
+                    m_trafficLightSubscription = true;
+                    m_toSubscribe.push(SubscriptionHelper::GetTrafficLightInformation());
+                }
 			}
 		}
 
