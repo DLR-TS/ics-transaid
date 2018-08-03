@@ -34,6 +34,7 @@
 #endif
 #include <sstream>
 #include <cstdlib>
+#include <iomanip>
 //#include <sys/time.h>
 
 #include "ics-log.h"
@@ -320,6 +321,14 @@ int IcsLog::StartNewFile()
   string auxiPath = name + "-" + counter + ext;
   instance_->myfile_.open(auxiPath.c_str());
   return EXIT_SUCCESS;
+}
+
+string
+IcsLog::toHex(const int i, streamsize numDigits) {
+    // taken from http://stackoverflow.com/questions/5100718/int-to-hex-string-in-c
+    stringstream stream;
+    stream << "0x" << setfill('0') << setw(numDigits == 0 ? sizeof(int) * 2 : numDigits) << hex << i;
+    return stream.str();
 }
 
 }

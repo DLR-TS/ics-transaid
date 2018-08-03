@@ -103,6 +103,8 @@ public:
     */
     static std::string GetPath();
 
+    static std::string toHex(const int i, std::streamsize numDigits = 0);
+
 private:
 
     /**
