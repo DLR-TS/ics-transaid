@@ -164,7 +164,7 @@ namespace testapp
 				if (cmdId != command.commandId)
 				{
 					std::ostringstream oss;
-					oss << "SUMO #Error: received status response to command: " << cmdId << " but expected: "
+					oss << "SUMO #Error: received status response to command: " << Log::toHex(cmdId,2) << " but expected: "
 							<< command.commandId;
 					Log::Write(oss, kLogLevelError);
 					return false;
@@ -182,28 +182,28 @@ namespace testapp
 			case SUMO_RTYPE_ERR:
 			{
 				std::ostringstream oss;
-				oss << "SUMO answered with error to command (" << cmdId << "), [description: " << msg << "]";
+				oss << "SUMO answered with error to command (" << Log::toHex(cmdId,2) << "), [description: " << msg << "]";
 				Log::Write(oss, kLogLevelError);
 				return false;
 			}
 			case SUMO_RTYPE_NOTIMPLEMENTED:
 			{
 				std::ostringstream oss;
-				oss << "SUMO: Sent command is not implemented (" << cmdId << "), [description: " << msg << "]";
+				oss << "SUMO: Sent command is not implemented (" << Log::toHex(cmdId,2) << "), [description: " << msg << "]";
 				Log::Write(oss, kLogLevelError);
 				return false;
 			}
 			case SUMO_RTYPE_OK:
 			{
 				std::ostringstream oss;
-				oss << "SUMO Command acknowledged (" << cmdId << "), [description: " << msg << "]";
+				oss << "SUMO Command acknowledged (" << Log::toHex(cmdId,2) << "), [description: " << msg << "]";
 				Log::WriteLog(oss);
 				break;
 			}
 			default:
 			{
 				std::ostringstream oss;
-				oss << "SUMO Answered with unknown result code(" << resultType << ") to command(" << cmdId
+				oss << "SUMO Answered with unknown result code(" << resultType << ") to command(" << Log::toHex(cmdId,2)
 						<< "), [description: " << msg << "]";
 				Log::WriteLog(oss);
 				return false;
@@ -236,8 +236,8 @@ namespace testapp
 			if (cmdId != (command.commandId + 0x10))
 			{
 				std::ostringstream oss;
-				oss << "#Error: received response with command id: " << cmdId << " but expected: "
-						<< (command.commandId + 0x10);
+				oss << "#Error: received response with command id: " << Log::toHex(cmdId,2) << " but expected: "
+						<< Log::toHex(command.commandId + 0x10,2);
 				Log::Write(oss, kLogLevelError);
 				return false;
 			}
