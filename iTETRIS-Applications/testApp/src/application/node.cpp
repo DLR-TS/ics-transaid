@@ -180,7 +180,7 @@ namespace testapp
 			if (payload != NULL)
 			{
 				ostringstream log;
-				log << "Node " << m_id << " received message " << messageId << " payload " << payload->getId() << " timestep "
+				log << "Node " << m_id << " (sumoID: '" << m_sumoId << "') received message " << messageId << " payload " << payload->getId() << " timestep "
 						<< payload->getTimeStep();
 				Log::WriteLog(log);
 				m_controller->Receive(payload);
@@ -212,7 +212,7 @@ namespace testapp
 		{
 			std::string key = server::Server::GetNodeHandler()->insertPayload(payload, true);
 			ostringstream oss;
-			oss << "[Node " << m_id << "]send to " << destinationId << ". Key=" << key << ". Time=" << time;
+			oss << "[Node " << m_id << "] send to " << destinationId << ". Key=" << key << ". Time=" << time;
 			Log::WriteLog(oss);
 			m_toSubscribe.push(
 					SubscriptionHelper::SendUnicast(m_id, payload->size(), PROTOCOL_MESSAGE, destinationId, key, time));
