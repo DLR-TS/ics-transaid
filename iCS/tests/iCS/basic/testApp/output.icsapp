@@ -13,10 +13,9 @@ testApp -> ParseInfrastructure done
 testApp -> ParseSetup done
 testApp -> ParseSetup done
 testApp -> Load Configuration done
-testApp -> [WARNING]No option file found. Must be named option.txt
+testApp ->  Test case set to simpleExecute
 Loading configuration... done.
 main-inci v 3.20
-ns3 -> No option file found. Must be named option.txt
 
 STEP 3 - SETUP PHASE
 iCS --> Trying 0 to connect SUMO on port 5500...
@@ -4048,6 +4047,6 @@ STEP 7 - SIMULATION PHASE - Tics = 25000
 STEP 8 - SIMULATION PHASE - Tics = 25000
 STEP 9 - SIMULATION PHASE - Tics = 25000
 command (1): RunSimStep()ns-3 server --> Requested command (23): GetReceivedMessages()ns-3 server --> Requested command (1): RunSimStep()ns-3 server --> Requested command (23): GetReceivedMessages()ns-3 server --> Requested command (15): StartGeobroadcastTxon ()ns-3 server --> Requested command (1): RunSimStep()ns-3 server --> Requested command (23): GetReceivedMessages()ns-3 server --> Requested command (1): RunSimStep()ns-3 server --> Requested command (23): GetReceivedMessages()ns-3 server --> Requested command (17): ActivateNode()ns-3 server --> Requested command (127): Close()ns-3 server --> Finishing server.... 
-Step #0.00 (0ms ?*RT. ?UPS, TraCI: 1013ms, vehicles TOT 0 ACT 0 BUF 0)        Step #1.00 (0ms ?*RT. ?UPS, TraCI: 66ms, vehicles TOT 1 ACT 1 BUF 0)          Step #2.00 (0ms ?*RT. ?UPS, TraCI: 86ms, vehicles TOT 1 ACT 1 BUF 0)          Step #3.00 (0ms ?*RT. ?UPS, TraCI: 46ms, vehicles TOT 1 ACT 1 BUF 0)          Step #4.00 (1ms ~= 1000.00*RT, ~1000.00UPS, TraCI: 47ms, vehicles TOT 1 ACT 1 Step #5.00 (1ms ~= 1000.00*RT, ~1000.00UPS, TraCI: 49ms, vehicles TOT 1 ACT 1 Step #6.00 (0ms ?*RT. ?UPS, TraCI: 48ms, vehicles TOT 1 ACT 1 BUF 0)          Step #7.00 (0ms ?*RT. ?UPS, TraCI: 51ms, vehicles TOT 1 ACT 1 BUF 0)          Step #8.00 (0ms ?*RT. ?UPS, TraCI: 49ms, vehicles TOT 1 ACT 1 BUF 0)          Step #9.00 (0ms ?*RT. ?UPS, TraCI: 48ms, vehicles TOT 1 ACT 1 BUF 0)          Step #10.00 (0ms ?*RT. ?UPS, TraCI: 47ms, vehicles TOT 1 ACT 1 BUF 0)         Step #11.00 (1ms ~= 1000.00*RT, ~1000.00UPS, TraCI: 53ms, vehicles TOT 1 ACT 1Step #12.00 (0ms ?*RT. ?UPS, TraCI: 50ms, vehicles TOT 1 ACT 1 BUF 0)         Step #13.00 (0ms ?*RT. ?UPS, TraCI: 49ms, vehicles TOT 1 ACT 1 BUF 0)         Step #14.00 (0ms ?*RT. ?UPS, TraCI: 45ms, vehicles TOT 1 ACT 1 BUF 0)         Step #15.00 (0ms ?*RT. ?UPS, TraCI: 52ms, vehicles TOT 1 ACT 1 BUF 0)         Step #16.00 (0ms ?*RT. ?UPS, TraCI: 52ms, vehicles TOT 1 ACT 1 BUF 0)         Step #17.00 (0ms ?*RT. ?UPS, TraCI: 68ms, vehicles TOT 1 ACT 1 BUF 0)         Step #18.00 (0ms ?*RT. ?UPS, TraCI: 51ms, vehicles TOT 1 ACT 0 BUF 0)         Step #19.00 (0ms ?*RT. ?UPS, TraCI: 32ms, vehicles TOT 1 ACT 0 BUF 0)         Step #20.00 (0ms ?*RT. ?UPS, TraCI: 36ms, vehicles TOT 1 ACT 0 BUF 0)         Step #21.00 (0ms ?*RT. ?UPS, TraCI: 33ms, vehicles TOT 1 ACT 0 BUF 0)         Step #22.00 (0ms ?*RT. ?UPS, TraCI: 33ms, vehicles TOT 1 ACT 0 BUF 0)         Step #23.00 (0ms ?*RT. ?UPS, TraCI: 29ms, vehicles TOT 1 ACT 0 BUF 0)         Step #24.00 (0ms ?*RT. ?UPS, TraCI: 34ms, vehicles TOT 1 ACT 0 BUF 0)         Step #25.00 (0ms ?*RT. ?UPS, TraCI: 2ms, vehicles TOT 1 ACT 0 BUF 0)          
+
 Success.
 Elapsed time (in seconds): 4.00
