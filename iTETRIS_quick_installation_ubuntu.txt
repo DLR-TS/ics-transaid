@@ -41,8 +41,17 @@ $ make install prefix=$PWD/..
 $ cd ..
 
 --------------------------------
-Step 6 - Build iTETRIS app
-$ cd iTETRIS-Applications/traffic-monitor
+# Step 6 [optional, rather use testApp] - Build iTETRIS app
+# $ cd iTETRIS-Applications/traffic-monitor
+# $ autoreconf -i
+# $ ./configure
+# $ make -j
+# $ make install prefix=$PWD/../..
+# $ cd ../..
+
+--------------------------------
+Step 7 - Build testApp
+$ cd iTETRIS-Applications/testApp
 $ autoreconf -i
 $ ./configure
 $ make -j
@@ -50,14 +59,22 @@ $ make install prefix=$PWD/../..
 $ cd ../..
 
 --------------------------------
-Step 7 - Run the application
+Step 8 - Set required environment variables
 $ export PATH=$SUMO_HOME/bin:$PWD/bin:$PATH
 $ export LD_LIBRARY_PATH=$PWD/lib
-$ cd iTETRIS-Applications/traffic-monitor/acosta
+
+--------------------------------
+# Step 9 [optional, rather use testApp] - Run the iTETRIS application
+# $ cd iTETRIS-Applications/traffic-monitor/acosta
+# $ iCS -c itetris-config-file-gui-ns3.20.xml
+
+--------------------------------
+Step 10 - Run the iTETRIS application
+$ cd iTETRIS-Applications/testApp/testScenario
 $ iCS -c itetris-config-file-gui-ns3.20.xml
 
 --------------------------------
-Step 8 - Run the tests
+Step 11 - Run the tests
 $ cd iCS/tests/
 $ ./runTests.sh
 
