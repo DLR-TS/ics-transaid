@@ -78,9 +78,7 @@ namespace testapp
 
 		struct Command
 		{
-				Command()
-				{
-				}
+				Command() {};
 				Command(int id, CommandType t)
 				{
 					commandId = id;
@@ -220,13 +218,28 @@ namespace testapp
 				static int AddValueSetStorage(tcpip::Storage & sumoQuery, const int commandId, const int variableId,
 						const std::string & objId, const int newValueType, const tcpip::Storage & newValueStorage);
 
+
+                /// @brief return the value type of the given traci variable
+				/// @todo  If a new variable type is to be used, it has to be added in createValueMap()
+                static int getValueType(int varID);
+
 			private:
 				TraciHelper();
 				virtual ~TraciHelper();
 				static TraciHelper m_instance;
 
 				std::map<const int, Command> m_commandList;
-				static int m_executionIdCounter;
+
+		        static int m_executionIdCounter;
+
+		        static std::map<const int, int> createValueMap() {
+		            std::map<const int, int> ret;
+                    ret[VARIABLE_SPEED] = TYPE_DOUBLE;
+                    ret[VARIABLE_MAX_SPEED] = TYPE_DOUBLE;
+		            return ret;
+		        }
+
+                static std::map<const int, int> m_valueMap;
 		};
 
 	} /* namespace application */

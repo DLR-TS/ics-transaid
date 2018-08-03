@@ -208,7 +208,13 @@ namespace testapp
 				 */
 				int traciGetSpeed;
 				int traciSetMaxSpeed;
-				void AddTraciSubscription();
+
+				/// @brief schedule a traci command to be executed
+				/// @param[in] cmdID traci command id
+				/// @param[in] varID traci variable id
+				/// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
+				void AddTraciSubscription(int cmdID, int varID, tcpip::Storage* value = 0);
+
 		};
 
 	} /* namespace application */

@@ -234,8 +234,12 @@ namespace testapp
 					it->second->Start();
 			}
 			m_traceStateChange(true);
+
 			//Example use of a traci command subscription
-			AddTraciSubscription();
+			AddTraciSubscription(GET_VEHICLE_VARIABLE, VARIABLE_SPEED);
+            tcpip::Storage maxSpeed;
+            maxSpeed.writeDouble(20);
+            AddTraciSubscription(CHANGE_VEHICLE_STATE, VARIABLE_MAX_SPEED, &maxSpeed);
 		}
 
 		void iCSInterface::Deactivate()
@@ -406,24 +410,23 @@ namespace testapp
 //			For a more general approach it can be used Command.type to check if the command was a value retrieval or
 //			a state change
 		}
-		void iCSInterface::AddTraciSubscription()
-		{
-			if (m_node->getSumoId() != INVALID_STRING)
-			{
-//				example: get the speed of a node
-				tcpip::Storage cmd1;
-				traciGetSpeed = TraciHelper::AddValueGetStorage(cmd1, GET_VEHICLE_VARIABLE, VARIABLE_SPEED,
-						m_node->getSumoId());
-				m_node->traciCommand(traciGetSpeed, cmd1);
 
-//				example: set the max speed of a node
-				tcpip::Storage cmd2;
-				tcpip::Storage maxSpeed;
-				maxSpeed.writeDouble(20);
-				traciSetMaxSpeed = TraciHelper::AddValueSetStorage(cmd2, CHANGE_VEHICLE_STATE, VARIABLE_MAX_SPEED,
-						m_node->getSumoId(), TYPE_DOUBLE, maxSpeed);
-				m_node->traciCommand(traciSetMaxSpeed, cmd2);
-			}
+		void iCSInterface::AddTraciSubscription(int cmdID, int varID, tcpip::Storage * value)
+		{
+            if (m_node->getSumoId() != INVALID_STRING)
+            {
+                tcpip::Storage sumoQuery;
+                if (value == 0) {
+                    traciGetSpeed = TraciHelper::AddValueGetStorage(sumoQuery, cmdID, varID, m_node->getSumoId());
+                    m_node->traciCommand(traciGetSpeed, sumoQuery);
+                } else {
+                    int type = TraciHelper::getValueType(varID);
+                    traciSetMaxSpeed = TraciHelper::AddValueSetStorage(sumoQuery, cmdID, varID,
+                            m_node->getSumoId(), TYPE_DOUBLE, *value);
+                    m_node->traciCommand(traciSetMaxSpeed, sumoQuery);
+                }
+            }
 		}
+
 	} /* namespace application */
 } /* namespace protocol */

@@ -44,6 +44,7 @@ namespace testapp
 	{
 		TraciHelper TraciHelper::m_instance;
 		int TraciHelper::m_executionIdCounter = 0;
+		std::map<const int, int> TraciHelper::m_valueMap = TraciHelper::createValueMap();
 
 		TraciHelper::TraciHelper()
 		{
@@ -264,8 +265,7 @@ namespace testapp
 		}
 
 		void TraciHelper::ValueSetStorage(tcpip::Storage & sumoQuery, const int commandId, const int variableId,
-				const std::string & objId, const int newValueType, const tcpip::Storage & newValueStorage)
-		{
+				const std::string & objId, const int newValueType, const tcpip::Storage & newValueStorage) {
 			sumoQuery.writeUnsignedByte(1 + 1 + 1 + 4 + objId.length() + 1 + newValueStorage.size()); // command length
 			sumoQuery.writeUnsignedByte(commandId); // command id
 			sumoQuery.writeUnsignedByte(variableId); // variable id
@@ -280,5 +280,14 @@ namespace testapp
 			ValueSetStorage(sumoQuery, commandId, variableId, objId, newValueType, newValueStorage);
 			return AddSetCommand(commandId);
 		}
+
+
+        int TraciHelper::getValueType(int varID) {
+            if(m_valueMap.find(varID) == m_valueMap.end()) {
+                return 0;
+            }
+            return m_valueMap[varID];
+        }
+
 	} /* namespace application */
 } /* namespace protocol */
