@@ -11,3 +11,6 @@ log:log.txt
 errors:no process found
 output:iCS.exe{REPLACE iCS}
 log:StepT=[0-9]
+
+[unordered_text]
+output:testApp -> Server listening on port: 1987
