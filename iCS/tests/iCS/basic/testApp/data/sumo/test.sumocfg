@@ -7,5 +7,6 @@
     </traci_server>
     <output>
         <!-- tripinfo-output value="tripinfo_output.xml" / -->
+        <no-step-log value="true" />
     </output>
 </configuration>
