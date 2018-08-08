@@ -4,8 +4,11 @@ traffic_monitor_acosta
 # Tests simple example with extensive log, shortened sim time, and larger iCS step.
 traffic_monitor_acosta_infolog
 
-# Tests testApp execution
-testApp
+# Tests testApp execution without giving a test case. (Subscribes to speed and set max speed, kept as legacy test, may be removed if proper test for speed retrieval/setting exists)
+testApp_test_case_unknown
+
+# Tests testApp execution with test case simpleExecute
+testApp_simpleExecute
 
 # Runs testApp test case "setVType"
 testApp_setSUMOVType
