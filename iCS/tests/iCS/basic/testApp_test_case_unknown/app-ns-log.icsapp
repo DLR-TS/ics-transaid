@@ -288,7 +288,7 @@ Test App NS-Log File
 [2018-08-03T15:44:27.874] [INFO ] TracedCallback StateChange number of calls 1
 [2018-08-03T15:44:27.874] [INFO ] Schedule at 3000
 [2018-08-03T15:44:27.876] [INFO ] (Node 2): iCSInferface::TraciCommandResult executionId 1 command 0xa4 type GET
-[2018-08-03T15:44:27.876] [INFO ] (Node 2): iCSInferface::TraciCommandResult Speed of veh0 is 0
+[2018-08-03T15:44:27.876] [INFO ] (Node 2): iCSInferface::TraciCommandResult of veh0 for variable 0x40 is 0
 [2018-08-03T15:44:27.877] [INFO ] (Node 2): iCSInferface::TraciCommandResult executionId 2 command 0xc4 type SET
 [2018-08-03T15:44:27.877] [INFO ] (Node 2): iCSInferface::TraciCommandResult max speed correctly set
 [2018-08-03T15:44:27.878] [DEBUG] #@# Current timestep 2050
