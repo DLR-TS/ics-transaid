@@ -13,7 +13,7 @@ testApp -> ParseInfrastructure done
 testApp -> ParseSetup done
 testApp -> ParseSetup done
 testApp -> Load Configuration done
-testApp ->  Test case set to simpleExecute
+testApp ->  Test case set to setVType
 Loading configuration... done.
 main-inci v 3.20
 
