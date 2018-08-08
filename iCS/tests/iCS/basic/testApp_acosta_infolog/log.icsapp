@@ -1,7 +1,7 @@
 [28,250] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 4
 [28,250] [INFO] [facilities] messages to be deleted this time: 000000500000094,
 [28,250] [INFO] [LDMLogic::cleanup] IFMT size 3, removed 1. IFPT size 1, removed 0
-[28,250] Tics=28250 StepT=105 ns3T=7 %ns3=6.66667 DispMsgs=6 MsgQueue=4
+[28,250] Tics=28250 StepT=83 ns3T=8 %ns3=9.63855 DispMsgs=6 MsgQueue=4
 [28,250] [INFO] Reached CommandSimulationStep... = 
 [28,250] [INFO] Message Sent...
 [28,250] [INFO] Message Received.
@@ -2274,7 +2274,7 @@ Node 47 received 1 msgs. [99->0, ]
 [28,500] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 4
 [28,500] [INFO] [facilities] messages to be deleted this time: 000000500000095,
 [28,500] [INFO] [LDMLogic::cleanup] IFMT size 3, removed 1. IFPT size 1, removed 0
-[28,500] Tics=28500 StepT=44 ns3T=8 %ns3=18.1818 DispMsgs=8 MsgQueue=4
+[28,500] Tics=28500 StepT=22 ns3T=8 %ns3=36.3636 DispMsgs=8 MsgQueue=4
 [28,500] [INFO] Reached CommandSimulationStep... = 
 [28,500] [INFO] Message Sent...
 [28,500] [INFO] Message Received.
@@ -4539,7 +4539,7 @@ Node 47 received 1 msgs. [100->0, ]
 [28,500] [INFO] RefreshScheduledMessageMap() Current size=5. Removed=0 time1250
 [28,750] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 4
 [28,750] [INFO] [LDMLogic::cleanup] IFMT size 4, removed 0. IFPT size 1, removed 0
-[28,750] Tics=28750 StepT=42 ns3T=8 %ns3=19.0476 DispMsgs=7 MsgQueue=5
+[28,750] Tics=28750 StepT=23 ns3T=8 %ns3=34.7826 DispMsgs=7 MsgQueue=5
 [28,750] [INFO] Reached CommandSimulationStep... = 
 [28,750] [INFO] Message Sent...
 [28,750] [INFO] Message Received.
@@ -6807,7 +6807,7 @@ Node 45 received 1 msgs. [101->0, ]
 [29,000] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 5
 [29,000] [INFO] [facilities] messages to be deleted this time: 000000500000096,
 [29,000] [INFO] [LDMLogic::cleanup] IFMT size 4, removed 1. IFPT size 1, removed 0
-[29,000] Tics=29000 StepT=42 ns3T=7 %ns3=16.6667 DispMsgs=7 MsgQueue=5
+[29,000] Tics=29000 StepT=22 ns3T=8 %ns3=36.3636 DispMsgs=7 MsgQueue=5
 [29,000] [INFO] Reached CommandSimulationStep... = 
 [29,000] [INFO] Message Sent...
 [29,000] [INFO] Message Received.
@@ -6896,7 +6896,7 @@ Node 47 received 1 msgs. [102->0, ]
 
 [29,000] [INFO] AddNode() Added node. icsId=88, ns3Id=87, sumoId=Silvani_11_12. Assing=1
 [29,000] [INFO] iCS --> Notifying the application of the creation of node 88 at TS 29000
-[29,000] [INFO] .. Command acknowledged (1), [description: Ignoring node creation for 88]
+[29,000] [INFO] .. Command acknowledged (1), [description: Create node 88]
 [29,000] [INFO] VehicleNode() Created vehicle with iCS ID: 89
 [29,000] [INFO] RunOneSumoTimeStep() vehicle XXI_Aprile_7_8  entered the simulation. Assigned iCS-ID 89
 [29,000] [INFO] .. Command acknowledged (164), [description: ]
@@ -6919,7 +6919,7 @@ Node 47 received 1 msgs. [102->0, ]
 
 [29,000] [INFO] AddNode() Added node. icsId=89, ns3Id=88, sumoId=XXI_Aprile_7_8. Assing=1
 [29,000] [INFO] iCS --> Notifying the application of the creation of node 89 at TS 29000
-[29,000] [INFO] .. Command acknowledged (1), [description: Ignoring node creation for 89]
+[29,000] [INFO] .. Command acknowledged (1), [description: Create node 89]
 [29,000] [INFO] .. Command acknowledged (17), [description: ActivateNode()]
 
 [29,000] [INFO] .. Command acknowledged (164), [description: ]
@@ -10448,7 +10448,7 @@ Node 47 received 1 msgs. [102->0, ]
 [29,250] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 5
 [29,250] [INFO] [facilities] messages to be deleted this time: 000000500000097,
 [29,250] [INFO] [LDMLogic::cleanup] IFMT size 4, removed 1. IFPT size 1, removed 0
-[29,250] Tics=29250 StepT=118 ns3T=10 %ns3=8.47458 DispMsgs=8 MsgQueue=5
+[29,250] Tics=29250 StepT=95 ns3T=8 %ns3=8.42105 DispMsgs=8 MsgQueue=5
 [29,250] [INFO] Reached CommandSimulationStep... = 
 [29,250] [INFO] Message Sent...
 [29,250] [INFO] Message Received.
@@ -12755,7 +12755,7 @@ Node 47 received 1 msgs. [103->0, ]
 [29,500] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 5
 [29,500] [INFO] [facilities] messages to be deleted this time: 000000500000098,
 [29,500] [INFO] [LDMLogic::cleanup] IFMT size 4, removed 1. IFPT size 0, removed 0
-[29,500] Tics=29500 StepT=44 ns3T=7 %ns3=15.9091 DispMsgs=8 MsgQueue=4
+[29,500] Tics=29500 StepT=24 ns3T=8 %ns3=33.3333 DispMsgs=8 MsgQueue=4
 [29,500] [INFO] Reached CommandSimulationStep... = 
 [29,500] [INFO] Message Sent...
 [29,500] [INFO] Message Received.
@@ -15021,7 +15021,7 @@ Node 47 received 1 msgs. [103->0, ]
 [29,750] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 4
 [29,750] [INFO] [facilities] messages to be deleted this time: 000000500000099,
 [29,750] [INFO] [LDMLogic::cleanup] IFMT size 3, removed 1. IFPT size 1, removed 0
-[29,750] Tics=29750 StepT=38 ns3T=7 %ns3=18.4211 DispMsgs=0 MsgQueue=4
+[29,750] Tics=29750 StepT=20 ns3T=6 %ns3=30 DispMsgs=0 MsgQueue=4
 [29,750] [INFO] Reached CommandSimulationStep... = 
 [29,750] [INFO] Message Sent...
 [29,750] [INFO] Message Received.
