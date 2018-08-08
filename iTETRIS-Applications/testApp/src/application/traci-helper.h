@@ -39,6 +39,7 @@
 
 #include <map>
 #include "tcpip/storage.h"
+//#include "../../../sumo/src/traci-server/TraCIConstants.h"
 
 // result type: Ok
 #define SUMO_RTYPE_OK 0x00
@@ -59,13 +60,13 @@
 // string
 #define TYPE_STRING 0x0C
 // command: get vehicle variable
-#define GET_VEHICLE_VARIABLE 0xa4
+#define CMD_GET_VEHICLE_VARIABLE 0xa4
 // variable: speed
-#define VARIABLE_SPEED 0x40
+#define VAR_SPEED 0x40
 // command: Change Vehicle State
-#define CHANGE_VEHICLE_STATE 0xc4
+#define CMD_SET_VEHICLE_VARIABLE 0xc4
 // variable: max speed
-#define VARIABLE_MAX_SPEED 0x41
+#define VAR_MAXSPEED 0x41
 
 namespace testapp
 {
@@ -234,8 +235,8 @@ namespace testapp
 
 		        static std::map<const int, int> createValueMap() {
 		            std::map<const int, int> ret;
-                    ret[VARIABLE_SPEED] = TYPE_DOUBLE;
-                    ret[VARIABLE_MAX_SPEED] = TYPE_DOUBLE;
+                    ret[VAR_SPEED] = TYPE_DOUBLE;
+                    ret[VAR_MAXSPEED] = TYPE_DOUBLE;
 		            return ret;
 		        }
 
