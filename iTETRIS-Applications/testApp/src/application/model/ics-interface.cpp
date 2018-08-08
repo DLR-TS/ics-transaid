@@ -242,8 +242,10 @@ namespace testapp
                 tcpip::Storage maxSpeed;
                 maxSpeed.writeDouble(20);
                 AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_MAXSPEED, &maxSpeed);
-			} else if (ProgramConfiguration::GetTestCase()==TEST_CASE_EXECUTE) {
-			    // do nothing
+            } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_EXECUTE) {
+                // do nothing
+            } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_ACOSTA) {
+                // do nothing - maintain test results of traffic monitor demo app
             } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_SETVTYPE) {
 //              AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VARIABLE_);
 

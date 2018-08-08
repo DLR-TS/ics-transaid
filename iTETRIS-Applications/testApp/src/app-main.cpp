@@ -127,6 +127,8 @@ void loadOptionFile()
                   ProgramConfiguration::SetTestCase(TEST_CASE_EXECUTE);
               } else if (value=="setVType"){
                   ProgramConfiguration::SetTestCase(TEST_CASE_SETVTYPE);
+              } else if (value=="acosta"){
+                  ProgramConfiguration::SetTestCase(TEST_CASE_ACOSTA);
               } else {
                   testCaseExists = false;
               }
