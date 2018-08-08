@@ -209,6 +209,7 @@ namespace testapp
 				virtual ~TraciHelper();
 				static TraciHelper m_instance;
 
+				// map of active traci commands: executionID -> command
 				std::map<const int, Command> m_commandList;
 
 		        static int m_executionIdCounter;
