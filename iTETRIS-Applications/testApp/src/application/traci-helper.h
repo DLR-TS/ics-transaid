@@ -39,7 +39,7 @@
 
 #include <map>
 #include "tcpip/storage.h"
-//#include "../../../sumo/src/traci-server/TraCIConstants.h"
+#include "../../../sumo/src/traci-server/TraCIConstants.h"
 
 // result type: Ok
 #define SUMO_RTYPE_OK 0x00
@@ -47,26 +47,6 @@
 #define SUMO_RTYPE_NOTIMPLEMENTED 0x01
 // result type: error
 #define SUMO_RTYPE_ERR 0xFF
-// unsigned byte
-#define TYPE_UBYTE 0x07
-// signed byte
-#define TYPE_BYTE 0x08
-// 32 bit integer
-#define TYPE_INTEGER 0x09
-// float
-#define TYPE_FLOAT 0x0A
-// double
-#define TYPE_DOUBLE 0x0B
-// string
-#define TYPE_STRING 0x0C
-// command: get vehicle variable
-#define CMD_GET_VEHICLE_VARIABLE 0xa4
-// variable: speed
-#define VAR_SPEED 0x40
-// command: Change Vehicle State
-#define CMD_SET_VEHICLE_VARIABLE 0xc4
-// variable: max speed
-#define VAR_MAXSPEED 0x41
 
 namespace testapp
 {
