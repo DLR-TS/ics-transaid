@@ -443,7 +443,7 @@ namespace testapp
 				{
 					NS_LOG_WARN(LogNode() <<"iCSInferface::TraciCommandResult Error in BeginValueRetrievalFromCommand");
 				}
-			} else if (executionId == traciSetCommands)
+			} else if (command.type == SET_COMMAND)
 			{
 				if (TraciHelper::VerifyCommand(executionId, traciReply))
 				{
@@ -468,13 +468,13 @@ namespace testapp
             {
                 tcpip::Storage sumoQuery;
                 if (value == 0) {
-                    traciGetCommands = TraciHelper::AddValueGetStorage(sumoQuery, cmdID, varID, m_node->getSumoId());
-                    m_node->traciCommand(traciGetCommands, sumoQuery);
+                    const int execID = TraciHelper::AddValueGetStorage(sumoQuery, cmdID, varID, m_node->getSumoId());
+                    m_node->traciCommand(execID, sumoQuery);
                 } else {
                     int type = TraciHelper::getValueType(varID);
-                    traciSetCommands = TraciHelper::AddValueSetStorage(sumoQuery, cmdID, varID,
+                    const int execID = TraciHelper::AddValueSetStorage(sumoQuery, cmdID, varID,
                             m_node->getSumoId(), TYPE_DOUBLE, *value);
-                    m_node->traciCommand(traciSetCommands, sumoQuery);
+                    m_node->traciCommand(execID, sumoQuery);
                 }
             }
 		}
