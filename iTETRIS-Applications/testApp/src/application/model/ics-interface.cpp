@@ -243,11 +243,7 @@ namespace testapp
                 maxSpeed.writeDouble(20);
                 AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_MAXSPEED, &maxSpeed);
 			} else if (ProgramConfiguration::GetTestCase()==TEST_CASE_EXECUTE) {
-                AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
-                tcpip::Storage maxSpeed;
-                maxSpeed.writeDouble(20);
-                AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_MAXSPEED, &maxSpeed);
-//              AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VARIABLE_);
+			    // do nothing
             } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_SETVTYPE) {
 //              AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VARIABLE_);
 
