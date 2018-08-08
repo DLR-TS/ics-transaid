@@ -121,14 +121,20 @@ void loadOptionFile()
       } else if (key == "test") {
           if(ProgramConfiguration::GetTestCase() != TEST_CASE_NONE) {
               Console::Warning(" Test case already set. Ignoring further values '"+value+"'");
-          } else if (value=="simpleExecute"){
-              ProgramConfiguration::SetTestCase(TEST_CASE_EXECUTE);
-              Console::Log(" Test case set to ", value.c_str());
-          } else if (value=="setVType"){
-              ProgramConfiguration::SetTestCase(TEST_CASE_SETVTYPE);
-              Console::Log(" Test case set to ", value.c_str());
           } else {
-              Console::Warning(" No test case '"+value+"' exists. Ignoring option.");
+              bool testCaseExists = true;
+              if (value=="simpleExecute"){
+                  ProgramConfiguration::SetTestCase(TEST_CASE_EXECUTE);
+              } else if (value=="setVType"){
+                  ProgramConfiguration::SetTestCase(TEST_CASE_SETVTYPE);
+              } else {
+                  testCaseExists = false;
+              }
+              if (testCaseExists) {
+                  Console::Log(" Test case set to ", value.c_str());
+              } else {
+                  Console::Warning(" No test case '"+value+"' exists. Ignoring option.");
+              }
           }
       }
     }
