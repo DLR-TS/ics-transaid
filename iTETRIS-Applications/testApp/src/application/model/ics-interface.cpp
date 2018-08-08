@@ -385,22 +385,65 @@ namespace testapp
 			}
 			NS_LOG_INFO(
 					LogNode() << "iCSInferface::TraciCommandResult executionId " << executionId << " command " << Log::toHex(command.commandId,2) << " type " << (command.type == GET_COMMAND ? "GET" : "SET"));
-			if (executionId == traciGetSpeed)
+			if (command.type == GET_COMMAND)
 			{
-
 				int varId;
 				std::string objId;
 				int varType;
 				if (TraciHelper::BeginValueRetrievalFromCommand(executionId, traciReply, varId, objId, varType))
 				{
 //					The varType is the type of the variable to be read
-					double speed = traciReply.readDouble();
-					NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult Speed of " << objId << " is " << speed);
+				    switch (varType) {
+				    case TYPE_DOUBLE:
+				    {
+				        double value = traciReply.readDouble();
+	                    NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << objId << " for variable " << Log::toHex(varId, 2) << " is " << value);
+				    }
+                    break;
+                    case TYPE_STRING:
+                    {
+                        std::string value = traciReply.readString();
+                        NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << objId << " for variable " << Log::toHex(varId, 2) << " is " << value);
+                    }
+                    break;
+                    case TYPE_INTEGER:
+                    {
+                        int value = traciReply.readInt();
+                        NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << objId << " for variable " << Log::toHex(varId, 2) << " is " << value);
+                    }
+                    break;
+                    case TYPE_BYTE:
+                    {
+                        int value = traciReply.readByte();
+                        NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << objId << " for variable " << Log::toHex(varId, 2) << " is " << value);
+                    }
+                    break;
+                    case TYPE_UBYTE:
+                    {
+                        int value = traciReply.readUnsignedByte();
+                        NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << objId << " for variable " << Log::toHex(varId, 2) << " is " << value);
+                    }
+                    break;
+                    case TYPE_STRINGLIST:
+                    {
+                        std::vector<std::string> value = traciReply.readStringList();
+                        std::stringstream ss;
+                        ss << "[";
+                        for (std::vector<std::string>::const_iterator i = value.begin(); i != value.end(); ++i) {
+                            ss  << *i << ", ";
+                        }
+                        ss << "]";
+                        NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << objId << " is " << ss.str());
+                    }
+                    break;
+				    default:
+				        NS_LOG_ERROR(LogNode() <<"iCSInferface::TraciCommandResult unknown/unimplemented return type " << Log::toHex(varType));
+				    }
 				} else
 				{
 					NS_LOG_WARN(LogNode() <<"iCSInferface::TraciCommandResult Error in BeginValueRetrievalFromCommand");
 				}
-			} else if (executionId == traciSetMaxSpeed)
+			} else if (executionId == traciSetCommands)
 			{
 				if (TraciHelper::VerifyCommand(executionId, traciReply))
 				{
@@ -425,13 +468,13 @@ namespace testapp
             {
                 tcpip::Storage sumoQuery;
                 if (value == 0) {
-                    traciGetSpeed = TraciHelper::AddValueGetStorage(sumoQuery, cmdID, varID, m_node->getSumoId());
-                    m_node->traciCommand(traciGetSpeed, sumoQuery);
+                    traciGetCommands = TraciHelper::AddValueGetStorage(sumoQuery, cmdID, varID, m_node->getSumoId());
+                    m_node->traciCommand(traciGetCommands, sumoQuery);
                 } else {
                     int type = TraciHelper::getValueType(varID);
-                    traciSetMaxSpeed = TraciHelper::AddValueSetStorage(sumoQuery, cmdID, varID,
+                    traciSetCommands = TraciHelper::AddValueSetStorage(sumoQuery, cmdID, varID,
                             m_node->getSumoId(), TYPE_DOUBLE, *value);
-                    m_node->traciCommand(traciSetMaxSpeed, sumoQuery);
+                    m_node->traciCommand(traciSetCommands, sumoQuery);
                 }
             }
 		}

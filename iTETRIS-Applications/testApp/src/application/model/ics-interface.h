@@ -203,12 +203,6 @@ namespace testapp
 				TracedCallback<server::Payload *> m_traceReceive;
 				TracedCallback<server::Payload *> m_traceSend;
 
-				/*
-				 * Example of usage of the SumoTraciCommand subscription
-				 */
-				int traciGetSpeed;
-				int traciSetMaxSpeed;
-
 				/// @brief schedule a traci command to be executed
 				/// @param[in] cmdID traci command id
 				/// @param[in] varID traci variable id
