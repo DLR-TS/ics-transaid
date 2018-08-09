@@ -188,11 +188,11 @@ namespace testapp
 				Log::WriteLog("MessageReceive: payload is NULL");
 		}
 
-		bool Node::applicationExecute(DirectionValueMap &data)
+		bool Node::applicationExecute(const int currentTimeStep, DirectionValueMap &data)
 		{
 			if (m_type == NT_VEHICLE_SHADOW)
 				return false;
-			return m_controller->Execute(data);
+			return m_controller->Execute(currentTimeStep, data);
 		}
 
 		void Node::send(server::Payload * payload, double time)

@@ -369,7 +369,7 @@ namespace testapp
 			return commHeader;
 		}
 
-		bool iCSInterface::Execute(DirectionValueMap &data)
+		bool iCSInterface::Execute(const int currentTimeStep, DirectionValueMap &data)
 		{
 			bool retVal = false;
 			for (BehaviourMap::const_iterator it = m_behaviours.begin(); it != m_behaviours.end(); ++it)

@@ -180,7 +180,7 @@ namespace testapp
 				success = applicationConfirmSubscription(commandId);
 				break;
 			case CMD_NOTIFY_APP_EXECUTE:
-				success = applicationExecute();
+				success = applicationExecute(m_currentTimeStep);
 				break;
 			case CMD_APP_CLOSE:
 				m_closeConnection = true;
@@ -404,7 +404,7 @@ namespace testapp
 			return true;
 		}
 
-		bool Server::applicationExecute()
+		bool Server::applicationExecute(const int currentTimeStep)
 		{
 			int nodeId = m_inputStorage.readInt();
 			//Reset the last seen counter
@@ -416,7 +416,7 @@ namespace testapp
 			// create reply message
 			writeStatusCmd(CMD_NOTIFY_APP_EXECUTE, APP_RTYPE_OK, "CMD_NOTIFY_APP_EXECUTE");
 			DirectionValueMap data;
-			if (m_nodeHandler->applicationExecute(nodeId, data))
+			if (m_nodeHandler->applicationExecute(nodeId, currentTimeStep, data))
 			{
 				Storage dataStorage;
 				dataStorage.writeUnsignedByte(data.size());

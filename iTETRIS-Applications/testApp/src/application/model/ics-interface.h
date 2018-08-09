@@ -161,12 +161,14 @@ namespace testapp
 				 * @return true if the message was for the node. False if the message has been discarded
 				 */
 				bool Receive(server::Payload * payload);
-				/**
-				 * @brief Called by the node classwhen iCS ask the application to execute.
-				 * @param[out] data Data to send back to iCS. The application has to fill the map
-				 * @return Whatever the application executed. If true data will be sent to iCS. If false data is discarded
-				 */
-				bool Execute(DirectionValueMap &data);
+
+                /**
+                 * @brief Called by the node class when iCS asks the application to execute.
+                 * @param[out] data Data to send back to iCS. The application has to fill the map
+                 * @return Whatever the application executed. If true data will be sent to iCS. If false data is discarded
+                 */
+                bool Execute(const int currentTimeStep, DirectionValueMap &data);
+
 				/**
 				 * @brief Called by the node class when the reply from a sumo command is received.
 				 * @param[in] executionId The id of the command.

@@ -144,7 +144,7 @@ namespace testapp
 				/**
 				 * @brief iCS asked the node to execute. This method will call iCSInferface::Execute
 				 */
-				virtual bool applicationExecute(DirectionValueMap &data);
+				virtual bool applicationExecute(const int currentTimeStep, DirectionValueMap &data);
 				/**
 				 * @brief The result of a sumo command has been received. This method will call iCSInferface::SumoTraciCommandResult
 				 */

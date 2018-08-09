@@ -199,14 +199,14 @@ namespace testapp
 			}
 		}
 
-		bool NodeHandler::applicationExecute(const int nodeId, DirectionValueMap &data)
+		bool NodeHandler::applicationExecute(const int nodeId, const int currentTimeStep, DirectionValueMap &data)
 		{
 			if (ProgramConfiguration::GetStartTime() >= CurrentTime::Now())
 				return false;
 			Node * node;
 			if (getNode(nodeId, node))
 			{
-				return node->applicationExecute(data);
+				return node->applicationExecute(currentTimeStep, data);
 			}
 			return false;
 		}

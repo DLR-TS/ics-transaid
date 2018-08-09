@@ -103,7 +103,7 @@ namespace testapp
 				std::string insertPayload(const Payload* payload, bool deleteOnRead = true);
 				void applicationMessageReceive(const std::vector<Message> & messages);
 				//returns if there is data to send to iCS
-				bool applicationExecute(const int nodeId, DirectionValueMap &data);
+				bool applicationExecute(const int nodeId, const int currentTimeStep, DirectionValueMap &data);
 				void ConfirmSubscription(const int nodeId, const int subscriptionId, const bool status);
 
 				void deleteNode(int);
