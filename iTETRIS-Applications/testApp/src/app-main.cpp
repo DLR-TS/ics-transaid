@@ -129,6 +129,8 @@ void loadOptionFile()
                   ProgramConfiguration::SetTestCase(TEST_CASE_SETVTYPE);
               } else if (value=="acosta"){
                   ProgramConfiguration::SetTestCase(TEST_CASE_ACOSTA);
+              } else if (value=="inductionLoop"){
+                  ProgramConfiguration::SetTestCase(TEST_CASE_INDUCTIONLOOP);
               } else {
                   testCaseExists = false;
               }
