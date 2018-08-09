@@ -19,3 +19,6 @@ testApp_setSUMOVType
 # Runs testApp test case "inductionLoop"
 # This subscribes to number of vehicles on the inductionLoop in every execution step  (could be done as persistent subscription) and if there is a vehicle, it reports more info.
 testApp_inductionLoop
+
+# Tests testApp execution with test case simpleExecute
+testApp_commSimple
