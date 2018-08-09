@@ -15,3 +15,6 @@ testApp_simpleExecute
 
 # Runs testApp test case "setVType"
 testApp_setSUMOVType
+
+# Runs testApp test case "inductionLoop"
+testApp_inductionLoop

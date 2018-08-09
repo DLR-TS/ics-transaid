@@ -9,6 +9,7 @@ log:log.txt
 app-log:app-log.txt
 app-ns-log:app-ns-log.txt
 app-data:app-data.txt
+detector:detector.xml
 
 [run_dependent_text]
 errors:no process found
@@ -20,8 +21,11 @@ log:^(\[[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}\] )(.+)$
 log:^(\[[0-9]{2},[0-9]{3}\] Elapsed time \(in seconds\): )([0-9]+)${REPLACE \1 ELAPSED_TIME}
 app-log:^(\[[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}\] )(.+)${REPLACE \2}
 app-ns-log:^(\[[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}\] )(.+)${REPLACE \2}
-
+detector:<!--{[->]}-->
 
 [unordered_text]
 output:testApp -> Server listening on port: 1987
 output:Loading configuration... done.
+
+[floating_point_tolerance]
+detector:0.0101
