@@ -377,6 +377,12 @@ namespace testapp
 				if (it->second->Execute(data))
 					retVal = true;
 			}
+
+			if (ProgramConfiguration::GetTestCase() == TEST_CASE_SETVTYPE && currentTimeStep == 10000) {
+			    // check vType at time 10.
+			    AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
+			}
+
 			return retVal;
 		}
 		void iCSInterface::TraciCommandResult(int executionId, tcpip::Storage & traciReply)
