@@ -70,7 +70,7 @@ namespace testapp
 				m_toSubscribe.push(SubscriptionHelper::GetMobilityInformation());
 			}
 
-			if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA) {
+			if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
 			    // in original demo-app this was included, but not needed for most simple test cases
                 if (!m_trafficLightSubscription)
                 {
