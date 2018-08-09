@@ -73,17 +73,22 @@ namespace testapp
 				RsuData data = ProgramConfiguration::GetRsuData(node->getId());
 
 				rsu->AddDirections(data.directions);
-				SubscribeBehaviour(rsu);
-				SubscribeBehaviour(new DataManager(this));
+
+				if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
+				    SubscribeBehaviour(rsu);
+				    SubscribeBehaviour(new DataManager(this));
+				}
 			} else
 			{
 				m_nodeType = nodeClass;
-				m_nodeSampler = new NodeSampler(this);
-				if (UseSink)
-					SubscribeBehaviour(new BehaviourNodeWithSink(this));
-				else
-					SubscribeBehaviour(new BehaviourNodeWithoutSink(this));
-
+				m_nodeSampler = NULL;
+	            if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
+	                m_nodeSampler = new NodeSampler(this);
+	                if (UseSink)
+	                    SubscribeBehaviour(new BehaviourNodeWithSink(this));
+	                else
+	                    SubscribeBehaviour(new BehaviourNodeWithoutSink(this));
+	            }
 			}
 			if (OutputHelper::Instance() != NULL)
 				OutputHelper::Instance()->RegisterNode(this);
@@ -94,7 +99,9 @@ namespace testapp
 		{
 			if (OutputHelper::Instance() != NULL)
 				OutputHelper::Instance()->RemoveNode(this);
-			delete m_nodeSampler;
+			if (m_nodeSampler != NULL){
+			    delete m_nodeSampler;
+			}
 			for (BehaviourMap::const_iterator it = m_behaviours.begin(); it != m_behaviours.end(); ++it)
 				delete it->second;
 		}
@@ -385,10 +392,10 @@ namespace testapp
 			    }
 			} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_INDUCTIONLOOP) {
                 // constantly query induction loop status via RSU
-			    if (m_node->isFixed()) {
-			        AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
-			    }
-			}
+                if (m_node->isFixed()) {
+                    AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
+                }
+            }
 
 			return retVal;
 		}
@@ -403,7 +410,7 @@ namespace testapp
 			}
 			NS_LOG_INFO(
 					LogNode() << "iCSInferface::TraciCommandResult executionId " << executionId << " command " << Log::toHex(command.commandId,2) << " type " << (command.type == GET_COMMAND ? "GET" : "SET"));
-			if (command.type == GET_COMMAND)
+			if (TraciHelper::IsGetCommand(command))
 			{
 				int varId;
 				std::string objId;

@@ -225,13 +225,15 @@ namespace testapp
 
 		void Node::addSubscriptions()
 		{
-			if (!m_subReceiveMessage)
-			{
-				//Subscribe to both
-				m_toSubscribe.push(SubscriptionHelper::ReceiveUnicast(m_id));
-				m_toSubscribe.push(SubscriptionHelper::ReceiveGeobroadcast(PROTOCOL_MESSAGE));
-				m_subReceiveMessage = true;
-			}
+		    if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
+		        if (!m_subReceiveMessage)
+		        {
+		            //Subscribe to both
+		            m_toSubscribe.push(SubscriptionHelper::ReceiveUnicast(m_id));
+		            m_toSubscribe.push(SubscriptionHelper::ReceiveGeobroadcast(PROTOCOL_MESSAGE));
+		            m_subReceiveMessage = true;
+		        }
+		    }
 		}
 
 		float Node::getPropagationRadius() const
