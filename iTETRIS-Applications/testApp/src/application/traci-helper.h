@@ -60,12 +60,12 @@ namespace testapp
 		struct Command
 		{
 				Command() {};
-				Command(int id, CommandType t)
-				{
-					commandId = id;
-					type = t;
-				}
-				int commandId;
+				Command(int cmdId, const int variableId, const std::string & objId, CommandType t) :
+				    commandId(cmdId), variableId(variableId), objId(objId), type(t)
+	                {}
+                int commandId;
+                int variableId;
+                std::string objId;
 				CommandType type;
 
 		}typedef Command;
@@ -84,11 +84,11 @@ namespace testapp
 				/**
 				 * @brief Adds a value retrieval command the the map and returns an id to identify is later
 				 */
-				static int AddGetCommand(const int commandId);
+				static int AddGetCommand(const int commandId, const int variableId, const std::string & objId);
 				/**
 				 * @brief Adds a state changing command the the map and returns an id to identify is later
 				 */
-				static int AddSetCommand(const int commandId);
+				static int AddSetCommand(const int commandId, const int variableId, const std::string & objId);
 				/**
 				 * @brief Removes the id from the map
 				 */

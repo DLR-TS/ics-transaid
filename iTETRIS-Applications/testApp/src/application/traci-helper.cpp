@@ -61,15 +61,15 @@ namespace testapp
 			return current;
 		}
 
-		int TraciHelper::AddGetCommand(const int commandId)
+		int TraciHelper::AddGetCommand(const int commandId, const int variableId, const std::string & objId)
 		{
-			Command c(commandId, GET_COMMAND);
+			Command c(commandId, variableId, objId, GET_COMMAND);
 			return AddCommand(c);
 		}
 
-		int TraciHelper::AddSetCommand(const int commandId)
+		int TraciHelper::AddSetCommand(const int commandId, const int variableId, const std::string & objId)
 		{
-			Command c(commandId, SET_COMMAND);
+			Command c(commandId, variableId, objId, SET_COMMAND);
 			return AddCommand(c);
 		}
 
@@ -261,7 +261,7 @@ namespace testapp
 				const std::string & objId)
 		{
 			ValueGetStorage(sumoQuery, commandId, variableId, objId);
-			return AddGetCommand(commandId);
+			return AddGetCommand(commandId, variableId, objId);
 		}
 
 		void TraciHelper::ValueSetStorage(tcpip::Storage & sumoQuery, const int commandId, const int variableId,
@@ -278,7 +278,7 @@ namespace testapp
 				const std::string & objId, const int newValueType, const tcpip::Storage & newValueStorage)
 		{
 			ValueSetStorage(sumoQuery, commandId, variableId, objId, newValueType, newValueStorage);
-			return AddSetCommand(commandId);
+			return AddSetCommand(commandId, variableId, objId);
 		}
 
 

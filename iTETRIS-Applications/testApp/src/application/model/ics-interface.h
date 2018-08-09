@@ -176,8 +176,19 @@ namespace testapp
 				 */
 				void TraciCommandResult(const int executionId, tcpip::Storage & traciReply);
 
-
 			private:
+
+				/**
+				 * @name TraCI result processing
+				 * @brief App-specific traci result processing goes into these processors
+				 */
+				/// @{
+                void processTraCIIntegerResult(const int result, const Command& command);
+                void processTraCIDoubleResult(const double result, const Command& command);
+                void processTraCIStringResult(const std::string result, const Command& command);
+                void processTraCIStringListResult(const std::vector<std::string> result, const Command& command);
+                ///@}
+
 				/**
 				 * @brief Add a new behaviour to the node
 				 */

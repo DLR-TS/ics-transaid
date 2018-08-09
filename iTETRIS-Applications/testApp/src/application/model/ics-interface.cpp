@@ -385,10 +385,14 @@ namespace testapp
 			    }
 			} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_INDUCTIONLOOP) {
                 // constantly query induction loop status via RSU
+			    if (m_node->isFixed()) {
+			        AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
+			    }
 			}
 
 			return retVal;
 		}
+
 		void iCSInterface::TraciCommandResult(int executionId, tcpip::Storage & traciReply)
 		{
 			Command command;
@@ -410,44 +414,32 @@ namespace testapp
 				    switch (varType) {
 				    case TYPE_DOUBLE:
 				    {
-				        double value = traciReply.readDouble();
-	                    NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << objId << " for variable " << Log::toHex(varId, 2) << " is " << value);
+				        processTraCIDoubleResult(traciReply.readDouble(), command);
 				    }
                     break;
                     case TYPE_STRING:
                     {
-                        std::string value = traciReply.readString();
-                        NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << objId << " for variable " << Log::toHex(varId, 2) << " is " << value);
+                        processTraCIStringResult(traciReply.readString(), command);
                     }
                     break;
                     case TYPE_INTEGER:
                     {
-                        int value = traciReply.readInt();
-                        NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << objId << " for variable " << Log::toHex(varId, 2) << " is " << value);
+                        processTraCIIntegerResult(traciReply.readInt(), command);
                     }
                     break;
                     case TYPE_BYTE:
                     {
-                        int value = traciReply.readByte();
-                        NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << objId << " for variable " << Log::toHex(varId, 2) << " is " << value);
+                        processTraCIIntegerResult((int) traciReply.readByte(), command);
                     }
                     break;
                     case TYPE_UBYTE:
                     {
-                        int value = traciReply.readUnsignedByte();
-                        NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << objId << " for variable " << Log::toHex(varId, 2) << " is " << value);
+                        processTraCIIntegerResult((int) traciReply.readUnsignedByte(), command);
                     }
                     break;
                     case TYPE_STRINGLIST:
                     {
-                        std::vector<std::string> value = traciReply.readStringList();
-                        std::stringstream ss;
-                        ss << "[";
-                        for (std::vector<std::string>::const_iterator i = value.begin(); i != value.end(); ++i) {
-                            ss  << *i << ", ";
-                        }
-                        ss << "]";
-                        NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << objId << " is " << ss.str());
+                        processTraCIStringListResult(traciReply.readStringList(), command);
                     }
                     break;
 				    default:
@@ -475,6 +467,38 @@ namespace testapp
 //			For a more general approach it can be used Command.type to check if the command was a value retrieval or
 //			a state change
 		}
+
+        void iCSInterface::processTraCIIntegerResult(const int result, const Command& command) {
+            NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+
+            if (ProgramConfiguration::GetTestCase() == TEST_CASE_INDUCTIONLOOP) {
+                if (command.commandId == CMD_GET_INDUCTIONLOOP_VARIABLE
+                        && command.variableId == LAST_STEP_VEHICLE_NUMBER
+                        && result > 0) {
+                    AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_ID_LIST);
+                    AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_MEAN_SPEED);
+                    AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_OCCUPANCY);
+                }
+            }
+        }
+
+        void iCSInterface::processTraCIDoubleResult(const double result, const Command& command) {
+            NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void iCSInterface::processTraCIStringResult(const std::string result, const Command& command) {
+            NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void iCSInterface::processTraCIStringListResult(const std::vector<std::string> result, const Command& command) {
+            std::stringstream ss;
+            ss << "[";
+            for (std::vector<std::string>::const_iterator i = result.begin(); i != result.end(); ++i) {
+                ss  << *i << ", ";
+            }
+            ss << "]";
+            NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " is " << ss.str());
+        }
 
         void iCSInterface::AddTraciSubscription(int cmdID, int varID, int varTypeID, tcpip::Storage * value)
         {
