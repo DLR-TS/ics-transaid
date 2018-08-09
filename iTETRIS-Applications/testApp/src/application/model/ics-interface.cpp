@@ -247,8 +247,10 @@ namespace testapp
             } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_ACOSTA) {
                 // do nothing - maintain test results of traffic monitor demo app
             } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_SETVTYPE) {
-//              AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VARIABLE_);
-
+                AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
+                tcpip::Storage type;
+                type.writeString("type0");
+                AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
             }
 		}
 
