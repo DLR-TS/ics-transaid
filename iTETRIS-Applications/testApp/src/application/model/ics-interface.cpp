@@ -378,9 +378,13 @@ namespace testapp
 					retVal = true;
 			}
 
-			if (ProgramConfiguration::GetTestCase() == TEST_CASE_SETVTYPE && currentTimeStep == 10000) {
-			    // check vType at time 10.
-			    AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
+			if (ProgramConfiguration::GetTestCase() == TEST_CASE_SETVTYPE) {
+			    if (currentTimeStep == 10000) {
+			        // check vType at time 10.
+			        AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
+			    }
+			} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_INDUCTIONLOOP) {
+                // constantly query induction loop status via RSU
 			}
 
 			return retVal;
@@ -472,22 +476,29 @@ namespace testapp
 //			a state change
 		}
 
-		void iCSInterface::AddTraciSubscription(int cmdID, int varID, int varTypeID, tcpip::Storage * value)
-		{
-            if (m_node->getSumoId() != INVALID_STRING)
+        void iCSInterface::AddTraciSubscription(int cmdID, int varID, int varTypeID, tcpip::Storage * value)
+        {
+            if (!m_node->isFixed())
             {
-                tcpip::Storage sumoQuery;
-                if (value == 0) {
-                    const int execID = TraciHelper::AddValueGetStorage(sumoQuery, cmdID, varID, m_node->getSumoId());
-                    m_node->traciCommand(execID, sumoQuery);
-                } else {
-                    int type = TraciHelper::getValueType(varID);
-                    const int execID = TraciHelper::AddValueSetStorage(sumoQuery, cmdID, varID,
-                            m_node->getSumoId(), varTypeID, *value);
-                    m_node->traciCommand(execID, sumoQuery);
-                }
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(m_node->getSumoId(), cmdID, varID, varTypeID, value);
             }
-		}
+        }
+
+
+        void iCSInterface::AddTraciSubscription(std::string objID, int cmdID, int varID, int varTypeID, tcpip::Storage * value)
+        {
+            tcpip::Storage sumoQuery;
+            if (value == 0) {
+                const int execID = TraciHelper::AddValueGetStorage(sumoQuery, cmdID, varID, objID);
+                m_node->traciCommand(execID, sumoQuery);
+            } else {
+                int type = TraciHelper::getValueType(varID);
+                const int execID = TraciHelper::AddValueSetStorage(sumoQuery, cmdID, varID,
+                        objID, varTypeID, *value);
+                m_node->traciCommand(execID, sumoQuery);
+            }
+        }
 
 	} /* namespace application */
 } /* namespace protocol */
