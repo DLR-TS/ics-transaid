@@ -258,6 +258,8 @@ namespace testapp
                 tcpip::Storage type;
                 type.writeString("type0");
                 AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
+            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
+                         // TODO: Subscribe to receive CAMs
             }
 		}
 

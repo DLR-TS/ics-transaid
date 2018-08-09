@@ -131,6 +131,8 @@ void loadOptionFile()
                   ProgramConfiguration::SetTestCase(TEST_CASE_ACOSTA);
               } else if (value=="inductionLoop"){
                   ProgramConfiguration::SetTestCase(TEST_CASE_INDUCTIONLOOP);
+              } else if (value=="commSimple"){
+                  ProgramConfiguration::SetTestCase(TEST_CASE_COMMSIMPLE);
               } else {
                   testCaseExists = false;
               }
