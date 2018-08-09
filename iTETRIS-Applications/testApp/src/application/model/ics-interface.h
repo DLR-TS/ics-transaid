@@ -205,9 +205,10 @@ namespace testapp
 
 				/// @brief schedule a traci command to be executed
 				/// @param[in] cmdID traci command id
-				/// @param[in] varID traci variable id
+                /// @param[in] varID traci variable id
+                /// @param[in] varTypeID traci type id (only for set commands)
 				/// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
-				void AddTraciSubscription(int cmdID, int varID, tcpip::Storage* value = 0);
+				void AddTraciSubscription(int cmdID, int varID, int varTypeID = 0, tcpip::Storage* value = 0);
 
 		};
 

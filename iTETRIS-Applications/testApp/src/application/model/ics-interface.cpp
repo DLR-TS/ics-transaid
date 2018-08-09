@@ -241,7 +241,7 @@ namespace testapp
                 AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
                 tcpip::Storage maxSpeed;
                 maxSpeed.writeDouble(20);
-                AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_MAXSPEED, &maxSpeed);
+                AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_MAXSPEED, TYPE_DOUBLE, &maxSpeed);
             } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_EXECUTE) {
                 // do nothing
             } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_ACOSTA) {
@@ -449,7 +449,7 @@ namespace testapp
 			{
 				if (TraciHelper::VerifyCommand(executionId, traciReply))
 				{
-					NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult max speed correctly set");
+					NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult set command success");
 				} else
 				{
 					NS_LOG_WARN(LogNode() <<"iCSInferface::TraciCommandResult set command error");
@@ -464,7 +464,7 @@ namespace testapp
 //			a state change
 		}
 
-		void iCSInterface::AddTraciSubscription(int cmdID, int varID, tcpip::Storage * value)
+		void iCSInterface::AddTraciSubscription(int cmdID, int varID, int varTypeID, tcpip::Storage * value)
 		{
             if (m_node->getSumoId() != INVALID_STRING)
             {
@@ -475,7 +475,7 @@ namespace testapp
                 } else {
                     int type = TraciHelper::getValueType(varID);
                     const int execID = TraciHelper::AddValueSetStorage(sumoQuery, cmdID, varID,
-                            m_node->getSumoId(), TYPE_DOUBLE, *value);
+                            m_node->getSumoId(), varTypeID, *value);
                     m_node->traciCommand(execID, sumoQuery);
                 }
             }
