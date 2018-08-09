@@ -475,9 +475,9 @@ namespace testapp
                 if (command.commandId == CMD_GET_INDUCTIONLOOP_VARIABLE
                         && command.variableId == LAST_STEP_VEHICLE_NUMBER
                         && result > 0) {
-                    AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_ID_LIST);
-                    AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_MEAN_SPEED);
-                    AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_OCCUPANCY);
+//                    AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_ID_LIST);
+//                    AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_MEAN_SPEED);
+//                    AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_OCCUPANCY);
                 }
             }
         }
