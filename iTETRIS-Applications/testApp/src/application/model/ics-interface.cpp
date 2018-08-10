@@ -340,7 +340,7 @@ namespace testapp
 			Header* commHeader = DoSend(dstType, header, pid, ID_ALL, messageCategory);
 
 			NS_LOG_DEBUG(
-					LogNode() << "[" << Scheduler::GetCurrentTime() << "]Sent packet. ItsHeader:" << PrintHeader(commHeader) << ", and following " << header->Name() << ": " << PrintHeader(header));
+                    LogNode() << "[" << Scheduler::GetCurrentTime() << "] Sent packet. Its Header: " << PrintHeader(commHeader) << ", and following " << header->Name() << ": " << PrintHeader(header));
 		}
 
 		void iCSInterface::SendTo(int destId, Header* header, ProtocolId pid, const int messageCategory)
@@ -350,7 +350,7 @@ namespace testapp
 			Header* commHeader = DoSend(NT_ALL, header, pid, destId, messageCategory);
 
 			NS_LOG_DEBUG(
-					LogNode() << "[" << Scheduler::GetCurrentTime() << "]Sent packet to node " << destId << ". ItsHeader:" << PrintHeader(commHeader) << ", and following " << header->Name() << ": " << PrintHeader(header));
+                    LogNode() << "[" << Scheduler::GetCurrentTime() << "] Sent packet to node " << destId << ". Its Header:" << PrintHeader(commHeader) << ", and following " << header->Name() << ": " << PrintHeader(header));
 		}
 
 		Header* iCSInterface::DoSend(NodeType dstType, Header* header, ProtocolId pid, int destinationId, const int messageCategory)
