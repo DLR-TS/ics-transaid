@@ -161,11 +161,11 @@ namespace testapp
 				/**
 				 * @brief Send a geobroadcast message
 				 */
-				virtual void send(server::Payload * payload, double time);
+				virtual void send(server::Payload * payload, double time, const int messageCategory);
 				/**
 				 * @brief Send a unicast message
 				 */
-				virtual void sendTo(const int destinationId, server::Payload * payload, double time);
+				virtual void sendTo(const int destinationId, server::Payload * payload, double time, const int messageCategory);
 				/**
 				 * @brief Create the subscription to execute the command
 				 */

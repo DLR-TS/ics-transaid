@@ -35,9 +35,9 @@
  ***************************************************************************************/
 
 #include "behaviour-node.h"
-
 #include "ics-interface.h"
 #include "node-sampler.h"
+#include "../../app-commands-subscriptions-constants.h"
 
 namespace testapp
 {
@@ -195,7 +195,7 @@ namespace testapp
 			responseHeader->setVehicleMovement(node.conformantDirection.vMov);
 			responseHeader->setLastMessage(last);
 
-			GetController()->SendTo(rsu.nodeId, responseHeader, PID_SPEED);
+			GetController()->SendTo(rsu.nodeId, responseHeader, PID_SPEED, PROTOCOL_MESSAGE);
 			m_traceSendData(node);
 			NS_LOG_DEBUG(
 					Log() << "Sent beacon response to RSU " << rsu.nodeId << " for direction=" << rsu.conformantDirection << " distance=" << distance);
@@ -287,7 +287,7 @@ namespace testapp
 			responseHeader->setVehicleMovement(node.conformantDirection.vMov);
 			responseHeader->setLastMessage(false);
 
-			GetController()->SendTo(rsu.nodeId, responseHeader, PID_SPEED);
+			GetController()->SendTo(rsu.nodeId, responseHeader, PID_SPEED, PROTOCOL_MESSAGE);
 			m_traceSendData(node);
 			NS_LOG_DEBUG(
 					Log() << "Sent beacon response to RSU " << rsu.nodeId << " for direction=" << rsu.conformantDirection << " distance=" << distance);
@@ -313,7 +313,7 @@ namespace testapp
 			header->setVehicleMovement(rsu.conformantDirection.vMov);
 			header->setSourceDirection(node.direction);
 
-			GetController()->SendTo(rsu.nodeId, header, PID_SPEED);
+			GetController()->SendTo(rsu.nodeId, header, PID_SPEED, PROTOCOL_MESSAGE);
 			m_traceSendData(node);
 			NS_LOG_DEBUG(
 					Log() << "Sent NoLongerConformant to RSU " << rsu.nodeId << ". My dir="<<node.direction<<", expected dir=" << rsu.conformantDirection<<". Dist="<<node.distance);

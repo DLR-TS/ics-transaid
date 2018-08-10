@@ -147,14 +147,16 @@ namespace testapp
 				 * @param[in] header Message to send
 				 * @param[in] pid Protocol id
 				 */
-				void Send(NodeType dstType, Header* header, ProtocolId pid);
+				void Send(NodeType dstType, Header* header, ProtocolId pid, const int messageCategory);
 				/**
 				 * @brief Used to send a Unicast message.
 				 * @param[in] destId Id of the destination node
 				 * @param[in] header Message to send
-				 * @param[in] pid Protocol id
+                 * @param[in] pid Protocol id
+                 * @param[in] messageCategory message category (used to filter received geobroadcast
+                 *                            messages on iCS side), @see SubscriptionHelper::ReceiveGeobroadcast()
 				 */
-				void SendTo(int destId, Header* header, ProtocolId pid);
+				void SendTo(int destId, Header* header, ProtocolId pid, const int messageCategory);
 				/**
 				 * @brief Called by the node class when the node has received the message from iCS
 				 * @param[in] payload Message received
@@ -200,7 +202,7 @@ namespace testapp
 				/**
 				 * @brief Common code called by Send and SendTo
 				 */
-				Header* DoSend(NodeType, Header*, ProtocolId, int);
+				Header* DoSend(NodeType, Header*, ProtocolId, int, const int messageCategory);
 
 				Node * m_node;
 				NodeSampler * m_nodeSampler;

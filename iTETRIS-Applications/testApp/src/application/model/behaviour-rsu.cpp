@@ -37,6 +37,7 @@
 #include "behaviour-rsu.h"
 #include "current-time.h"
 #include "ics-interface.h"
+#include "../../app-commands-subscriptions-constants.h"
 #include "log/console.h"
 
 namespace testapp
@@ -253,7 +254,7 @@ namespace testapp
 			header->setDirection(direction.dir);
 			header->setVehicleMovement(direction.vMov);
 			header->setMaxResponseTime(direction.time);
-			GetController()->Send(NT_VEHICLE, header, PID_SPEED);
+			GetController()->Send(NT_VEHICLE, header, PID_SPEED, PROTOCOL_MESSAGE);
 			NS_LOG_DEBUG(Log() << "Sent beacon for direction " << direction);
 
 			int nextPosition = position + 1 == m_directions.size() ? 0 : position + 1;

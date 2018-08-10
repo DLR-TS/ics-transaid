@@ -195,7 +195,7 @@ namespace testapp
 			return m_controller->Execute(currentTimeStep, data);
 		}
 
-		void Node::send(server::Payload * payload, double time)
+		void Node::send(server::Payload * payload, double time, const int messageCategory)
 		{
 			//Add the payload to the local storage
 			std::string key = server::Server::GetNodeHandler()->insertPayload(payload, false);
@@ -204,18 +204,18 @@ namespace testapp
 			Log::WriteLog(oss);
 			//Schedule the creation of the subscription.
 			m_toSubscribe.push(
-					SubscriptionHelper::SendGeobroadcast(m_id, payload->size(), PROTOCOL_MESSAGE,
+					SubscriptionHelper::SendGeobroadcast(m_id, payload->size(), messageCategory,
 							Circle(getPosition(), getPropagationRadius()), key, time));
 		}
 
-		void Node::sendTo(const int destinationId, server::Payload * payload, double time)
+		void Node::sendTo(const int destinationId, server::Payload * payload, double time, const int messageCategory)
 		{
 			std::string key = server::Server::GetNodeHandler()->insertPayload(payload, true);
 			ostringstream oss;
 			oss << "[Node " << m_id << "] send to " << destinationId << ". Key=" << key << ". Time=" << time;
 			Log::WriteLog(oss);
 			m_toSubscribe.push(
-					SubscriptionHelper::SendUnicast(m_id, payload->size(), PROTOCOL_MESSAGE, destinationId, key, time));
+					SubscriptionHelper::SendUnicast(m_id, payload->size(), messageCategory, destinationId, key, time));
 		}
 
 		void Node::traciCommand(const int executionId, tcpip::Storage & commandStorage)
@@ -233,6 +233,16 @@ namespace testapp
 		            m_toSubscribe.push(SubscriptionHelper::ReceiveGeobroadcast(PROTOCOL_MESSAGE));
 		            m_subReceiveMessage = true;
 		        }
+		    } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
+                //Subscribe to both
+                if (!m_subReceiveMessage) {
+                    if (!isFixed()) {
+                        // Mobile nodes can receive unicast
+                        m_toSubscribe.push(SubscriptionHelper::ReceiveUnicast(m_id));
+                    }
+                    m_toSubscribe.push(SubscriptionHelper::ReceiveGeobroadcast(MSGCAT_TESTAPP));
+                    m_subReceiveMessage = true;
+                }
 		    }
 		}
 

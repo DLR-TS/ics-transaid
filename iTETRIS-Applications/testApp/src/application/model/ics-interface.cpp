@@ -40,10 +40,12 @@
 #include "behaviour-node.h"
 #include "behaviour-rsu.h"
 #include "data-manager.h"
+#include "headers.h"
 #include "node.h"
 #include "node-sampler.h"
 #include "output-helper.h"
 #include "ics-interface.h"
+#include "../../app-commands-subscriptions-constants.h"
 
 namespace testapp
 {
@@ -331,27 +333,27 @@ namespace testapp
 			return true;
 		}
 
-		void iCSInterface::Send(NodeType dstType, Header* header, ProtocolId pid)
+		void iCSInterface::Send(NodeType dstType, Header* header, ProtocolId pid, const int messageCategory)
 		{
 			if (!m_active)
 				return;
-			Header* commHeader = DoSend(dstType, header, pid, ID_ALL);
+			Header* commHeader = DoSend(dstType, header, pid, ID_ALL, messageCategory);
 
 			NS_LOG_DEBUG(
 					LogNode() << "[" << Scheduler::GetCurrentTime() << "]Sent packet. ItsHeader:" << PrintHeader(commHeader) << ", and following " << header->Name() << ": " << PrintHeader(header));
 		}
 
-		void iCSInterface::SendTo(int destId, Header* header, ProtocolId pid)
+		void iCSInterface::SendTo(int destId, Header* header, ProtocolId pid, const int messageCategory)
 		{
 			if (!m_active)
 				return;
-			Header* commHeader = DoSend(NT_ALL, header, pid, destId);
+			Header* commHeader = DoSend(NT_ALL, header, pid, destId, messageCategory);
 
 			NS_LOG_DEBUG(
 					LogNode() << "[" << Scheduler::GetCurrentTime() << "]Sent packet to node " << destId << ". ItsHeader:" << PrintHeader(commHeader) << ", and following " << header->Name() << ": " << PrintHeader(header));
 		}
 
-		Header* iCSInterface::DoSend(NodeType dstType, Header* header, ProtocolId pid, int destinationId)
+		Header* iCSInterface::DoSend(NodeType dstType, Header* header, ProtocolId pid, int destinationId, const int messageCategory)
 		{
 			// prepare its header
 			CommHeader* commHeader = new CommHeader();
@@ -372,7 +374,7 @@ namespace testapp
 			m_traceSend(payload);
 			//Like in the original protocol use only grobroadcast messages
 			//if (dest == ID_ALL)
-			m_node->send(payload, Scheduler::GetCurrentTime());
+			m_node->send(payload, Scheduler::GetCurrentTime(), messageCategory);
 			//else
 			//  m_node->sendTo(dest, payload);
 			return commHeader;
@@ -396,6 +398,12 @@ namespace testapp
                 // constantly query induction loop status via RSU
                 if (m_node->isFixed()) {
                     AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
+                }
+            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
+                // constantly query induction loop status via RSU
+                if (m_node->isFixed()) {
+                    TestHeader * header = new TestHeader(PID_UNKNOWN, MT_RSU_BEACON, "RSU regular broadcast message");
+                    Send(NT_VEHICLE_FULL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
                 }
             }
 
