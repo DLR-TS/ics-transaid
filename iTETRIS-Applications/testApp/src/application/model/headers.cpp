@@ -54,6 +54,31 @@ namespace testapp
 			return outstr.str();
 		}
 
+
+
+		TestHeader::TestHeader(ProtocolId pid, MessageType msgType, std::string testMsg) :
+                        m_protocolId(pid), m_messageType(msgType), m_message(testMsg)
+                    {};
+
+        uint32_t
+        TestHeader::GetSerializedSize(void) const {
+            return 2 + m_message.size();
+        };
+        void
+        TestHeader::Print(std::ostream &os) const {
+            os << " [TestHeader] PId:" << m_protocolId << ", MsgTypeId:" << m_messageType << ", message:" << m_message << ", size:" << GetSerializedSize();
+        };
+        std::string
+        TestHeader::Name() const
+        {
+            return "TestHeader";
+        };
+        MessageType
+        TestHeader::getMessageType() const {
+            return m_messageType;
+        }
+
+
 ///CommHeader
 
 		CommHeader::CommHeader()

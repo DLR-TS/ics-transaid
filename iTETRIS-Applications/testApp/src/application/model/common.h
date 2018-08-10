@@ -60,7 +60,7 @@ typedef enum
 
 typedef enum
 {
-  PID_SPEED = 0x01
+    PID_UNKNOWN = 0, PID_SPEED = 0x01
 } ProtocolId;
 
 enum Type_Behaviour

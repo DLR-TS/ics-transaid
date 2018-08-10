@@ -62,6 +62,26 @@ namespace testapp
 		std::string PrintHeader(Header &header);
 		std::string PrintHeader(Header *header);
 
+
+        /**
+         * Minimal header. Used by test application
+         */
+        class TestHeader: public Header {
+        public:
+            TestHeader(ProtocolId pid, MessageType msgType, std::string testMsg);
+
+            uint32_t GetSerializedSize(void) const;
+            void Print(std::ostream &os) const;
+            std::string Name() const;
+            MessageType getMessageType() const;
+
+        private:
+            ProtocolId m_protocolId;
+            MessageType m_messageType;
+            std::string m_message;
+		};
+
+
 		/**
 		 * Common header always sent in every message.
 		 * It contains some information about the source node.
@@ -73,7 +93,7 @@ namespace testapp
 				CommHeader();
 
 				uint32_t GetSerializedSize(void) const;
-				void Print(std::ostream &os) const;
+				void Print(std::ostream &os) const ;
 				std::string Name() const
 				{
 					return "CommHeader";
