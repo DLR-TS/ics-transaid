@@ -195,7 +195,18 @@
 // reply: The application DID NOT execute //16
 #define APP_RESULT_OFF 0x10
 
-#define PROTOCOL_MESSAGE 11
+
+// ****************************************
+// MESSAGE CATEGORIES
+// Additional identifiers to filter received geobroadcast messages at iCS side
+// ****************************************
+
+// Used for protocolspeed / traffic-monitor demo app
+#define PROTOCOL_MESSAGE 0x0b
+
+// Used for testApp messages
+#define MSGCAT_TESTAPP 0x0c
+
 
 // ****************************************
 // RESULT TYPES
