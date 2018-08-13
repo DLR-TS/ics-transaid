@@ -207,6 +207,15 @@ namespace testapp
 				Node * m_node;
 				NodeSampler * m_nodeSampler;
 				NodeType m_nodeType;
+
+				/// @name Flags to be used by test cases
+				/// TODO: This and all the test case specific code should be transferred to corresponding Behaviour subclasses TestBehavior<TEST>
+				/// @{
+				/// @brief Vehicle check this if they responded to the RSU once
+//                bool m_registeredAtRSU;
+                /// @}
+
+
 				bool m_active;
 				double m_direction_tolerance;
 

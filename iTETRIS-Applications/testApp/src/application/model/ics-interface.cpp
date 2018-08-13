@@ -61,6 +61,8 @@ namespace testapp
 			m_active = false;
 			m_node = node;
 			m_direction_tolerance = DirectionTolerance;
+//			m_registeredAtRSU = false;
+            m_nodeSampler = NULL;
 
 			RegisterTrace("StateChange", m_traceStateChange);
 			RegisterTrace("Receive", m_traceReceive);
@@ -69,23 +71,21 @@ namespace testapp
 			if (nodeClass == NT_RSU)
 			{
 				m_nodeType = NT_RSU;
-				m_nodeSampler = NULL;
-
-				BehaviourRsu* rsu = new BehaviourRsu(this);
-				RsuData data = ProgramConfiguration::GetRsuData(node->getId());
-
-				rsu->AddDirections(data.directions);
 
 				if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
+	                BehaviourRsu* rsu = new BehaviourRsu(this);
+	                RsuData data = ProgramConfiguration::GetRsuData(node->getId());
+	                rsu->AddDirections(data.directions);
 				    SubscribeBehaviour(rsu);
 				    SubscribeBehaviour(new DataManager(this));
 				}
 			} else
 			{
 				m_nodeType = nodeClass;
-				m_nodeSampler = NULL;
+
 	            if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
 	                m_nodeSampler = new NodeSampler(this);
+
 	                if (UseSink)
 	                    SubscribeBehaviour(new BehaviourNodeWithSink(this));
 	                else
@@ -330,6 +330,27 @@ namespace testapp
 				NS_LOG_DEBUG(LogNode() << "Forwarded packet to " << ToString(it->second->GetType()));
 				it->second->Receive(payload, snr);
 			}
+
+
+//			if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
+//			    if (m_node->isFixed()) {
+//			        // TODO: react to registration of vehicle: send UNICAST response for scheduling a stop.
+//                    CommHeader * receivedHeader = (CommHeader *) payload->getHeader(testapp::server::PAYLOAD_END);
+//                    int source = receivedHeader->getSourceId();
+//                    TestHeader * newHeader = new TestHeader(PID_UNKNOWN, MT_RSU_BEACON, "RSU Vehicle stop advice");
+//                    SendTo(source, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+//			    } else {
+//                    // TODO: Respond *once* to test message, removal could be scheduled ... (see behaviours)
+//                    TestHeader * receivedHeader = (TestHeader *) payload->getHeader(testapp::server::PAYLOAD_FRONT);
+//			        if (!m_registeredAtRSU) {
+//	                    m_registeredAtRSU = true;
+//                        TestHeader * newHeader = new TestHeader(PID_UNKNOWN, MT_RSU_BEACON, "Vehicle RSU broadcast acknowledgement");
+//                        SendTo(NT_RSU, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+//			        }
+//			    }
+//			}
+
+
 			return true;
 		}
 
