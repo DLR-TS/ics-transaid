@@ -211,8 +211,8 @@ namespace testapp
 				/// @name Flags to be used by test cases
 				/// TODO: This and all the test case specific code should be transferred to corresponding Behaviour subclasses TestBehavior<TEST>
 				/// @{
-				/// @brief Vehicle check this if they responded to the RSU once
-//                bool m_registeredAtRSU;
+				/// @brief Vehicle check this if the RSU responded to their message.
+                bool m_acknowledgedByRSU;
                 /// @}
 
 

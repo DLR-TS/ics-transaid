@@ -74,6 +74,7 @@ namespace testapp
             void Print(std::ostream &os) const;
             std::string Name() const;
             MessageType getMessageType() const;
+            std::string getMessage() const;
 
         private:
             ProtocolId m_protocolId;

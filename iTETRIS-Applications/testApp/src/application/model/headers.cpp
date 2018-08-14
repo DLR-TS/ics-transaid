@@ -77,6 +77,10 @@ namespace testapp
         TestHeader::getMessageType() const {
             return m_messageType;
         }
+        std::string
+        TestHeader::getMessage() const {
+            return m_message;
+        }
 
 
 ///CommHeader

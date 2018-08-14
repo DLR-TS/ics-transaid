@@ -61,7 +61,7 @@ namespace testapp
 			m_active = false;
 			m_node = node;
 			m_direction_tolerance = DirectionTolerance;
-//			m_registeredAtRSU = false;
+			m_acknowledgedByRSU = false;
             m_nodeSampler = NULL;
 
 			RegisterTrace("StateChange", m_traceStateChange);
@@ -82,10 +82,8 @@ namespace testapp
 			} else
 			{
 				m_nodeType = nodeClass;
-
+				m_nodeSampler = new NodeSampler(this);
 	            if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
-	                m_nodeSampler = new NodeSampler(this);
-
 	                if (UseSink)
 	                    SubscribeBehaviour(new BehaviourNodeWithSink(this));
 	                else
@@ -244,9 +242,9 @@ namespace testapp
 			}
 			m_traceStateChange(true);
 
-			//Example use of a traci command subscription
-			if (ProgramConfiguration::GetTestCase()==TEST_CASE_NONE) {
-			    // conserve behaviour for old demo app
+            //Example use of a traci command subscription
+            if (ProgramConfiguration::GetTestCase()==TEST_CASE_NONE) {
+                // conserve behaviour for old demo app
                 AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
                 tcpip::Storage maxSpeed;
                 maxSpeed.writeDouble(20);
@@ -332,23 +330,26 @@ namespace testapp
 			}
 
 
-//			if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
-//			    if (m_node->isFixed()) {
-//			        // TODO: react to registration of vehicle: send UNICAST response for scheduling a stop.
-//                    CommHeader * receivedHeader = (CommHeader *) payload->getHeader(testapp::server::PAYLOAD_END);
-//                    int source = receivedHeader->getSourceId();
-//                    TestHeader * newHeader = new TestHeader(PID_UNKNOWN, MT_RSU_BEACON, "RSU Vehicle stop advice");
-//                    SendTo(source, header, PID_UNKNOWN, MSGCAT_TESTAPP);
-//			    } else {
-//                    // TODO: Respond *once* to test message, removal could be scheduled ... (see behaviours)
-//                    TestHeader * receivedHeader = (TestHeader *) payload->getHeader(testapp::server::PAYLOAD_FRONT);
-//			        if (!m_registeredAtRSU) {
-//	                    m_registeredAtRSU = true;
-//                        TestHeader * newHeader = new TestHeader(PID_UNKNOWN, MT_RSU_BEACON, "Vehicle RSU broadcast acknowledgement");
-//                        SendTo(NT_RSU, header, PID_UNKNOWN, MSGCAT_TESTAPP);
-//			        }
-//			    }
-//			}
+			if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
+			    if (m_node->isFixed()) {
+			        // TODO: react to registration of vehicle: send UNICAST response for scheduling a stop.
+                    CommHeader * receivedHeader = (CommHeader *) payload->getHeader(testapp::server::PAYLOAD_END);
+                    int source = receivedHeader->getSourceId();
+                    TestHeader * newHeader = new TestHeader(PID_UNKNOWN, MT_RSU_BEACON, "RSU Vehicle stop advice");
+                    SendTo(source, newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
+			    } else {
+                    // TODO: Respond to test message a limited number of times, removal could be scheduled ... (see behaviours)
+                    Header * receivedHeader = payload->getHeader(testapp::server::PAYLOAD_END);
+                    TestHeader* receivedTestHeader = dynamic_cast<TestHeader*>(receivedHeader);
+			        if (!m_acknowledgedByRSU && receivedTestHeader->getMessage() == "RSU regular broadcast message") {
+                        TestHeader * newHeader = new TestHeader(PID_UNKNOWN, MT_BEACON_RESPONSE, "Vehicle RSU broadcast acknowledgement");
+                        Send(NT_ALL, newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
+//                        SendTo(header->getSourceId(), newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
+			        } else if (receivedTestHeader->getMessage() == "RSU Vehicle stop advice") {
+			            m_acknowledgedByRSU = true;
+			        }
+			    }
+			}
 
 
 			return true;
@@ -421,10 +422,14 @@ namespace testapp
                     AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
                 }
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
-                // constantly query induction loop status via RSU
-                if (m_node->isFixed()) {
+                // constantly query induction loop status via RSU until time 8 secs
+                if (m_node->isFixed() && currentTimeStep < 8000) {
                     TestHeader * header = new TestHeader(PID_UNKNOWN, MT_RSU_BEACON, "RSU regular broadcast message");
                     Send(NT_VEHICLE_FULL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+                } else if (!m_node->isFixed() && currentTimeStep > 8000) {
+                    // After sec 8, vehicle starts broadcasting.
+                    TestHeader * header = new TestHeader(PID_UNKNOWN, MT_BEACON_RESPONSE, "Vehicle regular broadcast");
+                    SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
                 }
             }
 
