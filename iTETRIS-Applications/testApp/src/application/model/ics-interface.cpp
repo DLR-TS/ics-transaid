@@ -545,7 +545,7 @@ namespace testapp
 
         void iCSInterface::AddTraciSubscription(int cmdID, int varID, int varTypeID, tcpip::Storage * value)
         {
-            if (!m_node->isFixed())
+            if (m_node->getSumoId() != INVALID_STRING)
             {
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
                 AddTraciSubscription(m_node->getSumoId(), cmdID, varID, varTypeID, value);
