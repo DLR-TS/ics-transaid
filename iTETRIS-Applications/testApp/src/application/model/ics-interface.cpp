@@ -407,7 +407,7 @@ namespace testapp
 			bool retVal = false;
 			for (BehaviourMap::const_iterator it = m_behaviours.begin(); it != m_behaviours.end(); ++it)
 			{
-				if (it->second->Execute(data))
+				if (it->second->Execute(currentTimeStep, data))
 					retVal = true;
 			}
 
