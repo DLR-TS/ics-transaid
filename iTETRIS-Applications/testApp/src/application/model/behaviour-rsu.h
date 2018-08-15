@@ -103,7 +103,7 @@ namespace testapp
 
 				virtual bool IsSubscribedTo(ProtocolId pid) const;
 				virtual void Receive(server::Payload *payload, double snr);
-				virtual bool Execute(DirectionValueMap &data);
+				virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
 
 				TypeBehaviour GetType() const
 				{

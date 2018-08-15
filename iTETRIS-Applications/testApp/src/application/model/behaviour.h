@@ -94,7 +94,7 @@ namespace testapp
 				 * @param[out] data Data to send back to iCS. The application has to fill the map
 				 * @return Whatever the application executed. If true data will be sent to iCS. If false data is discarded
 				 */
-				virtual bool Execute(DirectionValueMap &data) = 0;
+				virtual bool Execute(const int currentTimeStep, DirectionValueMap &data) = 0;
 
 				virtual TypeBehaviour GetType() const
 				{

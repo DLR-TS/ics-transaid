@@ -180,7 +180,7 @@ namespace testapp
 			m_eventExecute = Scheduler::Schedule(ExecuteTime, &DataManager::EventExecute, this);
 		}
 
-		bool DataManager::Execute(DirectionValueMap &data)
+		bool DataManager::Execute(const int currentTimeStep, DirectionValueMap &data)
 		{
 			if (m_executeAtThisStep)
 			{

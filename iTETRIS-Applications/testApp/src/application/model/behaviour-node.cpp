@@ -87,7 +87,7 @@ namespace testapp
 		{
 		}
 
-		bool BehaviourNode::Execute(DirectionValueMap &data)
+		bool BehaviourNode::Execute(const int currentTimeStep, DirectionValueMap &data)
 		{
 			return false;
 		}

@@ -90,7 +90,7 @@ namespace testapp
 				/**
 				 * @brief Calls every protocol so in can execute
 				 */
-				virtual bool Execute(DirectionValueMap &data);
+				virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
 
 				TypeBehaviour GetType() const
 				{
