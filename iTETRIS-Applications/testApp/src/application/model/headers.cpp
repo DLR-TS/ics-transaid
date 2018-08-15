@@ -55,6 +55,7 @@ namespace testapp
 		}
 
 
+		uint16_t TestHeader::maxResponseTime = 100;
 
 		TestHeader::TestHeader(ProtocolId pid, MessageType msgType, std::string testMsg) :
                         m_protocolId(pid), m_messageType(msgType), m_message(testMsg)
@@ -80,6 +81,12 @@ namespace testapp
         std::string
         TestHeader::getMessage() const {
             return m_message;
+        }
+
+        uint16_t
+        TestHeader::getMaxResponseTime() const
+        {
+            return maxResponseTime;
         }
 
 

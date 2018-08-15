@@ -75,11 +75,16 @@ namespace testapp
             std::string Name() const;
             MessageType getMessageType() const;
             std::string getMessage() const;
+            uint16_t getMaxResponseTime() const;
 
         private:
             ProtocolId m_protocolId;
             MessageType m_messageType;
             std::string m_message;
+
+            /// @brief Maximal delay at which a response to a received message is scheduled (in ms)
+            /// (The specific values are sampled uniformly in [0, maxResponseTime]), @see BehaviourTestNode::Receive()
+            static uint16_t maxResponseTime;
 		};
 
 
