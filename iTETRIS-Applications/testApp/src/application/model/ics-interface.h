@@ -241,23 +241,6 @@ namespace testapp
 				TracedCallback<bool> m_traceStateChange;
 				TracedCallback<server::Payload *> m_traceReceive;
 				TracedCallback<server::Payload *> m_traceSend;
-
-                /// @brief schedule a traci command to be executed
-                /// @param[in] cmdID traci command id
-                /// @param[in] varID traci variable id
-                /// @param[in] varTypeID traci type id (only for set commands)
-                /// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
-                void AddTraciSubscription(int cmdID, int varID, int varTypeID = 0, tcpip::Storage* value = 0);
-
-
-                /// @brief schedule a traci command to be executed
-                /// @param[in] objID ID for the object to be addressed
-                /// @param[in] cmdID traci command id
-                /// @param[in] varID traci variable id
-                /// @param[in] varTypeID traci type id (only for set commands)
-                /// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
-                void AddTraciSubscription(std::string objID, int cmdID, int varID, int varTypeID = 0, tcpip::Storage* value = 0);
-
 		};
 
 	} /* namespace application */
