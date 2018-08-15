@@ -133,6 +133,8 @@ void loadOptionFile()
                   ProgramConfiguration::SetTestCase(TEST_CASE_INDUCTIONLOOP);
               } else if (value=="commSimple"){
                   ProgramConfiguration::SetTestCase(TEST_CASE_COMMSIMPLE);
+              } else if (value=="commSimple2"){
+                  ProgramConfiguration::SetTestCase(TEST_CASE_COMMSIMPLE2);
               } else {
                   testCaseExists = false;
               }

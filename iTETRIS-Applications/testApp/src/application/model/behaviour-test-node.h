@@ -51,46 +51,51 @@ namespace testapp
 		 */
 		class BehaviourTestNode: public BehaviourNode
 		{
-			public:
-				BehaviourTestNode(iCSInterface* controller);
+		private:
+		    struct ResponseInfo
+		    {
+		        int targetID;
+		        std::string message;
+		    };
+		public:
+		    BehaviourTestNode(iCSInterface* controller);
 
-				void Start();
+		    void Start();
 
-				virtual bool IsSubscribedTo(ProtocolId pid) const;
-				virtual void Receive(server::Payload *payload, double snr);
-				virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
-                /**
-                 * @brief Called after a random timeout when a test message is received, @see Receive()
-                 * @input[in] sendingRSU The source of the received message
-                 */
-                void EventSendResponse(NodeInfo sendingRSU);
+		    virtual bool IsSubscribedTo(ProtocolId pid) const;
+		    virtual void Receive(server::Payload *payload, double snr);
+		    virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
+		    /**
+		     * @brief Called after a random timeout when a test message is received, @see Receive()
+		     * @input[in] sendingRSU The source of the received message
+		     */
+		    void EventSendResponse(ResponseInfo response);
 
-                void abortWaitingForRSUResponse();
+		    void abortWaitingForRSUResponse();
 
-                TypeBehaviour GetType() const
-                {
-                    return Type();
-                }
+		    TypeBehaviour GetType() const
+		    {
+		        return Type();
+		    }
 
-                static TypeBehaviour Type()
-                {
-                    return TYPE_BEHAVIOUR_TEST_NODE;
-                }
+		    static TypeBehaviour Type()
+		    {
+		        return TYPE_BEHAVIOUR_TEST_NODE;
+		    }
 
-			private:
+		private:
+		    /// @name Flags to be used by test cases
+		    /// @{
+		    /// @brief Vehicle check this if the RSU responded to their message.
+		    bool m_waitForRSUAcknowledgement;
+		    /// @}
 
-                /// @name Flags to be used by test cases
-                /// @{
-                /// @brief Vehicle check this if the RSU responded to their message.
-                bool m_waitForRSUAcknowledgement;
-                /// @}
 
-
-                /// @name Events
-                /// @{
-                /// @brief used to refer to abort event scheduled at start
-                event_id m_eventAbortWaitingForRSU;
-                /// @}
+		    /// @name Events
+		    /// @{
+		    /// @brief used to refer to abort event scheduled at start
+		    event_id m_eventAbortWaitingForRSU;
+		    /// @}
 		};
 
 	} /* namespace application */

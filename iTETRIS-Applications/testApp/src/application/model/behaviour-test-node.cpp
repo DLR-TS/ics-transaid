@@ -70,10 +70,10 @@ namespace testapp
                 tcpip::Storage type;
                 type.writeString("type0");
                 GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
+            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE || ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
                 // Time to abort waiting for a response after insertion.
-                // Will be ineffective if communication runs as intended.
-                // Used for testing purposes before random offsets were assigned to messages.
+                // Will be ineffective if communication runs as intended (test case commSimple2).
+                // Used for testing purposes before random offsets were assigned to messages. (test case commSimple)
                 // (=> abort at 12000, as the test vehicle is inserted at t=2000)
                 const int endWaitingTime = 10000;
                 m_eventAbortWaitingForRSU = Scheduler::Schedule(endWaitingTime, &BehaviourTestNode::abortWaitingForRSUResponse, this);
@@ -106,35 +106,38 @@ namespace testapp
 
             TestHeader* testHeader;
             GetController()->GetHeader(payload, server::PAYLOAD_END, testHeader);
+            Header * receivedHeader = payload->getHeader(testapp::server::PAYLOAD_END);
+            TestHeader* receivedTestHeader = dynamic_cast<TestHeader*>(receivedHeader);
 
             NS_LOG_INFO(Log() << "Received a test message with content: " << testHeader->getMessage());
 
             if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
-                // TODO: Respond to test message a limited number of times, removal could be scheduled ... (see behaviours)
-                Header * receivedHeader = payload->getHeader(testapp::server::PAYLOAD_END);
-                TestHeader* receivedTestHeader = dynamic_cast<TestHeader*>(receivedHeader);
-                if (m_waitForRSUAcknowledgement && receivedTestHeader->getMessage() == "RSU regular broadcast message") {
-                    TestHeader * newHeader = new TestHeader(PID_UNKNOWN, MT_BEACON_RESPONSE, "Vehicle RSU broadcast acknowledgement");
-//                     TODO: Send with random offset
-//                    GetController()->Send(NT_ALL, newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
-//                        SendTo(header->getSourceId(), newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
-                } else if (receivedTestHeader->getMessage() == "RSU Vehicle stop advice") {
+                if (m_waitForRSUAcknowledgement && receivedTestHeader->getMessage() == "RSU Vehicle acknowledgement") {
                     Scheduler::Cancel(m_eventAbortWaitingForRSU);
-                    m_waitForRSUAcknowledgement = false;
+                    abortWaitingForRSUResponse();
+                    NS_LOG_DEBUG(Log() << "On reception of RSU Vehicle acknowledgement.");
+                }
+            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
+                // Random offset for responseTime
+                double responseTime = m_rnd.GetValue(m_responseTimeSpacing, testHeader->getMaxResponseTime() - m_responseTimeSpacing);
+                ResponseInfo response;
+                response.targetID = commHeader->getSourceId();
+                if (m_waitForRSUAcknowledgement && receivedTestHeader->getMessage() == "RSU regular broadcast message") {
+                    NS_LOG_DEBUG(Log() << "Vehicle " << GetController()->GetNode()->getId() << " sends response on reception of RSU broadcast message.");
+                    response.message = "Vehicle response to RSU broadcast";
+                    Scheduler::Cancel(m_eventResponse);
+                    m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestNode::EventSendResponse, this, response);
+                } else if (m_waitForRSUAcknowledgement && receivedTestHeader->getMessage() == "RSU Vehicle acknowledgement") {
+                    Scheduler::Cancel(m_eventAbortWaitingForRSU);
+                    abortWaitingForRSUResponse();
+                    NS_LOG_DEBUG(Log() << "On reception of RSU Vehicle acknowledgement.");
+                    // Send response
+                    response.message = "Vehicle response to RSU Vehicle acknowledgement";
+                    Scheduler::Cancel(m_eventResponse);
+                    m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestNode::EventSendResponse, this, response);
+                    NS_LOG_INFO(Log() << "Scheduled a test response in " << responseTime);
                 }
             }
-
-//
-//
-//
-//
-//            // Add a random time offset to the response submission
-//            double nextTime = m_rnd.GetValue(m_responseTimeSpacing,
-//                    testHeader->getMaxResponseTime() - m_responseTimeSpacing);
-//
-//            Scheduler::Cancel(m_eventResponse);
-//            m_eventResponse = Scheduler::Schedule(nextTime, &BehaviourTestNode::EventSendResponse, this, rsu);
-//            NS_LOG_INFO(Log() << "scheduled a test response in " << nextTime);
 		}
 
 		bool BehaviourTestNode::Execute(const int currentTimeStep, DirectionValueMap &data)
@@ -153,6 +156,12 @@ namespace testapp
                 // After t=8000, vehicle starts broadcasting until its broadcast is acknowledged or aborted at t = 12000
                 if (currentTimeStep > 8000 && m_waitForRSUAcknowledgement){
                     TestHeader * header = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, "Vehicle regular broadcast");
+                    GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+                }
+            } if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
+                // After t=8000, vehicle starts broadcasting until its broadcast is acknowledged or aborted at t = 12000
+                if (currentTimeStep > 8000 && m_waitForRSUAcknowledgement){
+                    TestHeader * header = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, "Vehicle regular broadcast");
                     // TODO: Send with random offset
                     GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
                 }
@@ -161,14 +170,17 @@ namespace testapp
 		}
 
 
-        void BehaviourTestNode::EventSendResponse(NodeInfo rsu)
+        void BehaviourTestNode::EventSendResponse(ResponseInfo response)
         {
             NS_LOG_FUNCTION(Log());
 
+            // React to perception of vehicle.
+            TestHeader * responseHeader = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, response.message);
+            GetController()->SendTo(response.targetID, responseHeader , PID_UNKNOWN, MSGCAT_TESTAPP);
 
-            NS_LOG_DEBUG(
-                    Log() << "Sent test response to RSU " << rsu.nodeId);
+            NS_LOG_DEBUG(Log() << "Sent test response to RSU " << response.targetID);
         }
+
 
         void BehaviourTestNode::abortWaitingForRSUResponse()
         {
