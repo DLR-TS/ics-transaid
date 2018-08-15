@@ -52,7 +52,8 @@ namespace testapp
 		BehaviourTestNode::BehaviourTestNode(iCSInterface* controller) :
 				BehaviourNode(controller)
 		{
-            m_acknowledgedByRSU = false;
+            m_waitForRSUAcknowledgement = true;
+            m_eventAbortWaitingForRSU = 0;
 		}
 
 		void BehaviourTestNode::Start()
@@ -70,7 +71,13 @@ namespace testapp
                 type.writeString("type0");
                 GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
-                 // TODO: Subscribe to receive CAMs?
+                // Time to abort waiting for a response after insertion.
+                // Will be ineffective if communication runs as intended.
+                // Used for testing purposes before random offsets were assigned to messages.
+                // (=> abort at 12000, as the test vehicle is inserted at t=2000)
+                const int endWaitingTime = 10000;
+                m_eventAbortWaitingForRSU = Scheduler::Schedule(endWaitingTime, &BehaviourTestNode::abortWaitingForRSUResponse, this);
+                // TODO: Subscribe to receive CAMs?
             }
 
 		}
@@ -106,13 +113,14 @@ namespace testapp
                 // TODO: Respond to test message a limited number of times, removal could be scheduled ... (see behaviours)
                 Header * receivedHeader = payload->getHeader(testapp::server::PAYLOAD_END);
                 TestHeader* receivedTestHeader = dynamic_cast<TestHeader*>(receivedHeader);
-                if (!m_acknowledgedByRSU && receivedTestHeader->getMessage() == "RSU regular broadcast message") {
+                if (m_waitForRSUAcknowledgement && receivedTestHeader->getMessage() == "RSU regular broadcast message") {
                     TestHeader * newHeader = new TestHeader(PID_UNKNOWN, MT_BEACON_RESPONSE, "Vehicle RSU broadcast acknowledgement");
-                    // TODO: Send with random offset
+//                     TODO: Send with random offset
 //                    GetController()->Send(NT_ALL, newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
 //                        SendTo(header->getSourceId(), newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
                 } else if (receivedTestHeader->getMessage() == "RSU Vehicle stop advice") {
-                    m_acknowledgedByRSU = true;
+                    Scheduler::Cancel(m_eventAbortWaitingForRSU);
+                    m_waitForRSUAcknowledgement = false;
                 }
             }
 
@@ -142,12 +150,12 @@ namespace testapp
                     GetController()->AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
                 }
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
-                // After sec 8, vehicle starts broadcasting.
-//                if (currentTimeStep > 8000){
-//                    TestHeader * header = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, "Vehicle regular broadcast");
-//                    // TODO: Send with random offset
-//                    GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
-//                }
+                // After t=8000, vehicle starts broadcasting until its broadcast is acknowledged or aborted at t = 12000
+                if (currentTimeStep > 8000 && m_waitForRSUAcknowledgement){
+                    TestHeader * header = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, "Vehicle regular broadcast");
+                    // TODO: Send with random offset
+                    GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+                }
             }
 			return false;
 		}
@@ -160,6 +168,13 @@ namespace testapp
 
             NS_LOG_DEBUG(
                     Log() << "Sent test response to RSU " << rsu.nodeId);
+        }
+
+        void BehaviourTestNode::abortWaitingForRSUResponse()
+        {
+            NS_LOG_FUNCTION(Log());
+            m_waitForRSUAcknowledgement = false;
+            NS_LOG_DEBUG(Log() << "Aborted waiting for RSU response");
         }
 
 

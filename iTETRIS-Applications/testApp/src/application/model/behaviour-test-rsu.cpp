@@ -88,9 +88,6 @@ namespace testapp
                 NS_LOG_WARN(Log()<< "Received an unknown message "<< commHeader->getMessageType());
                 return;
             }
-            NodeInfo rsu;
-            rsu.nodeId = commHeader->getSourceId();
-            rsu.position = commHeader->getSourcePosition();
 
             TestHeader* testHeader;
             GetController()->GetHeader(payload, server::PAYLOAD_END, testHeader);
@@ -99,11 +96,9 @@ namespace testapp
 
             if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
                     // TODO: react to registration of vehicle: send UNICAST response for scheduling a stop.
-                    CommHeader * receivedHeader = (CommHeader *) payload->getHeader(testapp::server::PAYLOAD_END);
-                    int source = receivedHeader->getSourceId();
                     TestHeader * newHeader = new TestHeader(PID_UNKNOWN, MT_RSU_TEST, "RSU Vehicle stop advice");
                     // TODO: Send with random offset
-                    GetController()->SendTo(source, newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
+//                    GetController()->SendTo(commHeader->getSourceId(), newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
             }
 
 //
@@ -129,12 +124,12 @@ namespace testapp
                 // constantly query induction loop status via RSU
                 GetController()->AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
-                // RSU constantly broadcasts until time 8 secs
-                //if (currentTimeStep < 8000) {
+                // RSU constantly broadcasts for 5 secs (starting at t=5000)
+                if (currentTimeStep < 10000) {
                     TestHeader * header = new TestHeader(PID_UNKNOWN, MT_RSU_TEST, "RSU regular broadcast message");
                     // TODO: Send with random offset
                     GetController()->Send(NT_VEHICLE_FULL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
-                //}
+                }
             }
 			return false;
 		}

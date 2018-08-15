@@ -100,7 +100,7 @@ namespace testapp
 				//Configuration
 				uint16_t m_responseTimeSpacing;
 
-				//Events
+				// Events
 				event_id m_eventResponse;
 
 				TracedCallback<NodeInfo&> m_traceSendData;

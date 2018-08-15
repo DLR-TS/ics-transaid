@@ -65,6 +65,7 @@ namespace testapp
                  */
                 void EventSendResponse(NodeInfo sendingRSU);
 
+                void abortWaitingForRSUResponse();
 
                 TypeBehaviour GetType() const
                 {
@@ -81,7 +82,14 @@ namespace testapp
                 /// @name Flags to be used by test cases
                 /// @{
                 /// @brief Vehicle check this if the RSU responded to their message.
-                bool m_acknowledgedByRSU;
+                bool m_waitForRSUAcknowledgement;
+                /// @}
+
+
+                /// @name Events
+                /// @{
+                /// @brief used to refer to abort event scheduled at start
+                event_id m_eventAbortWaitingForRSU;
                 /// @}
 		};
 
