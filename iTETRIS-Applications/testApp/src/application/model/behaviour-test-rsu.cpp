@@ -130,11 +130,11 @@ namespace testapp
                 GetController()->AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
                 // RSU constantly broadcasts until time 8 secs
-                if (currentTimeStep < 8000) {
+                //if (currentTimeStep < 8000) {
                     TestHeader * header = new TestHeader(PID_UNKNOWN, MT_RSU_TEST, "RSU regular broadcast message");
                     // TODO: Send with random offset
                     GetController()->Send(NT_VEHICLE_FULL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
-                }
+                //}
             }
 			return false;
 		}

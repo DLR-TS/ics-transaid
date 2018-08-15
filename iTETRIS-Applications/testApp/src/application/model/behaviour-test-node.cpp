@@ -109,7 +109,7 @@ namespace testapp
                 if (!m_acknowledgedByRSU && receivedTestHeader->getMessage() == "RSU regular broadcast message") {
                     TestHeader * newHeader = new TestHeader(PID_UNKNOWN, MT_BEACON_RESPONSE, "Vehicle RSU broadcast acknowledgement");
                     // TODO: Send with random offset
-                    GetController()->Send(NT_ALL, newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
+//                    GetController()->Send(NT_ALL, newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
 //                        SendTo(header->getSourceId(), newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
                 } else if (receivedTestHeader->getMessage() == "RSU Vehicle stop advice") {
                     m_acknowledgedByRSU = true;
@@ -143,11 +143,11 @@ namespace testapp
                 }
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
                 // After sec 8, vehicle starts broadcasting.
-                if (currentTimeStep > 8000){
-                    TestHeader * header = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, "Vehicle regular broadcast");
-                    // TODO: Send with random offset
-                    GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
-                }
+//                if (currentTimeStep > 8000){
+//                    TestHeader * header = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, "Vehicle regular broadcast");
+//                    // TODO: Send with random offset
+//                    GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+//                }
             }
 			return false;
 		}
