@@ -38,6 +38,8 @@
 #include "log/log.h"
 #include "program-configuration.h"
 #include "behaviour-node.h"
+#include "behaviour-test-node.h"
+#include "behaviour-test-rsu.h"
 #include "behaviour-rsu.h"
 #include "data-manager.h"
 #include "headers.h"
@@ -61,7 +63,6 @@ namespace testapp
 			m_active = false;
 			m_node = node;
 			m_direction_tolerance = DirectionTolerance;
-			m_acknowledgedByRSU = false;
             m_nodeSampler = NULL;
 
 			RegisterTrace("StateChange", m_traceStateChange);
@@ -78,6 +79,8 @@ namespace testapp
 	                rsu->AddDirections(data.directions);
 				    SubscribeBehaviour(rsu);
 				    SubscribeBehaviour(new DataManager(this));
+				} else {
+                    SubscribeBehaviour(new BehaviourTestRSU(this));
 				}
 			} else
 			{
@@ -88,6 +91,8 @@ namespace testapp
 	                    SubscribeBehaviour(new BehaviourNodeWithSink(this));
 	                else
 	                    SubscribeBehaviour(new BehaviourNodeWithoutSink(this));
+	            } else {
+	                SubscribeBehaviour(new BehaviourTestNode(this));
 	            }
 			}
 			if (OutputHelper::Instance() != NULL)
@@ -249,18 +254,7 @@ namespace testapp
                 tcpip::Storage maxSpeed;
                 maxSpeed.writeDouble(20);
                 AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_MAXSPEED, TYPE_DOUBLE, &maxSpeed);
-            } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_EXECUTE) {
-                // do nothing
-            } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_ACOSTA) {
-                // do nothing - maintain test results of traffic monitor demo app
-            } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_SETVTYPE) {
-                AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
-                tcpip::Storage type;
-                type.writeString("type0");
-                AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
-                         // TODO: Subscribe to receive CAMs
-            }
+            } 
 		}
 
 		void iCSInterface::Deactivate()
@@ -329,29 +323,6 @@ namespace testapp
 				it->second->Receive(payload, snr);
 			}
 
-
-			if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
-			    if (m_node->isFixed()) {
-			        // TODO: react to registration of vehicle: send UNICAST response for scheduling a stop.
-                    CommHeader * receivedHeader = (CommHeader *) payload->getHeader(testapp::server::PAYLOAD_END);
-                    int source = receivedHeader->getSourceId();
-                    TestHeader * newHeader = new TestHeader(PID_UNKNOWN, MT_RSU_BEACON, "RSU Vehicle stop advice");
-                    SendTo(source, newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
-			    } else {
-                    // TODO: Respond to test message a limited number of times, removal could be scheduled ... (see behaviours)
-                    Header * receivedHeader = payload->getHeader(testapp::server::PAYLOAD_END);
-                    TestHeader* receivedTestHeader = dynamic_cast<TestHeader*>(receivedHeader);
-			        if (!m_acknowledgedByRSU && receivedTestHeader->getMessage() == "RSU regular broadcast message") {
-                        TestHeader * newHeader = new TestHeader(PID_UNKNOWN, MT_BEACON_RESPONSE, "Vehicle RSU broadcast acknowledgement");
-                        Send(NT_ALL, newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
-//                        SendTo(header->getSourceId(), newHeader, PID_UNKNOWN, MSGCAT_TESTAPP);
-			        } else if (receivedTestHeader->getMessage() == "RSU Vehicle stop advice") {
-			            m_acknowledgedByRSU = true;
-			        }
-			    }
-			}
-
-
 			return true;
 		}
 
@@ -410,29 +381,6 @@ namespace testapp
 				if (it->second->Execute(currentTimeStep, data))
 					retVal = true;
 			}
-
-			if (ProgramConfiguration::GetTestCase() == TEST_CASE_SETVTYPE) {
-			    if (currentTimeStep == 10000) {
-			        // check vType at time 10.
-			        AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
-			    }
-			} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_INDUCTIONLOOP) {
-                // constantly query induction loop status via RSU
-                if (m_node->isFixed()) {
-                    AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
-                }
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
-                // constantly query induction loop status via RSU until time 8 secs
-                if (m_node->isFixed() && currentTimeStep < 8000) {
-                    TestHeader * header = new TestHeader(PID_UNKNOWN, MT_RSU_BEACON, "RSU regular broadcast message");
-                    Send(NT_VEHICLE_FULL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
-                } else if (!m_node->isFixed() && currentTimeStep > 8000) {
-                    // After sec 8, vehicle starts broadcasting.
-                    TestHeader * header = new TestHeader(PID_UNKNOWN, MT_BEACON_RESPONSE, "Vehicle regular broadcast");
-                    SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
-                }
-            }
-
 			return retVal;
 		}
 

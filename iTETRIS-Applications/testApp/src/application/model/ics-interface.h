@@ -52,6 +52,7 @@ namespace testapp
 		class Behaviour;
 		class Node;
 		class NodeSampler;
+		class Subscription;
 
 		/**
 		 * Class used as interface between the actual protocol logic and the
@@ -178,10 +179,32 @@ namespace testapp
 				 */
 				void TraciCommandResult(const int executionId, tcpip::Storage & traciReply);
 
+
+
+                /// @brief schedule a traci command to be executed
+                /// @param[in] cmdID traci command id
+                /// @param[in] varID traci variable id
+                /// @param[in] varTypeID traci type id (only for set commands)
+                /// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
+                void AddTraciSubscription(int cmdID, int varID, int varTypeID = 0, tcpip::Storage* value = 0);
+
+
+                /// @brief schedule a traci command to be executed
+                /// @param[in] objID ID for the object to be addressed
+                /// @param[in] cmdID traci command id
+                /// @param[in] varID traci variable id
+                /// @param[in] varTypeID traci type id (only for set commands)
+                /// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
+                void AddTraciSubscription(std::string objID, int cmdID, int varID, int varTypeID = 0, tcpip::Storage* value = 0);
+
+                /// @brief Add a subscription
+                void AddSubscription(Subscription * sub);
+
 			private:
 
 				/**
 				 * @name TraCI result processing
+				 * @todo Make this a template function and delegate to Behaviour class
 				 * @brief App-specific traci result processing goes into these processors
 				 */
 				/// @{
@@ -207,14 +230,6 @@ namespace testapp
 				Node * m_node;
 				NodeSampler * m_nodeSampler;
 				NodeType m_nodeType;
-
-				/// @name Flags to be used by test cases
-				/// TODO: This and all the test case specific code should be transferred to corresponding Behaviour subclasses TestBehavior<TEST>
-				/// @{
-				/// @brief Vehicle check this if the RSU responded to their message.
-                bool m_acknowledgedByRSU;
-                /// @}
-
 
 				bool m_active;
 				double m_direction_tolerance;

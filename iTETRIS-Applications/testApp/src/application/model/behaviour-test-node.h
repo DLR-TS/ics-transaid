@@ -31,132 +31,61 @@
  ***************************************************************************************/
 /****************************************************************************************
  * Author Federico Caselli <f.caselli@unibo.it>
- * Author Enrico Zamagni
  * University of Bologna
  ***************************************************************************************/
 
-#include "common.h"
-#include <sstream>
+#ifndef BEHAVIOUR_TEST_NODE_H_
+#define BEHAVIOUR_TEST_NODE_H_
+
+#include "behaviour-node.h"
+#include "scheduler.h"
+#include "random-variable.h"
+#include <map>
 
 namespace testapp
 {
-namespace application
-{
+	namespace application
+	{
+		/**
+		 * Behaviour for mobile nodes in test cases.
+		 */
+		class BehaviourTestNode: public BehaviourNode
+		{
+			public:
+				BehaviourTestNode(iCSInterface* controller);
 
-bool IsVehicle(NodeType type)
-{
-  return type & NT_VEHICLE;
-}
+				void Start();
 
-bool IsNodeType(NodeType lval, NodeType rval)
-{
-  if (rval == NT_ALL)
-    return true;
-  else if (rval == NT_RSU || rval == NT_VEHICLE)
-    return lval & rval;
-  else
-    return lval == rval;
-}
+				virtual bool IsSubscribedTo(ProtocolId pid) const;
+				virtual void Receive(server::Payload *payload, double snr);
+				virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
+                /**
+                 * @brief Called after a random timeout when a test message is received, @see Receive()
+                 * @input[in] sendingRSU The source of the received message
+                 */
+                void EventSendResponse(NodeInfo sendingRSU);
 
-double AngleDifference(const double &angle1, const double &angle2)
-{
-  double difference = angle2 - angle1;
-  while (difference < -180)
-    difference += 360;
-  while (difference > 180)
-    difference -= 360;
-  return difference;
-}
 
-double GetDistance(const Vector2D &pos1, const Vector2D &pos2)
-{
-  return std::sqrt(std::pow(pos2.x - pos1.x, 2) + std::pow(pos2.y - pos1.y, 2));
-}
+                TypeBehaviour GetType() const
+                {
+                    return Type();
+                }
 
-double NormalizeDirection(const double direction)
-{
-  double ret = direction;
-  if (direction < -180)
-    ret += 360;
-  else if (direction > 180)
-    ret -= 360;
-  return ret;
-}
+                static TypeBehaviour Type()
+                {
+                    return TYPE_BEHAVIOUR_TEST_NODE;
+                }
 
-std::string ToString(ProtocolId pid)
-{
-  switch (pid)
-  {
-  case PID_SPEED:
-    return "Protocol Speed";
-  default:
-    return "???";
-  }
-}
+			private:
 
-std::string ToString(TypeBehaviour type)
-{
-  switch (type)
-  {
-  case TYPE_BEHAVIOUR:
-    return "Behaviour";
-  case TYPE_BEHAVIOUR_RSU:
-    return "BehaviourRsu";
-  case TYPE_BEHAVIOUR_NODE:
-    return "BehaviourNode";
-  case TYPE_DATA_MANAGER:
-    return "DataManager";
-  case TYPE_BEHAVIOUR_TEST_NODE:
-    return "TestNode";
-  case TYPE_BEHAVIOUR_TEST_RSU:
-    return "TestRSU";
-  }
-}
+                /// @name Flags to be used by test cases
+                /// @{
+                /// @brief Vehicle check this if the RSU responded to their message.
+                bool m_acknowledgedByRSU;
+                /// @}
+		};
 
-std::string ToString(VehicleMovement direction)
-{
-  switch (direction)
-  {
-  case APPROACHING:
-    return "Approaching";
-  case LEAVING:
-    return "Leaving";
-
-  }
-}
-
-const std::string VehicleDirection::getId() const
-{
-  std::ostringstream oss;
-  oss << dir << ":";
-  switch (vMov)
-  {
-  case LEAVING:
-    oss << "l";
-    break;
-  case APPROACHING:
-    oss << "a";
-    break;
-  }
-  return oss.str();
-}
-
-bool VehicleDirection::operator==(const VehicleDirection &other) const
-{
-  return dir == other.dir && vMov == other.vMov;
-}
-
-bool VehicleDirection::operator!=(const VehicleDirection &other) const
-{
-  return !operator ==(other);
-}
-
-std::ostream& operator<<(std::ostream& os, const VehicleDirection& direction)
-{
-  os << direction.dir << " " << ToString(direction.vMov);
-  return os;
-}
-
-} /* namespace application */
+	} /* namespace application */
 } /* namespace protocol */
 
+#endif /* BEHAVIOUR_TEST_NODE_H_ */
