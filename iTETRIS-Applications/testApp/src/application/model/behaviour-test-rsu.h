@@ -63,8 +63,7 @@ namespace testapp
                  * @brief Called after a random timeout when a test message is received, @see Receive()
                  * @input[in] sender The source of the received message
                  */
-                void EventSendVehicleAcknowledgementResponse(int sourceId);
-
+                void EventSendResponse(TestHeader::ResponseInfo response);
 
                 TypeBehaviour GetType() const
                 {

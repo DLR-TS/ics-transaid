@@ -83,7 +83,7 @@ namespace testapp
                 return;
             CommHeader* commHeader;
             GetController()->GetHeader(payload, server::PAYLOAD_FRONT, commHeader);
-            if (commHeader->getMessageType() != MT_RSU_TEST)
+            if (commHeader->getMessageType() != MT_TEST_RESPONSE)
             {
                 NS_LOG_WARN(Log()<< "Received an unknown message "<< commHeader->getMessageType());
                 return;
@@ -96,12 +96,25 @@ namespace testapp
             NS_LOG_INFO(Log() << "Received a test message with content: " << testHeader->getMessage());
 
             if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
+                double responseTime = m_rnd.GetValue(m_responseTimeSpacing, testHeader->getMaxResponseTime() - m_responseTimeSpacing);
+                Scheduler::Cancel(m_eventResponse);
                 if (receivedTestHeader->getMessage() == "Vehicle regular broadcast") {
                     // Random offset for responseTime
-                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends response on reception of Vehicle broadcast message.");
-                    double responseTime = m_rnd.GetValue(m_responseTimeSpacing, testHeader->getMaxResponseTime() - m_responseTimeSpacing);
-                    Scheduler::Cancel(m_eventResponse);
-                    m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestRSU::EventSendVehicleAcknowledgementResponse, this, commHeader->getSourceId());
+                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends acknowledgement response on reception of Vehicle broadcast message.");
+                    TestHeader::ResponseInfo response;
+                    response.message = "RSU Vehicle acknowledgement";
+                    response.targetID = commHeader->getSourceId();
+                    m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestRSU::EventSendResponse, this, response);
+                    NS_LOG_INFO(Log() << "scheduled a test response in " << responseTime);
+                } else if (receivedTestHeader->getMessage() == "Vehicle response to RSU Vehicle acknowledgement") {
+                    // Random offset for responseTime
+                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends stop advice response on reception of Vehicle response to RSU broadcast message.");
+                    TestHeader::ResponseInfo response;
+                    response.message = "RSU Stop advice";
+                    response.targetID = commHeader->getSourceId();
+                    response.stopEdge = "CE";
+                    response.stopPosition = 50;
+                    m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestRSU::EventSendResponse, this, response);
                     NS_LOG_INFO(Log() << "scheduled a test response in " << responseTime);
                 }
             }
@@ -132,17 +145,16 @@ namespace testapp
 		}
 
 
-        void BehaviourTestRSU::EventSendVehicleAcknowledgementResponse(int sourceId)
+        void BehaviourTestRSU::EventSendResponse(TestHeader::ResponseInfo response)
         {
             NS_LOG_FUNCTION(Log());
 
             // React to perception of vehicle.
-            TestHeader * responseHeader = new TestHeader(PID_UNKNOWN, MT_RSU_TEST, "RSU Vehicle acknowledgement");
-            GetController()->SendTo(sourceId, responseHeader , PID_UNKNOWN, MSGCAT_TESTAPP);
+            TestHeader * responseHeader = new TestHeader(PID_UNKNOWN, MT_RSU_TEST, response);
+            GetController()->SendTo(response.targetID, responseHeader , PID_UNKNOWN, MSGCAT_TESTAPP);
 
-            NS_LOG_DEBUG(Log() << "Sent test response to vehicle " << sourceId);
+            NS_LOG_DEBUG(Log() << "Sent test response to vehicle " << response.targetID);
         }
-
 
 	} /* namespace application */
 } /* namespace protocol */

@@ -53,6 +53,7 @@ namespace testapp
 				BehaviourNode(controller)
 		{
             m_waitForRSUAcknowledgement = true;
+            m_vehicleStopScheduled = false;
             m_eventAbortWaitingForRSU = 0;
 		}
 
@@ -120,7 +121,7 @@ namespace testapp
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
                 // Random offset for responseTime
                 double responseTime = m_rnd.GetValue(m_responseTimeSpacing, testHeader->getMaxResponseTime() - m_responseTimeSpacing);
-                ResponseInfo response;
+                TestHeader::ResponseInfo response;
                 response.targetID = commHeader->getSourceId();
                 if (m_waitForRSUAcknowledgement && receivedTestHeader->getMessage() == "RSU regular broadcast message") {
                     NS_LOG_DEBUG(Log() << "Vehicle " << GetController()->GetNode()->getId() << " sends response on reception of RSU broadcast message.");
@@ -136,6 +137,13 @@ namespace testapp
                     Scheduler::Cancel(m_eventResponse);
                     m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestNode::EventSendResponse, this, response);
                     NS_LOG_INFO(Log() << "Scheduled a test response in " << responseTime);
+                } else if (receivedTestHeader->getMessage() == "RSU Stop advice" && !m_vehicleStopScheduled) {
+                    NS_LOG_DEBUG(Log() << "On reception of RSU Stop advice.");
+                    std::string stopEdge = receivedTestHeader->getStopEdge();
+                    double stopPosition = receivedTestHeader->getStopPosition();
+                    GetController()->AddTraciStop(stopEdge, stopPosition);
+                    m_vehicleStopScheduled = true;
+                    NS_LOG_INFO(Log() << "Added a stop on edge " << stopEdge << " at position" << stopPosition);
                 }
             }
 		}
@@ -148,10 +156,7 @@ namespace testapp
                     GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
                 }
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_INDUCTIONLOOP) {
-                // constantly query induction loop status via RSU
-                if (GetController()->GetNode()->isFixed()) {
-                    GetController()->AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
-                }
+                // Vehicle does nothing
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
                 // After t=8000, vehicle starts broadcasting until its broadcast is acknowledged or aborted at t = 12000
                 if (currentTimeStep > 8000 && m_waitForRSUAcknowledgement){
@@ -170,12 +175,12 @@ namespace testapp
 		}
 
 
-        void BehaviourTestNode::EventSendResponse(ResponseInfo response)
+        void BehaviourTestNode::EventSendResponse(TestHeader::ResponseInfo response)
         {
             NS_LOG_FUNCTION(Log());
 
             // React to perception of vehicle.
-            TestHeader * responseHeader = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, response.message);
+            TestHeader * responseHeader = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, response);
             GetController()->SendTo(response.targetID, responseHeader , PID_UNKNOWN, MSGCAT_TESTAPP);
 
             NS_LOG_DEBUG(Log() << "Sent test response to RSU " << response.targetID);

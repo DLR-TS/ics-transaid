@@ -51,12 +51,6 @@ namespace testapp
 		 */
 		class BehaviourTestNode: public BehaviourNode
 		{
-		private:
-		    struct ResponseInfo
-		    {
-		        int targetID;
-		        std::string message;
-		    };
 		public:
 		    BehaviourTestNode(iCSInterface* controller);
 
@@ -69,7 +63,7 @@ namespace testapp
 		     * @brief Called after a random timeout when a test message is received, @see Receive()
 		     * @input[in] sendingRSU The source of the received message
 		     */
-		    void EventSendResponse(ResponseInfo response);
+		    void EventSendResponse(TestHeader::ResponseInfo response);
 
 		    void abortWaitingForRSUResponse();
 
@@ -88,6 +82,7 @@ namespace testapp
 		    /// @{
 		    /// @brief Vehicle check this if the RSU responded to their message.
 		    bool m_waitForRSUAcknowledgement;
+            bool m_vehicleStopScheduled;
 		    /// @}
 
 
