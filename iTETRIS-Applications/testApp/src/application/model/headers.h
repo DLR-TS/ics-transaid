@@ -68,7 +68,19 @@ namespace testapp
          */
         class TestHeader: public Header {
         public:
-            TestHeader(ProtocolId pid, MessageType msgType, std::string testMsg);
+            struct ResponseInfo
+            {
+                int targetID;
+                std::string message;
+                std::string stopEdge;
+                double stopPosition;
+                ResponseInfo() :
+                targetID(-1), message(""), stopEdge(""), stopPosition(0) {};
+            };
+
+        public:
+            TestHeader(ProtocolId pid, MessageType msgType, const ResponseInfo& response);
+            TestHeader(ProtocolId pid, MessageType msgType, const std::string& message);
 
             uint32_t GetSerializedSize(void) const;
             void Print(std::ostream &os) const;
@@ -76,15 +88,22 @@ namespace testapp
             MessageType getMessageType() const;
             std::string getMessage() const;
             uint16_t getMaxResponseTime() const;
+            std::string getStopEdge() const;
+            double getStopPosition() const;
+
 
         private:
             ProtocolId m_protocolId;
             MessageType m_messageType;
             std::string m_message;
+            std::string m_stopEdge;
+            int m_stopPosition;
 
             /// @brief Maximal delay at which a response to a received message is scheduled (in ms)
             /// (The specific values are sampled uniformly in [0, maxResponseTime]), @see BehaviourTestNode::Receive()
             static uint16_t maxResponseTime;
+
+            /// Stop Info
 		};
 
 

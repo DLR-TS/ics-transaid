@@ -57,8 +57,14 @@ namespace testapp
 
 		uint16_t TestHeader::maxResponseTime = 100;
 
-		TestHeader::TestHeader(ProtocolId pid, MessageType msgType, std::string testMsg) :
-                        m_protocolId(pid), m_messageType(msgType), m_message(testMsg)
+        TestHeader::TestHeader(ProtocolId pid, MessageType msgType, const ResponseInfo& response) :
+                        m_protocolId(pid), m_messageType(msgType), m_message(response.message),
+                        m_stopEdge(response.stopEdge), m_stopPosition(response.stopPosition)
+                    {};
+
+        TestHeader::TestHeader(ProtocolId pid, MessageType msgType, const std::string& message) :
+                        m_protocolId(pid), m_messageType(msgType), m_message(message),
+                        m_stopEdge(""), m_stopPosition(0)
                     {};
 
         uint32_t
@@ -81,6 +87,16 @@ namespace testapp
         std::string
         TestHeader::getMessage() const {
             return m_message;
+        }
+
+        std::string
+        TestHeader::getStopEdge() const {
+            return m_stopEdge;
+        }
+
+        double
+        TestHeader::getStopPosition() const {
+            return m_stopPosition;
         }
 
         uint16_t
