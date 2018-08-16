@@ -491,7 +491,7 @@ namespace testapp
             NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " is " << ss.str());
         }
 
-        void iCSInterface::AddTraciSubscription(int cmdID, int varID, int varTypeID, tcpip::Storage * value)
+        void iCSInterface::AddTraciSubscription(const int cmdID, const int varID, const int varTypeID, const tcpip::Storage * value)
         {
             if (m_node->getSumoId() != INVALID_STRING)
             {
@@ -501,7 +501,40 @@ namespace testapp
         }
 
 
-        void iCSInterface::AddTraciSubscription(std::string objID, int cmdID, int varID, int varTypeID, tcpip::Storage * value)
+        void iCSInterface::AddTraciStop(const std::string edgeID, const double endPos,
+                const int laneIndex, const int duration, const int flags,
+                const double startPos, const int until)
+        {
+            if (m_node->getSumoId() != INVALID_STRING)
+            {
+                int cmdID = CMD_SET_VEHICLE_VARIABLE;
+                int varID = CMD_STOP;
+                int varTypeID = TYPE_COMPOUND;
+
+                tcpip::Storage content;
+                content.writeInt(4);
+                //content.writeInt(7);
+                content.writeUnsignedByte(TYPE_STRING);
+                content.writeString(edgeID);
+                content.writeUnsignedByte(TYPE_DOUBLE);
+                content.writeDouble(endPos);
+                content.writeUnsignedByte(TYPE_BYTE);
+                content.writeByte(laneIndex);
+                content.writeUnsignedByte(TYPE_INTEGER);
+                content.writeInt(duration);
+//                content.writeUnsignedByte(TYPE_BYTE);
+//                content.writeByte(flags);
+//                content.writeUnsignedByte(TYPE_DOUBLE);
+//                content.writeDouble(startPos);
+//                content.writeUnsignedByte(TYPE_INTEGER);
+//                content.writeInt(until);
+
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(cmdID, varID, varTypeID, &content);
+            }
+        }
+
+        void iCSInterface::AddTraciSubscription(const std::string objID, const int cmdID, const int varID, const int varTypeID, const tcpip::Storage * value)
         {
             tcpip::Storage sumoQuery;
             if (value == 0) {

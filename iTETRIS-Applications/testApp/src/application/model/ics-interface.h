@@ -37,6 +37,7 @@
 #define CONTROLLER_H_
 
 #include <map>
+#include <limits>
 #include "payload.h"
 #include "fatal-error.h"
 #include "trace-manager.h"
@@ -186,7 +187,7 @@ namespace testapp
                 /// @param[in] varID traci variable id
                 /// @param[in] varTypeID traci type id (only for set commands)
                 /// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
-                void AddTraciSubscription(int cmdID, int varID, int varTypeID = 0, tcpip::Storage* value = 0);
+                void AddTraciSubscription(const int cmdID, const int varID, const int varTypeID = 0, const tcpip::Storage* value = 0);
 
 
                 /// @brief schedule a traci command to be executed
@@ -195,7 +196,15 @@ namespace testapp
                 /// @param[in] varID traci variable id
                 /// @param[in] varTypeID traci type id (only for set commands)
                 /// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
-                void AddTraciSubscription(std::string objID, int cmdID, int varID, int varTypeID = 0, tcpip::Storage* value = 0);
+                void AddTraciSubscription(const std::string objID, const int cmdID, const int varID, const int varTypeID = 0, const tcpip::Storage* value = 0);
+
+
+                /// @brief Schedule a stop for a mobile node
+                ///        see http://sumo.dlr.de/wiki/TraCI/Change_Vehicle_State
+                void AddTraciStop(const std::string edgeID, const double endPos=1.,
+                        const int laneIndex=0, const int duration=std::numeric_limits<int>::max(),
+                        const int flags=0, const double startPos=std::numeric_limits<int>::min(),
+                        const int until=-1);
 
                 /// @brief Add a subscription
                 void AddSubscription(Subscription * sub);
