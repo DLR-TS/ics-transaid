@@ -68,8 +68,6 @@ namespace testapp
 
 		    void abortWaitingForRSUResponse();
 
-	        void vehicleBroadcastCommSimple2();
-
 		    TypeBehaviour GetType() const
 		    {
 		        return Type();

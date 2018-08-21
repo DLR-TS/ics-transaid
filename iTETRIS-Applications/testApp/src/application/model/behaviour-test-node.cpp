@@ -89,11 +89,10 @@ namespace testapp
                 // TODO: Subscribe to receive CAMs?
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
                 // After t=8000, vehicle starts broadcasting until its broadcast is acknowledged or aborted at t = 12000
-                const int endWaitingTime = 12000;
-                int broadcastStart = 8000;
+                const int endWaitingTime = 10000;
+                const int insertionAccordingToRoutresFile = 2000;
                 m_eventAbortWaitingForRSU = Scheduler::Schedule(endWaitingTime, &BehaviourTestNode::abortWaitingForRSUResponse, this);
-                m_eventBroadcast = Scheduler::Schedule(broadcastStart, &BehaviourTestNode::vehicleBroadcastCommSimple2, this);
-                NS_LOG_INFO(Log() << "Vehicle scheduled broadcast start at " << broadcastStart << " and will abort waiting for RSU acknowledgement at " << endWaitingTime);
+                NS_LOG_INFO(Log() << "Vehicle scheduled abort waiting for RSU acknowledgement at " << endWaitingTime + insertionAccordingToRoutresFile);
             }
 
 		}
@@ -139,7 +138,7 @@ namespace testapp
                 TestHeader::ResponseInfo response;
                 response.targetID = commHeader->getSourceId();
                 if (m_waitForRSUAcknowledgement && receivedTestHeader->getMessage() == "RSU regular broadcast message") {
-                    NS_LOG_DEBUG(Log() << "Vehicle " << GetController()->GetNode()->getId() << " sends response on reception of RSU broadcast message.");
+                    NS_LOG_DEBUG(Log() << "Vehicle " << GetController()->GetNode()->getId() << "  and responds.");
                     response.message = "Vehicle response to RSU broadcast";
                     Scheduler::Cancel(m_eventResponse);
                     m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestNode::EventSendResponse, this, response);
@@ -156,7 +155,7 @@ namespace testapp
                     NS_LOG_DEBUG(Log() << "On reception of RSU Stop advice.");
                     std::string stopEdge = receivedTestHeader->getStopEdge();
                     double stopPosition = receivedTestHeader->getStopPosition();
-                    GetController()->AddTraciStop(stopEdge, stopPosition);
+                    GetController()->AddTraciStop(stopEdge, stopPosition, 0, 3.);
                     m_vehicleStopScheduled = true;
                     NS_LOG_INFO(Log() << "Added a stop on edge " << stopEdge << " at position" << stopPosition);
                 }
@@ -202,26 +201,6 @@ namespace testapp
             NS_LOG_FUNCTION(Log());
             m_waitForRSUAcknowledgement = false;
             NS_LOG_DEBUG(Log() << "Aborted waiting for RSU response");
-        }
-
-
-        void BehaviourTestNode::vehicleBroadcastCommSimple2()
-        {
-            if (m_firstBroadcast) {
-                NS_LOG_FUNCTION(Log());
-                m_firstBroadcast = false;
-                NS_LOG_DEBUG(Log() << "Starting vehicle broadcast");
-            }
-
-            if (!m_waitForRSUAcknowledgement)
-                return;
-
-            TestHeader * header = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, "Vehicle regular broadcast");
-            GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
-
-            // Schedule next broadcast with random offset
-            double nextTime = m_rnd.GetValue(m_broadcastInterval, m_broadcastInterval+100);
-            m_eventBroadcast = Scheduler::Schedule(nextTime, &BehaviourTestNode::vehicleBroadcastCommSimple2, this);
         }
 
 

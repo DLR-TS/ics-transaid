@@ -111,15 +111,7 @@ namespace testapp
             if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
                 double responseTime = m_rnd.GetValue(m_responseTimeSpacing, testHeader->getMaxResponseTime() - m_responseTimeSpacing);
                 Scheduler::Cancel(m_eventResponse);
-                if (receivedTestHeader->getMessage() == "Vehicle regular broadcast") {
-                    // Random offset for responseTime
-                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends acknowledgement response on reception of Vehicle regular broadcast message.");
-                    TestHeader::ResponseInfo response;
-                    response.message = "RSU Vehicle acknowledgement";
-                    response.targetID = commHeader->getSourceId();
-                    m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestRSU::EventSendResponse, this, response);
-                    NS_LOG_INFO(Log() << "scheduled a test response to Vehicle regular broadcast in " << responseTime);
-                } else if (receivedTestHeader->getMessage() == "Vehicle response to RSU Vehicle acknowledgement") {
+                if (receivedTestHeader->getMessage() == "Vehicle response to RSU Vehicle acknowledgement") {
                     // Random offset for responseTime
                     NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends stop advice response on reception of Vehicle response to RSU Vehicle acknowledgement.");
                     TestHeader::ResponseInfo response;
@@ -129,6 +121,14 @@ namespace testapp
                     response.stopPosition = 50;
                     m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestRSU::EventSendResponse, this, response);
                     NS_LOG_INFO(Log() << "scheduled a test response to Vehicle response to RSU Vehicle acknowledgement in " << responseTime);
+                } else if (receivedTestHeader->getMessage() == "Vehicle response to RSU broadcast") {
+                    // Random offset for responseTime
+                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends acknowledgement response on reception of vehicle's first response.");
+                    TestHeader::ResponseInfo response;
+                    response.message = "RSU Vehicle acknowledgement";
+                    response.targetID = commHeader->getSourceId();
+                    m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestRSU::EventSendResponse, this, response);
+                    NS_LOG_INFO(Log() << "scheduled a test response to Vehicle regular broadcast in " << responseTime);
                 }
             }
 		}
@@ -181,6 +181,7 @@ namespace testapp
 
             // Schedule next broadcast with random offset
             double nextTime = m_rnd.GetValue(m_broadcastInterval, m_broadcastInterval+100);
+            NS_LOG_DEBUG(Log() << "Scheduled next RSU broadcast at time " << nextTime);
             m_eventBroadcast = Scheduler::Schedule(nextTime, &BehaviourTestRSU::RSUBroadcastCommSimple2, this);
         }
 
