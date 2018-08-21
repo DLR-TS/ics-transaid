@@ -53,6 +53,7 @@ namespace testapp
 		{
 			public:
 				BehaviourTestRSU(iCSInterface* controller);
+				~BehaviourTestRSU();
 
 				void Start();
 
@@ -64,6 +65,11 @@ namespace testapp
                  * @input[in] sender The source of the received message
                  */
                 void EventSendResponse(TestHeader::ResponseInfo response);
+
+                void RSUBroadcastCommSimple2();
+
+
+                void abortBroadcast();
 
                 TypeBehaviour GetType() const
                 {
@@ -79,9 +85,17 @@ namespace testapp
 
                 /// @name Flags to be used by test cases
                 /// @{
+                bool m_firstBroadcast;
+                bool m_broadcastActive;
+                int m_broadcastInterval;
+                /// @}
 
 
-
+                /// @name Events
+                /// @{
+                /// @brief used to refer to abort event scheduled at start
+                event_id m_eventBroadcast;
+                event_id m_eventAbortBroadcast;
                 /// @}
 		};
 

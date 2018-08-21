@@ -50,9 +50,15 @@ namespace testapp
 
 		///BehaviourTestRSU implementation
 		BehaviourTestRSU::BehaviourTestRSU(iCSInterface* controller) :
-				BehaviourNode(controller)
+				BehaviourNode(controller), m_firstBroadcast(true), m_broadcastInterval(1000),
+				m_broadcastActive(true), m_eventBroadcast(0), m_eventAbortBroadcast(0)
 		{
 		}
+
+		BehaviourTestRSU::~BehaviourTestRSU() {
+            Scheduler::Cancel(m_eventBroadcast);
+            Scheduler::Cancel(m_eventAbortBroadcast);
+        }
 
 		void BehaviourTestRSU::Start()
 		{
@@ -66,8 +72,15 @@ namespace testapp
             } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_SETVTYPE) {
                 // rsu does nothing
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
-                 // TODO: Subscribe to receive CAMs?
-            }
+                // TODO: Subscribe to receive CAMs?
+           } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
+               // Start broadcasting at 5000
+               int broadcastStart = 5000;
+               int broadcastEnd = 10000;
+               m_eventBroadcast = Scheduler::Schedule(broadcastStart, &BehaviourTestRSU::RSUBroadcastCommSimple2, this);
+               m_eventAbortBroadcast = Scheduler::Schedule(broadcastEnd, &BehaviourTestRSU::abortBroadcast, this);
+               NS_LOG_INFO(Log() << "RSU scheduled broadcast start at " << broadcastStart << " and broadcastEnd at " << broadcastEnd);
+          }
 
 		}
 
@@ -100,22 +113,22 @@ namespace testapp
                 Scheduler::Cancel(m_eventResponse);
                 if (receivedTestHeader->getMessage() == "Vehicle regular broadcast") {
                     // Random offset for responseTime
-                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends acknowledgement response on reception of Vehicle broadcast message.");
+                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends acknowledgement response on reception of Vehicle regular broadcast message.");
                     TestHeader::ResponseInfo response;
                     response.message = "RSU Vehicle acknowledgement";
                     response.targetID = commHeader->getSourceId();
                     m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestRSU::EventSendResponse, this, response);
-                    NS_LOG_INFO(Log() << "scheduled a test response in " << responseTime);
+                    NS_LOG_INFO(Log() << "scheduled a test response to Vehicle regular broadcast in " << responseTime);
                 } else if (receivedTestHeader->getMessage() == "Vehicle response to RSU Vehicle acknowledgement") {
                     // Random offset for responseTime
-                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends stop advice response on reception of Vehicle response to RSU broadcast message.");
+                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends stop advice response on reception of Vehicle response to RSU Vehicle acknowledgement.");
                     TestHeader::ResponseInfo response;
                     response.message = "RSU Stop advice";
                     response.targetID = commHeader->getSourceId();
                     response.stopEdge = "CE";
                     response.stopPosition = 50;
                     m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestRSU::EventSendResponse, this, response);
-                    NS_LOG_INFO(Log() << "scheduled a test response in " << responseTime);
+                    NS_LOG_INFO(Log() << "scheduled a test response to Vehicle response to RSU Vehicle acknowledgement in " << responseTime);
                 }
             }
 		}
@@ -134,12 +147,7 @@ namespace testapp
                     GetController()->Send(NT_VEHICLE_FULL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
                 }
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
-                // RSU constantly broadcasts for 5 secs (starting at t=5000)
-                if (currentTimeStep < 10000) {
-                    TestHeader * header = new TestHeader(PID_UNKNOWN, MT_RSU_TEST, "RSU regular broadcast message");
-                    // TODO: Send with random offset
-                    GetController()->Send(NT_VEHICLE_FULL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
-                }
+                // do nothing
             }
 			return false;
 		}
@@ -154,6 +162,35 @@ namespace testapp
             GetController()->SendTo(response.targetID, responseHeader , PID_UNKNOWN, MSGCAT_TESTAPP);
 
             NS_LOG_DEBUG(Log() << "Sent test response to vehicle " << response.targetID);
+        }
+
+
+        void BehaviourTestRSU::RSUBroadcastCommSimple2()
+        {
+            if (m_firstBroadcast) {
+                NS_LOG_FUNCTION(Log());
+                m_firstBroadcast = false;
+                NS_LOG_DEBUG(Log() << "Starting vehicle broadcast");
+            }
+
+            if (!m_broadcastActive)
+                return;
+
+            TestHeader * header = new TestHeader(PID_UNKNOWN, MT_RSU_TEST, "RSU regular broadcast message");
+            GetController()->Send(NT_VEHICLE_FULL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+
+            // Schedule next broadcast with random offset
+            double nextTime = m_rnd.GetValue(m_broadcastInterval, m_broadcastInterval+100);
+            m_eventBroadcast = Scheduler::Schedule(nextTime, &BehaviourTestRSU::RSUBroadcastCommSimple2, this);
+        }
+
+
+        void BehaviourTestRSU::abortBroadcast()
+        {
+            NS_LOG_FUNCTION(Log());
+            m_broadcastActive = false;
+            Scheduler::Cancel(m_eventBroadcast);
+            NS_LOG_DEBUG(Log() << "RSU aborted broadcasting");
         }
 
 	} /* namespace application */
