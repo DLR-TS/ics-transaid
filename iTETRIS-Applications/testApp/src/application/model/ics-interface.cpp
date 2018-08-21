@@ -502,8 +502,8 @@ namespace testapp
 
 
         void iCSInterface::AddTraciStop(const std::string edgeID, const double endPos,
-                const int laneIndex, const int duration, const int flags,
-                const double startPos, const int until)
+                const int laneIndex, const double duration, const int flags,
+                const double startPos, const double until)
         {
             if (m_node->getSumoId() != INVALID_STRING)
             {
@@ -512,22 +512,21 @@ namespace testapp
                 int varTypeID = TYPE_COMPOUND;
 
                 tcpip::Storage content;
-                content.writeInt(4);
-                //content.writeInt(7);
+                content.writeInt(7);
                 content.writeUnsignedByte(TYPE_STRING);
                 content.writeString(edgeID);
                 content.writeUnsignedByte(TYPE_DOUBLE);
                 content.writeDouble(endPos);
                 content.writeUnsignedByte(TYPE_BYTE);
                 content.writeByte(laneIndex);
-                content.writeUnsignedByte(TYPE_INTEGER);
-                content.writeInt(duration);
-//                content.writeUnsignedByte(TYPE_BYTE);
-//                content.writeByte(flags);
-//                content.writeUnsignedByte(TYPE_DOUBLE);
-//                content.writeDouble(startPos);
-//                content.writeUnsignedByte(TYPE_INTEGER);
-//                content.writeInt(until);
+                content.writeUnsignedByte(TYPE_DOUBLE);
+                content.writeDouble(duration);
+                content.writeUnsignedByte(TYPE_BYTE);
+                content.writeByte(flags);
+                content.writeUnsignedByte(TYPE_DOUBLE);
+                content.writeDouble(startPos);
+                content.writeUnsignedByte(TYPE_DOUBLE);
+                content.writeDouble(until);
 
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
                 AddTraciSubscription(cmdID, varID, varTypeID, &content);

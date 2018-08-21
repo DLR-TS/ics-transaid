@@ -202,9 +202,9 @@ namespace testapp
                 /// @brief Schedule a stop for a mobile node
                 ///        see http://sumo.dlr.de/wiki/TraCI/Change_Vehicle_State
                 void AddTraciStop(const std::string edgeID, const double endPos=1.,
-                        const int laneIndex=0, const int duration=std::numeric_limits<int>::max(),
-                        const int flags=0, const double startPos=std::numeric_limits<int>::min(),
-                        const int until=-1);
+                        const int laneIndex=0, const double duration=std::numeric_limits<double>::max(),
+                        const int flags=0, const double startPos=std::numeric_limits<double>::min(),
+                        const double until=-1);
 
                 /// @brief Add a subscription
                 void AddSubscription(Subscription * sub);
