@@ -76,6 +76,7 @@
 #include <sstream>
 #include <algorithm>
 #include <map>
+#include <math.h>
 #include <sys/timeb.h>
 
 #include "sync-manager.h"
@@ -833,7 +834,7 @@ int SyncManager::ConnectSumo()
 
 void SyncManager::setTrafficSimstep() {
     // TODO: check whether traffic simstep is a multiple of the iCS simstep, fail otherwise
-    m_trafficSimstep = m_trafficSimCommunicator->getSimstepLength();
+    m_trafficSimstep = 1000 * int(round(m_trafficSimCommunicator->getSimstepLength()));
 }
 
 int SyncManager::CloseSumo()

@@ -80,9 +80,9 @@ public:
 
     /**
     * @brief Query the simulation steplength of the simulator
-    * @return The simulation step length in millisecs
+    * @return The simulation step length in seconds
     */
-    virtual int getSimstepLength() = 0;
+    virtual double getSimstepLength() = 0;
 
     /**
     * @brief S6 Sends a message to SUMO in order to establish the value of the maximum speed for a certain vehicle.

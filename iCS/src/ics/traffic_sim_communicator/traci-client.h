@@ -117,9 +117,9 @@ public:
 
   /**
   * @brief Query the simulation steplength of the simulator
-  * @return The simulation step length in millisecs
+  * @return The simulation step length in seconds
   */
-  int getSimstepLength();
+  double getSimstepLength();
 
 
   /**

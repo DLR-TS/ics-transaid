@@ -94,10 +94,10 @@ bool TraCIClient::Connect()
       int noSubscribedVars = 2;
       tcpip::Storage outMsg, inMsg, tmp;
       outMsg.writeUnsignedByte(0);
-      outMsg.writeInt(/*1 + 4 +*/5 + 1 + 4 + 4 + 4 + (int) objID.length() + 1 + noSubscribedVars);
+      outMsg.writeInt(/*1 + 4 +*/5 + 1 + 4 + 8 + 8 + (int) objID.length() + 1 + noSubscribedVars);
       outMsg.writeUnsignedByte(CMD_SUBSCRIBE_SIM_VARIABLE); // command id
-      outMsg.writeInt(0); // begin time
-      outMsg.writeInt(86400 * 1000); // end time
+      outMsg.writeDouble(0.0); // begin time
+      outMsg.writeDouble(86400.0); // end time
       outMsg.writeString(objID); // object id
       outMsg.writeUnsignedByte(noSubscribedVars); // variable number
       outMsg.writeUnsignedByte(VAR_DEPARTED_VEHICLES_IDS);
@@ -341,12 +341,12 @@ int TraCIClient::CommandClose()
   return EXIT_SUCCESS;
 }
 
-int
+double
 TraCIClient::getSimstepLength() {
     int commandID = CMD_GET_SIM_VARIABLE;
     tcpip::Storage inMsg;
     beginValueRetrieval("", VAR_DELTA_T, inMsg, commandID);
-    const int simstepLength = inMsg.readInt();
+    const double simstepLength = inMsg.readInt();
     return simstepLength;
 }
 
