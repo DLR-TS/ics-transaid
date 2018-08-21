@@ -54,8 +54,16 @@ namespace testapp
 		{
             m_waitForRSUAcknowledgement = true;
             m_vehicleStopScheduled = false;
+            m_firstBroadcast = true;
             m_eventAbortWaitingForRSU = 0;
+            m_eventBroadcast = 0;
+            m_broadcastInterval = 1000;
 		}
+
+        BehaviourTestNode::~BehaviourTestNode() {
+            Scheduler::Cancel(m_eventAbortWaitingForRSU);
+            Scheduler::Cancel(m_eventBroadcast);
+        }
 
 		void BehaviourTestNode::Start()
 		{
@@ -69,9 +77,9 @@ namespace testapp
             } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_SETVTYPE) {
                 GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
                 tcpip::Storage type;
-                type.writeString("type0");
+                type.writeString("t2");
                 GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE || ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
+            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
                 // Time to abort waiting for a response after insertion.
                 // Will be ineffective if communication runs as intended (test case commSimple2).
                 // Used for testing purposes before random offsets were assigned to messages. (test case commSimple)
@@ -79,6 +87,13 @@ namespace testapp
                 const int endWaitingTime = 10000;
                 m_eventAbortWaitingForRSU = Scheduler::Schedule(endWaitingTime, &BehaviourTestNode::abortWaitingForRSUResponse, this);
                 // TODO: Subscribe to receive CAMs?
+            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
+                // After t=8000, vehicle starts broadcasting until its broadcast is acknowledged or aborted at t = 12000
+                const int endWaitingTime = 12000;
+                int broadcastStart = 8000;
+                m_eventAbortWaitingForRSU = Scheduler::Schedule(endWaitingTime, &BehaviourTestNode::abortWaitingForRSUResponse, this);
+                m_eventBroadcast = Scheduler::Schedule(broadcastStart, &BehaviourTestNode::vehicleBroadcastCommSimple2, this);
+                NS_LOG_INFO(Log() << "Vehicle scheduled broadcast start at " << broadcastStart << " and will abort waiting for RSU acknowledgement at " << endWaitingTime);
             }
 
 		}
@@ -164,12 +179,7 @@ namespace testapp
                     GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
                 }
             } if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
-                // After t=8000, vehicle starts broadcasting until its broadcast is acknowledged or aborted at t = 12000
-                if (currentTimeStep > 8000 && m_waitForRSUAcknowledgement){
-                    TestHeader * header = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, "Vehicle regular broadcast");
-                    // TODO: Send with random offset
-                    GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
-                }
+                // do nothing
             }
 			return false;
 		}
@@ -192,6 +202,26 @@ namespace testapp
             NS_LOG_FUNCTION(Log());
             m_waitForRSUAcknowledgement = false;
             NS_LOG_DEBUG(Log() << "Aborted waiting for RSU response");
+        }
+
+
+        void BehaviourTestNode::vehicleBroadcastCommSimple2()
+        {
+            if (m_firstBroadcast) {
+                NS_LOG_FUNCTION(Log());
+                m_firstBroadcast = false;
+                NS_LOG_DEBUG(Log() << "Starting vehicle broadcast");
+            }
+
+            if (!m_waitForRSUAcknowledgement)
+                return;
+
+            TestHeader * header = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, "Vehicle regular broadcast");
+            GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+
+            // Schedule next broadcast with random offset
+            double nextTime = m_rnd.GetValue(m_broadcastInterval, m_broadcastInterval+100);
+            m_eventBroadcast = Scheduler::Schedule(nextTime, &BehaviourTestNode::vehicleBroadcastCommSimple2, this);
         }
 
 

@@ -53,6 +53,7 @@ namespace testapp
 		{
 		public:
 		    BehaviourTestNode(iCSInterface* controller);
+		    ~BehaviourTestNode();
 
 		    void Start();
 
@@ -66,6 +67,8 @@ namespace testapp
 		    void EventSendResponse(TestHeader::ResponseInfo response);
 
 		    void abortWaitingForRSUResponse();
+
+	        void vehicleBroadcastCommSimple2();
 
 		    TypeBehaviour GetType() const
 		    {
@@ -83,13 +86,16 @@ namespace testapp
 		    /// @brief Vehicle check this if the RSU responded to their message.
 		    bool m_waitForRSUAcknowledgement;
             bool m_vehicleStopScheduled;
+            bool m_firstBroadcast;
+            int m_broadcastInterval;
 		    /// @}
 
 
 		    /// @name Events
 		    /// @{
 		    /// @brief used to refer to abort event scheduled at start
-		    event_id m_eventAbortWaitingForRSU;
+            event_id m_eventAbortWaitingForRSU;
+            event_id m_eventBroadcast;
 		    /// @}
 		};
 
