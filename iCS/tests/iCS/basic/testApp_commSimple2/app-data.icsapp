@@ -38,16 +38,16 @@ dirs
   @19000
 #5000 real totc=1 : 
   @20000
-#5000 real totc=0 : 
+#5000 real totc=1 : 
   @21000
-#5000 real totc=0 : 
+#5000 real totc=1 : 
   @22000
-#5000 real totc=0 : 
+#5000 real totc=1 : 
   @23000
-#5000 real totc=0 : 
+#5000 real totc=1 : 
   @24000
-#5000 real totc=0 : 
+#5000 real totc=1 : 
   @25000
-#5000 real totc=0 : 
+#5000 real totc=1 : 
   @25000
-end tot_nodes_rsu=1 tot_nodes_rsu_shadow=0 tot_nodes_rsu_medium=0 tot_nodes_rsu_full=1 tot_packets_sent=178 tot_packets_recv=0 max_dens_rsu=1 avg_dens_rsu=0.68
+end tot_nodes_rsu=1 tot_nodes_rsu_shadow=0 tot_nodes_rsu_medium=0 tot_nodes_rsu_full=1 tot_packets_sent=9 tot_packets_recv=0 max_dens_rsu=1 avg_dens_rsu=0.92

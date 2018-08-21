@@ -26,6 +26,7 @@ testApp_inductionLoop
 testApp_commSimple
 
 # Tests communication behaviour with test case commSimple2:
-# RSU broadcasts from 0 to 10000 and vehicle starts broadcasting at 8000 until its scheduled abort signal arrives at 12000 or an acknowledgement of the RSU arrives.
+# RSU broadcasts from 0 to 10000 and vehicle responds until an acknowledgement of the RSU arrives.
+# The vehicle affirms the acknowledgement, upon which the RSU sends a stop advice. On its reception a stop is added via traci.
 # The test uses randomized response offsets to avoid synchronized message transmission.
 testApp_commSimple2

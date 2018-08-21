@@ -5,6 +5,9 @@
     <traci_server>
         <remote-port>5500</remote-port>
     </traci_server>
+    <processing>
+        <default.speeddev value="0" />
+    </processing>
     <output>
         <!-- tripinfo-output value="tripinfo_output.xml" / -->
         <no-step-log value="true" />

@@ -11,4 +11,9 @@
         <netstate-dump value="../../netstate.xml" />
         <netstate-dump.empty-edges value="false" />
     </output>
+    
+    <processing>
+        <default.speeddev value="0" />
+    </processing>
+    
 </configuration>
