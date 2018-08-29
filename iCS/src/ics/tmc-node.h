@@ -6,7 +6,7 @@
 ///
 /****************************************************************************/
 // iTETRIS, see http://www.ict-itetris.eu
-// Copyright © 2008 iTetris Project Consortium - All rights reserved
+// Copyright ï¿½ 2008 iTetris Project Consortium - All rights reserved
 /****************************************************************************/
 #ifndef TMC_NODE_H
 #define TMC_NODE_H
@@ -39,7 +39,7 @@ public:
 
 private:
     TmcNode();
-    static TmcNode* tmcMode_;
+    static TmcNode* tmcNode_;
 };
 
 }

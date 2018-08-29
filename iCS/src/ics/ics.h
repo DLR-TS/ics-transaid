@@ -108,12 +108,12 @@ private:
     int ReadFacilitiesConfigFile(std::string& filePath);
 
     /**
-    * @brief Gets information about the applications configuration.
+    * @brief Gets information about the applications configuration and launches the applications.
     * @param[in] filePath Path to the applications configuration file.
     * @return EXIT_FAILURE: If an error occurs.
     * @return EXIT_SUCCESS: If the parsing is successful.
     */
-    int ReadAppConfigFile(std::string filePath);
+    int SetupApplications(std::string filePath);
 
     /// @brief Member of the iCS related to synchronizing issues.
     SyncManager *m_syncManager;

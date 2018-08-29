@@ -6,7 +6,7 @@
 ///
 /****************************************************************************/
 // iTETRIS, see http://www.ict-itetris.eu
-// Copyright © 2008 iTetris Project Consortium - All rights reserved
+// Copyright ï¿½ 2008 iTetris Project Consortium - All rights reserved
 /****************************************************************************/
 /****************************************************************************************
  * Edited by Federico Caselli <f.caselli@unibo.it>
@@ -33,7 +33,7 @@ namespace ics
 // ===========================================================================
 // static member definitions
 // ===========================================================================
-TmcNode* TmcNode::tmcMode_ = NULL;
+TmcNode* TmcNode::tmcNode_ = NULL;
 
 // ===========================================================================
 // static method definitions
@@ -41,10 +41,10 @@ TmcNode* TmcNode::tmcMode_ = NULL;
 TmcNode*
 TmcNode::GetInstance()
 {
-    if (!tmcMode_)
-        tmcMode_ = new TmcNode;
+    if (!tmcNode_)
+        tmcNode_ = new TmcNode;
 
-    return tmcMode_;
+    return tmcNode_;
 }
 
 // ===========================================================================

@@ -180,7 +180,7 @@ ICS::Setup(string facilitiesConfigFile, string appConfigFile)
 		return EXIT_FAILURE;
 	}
 
-	if (ReadAppConfigFile(appConfigFile) == EXIT_FAILURE) {
+	if (SetupApplications(appConfigFile) == EXIT_FAILURE) {
 		cout << "iCS --> ERROR reading application configuration file." << endl;
 		cout << endl;
 		return EXIT_FAILURE;
@@ -348,12 +348,12 @@ ICS::ReadFacilitiesConfigFile(string& filePath)
 }
 
 int
-ICS::ReadAppConfigFile(string filePath)
+ICS::SetupApplications(string filePath)
 {
 	AppConfigFileParse appConfig;
 	try {
 		appConfig.readConfigFile(filePath);
-	} catch (std::runtime_error e) {
+	} catch (std::runtime_error& e) {
 		cout << "[ReadAppConfigFile] " << e.what() << endl;
 		return EXIT_FAILURE;
 	}
