@@ -63,25 +63,8 @@ namespace ics
 	class FacilitiesManager;
 
 // ===========================================================================
-// struct definitions
+// type definitions
 // ===========================================================================
-	/**
-	 * @struct MessageInfo
-	 * @brief Struct to share the information between the iCS core functions and
-	 / facilities.
-	 * The members in this structure is filled with the information from the
-	 * simulation of the V2X messages in ns-3. It is used by the Facilities Manager
-	 * to make the information available to the facilities block in the iCS.
-	 */
-	struct MessageInfo
-	{
-			int nodeId;
-			int nodeType;
-			int infoType;
-			float posX;
-			float posY;
-			float speed;
-	};
 
 	// Maps for the nodes
 	//			Map of nodes. The key is the ics id
