@@ -157,9 +157,9 @@ int TraCIClient::CommandSimulationStep(int time, std::vector<std::string> &depar
 
   tcpip::Storage outMsg;
   tcpip::Storage inMsg;
-  outMsg.writeUnsignedByte(1 + 1 + 4); // command length
+  outMsg.writeUnsignedByte(1 + 1 + 8); // command length
   outMsg.writeUnsignedByte(CMD_SIMSTEP2); // command id
-  outMsg.writeInt(time); //time (in ms)
+  outMsg.writeDouble(double(time)/1000.); //time (in s)
   // send request message
   try
   {
@@ -346,7 +346,7 @@ TraCIClient::getSimstepLength() {
     int commandID = CMD_GET_SIM_VARIABLE;
     tcpip::Storage inMsg;
     beginValueRetrieval("", VAR_DELTA_T, inMsg, commandID);
-    const double simstepLength = inMsg.readInt();
+    const double simstepLength = inMsg.readDouble();
     return simstepLength;
 }
 
