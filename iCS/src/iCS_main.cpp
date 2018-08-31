@@ -402,6 +402,7 @@ int main(int argc, char **argv)
     std::string killall;
     killall = "killall ";
     killall += "sumo ";//oc.getString("traffic-executable") + " "; //sumo
+    killall += "sumo-gui ";//sumo-gui
     killall += oc.getString("communication-executable") + " ";//ns-3
     //killall += "java";// apps running under java
     //char* m = "killall sumo main-inci5 java";
