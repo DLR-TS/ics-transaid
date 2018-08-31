@@ -2877,7 +2877,7 @@ void SyncManager::RefreshScheduledMessageMap()
 			++it;
 	}
 #ifdef LOG_ON
-	if (m_messageMap.size() > 0) {
+	if (m_messageMap.size() > 0 || num > 0) {
 	    ostringstream log;
 	    log << "RefreshScheduledMessageMap() Current size=" << m_messageMap.size() << ". Removed=" << num << " time"
 	            << ITetrisSimulationConfig::m_scheduleMessageCleanUp;
