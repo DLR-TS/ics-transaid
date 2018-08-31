@@ -840,6 +840,7 @@ int SyncManager::setTrafficSimstep() {
                 << "is no multiple of iCS simstep length (" << m_timeResolution << "ms.)";
         cout << "iCS --> [ERROR] " <<  msg.str() << endl;
         IcsLog::LogLevel((msg.str()).c_str(), kLogLevelError);
+        return EXIT_FAILURE;
     }
     return EXIT_SUCCESS;
 }
