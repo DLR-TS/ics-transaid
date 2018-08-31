@@ -70,12 +70,12 @@ SubsCalculateTravelTime::Stop(stationID_t stationId)
 int
 SubsCalculateTravelTime::InformApp(AppMessageManager* messageManager)
 {
-    if (m_startCommandReceived == false && m_stopCommandReceived == false) {
+    if (!m_startCommandReceived && !m_stopCommandReceived) {
         IcsLog::LogLevel("InformApp() No information about SubsCalculateTravelTime will be sent to app.",kLogLevelInfo);
     }
 
     // The vehicle go through the starting TTE RSU
-    if (m_startCommandReceived == true && m_stopCommandReceived == false) {
+    if (m_startCommandReceived && !m_stopCommandReceived) {
         if (messageManager->CommandSendSubcriptionCalculateTravelTimeFlags(m_nodeId, m_startingStationId, -1) == EXIT_FAILURE) {
             return EXIT_FAILURE;
         }
@@ -83,14 +83,14 @@ SubsCalculateTravelTime::InformApp(AppMessageManager* messageManager)
 
     // The vehicle go through the starting TTE RSU and the stop TTE RSU
     // The App should calculate the TTE
-    if (m_startCommandReceived == true && m_stopCommandReceived == true) {
+    if (m_startCommandReceived && m_stopCommandReceived) {
         if (messageManager->CommandSendSubcriptionCalculateTravelTimeFlags(m_nodeId, m_startingStationId, m_endingStationId) == EXIT_FAILURE) {
             return EXIT_FAILURE;
         }
     }
 
     // The vehicle go through the stop TTE RSU but NOT the start TTE RSU
-    if (m_startCommandReceived == false && m_stopCommandReceived == true) {
+    if (!m_startCommandReceived && m_stopCommandReceived) {
         if (messageManager->CommandSendSubcriptionCalculateTravelTimeFlags(m_nodeId, -1, m_endingStationId) == EXIT_FAILURE) {
             return EXIT_FAILURE;
         }

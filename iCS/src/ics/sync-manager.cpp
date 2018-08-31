@@ -1568,7 +1568,7 @@ int SyncManager::GetDataFromNs3()
 					for (vector<ScheduledCamMessageData>::iterator messageIterator = ScheduledCamMessageTable.begin();
 							messageIterator != ScheduledCamMessageTable.end(); messageIterator++)
 					{
-						if (m_v2xMessageTracker->CompareCamRows(rcvMessage, (*messageIterator)) == true)
+						if (m_v2xMessageTracker->CompareCamRows(rcvMessage, (*messageIterator)))
 						{
 							rcvMessage.actionID = (*messageIterator).actionID;
 
@@ -1687,7 +1687,7 @@ int SyncManager::GetDataFromNs3()
 			vector<IdentifiersStorageStruct>::iterator idIterator = IdentifiersStorageTable.begin();
 			while (idIterator != IdentifiersStorageTable.end())
             {
-				if ((*idIterator).stored == true)
+				if ((*idIterator).stored)
 				{
 					idIterator = IdentifiersStorageTable.erase(idIterator);
 				} else
@@ -1715,13 +1715,13 @@ int SyncManager::GetDataFromNs3()
 			IdentifiersStorageTable.clear();
 		}
 
-		// Erase from the CAM scheduling table in case there is no more receivers (received == true)
+		// Erase from the CAM scheduling table in case there is no more receivers (received)
 		if (ScheduledCamMessageTable.size() > 0)
         {
 			vector<ScheduledCamMessageData>::iterator mIterator = ScheduledCamMessageTable.begin();
 			while (mIterator != ScheduledCamMessageTable.end())
 			{
-				if ((*mIterator).received == true)
+				if ((*mIterator).received)
 				{
 #ifdef LOG_ON
                     stringstream log;
@@ -1974,8 +1974,8 @@ int SyncManager::ScheduleV2xCamAreaMessages()
 	// Start CAM transmission for the nodes in the vector idNodesToStart
 	if (idNodesToStart.size() > 0)
 	{
-		if (m_wirelessComSimCommunicator->CommandStartSendingCam(idNodesToStart, maxGeneralPayloadLength,
-				maxGeneralFrequency) == false)
+		if (!m_wirelessComSimCommunicator->CommandStartSendingCam(idNodesToStart, maxGeneralPayloadLength,
+				maxGeneralFrequency))
 		{
 			cout
 			<< "iCS --> [ScheduleV2xCamAreaMessages] ERROR While commanding to start sending CAM in the network simulator."
@@ -2022,7 +2022,7 @@ int SyncManager::ScheduleV2xCamAreaMessages()
 					break;
 				}
 			}
-			if (nodeWithWave == true)
+			if (nodeWithWave)
 			{
 				ScheduledCamMessageData messageData;
 

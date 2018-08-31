@@ -56,7 +56,7 @@ VehicleNode::VehicleNode(const std::string &nodeId) :
   // If the iCS ID already was assigned to a node
   bool validID = false;
   set<stationID_t>::iterator it;
-  while (validID == false)
+  while (!validID)
   {
     it = m_preAssignedIds.find(m_idCounter);
     if (it != m_preAssignedIds.end())

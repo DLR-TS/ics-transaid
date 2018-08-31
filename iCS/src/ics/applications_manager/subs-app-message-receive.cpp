@@ -481,7 +481,7 @@ Circle getCircleFromArea(Area2D* area);
 
 int SubsAppMessageReceive::InformApp(AppMessageManager* messageManager)
 {
-  if (m_appMsgReceived == false)
+  if (!m_appMsgReceived)
   {
     IcsLog::LogLevel("InformApp() No information about SubsAppMessageReceive will be sent to app.", kLogLevelInfo);
     return EXIT_SUCCESS;

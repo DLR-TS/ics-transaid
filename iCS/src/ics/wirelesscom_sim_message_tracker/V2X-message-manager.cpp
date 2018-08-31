@@ -199,7 +199,7 @@ V2xMessageManager::UpdateIdentifiersTable(vector<IdentifiersStorageStruct> &tabl
             if (actionID == (*it).actionID) {
                 if (senderID == (*it).senderID) {
                     if (receiverID == (*it).receiverID) {
-                        if ((*it).stored == false) {
+                        if (!(*it).stored) {
                             exists = true;
                             (*it).stored = true;
                         } else {
@@ -222,7 +222,7 @@ V2xMessageManager::UpdateIdentifiersTable(vector<IdentifiersStorageStruct> &tabl
     }
 
 
-    if (exists == false) {
+    if (!exists) {
         IdentifiersStorageStruct identifStruct;
 
         identifStruct.actionID = actionID;
