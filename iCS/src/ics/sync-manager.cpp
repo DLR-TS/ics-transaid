@@ -825,16 +825,23 @@ int SyncManager::CloseNs3()
 
 int SyncManager::ConnectSumo()
 {
-	if (m_trafficSimCommunicator->Connect())
-	    setTrafficSimstep();
-		return EXIT_SUCCESS;
-
+	if (m_trafficSimCommunicator->Connect()){
+		return setTrafficSimstep();
+	}
 	return EXIT_FAILURE;
 }
 
-void SyncManager::setTrafficSimstep() {
-    // TODO: check whether traffic simstep is a multiple of the iCS simstep, fail otherwise
-    m_trafficSimstep = 1000 * int(round(m_trafficSimCommunicator->getSimstepLength()));
+int SyncManager::setTrafficSimstep() {
+    m_trafficSimstep = int(round(1000 * m_trafficSimCommunicator->getSimstepLength()));
+    // Check whether traffic simstep is a multiple of the iCS simsteplength, fail otherwise
+    if (m_trafficSimstep % m_timeResolution != 0) {
+        stringstream msg;
+        msg << "setTrafficSimStep() traffic simstep length (" << m_trafficSimstep << " ms.) "
+                << "is no multiple of iCS simstep length (" << m_timeResolution << "ms.)";
+        cout << "iCS --> [ERROR] " <<  msg.str() << endl;
+        IcsLog::LogLevel((msg.str()).c_str(), kLogLevelError);
+    }
+    return EXIT_SUCCESS;
 }
 
 int SyncManager::CloseSumo()

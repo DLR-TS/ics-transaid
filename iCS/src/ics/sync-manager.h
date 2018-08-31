@@ -219,7 +219,7 @@ namespace ics
 			/**
              * @brief Sets the sync_manager's traffic simulation time step SUMO's simstep
              */
-			void setTrafficSimstep();
+			int setTrafficSimstep();
 
 			/**
 			 * @brief Closes the connection with SUMO
