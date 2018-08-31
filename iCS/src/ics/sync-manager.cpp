@@ -1482,13 +1482,8 @@ int SyncManager::ScheduleV2xMessages()
 	}
 
 	//Refresh the scheduled messages tables
-	if (ScheduledCamMessageTable.size() > 0)
-	{
-		RefreshScheduledCamMessageTable();
-	}
-
-	if (m_messageMap.size() > 0)
-		RefreshScheduledMessageMap();
+    RefreshScheduledCamMessageTable();
+    RefreshScheduledMessageMap();
 
 	return EXIT_SUCCESS;
 }
@@ -2671,11 +2666,11 @@ int SyncManager::RefreshScheduledCamMessageTable()
 		}
 	} else
 	{
-#ifdef LOG_ON
-		stringstream log;
-		log << "[WARNING] RefreshScheduledCamMessageTable() CAM scheduled table is empty";
-		IcsLog::LogLevel((log.str()).c_str(), kLogLevelWarning);
-#endif
+//#ifdef LOG_ON
+//		stringstream log;
+//		log << "[WARNING] RefreshScheduledCamMessageTable() CAM scheduled table is empty";
+//		IcsLog::LogLevel((log.str()).c_str(), kLogLevelWarning);
+//#endif
 	}
 
 	return EXIT_SUCCESS;
@@ -2882,10 +2877,12 @@ void SyncManager::RefreshScheduledMessageMap()
 			++it;
 	}
 #ifdef LOG_ON
-	ostringstream log;
-	log << "RefreshScheduledMessageMap() Current size=" << m_messageMap.size() << ". Removed=" << num << " time"
-			<< ITetrisSimulationConfig::m_scheduleMessageCleanUp;
-	IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+	if (m_messageMap.size() > 0) {
+	    ostringstream log;
+	    log << "RefreshScheduledMessageMap() Current size=" << m_messageMap.size() << ". Removed=" << num << " time"
+	            << ITetrisSimulationConfig::m_scheduleMessageCleanUp;
+	    IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+	}
 #endif
 }
 
