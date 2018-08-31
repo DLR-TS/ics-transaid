@@ -58,12 +58,14 @@ namespace ics
 // member method definitions
 // ===========================================================================
 TraCIClient::TraCIClient() :
+    m_tlsIDs_cached (false),
     m_socket(0),
     m_port(-1000)
 {
 }
 
 TraCIClient::TraCIClient(int port, std::string host) :
+    m_tlsIDs_cached (false),
     m_socket(0)
 {
   m_port = port;
@@ -785,10 +787,16 @@ TraCIClient::controlTraCI(tcpip::Storage &inMsg, tcpip::Storage &outMsg)
 int
 TraCIClient::GetTrafficLights(vector<trafficLightID_t>& trafficLigthIds)
 {
-	string objID;
-	tcpip::Storage inMsg;
-	beginValueRetrieval(objID, ID_LIST, inMsg, CMD_GET_TL_VARIABLE);
-	trafficLigthIds = inMsg.readStringList(); // traffic light IDs
+    if (!m_tlsIDs_cached) {
+        string objID;
+        tcpip::Storage inMsg;
+        beginValueRetrieval(objID, ID_LIST, inMsg, CMD_GET_TL_VARIABLE);
+        trafficLigthIds = inMsg.readStringList(); // traffic light IDs
+        m_tlsIDs = trafficLigthIds;
+        m_tlsIDs_cached = true;
+    } else {
+        trafficLigthIds = m_tlsIDs;
+    }
 	return EXIT_SUCCESS;
 }
 

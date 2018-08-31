@@ -310,6 +310,11 @@ private:
 
   /// @brief Socket for the connection.
   tcpip::Socket* m_socket;
+
+  /// @brief Cache the traffic light IDs, after querying them once.
+  bool m_tlsIDs_cached;
+  std::vector<ics_types::trafficLightID_t> m_tlsIDs;
+
 };
 
 }
