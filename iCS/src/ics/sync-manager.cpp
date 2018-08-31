@@ -1622,62 +1622,10 @@ int SyncManager::GetDataFromNs3()
 						<< toString(receivedMessage.messageType);
 				IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
-				bool messageProcessed = false;
-				MessageMap::iterator scheduledIt = m_messageMap.find(receivedMessage.messageId);
-				if (scheduledIt != m_messageMap.end())
-				{
-					receivedMessage.senderIcsId = scheduledIt->second.senderIcsId;
-					receivedMessage.receiverIcsId = scheduledIt->second.receiverIcsId;
-					receivedMessage.actionId = scheduledIt->second.actionId;
-					receivedMessage.appMessageId = scheduledIt->second.appMessageId;
-					// Call the Facilities
-					vector<stationID_t> vReceiver;
-					vReceiver.push_back(receivedMessage.receiverIcsId);
-					m_facilitiesManager->storeMessage(receivedMessage.actionId, vReceiver);
-
-					// Loop the SUBSCRIPTIONs of the node
-					for (vector<Subscription*>::iterator subsIt = node->m_subscriptionCollection->begin();
-							subsIt != node->m_subscriptionCollection->end(); ++subsIt)
-					{
-						Subscription* subscription = (*subsIt);
-						Subscription& reference = *subscription;
-						const type_info& typeofSubscription = typeid(reference);
-						if (typeofSubscription == typeid(SubsAppMessageReceive))
-						{
-							SubsAppMessageReceive* appMsgReceive = static_cast<SubsAppMessageReceive*>(subscription);
-							if (appMsgReceive->ProcessReceivedAppMessage(receivedMessage, GetAddress()) == EXIT_FAILURE)
-							{
-								IcsLog::LogLevel("[ProcessUnicastMessages] Error processing App message.", kLogLevelError);
-								return EXIT_FAILURE;
-							} else
-							{
-								if (appMsgReceive->getLastMessageAddedToReceived())
-								{
-									messageProcessed = true;
-#ifdef LOG_ON
-									stringstream log;	//only print the log if successful
-									log << "[ProcessUnicastMessages] for APP_MSG_RECEIVE subscriptions:  senderID "
-											<< receivedMessage.senderIcsId << " receiverID " << receivedMessage.receiverIcsId << " appID "
-											<< receivedMessage.appMessageId << " ActionID " << receivedMessage.actionId;
-									IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
-#endif
-								}
-							}
-						}
-					}
-
-					m_messageMap.erase(scheduledIt);
-				} else
-				{
-					ostringstream log;
-					log << "iCS --> sync-manager - GetDataFromNs3() There isn't a scheduled message with id "
-							<< receivedMessage.messageId;
-					IcsLog::LogLevel(log.str().c_str(), kLogLevelWarning);
-				}
-				if (!messageProcessed)
-					//						I have to delete the contained if the message is not processed. This can happen when penetration ration is less than 100%
-					//						since the shadow nodes do not have any subscription.
-					delete receivedMessage.packetTagContainer;
+                if (ProcessUnicastMessages(receivedMessage, node) == EXIT_FAILURE)
+                {
+                    return EXIT_FAILURE;
+                }
 				break;
 			}
 			case GEOBROADCAST:
@@ -2748,6 +2696,69 @@ int SyncManager::RefreshScheduledCamMessageTable()
 
 	return EXIT_SUCCESS;
 }
+
+
+
+int SyncManager::ProcessUnicastMessages(Message& receivedMessage, ITetrisNode const * node) {
+    bool messageProcessed = false;
+    MessageMap::iterator scheduledIt = m_messageMap.find(receivedMessage.messageId);
+    if (scheduledIt != m_messageMap.end())
+    {
+        receivedMessage.senderIcsId = scheduledIt->second.senderIcsId;
+        receivedMessage.receiverIcsId = scheduledIt->second.receiverIcsId;
+        receivedMessage.actionId = scheduledIt->second.actionId;
+        receivedMessage.appMessageId = scheduledIt->second.appMessageId;
+        // Call the Facilities
+        vector<stationID_t> vReceiver;
+        vReceiver.push_back(receivedMessage.receiverIcsId);
+        m_facilitiesManager->storeMessage(receivedMessage.actionId, vReceiver);
+
+        // Loop the SUBSCRIPTIONs of the node
+        for (vector<Subscription*>::iterator subsIt = node->m_subscriptionCollection->begin();
+                subsIt != node->m_subscriptionCollection->end(); ++subsIt)
+        {
+            Subscription* subscription = (*subsIt);
+            Subscription& reference = *subscription;
+            const type_info& typeofSubscription = typeid(reference);
+            if (typeofSubscription == typeid(SubsAppMessageReceive))
+            {
+                SubsAppMessageReceive* appMsgReceive = static_cast<SubsAppMessageReceive*>(subscription);
+                if (appMsgReceive->ProcessReceivedAppMessage(receivedMessage, GetAddress()) == EXIT_FAILURE)
+                {
+                    IcsLog::LogLevel("[ProcessUnicastMessages] Error processing App message.", kLogLevelError);
+                    return EXIT_FAILURE;
+                } else
+                {
+                    if (appMsgReceive->getLastMessageAddedToReceived())
+                    {
+                        messageProcessed = true;
+#ifdef LOG_ON
+                        stringstream log;   //only print the log if successful
+                        log << "[ProcessUnicastMessages] for APP_MSG_RECEIVE subscriptions:  senderID "
+                                << receivedMessage.senderIcsId << " receiverID " << receivedMessage.receiverIcsId << " appID "
+                                << receivedMessage.appMessageId << " ActionID " << receivedMessage.actionId;
+                        IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+#endif
+                    }
+                }
+            }
+        }
+
+        m_messageMap.erase(scheduledIt);
+    } else
+    {
+        ostringstream log;
+        log << "iCS --> sync-manager - GetDataFromNs3() There isn't a scheduled message with id "
+                << receivedMessage.messageId;
+        IcsLog::LogLevel(log.str().c_str(), kLogLevelWarning);
+    }
+    if (!messageProcessed)
+        //                      I have to delete the contained if the message is not processed. This can happen when penetration ration is less than 100%
+        //                      since the shadow nodes do not have any subscription.
+        delete receivedMessage.packetTagContainer;
+    return EXIT_SUCCESS;
+}
+
 
 int SyncManager::ProcessGeobroadcastMessages(Message& message)
 {

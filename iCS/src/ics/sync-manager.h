@@ -605,8 +605,11 @@ namespace ics
 //			 */
 //			int RefreshScheduledTopobroadcastMessageTable();
 
-			/// @todo To be implemented + commented
-			int ProcessGeobroadcastMessages(Message & message);
+            /// @todo To be commented
+            int ProcessUnicastMessages(Message & message, ITetrisNode const * receiver);
+
+            /// @todo To be implemented + commented
+            int ProcessGeobroadcastMessages(Message & message);
 
 			/// @todo To be commented
 			int ProcessTopobroadcastMessages(Message & message);
