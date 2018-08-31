@@ -1287,6 +1287,8 @@ int SyncManager::NewSubscriptions(ITetrisNode *node)
 		}
 	}
 
+	delete newSubs;
+
 	return EXIT_SUCCESS;
 }
 
