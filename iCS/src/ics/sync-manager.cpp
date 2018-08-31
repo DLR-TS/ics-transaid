@@ -726,42 +726,41 @@ int SyncManager::RunApplicationLogic()
 				return EXIT_FAILURE;
 			}
 
-			map<stationID_t, icstime_t >::iterator itTime;
-			for (itTime =m_firstTimeOutOfZone.begin(); itTime !=m_firstTimeOutOfZone.end(); itTime++  ){
-				if (itTime->first ==currentNode->m_icsId ){
-					if ((itTime->second !=m_simStep) &&((itTime->second/1000) == (m_simStep/1000))){
-						//get position from mobility history
+			map<stationID_t, icstime_t >::iterator itTime = m_firstTimeOutOfZone.find(currentNode->m_icsId);
+			if (itTime != m_firstTimeOutOfZone.end()) {
+			    if ((itTime->second != m_simStep) && (itTime->second/1000) == (m_simStep/1000)){
+			        //get position from mobility history
 #ifdef _DEBUG_MOBILITY
-						std::cout<<"m_firstTimeOutOfZone timestep "<<itTime->second <<", current timestep "<<m_simStep<<std::endl;
+			        std::cout<<"m_firstTimeOutOfZone timestep "<<itTime->second <<", current timestep "<<m_simStep<<std::endl;
 #endif
-						Point2D pos = m_facilitiesManager->getStationPositionsFromMobilityHistory(itTime->second, currentNode->m_icsId);
-						//If position is correct, send information to NS-3
-						if ((pos.x() > -100.0) || (pos.y() > -100.0)){
-							VehicleNode* vehicle = dynamic_cast<VehicleNode*>(currentNode);
-							std::pair<float, float> posFromSUMO = m_trafficSimCommunicator->GetPosition(*vehicle);
-							//if the same pos as from SUMO -> do nothing
-							if ((pos.x() != posFromSUMO.first) || (pos.y() != posFromSUMO.second)){
-								// Get additional info from SUMO, Create the new station in the facilities and update...
-								float speed = m_trafficSimCommunicator->GetSpeed(*vehicle);
-								TMobileStationDynamicInfo info;
-								info.speed = speed;
-								info.acceleration = vehicle->ChangeSpeed(speed);
-								info.direction = m_trafficSimCommunicator->GetDirection(*vehicle);
-								info.exteriorLights = m_trafficSimCommunicator->GetExteriorLights(*vehicle);
-								info.positionX = pos.x();
-								info.positionY = pos.y();
-								info.length = m_trafficSimCommunicator->GetVehicleLength(*vehicle);
-								info.width = m_trafficSimCommunicator->GetVehicleWidth(*vehicle);
-								info.lane = m_trafficSimCommunicator->GetLane(*vehicle);
-								info.timeStep = m_simStep;
-								m_facilitiesManager->updateMobileStationDynamicInformation(vehicle->m_icsId, info);
+			        Point2D pos = m_facilitiesManager->getStationPositionsFromMobilityHistory(itTime->second, currentNode->m_icsId);
+			        //If position is correct, send information to NS-3
+			        if ((pos.x() > -100.0) || (pos.y() > -100.0)){
+			            VehicleNode* vehicle = dynamic_cast<VehicleNode*>(currentNode);
+			            std::pair<float, float> posFromSUMO = m_trafficSimCommunicator->GetPosition(*vehicle);
+			            //if the same pos as from SUMO -> do nothing
+			            if ((pos.x() != posFromSUMO.first) || (pos.y() != posFromSUMO.second)){
+			                // Get additional info from SUMO, Create the new station in the facilities and update...
+			                float speed = m_trafficSimCommunicator->GetSpeed(*vehicle);
+			                TMobileStationDynamicInfo info;
+			                info.speed = speed;
+			                info.acceleration = vehicle->ChangeSpeed(speed);
+			                info.direction = m_trafficSimCommunicator->GetDirection(*vehicle);
+			                info.exteriorLights = m_trafficSimCommunicator->GetExteriorLights(*vehicle);
+			                info.positionX = pos.x();
+			                info.positionY = pos.y();
+			                info.length = m_trafficSimCommunicator->GetVehicleLength(*vehicle);
+			                info.width = m_trafficSimCommunicator->GetVehicleWidth(*vehicle);
+			                info.lane = m_trafficSimCommunicator->GetLane(*vehicle);
+			                info.timeStep = m_simStep;
+			                m_facilitiesManager->updateMobileStationDynamicInformation(vehicle->m_icsId, info);
 #ifdef _DEBUG_MOBILITY
-								cout << "iCS -->SubsAppControlTraci  Updated node's position: (node " << currentNode->m_icsId << "), SUMO - pos (" << posFromSUMO.first<<","<<posFromSUMO.second<< ")"<< ", New pos (" << pos.x()<<","<<pos.y()<< ") "<<  " at TS " << m_simStep << " "<< endl;
+			                cout << "iCS -->SubsAppControlTraci  Updated node's position: (node " << currentNode->m_icsId << "), SUMO - pos (" << posFromSUMO.first<<","<<posFromSUMO.second<< ")"<< ", New pos (" << pos.x()<<","<<pos.y()<< ") "<<  " at TS " << m_simStep << " "<< endl;
 #endif
-							}
-						}
-					}
-				}
+			            }
+			        }
+
+			    }
 			}
 
 			if (DropSubscriptions(currentNode) == EXIT_FAILURE)
