@@ -202,7 +202,7 @@ float ResultSetMaximumSpeed::GetMaximumSpeed(int nodeId)
   return -1;
 }
 
-int ResultSetMaximumSpeed::ApplyResult(SyncManager* syncManager, ApplicationHandler* appHandler)
+int ResultSetMaximumSpeed::ApplyResult(SyncManager* syncManager)
 {
 
   vector<TSetMaximumSpeed>::iterator it = m_maximumSpeeds.begin();

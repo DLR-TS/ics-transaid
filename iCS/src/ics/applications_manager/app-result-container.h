@@ -66,10 +66,9 @@ namespace ics
 			/**
 			 * @brief Triggers the actions necesary to apply the result of the application.
 			 * @param[in] syncManager To get necessary info from the environment.
-			 * @param[in] appHandler Needed to get information of the application.
 			 * @return EXIT_SUCCESS if the operation result applied successfuly EXIT_FAILURE.
 			 */
-			virtual int ApplyResult(SyncManager* syncManager, ApplicationHandler* appHandler) = 0;
+			virtual int ApplyResult(SyncManager* syncManager) = 0;
 
 			/**
 			 * @brief Determines if the container of results is empty or not.

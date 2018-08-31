@@ -77,7 +77,7 @@ ResultOpenBuslanes::ProcessResult(Storage& storage)
 }
 
 int
-ResultOpenBuslanes::ApplyResult(SyncManager* syncManager, ApplicationHandler* appHandler)
+ResultOpenBuslanes::ApplyResult(SyncManager* syncManager)
 {
     ITetrisNode *node = syncManager->GetNodeByIcsId(m_ownerStation);
     if ((int) node->m_type == (int) STATION_MOBILE) {

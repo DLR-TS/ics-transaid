@@ -180,6 +180,9 @@ namespace ics
 			 */
 			int Stop();
 
+			/// @brief Copies information into the TMobileStationDynamicInfo
+			void fillDynamicInfo(TMobileStationDynamicInfo& info, VehicleNode * vehicle, const pair<double,double>& pos, const double speed);
+
 			/**
 			 * @brief Establishes the connection with ns-3
 			 * @return EXIT_SUCCESS if the connection with ns-3 establishes successfully EXIT_FAILURE otherwise

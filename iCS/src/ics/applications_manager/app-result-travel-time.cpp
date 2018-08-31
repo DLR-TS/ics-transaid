@@ -122,7 +122,7 @@ ResultTravelTime::ProcessResult(Storage& storage)
 }
 
 int
-ResultTravelTime::ApplyResult(SyncManager* syncManager, ApplicationHandler* appHandler)
+ResultTravelTime::ApplyResult(SyncManager* syncManager)
 {
     switch (m_travelTime.m_messageStatus) {
     case kToBeScheduled: {

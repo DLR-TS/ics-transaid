@@ -104,7 +104,7 @@ public:
      * @param[in] appHandler Needed to get information of the application
      * @return EXIT_SUCCESS if the operation result applied successfuly EXIT_FAILURE
      */
-    int ApplyResult(SyncManager* syncManager, ApplicationHandler* appHandler);
+    int ApplyResult(SyncManager* syncManager);
 
     /// @todo TO BE COMMENTED
     int CheckMessage(int appMessageId, ics_types::stationID_t receiverId);

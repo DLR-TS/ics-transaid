@@ -113,7 +113,7 @@ ResultTrafficJamDetection::ProcessResult(Storage& storage)
 }
 
 int
-ResultTrafficJamDetection::ApplyResult(SyncManager* syncManager, ApplicationHandler* appHandler)
+ResultTrafficJamDetection::ApplyResult(SyncManager* syncManager)
 {
     vector<TCteMessage>::iterator it=m_cteMessages.begin();
     while (it != m_cteMessages.end()) {

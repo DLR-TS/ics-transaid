@@ -63,10 +63,9 @@ public:
     /**
      * @brief Sends a message to SUMO to apply the result in the node.
      * @param[in] syncManager Object to get access to utility functions.
-     * @param[in] appHandler Needed to get information of the application
      * @return EXIT_SUCCESS if the operation result applied successfuly EXIT_FAILURE
      */
-    int ApplyResult(SyncManager* syncManager, ApplicationHandler* appHandler);
+    int ApplyResult(SyncManager* syncManager);
 
     /// @todo To be Commented
     std::vector<std::pair<int,ics_types::stationID_t> > GetReceivedMessages();

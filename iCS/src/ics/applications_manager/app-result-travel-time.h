@@ -107,10 +107,9 @@ public:
     /**
      * @brief
      * @param[in] syncManager Object to get access to utility functions.
-     * @param[in] appHandler Needed to get information of the application
      * @return EXIT_SUCCESS if the operation result applied successfuly EXIT_FAILURE
      */
-    int ApplyResult(SyncManager* syncManager, ApplicationHandler* appHandler);
+    int ApplyResult(SyncManager* syncManager);
 
     /**
     * @brief Provides the travel time estimation of the station.

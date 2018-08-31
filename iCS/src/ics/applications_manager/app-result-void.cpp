@@ -56,7 +56,7 @@ ResultVoid::ProcessResult(Storage& storage)
 }
 
 int
-ResultVoid::ApplyResult(SyncManager* syncManager, ApplicationHandler* appHandler)
+ResultVoid::ApplyResult(SyncManager* syncManager)
 {
 #ifdef LOG_ON
     IcsLog::LogLevel("ApplyResult() The application does not return any result and no data is applied.",kLogLevelInfo);

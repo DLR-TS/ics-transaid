@@ -118,6 +118,11 @@
 #endif
 using namespace std;
 
+
+// #define _DEBUG_MOBILITY
+
+
+
 namespace ics
 {
 
@@ -552,17 +557,7 @@ int SyncManager::RunOneSumoTimeStep()
 			vehicle->m_SumoClass = m_trafficSimCommunicator->GetVehicleClass(*vehicle);
 
 			TMobileStationDynamicInfo info;
-			info.speed = speed;
-			info.acceleration = vehicle->ChangeSpeed(speed);
-			info.direction = m_trafficSimCommunicator->GetDirection(*vehicle);
-			info.exteriorLights = m_trafficSimCommunicator->GetExteriorLights(*vehicle);
-			info.positionX = pos.first;
-			info.positionY = pos.second;
-			info.length = m_trafficSimCommunicator->GetVehicleLength(*vehicle);
-			info.width = m_trafficSimCommunicator->GetVehicleWidth(*vehicle);
-			info.lane = m_trafficSimCommunicator->GetLane(*vehicle);
-			info.timeStep = m_simStep;
-
+            fillDynamicInfo(info, vehicle, pos, speed);
 			m_facilitiesManager->updateMobileStationDynamicInformation(vehicle->m_icsId, info);
 
 			AssignApplication(vehicle);
@@ -653,18 +648,8 @@ int SyncManager::RunOneSumoTimeStep()
 		float speed = m_trafficSimCommunicator->GetSpeed(*vehicle);
 
 		TMobileStationDynamicInfo info;
-		info.speed = speed;
-		info.acceleration = vehicle->ChangeSpeed(speed);
-		info.direction = m_trafficSimCommunicator->GetDirection(*vehicle);
-		info.exteriorLights = m_trafficSimCommunicator->GetExteriorLights(*vehicle);
-		info.positionX = pos.first;
-		info.positionY = pos.second;
-		info.length = m_trafficSimCommunicator->GetVehicleLength(*vehicle);
-		info.width = m_trafficSimCommunicator->GetVehicleWidth(*vehicle);
-		info.lane = m_trafficSimCommunicator->GetLane(*vehicle);
-		info.timeStep = m_simStep;
-
-		m_facilitiesManager->updateMobileStationDynamicInformation(vehicle->m_icsId, info);
+        fillDynamicInfo(info, vehicle, pos, speed);
+        m_facilitiesManager->updateMobileStationDynamicInformation(vehicle->m_icsId, info);
 
 	}
 
@@ -743,16 +728,7 @@ int SyncManager::RunApplicationLogic()
 			                // Get additional info from SUMO, Create the new station in the facilities and update...
 			                float speed = m_trafficSimCommunicator->GetSpeed(*vehicle);
 			                TMobileStationDynamicInfo info;
-			                info.speed = speed;
-			                info.acceleration = vehicle->ChangeSpeed(speed);
-			                info.direction = m_trafficSimCommunicator->GetDirection(*vehicle);
-			                info.exteriorLights = m_trafficSimCommunicator->GetExteriorLights(*vehicle);
-			                info.positionX = pos.x();
-			                info.positionY = pos.y();
-			                info.length = m_trafficSimCommunicator->GetVehicleLength(*vehicle);
-			                info.width = m_trafficSimCommunicator->GetVehicleWidth(*vehicle);
-			                info.lane = m_trafficSimCommunicator->GetLane(*vehicle);
-			                info.timeStep = m_simStep;
+                            fillDynamicInfo(info, vehicle, make_pair(pos.x(),pos.y()), speed);
 			                m_facilitiesManager->updateMobileStationDynamicInformation(vehicle->m_icsId, info);
 #ifdef _DEBUG_MOBILITY
 			                cout << "iCS -->SubsAppControlTraci  Updated node's position: (node " << currentNode->m_icsId << "), SUMO - pos (" << posFromSUMO.first<<","<<posFromSUMO.second<< ")"<< ", New pos (" << pos.x()<<","<<pos.y()<< ") "<<  " at TS " << m_simStep << " "<< endl;
@@ -798,6 +774,21 @@ int SyncManager::RunApplicationLogic()
 		return EXIT_FAILURE;
 	}
 }
+
+
+void SyncManager::fillDynamicInfo(TMobileStationDynamicInfo& info, VehicleNode * vehicle, const pair<double,double>& pos, const double speed) {
+    info.speed = speed;
+    info.acceleration = vehicle->ChangeSpeed(speed);
+    info.direction = m_trafficSimCommunicator->GetDirection(*vehicle);
+    info.exteriorLights = m_trafficSimCommunicator->GetExteriorLights(*vehicle);
+    info.positionX = pos.first;
+    info.positionY = pos.second;
+    info.length = m_trafficSimCommunicator->GetVehicleLength(*vehicle);
+    info.width = m_trafficSimCommunicator->GetVehicleWidth(*vehicle);
+    info.lane = m_trafficSimCommunicator->GetLane(*vehicle);
+    info.timeStep = m_simStep;
+}
+
 
 int SyncManager::ConnectNs3()
 {
@@ -1252,16 +1243,7 @@ int SyncManager::NewSubscriptions(ITetrisNode *node)
 					// Get additional info from SUMO and Create the new station in the facilities
 					float speed = m_trafficSimCommunicator->GetSpeed(*vehicle);
 					TMobileStationDynamicInfo info;
-					info.speed = speed;
-					info.acceleration = vehicle->ChangeSpeed(speed);
-					info.direction = m_trafficSimCommunicator->GetDirection(*vehicle);
-					info.exteriorLights = m_trafficSimCommunicator->GetExteriorLights(*vehicle);
-					info.positionX = pos.first;
-					info.positionY = pos.second;
-					info.length = m_trafficSimCommunicator->GetVehicleLength(*vehicle);
-					info.width = m_trafficSimCommunicator->GetVehicleWidth(*vehicle);
-					info.lane = m_trafficSimCommunicator->GetLane(*vehicle);
-					info.timeStep = m_simStep;
+                    fillDynamicInfo(info, vehicle, pos, speed);
 					m_facilitiesManager->updateMobileStationDynamicInformation(vehicle->m_icsId, info);
 #ifdef _DEBUG_MOBILITY
 					cout << "iCS -->SubsAppControlTraci  Updated node's position: (node " << node->m_icsId << "), SUMO - pos (" << posFromSUMO.first<<","<<posFromSUMO.second<< ")"<< ", New pos (" << pos.first<<","<<pos.second<< ") "<<  " at TS " << m_simStep << " "<< endl;
@@ -1409,6 +1391,7 @@ int SyncManager::ProcessApplicationResults()
 				if (result->m_applicationHandlerId == (*appsIt)->m_id)
 				{
 					appHandler = (*appsIt);
+					break;
 				}
 			}
 
@@ -1429,7 +1412,7 @@ int SyncManager::ProcessApplicationResults()
                 }
 				IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
-				if (result->ApplyResult(GetAddress(), appHandler) == EXIT_FAILURE)
+				if (result->ApplyResult(GetAddress()) == EXIT_FAILURE)
 				{
 					return EXIT_FAILURE;
 				}
