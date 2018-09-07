@@ -135,6 +135,12 @@ void loadOptionFile()
                   ProgramConfiguration::SetTestCase(TEST_CASE_COMMSIMPLE);
               } else if (value=="commSimple2"){
                   ProgramConfiguration::SetTestCase(TEST_CASE_COMMSIMPLE2);
+              } else if (value=="testToC"){
+                  ProgramConfiguration::SetTestCase(TEST_CASE_TOC);
+              } else if (value=="testTrajectory"){
+                  ProgramConfiguration::SetTestCase(TEST_CASE_TRAJECTORY);
+              } else if (value=="testMobility"){
+                  ProgramConfiguration::SetTestCase(TEST_CASE_MOBILITY);
               } else {
                   testCaseExists = false;
               }
