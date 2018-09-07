@@ -174,6 +174,28 @@ namespace testapp
                 }
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_INDUCTIONLOOP) {
                 // Vehicle does nothing
+						} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_TRAJECTORY) {
+							  //QUESTION: This seems to work only on specifi values. Why ?
+							  if (currentTimeStep % 1000 == 0.0) {
+								  	// retrieve speed every 10[sec].
+									  GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
+										// retrieve lane id every 10[sec].
+									  GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_LANE_ID);
+										// retrieve 1D position every lane at 10[sec].
+									  GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_LANEPOSITION);
+							  }
+						} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_TOC) {
+							  // TODO: instead of time, trigger ToC via lane ID and position
+						  	if (currentTimeStep == 10000 ) {
+										// Requesting ToC at 10[sec].
+										GetController()->requestToC("veh0","4.0");
+								}
+						} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_MOBILITY) {
+								// TODO: instead of time, trigger ToC via lane ID and position
+								if (currentTimeStep == 12000 ) {
+										// Requesting ToC at 10[sec].
+										GetController()->requestMobilityInfo();
+								}
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
                 // After t=8000, vehicle starts broadcasting until its broadcast is acknowledged or aborted at t = 12000
                 if (currentTimeStep > 8000 && m_waitForRSUAcknowledgement){
