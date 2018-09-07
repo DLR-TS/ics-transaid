@@ -189,6 +189,8 @@ namespace testapp
                 /// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
                 void AddTraciSubscription(const int cmdID, const int varID, const int varTypeID = 0, const tcpip::Storage* value = 0);
 
+								void requestMobilityInfo();
+
 
                 /// @brief schedule a traci command to be executed
                 /// @param[in] objID ID for the object to be addressed
@@ -205,6 +207,14 @@ namespace testapp
                         const int laneIndex=0, const double duration=std::numeric_limits<double>::max(),
                         const int flags=0, const double startPos=std::numeric_limits<double>::min(),
                         const double until=-1);
+
+								/// @brief Set parameter for ToC model
+				        void SetTraciParameter(const std::string timeTillMRM="0.0" ,
+																			 const std::string key="device.toc.requestToC");
+
+								void requestToC(const std::string vehID="veh0",
+			 													const std::string timeTillMRM="0.0");
+
 
                 /// @brief Add a subscription
                 void AddSubscription(Subscription * sub);
