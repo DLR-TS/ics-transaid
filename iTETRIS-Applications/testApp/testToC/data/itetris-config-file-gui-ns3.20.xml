@@ -3,22 +3,22 @@
     <scenario>
         <begin value="0"/>
         <end value="25"/>
-	<resolution  value="50" />
+        <resolution  value="50" />
         <penetration-rate value="100"/>                
         <facilities-config-file value="facilities-config-file.xml"/>
-	<message-reception-window value="5"/>
+        <message-reception-window value="5"/>
         <interactive value="false"/>	
     </scenario>
 
     <trafficsim>
-	<traffic-executable value="sumo-gui -c"/>
-	<traffic-file value="./sumo/test.sumocfg"/>
-	<traffic-host value="localhost"/>
+        <traffic-executable value="sumo-gui -c"/>
+        <traffic-file value="./sumo/test.sumocfg"/>
+        <traffic-host value="localhost"/>
         <traffic-port value="5500"/>
     </trafficsim>
 
     <communicationsim>
-	<communication-executable value="../../../bin/main-inci5"/>
+	<communication-executable value="../../../../bin/main-inci5"/>
         <communication-host value="localhost"/>
         <communication-port value="1982"/>	
         <communication-general-params-file value="./ns3/configGeneral.ns3.20.txt"/>
@@ -30,11 +30,11 @@
     </applications>
 
     <logs>
-        <ics-log-path value="ics-log-50.txt"/>
+        <ics-log-path value="../log.txt"/>
 <!--	<ics-log-path value="/dev/null" />-->
-	<ics-log-level value="INFO"/><!-- INFO,ERROR,WARNING -->
-	<ics-log-time-size value="5000"/>
-	<ns3-log-path value="ns3-log-50.txt"/>
+        <ics-log-level value="INFO"/><!-- INFO,ERROR,WARNING -->
+        <ics-log-time-size value="5000"/>
+        <ns3-log-path value="ns3-log-50.txt"/>
 <!--	<ns3-log-path value="/dev/null" />-->
     </logs>
 
