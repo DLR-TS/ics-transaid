@@ -223,6 +223,11 @@ namespace testapp
 			m_toSubscribe.push(SubscriptionHelper::SumoTraciCommand(executionId, commandStorage));
 		}
 
+		void Node::nodeGetMobilityInformation()
+		{
+			m_toSubscribe.push( SubscriptionHelper::GetMobilityInformation() );
+		}
+
 		void Node::addSubscriptions()
 		{
 		    if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
