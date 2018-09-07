@@ -191,9 +191,8 @@ namespace testapp
 										GetController()->requestToC("veh0","4.0");
 								}
 						} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_MOBILITY) {
-								// TODO: instead of time, trigger ToC via lane ID and position
 								if (currentTimeStep == 12000 ) {
-										// Requesting ToC at 10[sec].
+										// Requesting Mobility Info at 12[sec].
 										GetController()->requestMobilityInfo();
 								}
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {

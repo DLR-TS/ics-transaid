@@ -189,6 +189,7 @@ namespace testapp
                 /// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
                 void AddTraciSubscription(const int cmdID, const int varID, const int varTypeID = 0, const tcpip::Storage* value = 0);
 
+								/// @brief helper function that adds GetMobilityInfo subscription 
 								void requestMobilityInfo();
 
 
@@ -212,6 +213,7 @@ namespace testapp
 				        void SetTraciParameter(const std::string timeTillMRM="0.0" ,
 																			 const std::string key="device.toc.requestToC");
 
+								/// @brief Helper function for setting the required parameters for ToC
 								void requestToC(const std::string vehID="veh0",
 			 													const std::string timeTillMRM="0.0");
 

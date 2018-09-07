@@ -544,6 +544,7 @@ namespace testapp
                 /*QUESTION: For a reason that i don't understand I don't have to
 								specify the vehicle ID, it is being done automatically
 								(so does happen in addTraciStop). Where is vehicle ID specified ? */
+								//TODO: specify ToC for a single vehicle ID.
                 tcpip::Storage content;
                 content.writeInt(2);
                 content.writeUnsignedByte(TYPE_STRING);
@@ -580,6 +581,6 @@ namespace testapp
 				{
 					  m_node->nodeGetMobilityInformation();
 				}
-				
+
 	} /* namespace application */
 } /* namespace protocol */
