@@ -171,6 +171,12 @@ namespace testapp
 				 */
 				virtual void traciCommand(const int executionId, tcpip::Storage & commandStorage);
 
+				/**
+				 * @brief Create the subscription to get mobility info
+				 */
+				virtual void nodeGetMobilityInformation();
+
+
 				/*****************************
 				 * Utility methods
 				 */
