@@ -92,6 +92,12 @@ namespace testapp
 			return false;
 		}
 
+        void BehaviourNode::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
+        {
+
+        }
+
+
 		///BehaviourNodeWithSink implementation
 
 		BehaviourNodeWithSink::BehaviourNodeWithSink(iCSInterface * controller) :
@@ -318,5 +324,7 @@ namespace testapp
 			NS_LOG_DEBUG(
 					Log() << "Sent NoLongerConformant to RSU " << rsu.nodeId << ". My dir="<<node.direction<<", expected dir=" << rsu.conformantDirection<<". Dist="<<node.distance);
 		}
+
+
 	} /* namespace application */
 } /* namespace protocol */

@@ -110,6 +110,8 @@ namespace testapp
 				void setToUnsubscribe(const int nodeId, const int subscriptionId);
 				void sumoTraciCommandResult(const int nodeId, const int executionId, tcpip::Storage & storage);
 
+                void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+
 				//  Don't need it
 				//  bool commandTrafficSimulation();
 				//  bool resultTrafficSimulation();

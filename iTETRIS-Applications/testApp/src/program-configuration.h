@@ -60,7 +60,7 @@ enum
 {
     TEST_CASE_NONE = 0, TEST_CASE_SETVTYPE, TEST_CASE_EXECUTE,
     TEST_CASE_ACOSTA, TEST_CASE_INDUCTIONLOOP, TEST_CASE_COMMSIMPLE,
-    TEST_CASE_COMMSIMPLE2
+    TEST_CASE_COMMSIMPLE2,TEST_CASE_CAM_SIMPLE
 } typedef TestCase;
 
 
@@ -97,6 +97,7 @@ struct RsuData
   Circle cam_area;
   Circle car_area;
 }typedef RsuData;
+
 
 class ProgramConfiguration
 {

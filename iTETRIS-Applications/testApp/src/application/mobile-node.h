@@ -59,9 +59,10 @@ public:
   Vector2D getVelocity();
   double getDirection();
 protected:
-  //void addSubscriptions();
+  void addSubscriptions();
 private:
   MobilityInfo * m_position;
+  bool m_setCAMareaSubscription;
   void selectNodeType();
 };
 

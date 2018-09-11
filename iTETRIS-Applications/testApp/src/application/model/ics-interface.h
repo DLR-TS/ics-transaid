@@ -209,6 +209,12 @@ namespace testapp
                 /// @brief Add a subscription
                 void AddSubscription(Subscription * sub);
 
+                /**
+                 * @brief Called by the node class when the node has received CAM messages
+                 * @param[in] CAM Messages received
+                 */
+                void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+
 			private:
 
 				/**

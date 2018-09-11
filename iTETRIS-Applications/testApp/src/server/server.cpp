@@ -188,7 +188,10 @@ namespace testapp
 				break;
 			case CMD_SUMO_TRACI_COMMAND:
 				success = sumoTraciCommand();
-				break;
+                break;
+            case CMD_RECEIVED_CAM_INFO:
+                success = getReceivedCAMinfo();
+                break;
 
 			default:
 				writeStatusCmd(commandId, APP_RTYPE_NOTIMPLEMENTED, "Command not implemented");
@@ -493,6 +496,39 @@ namespace testapp
 				}
 			}
 		}
+
+        bool Server::getReceivedCAMinfo()
+        {
+            int nodeID = m_inputStorage.readInt();
+            float posX = m_inputStorage.readFloat();
+            float posY = m_inputStorage.readFloat();
+            int numberCAMreceived = m_inputStorage.readInt();
+
+            vector<CAMdata> receivedCAMmessages;
+
+            for (int it=0; it<numberCAMreceived; it++){
+                CAMdata receivedCAMmessage;
+                receivedCAMmessage.senderID = m_inputStorage.readInt();
+                double x = m_inputStorage.readFloat();
+                double y = m_inputStorage.readFloat();
+                receivedCAMmessage.position = application::Vector2D(x, y);
+                receivedCAMmessage.generationTime = m_inputStorage.readInt();
+                receivedCAMmessage.stationType = m_inputStorage.readInt();
+                receivedCAMmessage.speed = m_inputStorage.readFloat();
+                receivedCAMmessage.angle = m_inputStorage.readFloat();
+                receivedCAMmessage.acceleration = m_inputStorage.readFloat();
+                receivedCAMmessage.length = m_inputStorage.readFloat();
+                receivedCAMmessage.width = m_inputStorage.readFloat();
+                receivedCAMmessage.ligths = m_inputStorage.readInt();
+                receivedCAMmessage.laneID = m_inputStorage.readString();
+                receivedCAMmessage.edgeID = m_inputStorage.readString();
+                receivedCAMmessage.junctionID = m_inputStorage.readString();
+                receivedCAMmessages.push_back(receivedCAMmessage);
+            }
+            m_nodeHandler->processCAMmessagesReceived(nodeID, receivedCAMmessages);
+            writeStatusCmd(CMD_RECEIVED_CAM_INFO, APP_RTYPE_OK, "CMD_RECEIVED_CAM_INFO");
+            return true;
+        }
 
 	} /* namespace server */
 } /* namespace protocol */

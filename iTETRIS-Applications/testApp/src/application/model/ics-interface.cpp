@@ -547,5 +547,16 @@ namespace testapp
             }
         }
 
+        void iCSInterface::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
+        {
+            for (BehaviourMap::const_iterator it = m_behaviours.begin(); it != m_behaviours.end(); ++it)
+            {
+                if (!it->second->IsRunning())
+                    continue;
+                it->second->processCAMmessagesReceived(nodeID, receivedCAMmessages);
+            }
+        }
+
+
 	} /* namespace application */
 } /* namespace protocol */

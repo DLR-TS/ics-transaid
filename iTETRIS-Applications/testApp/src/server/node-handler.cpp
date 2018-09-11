@@ -269,5 +269,14 @@ namespace testapp
 			}
 		}
 
+        void NodeHandler::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
+        {
+                Node * node;
+                if (getNode(nodeID, node))
+                {
+                    node->processCAMmessagesReceived(nodeID ,receivedCAMmessages);
+                }
+         }
+
 	} /* namespace server */
 } /* namespace protocol */

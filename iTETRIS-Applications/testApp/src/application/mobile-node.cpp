@@ -39,6 +39,7 @@
 #include "node-sampler.h"
 #include <sstream>
 #include "model/ics-interface.h"
+#include "structs.h"
 
 namespace testapp
 {
@@ -73,6 +74,7 @@ namespace testapp
 			m_sumoClass = sumoClass;
 			selectNodeType();
 			m_position = new MobilityInfo(nodeId);
+            m_setCAMareaSubscription=false;
 			init();
 		}
 
@@ -119,6 +121,19 @@ namespace testapp
 			oss << "Selected class for node " << m_id << " is " << (int) m_type;
 			Log::WriteLog(oss);
 		}
+
+        void MobileNode::addSubscriptions()
+        {
+            Node::addSubscriptions();
+            if (ProgramConfiguration::GetTestCase() == TEST_CASE_CAM_SIMPLE){
+                if (!m_setCAMareaSubscription)
+                {
+                    m_setCAMareaSubscription = true;
+                    m_toSubscribe.push(SubscriptionHelper::SetCamArea(Circle( MobileNode::getPosition(), Node::getPropagationRadius())));
+                    m_toSubscribe.push(SubscriptionHelper::GetReceivedCamInfo());
+                }
+            }
+        }
 
 	} /* namespace application */
 } /* namespace protocol */

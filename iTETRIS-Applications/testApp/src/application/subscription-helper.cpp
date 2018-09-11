@@ -312,5 +312,16 @@ namespace testapp
 			return new SubscriptionHolder(SUB_APP_RESULT_TRAFF_SIM, request);
 		}
 
+        SubscriptionHolder * SubscriptionHelper::GetReceivedCamInfo()
+        {
+            Storage* request = new Storage();
+
+            request->writeUnsignedByte(1 + 1 + 1);
+            request->writeUnsignedByte(CMD_ASK_FOR_SUBSCRIPTION);
+            request->writeUnsignedByte(SUB_RECEIVED_CAM_INFO);
+
+            return new SubscriptionHolder(SUB_RECEIVED_CAM_INFO, request);
+        }
+
 	} /* namespace application */
 } /* namespace protocol */

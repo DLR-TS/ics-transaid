@@ -155,6 +155,11 @@ namespace testapp
 				 */
 				virtual void updateMobilityInformation(MobilityInfo * info) = 0;
 
+                /**
+                 * @brief The node has received one or more CAM messages. This method will call iCSInferface::processCAMmessagesReceived
+                 */
+                virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+
 				/******************************
 				 * Methods called by the iCSInferface to shedule the creation of the corresponding subscription
 				 */

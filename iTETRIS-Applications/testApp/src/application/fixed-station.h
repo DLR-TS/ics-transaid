@@ -74,6 +74,7 @@ namespace testapp
 				bool m_mobilitySubscription;
 				bool m_trafficLightSubscription;
 				bool m_positionUpdated;
+                bool m_setCAMareaSubscription;
 				RsuData m_rsuData;
 				TrafficLight* m_trafficLight;
 		};

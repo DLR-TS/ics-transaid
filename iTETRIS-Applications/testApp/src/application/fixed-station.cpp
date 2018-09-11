@@ -48,7 +48,7 @@ namespace testapp
 				Node(id)
 		{
 			m_type = NT_RSU;
-			m_mobilitySubscription = m_positionUpdated = m_trafficLightSubscription = false;
+            m_mobilitySubscription = m_positionUpdated = m_trafficLightSubscription = m_setCAMareaSubscription= false;
 			m_rsuData = ProgramConfiguration::GetRsuData(id);
 			m_trafficLight = NULL;
 			init();
@@ -78,6 +78,14 @@ namespace testapp
                     m_toSubscribe.push(SubscriptionHelper::GetTrafficLightInformation());
                 }
 			}
+            if (ProgramConfiguration::GetTestCase() == TEST_CASE_CAM_SIMPLE){
+                if (!m_setCAMareaSubscription)
+                {
+                    m_setCAMareaSubscription = true;
+                    m_toSubscribe.push(SubscriptionHelper::SetCamArea(m_rsuData.cam_area));
+                    m_toSubscribe.push(SubscriptionHelper::GetReceivedCamInfo());
+                }
+            }
 		}
 
 		void FixedStation::updateMobilityInformation(MobilityInfo * info)

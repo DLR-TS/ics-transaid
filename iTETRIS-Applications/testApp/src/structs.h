@@ -171,6 +171,23 @@ namespace testapp
 			double m_snr;
 	}typedef Message;
 
+    struct CAMdata
+    {
+        int senderID;
+        application::Vector2D position;
+        int generationTime;
+        int stationType;
+        float speed;
+        float angle;
+        float acceleration;
+        float length;
+        float width;
+        int ligths;
+        std::string laneID;
+        std::string edgeID;
+        std::string junctionID;
+    }typedef CAMdata;
+
 } /* namespace protocol */
 
 #endif /* STRUCTS_H_ */

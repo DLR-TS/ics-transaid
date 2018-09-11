@@ -94,5 +94,10 @@ namespace testapp
 			return outstr.str();
 		}
 
+        void Behaviour::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
+        {
+
+        }
+
 	} /* namespace application */
 } /* namespace protocol */

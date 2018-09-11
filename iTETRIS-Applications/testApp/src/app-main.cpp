@@ -135,6 +135,8 @@ void loadOptionFile()
                   ProgramConfiguration::SetTestCase(TEST_CASE_COMMSIMPLE);
               } else if (value=="commSimple2"){
                   ProgramConfiguration::SetTestCase(TEST_CASE_COMMSIMPLE2);
+              }else if (value=="CAMsimple"){
+                  ProgramConfiguration::SetTestCase(TEST_CASE_CAM_SIMPLE);
               } else {
                   testCaseExists = false;
               }

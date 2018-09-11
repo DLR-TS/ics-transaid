@@ -72,6 +72,7 @@ namespace testapp
 				bool applicationExecute(const int currentTimeStep);
 				bool trafficLightInformation();
 				bool sumoTraciCommand();
+                bool getReceivedCAMinfo();
 
 				//Don't need it
 				//  bool commandTrafficSimulation();

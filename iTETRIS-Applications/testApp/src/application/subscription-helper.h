@@ -143,7 +143,14 @@ namespace testapp
 				 * @param[in] nodeId Id of the node
 				 */
 				static SubscriptionHolder * GetNodeClass(const int nodeId);
-			private:
+
+                /**
+                  * @brief To create a  subscription for CAM messages
+                  * @param[in]
+                  */
+                static SubscriptionHolder * GetReceivedCamInfo();
+
+        private:
 				SubscriptionHelper();
 				~SubscriptionHelper();
 		};

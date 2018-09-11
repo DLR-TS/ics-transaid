@@ -45,6 +45,7 @@
 #include "subscription-helper.h"
 #include "traci-helper.h"
 
+
 namespace testapp
 {
 	namespace application
@@ -243,7 +244,9 @@ namespace testapp
                     m_toSubscribe.push(SubscriptionHelper::ReceiveGeobroadcast(MSGCAT_TESTAPP));
                     m_subReceiveMessage = true;
                 }
-		    }
+            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_CAM_SIMPLE) {
+
+            }
 		}
 
 		float Node::getPropagationRadius() const
@@ -276,6 +279,12 @@ namespace testapp
 		{
 			m_controller->TraciCommandResult(executionId, storage);
 		}
+
+        void Node::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
+        {
+            m_controller->processCAMmessagesReceived(nodeID ,receivedCAMmessages);
+        }
+
 
 	} /* namespace application */
 } /* namespace protocol */

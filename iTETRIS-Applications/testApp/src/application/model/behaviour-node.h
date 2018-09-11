@@ -41,6 +41,7 @@
 #include "scheduler.h"
 #include "random-variable.h"
 #include <map>
+#include "structs.h"
 
 namespace testapp
 {
@@ -84,6 +85,8 @@ namespace testapp
 				virtual bool IsSubscribedTo(ProtocolId pid) const;
 				virtual void Receive(server::Payload *payload, double snr);
 				virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
+                virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+
 
 				TypeBehaviour GetType() const
 				{

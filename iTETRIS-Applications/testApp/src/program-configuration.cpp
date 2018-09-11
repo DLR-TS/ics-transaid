@@ -196,7 +196,7 @@ namespace testapp
 				return EXIT_FAILURE;
 			}
 			XMLElement* circle = xmlElem->FirstChildElement("cam-area");
-			if (circle)
+            if (circle)
 			{
 				rsu.cam_area = LoadCircle(circle);
 			}

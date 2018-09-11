@@ -96,6 +96,12 @@ namespace testapp
 				 */
 				virtual bool Execute(const int currentTimeStep, DirectionValueMap &data) = 0;
 
+                /**
+                 * @brief Called by the ics-interface if a CAM message is received by the node
+                 * @param[in] the CAM received message
+                 */
+                virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+
 				virtual TypeBehaviour GetType() const
 				{
 					return Type();
