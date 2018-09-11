@@ -227,7 +227,7 @@ namespace testapp
             NS_LOG_DEBUG(Log() << "Aborted waiting for RSU response");
         }
 
-<<<<<<< HEAD
+
         void BehaviourTestNode::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
         {
             NS_LOG_FUNCTION(Log());
@@ -239,8 +239,7 @@ namespace testapp
                 }
             }
         }
-=======
->>>>>>> 4a253fcc0f93227c46d9c2d49fa60da28c4cd5e3
+
 
 	} /* namespace application */
 } /* namespace protocol */

@@ -577,7 +577,6 @@ namespace testapp
             }
         }
 
-<<<<<<< HEAD
         void iCSInterface::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
         {
             for (BehaviourMap::const_iterator it = m_behaviours.begin(); it != m_behaviours.end(); ++it)
@@ -588,13 +587,13 @@ namespace testapp
             }
         }
 
-=======
+
 				void iCSInterface::requestMobilityInfo()
 				{
 					  //TODO: specify for which nodes to get the info, as function parameter 
 					  m_node->nodeGetMobilityInformation();
 				}
->>>>>>> 4a253fcc0f93227c46d9c2d49fa60da28c4cd5e3
+
 
 	} /* namespace application */
 } /* namespace protocol */
