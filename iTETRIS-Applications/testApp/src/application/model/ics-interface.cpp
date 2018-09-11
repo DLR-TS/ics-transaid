@@ -579,6 +579,7 @@ namespace testapp
 
 				void iCSInterface::requestMobilityInfo()
 				{
+					  //TODO: specify for which nodes to get the info, as function parameter 
 					  m_node->nodeGetMobilityInformation();
 				}
 

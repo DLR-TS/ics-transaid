@@ -225,6 +225,7 @@ namespace testapp
 
 		void Node::nodeGetMobilityInformation()
 		{
+			//TODO: specify nodes for GetMobilityInformation(parameter)
 			m_toSubscribe.push( SubscriptionHelper::GetMobilityInformation() );
 		}
 
