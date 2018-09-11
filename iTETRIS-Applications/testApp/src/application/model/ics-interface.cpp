@@ -254,7 +254,7 @@ namespace testapp
                 tcpip::Storage maxSpeed;
                 maxSpeed.writeDouble(20);
                 AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_MAXSPEED, TYPE_DOUBLE, &maxSpeed);
-            } 
+            }
 		}
 
 		void iCSInterface::Deactivate()
@@ -533,6 +533,36 @@ namespace testapp
             }
         }
 
+				void iCSInterface::SetTraciParameter(const std::string timeTillMRM ,
+																						 const std::string key )
+        {
+            if (m_node->getSumoId() != INVALID_STRING)
+            {
+                int cmdID = CMD_SET_VEHICLE_VARIABLE;
+                int varID = VAR_PARAMETER;
+                int varTypeID = TYPE_COMPOUND;
+                /*QUESTION: For a reason that i don't understand I don't have to
+								specify the vehicle ID, it is being done automatically
+								(so does happen in addTraciStop). Where is vehicle ID specified ? */
+								//TODO: specify ToC for a single vehicle ID.
+                tcpip::Storage content;
+                content.writeInt(2);
+                content.writeUnsignedByte(TYPE_STRING);
+                content.writeString(key);
+                content.writeUnsignedByte(TYPE_STRING);
+                content.writeString(timeTillMRM);
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(cmdID, varID, varTypeID, &content);
+            }
+        }
+
+				void iCSInterface::requestToC(const std::string vehID ,
+																			const std::string timeTillMRM)
+        {
+                // Set parameter for ToC model
+                SetTraciParameter(timeTillMRM, "device.toc.requestToC");
+        }
+
         void iCSInterface::AddTraciSubscription(const std::string objID, const int cmdID, const int varID, const int varTypeID, const tcpip::Storage * value)
         {
             tcpip::Storage sumoQuery;
@@ -547,6 +577,7 @@ namespace testapp
             }
         }
 
+<<<<<<< HEAD
         void iCSInterface::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
         {
             for (BehaviourMap::const_iterator it = m_behaviours.begin(); it != m_behaviours.end(); ++it)
@@ -557,6 +588,13 @@ namespace testapp
             }
         }
 
+=======
+				void iCSInterface::requestMobilityInfo()
+				{
+					  //TODO: specify for which nodes to get the info, as function parameter 
+					  m_node->nodeGetMobilityInformation();
+				}
+>>>>>>> 4a253fcc0f93227c46d9c2d49fa60da28c4cd5e3
 
 	} /* namespace application */
 } /* namespace protocol */

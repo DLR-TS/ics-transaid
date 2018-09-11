@@ -75,10 +75,13 @@ namespace testapp
             if (ProgramConfiguration::GetTestCase()==TEST_CASE_EXECUTE) {
                 // do nothing
             } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_SETVTYPE) {
-                GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
-                tcpip::Storage type;
-                type.writeString("t2");
-                GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
+                GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
+                // tcpip::Storage type;
+                // type.writeString("t2");
+                // GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
+								tcpip::Storage type;
+								type.writeDouble(6.9);
+								GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_ACCEL, TYPE_DOUBLE, &type);
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
                 // Time to abort waiting for a response after insertion.
                 // Will be ineffective if communication runs as intended (test case commSimple2).
@@ -171,6 +174,27 @@ namespace testapp
                 }
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_INDUCTIONLOOP) {
                 // Vehicle does nothing
+						} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_TRAJECTORY) {
+							  //QUESTION: This seems to work only on specifi values. Why ?
+							  if (currentTimeStep % 1000 == 0.0) {
+								  	// retrieve speed every 10[sec].
+									  GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
+										// retrieve lane id every 10[sec].
+									  GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_LANE_ID);
+										// retrieve 1D position every lane at 10[sec].
+									  GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_LANEPOSITION);
+							  }
+						} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_TOC) {
+							  // TODO: instead of time, trigger ToC via lane ID and position
+						  	if (currentTimeStep == 10000 ) {
+										// Requesting ToC at 10[sec].
+										GetController()->requestToC("veh0","4.0");
+								}
+						} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_MOBILITY) {
+								if (currentTimeStep == 12000 ) {
+										// Requesting Mobility Info at 12[sec].
+										GetController()->requestMobilityInfo();
+								}
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
                 // After t=8000, vehicle starts broadcasting until its broadcast is acknowledged or aborted at t = 12000
                 if (currentTimeStep > 8000 && m_waitForRSUAcknowledgement){
@@ -203,6 +227,7 @@ namespace testapp
             NS_LOG_DEBUG(Log() << "Aborted waiting for RSU response");
         }
 
+<<<<<<< HEAD
         void BehaviourTestNode::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
         {
             NS_LOG_FUNCTION(Log());
@@ -214,6 +239,8 @@ namespace testapp
                 }
             }
         }
+=======
+>>>>>>> 4a253fcc0f93227c46d9c2d49fa60da28c4cd5e3
 
 	} /* namespace application */
 } /* namespace protocol */
