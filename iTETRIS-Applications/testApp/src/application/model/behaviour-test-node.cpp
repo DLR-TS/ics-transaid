@@ -76,12 +76,12 @@ namespace testapp
                 // do nothing
             } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_SETVTYPE) {
                 GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
-                // tcpip::Storage type;
-                // type.writeString("t2");
-                // GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
-								tcpip::Storage type;
-								type.writeDouble(6.9);
-								GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_ACCEL, TYPE_DOUBLE, &type);
+                tcpip::Storage type;
+                type.writeString("t2");
+                GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
+								// tcpip::Storage type;
+								// type.writeDouble(6.9);
+								// GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_ACCEL, TYPE_DOUBLE, &type);
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
                 // Time to abort waiting for a response after insertion.
                 // Will be ineffective if communication runs as intended (test case commSimple2).
