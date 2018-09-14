@@ -34,4 +34,7 @@ testApp_commSimple2
 
 testApp_CAMsimple
 
+testApp_mobility
+testApp_trajectory
+testApp_ToC
 
