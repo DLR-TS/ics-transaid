@@ -60,3 +60,6 @@ protocolspeed
 **language.settings.xml
 iTETRIS-Applications/testApp/testScenario/sumo/*.xml
 iTETRIS-Applications/testApp/testScenario/*.txt
+iTETRIS-Applications/testApp/docs/html
+iTETRIS-Applications/testApp/docs/man
+iTETRIS-Applications/testApp/docs/latex
