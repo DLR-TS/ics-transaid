@@ -75,7 +75,7 @@ namespace testapp
             if (ProgramConfiguration::GetTestCase()==TEST_CASE_EXECUTE) {
                 // do nothing
             } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_SETVTYPE) {
-                GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
+                GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
                 tcpip::Storage type;
                 type.writeString("t2");
                 GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
