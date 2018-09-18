@@ -79,9 +79,6 @@ namespace testapp
                 tcpip::Storage type;
                 type.writeString("t2");
                 GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
-								// tcpip::Storage type;
-								// type.writeDouble(6.9);
-								// GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_ACCEL, TYPE_DOUBLE, &type);
             } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
                 // Time to abort waiting for a response after insertion.
                 // Will be ineffective if communication runs as intended (test case commSimple2).
@@ -188,7 +185,7 @@ namespace testapp
 							  // TODO: instead of time, trigger ToC via lane ID and position
 						  	if (currentTimeStep == 10000 ) {
 										// Requesting ToC at 10[sec].
-										GetController()->requestToC("veh0","4.0");
+										GetController()->requestToC("veh0",4.0);
 								}
 						} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_MOBILITY) {
 								if (currentTimeStep == 12000 ) {

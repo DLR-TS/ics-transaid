@@ -209,13 +209,11 @@ namespace testapp
                         const int flags=0, const double startPos=std::numeric_limits<double>::min(),
                         const double until=-1);
 
-								/// @brief Set parameter for ToC model
-				        void SetTraciParameter(const std::string timeTillMRM="0.0" ,
-																			 const std::string key="device.toc.requestToC");
+                /// @brief Set parameter for ToC model
+                void SetTraciParameter(const std::string key, const std::string value);
 
-								/// @brief Helper function for setting the required parameters for ToC
-								void requestToC(const std::string vehID="veh0",
-			 													const std::string timeTillMRM="0.0");
+                /// @brief Helper function for setting the required parameters for ToC
+                void requestToC(const std::string vehID, const double timeTillMRM);
 
 
                 /// @brief Add a subscription

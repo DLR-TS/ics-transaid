@@ -36,6 +36,7 @@
 #include <cmath>
 #include <sstream>
 #include "log/log.h"
+#include "../../utils/log/ToString.h"
 #include "program-configuration.h"
 #include "behaviour-node.h"
 #include "behaviour-test-node.h"
@@ -533,8 +534,7 @@ namespace testapp
             }
         }
 
-				void iCSInterface::SetTraciParameter(const std::string timeTillMRM ,
-																						 const std::string key )
+        void iCSInterface::SetTraciParameter(const std::string key, const std::string value)
         {
             if (m_node->getSumoId() != INVALID_STRING)
             {
@@ -550,17 +550,16 @@ namespace testapp
                 content.writeUnsignedByte(TYPE_STRING);
                 content.writeString(key);
                 content.writeUnsignedByte(TYPE_STRING);
-                content.writeString(timeTillMRM);
+                content.writeString(value);
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
                 AddTraciSubscription(cmdID, varID, varTypeID, &content);
             }
         }
 
-				void iCSInterface::requestToC(const std::string vehID ,
-																			const std::string timeTillMRM)
+        void iCSInterface::requestToC(const std::string vehID, const double timeTillMRM)
         {
-                // Set parameter for ToC model
-                SetTraciParameter(timeTillMRM, "device.toc.requestToC");
+            // Set parameter for ToC model
+            SetTraciParameter("device.toc.requestToC", toString(timeTillMRM));
         }
 
         void iCSInterface::AddTraciSubscription(const std::string objID, const int cmdID, const int varID, const int varTypeID, const tcpip::Storage * value)
