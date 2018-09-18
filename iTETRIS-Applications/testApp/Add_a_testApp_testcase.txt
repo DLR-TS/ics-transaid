@@ -1,5 +1,5 @@
 1) Start the iCS test suite -> transaid/iCS/tests/runTests.sh
-2) Copy test basic/testApp_simpleExecute and rename it
+2) Copy test basic/testApp_simpleExecute, rename it, and add a brief description what the test is supposed to do (all from within the texttest GUI)
 3) Edit the file data/option.txt and replace the testname appropriately (no whitespaces or special characters), say 'myTest'
 4) In testApp/src/program-configuration.h, add a constant for the new testcase to the TestCase-enum, say TEST_CASE_MYTEST
 5) In testApp/src/app-main.cpp -> loadOptionFile() add a case under 'if (key == "test")' for your testcase key (-> 'if (value == "myTest")'), and set the testcase constant by ProgramConfiguration::SetTestCase(TEST_CASE_MYTEST)
