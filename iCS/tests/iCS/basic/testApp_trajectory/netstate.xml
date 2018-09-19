@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on Παρ 07 Σεπ 2018 11:01:40 πμ EEST by Eclipse SUMO GUI Version git
+<!-- generated on Τετ 19 Σεπ 2018 01:54:23 μμ EEST by Eclipse SUMO GUI Version v1_0_1+0022-2ae680e0e0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
@@ -12,6 +12,10 @@
         <netstate-dump value="./sumo/../../netstate.xml"/>
         <netstate-dump.empty-edges value="false"/>
     </output>
+
+    <processing>
+        <default.speeddev value="0"/>
+    </processing>
 
     <report>
         <no-step-log value="true"/>
