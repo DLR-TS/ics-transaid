@@ -104,7 +104,9 @@ void fillOptions()
   OptionsCont &oc = OptionsCont::getOptions();
   oc.clearCopyrightNotices();
   oc.addCopyrightNotice("(c) iTETRIS consortium 2008-2010; http://www.ict-itetris.eu/");
-  oc.addCopyrightNotice("   (c) DLR 2001-2010; http://sumo.sf.net");
+  oc.addCopyrightNotice("(c) COLOMBO consortium 2012-2015; http://www.colombo-fp7.eu/");
+  oc.addCopyrightNotice("(c) TransAID consortium 2018; http://www.trainsaid.eu/");
+  oc.addCopyrightNotice("... and others (see source files).");
   oc.addCallExample("-c <CONFIGURATION>", "");
 
   // insert options sub-topics
