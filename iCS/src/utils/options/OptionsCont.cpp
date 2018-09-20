@@ -540,33 +540,15 @@ OptionsCont::processMetaOptions(bool missingOptions) {
     }
 
     // check whether the help shall be printed
-    if (getBool("help")) {
+    if (getBool("help") || getBool("version")) {
         std::cout << myFullName << std::endl;
         for (std::vector<std::string>::const_iterator it =
                     myCopyrightNotices.begin(); it != myCopyrightNotices.end(); ++it) {
             std::cout << " " << *it << std::endl;
         }
-        printHelp(std::cout);
-        return true;
-    }
-    // check whether the help shall be printed
-    if (getBool("version")) {
-        std::cout << myFullName << std::endl;
-        for (std::vector<std::string>::const_iterator it =
-                    myCopyrightNotices.begin(); it != myCopyrightNotices.end(); ++it) {
-            std::cout << " " << *it << std::endl;
+        if (getBool("help")) {
+            printHelp(std::cout);
         }
-        std::cout << "\n" << myFullName << " is part of SUMO.\n";
-        std::cout << "SUMO is free software: you can redistribute it and/or modify\n";
-        std::cout << "it under the terms of the GNU General Public License as published by\n";
-        std::cout << "the Free Software Foundation, either version 3 of the License, or\n";
-        std::cout << "(at your option) any later version.\n\n";
-        std::cout << "This program is distributed in the hope that it will be useful,\n";
-        std::cout << "but WITHOUT ANY WARRANTY; without even the implied warranty of\n";
-        std::cout << "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n";
-        std::cout << "GNU General Public License for more details.\n\n";
-        std::cout << "You should have received a copy of the GNU General Public License\n";
-        std::cout << "along with this program. If not, see http://www.gnu.org/licenses/gpl.html" << std::endl;
         return true;
     }
     // check whether the settings shall be printed
