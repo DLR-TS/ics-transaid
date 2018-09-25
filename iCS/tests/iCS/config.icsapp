@@ -14,6 +14,7 @@ netstate:netstate.xml
 
 [run_dependent_text]
 errors:no process found
+errors:Kein Prozess gefunden
 output:iCS.exe{REPLACE iCS}
 output:(Elapsed time \(in seconds\): )[0-9\.]+{REPLACE \1 ELAPSED_TIME}
 output:Step #[0-9]+\.[0-9]{2} \(
