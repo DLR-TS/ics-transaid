@@ -404,7 +404,6 @@ C2CIPApp::StartTransmitting(Ptr<c2cAddress> address)
   }
   InitializeINCIvariables();
   DoSendC2C(address,m_MessRegenerationTime,m_StartTime);
-  std::cout << "C2CIPApp::StartTransmitting"  << std::endl;
 }
 
 void
