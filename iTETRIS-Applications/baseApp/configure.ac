@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([test app], [0.1])
-AC_CONFIG_SRCDIR([src/app-main.cpp])
+AC_INIT([baseApp], [0.1])
+AC_CONFIG_SRCDIR([src/program-configuration.cpp])
 AC_CANONICAL_SYSTEM
 
 dnl create an config-header
@@ -143,7 +143,6 @@ src/server/Makefile
 src/application/Makefile
 src/application/helper/Makefile
 src/application/model/Makefile
-src/application/model/test/Makefile
 src/Makefile
 Makefile])
 AC_OUTPUT

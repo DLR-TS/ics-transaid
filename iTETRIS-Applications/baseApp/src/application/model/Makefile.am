@@ -10,5 +10,3 @@ headers.cpp headers.h \
 ics-interface.cpp ics-interface.h \
 common.h common.cpp \
 node-sampler.cpp node-sampler.h
-
-SUBDIRS = test

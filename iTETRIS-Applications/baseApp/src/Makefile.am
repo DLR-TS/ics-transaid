@@ -8,7 +8,6 @@ current-time.h current-time.cpp
 libbaseApp_a_LIBADD = ./server/libserver.a \
 ./application/libapplication.a \
 ./application/model/libmodel.a \
-./application/model/test/libmodel_test.a \
 ./application/helper/libhelper.a \
 ./utils/exception/libexception.a \
 ./utils/log/liblog.a \

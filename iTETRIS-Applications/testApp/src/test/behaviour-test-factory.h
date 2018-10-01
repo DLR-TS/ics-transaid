@@ -37,7 +37,7 @@
 #ifndef BEHAVIOUR_TEST_FACTORY_H_
 #define BEHAVIOUR_TEST_FACTORY_H_
 
-#include "../behaviour-factory.h"
+#include "behaviour-factory.h"
 
 namespace testapp
 {

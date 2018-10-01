@@ -42,7 +42,7 @@
 #include "program-configuration.h"
 #include "output-helper.h"
 #include "model/behaviour-factory.h"
-#include "model/test/behaviour-test-factory.h"
+#include "test/behaviour-test-factory.h"
 
 #ifdef _MSC_VER
 #include <windows_config.h>

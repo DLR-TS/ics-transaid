@@ -104,7 +104,7 @@ else
 fi
 CPPFLAGS=$save_cppflags
 
-AM_CPPFLAGS="-I$PWD/$srcdir/src -I$PWD/$srcdir/src/server -I$PWD/$srcdir/src/application -I$PWD/$srcdir/src/utils -I$PWD/$srcdir/src/foreign -I$PWD/$srcdir/src/application/helper -I$PWD/$srcdir/src/application/model $AM_CPPFLAGS"
+AM_CPPFLAGS="-I$PWD/$srcdir/src -I$PWD/$srcdir/../baseApp/src -I$PWD/$srcdir/../baseApp/src/server -I$PWD/$srcdir/../baseApp/src/application -I$PWD/$srcdir/../baseApp/src/utils -I$PWD/$srcdir/../baseApp/src/foreign -I$PWD/$srcdir/../baseApp/src/application/helper -I$PWD/$srcdir/../baseApp/src/application/model $AM_CPPFLAGS"
 AC_SUBST(AM_CPPFLAGS)
 AC_SUBST(AM_CXXFLAGS)
 
@@ -134,17 +134,7 @@ AC_CHECK_FUNCS([floor getcwd gettimeofday memset pow select socket sqrt])
 
 
 AC_CONFIG_FILES([
-src/foreign/Makefile
-src/foreign/tcpip/Makefile
-src/utils/Makefile
-src/utils/exception/Makefile
-src/utils/log/Makefile
-src/utils/xml/Makefile
-src/server/Makefile
-src/application/Makefile
-src/application/helper/Makefile
-src/application/model/Makefile
-src/application/model/test/Makefile
+src/test/Makefile
 src/Makefile
 Makefile])
 AC_OUTPUT
