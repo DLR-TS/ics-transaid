@@ -1,9 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$dc/d1b/classprotocol_1_1application_1_1CallbackImplBase.html" title="protocol::application\l::CallbackImplBase" alt="" coords="5,179,144,221"/>
-<area shape="rect" id="node2" href="$d4/de4/classprotocol_1_1application_1_1CallbackImpl.html" title="protocol::application\l::CallbackImpl\&lt; R, T1,\l T2, T3, T4 \&gt;" alt="" coords="203,12,357,68"/>
-<area shape="rect" id="node4" href="$da/d6c/classprotocol_1_1application_1_1CallbackImpl_3_01R_00_01empty_00_01empty_00_01empty_00_01empty_01_4.html" title="protocol::application\l::CallbackImpl\&lt; R, empty,\l empty, empty, empty \&gt;" alt="" coords="192,92,368,148"/>
-<area shape="rect" id="node5" href="$df/da0/classprotocol_1_1application_1_1CallbackImpl_3_01R_00_01T1_00_01empty_00_01empty_00_01empty_01_4.html" title="protocol::application\l::CallbackImpl\&lt; R, T1,\l empty, empty, empty \&gt;" alt="" coords="199,172,361,228"/>
-<area shape="rect" id="node6" href="$d7/dc5/classprotocol_1_1application_1_1CallbackImpl_3_01R_00_01T1_00_01T2_00_01empty_00_01empty_01_4.html" title="protocol::application\l::CallbackImpl\&lt; R, T1,\l T2, empty, empty \&gt;" alt="" coords="203,252,357,308"/>
-<area shape="rect" id="node7" href="$dd/d46/classprotocol_1_1application_1_1CallbackImpl_3_01R_00_01T1_00_01T2_00_01T3_00_01empty_01_4.html" title="protocol::application\l::CallbackImpl\&lt; R, T1,\l T2, T3, empty \&gt;" alt="" coords="203,332,357,388"/>
-<area shape="rect" id="node3" href="$df/d03/classprotocol_1_1application_1_1MemPtrCallbackImpl.html" title="protocol::application\l::MemPtrCallbackImpl\l\&lt; OBJ_PTR, MEM_PTR, R,\l T1, T2, T3, T4 \&gt;" alt="" coords="416,5,605,75"/>
-</map>

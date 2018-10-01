@@ -1,9 +1,0 @@
-<map id="protocol::application::TraciHelper::AddValueSetStorage" name="protocol::application::TraciHelper::AddValueSetStorage">
-<area shape="rect" id="node2" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#a4bac5dddf508f951922f4e8bc703de5b" title="Creates the request for a state change to send to sumo via traci. " alt="" coords="283,99,485,141"/>
-<area shape="rect" id="node7" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#a2621cf6d366128806aa3f507b1052cc1" title="Adds a state changing command the the map and returns an id to identify is later. ..." alt="" coords="280,186,488,227"/>
-<area shape="rect" id="node3" href="$db/d00/classtcpip_1_1Storage.html#a5a42840a57331704c2fdc30e3d1d2a54" title="tcpip::Storage::writeUnsignedByte" alt="" coords="536,5,757,32"/>
-<area shape="rect" id="node4" href="$db/d00/classtcpip_1_1Storage.html#a70ac6555c79e95c5340ae9c035bf4083" title="tcpip::Storage::size" alt="" coords="579,56,714,83"/>
-<area shape="rect" id="node5" href="$db/d00/classtcpip_1_1Storage.html#a07b6d4f8db8f1893aa4ed419be5a5d25" title="tcpip::Storage::writeString" alt="" coords="560,107,733,133"/>
-<area shape="rect" id="node6" href="$db/d00/classtcpip_1_1Storage.html#a4cc4b1a846f7b0579c67b903f1aa4dfc" title="tcpip::Storage::writeStorage" alt="" coords="555,157,739,184"/>
-<area shape="rect" id="node8" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#ab5f5eefa6b03c8170d624a764ba426fd" title="Adds a command the the map and returns an id to identify is later. " alt="" coords="553,209,741,250"/>
-</map>

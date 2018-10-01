@@ -1,6 +1,0 @@
-<map id="tcpip::Socket::BailOnSocketError" name="tcpip::Socket::BailOnSocketError">
-<area shape="rect" id="node2" href="$d6/d95/classtcpip_1_1Socket.html#a10bb7aecbead205c5a9237741449eb72" title="tcpip::Socket::init" alt="" coords="255,5,379,32"/>
-<area shape="rect" id="node4" href="$d6/d95/classtcpip_1_1Socket.html#a7847299f806a73798f4ceb95ab0e3d51" title="Wait for a incoming connection to port_. " alt="" coords="244,56,391,83"/>
-<area shape="rect" id="node5" href="$d6/d95/classtcpip_1_1Socket.html#a8f89d187776729d15db3ba5c99c36acd" title="Connects to host_:port_. " alt="" coords="241,107,394,133"/>
-<area shape="rect" id="node3" href="$d6/d95/classtcpip_1_1Socket.html#adcf673cc4a6e4183f4a6f0929e13c5c1" title="Constructor that prepare to connect to host:port. " alt="" coords="443,5,591,32"/>
-</map>

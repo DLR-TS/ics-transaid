@@ -1,6 +1,0 @@
-<map id="protocol::application::BehaviourNode" name="protocol::application::BehaviourNode">
-<area shape="rect" id="node4" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html" title="protocol::application\l::BehaviourNodeWithoutSink" alt="" coords="566,5,757,46"/>
-<area shape="rect" id="node5" href="$db/d21/classprotocol_1_1application_1_1BehaviourNodeWithSink.html" title="protocol::application\l::BehaviourNodeWithSink" alt="" coords="575,70,747,111"/>
-<area shape="rect" id="node2" href="$d0/db2/classprotocol_1_1application_1_1Behaviour.html" title="protocol::application\l::Behaviour" alt="" coords="192,38,331,79"/>
-<area shape="rect" id="node3" href="$db/d11/classprotocol_1_1application_1_1TraceManager.html" title="Utility class to be extended to allow push model interaction. " alt="" coords="5,38,144,79"/>
-</map>

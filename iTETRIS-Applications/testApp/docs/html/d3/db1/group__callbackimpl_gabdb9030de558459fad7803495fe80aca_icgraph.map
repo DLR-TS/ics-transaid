@@ -1,7 +1,0 @@
-<map id="protocol::application::CallbackBase::GetImpl" name="protocol::application::CallbackBase::GetImpl">
-<area shape="rect" id="node2" href="$d3/db1/group__callbackimpl.html#ga0d30ecc72783661e4f0a4087b8229174" title="protocol::application\l::Callback::IsEqual" alt="" coords="228,5,367,46"/>
-<area shape="rect" id="node4" href="$d3/db1/group__callbackimpl.html#gaa65db7c55ff5c7c6ad877fbb0a33a768" title="protocol::application\l::Callback::CheckType" alt="" coords="219,70,375,111"/>
-<area shape="rect" id="node5" href="$d3/db1/group__callbackimpl.html#gab8a4b81783add8e27d4271766bc32e15" title="protocol::application\l::Callback::Assign" alt="" coords="228,135,367,177"/>
-<area shape="rect" id="node3" href="$d3/db1/group__callbackimpl.html#gad0c03fa92a5f53f6ce5216743af77fb2" title="protocol::application\l::operator!=" alt="" coords="444,5,583,46"/>
-<area shape="rect" id="node6" href="$dc/da6/classprotocol_1_1application_1_1TracedCallback.html#af8b5612f3ac929b986a0f6744665a9e2" title="protocol::application\l::TracedCallback::Connect" alt="" coords="424,135,603,177"/>
-</map>

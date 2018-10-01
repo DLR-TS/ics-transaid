@@ -1,8 +1,0 @@
-<map id="tinyxml2::XMLNode::Value" name="tinyxml2::XMLNode::Value">
-<area shape="rect" id="node2" href="$d5/dcd/classtinyxml2_1_1StrPair.html#ad87e3d11330f5e689ba1e7e54c023b57" title="tinyxml2::StrPair::\lGetStr" alt="" coords="201,38,327,79"/>
-<area shape="rect" id="node3" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a5a96e5144a8d693dc4bcd783d9964648" title="tinyxml2::XMLUtil::\lGetCharacterRef" alt="" coords="381,5,515,46"/>
-<area shape="rect" id="node5" href="$d5/dcd/classtinyxml2_1_1StrPair.html#ade1469025e6b4cac74397a82a7429337" title="tinyxml2::StrPair::\lCollapseWhitespace" alt="" coords="377,70,519,111"/>
-<area shape="rect" id="node4" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a31c00d5c5dfb38382de1dfcaf4be3595" title="tinyxml2::XMLUtil::\lConvertUTF32ToUTF8" alt="" coords="569,5,725,46"/>
-<area shape="rect" id="node6" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a9333d20f2a34325b5115ca45849c4b2a" title="tinyxml2::XMLUtil::\lSkipWhiteSpace" alt="" coords="579,70,714,111"/>
-<area shape="rect" id="node7" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#a357ec3af8fc433d19023a815f45e8e33" title="tinyxml2::XMLUtil::\lIsWhiteSpace" alt="" coords="579,135,714,177"/>
-</map>

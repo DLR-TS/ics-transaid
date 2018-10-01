@@ -1,6 +1,0 @@
-<map id="protocol::application::CommHeader::getDestinationId" name="protocol::application::CommHeader::getDestinationId">
-<area shape="rect" id="node2" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a064104a2c412be85d3ca2853e8809e5a" title="protocol::application\l::Controller::Receive" alt="" coords="278,5,421,46"/>
-<area shape="rect" id="node3" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#af6c8dbc30e0da766bcaf47889305c10c" title="Called by the node class when the node has received the message from iCS. " alt="" coords="270,70,429,111"/>
-<area shape="rect" id="node4" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a995cb41c45ecd8bde7d9f68d34c45451" title="The node has received a message. This method will call iCSInferface::Receive. " alt="" coords="477,70,709,111"/>
-<area shape="rect" id="node5" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a6427065d5105c9456b28f5550033023f" title="protocol::server::NodeHandler\l::applicationMessageReceive" alt="" coords="758,70,954,111"/>
-</map>

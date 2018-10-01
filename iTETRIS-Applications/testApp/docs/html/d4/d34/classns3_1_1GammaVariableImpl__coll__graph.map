@@ -1,6 +1,0 @@
-<map id="ns3::GammaVariableImpl" name="ns3::GammaVariableImpl">
-<area shape="rect" id="node2" href="$dc/dab/classns3_1_1RandomVariableBase.html" title="ns3::RandomVariableBase" alt="" coords="5,96,181,123"/>
-<area shape="rect" id="node5" href="$d3/dad/classns3_1_1RandomVariable.html" title="The basic RNG for NS&#45;3.Note: The underlying random number generation method used by NS&#45;3 is the RngSt..." alt="" coords="109,187,256,213"/>
-<area shape="rect" id="node3" href="$da/d35/classns3_1_1RngStream.html" title="Combined Multiple&#45;Recursive Generator MRG32k3a. " alt="" coords="35,5,151,32"/>
-<area shape="rect" id="node4" href="$d3/d3c/classns3_1_1NormalVariable.html" title="Class NormalVariable defines a random variable with a normal (Gaussian) distribution.This class supports the creation of objects that return random numbers from a fixed normal distribution. It also supports the generation of single random numbers from various normal distributions. " alt="" coords="110,264,249,291"/>
-</map>

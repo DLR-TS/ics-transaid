@@ -1,6 +1,0 @@
-<map id="protocol::application::Node::setToUnsubscribe" name="protocol::application::Node::setToUnsubscribe">
-<area shape="rect" id="node2" href="$d1/d60/classprotocol_1_1application_1_1FixedStation.html#a2847e4189e43225a19c7fc24eb529549" title="Called with the updated information about the traffic light. " alt="" coords="242,5,414,61"/>
-<area shape="rect" id="node4" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a9e297935b35a9901725a88b5d0c5a7c1" title="protocol::server::NodeHandler\l::ConfirmSubscription" alt="" coords="230,85,426,126"/>
-<area shape="rect" id="node5" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#aa0e04743e3271a780df5fa75f75dec3e" title="protocol::server::NodeHandler\l::setToUnsubscribe" alt="" coords="230,150,426,191"/>
-<area shape="rect" id="node3" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a277392315eaeec477657639cdf7614e2" title="protocol::server::NodeHandler\l::trafficLightInformation" alt="" coords="475,13,671,54"/>
-</map>

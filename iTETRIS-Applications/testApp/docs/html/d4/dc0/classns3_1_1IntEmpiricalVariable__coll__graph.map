@@ -1,6 +1,0 @@
-<map id="ns3::IntEmpiricalVariable" name="ns3::IntEmpiricalVariable">
-<area shape="rect" id="node2" href="$d3/d05/classns3_1_1EmpiricalVariable.html" title="EmpiricalVariable distribution random varDefines a random variable that has a specified, empirical distribution. The distribution is specified by a series of calls to the CDF member function, specifying a value and the probability that the function value is less than the specified value. When values are requested, a uniform random variable is used to select a probability, and the return value is interpreted linearly between the two appropriate points in the CDF. The method is known as inverse transform sampling: (http://en.wikipedia.org/wiki/Inverse_transform_sampling). " alt="" coords="17,264,169,291"/>
-<area shape="rect" id="node3" href="$d3/dad/classns3_1_1RandomVariable.html" title="The basic RNG for NS&#45;3.Note: The underlying random number generation method used by NS&#45;3 is the RngSt..." alt="" coords="20,187,167,213"/>
-<area shape="rect" id="node4" href="$dc/dab/classns3_1_1RandomVariableBase.html" title="ns3::RandomVariableBase" alt="" coords="5,96,181,123"/>
-<area shape="rect" id="node5" href="$da/d35/classns3_1_1RngStream.html" title="Combined Multiple&#45;Recursive Generator MRG32k3a. " alt="" coords="35,5,151,32"/>
-</map>

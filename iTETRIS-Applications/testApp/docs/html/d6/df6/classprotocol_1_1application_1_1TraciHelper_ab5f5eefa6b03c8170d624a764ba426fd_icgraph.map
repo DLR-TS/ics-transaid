@@ -1,9 +1,0 @@
-<map id="protocol::application::TraciHelper::AddCommand" name="protocol::application::TraciHelper::AddCommand">
-<area shape="rect" id="node2" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#a69bcf1c547ebf38e37f3231dcd5c4abf" title="Adds a value retrieval command the the map and returns an id to identify is later. " alt="" coords="243,5,453,46"/>
-<area shape="rect" id="node7" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#a2621cf6d366128806aa3f507b1052cc1" title="Adds a state changing command the the map and returns an id to identify is later. ..." alt="" coords="244,70,452,111"/>
-<area shape="rect" id="node3" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#ada0488e72bf9477ae75cc9aef3c80f7e" title="As ValueGetStorage but it also adds the command to the map. " alt="" coords="501,5,728,46"/>
-<area shape="rect" id="node4" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a88abd032c47dc218736dc58ce77aa1ad" title="protocol::application\l::iCSInterface::AddTraciSubscription" alt="" coords="776,38,1011,79"/>
-<area shape="rect" id="node5" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a6939ea68567cef623abe9703eb71d8cc" title="Activates the node. " alt="" coords="1059,38,1218,79"/>
-<area shape="rect" id="node6" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#ade24e9843c1a2211cfe117b56bc6beb3" title="protocol::application\l::iCSInterface::iCSInterface" alt="" coords="1267,38,1451,79"/>
-<area shape="rect" id="node8" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#ab82c37783fdf0f701b78eda428d1ffb1" title="As ValueSetStorage but it also adds the command to the map. " alt="" coords="501,70,728,111"/>
-</map>

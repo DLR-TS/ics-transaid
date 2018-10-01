@@ -1,4 +1,0 @@
-<map id="protocol::application::CentralizedProtocol::CompluteSpeed" name="protocol::application::CentralizedProtocol::CompluteSpeed">
-<area shape="rect" id="node2" href="$dc/dbe/classprotocol_1_1application_1_1CentralizedProtocol.html#a5fbd4cabd8a0d3446db3483435809c4c" title="Calculates the data to send back for a particular direction. " alt="" coords="198,4,386,60"/>
-<area shape="rect" id="node3" href="$dc/dbe/classprotocol_1_1application_1_1CentralizedProtocol.html#a209eefb4e3f84e1e10a06b7b951c6b40" title="Process the information inside the DataMap to specify which data to return to iCS. " alt="" coords="435,4,579,60"/>
-</map>

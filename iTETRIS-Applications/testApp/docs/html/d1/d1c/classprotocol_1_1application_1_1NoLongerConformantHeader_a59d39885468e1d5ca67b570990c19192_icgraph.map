@@ -1,5 +1,0 @@
-<map id="protocol::application::NoLongerConformantHeader::setVehicleMovement" name="protocol::application::NoLongerConformantHeader::setVehicleMovement">
-<area shape="rect" id="node2" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a88605881f7f5a142d75aec7e6058d2ef" title="Called by the EventSendResponse if the node has passed the intersection. " alt="" coords="251,4,442,60"/>
-<area shape="rect" id="node3" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a94a2feb4d2c64580d1ed460ef5caa57d" title="Called by the receive after a random timeout when a beacon message is received. " alt="" coords="491,4,682,60"/>
-<area shape="rect" id="node4" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a373a1080ed9cb0ff94fd9559b98987d5" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="731,4,922,60"/>
-</map>

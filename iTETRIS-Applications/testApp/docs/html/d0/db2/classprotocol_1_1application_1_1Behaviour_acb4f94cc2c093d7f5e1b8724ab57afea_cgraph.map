@@ -1,8 +1,0 @@
-<map id="protocol::application::Behaviour::Log" name="protocol::application::Behaviour::Log">
-<area shape="rect" id="node2" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a0af962af5533461bc8d583690eab993e" title="Name of the node. For logging. " alt="" coords="193,37,370,78"/>
-<area shape="rect" id="node5" href="$d9/d3d/namespaceprotocol_1_1application.html#a0511c2c9c2fd3d9fc2898a3deeb3e514" title="protocol::application\l::ToString" alt="" coords="212,102,351,143"/>
-<area shape="rect" id="node6" href="$d0/db2/classprotocol_1_1application_1_1Behaviour.html#ab98ebaf49fa279e553e5dd47844163a8" title="protocol::application\l::Behaviour::GetType" alt="" coords="208,167,355,209"/>
-<area shape="rect" id="node3" href="$d9/d3d/namespaceprotocol_1_1application.html#a39db3f7aadf97ba8fce456d5016bff46" title="protocol::application\l::IsNodeType" alt="" coords="419,5,557,46"/>
-<area shape="rect" id="node4" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a444338899434c9a151acfcfd7b8e1a2f" title="protocol::application\l::Node::getId" alt="" coords="419,70,557,111"/>
-<area shape="rect" id="node7" href="$d0/db2/classprotocol_1_1application_1_1Behaviour.html#aff88107c7a7520f05d3ee45a423f0804" title="protocol::application\l::Behaviour::Type" alt="" coords="419,167,557,209"/>
-</map>

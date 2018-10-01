@@ -1,6 +1,0 @@
-<map id="protocol::application::TracedCallback::Connect" name="protocol::application::TracedCallback::Connect">
-<area shape="rect" id="node2" href="$d3/db1/group__callbackimpl.html#gab8a4b81783add8e27d4271766bc32e15" title="protocol::application\l::Callback::Assign" alt="" coords="232,38,371,79"/>
-<area shape="rect" id="node3" href="$d3/db1/group__callbackimpl.html#ga0104d98b7cddf8c40a3ef3010417eb71" title="protocol::application\l::Callback::DoAssign" alt="" coords="428,5,575,46"/>
-<area shape="rect" id="node5" href="$d3/db1/group__callbackimpl.html#gabdb9030de558459fad7803495fe80aca" title="protocol::application\l::CallbackBase::GetImpl" alt="" coords="419,70,584,111"/>
-<area shape="rect" id="node4" href="$d3/db1/group__callbackimpl.html#gaa949d2e89750d78618acbe22e08ac9fc" title="protocol::application\l::Callback::DoCheckType" alt="" coords="632,5,805,46"/>
-</map>

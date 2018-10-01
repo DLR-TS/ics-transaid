@@ -1,4 +1,0 @@
-<map id="protocol::application::iCSInterface::Receive" name="protocol::application::iCSInterface::Receive">
-<area shape="rect" id="node2" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a995cb41c45ecd8bde7d9f68d34c45451" title="The node has received a message. This method will call iCSInferface::Receive. " alt="" coords="213,5,445,46"/>
-<area shape="rect" id="node3" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a6427065d5105c9456b28f5550033023f" title="protocol::server::NodeHandler\l::applicationMessageReceive" alt="" coords="494,5,690,46"/>
-</map>

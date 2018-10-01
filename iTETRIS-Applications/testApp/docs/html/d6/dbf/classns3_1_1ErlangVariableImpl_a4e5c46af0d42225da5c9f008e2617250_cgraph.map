@@ -1,4 +1,0 @@
-<map id="ns3::ErlangVariableImpl::GetValue" name="ns3::ErlangVariableImpl::GetValue">
-<area shape="rect" id="node2" href="$d3/dad/classns3_1_1RandomVariable.html#a515e141bf41f254bbef6969519928307" title="Returns a random double from the underlying distribution. " alt="" coords="213,5,360,46"/>
-<area shape="rect" id="node3" href="$dc/dab/classns3_1_1RandomVariableBase.html#a1bdfa75b98a2f034a31e2efa1e718674" title="ns3::RandomVariableBase\l::GetValue" alt="" coords="409,5,586,46"/>
-</map>

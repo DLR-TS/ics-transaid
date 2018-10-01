@@ -1,5 +1,0 @@
-<map id="protocol::application::TrafficLight::addTrafficLightLane" name="protocol::application::TrafficLight::addTrafficLightLane">
-<area shape="rect" id="node2" href="$df/df6/classprotocol_1_1application_1_1TrafficLight.html#ab2ca71045b04d0cd68068382981ff352" title="protocol::application\l::TrafficLight::CreateTraffic\lLight" alt="" coords="272,4,451,60"/>
-<area shape="rect" id="node3" href="$d1/d60/classprotocol_1_1application_1_1FixedStation.html#a2847e4189e43225a19c7fc24eb529549" title="Called with the updated information about the traffic light. " alt="" coords="499,4,671,60"/>
-<area shape="rect" id="node4" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a277392315eaeec477657639cdf7614e2" title="protocol::server::NodeHandler\l::trafficLightInformation" alt="" coords="721,11,917,53"/>
-</map>

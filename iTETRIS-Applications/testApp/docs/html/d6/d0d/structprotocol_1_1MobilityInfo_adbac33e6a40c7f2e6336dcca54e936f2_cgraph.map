@@ -1,7 +1,0 @@
-<map id="protocol::MobilityInfo::MobilityInfo" name="protocol::MobilityInfo::MobilityInfo">
-<area shape="rect" id="node2" href="$db/d00/classtcpip_1_1Storage.html#a04d2fd214a905ad99e9cda8ee7b813e4" title="tcpip::Storage::readInt" alt="" coords="231,5,382,32"/>
-<area shape="rect" id="node3" href="$db/d00/classtcpip_1_1Storage.html#aadec452f61b7c9a8996f3b5af6f5b0ce" title="tcpip::Storage::readFloat" alt="" coords="224,56,389,83"/>
-<area shape="rect" id="node4" href="$db/d00/classtcpip_1_1Storage.html#a46215cfa07dcabbdea932e4c69504019" title="tcpip::Storage::readUnsignedByte" alt="" coords="197,107,416,133"/>
-<area shape="rect" id="node5" href="$d6/d0d/structprotocol_1_1MobilityInfo.html#a0af2673d3bdcef3650660cab401617fb" title="protocol::MobilityInfo\l::ConvertDirection" alt="" coords="235,158,378,199"/>
-<area shape="rect" id="node6" href="$db/d00/classtcpip_1_1Storage.html#afe367b1d224d73ab06d0ab7899bcd097" title="tcpip::Storage::readString" alt="" coords="221,224,392,251"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="protocol::application::iCSInterface::TraciCommandResult" name="protocol::application::iCSInterface::TraciCommandResult">
-<area shape="rect" id="node2" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a2370797616a53e43b194f1ccf6bbce5e" title="The result of a sumo command has been received. This method will call iCSInferface::SumoTraciCommandR..." alt="" coords="254,11,482,53"/>
-<area shape="rect" id="node3" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a7c579de70966c388a78d4d510dce44ae" title="protocol::server::NodeHandler\l::sumoTraciCommandResult" alt="" coords="531,11,727,53"/>
-</map>

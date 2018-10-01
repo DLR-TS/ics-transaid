@@ -1,7 +1,0 @@
-<map id="protocol::application::CommHeader::getSourceId" name="protocol::application::CommHeader::getSourceId">
-<area shape="rect" id="node2" href="$db/d21/classprotocol_1_1application_1_1BehaviourNodeWithSink.html#af1bd316f2fecd352c7a2e4144e42a7c7" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="287,5,459,61"/>
-<area shape="rect" id="node3" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a373a1080ed9cb0ff94fd9559b98987d5" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="278,85,469,141"/>
-<area shape="rect" id="node4" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a248ae5a78ba028402f1f0a01049256b5" title="Called when a beacon response is received. " alt="" coords="253,165,493,206"/>
-<area shape="rect" id="node6" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#aa781422580b159b44fba34f699bdfeb7" title="Called when a no longer conformant is received. " alt="" coords="243,230,504,271"/>
-<area shape="rect" id="node5" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a5b535594b073afc81aea37ec7a1064db" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="552,198,720,239"/>
-</map>

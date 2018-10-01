@@ -1,5 +1,0 @@
-<map id="protocol::application::TraciHelper::RemoveCommand" name="protocol::application::TraciHelper::RemoveCommand">
-<area shape="rect" id="node2" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a5cb90ba67b0b886989647e3ea9a15878" title="Called by the node class when the reply from a sumo command is received. " alt="" coords="269,4,469,60"/>
-<area shape="rect" id="node3" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a2370797616a53e43b194f1ccf6bbce5e" title="The result of a sumo command has been received. This method will call iCSInferface::SumoTraciCommandR..." alt="" coords="518,11,746,53"/>
-<area shape="rect" id="node4" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a7c579de70966c388a78d4d510dce44ae" title="protocol::server::NodeHandler\l::sumoTraciCommandResult" alt="" coords="795,11,991,53"/>
-</map>

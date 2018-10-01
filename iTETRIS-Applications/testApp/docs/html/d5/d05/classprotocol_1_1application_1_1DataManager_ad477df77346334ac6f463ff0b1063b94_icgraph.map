@@ -1,6 +1,0 @@
-<map id="protocol::application::DataManager::AddData" name="protocol::application::DataManager::AddData">
-<area shape="rect" id="node2" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a881f2341c83b1788a7bab337fa0eac13" title="Called when a repose message from a node is received. " alt="" coords="225,5,461,46"/>
-<area shape="rect" id="node5" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#af2ac6f067188544f788237404e89d1f0" title="Called when the last repose message from a node is received. " alt="" coords="221,70,464,111"/>
-<area shape="rect" id="node3" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a7cd182d5bb9e360133c9304be473b5da" title="Contains the actions to be executed when the behavior starts. " alt="" coords="512,5,656,46"/>
-<area shape="rect" id="node4" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a7e42df36f94c718d93067533e18beed3" title="Contains the actions to be executed when the behavior stops. " alt="" coords="513,70,655,111"/>
-</map>

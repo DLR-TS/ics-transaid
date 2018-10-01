@@ -1,6 +1,0 @@
-<map id="protocol::application::iCSInterface::Deactivate" name="protocol::application::iCSInterface::Deactivate">
-<area shape="rect" id="node2" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#aa6fac7650cc7c5e246017bf8f3d6ddd2" title="Utility method to get the node name. Used in the logs. " alt="" coords="229,38,392,79"/>
-<area shape="rect" id="node3" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a0af962af5533461bc8d583690eab993e" title="Name of the node. For logging. " alt="" coords="441,38,618,79"/>
-<area shape="rect" id="node4" href="$d9/d3d/namespaceprotocol_1_1application.html#a39db3f7aadf97ba8fce456d5016bff46" title="protocol::application\l::IsNodeType" alt="" coords="667,5,805,46"/>
-<area shape="rect" id="node5" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a444338899434c9a151acfcfd7b8e1a2f" title="protocol::application\l::Node::getId" alt="" coords="667,70,805,111"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="protocol::application::SubscriptionHelper::ReceiveGeobroadcast" name="protocol::application::SubscriptionHelper::ReceiveGeobroadcast">
-<area shape="rect" id="node2" href="$db/d00/classtcpip_1_1Storage.html#a5a42840a57331704c2fdc30e3d1d2a54" title="tcpip::Storage::writeUnsignedByte" alt="" coords="213,5,435,32"/>
-<area shape="rect" id="node3" href="$db/d00/classtcpip_1_1Storage.html#ae7af58d12716f7119877efb7919813f4" title="tcpip::Storage::writeShort" alt="" coords="239,56,409,83"/>
-<area shape="rect" id="node4" href="$db/d00/classtcpip_1_1Storage.html#ab4fc84f48f0c54fa75bedd69d7293c4c" title="tcpip::Storage::writeFloat" alt="" coords="240,107,408,133"/>
-</map>

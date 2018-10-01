@@ -1,7 +1,0 @@
-<map id="protocol::application::TraciHelper::AddValueGetStorage" name="protocol::application::TraciHelper::AddValueGetStorage">
-<area shape="rect" id="node2" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#ac9607ef1a9fb63a5d390f30fa3b1ae8c" title="Creates the request for a value retrieval command to send to sumo via traci. " alt="" coords="283,45,487,86"/>
-<area shape="rect" id="node5" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#a69bcf1c547ebf38e37f3231dcd5c4abf" title="Adds a value retrieval command the the map and returns an id to identify is later. " alt="" coords="281,110,490,151"/>
-<area shape="rect" id="node3" href="$db/d00/classtcpip_1_1Storage.html#a5a42840a57331704c2fdc30e3d1d2a54" title="tcpip::Storage::writeUnsignedByte" alt="" coords="539,5,760,32"/>
-<area shape="rect" id="node4" href="$db/d00/classtcpip_1_1Storage.html#a07b6d4f8db8f1893aa4ed419be5a5d25" title="tcpip::Storage::writeString" alt="" coords="563,56,736,83"/>
-<area shape="rect" id="node6" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#ab5f5eefa6b03c8170d624a764ba426fd" title="Adds a command the the map and returns an id to identify is later. " alt="" coords="555,110,743,151"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="tcpip::Storage::position" name="tcpip::Storage::position">
-<area shape="rect" id="node2" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#a98d639a5e04726b22d6d2d8421eaba58" title="Verifies the sumo reply of a command. " alt="" coords="211,13,410,54"/>
-<area shape="rect" id="node3" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a5cb90ba67b0b886989647e3ea9a15878" title="Called by the node class when the reply from a sumo command is received. " alt="" coords="731,5,931,61"/>
-<area shape="rect" id="node6" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#a5506d26918b7430bfe726de4a7e81f6d" title="Starts the retrieve process if a value retrieval command. " alt="" coords="459,37,682,93"/>
-<area shape="rect" id="node4" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a2370797616a53e43b194f1ccf6bbce5e" title="The result of a sumo command has been received. This method will call iCSInferface::SumoTraciCommandR..." alt="" coords="979,13,1207,54"/>
-<area shape="rect" id="node5" href="$d9/d36/classprotocol_1_1server_1_1NodeHandler.html#a7c579de70966c388a78d4d510dce44ae" title="protocol::server::NodeHandler\l::sumoTraciCommandResult" alt="" coords="1257,13,1453,54"/>
-</map>

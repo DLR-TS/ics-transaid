@@ -1,7 +1,0 @@
-<map id="protocol::application::iCSInterface::GetHeader" name="protocol::application::iCSInterface::GetHeader">
-<area shape="rect" id="node2" href="$d2/d94/classprotocol_1_1server_1_1Payload.html#a507f8763993ab558ccb73425ace87edc" title="protocol::server::Payload\l::getHeader" alt="" coords="230,5,397,46"/>
-<area shape="rect" id="node3" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#aa6fac7650cc7c5e246017bf8f3d6ddd2" title="Utility method to get the node name. Used in the logs. " alt="" coords="232,70,395,111"/>
-<area shape="rect" id="node4" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a0af962af5533461bc8d583690eab993e" title="Name of the node. For logging. " alt="" coords="446,70,623,111"/>
-<area shape="rect" id="node5" href="$d9/d3d/namespaceprotocol_1_1application.html#a39db3f7aadf97ba8fce456d5016bff46" title="protocol::application\l::IsNodeType" alt="" coords="672,37,811,78"/>
-<area shape="rect" id="node6" href="$d8/d78/classprotocol_1_1application_1_1Node.html#a444338899434c9a151acfcfd7b8e1a2f" title="protocol::application\l::Node::getId" alt="" coords="672,102,811,143"/>
-</map>

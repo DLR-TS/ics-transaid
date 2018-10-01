@@ -1,7 +1,0 @@
-<map id="protocol::application::Node::traciCommand" name="protocol::application::Node::traciCommand">
-<area shape="rect" id="node2" href="$de/d04/classprotocol_1_1application_1_1SubscriptionHelper.html#a202557c79f144c0520254e2e284da7da" title="To create a SumoTraciCommand subscription. " alt="" coords="209,67,362,123"/>
-<area shape="rect" id="node3" href="$db/d00/classtcpip_1_1Storage.html#a5a42840a57331704c2fdc30e3d1d2a54" title="tcpip::Storage::writeUnsignedByte" alt="" coords="411,5,632,32"/>
-<area shape="rect" id="node4" href="$db/d00/classtcpip_1_1Storage.html#a70ac6555c79e95c5340ae9c035bf4083" title="tcpip::Storage::size" alt="" coords="454,56,589,83"/>
-<area shape="rect" id="node5" href="$db/d00/classtcpip_1_1Storage.html#a1babffd3cee462277796bc5b4ef6bb1a" title="tcpip::Storage::writeInt" alt="" coords="444,107,599,133"/>
-<area shape="rect" id="node6" href="$db/d00/classtcpip_1_1Storage.html#a4cc4b1a846f7b0579c67b903f1aa4dfc" title="tcpip::Storage::writeStorage" alt="" coords="429,157,613,184"/>
-</map>

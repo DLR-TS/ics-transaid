@@ -1,9 +1,0 @@
-<map id="protocol::application::iCSInterface::GetNodeSampler" name="protocol::application::iCSInterface::GetNodeSampler">
-<area shape="rect" id="node2" href="$db/d21/classprotocol_1_1application_1_1BehaviourNodeWithSink.html#a017c86ea07ee3aeedd4c28b18a83a15b" title="Called by the receive after a random timeout when a beacon message is received. " alt="" coords="274,4,446,60"/>
-<area shape="rect" id="node4" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#aada84e8ddeb6bc3c36624841949c7bae" title="Called by the EventSendResponse if the node has not yet passed the intersection. " alt="" coords="265,84,455,140"/>
-<area shape="rect" id="node7" href="$d7/d75/classprotocol_1_1application_1_1MobileNode.html#aa757954cc0758f95189cd0029a46fb4f" title="Push the updated position data to the iCSInferface. " alt="" coords="265,164,455,220"/>
-<area shape="rect" id="node3" href="$db/d21/classprotocol_1_1application_1_1BehaviourNodeWithSink.html#af1bd316f2fecd352c7a2e4144e42a7c7" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="514,4,686,60"/>
-<area shape="rect" id="node5" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a94a2feb4d2c64580d1ed460ef5caa57d" title="Called by the receive after a random timeout when a beacon message is received. " alt="" coords="505,84,695,140"/>
-<area shape="rect" id="node6" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a373a1080ed9cb0ff94fd9559b98987d5" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="745,84,935,140"/>
-<area shape="rect" id="node8" href="$d7/d75/classprotocol_1_1application_1_1MobileNode.html#a7d2ee68fe4a243eb7bd0a17c1337e81f" title="protocol::application\l::MobileNode::MobileNode" alt="" coords="512,171,688,213"/>
-</map>

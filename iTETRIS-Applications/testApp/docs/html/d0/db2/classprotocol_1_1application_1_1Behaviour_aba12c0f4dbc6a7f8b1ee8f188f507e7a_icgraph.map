@@ -1,6 +1,0 @@
-<map id="protocol::application::Behaviour::IsActiveOnStart" name="protocol::application::Behaviour::IsActiveOnStart">
-<area shape="rect" id="node2" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#aac2dd143cf7245f1ef2940cd6a68c196" title="protocol::application\l::Controller::SubscribeBehaviour" alt="" coords="251,5,461,46"/>
-<area shape="rect" id="node4" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#ab3f684b68257a5ac257ed101a771c1a4" title="Add a new behaviour to the node. " alt="" coords="243,70,469,111"/>
-<area shape="rect" id="node3" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a98373c53208f53499effa865df9f1153" title="protocol::application\l::Controller::Controller" alt="" coords="534,5,685,46"/>
-<area shape="rect" id="node5" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#ade24e9843c1a2211cfe117b56bc6beb3" title="protocol::application\l::iCSInterface::iCSInterface" alt="" coords="517,70,701,111"/>
-</map>

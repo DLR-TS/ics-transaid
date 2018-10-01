@@ -1,5 +1,0 @@
-<map id="protocol::application::TraceManager::TraceDisconnect" name="protocol::application::TraceManager::TraceDisconnect">
-<area shape="rect" id="node2" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a7e42df36f94c718d93067533e18beed3" title="Contains the actions to be executed when the behavior stops. " alt="" coords="282,5,425,46"/>
-<area shape="rect" id="node3" href="$dd/d18/classprotocol_1_1application_1_1OutputHelperWrapper.html#a5aa6954906173f38af96137e0d7355e2" title="protocol::application\l::OutputHelperWrapper\l::DisconnectCallbacks" alt="" coords="275,69,431,125"/>
-<area shape="rect" id="node4" href="$dd/d18/classprotocol_1_1application_1_1OutputHelperWrapper.html#a6530a7215e2f3298bdcc354418b59249" title="protocol::application\l::OutputHelperWrapper\l::~OutputHelperWrapper" alt="" coords="481,69,645,125"/>
-</map>

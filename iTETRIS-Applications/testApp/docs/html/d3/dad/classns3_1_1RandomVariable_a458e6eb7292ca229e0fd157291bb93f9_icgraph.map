@@ -1,7 +1,0 @@
-<map id="ns3::RandomVariable::Peek" name="ns3::RandomVariable::Peek">
-<area shape="rect" id="node2" href="$df/d17/classns3_1_1UniformVariable.html#a07679796aaa15a3f84d585e46add2a19" title="Returns a random double with the specified range. " alt="" coords="223,5,367,46"/>
-<area shape="rect" id="node3" href="$d3/d05/classns3_1_1EmpiricalVariable.html#a574866a672c55c6e7a159b422ca867e6" title="Specifies a point in the empirical distribution. " alt="" coords="201,71,389,97"/>
-<area shape="rect" id="node4" href="$de/d9d/classns3_1_1GammaVariable.html#aa3d0746835a044afbb5364b92a80bc62" title="Returns a gamma random distributed double with parameters alpha and beta. " alt="" coords="223,122,367,163"/>
-<area shape="rect" id="node5" href="$d8/dfd/classns3_1_1ErlangVariable.html#a56807af88c9f3d159a3155ec5f0d7084" title="Returns an Erlang random distributed double with parameters k and lambda. " alt="" coords="227,187,362,229"/>
-<area shape="rect" id="node6" href="$d7/d2e/namespacens3.html#a48407a8a7cc7e38cabfa033dc4cd8f04" title="ns3::operator\&lt;\&lt;" alt="" coords="237,253,352,280"/>
-</map>

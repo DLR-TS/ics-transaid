@@ -1,4 +1,0 @@
-<map id="protocol::server::CircularBuffer::insert" name="protocol::server::CircularBuffer::insert">
-<area shape="rect" id="node2" href="$dd/d97/classprotocol_1_1server_1_1CircularBuffer.html#a5a27fcb3a03a86bb8755c425a5ebf907" title="protocol::server::Circular\lBuffer\&lt; int \&gt;::addValue" alt="" coords="219,5,384,46"/>
-<area shape="rect" id="node3" href="$dd/d97/classprotocol_1_1server_1_1CircularBuffer.html#ad6674a428e13491126c65c63ff9a56fb" title="protocol::server::Circular\lBuffer\&lt; int \&gt;::push_front" alt="" coords="219,70,384,111"/>
-</map>

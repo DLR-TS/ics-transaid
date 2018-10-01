@@ -1,8 +1,0 @@
-<map id="protocol::application::NodeSampler::GetSpeedVector" name="protocol::application::NodeSampler::GetSpeedVector">
-<area shape="rect" id="node2" href="$d8/dd8/classprotocol_1_1application_1_1NodeSampler.html#a6423f20a2b35d2ffbe5b74e08fb94c7f" title="protocol::application\l::NodeSampler::GetSpeed" alt="" coords="267,51,442,93"/>
-<area shape="rect" id="node3" href="$db/d21/classprotocol_1_1application_1_1BehaviourNodeWithSink.html#a017c86ea07ee3aeedd4c28b18a83a15b" title="Called by the receive after a random timeout when a beacon message is received. " alt="" coords="501,4,673,60"/>
-<area shape="rect" id="node5" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#aada84e8ddeb6bc3c36624841949c7bae" title="Called by the EventSendResponse if the node has not yet passed the intersection. " alt="" coords="491,84,682,140"/>
-<area shape="rect" id="node4" href="$db/d21/classprotocol_1_1application_1_1BehaviourNodeWithSink.html#af1bd316f2fecd352c7a2e4144e42a7c7" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="741,4,913,60"/>
-<area shape="rect" id="node6" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a94a2feb4d2c64580d1ed460ef5caa57d" title="Called by the receive after a random timeout when a beacon message is received. " alt="" coords="731,84,922,140"/>
-<area shape="rect" id="node7" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a373a1080ed9cb0ff94fd9559b98987d5" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="971,84,1162,140"/>
-</map>

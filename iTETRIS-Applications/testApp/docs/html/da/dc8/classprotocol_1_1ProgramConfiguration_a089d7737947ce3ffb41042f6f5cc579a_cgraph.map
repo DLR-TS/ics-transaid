@@ -1,8 +1,0 @@
-<map id="protocol::ProgramConfiguration::ParseGeneral" name="protocol::ProgramConfiguration::ParseGeneral">
-<area shape="rect" id="node2" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a20f48e99b03e9c17487944f229bee130" title="tinyxml2::XMLNode::\lFirstChildElement" alt="" coords="261,70,406,111"/>
-<area shape="rect" id="node6" href="$d5/d83/classtinyxml2_1_1XMLElement.html#af86f05771c11a73a2896b662bb589ef5" title="tinyxml2::XMLElement\l::IntAttribute" alt="" coords="256,135,411,177"/>
-<area shape="rect" id="node7" href="$d5/d83/classtinyxml2_1_1XMLElement.html#aa5a41367b5118acec42a87f5f94cec2d" title="See IntAttribute() " alt="" coords="256,201,411,242"/>
-<area shape="rect" id="node3" href="$d5/d83/classtinyxml2_1_1XMLElement.html#ad9ff5c2dbc15df36cf664ce1b0ea0a5d" title="Safely cast to an Element, or null. " alt="" coords="459,5,613,46"/>
-<area shape="rect" id="node4" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#acfcd287cacfd2533e1bc9ea4dfb56602" title="tinyxml2::XMLUtil::\lStringEqual" alt="" coords="469,70,603,111"/>
-<area shape="rect" id="node5" href="$d5/d83/classtinyxml2_1_1XMLElement.html#a8bff355472bce2c60d4b50a212bf7f5f" title="Get the name of an element (which is the Value() of the node.) " alt="" coords="459,135,613,177"/>
-</map>

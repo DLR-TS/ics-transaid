@@ -1,5 +1,0 @@
-<map id="protocol::application::Behaviour::IsRunning" name="protocol::application::Behaviour::IsRunning">
-<area shape="rect" id="node2" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a6b1a81f316a41560b8a8a7345188d205" title="Called by the ics interface to add the relevant direction. " alt="" coords="208,38,411,79"/>
-<area shape="rect" id="node3" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a98373c53208f53499effa865df9f1153" title="protocol::application\l::Controller::Controller" alt="" coords="475,5,626,46"/>
-<area shape="rect" id="node4" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#ade24e9843c1a2211cfe117b56bc6beb3" title="protocol::application\l::iCSInterface::iCSInterface" alt="" coords="459,70,643,111"/>
-</map>

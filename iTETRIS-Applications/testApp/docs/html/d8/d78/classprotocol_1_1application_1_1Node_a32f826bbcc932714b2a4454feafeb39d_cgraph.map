@@ -1,5 +1,0 @@
-<map id="protocol::application::Node::GetRandomNodeType" name="protocol::application::Node::GetRandomNodeType">
-<area shape="rect" id="node2" href="$df/d17/classns3_1_1UniformVariable.html#abeced2950ea9f6e5111d05ae99ef3baa" title="call RandomVariable::GetValue " alt="" coords="253,5,397,46"/>
-<area shape="rect" id="node3" href="$d3/dad/classns3_1_1RandomVariable.html#a515e141bf41f254bbef6969519928307" title="Returns a random double from the underlying distribution. " alt="" coords="445,5,592,46"/>
-<area shape="rect" id="node4" href="$dc/dab/classns3_1_1RandomVariableBase.html#a1bdfa75b98a2f034a31e2efa1e718674" title="ns3::RandomVariableBase\l::GetValue" alt="" coords="641,5,818,46"/>
-</map>

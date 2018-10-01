@@ -1,5 +1,0 @@
-<map id="protocol::application::BehaviourRsu::RemoveLastSeen" name="protocol::application::BehaviourRsu::RemoveLastSeen">
-<area shape="rect" id="node2" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a248ae5a78ba028402f1f0a01049256b5" title="Called when a beacon response is received. " alt="" coords="288,5,528,46"/>
-<area shape="rect" id="node4" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#aa781422580b159b44fba34f699bdfeb7" title="Called when a no longer conformant is received. " alt="" coords="277,70,539,111"/>
-<area shape="rect" id="node3" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a5b535594b073afc81aea37ec7a1064db" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="587,38,755,79"/>
-</map>

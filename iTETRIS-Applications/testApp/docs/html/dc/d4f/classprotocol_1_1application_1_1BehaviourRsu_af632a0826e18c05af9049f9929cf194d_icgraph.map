@@ -1,7 +1,0 @@
-<map id="protocol::application::BehaviourRsu::CheckTimeout" name="protocol::application::BehaviourRsu::CheckTimeout">
-<area shape="rect" id="node2" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a120e17518dbc0afe003d106a54a20a0e" title="protocol::application\l::BehaviourRsu::EventCheck" alt="" coords="259,38,451,79"/>
-<area shape="rect" id="node3" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a3e9cb48ab0be55f3e965dcae0ff0ba17" title="Contains the actions to be executed when the behavior starts. " alt="" coords="499,38,647,79"/>
-<area shape="rect" id="node4" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a6b1a81f316a41560b8a8a7345188d205" title="Called by the ics interface to add the relevant direction. " alt="" coords="696,38,899,79"/>
-<area shape="rect" id="node5" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a98373c53208f53499effa865df9f1153" title="protocol::application\l::Controller::Controller" alt="" coords="963,5,1114,46"/>
-<area shape="rect" id="node6" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#ade24e9843c1a2211cfe117b56bc6beb3" title="protocol::application\l::iCSInterface::iCSInterface" alt="" coords="947,70,1131,111"/>
-</map>

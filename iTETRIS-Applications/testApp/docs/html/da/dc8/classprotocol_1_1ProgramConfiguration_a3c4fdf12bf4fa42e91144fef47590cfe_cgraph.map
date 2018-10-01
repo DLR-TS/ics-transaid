@@ -1,6 +1,0 @@
-<map id="protocol::ProgramConfiguration::ParseSetup" name="protocol::ProgramConfiguration::ParseSetup">
-<area shape="rect" id="node2" href="$d6/de3/classtinyxml2_1_1XMLNode.html#a20f48e99b03e9c17487944f229bee130" title="tinyxml2::XMLNode::\lFirstChildElement" alt="" coords="257,70,402,111"/>
-<area shape="rect" id="node3" href="$d5/d83/classtinyxml2_1_1XMLElement.html#ad9ff5c2dbc15df36cf664ce1b0ea0a5d" title="Safely cast to an Element, or null. " alt="" coords="451,5,605,46"/>
-<area shape="rect" id="node4" href="$d2/da5/classtinyxml2_1_1XMLUtil.html#acfcd287cacfd2533e1bc9ea4dfb56602" title="tinyxml2::XMLUtil::\lStringEqual" alt="" coords="461,70,595,111"/>
-<area shape="rect" id="node5" href="$d5/d83/classtinyxml2_1_1XMLElement.html#a8bff355472bce2c60d4b50a212bf7f5f" title="Get the name of an element (which is the Value() of the node.) " alt="" coords="451,135,605,177"/>
-</map>

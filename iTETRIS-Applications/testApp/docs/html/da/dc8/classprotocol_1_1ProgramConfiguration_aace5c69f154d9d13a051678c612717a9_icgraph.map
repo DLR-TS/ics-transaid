@@ -1,6 +1,0 @@
-<map id="protocol::ProgramConfiguration::GetRsuData" name="protocol::ProgramConfiguration::GetRsuData">
-<area shape="rect" id="node2" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a98373c53208f53499effa865df9f1153" title="protocol::application\l::Controller::Controller" alt="" coords="273,5,423,46"/>
-<area shape="rect" id="node3" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#ad9a54df193c3210efbb576c8bd70eba2" title="protocol::application\l::Controller::GetRoadSize" alt="" coords="262,70,434,111"/>
-<area shape="rect" id="node4" href="$d1/d60/classprotocol_1_1application_1_1FixedStation.html#aa8c48cf7d894857238a11e68cce997ff" title="protocol::application\l::FixedStation::FixedStation" alt="" coords="256,135,440,177"/>
-<area shape="rect" id="node5" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#ade24e9843c1a2211cfe117b56bc6beb3" title="protocol::application\l::iCSInterface::iCSInterface" alt="" coords="256,201,440,242"/>
-</map>

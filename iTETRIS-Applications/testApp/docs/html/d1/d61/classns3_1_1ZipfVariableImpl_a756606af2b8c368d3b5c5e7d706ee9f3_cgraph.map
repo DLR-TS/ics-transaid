@@ -1,7 +1,0 @@
-<map id="ns3::ZipfVariableImpl::GetValue" name="ns3::ZipfVariableImpl::GetValue">
-<area shape="rect" id="node2" href="$dc/dab/classns3_1_1RandomVariableBase.html#a04c43736a2f112226fb050cf66ed8d0d" title="ns3::RandomVariableBase\l::GetStream" alt="" coords="202,70,379,111"/>
-<area shape="rect" id="node6" href="$da/d35/classns3_1_1RngStream.html#a46be36426b8bc712e9de468b63558c22" title="ns3::RngStream::RandU01" alt="" coords="201,136,381,163"/>
-<area shape="rect" id="node3" href="$d2/d74/classns3_1_1RngSeedManager.html#a09f2d185f02aac599cd5a244c4b73ba5" title="Get the seed value. " alt="" coords="429,5,584,46"/>
-<area shape="rect" id="node4" href="$d2/d74/classns3_1_1RngSeedManager.html#ac109366285260eb4c1e124862d2fd4ad" title="ns3::RngSeedManager\l::GetNextStreamIndex" alt="" coords="429,70,584,111"/>
-<area shape="rect" id="node5" href="$d2/d74/classns3_1_1RngSeedManager.html#afaf1b845d2523df05ca341a930de24b3" title="ns3::RngSeedManager\l::GetRun" alt="" coords="429,135,584,177"/>
-</map>

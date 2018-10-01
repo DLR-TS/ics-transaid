@@ -1,4 +1,0 @@
-<map id="protocol::application::iCSInterface::CheckDirectionAndMovement" name="protocol::application::iCSInterface::CheckDirectionAndMovement">
-<area shape="rect" id="node2" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#abf3a7037cb165afaec521f2ff6eb7879" title="Static method to check if two direction differ by less than the tolerance. " alt="" coords="256,5,464,46"/>
-<area shape="rect" id="node3" href="$d9/d3d/namespaceprotocol_1_1application.html#aa6d197810e0373ad31c827590da6a6d9" title="protocol::application\l::NormalizeDirection" alt="" coords="512,34,653,75"/>
-</map>

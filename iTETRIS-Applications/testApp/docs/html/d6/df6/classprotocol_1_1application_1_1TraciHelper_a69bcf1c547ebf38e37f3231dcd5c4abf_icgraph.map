@@ -1,6 +1,0 @@
-<map id="protocol::application::TraciHelper::AddGetCommand" name="protocol::application::TraciHelper::AddGetCommand">
-<area shape="rect" id="node2" href="$d6/df6/classprotocol_1_1application_1_1TraciHelper.html#ada0488e72bf9477ae75cc9aef3c80f7e" title="As ValueGetStorage but it also adds the command to the map. " alt="" coords="264,5,491,46"/>
-<area shape="rect" id="node3" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a88abd032c47dc218736dc58ce77aa1ad" title="protocol::application\l::iCSInterface::AddTraciSubscription" alt="" coords="539,5,773,46"/>
-<area shape="rect" id="node4" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#a6939ea68567cef623abe9703eb71d8cc" title="Activates the node. " alt="" coords="822,5,981,46"/>
-<area shape="rect" id="node5" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#ade24e9843c1a2211cfe117b56bc6beb3" title="protocol::application\l::iCSInterface::iCSInterface" alt="" coords="1029,5,1213,46"/>
-</map>

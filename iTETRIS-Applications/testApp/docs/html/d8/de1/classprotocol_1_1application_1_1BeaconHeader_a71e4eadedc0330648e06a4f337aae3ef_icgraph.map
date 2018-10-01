@@ -1,4 +1,0 @@
-<map id="protocol::application::BeaconHeader::getVehicleMovement" name="protocol::application::BeaconHeader::getVehicleMovement">
-<area shape="rect" id="node2" href="$db/d21/classprotocol_1_1application_1_1BehaviourNodeWithSink.html#af1bd316f2fecd352c7a2e4144e42a7c7" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="311,5,483,61"/>
-<area shape="rect" id="node3" href="$d1/de3/classprotocol_1_1application_1_1BehaviourNodeWithoutSink.html#a373a1080ed9cb0ff94fd9559b98987d5" title="Called by the ics&#45;interface if a message is received by the node. " alt="" coords="302,85,493,141"/>
-</map>

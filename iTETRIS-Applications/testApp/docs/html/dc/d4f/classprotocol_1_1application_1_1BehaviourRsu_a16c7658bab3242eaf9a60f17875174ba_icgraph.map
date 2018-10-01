@@ -1,6 +1,0 @@
-<map id="protocol::application::BehaviourRsu::EventBeacon" name="protocol::application::BehaviourRsu::EventBeacon">
-<area shape="rect" id="node2" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a3e9cb48ab0be55f3e965dcae0ff0ba17" title="Contains the actions to be executed when the behavior starts. " alt="" coords="254,38,402,79"/>
-<area shape="rect" id="node3" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#a6b1a81f316a41560b8a8a7345188d205" title="Called by the ics interface to add the relevant direction. " alt="" coords="451,38,653,79"/>
-<area shape="rect" id="node4" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a98373c53208f53499effa865df9f1153" title="protocol::application\l::Controller::Controller" alt="" coords="718,5,869,46"/>
-<area shape="rect" id="node5" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#ade24e9843c1a2211cfe117b56bc6beb3" title="protocol::application\l::iCSInterface::iCSInterface" alt="" coords="701,70,885,111"/>
-</map>

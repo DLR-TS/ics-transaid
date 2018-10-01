@@ -1,6 +1,0 @@
-<map id="protocol::application::Controller::GetPosition" name="protocol::application::Controller::GetPosition">
-<area shape="rect" id="node2" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a635665c65fae1b92975906ec71f1206d" title="protocol::application\l::Controller::IsConformantDirection\lAndMovement" alt="" coords="217,5,442,61"/>
-<area shape="rect" id="node3" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a564dd9697f9e2fd918434b4a6c868f20" title="protocol::application\l::Controller::DoSend" alt="" coords="259,85,400,126"/>
-<area shape="rect" id="node4" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#aa00479fa511553d6311a726a17ddbe0a" title="protocol::application\l::Controller::Send" alt="" coords="491,51,629,93"/>
-<area shape="rect" id="node5" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a8ea3f0e9dea7c34219d1c41baae34d74" title="protocol::application\l::Controller::SendTo" alt="" coords="491,117,629,158"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="protocol::application::TraceManager::RegisterTrace" name="protocol::application::TraceManager::RegisterTrace">
-<area shape="rect" id="node2" href="$d8/de6/classprotocol_1_1application_1_1BehaviourNode.html#aef3b2f355b7738428a065115b759becc" title="protocol::application\l::BehaviourNode::BehaviourNode" alt="" coords="256,5,472,46"/>
-<area shape="rect" id="node3" href="$dc/d4f/classprotocol_1_1application_1_1BehaviourRsu.html#af9616541a0988a908977c77b3108c7f0" title="protocol::application\l::BehaviourRsu::BehaviourRsu" alt="" coords="263,70,465,111"/>
-<area shape="rect" id="node4" href="$d0/db2/classprotocol_1_1application_1_1Behaviour.html#ab84857e9c45a7db14b93611afeeedd49" title="protocol::application\l::Behaviour::Behaviour" alt="" coords="287,135,441,177"/>
-<area shape="rect" id="node5" href="$d8/db7/classprotocol_1_1application_1_1Controller.html#a98373c53208f53499effa865df9f1153" title="protocol::application\l::Controller::Controller" alt="" coords="289,201,439,242"/>
-<area shape="rect" id="node6" href="$d5/d05/classprotocol_1_1application_1_1DataManager.html#a59fa4a1778d2939fda3f82bdd4f59da1" title="protocol::application\l::DataManager::DataManager" alt="" coords="267,266,461,307"/>
-<area shape="rect" id="node7" href="$dd/da7/classprotocol_1_1application_1_1iCSInterface.html#ade24e9843c1a2211cfe117b56bc6beb3" title="protocol::application\l::iCSInterface::iCSInterface" alt="" coords="272,331,456,373"/>
-<area shape="rect" id="node8" href="$d8/dd8/classprotocol_1_1application_1_1NodeSampler.html#a853ba0ddd9ad35c0fc662a869f941af4" title="protocol::application\l::NodeSampler::NodeSampler" alt="" coords="266,397,462,438"/>
-</map>
