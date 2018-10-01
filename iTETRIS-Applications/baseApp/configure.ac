@@ -29,7 +29,6 @@ AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_PROG_MAKE_SET
 AC_PROG_RANLIB
-AM_PROG_LIBTOOL
 
 dnl Check for enable-features that shall go into config.h
 AC_ARG_ENABLE([double-precision], [AS_HELP_STRING([--enable-double-precision],[Use "double" instead of "float" for calculations.])])

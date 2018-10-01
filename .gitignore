@@ -30,10 +30,10 @@ iCS/src/config.h.in
 iCS/src/iCS
 iCS/src/stamp-h1
 iCS/ltmain.sh
-iTETRIS-Applications/traffic-monitor/src/config.h
-iTETRIS-Applications/traffic-monitor/src/config.h.in
+iTETRIS-Applications/*/src/config.h
+iTETRIS-Applications/*/src/config.h.in
 iTETRIS-Applications/traffic-monitor/src/protocolspeed
-iTETRIS-Applications/traffic-monitor/src/stamp-h1
+iTETRIS-Applications/*/src/stamp-h1
 iTETRIS-Applications/traffic-monitor/acosta/*.txt
 iTETRIS-Applications/traffic-monitor/acosta/sumo/*_output.xml
 iTETRIS-Applications/testApp/acosta/*.txt
