@@ -9,6 +9,6 @@ behaviour-factory.cpp behaviour-factory.h \
 headers.cpp headers.h \
 ics-interface.cpp ics-interface.h \
 common.h common.cpp \
-node-sampler.cpp node-sampler.h \
-behaviour-test-node.cpp behaviour-test-node.h \
-behaviour-test-rsu.cpp behaviour-test-rsu.h
+node-sampler.cpp node-sampler.h
+
+SUBDIRS = test

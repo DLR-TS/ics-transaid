@@ -144,6 +144,7 @@ src/server/Makefile
 src/application/Makefile
 src/application/helper/Makefile
 src/application/model/Makefile
+src/application/model/test/Makefile
 src/Makefile
 Makefile])
 AC_OUTPUT
