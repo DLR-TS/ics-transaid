@@ -13,8 +13,6 @@ testApp_LDADD = $(AM_CPPFLAGS) ./test/libtest.a \
 ../../baseApp/src/utils/exception/libexception.a \
 ../../baseApp/src/utils/log/liblog.a \
 ../../baseApp/src/utils/xml/libxml.a \
-../../baseApp/src/foreign/tcpip/libtcpip.a 
+../../../sumo/src/foreign/tcpip/libtcpip.a 
 
 SUBDIRS = test
-
-EXTRA_DIST = config.h
