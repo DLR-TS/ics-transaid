@@ -38,10 +38,7 @@
 #include "log/log.h"
 #include "../../utils/log/ToString.h"
 #include "program-configuration.h"
-#include "behaviour-node.h"
-#include "test/behaviour-test-node.h"
-#include "test/behaviour-test-rsu.h"
-#include "behaviour-rsu.h"
+#include "behaviour-factory.h"
 #include "data-manager.h"
 #include "headers.h"
 #include "node.h"
@@ -59,7 +56,7 @@ namespace testapp
 		uint16_t iCSInterface::AverageSpeedSampleHigh = 15;
 		bool iCSInterface::UseSink = false;
 
-		iCSInterface::iCSInterface(Node* node, NodeType nodeClass)
+		iCSInterface::iCSInterface(Node* node, NodeType nodeClass, BehaviourFactory* factory)
 		{
 			m_active = false;
 			m_node = node;
@@ -74,27 +71,15 @@ namespace testapp
 			{
 				m_nodeType = NT_RSU;
 
+				SubscribeBehaviour(factory->createRSUBehaviour(this, node));
 				if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
-	                BehaviourRsu* rsu = new BehaviourRsu(this);
-	                RsuData data = ProgramConfiguration::GetRsuData(node->getId());
-	                rsu->AddDirections(data.directions);
-				    SubscribeBehaviour(rsu);
-				    SubscribeBehaviour(new DataManager(this));
-				} else {
-                    SubscribeBehaviour(new BehaviourTestRSU(this));
+					SubscribeBehaviour(new DataManager(this));
 				}
 			} else
 			{
 				m_nodeType = nodeClass;
 				m_nodeSampler = new NodeSampler(this);
-	            if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
-	                if (UseSink)
-	                    SubscribeBehaviour(new BehaviourNodeWithSink(this));
-	                else
-	                    SubscribeBehaviour(new BehaviourNodeWithoutSink(this));
-	            } else {
-	                SubscribeBehaviour(new BehaviourTestNode(this));
-	            }
+				SubscribeBehaviour(factory->createNodeBehaviour(this, node));
 			}
 			if (OutputHelper::Instance() != NULL)
 				OutputHelper::Instance()->RegisterNode(this);

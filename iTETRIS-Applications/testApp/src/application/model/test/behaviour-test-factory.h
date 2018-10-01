@@ -37,6 +37,7 @@
 #ifndef BEHAVIOUR_TEST_FACTORY_H_
 #define BEHAVIOUR_TEST_FACTORY_H_
 
+#include "../behaviour-factory.h"
 
 namespace testapp
 {
@@ -50,7 +51,7 @@ namespace testapp
 		/**
 		 * Factory for the behaviour test instances
 		 */
-		class BehaviourTestFactory
+		class BehaviourTestFactory : public BehaviourFactory
 		{
 			public:
 				/**

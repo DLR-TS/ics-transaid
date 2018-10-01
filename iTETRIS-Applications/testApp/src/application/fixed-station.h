@@ -48,11 +48,12 @@ namespace testapp
 {
 	namespace application
 	{
+		class BehaviourFactory;
 
 		class FixedStation: public Node
 		{
 			public:
-				FixedStation(int id);
+				FixedStation(int id, BehaviourFactory* factory);
 				virtual ~FixedStation();
 
 				//void applicationExecute();

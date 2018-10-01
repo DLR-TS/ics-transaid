@@ -49,12 +49,12 @@ namespace testapp
 		class Server
 		{
 			public:
-				static void RunServer();
+				static void RunServer(application::BehaviourFactory* factory);
 				static NodeHandler* GetNodeHandler();
 				static int CurrentTimeStep();
 
 			private:
-				Server();
+				Server(application::BehaviourFactory* factory);
 				virtual ~Server();
 
 				int dispatchCommand();

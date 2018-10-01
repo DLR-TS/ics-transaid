@@ -34,13 +34,15 @@
  * University of Bologna
  ***************************************************************************************/
 
+#include <cstdlib>
 #include "server.h"
 #include "log/log.h"
 #include "log/console.h"
 #include "exception/UtilExceptions.h"
 #include "program-configuration.h"
 #include "output-helper.h"
-#include <cstdlib>
+#include "model/behaviour-factory.h"
+#include "model/test/behaviour-test-factory.h"
 
 #ifdef _MSC_VER
 #include <windows_config.h>
@@ -212,7 +214,11 @@ int main(int argc, char **argv)
 
     loadOptionFile();
     // Start the server
-    server::Server::RunServer();
+    if(ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
+      server::Server::RunServer(new application::BehaviourFactory());
+    } else {
+      server::Server::RunServer(new application::BehaviourTestFactory());
+    }
 
     ret = 0;
 

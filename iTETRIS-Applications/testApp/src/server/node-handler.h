@@ -48,6 +48,7 @@ namespace testapp
 {
 	namespace application
 	{
+		class BehaviourFactory;
 		class FixedStation;
 	}
 	namespace server
@@ -57,7 +58,7 @@ namespace testapp
 		class NodeHandler
 		{
 			public:
-				NodeHandler();
+				NodeHandler(application::BehaviourFactory* factory);
 				virtual ~NodeHandler();
 				void updateTimeStep(const int timeStep);
 				bool getNode(const int id, application::Node *& node) const;
@@ -110,7 +111,7 @@ namespace testapp
 				void setToUnsubscribe(const int nodeId, const int subscriptionId);
 				void sumoTraciCommandResult(const int nodeId, const int executionId, tcpip::Storage & storage);
 
-                void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+				void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
 
 				//  Don't need it
 				//  bool commandTrafficSimulation();
@@ -122,6 +123,7 @@ namespace testapp
 				NodeMap m_nodes;
 				PayloadStorage * m_storage;
 				CircularBuffer<int> * m_timeStepBuffer;
+				application::BehaviourFactory* m_factory;
 		};
 
 	} /* namespace server */

@@ -47,25 +47,25 @@ namespace testapp
 	namespace application
 	{
 
-		MobileNode::MobileNode(int id) :
+		MobileNode::MobileNode(int id, BehaviourFactory* factory) :
 				Node(id)
 		{
 			selectNodeType();
 			m_position = new MobilityInfo(id);
-			init();
+			init(factory);
 		}
 
-		MobileNode::MobileNode(MobilityInfo* info) :
+		MobileNode::MobileNode(MobilityInfo* info, BehaviourFactory* factory) :
 				Node(info->id)
 		{
 			selectNodeType();
 			m_position = NULL;
-			init();
+			init(factory);
 			updateMobilityInformation(info);
 		}
 
 		MobileNode::MobileNode(const int nodeId, const int ns3NodeId, const std::string & sumoNodeId,
-				const std::string & sumoType, const std::string & sumoClass) :
+				const std::string & sumoType, const std::string & sumoClass, BehaviourFactory* factory) :
 				Node(nodeId)
 		{
 			m_ns3Id = ns3NodeId;
@@ -75,7 +75,7 @@ namespace testapp
 			selectNodeType();
 			m_position = new MobilityInfo(nodeId);
             m_setCAMareaSubscription=false;
-			init();
+			init(factory);
 		}
 
 		MobileNode::~MobileNode()

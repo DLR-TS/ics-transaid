@@ -44,14 +44,14 @@ namespace testapp
 	namespace application
 	{
 
-		FixedStation::FixedStation(int id) :
+		FixedStation::FixedStation(int id, BehaviourFactory* factory) :
 				Node(id)
 		{
 			m_type = NT_RSU;
             m_mobilitySubscription = m_positionUpdated = m_trafficLightSubscription = m_setCAMareaSubscription= false;
 			m_rsuData = ProgramConfiguration::GetRsuData(id);
 			m_trafficLight = NULL;
-			init();
+			init(factory);
 		}
 
 		FixedStation::~FixedStation()

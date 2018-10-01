@@ -44,14 +44,15 @@ namespace testapp
 {
 namespace application
 {
+class BehaviourFactory;
 
 class MobileNode: public Node
 {
 public:
-  MobileNode(int id);
-  MobileNode(MobilityInfo* info);
+  MobileNode(int id, BehaviourFactory* factory);
+  MobileNode(MobilityInfo* info, BehaviourFactory* factory);
   MobileNode(const int nodeId, const int ns3NodeId, const std::string & sumoNodeId,
-  						const std::string & sumoType, const std::string & sumoClass);
+  						const std::string & sumoType, const std::string & sumoClass, BehaviourFactory* factory);
   virtual ~MobileNode();
 
   void updateMobilityInformation(MobilityInfo * info);

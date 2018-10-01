@@ -51,6 +51,7 @@ namespace testapp
 	{
 
 		class Behaviour;
+		class BehaviourFactory;
 		class Node;
 		class NodeSampler;
 		class Subscription;
@@ -67,7 +68,7 @@ namespace testapp
 				static uint16_t AverageSpeedSampleHigh;
 				static bool UseSink;
 
-				iCSInterface(Node*, NodeType);
+				iCSInterface(Node*, NodeType, BehaviourFactory* factory);
 				virtual ~iCSInterface();
 				/**
 				 * @brief Get the node instance on which it is installed this interface.

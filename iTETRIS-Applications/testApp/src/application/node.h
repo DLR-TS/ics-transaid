@@ -56,6 +56,7 @@ namespace testapp
 		const int INVALID_INT = -1;
 		const std::string INVALID_STRING = "";
 		class iCSInterface;
+		class BehaviourFactory;
 
 		/**
 		 * Represent a subscription of a node
@@ -228,7 +229,7 @@ namespace testapp
 				std::string m_sumoType;
 
 				Node(int id);
-				void init();
+				void init(BehaviourFactory* factory);
 				virtual void addSubscriptions();
 				static NodeType GetRandomNodeType();
 			private:

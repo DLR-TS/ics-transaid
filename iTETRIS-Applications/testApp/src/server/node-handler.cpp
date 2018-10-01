@@ -53,7 +53,7 @@ namespace testapp
 		using namespace std;
 		using namespace application;
 
-		NodeHandler::NodeHandler()
+		NodeHandler::NodeHandler(BehaviourFactory* factory) : m_factory(factory)
 		{
 			m_storage = new PayloadStorage();
 			m_timeStepBuffer = new CircularBuffer<int>(ProgramConfiguration::GetMessageLifetime());
@@ -103,7 +103,7 @@ namespace testapp
 		{
 			if (m_nodes.find(nodeId) != m_nodes.end())
 				return false;
-			Node * node = new MobileNode(nodeId, ns3NodeId, sumoNodeId, sumoType, sumoClass);
+			Node * node = new MobileNode(nodeId, ns3NodeId, sumoNodeId, sumoType, sumoClass, m_factory);
 			ostringstream oss;
 			oss << "Added new mobile node with id " << nodeId << " ns3id " << ns3NodeId << " sumoId " << sumoNodeId
 					<< " sumoType " << sumoType << " sumoClass " << sumoClass;
@@ -119,11 +119,11 @@ namespace testapp
 			{
 				if (ProgramConfiguration::IsRsu(nodeId))
 				{
-					node = new FixedStation(nodeId);
+					node = new FixedStation(nodeId, m_factory);
 					Log::WriteLog(ostringstream("Added new fixed station with id " + toString(nodeId)));
 				} else
 				{
-					node = new MobileNode(nodeId);
+					node = new MobileNode(nodeId, m_factory);
 					Log::WriteLog(ostringstream("Added new mobile node with id " + toString(nodeId)));
 				}
 				addNode(node);
@@ -156,10 +156,10 @@ namespace testapp
 				} else
 				{
 					if ((*it)->isMobile)
-						node = new MobileNode(*it);
+						node = new MobileNode(*it, m_factory);
 					else
 					{
-						node = new FixedStation((*it)->id);
+						node = new FixedStation((*it)->id, m_factory);
 						node->updateMobilityInformation(*it);
 					}
 					Log::WriteLog(ostringstream("Added new node with id " + toString((*it)->id)));

@@ -57,13 +57,13 @@ namespace testapp
 		Server* Server::m_instance;
 		bool Server::m_closeConnection;
 
-		Server::Server()
+		Server::Server(application::BehaviourFactory* factory)
 		{
 			try
 			{
 				m_closeConnection = false;
 				m_currentTimeStep = INT_MIN;
-				m_nodeHandler = new NodeHandler();
+				m_nodeHandler = new NodeHandler(factory);
 				m_socket = new Socket(ProgramConfiguration::GetSocketPort());
 				m_socket->accept();
 				Console::Log("Server listening on port: ", ProgramConfiguration::GetSocketPort());
@@ -79,7 +79,7 @@ namespace testapp
 			delete m_nodeHandler;
 		}
 
-		void Server::RunServer()
+		void Server::RunServer(application::BehaviourFactory* factory)
 		{
 			try
 			{
@@ -87,7 +87,7 @@ namespace testapp
 				{
 					if (m_closeConnection)
 						return;
-					m_instance = new Server();
+					m_instance = new Server(factory);
 				}
 
 				while (!m_closeConnection)

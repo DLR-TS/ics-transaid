@@ -88,10 +88,10 @@ namespace testapp
 			delete m_controller;
 		}
 
-		void Node::init()
+		void Node::init(BehaviourFactory* factory)
 		{
 			if (m_type != NT_VEHICLE_SHADOW)
-				m_controller = new iCSInterface(this, m_type);
+				m_controller = new iCSInterface(this, m_type, factory);
 		}
 
 		void Node::addSubscription(Subscription * subscription)
