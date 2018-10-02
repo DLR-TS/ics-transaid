@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Applications>
   <Application>    
-    <name>testApp</name>
-    <executable>testApp -c protocol-config-file.xml</executable> 
+    <name>protocolspeedApp</name>
+    <executable>protocolspeedApp -c protocol-config-file.xml</executable> 
     <ip>localhost</ip>
     <port>1987</port>
     <seed>123456</seed>

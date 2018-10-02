@@ -1,5 +1,6 @@
-sumo: no process found
-main-inci5: no process found
+sumo: Kein Prozess gefunden
+sumo-gui: Kein Prozess gefunden
+main-inci5: Kein Prozess gefunden
 Error: Attribute 'from' is missing in definition of edge ':C_0'.
 Error: Attribute 'to' is missing in definition of edge ':C_0'.
 Error: Attribute 'from' is missing in definition of edge ':C_1'.
@@ -32,6 +33,8 @@ Error: Attribute 'intLanes' in definition of junction 'E' is empty.
 Error: Attribute 'intLanes' in definition of junction 'N' is empty.
 Error: Attribute 'intLanes' in definition of junction 'S' is empty.
 Error: Attribute 'intLanes' in definition of junction 'W' is empty.
+testApp -> [ERROR]Unknown test case unknown
+testApp -> [ERROR]Quitting (on error).
 Could not set default value for ns3::c2cMessageStore::MaxPacketNumber
 Could not set default value for ns3::c2cNotificationGenerator::MaxPackets
 Could not set default value for ns3::c2cNotificationGenerator::Timeout
@@ -55,4 +58,5 @@ YansWifiPhyHelper::Default ns3::NistErrorRateModel
 YansWifiPhyHelper::Default ns3::NistErrorRateModel
 YansWifiPhyHelper::Default ns3::NistErrorRateModel
 YansWifiPhyHelper::Default ns3::NistErrorRateModel
-2 Install on node 1 com WaveVehicle
+Error: Process Error
+Quitting (on error).

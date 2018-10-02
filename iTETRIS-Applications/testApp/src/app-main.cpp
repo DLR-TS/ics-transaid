@@ -83,10 +83,14 @@ int main(int argc, char **argv)
 
   try
   {
+    std::set<std::string> testCases({"", "acosta", "simpleExecute", "setVType", "inductionLoop", "commSimple", "commSimple2", "CAMsimple", "testMobility", "testTrajectory", "testToC"});
     // start-up
     Console::Log("Starting iTetris test app");
     if (ProgramConfiguration::LoadConfiguration(configFile) == EXIT_FAILURE)
       throw ProcessError("Could not load configuration file");
+    if (testCases.count(ProgramConfiguration::GetTestCase()) == 0) {
+      throw ProcessError("Unknown test case " + ProgramConfiguration::GetTestCase());
+    }
 
     Console::Log("Load Configuration done");
     // Initialize log file
