@@ -232,7 +232,7 @@ namespace testapp
 
 		void Node::addSubscriptions()
 		{
-		    if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
+		    if (ProgramConfiguration::GetTestCase() == "acosta" || ProgramConfiguration::GetTestCase() == "") {
 		        if (!m_subReceiveMessage)
 		        {
 		            //Subscribe to both
@@ -240,7 +240,7 @@ namespace testapp
 		            m_toSubscribe.push(SubscriptionHelper::ReceiveGeobroadcast(PROTOCOL_MESSAGE));
 		            m_subReceiveMessage = true;
 		        }
-		    } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE || ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
+		    } else if (ProgramConfiguration::GetTestCase() == "commSimple" || ProgramConfiguration::GetTestCase() == "commSimple2") {
                 //Subscribe to both
                 if (!m_subReceiveMessage) {
                     if (!isFixed()) {
@@ -250,8 +250,6 @@ namespace testapp
                     m_toSubscribe.push(SubscriptionHelper::ReceiveGeobroadcast(MSGCAT_TESTAPP));
                     m_subReceiveMessage = true;
                 }
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_CAM_SIMPLE) {
-
             }
 		}
 

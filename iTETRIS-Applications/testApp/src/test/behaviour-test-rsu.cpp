@@ -67,13 +67,13 @@ namespace testapp
 			BehaviourNode::Start();
 
             //Example use of a traci command subscription
-            if (ProgramConfiguration::GetTestCase()==TEST_CASE_EXECUTE) {
+            if (ProgramConfiguration::GetTestCase()=="simpleExecute") {
                 // rsu does nothing
-            } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_SETVTYPE) {
+            } else if (ProgramConfiguration::GetTestCase()=="setVType") {
                 // rsu does nothing
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
+            } else if (ProgramConfiguration::GetTestCase() == "commSimple") {
                 // TODO: Subscribe to receive CAMs?
-           } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
+           } else if (ProgramConfiguration::GetTestCase() == "commSimple2") {
                // Start broadcasting at 5000
                int broadcastStart = 5000;
                int broadcastEnd = 10000;
@@ -108,7 +108,7 @@ namespace testapp
 
             NS_LOG_INFO(Log() << "Received a test message with content: " << testHeader->getMessage());
 
-            if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
+            if (ProgramConfiguration::GetTestCase() == "commSimple2") {
                 double responseTime = m_rnd.GetValue(m_responseTimeSpacing, testHeader->getMaxResponseTime() - m_responseTimeSpacing);
                 Scheduler::Cancel(m_eventResponse);
                 if (receivedTestHeader->getMessage() == "Vehicle response to RSU Vehicle acknowledgement") {
@@ -135,18 +135,18 @@ namespace testapp
 
 		bool BehaviourTestRSU::Execute(const int currentTimeStep, DirectionValueMap &data)
 		{
-            if (ProgramConfiguration::GetTestCase() == TEST_CASE_SETVTYPE) {
+            if (ProgramConfiguration::GetTestCase() == "setVType") {
                 // rsu does nothing
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_INDUCTIONLOOP) {
+            } else if (ProgramConfiguration::GetTestCase() == "inductionLoop") {
                 // constantly query induction loop status via RSU
                 GetController()->AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
+            } else if (ProgramConfiguration::GetTestCase() == "commSimple") {
                 // RSU constantly broadcasts for 5 secs (starting at t=5000)
                 if (currentTimeStep < 10000) {
                     TestHeader * header = new TestHeader(PID_UNKNOWN, MT_RSU_TEST, "RSU regular broadcast message");
                     GetController()->Send(NT_VEHICLE_FULL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
                 }
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
+            } else if (ProgramConfiguration::GetTestCase() == "commSimple2") {
                 // do nothing
             }
 			return false;
@@ -198,7 +198,7 @@ namespace testapp
         void BehaviourTestRSU::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
         {
             NS_LOG_FUNCTION(Log());
-            if (ProgramConfiguration::GetTestCase() == TEST_CASE_CAM_SIMPLE) {
+            if (ProgramConfiguration::GetTestCase() == "CAMsimple") {
                 NS_LOG_DEBUG(Log() << "Node " << nodeID <<   " received CAM messages");
                 for (std::vector<CAMdata>::const_iterator it = receivedCAMmessages.begin(); it != receivedCAMmessages.end(); ++it)
                 {

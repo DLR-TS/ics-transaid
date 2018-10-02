@@ -72,7 +72,7 @@ namespace testapp
 				m_nodeType = NT_RSU;
 
 				SubscribeBehaviour(factory->createRSUBehaviour(this, node));
-				if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
+				if (ProgramConfiguration::GetTestCase() == "acosta" || ProgramConfiguration::GetTestCase() == "") {
 					SubscribeBehaviour(new DataManager(this));
 				}
 			} else
@@ -234,7 +234,7 @@ namespace testapp
 			m_traceStateChange(true);
 
             //Example use of a traci command subscription
-            if (ProgramConfiguration::GetTestCase()==TEST_CASE_NONE) {
+            if (ProgramConfiguration::GetTestCase()=="") {
                 // conserve behaviour for old demo app
                 AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
                 tcpip::Storage maxSpeed;
@@ -448,7 +448,7 @@ namespace testapp
         void iCSInterface::processTraCIIntegerResult(const int result, const Command& command) {
             NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
 
-            if (ProgramConfiguration::GetTestCase() == TEST_CASE_INDUCTIONLOOP) {
+            if (ProgramConfiguration::GetTestCase() == "inductionLoop") {
                 if (command.commandId == CMD_GET_INDUCTIONLOOP_VARIABLE
                         && command.variableId == LAST_STEP_VEHICLE_NUMBER
                         && result > 0) {

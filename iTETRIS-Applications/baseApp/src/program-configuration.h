@@ -56,15 +56,6 @@ enum
 } typedef LogType;
 
 
-enum
-{
-    TEST_CASE_NONE = 0, TEST_CASE_SETVTYPE, TEST_CASE_EXECUTE,
-    TEST_CASE_ACOSTA, TEST_CASE_INDUCTIONLOOP, TEST_CASE_COMMSIMPLE,
-    TEST_CASE_COMMSIMPLE2,TEST_CASE_CAM_SIMPLE, TEST_CASE_TRAJECTORY,
-    TEST_CASE_TOC,TEST_CASE_MOBILITY
-} typedef TestCase;
-
-
 struct TLLane
 {
   double dir;
@@ -118,14 +109,9 @@ public:
     return m_messageLifetime;
   }
 
-  static TestCase GetTestCase()
+  static const std::string& GetTestCase()
   {
     return m_testCase;
-  }
-
-  static void SetTestCase(TestCase tc)
-  {
-    m_testCase = tc;
   }
 
   static bool GetLogFileName(LogType type, std::string & fileName);
@@ -144,7 +130,7 @@ private:
   static int m_start;
   static int m_socket;
   static unsigned m_messageLifetime;
-  static TestCase m_testCase;
+  static std::string m_testCase;
   static std::map<int, RsuData> m_rsus;
   static std::map<LogType, std::string> m_logs;
 };

@@ -8,14 +8,15 @@ iCS --> ns-3 launched.
 
 STEP 2 - SETUP PHASE
 testApp -> Starting iTetris test app
+testApp -> Test case set to testTrajectory
 testApp -> ParseGeneral done
 testApp -> ParseInfrastructure done
 testApp -> ParseSetup done
 testApp -> ParseSetup done
 testApp -> Load Configuration done
-testApp ->  Test case set to testTrajectory
 Loading configuration... done.
 main-inci v 3.20
+ns3 -> No option file found. Must be named option.txt
 
 STEP 3 - SETUP PHASE
 iCS --> Trying 0 to connect SUMO on port 5500...

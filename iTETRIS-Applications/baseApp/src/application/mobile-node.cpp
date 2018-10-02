@@ -125,7 +125,7 @@ namespace testapp
         void MobileNode::addSubscriptions()
         {
             Node::addSubscriptions();
-            if (ProgramConfiguration::GetTestCase() == TEST_CASE_CAM_SIMPLE){
+            if (ProgramConfiguration::GetTestCase() == "CAMsimple"){
                 if (!m_setCAMareaSubscription)
                 {
                     m_setCAMareaSubscription = true;

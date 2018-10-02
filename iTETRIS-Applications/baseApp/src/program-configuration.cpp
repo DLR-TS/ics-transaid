@@ -57,7 +57,7 @@ namespace testapp
 
 	int ProgramConfiguration::m_start;
 	int ProgramConfiguration::m_socket;
-	TestCase ProgramConfiguration::m_testCase = TEST_CASE_NONE;
+	std::string ProgramConfiguration::m_testCase = "";
 	unsigned ProgramConfiguration::m_messageLifetime = 10;
 	std::map<int, RsuData> ProgramConfiguration::m_rsus;
 	std::map<LogType, std::string> ProgramConfiguration::m_logs;
@@ -151,6 +151,18 @@ namespace testapp
 			if (tmp > 0)
 				m_messageLifetime = tmp;
 		}
+
+		xmlElem = general->FirstChildElement("random-run");
+		if (xmlElem)
+			ns3::RngSeedManager::SetRun(xmlElem->IntAttribute("value"));
+		xmlElem = general->FirstChildElement("random-seed");
+		if (xmlElem)
+	        ns3::RngSeedManager::SetSeed(xmlElem->IntAttribute("value"));
+		xmlElem = general->FirstChildElement("test-case");
+		if (xmlElem)
+			m_testCase = xmlElem->Attribute("value");
+			Console::Log("Test case set to " + m_testCase);
+
 		return EXIT_SUCCESS;
 	}
 

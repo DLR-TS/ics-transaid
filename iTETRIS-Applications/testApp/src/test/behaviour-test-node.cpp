@@ -72,14 +72,14 @@ namespace testapp
 			BehaviourNode::Start();
 
             //Example use of a traci command subscription
-            if (ProgramConfiguration::GetTestCase()==TEST_CASE_EXECUTE) {
+            if (ProgramConfiguration::GetTestCase()=="simpleExecute") {
                 // do nothing
-            } else if (ProgramConfiguration::GetTestCase()==TEST_CASE_SETVTYPE) {
+            } else if (ProgramConfiguration::GetTestCase()=="setVType") {
                 GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
                 tcpip::Storage type;
                 type.writeString("t2");
                 GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
+            } else if (ProgramConfiguration::GetTestCase() == "commSimple") {
                 // Time to abort waiting for a response after insertion.
                 // Will be ineffective if communication runs as intended (test case commSimple2).
                 // Used for testing purposes before random offsets were assigned to messages. (test case commSimple)
@@ -87,7 +87,7 @@ namespace testapp
                 const int endWaitingTime = 10000;
                 m_eventAbortWaitingForRSU = Scheduler::Schedule(endWaitingTime, &BehaviourTestNode::abortWaitingForRSUResponse, this);
                 // TODO: Subscribe to receive CAMs?
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
+            } else if (ProgramConfiguration::GetTestCase() == "commSimple2") {
                 // After t=8000, vehicle starts broadcasting until its broadcast is acknowledged or aborted at t = 12000
                 const int endWaitingTime = 10000;
                 const int insertionAccordingToRoutresFile = 2000;
@@ -126,13 +126,13 @@ namespace testapp
 
             NS_LOG_INFO(Log() << "Received a test message with content: " << testHeader->getMessage());
 
-            if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
+            if (ProgramConfiguration::GetTestCase() == "commSimple") {
                 if (m_waitForRSUAcknowledgement && receivedTestHeader->getMessage() == "RSU Vehicle acknowledgement") {
                     Scheduler::Cancel(m_eventAbortWaitingForRSU);
                     abortWaitingForRSUResponse();
                     NS_LOG_DEBUG(Log() << "On reception of RSU Vehicle acknowledgement.");
                 }
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
+            } else if (ProgramConfiguration::GetTestCase() == "commSimple2") {
                 // Random offset for responseTime
                 double responseTime = m_rnd.GetValue(m_responseTimeSpacing, testHeader->getMaxResponseTime() - m_responseTimeSpacing);
                 TestHeader::ResponseInfo response;
@@ -164,14 +164,14 @@ namespace testapp
 
 		bool BehaviourTestNode::Execute(const int currentTimeStep, DirectionValueMap &data)
 		{
-            if (ProgramConfiguration::GetTestCase() == TEST_CASE_SETVTYPE) {
+            if (ProgramConfiguration::GetTestCase() == "setVType") {
                 if (currentTimeStep == 10000) {
                     // check vType at time 10.
                     GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
                 }
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_INDUCTIONLOOP) {
+            } else if (ProgramConfiguration::GetTestCase() == "inductionLoop") {
                 // Vehicle does nothing
-						} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_TRAJECTORY) {
+						} else if (ProgramConfiguration::GetTestCase() == "testTrajectory") {
 							  //QUESTION: This seems to work only on specifi values. Why ?
 							  if (currentTimeStep % 1000 == 0.0) {
 								  	// retrieve speed every 10[sec].
@@ -181,24 +181,24 @@ namespace testapp
 										// retrieve 1D position every lane at 10[sec].
 									  GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_LANEPOSITION);
 							  }
-						} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_TOC) {
+						} else if (ProgramConfiguration::GetTestCase() == "testToC") {
 							  // TODO: instead of time, trigger ToC via lane ID and position
 						  	if (currentTimeStep == 10000 ) {
 										// Requesting ToC at 10[sec].
 										GetController()->requestToC("veh0",4.0);
 								}
-						} else if (ProgramConfiguration::GetTestCase() == TEST_CASE_MOBILITY) {
+						} else if (ProgramConfiguration::GetTestCase() == "testMobility") {
 								if (currentTimeStep == 12000 ) {
 										// Requesting Mobility Info at 12[sec].
 										GetController()->requestMobilityInfo();
 								}
-            } else if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE) {
+            } else if (ProgramConfiguration::GetTestCase() == "commSimple") {
                 // After t=8000, vehicle starts broadcasting until its broadcast is acknowledged or aborted at t = 12000
                 if (currentTimeStep > 8000 && m_waitForRSUAcknowledgement){
                     TestHeader * header = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, "Vehicle regular broadcast");
                     GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
                 }
-            } if (ProgramConfiguration::GetTestCase() == TEST_CASE_COMMSIMPLE2) {
+            } if (ProgramConfiguration::GetTestCase() == "commSimple2") {
                 // do nothing
             }
 			return false;
@@ -228,7 +228,7 @@ namespace testapp
         void BehaviourTestNode::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
         {
             NS_LOG_FUNCTION(Log());
-            if (ProgramConfiguration::GetTestCase() == TEST_CASE_CAM_SIMPLE) {
+            if (ProgramConfiguration::GetTestCase() == "CAMsimple") {
                 NS_LOG_DEBUG(Log() << "Node " << nodeID <<   " received CAM messages");
                 for (std::vector<CAMdata>::const_iterator it = receivedCAMmessages.begin(); it != receivedCAMmessages.end(); ++it)
                 {

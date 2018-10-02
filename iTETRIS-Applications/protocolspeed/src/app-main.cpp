@@ -54,106 +54,8 @@ using namespace testapp;
 // functions
 // ===========================================================================
 /* -------------------------------------------------------------------------
- * options initialisation
- * ----------------------------------------------------------------------- */
-
-/* -------------------------------------------------------------------------
  * main
  * ----------------------------------------------------------------------- */
-
-uint32_t stringToUInt(std::string value)
-{
-  uint32_t ret;
-  std::stringstream str;
-  str << value;
-  str >> ret;
-  return ret;
-}
-
-double stringToDouble(std::string value)
-{
-  double ret;
-  std::stringstream str;
-  str << value;
-  str >> ret;
-  return ret;
-}
-
-void loadOptionFile()
-{
-  using namespace std;
-  using namespace application;
-  string file = "option.txt";
-  ifstream inFile;
-  inFile.open(file.c_str());
-  if (!inFile.good())
-  {
-    Console::Warning(" No option file found. Must be named option.txt");
-  }
-  else
-  {
-    string key, value;
-    while (inFile >> key >> value)
-    {
-      if (key == "RngRun")
-      {
-        ns3::RngSeedManager::SetRun(stringToUInt(value));
-        Console::Log("RngRun set to ", value.c_str());
-      }
-      else if (key == "RngSeed")
-      {
-        ns3::RngSeedManager::SetSeed(stringToUInt(value));
-        Console::Log("RngSeed set to ", value.c_str());
-      }
-      else if (key == "ProbFull")
-      {
-        Node::ProbabilityFull = stringToDouble(value);
-        Console::Log("ProbFull set to ", value.c_str());
-      }
-      else if (key == "ProbMed")
-      {
-        Node::ProbabilityMedium = stringToDouble(value);
-        Console::Log("ProbMed set to ", value.c_str());
-      } else if (key == "test") {
-          if(ProgramConfiguration::GetTestCase() != TEST_CASE_NONE) {
-              Console::Warning(" Test case already set. Ignoring further values '"+value+"'");
-          } else {
-              bool testCaseExists = true;
-              if (value=="simpleExecute"){
-                  ProgramConfiguration::SetTestCase(TEST_CASE_EXECUTE);
-              } else if (value=="setVType"){
-                  ProgramConfiguration::SetTestCase(TEST_CASE_SETVTYPE);
-              } else if (value=="acosta"){
-                  ProgramConfiguration::SetTestCase(TEST_CASE_ACOSTA);
-              } else if (value=="inductionLoop"){
-                  ProgramConfiguration::SetTestCase(TEST_CASE_INDUCTIONLOOP);
-              } else if (value=="commSimple"){
-                  ProgramConfiguration::SetTestCase(TEST_CASE_COMMSIMPLE);
-              } else if (value=="commSimple2"){
-                  ProgramConfiguration::SetTestCase(TEST_CASE_COMMSIMPLE2);
-              }else if (value=="CAMsimple"){
-                  ProgramConfiguration::SetTestCase(TEST_CASE_CAM_SIMPLE);
-              } else if (value=="testToC"){
-                  ProgramConfiguration::SetTestCase(TEST_CASE_TOC);
-              } else if (value=="testTrajectory"){
-                  ProgramConfiguration::SetTestCase(TEST_CASE_TRAJECTORY);
-              } else if (value=="testMobility"){
-                  ProgramConfiguration::SetTestCase(TEST_CASE_MOBILITY);
-              } else {
-                  testCaseExists = false;
-              }
-              if (testCaseExists) {
-                  Console::Log(" Test case set to ", value.c_str());
-              } else {
-                  Console::Warning(" No test case '"+value+"' exists. Ignoring option.");
-              }
-          }
-      }
-    }
-  }
-  inFile.close();
-}
-
 int main(int argc, char **argv)
 {
   int ret = 0;
@@ -206,7 +108,6 @@ int main(int argc, char **argv)
     if (ProgramConfiguration::GetSocketPort() < 1024)
       throw ProcessError("Please use a socket port above 1024");
 
-    loadOptionFile();
     // Start the server
     server::Server::RunServer(new application::BehaviourFactory());
 

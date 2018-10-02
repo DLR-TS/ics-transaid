@@ -64,7 +64,7 @@ namespace testapp
 		{
 			//Subscribe to receive messages
 			Node::addSubscriptions();
-			if (ProgramConfiguration::GetTestCase() == TEST_CASE_ACOSTA || ProgramConfiguration::GetTestCase() == TEST_CASE_NONE) {
+			if (ProgramConfiguration::GetTestCase() == "acosta" || ProgramConfiguration::GetTestCase() == "") {
 			    // in original demo-app this was included, but not needed for most simple test cases
 	            if (!m_mobilitySubscription)
 	            {
@@ -78,7 +78,7 @@ namespace testapp
                     m_toSubscribe.push(SubscriptionHelper::GetTrafficLightInformation());
                 }
 			}
-            if (ProgramConfiguration::GetTestCase() == TEST_CASE_CAM_SIMPLE){
+            if (ProgramConfiguration::GetTestCase() == "CAMsimple"){
                 if (!m_setCAMareaSubscription)
                 {
                     m_setCAMareaSubscription = true;

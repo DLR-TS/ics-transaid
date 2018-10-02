@@ -8,14 +8,15 @@ iCS --> ns-3 launched.
 
 STEP 2 - SETUP PHASE
 testApp -> Starting iTetris test app
+testApp -> Test case set to inductionLoop
 testApp -> ParseGeneral done
 testApp -> ParseInfrastructure done
 testApp -> ParseSetup done
 testApp -> ParseSetup done
 testApp -> Load Configuration done
-testApp ->  Test case set to inductionLoop
 Loading configuration... done.
 main-inci v 3.20
+ns3 -> No option file found. Must be named option.txt
 
 STEP 3 - SETUP PHASE
 iCS --> Trying 0 to connect SUMO on port 5500...
@@ -25,12 +26,12 @@ iCS --> Trying 0 to connect ns-3 on port 1982 and Host localhost...
 iCS --> Connected to ns-3
 
 iCS --> Trying 0 to connect Application on port 1987...
+testApp -> Server listening on port: 1987
 iCS --> Application testApp connected.
 
 
 STEP 4 - SETUP PHASE
 jin <iCS/ns3-client.cc> CMD_CREATENODE=8
-testApp -> Server listening on port: 1987
 WaveRsuInstaller::AllocateIpv6Prefix()3001:0:0:1::
 
 iCS --> Starting scheduling V2X messages in setup phase
@@ -4049,4 +4050,4 @@ STEP 9 - SIMULATION PHASE - Tics = 25000
 ns-3 server --> Finishing server.... 
 
 Success.
-Elapsed time (in seconds): 4.00
+Elapsed time (in seconds): 3.00

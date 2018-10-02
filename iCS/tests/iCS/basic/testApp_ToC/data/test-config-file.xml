@@ -9,6 +9,7 @@
 		<ns-log-file value="../app-ns-log.txt"/>
 		<data-file value="../app-data.txt"/>
         <message-lifetime value="10" />
+        <test-case value="testToC" />
     </general>
 	
 	<infrastructure>

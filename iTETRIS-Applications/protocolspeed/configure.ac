@@ -26,7 +26,6 @@ AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_PROG_MAKE_SET
 AC_PROG_RANLIB
-AM_PROG_LIBTOOL
 
 AM_CPPFLAGS="-I$PWD/$srcdir/src -I$PWD/$srcdir/../baseApp/src -I$PWD/$srcdir/../baseApp/src/server -I$PWD/$srcdir/../baseApp/src/application -I$PWD/$srcdir/../baseApp/src/utils -I$PWD/$srcdir/../baseApp/src/foreign -I$PWD/$srcdir/../baseApp/src/application/helper -I$PWD/$srcdir/../baseApp/src/application/model -I$PWD/$srcdir/../../sumo/src $AM_CPPFLAGS"
 AC_SUBST(AM_CPPFLAGS)
