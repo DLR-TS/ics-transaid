@@ -35,28 +35,34 @@ $ cd ..
 Step 5 - Build ICS
 $ cd iCS
 $ autoreconf -i
-$ ./configure
+$ ./configure --prefix=$PWD/..
 $ make -j
-$ make install prefix=$PWD/..
+$ make install
 $ cd ..
 
 --------------------------------
 # Step 6 [optional, rather use testApp] - Build iTETRIS app
 # $ cd iTETRIS-Applications/traffic-monitor
 # $ autoreconf -i
-# $ ./configure
+# $ ./configure --prefix=$PWD/../..
 # $ make -j
-# $ make install prefix=$PWD/../..
+# $ make install
 # $ cd ../..
 
 --------------------------------
 Step 7 - Build testApp
-$ cd iTETRIS-Applications/testApp
+$ cd iTETRIS-Applications/baseApp
 $ autoreconf -i
 $ ./configure
 $ make -j
-$ make install prefix=$PWD/../..
+$ cd ../testApp
+$ autoreconf -i
+$ ./configure --prefix=$PWD/../..
+$ make -j
+$ make install
 $ cd ../..
+
+When changing the baseApp remember to rebuild baseApp and afterwards every derived app (e.g. the testApp).
 
 --------------------------------
 Step 8 - Set required environment variables
@@ -77,4 +83,3 @@ $ iCS -c itetris-config-file-gui-ns3.20.xml
 Step 11 - Run the tests
 $ cd iCS/tests/
 $ ./runTests.sh
-

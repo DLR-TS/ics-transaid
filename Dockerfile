@@ -24,8 +24,10 @@ RUN cd transaid/sumo; autoreconf -i; ./configure; make -j
 
 RUN cd transaid/ns-3.20; ./waf configure --prefix=$PWD/..; ./waf -j8; ./waf install
 
-RUN cd transaid/iCS; autoreconf -i; ./configure; make -j; make install prefix=$PWD/..
+RUN cd transaid/iCS; autoreconf -i; ./configure --prefix=$PWD/..; make -j; make install
 
-RUN cd transaid/iTETRIS-Applications/traffic-monitor; autoreconf -i; ./configure; make -j; make install prefix=$PWD/../..
+RUN cd transaid/iTETRIS-Applications/traffic-monitor; autoreconf -i; ./configure --prefix=$PWD/../..; make -j; make install
 
-RUN cd transaid/iTETRIS-Applications/testApp; autoreconf -i; ./configure; make -j; make install prefix=$PWD/../..
+RUN cd transaid/iTETRIS-Applications/baseApp; autoreconf -i; ./configure; make -j
+
+RUN cd transaid/iTETRIS-Applications/testApp; autoreconf -i; ./configure --prefix=$PWD/../..; make -j; make install
