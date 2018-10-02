@@ -38,7 +38,7 @@
 #ifndef SUBSCRIPTION_HELPER_H_
 #define SUBSCRIPTION_HELPER_H_
 
-#include "tcpip/storage.h"
+#include "foreign/tcpip/storage.h"
 #include "program-configuration.h"
 #include "structs.h"
 #include <vector>
@@ -137,7 +137,7 @@ namespace testapp
 				 * @param[in] executionId Id of the current request
 				 * @param[in] commandStorage Message that will be sent to Traci
 				 */
-				static SubscriptionHolder * SumoTraciCommand(const int executionId, const tcpip::Storage & commandStorage);
+				static SubscriptionHolder * SumoTraciCommand(const int executionId, tcpip::Storage & commandStorage);
 				/**
 				 * @brief To create a AppResultTrafficSim subscription to get the class of a node
 				 * @param[in] nodeId Id of the node

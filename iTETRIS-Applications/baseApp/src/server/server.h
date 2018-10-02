@@ -37,8 +37,8 @@
 #ifndef SERVER_H_
 #define SERVER_H_
 
-#include "tcpip/socket.h"
-#include "tcpip/storage.h"
+#include "foreign/tcpip/socket.h"
+#include "foreign/tcpip/storage.h"
 #include "node-handler.h"
 
 namespace testapp

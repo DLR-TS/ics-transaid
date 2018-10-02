@@ -289,7 +289,7 @@ namespace testapp
 		}
 
 		SubscriptionHolder * SubscriptionHelper::SumoTraciCommand(const int executionId,
-				const tcpip::Storage & commandStorage)
+				tcpip::Storage & commandStorage)
 		{
 			Storage* request = new Storage();
 			request->writeUnsignedByte(3 * 1 + 4 + commandStorage.size());

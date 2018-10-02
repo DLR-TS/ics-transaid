@@ -37,7 +37,7 @@
 #ifndef STRUCTS_H_
 #define STRUCTS_H_
 
-#include "tcpip/storage.h"
+#include "foreign/tcpip/storage.h"
 #include "log/log.h"
 #include "vector.h"
 #include <cmath>

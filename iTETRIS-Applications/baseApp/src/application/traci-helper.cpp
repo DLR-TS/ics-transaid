@@ -265,7 +265,7 @@ namespace testapp
 		}
 
 		void TraciHelper::ValueSetStorage(tcpip::Storage & sumoQuery, const int commandId, const int variableId,
-				const std::string & objId, const int newValueType, const tcpip::Storage & newValueStorage) {
+				const std::string & objId, const int newValueType, tcpip::Storage & newValueStorage) {
 			sumoQuery.writeUnsignedByte(1 + 1 + 1 + 4 + objId.length() + 1 + newValueStorage.size()); // command length
 			sumoQuery.writeUnsignedByte(commandId); // command id
 			sumoQuery.writeUnsignedByte(variableId); // variable id
@@ -275,7 +275,7 @@ namespace testapp
 		}
 
 		int TraciHelper::AddValueSetStorage(tcpip::Storage & sumoQuery, const int commandId, const int variableId,
-				const std::string & objId, const int newValueType, const tcpip::Storage & newValueStorage)
+				const std::string & objId, const int newValueType, tcpip::Storage & newValueStorage)
 		{
 			ValueSetStorage(sumoQuery, commandId, variableId, objId, newValueType, newValueStorage);
 			return AddSetCommand(commandId, variableId, objId);

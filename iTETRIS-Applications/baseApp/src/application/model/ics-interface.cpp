@@ -477,7 +477,7 @@ namespace testapp
             NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " is " << ss.str());
         }
 
-        void iCSInterface::AddTraciSubscription(const int cmdID, const int varID, const int varTypeID, const tcpip::Storage * value)
+        void iCSInterface::AddTraciSubscription(const int cmdID, const int varID, const int varTypeID, tcpip::Storage * value)
         {
             if (m_node->getSumoId() != INVALID_STRING)
             {
@@ -547,7 +547,7 @@ namespace testapp
             SetTraciParameter("device.toc.requestToC", toString(timeTillMRM));
         }
 
-        void iCSInterface::AddTraciSubscription(const std::string objID, const int cmdID, const int varID, const int varTypeID, const tcpip::Storage * value)
+        void iCSInterface::AddTraciSubscription(const std::string objID, const int cmdID, const int varID, const int varTypeID, tcpip::Storage * value)
         {
             tcpip::Storage sumoQuery;
             if (value == 0) {

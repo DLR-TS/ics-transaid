@@ -188,7 +188,7 @@ namespace testapp
                 /// @param[in] varID traci variable id
                 /// @param[in] varTypeID traci type id (only for set commands)
                 /// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
-                void AddTraciSubscription(const int cmdID, const int varID, const int varTypeID = 0, const tcpip::Storage* value = 0);
+                void AddTraciSubscription(const int cmdID, const int varID, const int varTypeID = 0, tcpip::Storage* value = 0);
 
 								/// @brief helper function that adds GetMobilityInfo subscription 
 								void requestMobilityInfo();
@@ -200,7 +200,7 @@ namespace testapp
                 /// @param[in] varID traci variable id
                 /// @param[in] varTypeID traci type id (only for set commands)
                 /// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
-                void AddTraciSubscription(const std::string objID, const int cmdID, const int varID, const int varTypeID = 0, const tcpip::Storage* value = 0);
+                void AddTraciSubscription(const std::string objID, const int cmdID, const int varID, const int varTypeID = 0, tcpip::Storage* value = 0);
 
 
                 /// @brief Schedule a stop for a mobile node

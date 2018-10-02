@@ -38,8 +38,8 @@
 #define SRC_APPLICATION_TRACI_HELPER_H_
 
 #include <map>
-#include "tcpip/storage.h"
-#include "../../../sumo/src/traci-server/TraCIConstants.h"
+#include "foreign/tcpip/storage.h"
+#include "traci-server/TraCIConstants.h"
 
 // result type: Ok
 #define SUMO_RTYPE_OK 0x00
@@ -184,7 +184,7 @@ namespace testapp
 				 * @param[in] newValueStorage The new value to be set, already codified in a storage
 				 */
 				static void ValueSetStorage(tcpip::Storage & sumoQuery, const int commandId, const int variableId,
-						const std::string & objId, const int newValueType, const tcpip::Storage & newValueStorage);
+						const std::string & objId, const int newValueType, tcpip::Storage & newValueStorage);
 				/**
 				 * @brief As ValueSetStorage but it also adds the command to the map
 				 * @brief Creates the request for a state change to send to sumo via traci
@@ -197,7 +197,7 @@ namespace testapp
 				 * @return The id of the command inside the map
 				 */
 				static int AddValueSetStorage(tcpip::Storage & sumoQuery, const int commandId, const int variableId,
-						const std::string & objId, const int newValueType, const tcpip::Storage & newValueStorage);
+						const std::string & objId, const int newValueType, tcpip::Storage & newValueStorage);
 
 
                 /// @brief return the value type of the given traci variable

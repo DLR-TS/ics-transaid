@@ -44,11 +44,6 @@
 #include "model/behaviour-factory.h"
 #include "test/behaviour-test-factory.h"
 
-#ifdef _MSC_VER
-#include <windows_config.h>
-#else
-#include "config.h"
-#endif
 
 // ===========================================================================
 // used namespaces
