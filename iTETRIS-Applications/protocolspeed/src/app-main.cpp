@@ -42,7 +42,6 @@
 #include "program-configuration.h"
 #include "output-helper.h"
 #include "model/behaviour-factory.h"
-#include "test/behaviour-test-factory.h"
 
 
 // ===========================================================================
@@ -209,7 +208,7 @@ int main(int argc, char **argv)
 
     loadOptionFile();
     // Start the server
-    server::Server::RunServer(new application::BehaviourTestFactory());
+    server::Server::RunServer(new application::BehaviourFactory());
 
     ret = 0;
 
