@@ -59,6 +59,7 @@ using namespace testapp;
 int main(int argc, char **argv)
 {
   int ret = 0;
+  Console::SetAppName("protocolspeedApp");
 
   if (argc != 2 && argc != 3)
   {
@@ -83,7 +84,7 @@ int main(int argc, char **argv)
   try
   {
     // start-up
-    Console::Log("Starting iTetris test app");
+    Console::Log("Starting iTetris protocol speed app");
     if (ProgramConfiguration::LoadConfiguration(configFile) == EXIT_FAILURE)
       throw ProcessError("Could not load configuration file");
 

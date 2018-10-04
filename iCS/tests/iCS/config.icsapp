@@ -28,6 +28,7 @@ detector:<!--{[->]}-->
 
 [unordered_text]
 output:testApp -> Server listening on port: 1987
+output:protocolspeedApp -> Server listening on port: 1987
 output:Loading configuration... done.
 output:main-inci v 3.20
 output:jin <iCS/ns3-client.cc> CMD_CREATENODE

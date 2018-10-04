@@ -4,8 +4,11 @@ traffic_monitor_acosta
 # Tests simple example with extensive log, shortened sim time, and larger iCS step.
 traffic_monitor_acosta_infolog
 
-# Tests acosta scenario with test app, same as for traffic monitor
-testApp_acosta_infolog
+# Tests acosta scenario with protocolspeed app, same as for traffic monitor
+protocolspeedApp_acosta_infolog
+
+# Tests acosta scenario with protocolspeed app, same as for traffic monitor
+protocolspeedApp_acosta
 
 # Tests testApp execution without giving a test case. (Subscribes to speed and set max speed, kept as legacy test, may be removed if proper test for speed retrieval/setting exists)
 testApp_test_case_unknown
@@ -30,11 +33,7 @@ testApp_commSimple
 # The vehicle affirms the acknowledgement, upon which the RSU sends a stop advice. On its reception a stop is added via traci.
 # The test uses randomized response offsets to avoid synchronized message transmission.
 testApp_commSimple2
-
-
 testApp_CAMsimple
-
 testApp_mobility
 testApp_trajectory
 testApp_ToC
-
