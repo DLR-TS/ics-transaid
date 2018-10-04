@@ -38,6 +38,7 @@
 
 #include "ics-interface.h"
 #include "log/log.h"
+#include "program-configuration.h"
 
 namespace testapp
 {
@@ -97,6 +98,28 @@ namespace testapp
         void Behaviour::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
         {
 
+        }
+
+        void Behaviour::processTraCIResult(const int result, const Command& command) {
+            NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void Behaviour::processTraCIResult(const double result, const Command& command) {
+            NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void Behaviour::processTraCIResult(const std::string result, const Command& command) {
+            NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void Behaviour::processTraCIResult(const std::vector<std::string> result, const Command& command) {
+            std::stringstream ss;
+            ss << "[";
+            for (std::vector<std::string>::const_iterator i = result.begin(); i != result.end(); ++i) {
+                ss  << *i << ", ";
+            }
+            ss << "]";
+            NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " is " << ss.str());
         }
 
 	} /* namespace application */

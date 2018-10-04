@@ -53,6 +53,7 @@ namespace testapp
 	{
 
 		class iCSInterface;
+		struct Command;
 
 		/**
 		 * Abstract behaviour class
@@ -100,7 +101,15 @@ namespace testapp
                  * @brief Called by the ics-interface if a CAM message is received by the node
                  * @param[in] the CAM received message
                  */
-                virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+				virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+
+				virtual void processTraCIResult(const int result, const Command& command);
+
+				virtual void processTraCIResult(const double result, const Command& command);
+
+				virtual void processTraCIResult(const std::string result, const Command& command);
+
+				virtual void processTraCIResult(const std::vector<std::string> result, const Command& command);
 
 				virtual TypeBehaviour GetType() const
 				{

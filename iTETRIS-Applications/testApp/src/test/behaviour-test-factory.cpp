@@ -46,14 +46,14 @@ namespace testapp
 	namespace application
 	{
 
-		Behaviour* BehaviourTestFactory::createRSUBehaviour(iCSInterface* interface, Node* node)
+		void BehaviourTestFactory::createRSUBehaviour(iCSInterface* interface, Node* node)
 		{
-			return new BehaviourTestRSU(interface);
+			interface->SubscribeBehaviour(new BehaviourTestRSU(interface));
 		}
 
-		Behaviour* BehaviourTestFactory::createNodeBehaviour(iCSInterface* interface, Node* node)
+		void BehaviourTestFactory::createNodeBehaviour(iCSInterface* interface, Node* node)
 		{
-			return new BehaviourTestNode(interface);
+			interface->SubscribeBehaviour(new BehaviourTestNode(interface));
 		}
 
 	} /* namespace application */

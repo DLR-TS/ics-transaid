@@ -207,6 +207,18 @@ namespace testapp
             }
         }
 
+        void BehaviourTestRSU::processTraCIResult(const int result, const Command& command) {
+            Behaviour::processTraCIResult(result, command);
+            if (ProgramConfiguration::GetTestCase() == "inductionLoop") {
+                if (command.commandId == CMD_GET_INDUCTIONLOOP_VARIABLE
+                        && command.variableId == LAST_STEP_VEHICLE_NUMBER
+                        && result > 0) {
+                    GetController()->AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_ID_LIST);
+                    GetController()->AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_MEAN_SPEED);
+                    GetController()->AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_OCCUPANCY);
+                }
+            }
+        }
 
 
 	} /* namespace application */

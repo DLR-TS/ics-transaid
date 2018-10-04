@@ -44,13 +44,13 @@
 #include "headers.h"
 #include "structs.h"
 #include "traci-helper.h"
+#include "behaviour.h"
 
 namespace testapp
 {
 	namespace application
 	{
 
-		class Behaviour;
 		class BehaviourFactory;
 		class Node;
 		class NodeSampler;
@@ -226,20 +226,6 @@ namespace testapp
                  */
                 void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
 
-			private:
-
-				/**
-				 * @name TraCI result processing
-				 * @todo Make this a template function and delegate to Behaviour class
-				 * @brief App-specific traci result processing goes into these processors
-				 */
-				/// @{
-                void processTraCIIntegerResult(const int result, const Command& command);
-                void processTraCIDoubleResult(const double result, const Command& command);
-                void processTraCIStringResult(const std::string result, const Command& command);
-                void processTraCIStringListResult(const std::vector<std::string> result, const Command& command);
-                ///@}
-
 				/**
 				 * @brief Add a new behaviour to the node
 				 */
@@ -248,6 +234,20 @@ namespace testapp
 				 * @brief Utility method to get the node name. Used in the logs
 				 */
 				std::string LogNode() const;
+			private:
+
+				/**
+				 * @name TraCI result processing
+				 * @brief App-specific traci result processing goes into the behavior processors
+				 */
+				/// @{
+                template<typename T> void processTraCIResult(const T result, const Command& command) {
+					for (const auto& it: m_behaviours) {
+						it.second->processTraCIResult(result, command);
+					}
+				}
+                ///@}
+
 				/**
 				 * @brief Common code called by Send and SendTo
 				 */

@@ -58,10 +58,11 @@ namespace testapp
 
 				void Start();
 
-				virtual bool IsSubscribedTo(ProtocolId pid) const;
-				virtual void Receive(server::Payload *payload, double snr);
-				virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
-                virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+				bool IsSubscribedTo(ProtocolId pid) const;
+				void Receive(server::Payload *payload, double snr);
+				bool Execute(const int currentTimeStep, DirectionValueMap &data);
+				void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+				void processTraCIResult(const int result, const Command& command);
 
                 /**
                  * @brief Called after a random timeout when a test message is received, @see Receive()

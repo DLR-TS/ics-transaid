@@ -44,7 +44,6 @@ namespace testapp
 	namespace application
 	{
 
-		class Behaviour;
 		class iCSInterface;
 		class Node;
 
@@ -53,15 +52,15 @@ namespace testapp
 		 */
 		class BehaviourTestFactory : public BehaviourFactory
 		{
-			public:
-				/**
-				 * @brief Return a new created RSU behaviour
-				 */
-				virtual Behaviour* createRSUBehaviour(iCSInterface* interface, Node* node);
-				/**
-				 * @brief Return a new created node behaviour
-				 */
-				virtual Behaviour* createNodeBehaviour(iCSInterface* interface, Node* node);
+		public:
+			/**
+			 * @brief Create one or several new RSU behaviour(s) and add them to the interface
+			 */
+			virtual void createRSUBehaviour(iCSInterface* interface, Node* node);
+			/**
+			 * @brief Create one or several new node behaviour(s) and add them to the interface
+			 */
+			virtual void createNodeBehaviour(iCSInterface* interface, Node* node);
 		};
 
 	} /* namespace application */

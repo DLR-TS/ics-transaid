@@ -39,7 +39,6 @@
 #include "../../utils/log/ToString.h"
 #include "program-configuration.h"
 #include "behaviour-factory.h"
-#include "data-manager.h"
 #include "headers.h"
 #include "node.h"
 #include "node-sampler.h"
@@ -70,16 +69,12 @@ namespace testapp
 			if (nodeClass == NT_RSU)
 			{
 				m_nodeType = NT_RSU;
-
-				SubscribeBehaviour(factory->createRSUBehaviour(this, node));
-				if (ProgramConfiguration::GetTestCase() == "acosta" || ProgramConfiguration::GetTestCase() == "") {
-					SubscribeBehaviour(new DataManager(this));
-				}
+				factory->createRSUBehaviour(this, node);
 			} else
 			{
 				m_nodeType = nodeClass;
 				m_nodeSampler = new NodeSampler(this);
-				SubscribeBehaviour(factory->createNodeBehaviour(this, node));
+				factory->createNodeBehaviour(this, node);
 			}
 			if (OutputHelper::Instance() != NULL)
 				OutputHelper::Instance()->RegisterNode(this);
@@ -391,32 +386,32 @@ namespace testapp
 				    switch (varType) {
 				    case TYPE_DOUBLE:
 				    {
-				        processTraCIDoubleResult(traciReply.readDouble(), command);
+				        processTraCIResult(traciReply.readDouble(), command);
 				    }
                     break;
                     case TYPE_STRING:
                     {
-                        processTraCIStringResult(traciReply.readString(), command);
+                        processTraCIResult(traciReply.readString(), command);
                     }
                     break;
                     case TYPE_INTEGER:
                     {
-                        processTraCIIntegerResult(traciReply.readInt(), command);
+                        processTraCIResult(traciReply.readInt(), command);
                     }
                     break;
                     case TYPE_BYTE:
                     {
-                        processTraCIIntegerResult((int) traciReply.readByte(), command);
+                        processTraCIResult((int) traciReply.readByte(), command);
                     }
                     break;
                     case TYPE_UBYTE:
                     {
-                        processTraCIIntegerResult((int) traciReply.readUnsignedByte(), command);
+                        processTraCIResult((int) traciReply.readUnsignedByte(), command);
                     }
                     break;
                     case TYPE_STRINGLIST:
                     {
-                        processTraCIStringListResult(traciReply.readStringList(), command);
+                        processTraCIResult(traciReply.readStringList(), command);
                     }
                     break;
 				    default:
@@ -444,38 +439,6 @@ namespace testapp
 //			For a more general approach it can be used Command.type to check if the command was a value retrieval or
 //			a state change
 		}
-
-        void iCSInterface::processTraCIIntegerResult(const int result, const Command& command) {
-            NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
-
-            if (ProgramConfiguration::GetTestCase() == "inductionLoop") {
-                if (command.commandId == CMD_GET_INDUCTIONLOOP_VARIABLE
-                        && command.variableId == LAST_STEP_VEHICLE_NUMBER
-                        && result > 0) {
-                    AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_ID_LIST);
-                    AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_MEAN_SPEED);
-                    AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_OCCUPANCY);
-                }
-            }
-        }
-
-        void iCSInterface::processTraCIDoubleResult(const double result, const Command& command) {
-            NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
-        }
-
-        void iCSInterface::processTraCIStringResult(const std::string result, const Command& command) {
-            NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
-        }
-
-        void iCSInterface::processTraCIStringListResult(const std::vector<std::string> result, const Command& command) {
-            std::stringstream ss;
-            ss << "[";
-            for (std::vector<std::string>::const_iterator i = result.begin(); i != result.end(); ++i) {
-                ss  << *i << ", ";
-            }
-            ss << "]";
-            NS_LOG_INFO(LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " is " << ss.str());
-        }
 
         void iCSInterface::AddTraciSubscription(const int cmdID, const int varID, const int varTypeID, tcpip::Storage * value)
         {

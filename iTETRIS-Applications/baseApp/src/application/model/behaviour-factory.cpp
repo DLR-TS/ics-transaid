@@ -40,26 +40,28 @@
 #include "behaviour-node.h"
 #include "behaviour-rsu.h"
 #include "behaviour-factory.h"
+#include "data-manager.h"
 
 namespace testapp
 {
 	namespace application
 	{
 
-		Behaviour* BehaviourFactory::createRSUBehaviour(iCSInterface* interface, Node* node)
+		void BehaviourFactory::createRSUBehaviour(iCSInterface* interface, Node* node)
 		{
-                        BehaviourRsu* rsu = new BehaviourRsu(interface);
-                        RsuData data = ProgramConfiguration::GetRsuData(node->getId());
-                        rsu->AddDirections(data.directions);
-			return rsu;
+			BehaviourRsu* rsu = new BehaviourRsu(interface);
+			RsuData data = ProgramConfiguration::GetRsuData(node->getId());
+			rsu->AddDirections(data.directions);
+			interface->SubscribeBehaviour(rsu);
+			interface->SubscribeBehaviour(new DataManager(interface));
 		}
 
-		Behaviour* BehaviourFactory::createNodeBehaviour(iCSInterface* interface, Node* node)
+		void BehaviourFactory::createNodeBehaviour(iCSInterface* interface, Node* node)
 		{
-                        if (iCSInterface::UseSink)
-                            return new BehaviourNodeWithSink(interface);
-                        else
-                            return new BehaviourNodeWithoutSink(interface);
+			if (iCSInterface::UseSink)
+				interface->SubscribeBehaviour(new BehaviourNodeWithSink(interface));
+			else
+				interface->SubscribeBehaviour(new BehaviourNodeWithoutSink(interface));
 		}
 
 	} /* namespace application */
