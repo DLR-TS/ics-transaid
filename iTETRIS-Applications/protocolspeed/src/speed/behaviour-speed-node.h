@@ -30,39 +30,79 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  ***************************************************************************************/
 /****************************************************************************************
- * Author Michael Behrisch
+ * Author Federico Caselli <f.caselli@unibo.it>
  * University of Bologna
  ***************************************************************************************/
 
-#ifndef BEHAVIOUR_FACTORY_H_
-#define BEHAVIOUR_FACTORY_H_
+#ifndef BEHAVIOUR_SPEED_NODE_H_
+#define BEHAVIOUR_SPEED_NODE_H_
 
+#include "behaviour-node.h"
+#include "scheduler.h"
+#include "random-variable.h"
+#include <map>
+#include "structs.h"
 
 namespace testapp
 {
 	namespace application
 	{
 
-		class iCSInterface;
-		class Node;
+		/**
+		 * Installed on the nodes if IcsInterface::UseSink is set to true
+		 * It uses a threshold to communicate to the rsu that it has reached the center of the
+		 * intersection and that the current message will be its last one the current direction
+		 */
+		class BehaviourNodeWithSink: public BehaviourNode
+		{
+			public:
+				BehaviourNodeWithSink(iCSInterface * controller);
+				virtual ~BehaviourNodeWithSink();
+
+				virtual void Receive(server::Payload *payload, double snr);
+
+			private:
+				/**
+				 * @brief Called by the receive after a random timeout when a beacon message is received
+				 * @brief The node send a BeaconResponse message
+				 */
+				void EventSendResponse(NodeInfo);
+				double m_sinkThreshold;
+				RSU m_muteRsu;
+		};
 
 		/**
-		 * Default factory for the behaviour instances
+		 * Installed on the nodes if IcsInterface::UseSink is set to false
+		 * It uses a no longer conformant message to communicate to the rsu that it
+		 * has passed the center of the intersection
 		 */
-		class BehaviourFactory
+		class BehaviourNodeWithoutSink: public BehaviourNode
 		{
-		public:
-			/**
-			 * @brief Create one or several new RSU behaviour(s) and add them to the interface
-			 */
-			virtual void createRSUBehaviour(iCSInterface* interface, Node* node) = 0;
-			/**
-			 * @brief Create one or several new node behaviour(s) and add them to the interface
-			 */
-			virtual void createNodeBehaviour(iCSInterface* interface, Node* node) = 0;
+			public:
+				BehaviourNodeWithoutSink(iCSInterface * controller);
+				virtual ~BehaviourNodeWithoutSink();
+
+				virtual void Receive(server::Payload *payload, double snr);
+
+			private:
+				/**
+				 * @brief Called by the receive after a random timeout when a beacon message is received
+				 */
+				void EventSendResponse(NodeInfo);
+				/**
+				 * @brief Called by the EventSendResponse if the node has not yet passed the intersection
+				 * @brief The node send a BeaconResponse message
+				 */
+				void SendRespose(NodeInfo);
+				/**
+				 * @brief Called by the EventSendResponse if the node has passed the intersection
+				 * @brief The node send a NoLongerConformant message
+				 */
+				void SendNoLongerConformant(NodeInfo);
+				std::map<std::string, bool> m_activeDirections;
 		};
 
 	} /* namespace application */
-} /* namespace testapp */
+} /* namespace protocol */
 
-#endif /* BEHAVIOUR_FACTORY_H_ */
+#endif /* BEHAVIOUR_SPEED_NODE_H_ */

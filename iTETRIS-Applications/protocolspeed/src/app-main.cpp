@@ -41,7 +41,7 @@
 #include "exception/UtilExceptions.h"
 #include "program-configuration.h"
 #include "output-helper.h"
-#include "model/behaviour-factory.h"
+#include "speed/behaviour-speed-factory.h"
 
 
 // ===========================================================================
@@ -109,7 +109,7 @@ int main(int argc, char **argv)
       throw ProcessError("Please use a socket port above 1024");
 
     // Start the server
-    server::Server::RunServer(new application::BehaviourFactory());
+    server::Server::RunServer(new application::BehaviourSpeedFactory());
 
     ret = 0;
 

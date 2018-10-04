@@ -34,35 +34,36 @@
  * University of Bologna
  ***************************************************************************************/
 
-#include "program-configuration.h"
-#include "node.h"
-#include "ics-interface.h"
-#include "behaviour-node.h"
-#include "behaviour-rsu.h"
+#ifndef BEHAVIOUR_SPEED_FACTORY_H_
+#define BEHAVIOUR_SPEED_FACTORY_H_
+
 #include "behaviour-factory.h"
-#include "data-manager.h"
 
 namespace testapp
 {
 	namespace application
 	{
 
-		void BehaviourFactory::createRSUBehaviour(iCSInterface* interface, Node* node)
-		{
-			BehaviourRsu* rsu = new BehaviourRsu(interface);
-			RsuData data = ProgramConfiguration::GetRsuData(node->getId());
-			rsu->AddDirections(data.directions);
-			interface->SubscribeBehaviour(rsu);
-			interface->SubscribeBehaviour(new DataManager(interface));
-		}
+		class iCSInterface;
+		class Node;
 
-		void BehaviourFactory::createNodeBehaviour(iCSInterface* interface, Node* node)
+		/**
+		 * Factory for the behaviour test instances
+		 */
+		class BehaviourSpeedFactory : public BehaviourFactory
 		{
-			if (iCSInterface::UseSink)
-				interface->SubscribeBehaviour(new BehaviourNodeWithSink(interface));
-			else
-				interface->SubscribeBehaviour(new BehaviourNodeWithoutSink(interface));
-		}
+		public:
+			/**
+			 * @brief Create one or several new RSU behaviour(s) and add them to the interface
+			 */
+			virtual void createRSUBehaviour(iCSInterface* interface, Node* node);
+			/**
+			 * @brief Create one or several new node behaviour(s) and add them to the interface
+			 */
+			virtual void createNodeBehaviour(iCSInterface* interface, Node* node);
+		};
 
 	} /* namespace application */
-} /* namespace protocol */
+} /* namespace testapp */
+
+#endif /* BEHAVIOUR_SPEED_FACTORY_H_ */

@@ -57,6 +57,7 @@ AC_CHECK_FUNCS([floor getcwd gettimeofday memset pow select socket sqrt])
 
 
 AC_CONFIG_FILES([
+src/speed/Makefile
 src/Makefile
 Makefile])
 AC_OUTPUT

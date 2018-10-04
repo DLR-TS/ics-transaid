@@ -34,8 +34,8 @@
  * University of Bologna
  ***************************************************************************************/
 
-#ifndef BehaviourTestRSUBEHAVIOUR_TEST_RSU_H_
-#define BehaviourTestRSUBEHAVIOUR_TEST_RSU_H_
+#ifndef BEHAVIOUR_TEST_RSU_H_
+#define BEHAVIOUR_TEST_RSU_H_
 
 #include "behaviour-node.h"
 #include "scheduler.h"
@@ -106,4 +106,4 @@ namespace testapp
 	} /* namespace application */
 } /* namespace protocol */
 
-#endif /* BehaviourTestRSUBEHAVIOUR_TEST_RSU_H_ */
+#endif /* BEHAVIOUR_TEST_RSU_H_ */
