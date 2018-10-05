@@ -39,7 +39,7 @@
 #include "log/log.h"
 #include "log/console.h"
 #include "exception/UtilExceptions.h"
-#include "program-configuration.h"
+#include "speed-configuration.h"
 #include "output-helper.h"
 #include "speed/behaviour-speed-factory.h"
 
@@ -85,7 +85,7 @@ int main(int argc, char **argv)
   {
     // start-up
     Console::Log("Starting iTetris protocol speed app");
-    if (ProgramConfiguration::LoadConfiguration(configFile) == EXIT_FAILURE)
+    if (SpeedConfiguration::LoadConfiguration(configFile) == EXIT_FAILURE)
       throw ProcessError("Could not load configuration file");
 
     Console::Log("Load Configuration done");

@@ -82,6 +82,7 @@ namespace testapp
 				BehaviourNodeWithoutSink(iCSInterface * controller);
 				virtual ~BehaviourNodeWithoutSink();
 
+				virtual void Start();
 				virtual void Receive(server::Payload *payload, double snr);
 
 			private:

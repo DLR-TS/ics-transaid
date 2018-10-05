@@ -35,6 +35,7 @@
  ***************************************************************************************/
 
 #include <cstdlib>
+#include <set>
 #include "server.h"
 #include "log/log.h"
 #include "log/console.h"

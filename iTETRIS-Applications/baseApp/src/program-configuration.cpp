@@ -34,8 +34,7 @@
  * University of Bologna
  ***************************************************************************************/
 
-#include "program-configuration.h"
-
+#include <memory>
 #include "ics-interface.h"
 #include "utils/log/console.h"
 #include "utils/xml/tinyxml2.h"
@@ -44,9 +43,8 @@
 #include "behaviour-rsu.h"
 #include "node-sampler.h"
 #include "output-helper.h"
-#include "data-manager.h"
-#include "protocols.h"
 #include "node.h"
+#include "program-configuration.h"
 
 using namespace std;
 
@@ -55,15 +53,13 @@ namespace testapp
 
 	using namespace tinyxml2;
 
-	int ProgramConfiguration::m_start;
-	int ProgramConfiguration::m_socket;
-	std::string ProgramConfiguration::m_testCase = "";
-	unsigned ProgramConfiguration::m_messageLifetime = 10;
-	std::map<int, RsuData> ProgramConfiguration::m_rsus;
-	std::map<LogType, std::string> ProgramConfiguration::m_logs;
+	std::unique_ptr<ProgramConfiguration> ProgramConfiguration::m_instance = nullptr;
 
 	int ProgramConfiguration::LoadConfiguration(const char * fileName)
 	{
+		if (m_instance == nullptr) {
+			m_instance = std::make_unique<ProgramConfiguration>();
+		}
 		XMLDocument * doc = new XMLDocument();
 		XMLError result = doc->LoadFile(fileName);
 		if (result != XML_NO_ERROR)
@@ -77,7 +73,7 @@ namespace testapp
 			Console::Error("There isn't an element <general>");
 			return EXIT_FAILURE;
 		}
-		if (ParseGeneral(xmlElem) == EXIT_FAILURE)
+		if (m_instance->ParseGeneral(xmlElem) == EXIT_FAILURE)
 			return EXIT_FAILURE;
 		Console::Log("ParseGeneral done");
 		xmlElem = doc->RootElement()->FirstChildElement("infrastructure");
@@ -86,26 +82,30 @@ namespace testapp
 			Console::Error("There isn't an element <infrastructure>");
 			return EXIT_FAILURE;
 		}
-		if (ParseInfrastructure(xmlElem) == EXIT_FAILURE)
+		if (m_instance->ParseInfrastructure(xmlElem) == EXIT_FAILURE)
 			return EXIT_FAILURE;
 		Console::Log("ParseInfrastructure done");
 		xmlElem = doc->RootElement()->FirstChildElement("setup");
 		if (xmlElem)
 		{
-			if (ParseSetup(xmlElem) == EXIT_FAILURE)
+			if (m_instance->ParseSetup(xmlElem) == EXIT_FAILURE)
 				return EXIT_FAILURE;
 		}
 		Console::Log("ParseSetup done");
 		xmlElem = doc->RootElement()->FirstChildElement("output");
 		if (xmlElem)
 		{
-			if (ParseOutput(xmlElem) == EXIT_FAILURE)
+			if (m_instance->ParseOutput(xmlElem) == EXIT_FAILURE)
 				return EXIT_FAILURE;
 		}
 		Console::Log("ParseSetup done");
 		delete doc;
 		return EXIT_SUCCESS;
 	}
+
+	ProgramConfiguration::ProgramConfiguration() : m_messageLifetime(10) {}
+
+	ProgramConfiguration::~ProgramConfiguration() {}
 
 	void ProgramConfiguration::ParseLog(const XMLElement * element, const LogType type)
 	{
@@ -289,20 +289,19 @@ namespace testapp
 
 	bool ProgramConfiguration::IsRsu(const int id)
 	{
-		std::map<int, RsuData>::const_iterator it = m_rsus.find(id);
-		return it != m_rsus.end();
+		return m_instance->m_rsus.count(id) > 0;
 	}
 
 	const RsuData & ProgramConfiguration::GetRsuData(const int id)
 	{
-		std::map<int, RsuData>::const_iterator it = m_rsus.find(id);
+		std::map<int, RsuData>::const_iterator it = m_instance->m_rsus.find(id);
 		return it->second;
 	}
 
 	bool ProgramConfiguration::GetLogFileName(LogType type, std::string & fileName)
 	{
-		std::map<LogType, std::string>::const_iterator it = m_logs.find(type);
-		if (it != m_logs.end())
+		std::map<LogType, std::string>::const_iterator it = m_instance->m_logs.find(type);
+		if (it != m_instance->m_logs.end())
 		{
 			fileName = it->second;
 			return true;
@@ -377,25 +376,6 @@ namespace testapp
 			if (xmlElem->QueryIntAttribute("timeout", &iVal) == XML_NO_ERROR)
 				if (iVal >= 0 && iVal <= 65535)
 					BehaviourRsu::Timeout = iVal;
-		}
-		xmlElem = setup->FirstChildElement("data-manager");
-		if (xmlElem)
-		{
-			if (xmlElem->QueryBoolAttribute("enabled", &bVal) == XML_NO_ERROR)
-				DataManager::Enabled = bVal;
-			if (xmlElem->QueryIntAttribute("execute-time", &iVal) == XML_NO_ERROR)
-				if (iVal >= 0 && iVal <= 65535)
-					DataManager::ExecuteTime = iVal;
-			if (xmlElem->QueryBoolAttribute("enable-centralized-protocol", &bVal) == XML_NO_ERROR)
-				DataManager::EnableCentralizedProtocol = bVal;
-		}
-		xmlElem = setup->FirstChildElement("centralized-protocol");
-		if (xmlElem)
-		{
-			if (xmlElem->QueryDoubleAttribute("space-threshold", &dVal) == XML_NO_ERROR)
-				CentralizedProtocol::SpaceThreshold = dVal;
-			if (xmlElem->QueryBoolAttribute("return-data", &bVal) == XML_NO_ERROR)
-				CentralizedProtocol::ReturnData = bVal;
 		}
 		return EXIT_SUCCESS;
 	}

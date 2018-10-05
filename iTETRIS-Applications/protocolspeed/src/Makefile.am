@@ -1,6 +1,6 @@
 bin_PROGRAMS = protocolspeedApp
 
-protocolspeedApp_SOURCES = app-main.cpp 
+protocolspeedApp_SOURCES = app-main.cpp speed-configuration.h speed-configuration.cpp
 
 protocolspeedApp_LDADD = $(AM_CPPFLAGS) ./speed/libspeed.a \
 ../../baseApp/src/server/payload.o \

@@ -34,6 +34,7 @@
  * University of Bologna
  ***************************************************************************************/
 
+#include "program-configuration.h"
 #include "ics-interface.h"
 #include "node-sampler.h"
 #include "app-commands-subscriptions-constants.h"
@@ -162,6 +163,21 @@ namespace testapp
 
 		BehaviourNodeWithoutSink::~BehaviourNodeWithoutSink()
 		{
+		}
+
+		void BehaviourNodeWithoutSink::Start()
+		{
+			if (!m_enabled)
+				return;
+			BehaviourNode::Start();
+            //Example use of a traci command subscription
+            if (ProgramConfiguration::GetTestCase()=="") {
+                // conserve behaviour for old demo app
+                GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
+                tcpip::Storage maxSpeed;
+                maxSpeed.writeDouble(20);
+                GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_MAXSPEED, TYPE_DOUBLE, &maxSpeed);
+            }
 		}
 
 		void BehaviourNodeWithoutSink::Receive(server::Payload *payload, double snr)

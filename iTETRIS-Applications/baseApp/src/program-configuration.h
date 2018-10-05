@@ -39,6 +39,7 @@
 
 #include <map>
 #include <string>
+#include <memory>
 #include "structs.h"
 #include "vector.h"
 
@@ -98,41 +99,45 @@ public:
 
   static int GetStartTime()
   {
-    return m_start;
+    return m_instance->m_start;
   }
   static int GetSocketPort()
   {
-    return m_socket;
+    return m_instance->m_socket;
   }
   static unsigned GetMessageLifetime()
   {
-    return m_messageLifetime;
+    return m_instance->m_messageLifetime;
   }
 
   static const std::string& GetTestCase()
   {
-    return m_testCase;
+    return m_instance->m_testCase;
   }
 
   static bool GetLogFileName(LogType type, std::string & fileName);
   static bool IsRsu(const int id);
   static const RsuData & GetRsuData(const int id);
-private:
+  
+  // constructor and destructor should be protected as far as I am concerned but gcc thinks differently
   ProgramConfiguration();
-  ~ProgramConfiguration();
-  static int ParseGeneral(tinyxml2::XMLElement * general);
-  static int ParseInfrastructure(tinyxml2::XMLElement * infrastructure);
-  static int ParseSetup(tinyxml2::XMLElement * setup);
-  static int ParseOutput(tinyxml2::XMLElement * output);
-  static int ParseNodeSampler(tinyxml2::XMLElement * nodeSampler);
-  static void ParseLog(const tinyxml2::XMLElement * element,const LogType type);
+  virtual ~ProgramConfiguration();
+protected:
+  int ParseGeneral(tinyxml2::XMLElement * general);
+  int ParseInfrastructure(tinyxml2::XMLElement * infrastructure);
+  int ParseSetup(tinyxml2::XMLElement * setup);
+  int ParseOutput(tinyxml2::XMLElement * output);
+  int ParseNodeSampler(tinyxml2::XMLElement * nodeSampler);
+  void ParseLog(const tinyxml2::XMLElement * element,const LogType type);
+  static std::unique_ptr<ProgramConfiguration> m_instance;
+
 private:
-  static int m_start;
-  static int m_socket;
-  static unsigned m_messageLifetime;
-  static std::string m_testCase;
-  static std::map<int, RsuData> m_rsus;
-  static std::map<LogType, std::string> m_logs;
+  int m_start;
+  int m_socket;
+  unsigned m_messageLifetime;
+  std::string m_testCase;
+  std::map<int, RsuData> m_rsus;
+  std::map<LogType, std::string> m_logs;
 };
 
 } /* namespace protocol */

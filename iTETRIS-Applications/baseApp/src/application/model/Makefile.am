@@ -2,8 +2,6 @@ noinst_LIBRARIES = libmodel.a
 
 libmodel_a_SOURCES = behaviour-node.cpp behaviour-node.h \
 behaviour-rsu.cpp behaviour-rsu.h \
-protocols.cpp protocols.h \
-data-manager.cpp data-manager.h \
 behaviour.cpp behaviour.h \
 behaviour-factory.h \
 headers.cpp headers.h \

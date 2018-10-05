@@ -53,7 +53,6 @@
 #include "headers.h"
 #include "node.h"
 #include "behaviour-rsu.h"
-#include "data-manager.h"
 #include "behaviour-node.h"
 #include "node-handler.h"
 #include "server.h"
@@ -81,7 +80,7 @@ namespace testapp
 			//      m_controller->TraceDisconnect ("Receive", MakeCallback (&OutputHelperWrapper::OnPacketReceive, this));
 			if (m_controller->GetNodeType() == NT_RSU)
 			{
-				Behaviour * rsu = m_controller->GetBehaviour(BehaviourRsu::Type());
+				Behaviour * rsu = m_controller->GetBehaviour(TYPE_BEHAVIOUR_RSU);
 				if (rsu != NULL) {
 				    rsu->TraceDisconnect("NodeReceiveData", MakeCallback(&OutputHelperWrapper::OnNodeReceiveData, this));
 				    rsu->TraceDisconnect("NodeNoLongerConforman",
@@ -90,7 +89,7 @@ namespace testapp
 				    rsu->TraceDisconnect("NodeLastMessage", MakeCallback(&OutputHelperWrapper::OnNodeLastMessage, this));
 				}
 
-				Behaviour * manager = m_controller->GetBehaviour(DataManager::Type());
+				Behaviour * manager = m_controller->GetBehaviour(TYPE_DATA_MANAGER);
 				if (manager != NULL) {
 				    manager->TraceDisconnect("FlowCheck", MakeCallback(&OutputHelperWrapper::OnRsuFlowSample, this));
 				    manager->TraceDisconnect("MeanDensity", MakeCallback(&OutputHelperWrapper::OnMeanDensity, this));
@@ -98,7 +97,7 @@ namespace testapp
 				}
 			} else
 			{
-			    Behaviour * node = m_controller->GetBehaviour(BehaviourNode::Type());
+			    Behaviour * node = m_controller->GetBehaviour(TYPE_BEHAVIOUR_NODE);
 			    if(node != NULL) {
 			        node->TraceDisconnect("NodeSendData", MakeCallback(&OutputHelperWrapper::OnNodeSendData, this));
 			    }
@@ -111,7 +110,7 @@ namespace testapp
 			//      m_controller->TraceConnect ("Receive", MakeCallback (&OutputHelperWrapper::OnPacketReceive, this));
 			if (m_controller->GetNodeType() == NT_RSU)
 			{
-			    Behaviour * rsu = m_controller->GetBehaviour(BehaviourRsu::Type());
+			    Behaviour * rsu = m_controller->GetBehaviour(TYPE_BEHAVIOUR_RSU);
 			    if (rsu != NULL) {
 			        rsu->TraceConnect("NodeReceiveData", MakeCallback(&OutputHelperWrapper::OnNodeReceiveData, this));
 			        rsu->TraceConnect("NodeNoLongerConforman", MakeCallback(&OutputHelperWrapper::OnNodeNoLongerConforman, this));
@@ -119,7 +118,7 @@ namespace testapp
 			        rsu->TraceConnect("NodeLastMessage", MakeCallback(&OutputHelperWrapper::OnNodeLastMessage, this));
 			    }
 
-			    Behaviour * manager = m_controller->GetBehaviour(DataManager::Type());
+			    Behaviour * manager = m_controller->GetBehaviour(TYPE_DATA_MANAGER);
 			    if (manager != NULL) {
 			        manager->TraceConnect("FlowCheck", MakeCallback(&OutputHelperWrapper::OnRsuFlowSample, this));
 			        manager->TraceConnect("MeanDensity", MakeCallback(&OutputHelperWrapper::OnMeanDensity, this));
@@ -128,7 +127,7 @@ namespace testapp
 			    OutputHelper::Instance()->AddRsu(m_controller);
 			} else
 			{
-				Behaviour * node = m_controller->GetBehaviour(BehaviourNode::Type());
+				Behaviour * node = m_controller->GetBehaviour(TYPE_BEHAVIOUR_NODE);
 				if (node != NULL) {
 				    node->TraceConnect("NodeSendData", MakeCallback(&OutputHelperWrapper::OnNodeSendData, this));
 				}

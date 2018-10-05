@@ -228,14 +228,6 @@ namespace testapp
 			}
 			m_traceStateChange(true);
 
-            //Example use of a traci command subscription
-            if (ProgramConfiguration::GetTestCase()=="") {
-                // conserve behaviour for old demo app
-                AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
-                tcpip::Storage maxSpeed;
-                maxSpeed.writeDouble(20);
-                AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_MAXSPEED, TYPE_DOUBLE, &maxSpeed);
-            }
 		}
 
 		void iCSInterface::Deactivate()

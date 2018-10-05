@@ -79,7 +79,7 @@ namespace testapp
 				BehaviourNode(iCSInterface* controller);
 				virtual ~BehaviourNode();
 
-				void Start();
+				virtual void Start();
 				void Stop();
 
 				virtual bool IsSubscribedTo(ProtocolId pid) const;
