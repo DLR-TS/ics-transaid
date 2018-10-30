@@ -35,6 +35,14 @@
  *
  ***************************************************************************************/
 
+/****************************************************************************************
+ * Edited for TransAID
+ * Author: Alejandro Correa Vila (acorrea@umh.es)
+ * UMH 2018
+ * TransAID project
+ *
+ ***************************************************************************************/
+
 // ===========================================================================
 // included modules
 // ===========================================================================
@@ -175,6 +183,14 @@ void fillOptions()
   oc.addDescription("communication-config-technologies-file", "CommunicationSim",
       "Defines the communication technologies configuration in ns-3");
 
+  oc.doRegister("communication-lightcomm-simulator", new Option_Bool(false));
+  oc.addDescription("communication-lightcomm-simulator", "CommunicationSim",
+      "Defines the use of the lightcomm simulator");
+
+  oc.doRegister("communication-lightcomm-executable", new Option_String());
+  oc.addDescription("communication-lightcomm-executable", "CommunicationSim",
+      "Defines the configuration file of the lightcomm simulator");
+
   // insert options for applications
   oc.doRegister("app-config-file", 'a', new Option_FileName());
   oc.addSynonyme("app-config-file", "apps");
@@ -296,6 +312,25 @@ bool checkOptions()
         "Missing definition of the technologies configuration file of the communication simulator.");
     ret = false;
   }
+
+  // check communication-lightcomm-simulator
+  if (!oc.isSet("communication-lightcomm-simulator"))
+  {
+    MsgHandler::getErrorInstance()->inform(
+        "Missing definition of the use of the lightcomm simulator.");
+    ret = false;
+  }
+
+  // check communication-lightcomm-executable
+  if (!oc.isSet("communication-lightcomm-executable"))
+  {
+    MsgHandler::getErrorInstance()->inform(
+        "Missing definition of the executable of the lightcomm simulator.");
+    ret = false;
+  }
+
+
+
 #endif
 
 #ifdef APPLICATIONS_ON
@@ -507,6 +542,7 @@ int main(int argc, char **argv)
 #endif
 
 #ifdef NS3_ON
+    if (!oc.getBool("communication-lightcomm-simulator")){
     //Launch ns-3
     int ns3Port = oc.getInt("communication-port");
     string ns3sPort;
@@ -525,6 +561,15 @@ int main(int argc, char **argv)
     pthread_create(&ns3Thread, NULL, launchSystemExecutable, (void *) ns3Chain);
     cout << "iCS --> ns-3 launched." << endl;
     Sleep(1);
+    }else{
+     //Launch Lightcomm simulator
+     std::string lightcommCall= oc.getString("communication-lightcomm-executable");
+     char* executable_lightcomm =strdup(lightcommCall.c_str());
+     pthread_create(&ns3Thread, NULL, launchSystemExecutable, (void *) executable_lightcomm);
+     cout << "iCS --> lightcomm launched." << endl;
+     Sleep(1);
+
+    }
 #endif
 
     //Launch iCS
