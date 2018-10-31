@@ -37,6 +37,7 @@
 #include "server.h"
 #include "program-configuration.h"
 #include <cstdlib>
+#include <stdint.h>
 
 #ifdef _MSC_VER
 #include <windows_config.h>

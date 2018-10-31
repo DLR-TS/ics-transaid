@@ -62,24 +62,33 @@ $ make -j
 $ make install
 $ cd ../..
 
+--------------------------------
+Step 8 - Build the light-weight communication simulator
+$ cd LightCommSimulator
+$ autoreconf -i
+$ ./configure --prefix=$PWD/..
+$ make -j
+$ make install
+$ cd ..
+
 When changing the baseApp remember to rebuild baseApp and afterwards every derived app (e.g. the testApp).
 
 --------------------------------
-Step 8 - Set required environment variables
+Step 9 - Set required environment variables
 $ export PATH=$SUMO_HOME/bin:$PWD/bin:$PATH
 $ export LD_LIBRARY_PATH=$PWD/lib
 
 --------------------------------
-# Step 9 [optional, rather use testApp] - Run the iTETRIS application
+# Step 10 [optional, rather use testApp] - Run the iTETRIS application
 # $ cd iTETRIS-Applications/traffic-monitor/acosta
 # $ iCS -c itetris-config-file-gui-ns3.20.xml
 
 --------------------------------
-Step 10 - Run the iTETRIS application
+Step 11 - Run the iTETRIS application
 $ cd iTETRIS-Applications/testApp/testScenario
 $ iCS -c itetris-config-file-gui-ns3.20.xml
 
 --------------------------------
-Step 11 - Run the tests
+Step 12 - Run the tests
 $ cd iCS/tests/
 $ ./runTests.sh

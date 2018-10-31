@@ -182,7 +182,7 @@ namespace lightcomm
                 event_id m_eventBroadcast;
 
                 // replicate nodeID of NS-2 in the lightcomm simulator
-                int nodeId = 0;
+                int nodeId;
 
                 struct Message
                 {

@@ -64,7 +64,7 @@ namespace lightcomm
 		Server* Server::m_instance;
 		bool Server::m_closeConnection;
 
-        Server::Server()
+        Server::Server() : nodeId(0)
 		{
 			try
 			{
@@ -476,7 +476,7 @@ namespace lightcomm
 
 
 
-            std::map<int, std::vector<Server::Message>>::iterator rx_it;
+            std::map<int, std::vector<Server::Message> >::iterator rx_it;
             for (rx_it = m_GeneralReceivedMessageMap.begin(); rx_it != m_GeneralReceivedMessageMap.end(); rx_it++)
             {
 
