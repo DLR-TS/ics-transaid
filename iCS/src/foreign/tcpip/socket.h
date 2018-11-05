@@ -88,6 +88,10 @@ namespace tcpip
 		/// Destructor
 		~Socket();
 
+		/// @brief Returns an free port on the system
+		/// @note This is done by binding a socket with port=0, getting the assigned port, and closing the socket again
+		static int getFreeSocketPort();
+
 		/// Connects to host_:port_
 		void connect() throw( SocketException );
 
@@ -123,7 +127,7 @@ namespace tcpip
 
 	private:
 		void init();
-		void BailOnSocketError( std::string ) const throw( SocketException );
+		static void BailOnSocketError( std::string ) throw( SocketException );
 #ifdef WIN32
 		std::string GetWinsockErrorString(int err) const;
 #endif
