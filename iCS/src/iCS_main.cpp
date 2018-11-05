@@ -312,22 +312,22 @@ bool checkOptions()
         "Missing definition of the technologies configuration file of the communication simulator.");
     ret = false;
   }
-
-  // check communication-lightcomm-simulator
-  if (!oc.isSet("communication-lightcomm-simulator"))
-  {
-    MsgHandler::getErrorInstance()->inform(
-        "Missing definition of the use of the lightcomm simulator.");
-    ret = false;
-  }
-
-  // check communication-lightcomm-executable
-  if (!oc.isSet("communication-lightcomm-executable"))
-  {
-    MsgHandler::getErrorInstance()->inform(
-        "Missing definition of the executable of the lightcomm simulator.");
-    ret = false;
-  }
+//
+//  // check communication-lightcomm-simulator
+//  if (!oc.isSet("communication-lightcomm-simulator"))
+//  {
+//    MsgHandler::getErrorInstance()->inform(
+//        "Missing definition of the use of the lightcomm simulator.");
+//    ret = false;
+//  }
+//
+//  // check communication-lightcomm-executable
+//  if (!oc.isSet("communication-lightcomm-executable"))
+//  {
+//    MsgHandler::getErrorInstance()->inform(
+//        "Missing definition of the executable of the lightcomm simulator.");
+//    ret = false;
+//  }
 
 
 
