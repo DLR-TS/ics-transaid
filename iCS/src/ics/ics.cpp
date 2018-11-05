@@ -407,6 +407,11 @@ ICS::SetupApplications(string filePath)
 
 		int _port, _rate;
 		_port = TplConvert::_2int(port);
+		bool portEq0 = _port == 0;
+		if (portEq0) {
+		    // Port == 0 => Get a random free port
+		    _port = tcpip::Socket::getFreeSocketPort();
+		}
 		_rate = TplConvert::_2int(rate);
 
 		ServiceId serviceId;
@@ -420,6 +425,15 @@ ICS::SetupApplications(string filePath)
 
 		// Create the instance of the application in the iCS
 		ApplicationHandler* appHandler = new ApplicationHandler(m_syncManager, (string)name, (string)ip, (string)executable, _port, _seed, _rate, _result, serviceId);
+		if (portEq0) {
+            // Open port was chosen randomly, override the applications configuration by giving the port via commandline
+            std::stringstream ss;
+            ss << executable << " --remote-port " << _port;
+            std::string s = ss.str();
+            snprintf(executable, s.size()+1, "%s", ss.str().c_str());
+            std::cout << "New application call: '" << executable << "'" << std::endl;
+        }
+
 		m_syncManager->RecognizeNewApplication(appHandler);
 
 		// Loop fixed nodes and install the application on nodes defined by the configuration file
