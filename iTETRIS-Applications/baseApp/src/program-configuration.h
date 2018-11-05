@@ -95,7 +95,7 @@ struct RsuData
 class ProgramConfiguration
 {
 public:
-  static int LoadConfiguration(const char* fileName);
+  static int LoadConfiguration(const char* fileName, int port);
 
   static int GetStartTime()
   {
@@ -104,6 +104,10 @@ public:
   static int GetSocketPort()
   {
     return m_instance->m_socket;
+  }
+  static void SetSocketPort(int port)
+  {
+    m_instance->m_socket = port;
   }
   static unsigned GetMessageLifetime()
   {

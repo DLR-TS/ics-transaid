@@ -55,10 +55,11 @@ namespace testapp
 
 	std::unique_ptr<ProgramConfiguration> ProgramConfiguration::m_instance = nullptr;
 
-	int ProgramConfiguration::LoadConfiguration(const char * fileName)
+	int ProgramConfiguration::LoadConfiguration(const char * fileName, int port)
 	{
 		if (m_instance == nullptr) {
 			m_instance = std::make_unique<ProgramConfiguration>();
+			m_instance->SetSocketPort(port);
 		}
 		XMLDocument * doc = new XMLDocument();
 		XMLError result = doc->LoadFile(fileName);
@@ -103,7 +104,7 @@ namespace testapp
 		return EXIT_SUCCESS;
 	}
 
-	ProgramConfiguration::ProgramConfiguration() : m_messageLifetime(10) {}
+	ProgramConfiguration::ProgramConfiguration() : m_messageLifetime(10), m_socket(-1) {}
 
 	ProgramConfiguration::~ProgramConfiguration() {}
 
@@ -119,12 +120,19 @@ namespace testapp
 	int ProgramConfiguration::ParseGeneral(XMLElement * general)
 	{
 		XMLElement *xmlElem = general->FirstChildElement("socket");
-		if (!xmlElem)
+		if (!xmlElem && m_socket == -1)
 		{
 			Console::Error("Missing the socket tag <socket> inside <general>");
 			return EXIT_FAILURE;
+		} else {
+		    const int socket = xmlElem->IntAttribute("value");
+		    if (m_socket == -1) {
+		        m_socket = socket;
+		    } else if (m_socket > 0) {
+		        Console::Warning("Ignoring socket port specified in configuration. (Overridden by command line argument.");
+		    }
 		}
-		m_socket = xmlElem->IntAttribute("value");
+		NS_ASSERT(m_socket >= 0);
 		NS_ASSERT(m_socket >= 1024);
 		xmlElem = general->FirstChildElement("start");
 		if (xmlElem)
