@@ -18,13 +18,11 @@
     </trafficsim>
 
     <communicationsim>
-	<communication-executable value="main-inci5"/>
+        <communication-executable value="main-inci5"/> <!-- set to "main-inci5" to use NS-3 or set to  "lightcomm -c lightcomm-config-file.xml" to employ the lightweigth communications module-->
         <communication-host value="localhost"/>
         <communication-port value="1982"/>
         <communication-general-params-file value="./ns3/configGeneral.ns3.20.txt"/>
         <communication-config-technologies-file value="./ns3/configTechnologies-ics.xml"/>
-        <communication-lightcomm-simulator value="false"/>  <!-- set to true to employ the lightweigth communications module instead of NS-3 -->
-        <communication-lightcomm-executable value="lightcomm -c lightcomm-config-file.xml"/>
     </communicationsim>
 
     <applications>
