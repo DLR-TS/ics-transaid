@@ -129,7 +129,7 @@ namespace testapp
 		    if (m_socket == -1) {
 		        m_socket = socket;
 		    } else if (m_socket > 0) {
-		        Console::Warning("Ignoring socket port specified in configuration. (Overridden by command line argument.");
+		        Console::Warning("Ignoring socket port specified in configuration. (Overridden by command line argument.)");
 		    }
 		}
 		NS_ASSERT(m_socket >= 0);
