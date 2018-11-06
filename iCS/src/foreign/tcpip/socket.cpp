@@ -141,16 +141,12 @@ namespace tcpip
         if ( getsockname(sock, (struct sockaddr*) &self, &address_len) < 0)
             BailOnSocketError("tcpip::Socket::getFreeSocketPort() Unable to get socket name");
         const int port = ntohs(self.sin_port);
-        struct linger {int onoff;int dur;};
-        linger l; l.onoff = 1; l.dur = 0;
-        if (setsockopt(sock, SOL_SOCKET, SO_LINGER, &l, sizeof(l)) < 0)
-            BailOnSocketError("tcpip::Socket::getFreeSocketPort() setsockopt(SO_LINGER) failed");
-        return port;
 #ifdef WIN32
         ::closesocket( sock );
 #else
         ::close( sock );
 #endif
+        return port;
     }
 
 
