@@ -18,6 +18,7 @@ else
 fi
 
 dnl CXXFLAGS="-frtti $CXXFLAGS"
+CXXFLAGS="-std=c++11 $CXXFLAGS"
 
 dnl Checks for programs
 AC_PROG_CPP
