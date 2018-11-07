@@ -61,31 +61,40 @@ int main(int argc, char **argv)
   int ret = 0;
   Console::SetAppName("protocolspeedApp");
 
-  if (argc != 2 && argc != 3)
+  if (argc != 2 && argc != 3 && argc != 5)
   {
-    Console::Error("Missing configuration file or too many arguments");
-    Console::Error("Please call as appname configfile.xml or appname -c configfile.xml");
-    return -1;
+      Console::Error("Wrong number of command line arguments.");
+      Console::Error("Usage: protocolspeedApp [-c] <config-file> [--remote-port <port>]");
+      return -1;
   }
   char * configFile;
-  if (argc == 2)
-    configFile = argv[1];
-  else
-  {
-    std::string arg(argv[1]);
-    if (arg != "-c")
-    {
-      Console::Error("Expected -c read " + arg);
-      return -2;
-    }
-    configFile = argv[2];
+  int port = -1;
+  if (argc == 2) {
+      configFile = argv[1];
+  } else if (argc >= 3) {
+      std::string arg(argv[1]);
+      if (arg == "-c") {
+          configFile = argv[2];
+      } else {
+          Console::Error("Expected '-c' read " + arg + " Usage: protocolspeedApp [-c] <config-file> [--remote-port <port>]");
+          return -2;
+      }
+      if (argc == 5) {
+          arg = std::string(argv[3]);
+          if (arg == "--remote-port") {
+              port = atoi(argv[4]);
+          } else {
+              Console::Error("Expected '--remote-port' read " + arg + " Usage: protocolspeedApp [-c] <config-file> [--remote-port <port>]");
+              return -2;
+          }
+      }
   }
 
   try
   {
     // start-up
     Console::Log("Starting iTetris protocol speed app");
-    if (SpeedConfiguration::LoadConfiguration(configFile) == EXIT_FAILURE)
+    if (SpeedConfiguration::LoadConfiguration(configFile, port) == EXIT_FAILURE)
       throw ProcessError("Could not load configuration file");
 
     Console::Log("Load Configuration done");

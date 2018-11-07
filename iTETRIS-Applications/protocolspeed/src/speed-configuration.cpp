@@ -43,12 +43,12 @@
 namespace testapp
 {
 
-	int SpeedConfiguration::LoadConfiguration(const char * fileName)
+	int SpeedConfiguration::LoadConfiguration(const char * fileName, int port)
 	{
 		if (m_instance == nullptr) {
-			m_instance = std::make_unique<SpeedConfiguration>();
+			m_instance = std::unique_ptr<SpeedConfiguration>(new SpeedConfiguration());
 		}
-		return ProgramConfiguration::LoadConfiguration(fileName);
+		return ProgramConfiguration::LoadConfiguration(fileName, port);
 	}
 
 	int SpeedConfiguration::ParseSetup(tinyxml2::XMLElement* setup)

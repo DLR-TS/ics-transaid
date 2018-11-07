@@ -50,7 +50,7 @@ namespace testapp
 class SpeedConfiguration : public ProgramConfiguration
 {
 public:
-  static int LoadConfiguration(const char* fileName);
+  static int LoadConfiguration(const char* fileName, int port);
 
 protected:
   int ParseSetup(tinyxml2::XMLElement * setup);

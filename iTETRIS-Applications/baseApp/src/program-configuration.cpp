@@ -58,9 +58,9 @@ namespace testapp
 	int ProgramConfiguration::LoadConfiguration(const char * fileName, int port)
 	{
 		if (m_instance == nullptr) {
-			m_instance = std::make_unique<ProgramConfiguration>();
-			m_instance->SetSocketPort(port);
+			m_instance = std::unique_ptr<ProgramConfiguration>(new ProgramConfiguration());
 		}
+		m_instance->SetSocketPort(port);
 		XMLDocument * doc = new XMLDocument();
 		XMLError result = doc->LoadFile(fileName);
 		if (result != XML_NO_ERROR)

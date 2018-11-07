@@ -44,7 +44,6 @@
 #include "output-helper.h"
 #include "model/behaviour-factory.h"
 #include "test/behaviour-test-factory.h"
-#include "../../sumo/src/utils/common/TplConvert.h"
 
 
 // ===========================================================================
@@ -52,6 +51,7 @@
 // ===========================================================================
 using namespace std;
 using namespace testapp;
+
 
 // ===========================================================================
 // functions
@@ -70,7 +70,6 @@ int main(int argc, char **argv)
       return -1;
   }
   char * configFile;
-  char * remotePortChar;
   int port = -1;
   if (argc == 2) {
       configFile = argv[1];
@@ -85,8 +84,7 @@ int main(int argc, char **argv)
       if (argc == 5) {
           arg = std::string(argv[3]);
           if (arg == "--remote-port") {
-              remotePortChar = argv[2];
-              port = TplConvert::_2int(remotePortChar);
+              port = atoi(argv[4]);
           } else {
               Console::Error("Expected '--remote-port' read " + arg + " Usage: testApp [-c] <config-file> [--remote-port <port>]");
               return -2;
