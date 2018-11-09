@@ -72,23 +72,25 @@ AppConfigFileParse::AppConfigFileParse() {
 AppConfigFileParse::~AppConfigFileParse() {
     delete m_ApplicationCollection;
     delete m_ConfigFileParser;
-    delete[] TAG_Applications;
-    delete[] TAG_Application;
-    delete[] TAG_Name;
-    delete[] TAG_Executable;
-    delete[] TAG_Ip;
-    delete[] TAG_Port;
-    delete[] TAG_Seed;
-    delete[] TAG_Rate;
-    delete[] TAG_ResultContainer;
-    delete[] TAG_Stations;
-    delete[] TAG_Id;
-    delete[] TAG_ServiceId;
-    delete[] ATTR_Unicast;
-    delete[] ATTR_Multicast;
-    delete[] ATTR_Broadcast;
-    delete[] ATTR_TopoBroacast;
-    delete[] ATTR_GeoBroacast;
+    XMLString::release(&TAG_Applications);
+    XMLString::release(&TAG_Application);
+    XMLString::release(&TAG_Name);
+    XMLString::release(&TAG_Executable);
+    XMLString::release(&TAG_Ip);
+    XMLString::release(&TAG_Port);
+    XMLString::release(&TAG_Seed);
+    XMLString::release(&TAG_Rate);
+    XMLString::release(&TAG_ResultContainer);
+//    cout << TAG_Stations << endl;
+// FIXME: Commenting out this, since it causes crash in tests. The root of the problem must lie elsewhere, refs #40
+//    XMLString::release(&TAG_Stations);
+    XMLString::release(&TAG_Id);
+    XMLString::release(&TAG_ServiceId);
+    XMLString::release(&ATTR_Unicast);
+    XMLString::release(&ATTR_Multicast);
+    XMLString::release(&ATTR_Broadcast);
+    XMLString::release(&ATTR_TopoBroacast);
+    XMLString::release(&ATTR_GeoBroacast);
 }
 
 /**
