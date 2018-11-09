@@ -51,6 +51,10 @@ iTETRIS-Applications/testApp/testScenario/sumo/sumo_log.txt
 iTETRIS-Applications/testApp/acosta/sumo/sumo_log.txt
 iTETRIS-Applications/protocolspeed/src/protocolspeedApp
 iTETRIS-Applications/transaidUC1App/src/uc1App
+iTETRIS-Applications/transaidUC2App/src/uc2App
+iTETRIS-Applications/transaidUC3App/src/uc3App
+iTETRIS-Applications/transaidUC4App/src/uc4App
+iTETRIS-Applications/transaidUC5App/src/uc5App
 iCS/docs/man/
 iCS/docs/html/
 iCS/docs/latex/
