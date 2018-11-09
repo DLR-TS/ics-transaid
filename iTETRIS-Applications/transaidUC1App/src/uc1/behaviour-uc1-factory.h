@@ -30,77 +30,42 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  ***************************************************************************************/
 /****************************************************************************************
- * Author Federico Caselli <f.caselli@unibo.it>
- * University of Bologna
+ * Author Michael Behrisch
  ***************************************************************************************/
 
-#ifndef BEHAVIOUR_TEST_NODE_H_
-#define BEHAVIOUR_TEST_NODE_H_
+#ifndef BEHAVIOUR_UC1_FACTORY_H_
+#define BEHAVIOUR_UC1_FACTORY_H_
 
-#include "behaviour-node.h"
-#include "scheduler.h"
-#include "random-variable.h"
-#include <map>
-#include "structs.h"
+#include "behaviour-factory.h"
 
-namespace testapp
+using namespace baseapp;
+using namespace baseapp::application;
+
+namespace uc1app
 {
 	namespace application
 	{
+
+		class iCSInterface;
+		class Node;
+
 		/**
-		 * Behaviour for mobile nodes in test cases.
+		 * Factory for the behaviour uc1 instances
 		 */
-		class BehaviourTestNode: public BehaviourNode
+		class BehaviourUC1Factory : public BehaviourFactory
 		{
 		public:
-		    BehaviourTestNode(iCSInterface* controller);
-		    ~BehaviourTestNode();
-
-		    void Start();
-
-		    virtual bool IsSubscribedTo(ProtocolId pid) const;
-		    virtual void Receive(server::Payload *payload, double snr);
-		    virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
-            virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
-
-		    /**
-		     * @brief Called after a random timeout when a test message is received, @see Receive()
-		     * @input[in] sendingRSU The source of the received message
-		     */
-		    void EventSendResponse(TestHeader::ResponseInfo response);
-
-		    void abortWaitingForRSUResponse();
-
-		    TypeBehaviour GetType() const
-		    {
-		        return Type();
-		    }
-
-		    static TypeBehaviour Type()
-		    {
-		        return TYPE_BEHAVIOUR_TEST_NODE;
-		    }
-
-		private:
-		    /// @name Flags to be used by test cases
-		    /// @{
-		    /// @brief Vehicle check this if the RSU responded to their message.
-		    bool m_waitForRSUAcknowledgement;
-            bool m_vehicleStopScheduled;
-            bool m_firstBroadcast;
-            int m_broadcastInterval;
-		    /// @}
-
-
-		    /// @name Events
-		    /// @{
-		    /// @brief used to refer to abort event scheduled at start
-            event_id m_eventAbortWaitingForRSU;
-            event_id m_eventBroadcast;
-		    /// @}
+			/**
+			 * @brief Create one or several new RSU behaviour(s) and add them to the interface
+			 */
+			virtual void createRSUBehaviour(iCSInterface* interface, Node* node);
+			/**
+			 * @brief Create one or several new node behaviour(s) and add them to the interface
+			 */
+			virtual void createNodeBehaviour(iCSInterface* interface, Node* node);
 		};
 
 	} /* namespace application */
-} /* namespace protocol */
+} /* namespace uc1app */
 
-#endif /* BEHAVIOUR_TEST_NODE_H_ */
+#endif /* BEHAVIOUR_UC1_FACTORY_H_ */

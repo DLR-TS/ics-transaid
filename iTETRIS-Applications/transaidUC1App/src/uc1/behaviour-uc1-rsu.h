@@ -34,8 +34,8 @@
  * University of Bologna
  ***************************************************************************************/
 
-#ifndef BEHAVIOUR_TEST_RSU_H_
-#define BEHAVIOUR_TEST_RSU_H_
+#ifndef BEHAVIOUR_UC1_RSU_H_
+#define BEHAVIOUR_UC1_RSU_H_
 
 #include "behaviour-node.h"
 #include "scheduler.h"
@@ -43,18 +43,21 @@
 #include <map>
 #include "structs.h"
 
-namespace testapp
+using namespace baseapp;
+using namespace baseapp::application;
+
+namespace uc1app
 {
 	namespace application
 	{
         /**
-         * Behaviour for rsu in test cases. Inherits from BehaviourNode to have the random response offset variables at hand.
+         * Behaviour for rsu in uc1 cases. Inherits from BehaviourNode to have the random response offset variables at hand.
          */
-		class BehaviourTestRSU: public BehaviourNode
+		class BehaviourUC1RSU: public BehaviourNode
 		{
 			public:
-				BehaviourTestRSU(iCSInterface* controller);
-				~BehaviourTestRSU();
+				BehaviourUC1RSU(baseapp::application::iCSInterface* controller);
+				~BehaviourUC1RSU();
 
 				void Start();
 
@@ -65,10 +68,10 @@ namespace testapp
 				void processTraCIResult(const int result, const Command& command);
 
                 /**
-                 * @brief Called after a random timeout when a test message is received, @see Receive()
+                 * @brief Called after a random timeout when a uc1 message is received, @see Receive()
                  * @input[in] sender The source of the received message
                  */
-                void EventSendResponse(TestHeader::ResponseInfo response);
+                void EventSendResponse(UC1Header::ResponseInfo response);
 
                 void RSUBroadcastCommSimple2();
 
@@ -82,12 +85,12 @@ namespace testapp
 
                 static TypeBehaviour Type()
                 {
-                    return TYPE_BEHAVIOUR_TEST_RSU;
+                    return TYPE_BEHAVIOUR_UC1_RSU;
                 }
 
 			private:
 
-                /// @name Flags to be used by test cases
+                /// @name Flags to be used by uc1 cases
                 /// @{
                 bool m_firstBroadcast;
                 bool m_broadcastActive;
@@ -106,4 +109,4 @@ namespace testapp
 	} /* namespace application */
 } /* namespace protocol */
 
-#endif /* BEHAVIOUR_TEST_RSU_H_ */
+#endif /* BEHAVIOUR_UC1_RSU_H_ */

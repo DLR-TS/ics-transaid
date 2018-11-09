@@ -1,8 +1,8 @@
-bin_PROGRAMS = testApp
+bin_PROGRAMS = uc1App
 
-testApp_SOURCES = app-main.cpp 
+uc1App_SOURCES = app-main.cpp 
 
-testApp_LDADD = $(AM_CPPFLAGS) ./test/libtest.a \
+uc1App_LDADD = $(AM_CPPFLAGS) ./uc1/libuc1.a \
 ../../baseApp/src/server/payload.o \
 ../../baseApp/src/application/traci-helper.o \
 ../../baseApp/src/server/libserver.a \
@@ -15,4 +15,4 @@ testApp_LDADD = $(AM_CPPFLAGS) ./test/libtest.a \
 ../../baseApp/src/utils/xml/libxml.a \
 ../../../sumo/src/foreign/tcpip/libtcpip.a 
 
-SUBDIRS = test
+SUBDIRS = uc1

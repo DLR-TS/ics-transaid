@@ -31,29 +31,31 @@
  ***************************************************************************************/
 /****************************************************************************************
  * Author Michael Behrisch
- * University of Bologna
  ***************************************************************************************/
 
 #include "program-configuration.h"
 #include "node.h"
 #include "ics-interface.h"
-#include "behaviour-test-node.h"
-#include "behaviour-test-rsu.h"
-#include "behaviour-test-factory.h"
+#include "behaviour-uc1-node.h"
+#include "behaviour-uc1-rsu.h"
+#include "behaviour-uc1-factory.h"
 
-namespace testapp
+using namespace baseapp;
+using namespace baseapp::application;
+
+namespace uc1app
 {
 	namespace application
 	{
 
-		void BehaviourTestFactory::createRSUBehaviour(iCSInterface* interface, Node* node)
+		void BehaviourUC1Factory::createRSUBehaviour(iCSInterface* interface, Node* node)
 		{
-			interface->SubscribeBehaviour(new BehaviourTestRSU(interface));
+			interface->SubscribeBehaviour(new BehaviourUC1RSU(interface));
 		}
 
-		void BehaviourTestFactory::createNodeBehaviour(iCSInterface* interface, Node* node)
+		void BehaviourUC1Factory::createNodeBehaviour(iCSInterface* interface, Node* node)
 		{
-			interface->SubscribeBehaviour(new BehaviourTestNode(interface));
+			interface->SubscribeBehaviour(new BehaviourUC1Node(interface));
 		}
 
 	} /* namespace application */

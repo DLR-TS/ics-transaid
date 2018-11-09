@@ -43,15 +43,14 @@
 #include "program-configuration.h"
 #include "output-helper.h"
 #include "model/behaviour-factory.h"
-#include "test/behaviour-test-factory.h"
+#include "uc1/behaviour-uc1-factory.h"
 
 
 // ===========================================================================
 // used namespaces
 // ===========================================================================
 using namespace std;
-using namespace testapp;
-
+using namespace uc1app;
 
 // ===========================================================================
 // functions

@@ -30,40 +30,80 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  ***************************************************************************************/
 /****************************************************************************************
- * Author Michael Behrisch
+ * Author Federico Caselli <f.caselli@unibo.it>
  * University of Bologna
  ***************************************************************************************/
 
-#ifndef BEHAVIOUR_TEST_FACTORY_H_
-#define BEHAVIOUR_TEST_FACTORY_H_
+#ifndef BEHAVIOUR_UC1_NODE_H_
+#define BEHAVIOUR_UC1_NODE_H_
 
-#include "behaviour-factory.h"
+#include "behaviour-node.h"
+#include "scheduler.h"
+#include "random-variable.h"
+#include <map>
+#include "structs.h"
 
-namespace testapp
+using namespace baseapp;
+using namespace baseapp::application;
+
+namespace uc1app
 {
 	namespace application
 	{
-
-		class iCSInterface;
-		class Node;
-
 		/**
-		 * Factory for the behaviour test instances
+		 * Behaviour for mobile nodes in uc1 cases.
 		 */
-		class BehaviourTestFactory : public BehaviourFactory
+		class BehaviourUC1Node: public BehaviourNode
 		{
 		public:
-			/**
-			 * @brief Create one or several new RSU behaviour(s) and add them to the interface
-			 */
-			virtual void createRSUBehaviour(iCSInterface* interface, Node* node);
-			/**
-			 * @brief Create one or several new node behaviour(s) and add them to the interface
-			 */
-			virtual void createNodeBehaviour(iCSInterface* interface, Node* node);
+		    BehaviourUC1Node(iCSInterface* controller);
+		    ~BehaviourUC1Node();
+
+		    void Start();
+
+		    virtual bool IsSubscribedTo(ProtocolId pid) const;
+		    virtual void Receive(server::Payload *payload, double snr);
+		    virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
+            virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+
+		    /**
+		     * @brief Called after a random timeout when a uc1 message is received, @see Receive()
+		     * @input[in] sendingRSU The source of the received message
+		     */
+		    void EventSendResponse(UC1Header::ResponseInfo response);
+
+		    void abortWaitingForRSUResponse();
+
+		    TypeBehaviour GetType() const
+		    {
+		        return Type();
+		    }
+
+		    static TypeBehaviour Type()
+		    {
+		        return TYPE_BEHAVIOUR_UC1_NODE;
+		    }
+
+		private:
+		    /// @name Flags to be used by uc1 cases
+		    /// @{
+		    /// @brief Vehicle check this if the RSU responded to their message.
+		    bool m_waitForRSUAcknowledgement;
+            bool m_vehicleStopScheduled;
+            bool m_firstBroadcast;
+            int m_broadcastInterval;
+		    /// @}
+
+
+		    /// @name Events
+		    /// @{
+		    /// @brief used to refer to abort event scheduled at start
+            event_id m_eventAbortWaitingForRSU;
+            event_id m_eventBroadcast;
+		    /// @}
 		};
 
 	} /* namespace application */
-} /* namespace testapp */
+} /* namespace protocol */
 
-#endif /* BEHAVIOUR_TEST_FACTORY_H_ */
+#endif /* BEHAVIOUR_UC1_NODE_H_ */
