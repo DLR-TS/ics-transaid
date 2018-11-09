@@ -11,5 +11,7 @@ if os.path.exists("data"):
     os.chdir("data")
 iCS = [os.environ.get('ICS_BINARY', 'iCS')]
 
-subprocess.call(iCS + sys.argv[1:], env=os.environ,
+ec = subprocess.call(iCS + sys.argv[1:], env=os.environ,
                 stdout=sys.stdout, stderr=sys.stderr)
+# print(ec)
+sys.exit(ec)
