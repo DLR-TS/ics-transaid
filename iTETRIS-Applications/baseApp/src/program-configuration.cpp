@@ -48,7 +48,7 @@
 
 using namespace std;
 
-namespace testapp
+namespace baseapp
 {
 
 	using namespace tinyxml2;

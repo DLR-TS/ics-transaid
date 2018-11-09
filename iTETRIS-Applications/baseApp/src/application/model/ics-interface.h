@@ -46,7 +46,7 @@
 #include "traci-helper.h"
 #include "behaviour.h"
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{

@@ -44,7 +44,7 @@
 #include <vector>
 #include "vector.h"
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{

@@ -44,7 +44,7 @@
 #include <stdint.h>
 #include <map>
 
-namespace testapp
+namespace baseapp
 {
 
 	typedef enum

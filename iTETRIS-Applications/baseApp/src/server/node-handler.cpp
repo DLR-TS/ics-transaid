@@ -45,7 +45,7 @@
 #include <sstream>
 #include <climits>
 
-namespace testapp
+namespace baseapp
 {
 	namespace server
 	{

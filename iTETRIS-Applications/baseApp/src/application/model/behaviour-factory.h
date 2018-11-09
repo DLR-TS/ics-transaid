@@ -38,7 +38,7 @@
 #define BEHAVIOUR_FACTORY_H_
 
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{

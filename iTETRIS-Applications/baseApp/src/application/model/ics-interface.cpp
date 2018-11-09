@@ -46,7 +46,7 @@
 #include "ics-interface.h"
 #include "../../app-commands-subscriptions-constants.h"
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{

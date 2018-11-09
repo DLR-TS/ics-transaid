@@ -45,7 +45,7 @@
 #include "random-variable.h"
 #include "common.h"
 
-namespace testapp
+namespace baseapp
 {
 	namespace server
 	{

@@ -38,7 +38,7 @@
 #include <iostream>
 #include <sstream>
 
-namespace testapp
+namespace baseapp
 {
 using namespace std;
 

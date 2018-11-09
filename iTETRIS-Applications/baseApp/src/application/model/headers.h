@@ -40,7 +40,7 @@
 #include "common.h"
 #include <stdint.h>
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{

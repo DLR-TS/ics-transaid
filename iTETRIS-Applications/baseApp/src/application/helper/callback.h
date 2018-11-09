@@ -30,7 +30,7 @@
 #include <typeinfo>
 #include <string>
 
-namespace testapp
+namespace baseapp
 {
 namespace application
 {

@@ -37,7 +37,7 @@
 #include <sstream>
 #include "behaviour-rsu.h"
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{

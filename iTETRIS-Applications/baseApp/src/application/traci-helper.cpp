@@ -38,7 +38,7 @@
 #include "log/log.h"
 #include <sstream>
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{

@@ -39,7 +39,7 @@
 #include "log/log.h"
 #include "split.h"
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{

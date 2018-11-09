@@ -40,7 +40,7 @@
 #include "../../app-commands-subscriptions-constants.h"
 #include "log/console.h"
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{

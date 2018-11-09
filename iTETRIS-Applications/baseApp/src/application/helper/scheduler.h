@@ -41,7 +41,7 @@
 #include "current-time.h"
 #include "log/log.h"
 
-namespace testapp
+namespace baseapp
 {
   namespace application
   {

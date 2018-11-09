@@ -38,7 +38,7 @@
 #include "ics-interface.h"
 #include "node-sampler.h"
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{

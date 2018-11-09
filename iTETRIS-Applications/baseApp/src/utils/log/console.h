@@ -39,7 +39,7 @@
 
 #include <string>
 
-namespace testapp
+namespace baseapp
 {
 
 class Console

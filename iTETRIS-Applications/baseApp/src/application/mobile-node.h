@@ -40,7 +40,7 @@
 #include "node.h"
 #include "structs.h"
 
-namespace testapp
+namespace baseapp
 {
 namespace application
 {

@@ -39,7 +39,7 @@
 
 #include <iostream>
 
-namespace testapp
+namespace baseapp
 {
 namespace application
 {

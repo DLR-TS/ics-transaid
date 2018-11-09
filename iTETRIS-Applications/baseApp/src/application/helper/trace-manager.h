@@ -40,7 +40,7 @@
 #include <string>
 #include "traced-callback.h"
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{

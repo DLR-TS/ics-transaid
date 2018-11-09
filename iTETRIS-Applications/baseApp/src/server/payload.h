@@ -40,7 +40,7 @@
 #include <list>
 #include "headers.h"
 
-namespace testapp
+namespace baseapp
 {
   namespace server
   {

@@ -37,7 +37,7 @@
 #include <cmath>
 #include <sstream>
 
-namespace testapp
+namespace baseapp
 {
 
 namespace application

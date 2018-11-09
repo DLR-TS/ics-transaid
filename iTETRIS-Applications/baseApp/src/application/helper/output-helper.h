@@ -44,7 +44,7 @@
 #include <map>
 #include <vector>
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{

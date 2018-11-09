@@ -42,7 +42,7 @@
 #include "fatal-error.h"
 #include "structs.h"
 
-namespace testapp
+namespace baseapp
 {
 	namespace server
 	{

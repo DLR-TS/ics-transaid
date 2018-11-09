@@ -48,7 +48,7 @@ namespace tinyxml2
 class XMLElement;
 }
 
-namespace testapp
+namespace baseapp
 {
 
 enum

@@ -43,7 +43,7 @@
 #include <map>
 #include "structs.h"
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{

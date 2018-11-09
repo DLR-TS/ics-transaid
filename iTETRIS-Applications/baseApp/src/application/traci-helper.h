@@ -48,7 +48,7 @@
 // result type: error
 #define SUMO_RTYPE_ERR 0xFF
 
-namespace testapp
+namespace baseapp
 {
 	namespace application
 	{
