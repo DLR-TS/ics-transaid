@@ -40,7 +40,10 @@
 #include "app-commands-subscriptions-constants.h"
 #include "behaviour-speed-node.h"
 
-namespace testapp
+using namespace baseapp;
+using namespace baseapp::application;
+
+namespace protocolspeedapp
 {
 	namespace application
 	{

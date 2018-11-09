@@ -48,7 +48,7 @@
 // used namespaces
 // ===========================================================================
 using namespace std;
-using namespace testapp;
+using namespace protocolspeedapp;
 
 // ===========================================================================
 // functions
@@ -112,14 +112,14 @@ int main(int argc, char **argv)
     }
     if (ProgramConfiguration::GetLogFileName(DATA_FILE, log))
     {
-      application::OutputHelper::Start(log);
+        baseapp::application::OutputHelper::Start(log);
     }
 
     if (ProgramConfiguration::GetSocketPort() < 1024)
       throw ProcessError("Please use a socket port above 1024");
 
     // Start the server
-    server::Server::RunServer(new application::BehaviourSpeedFactory());
+    server::Server::RunServer(new protocolspeedapp::application::BehaviourSpeedFactory());
 
     ret = 0;
 
@@ -136,7 +136,7 @@ int main(int argc, char **argv)
     Console::Error("Quitting (on unknown error).");
     ret = 2;
   }
-  delete application::OutputHelper::Instance();
+  delete baseapp::application::OutputHelper::Instance();
   Log::Close();
   return ret;
 }

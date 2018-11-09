@@ -39,7 +39,10 @@
 
 #include "data-manager.h"
 
-namespace testapp
+using namespace baseapp;
+using namespace baseapp::application;
+
+namespace protocolspeedapp
 {
 	namespace application
 	{

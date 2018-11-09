@@ -40,7 +40,7 @@
 #include "speed/protocols.h"
 #include "speed-configuration.h"
 
-namespace testapp
+namespace protocolspeedapp
 {
 
 	int SpeedConfiguration::LoadConfiguration(const char * fileName, int port)

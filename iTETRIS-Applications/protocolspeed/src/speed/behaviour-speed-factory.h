@@ -39,14 +39,16 @@
 
 #include "behaviour-factory.h"
 
-namespace testapp
+using namespace baseapp;
+using namespace baseapp::application;
+
+class baseapp::application::iCSInterface;
+class baseapp::application::Node;
+
+namespace protocolspeedapp
 {
 	namespace application
 	{
-
-		class iCSInterface;
-		class Node;
-
 		/**
 		 * Factory for the behaviour test instances
 		 */

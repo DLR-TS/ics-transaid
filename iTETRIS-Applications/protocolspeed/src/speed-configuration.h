@@ -39,12 +39,15 @@
 
 #include "program-configuration.h"
 
+using namespace baseapp;
+using namespace baseapp::application;
+
 namespace tinyxml2
 {
 class XMLElement;
 }
 
-namespace testapp
+namespace protocolspeedapp
 {
 
 class SpeedConfiguration : public ProgramConfiguration

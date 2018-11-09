@@ -42,7 +42,10 @@
 #include "data-manager.h"
 #include "behaviour-speed-factory.h"
 
-namespace testapp
+using namespace baseapp;
+using namespace baseapp::application;
+
+namespace protocolspeedapp
 {
 	namespace application
 	{
