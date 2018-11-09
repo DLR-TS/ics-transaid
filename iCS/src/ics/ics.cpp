@@ -431,7 +431,6 @@ ICS::SetupApplications(string filePath)
             ss << executable << " --remote-port " << _port;
             std::string s = ss.str();
             snprintf(executable, s.size()+1, "%s", ss.str().c_str());
-            std::cout << "New application call: '" << executable << "'" << std::endl;
         }
 
 		m_syncManager->RecognizeNewApplication(appHandler);
