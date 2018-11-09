@@ -46,7 +46,7 @@ namespace baseapp
 	{
 
 		Behaviour::Behaviour(iCSInterface* controller) :
-				m_running(false)
+				m_running(false), m_enabled(true)
 		{
 			m_controller = controller;
 			RegisterTrace("StartToggle", m_traceStartToggle);
@@ -123,4 +123,4 @@ namespace baseapp
         }
 
 	} /* namespace application */
-} /* namespace protocol */
+} /* namespace baseapp */
