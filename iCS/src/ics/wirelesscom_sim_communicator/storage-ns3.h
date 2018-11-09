@@ -10,8 +10,8 @@
  ** \author Bjoern Hendriks <hendriks@ibr.cs.tu-bs.de>                 **
  **                                                                    **
  ************************************************************************/
-#ifndef __SHAWN_APPS_TCPIP_STORAGE_H
-#define __SHAWN_APPS_TCPIP_STORAGE_H
+#ifndef __SHAWN_APPS_TCPIP_STORAGE_NS3_H
+#define __SHAWN_APPS_TCPIP_STORAGE_NS3_H
 // ===========================================================================
 // included modules
 // ===========================================================================
@@ -140,7 +140,7 @@ public:
 
 #endif // BUILD_TCPIP
 
-#endif
+#endif // __SHAWN_APPS_TCPIP_STORAGE_NS3_H
 /*-----------------------------------------------------------------------
  * Source  $Source: $
  * Version $Revision: 426 $

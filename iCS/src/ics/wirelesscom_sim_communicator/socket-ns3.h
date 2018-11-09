@@ -6,8 +6,8 @@
  ** file in the root of the Shawn source tree for further details.     **
  ************************************************************************/
 
-#ifndef __SHAWN_APPS_TCPIP_SOCKET_H
-#define __SHAWN_APPS_TCPIP_SOCKET_H
+#ifndef __SHAWN_APPS_TCPIP_SOCKET_NS3_H
+#define __SHAWN_APPS_TCPIP_SOCKET_NS3_H
 // ===========================================================================
 // included modules
 // ===========================================================================
@@ -147,7 +147,7 @@ private:
 
 #endif // BUILD_TCPIP
 
-#endif
+#endif // __SHAWN_APPS_TCPIP_SOCKET_NS3_H
 
 /*-----------------------------------------------------------------------
 * Source  $Source: $
