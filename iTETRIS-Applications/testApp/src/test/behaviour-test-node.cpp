@@ -42,6 +42,8 @@
 #include "current-time.h"
 #include "log/console.h"
 
+using namespace baseapp;
+using namespace baseapp::application;
 
 namespace testapp
 {
@@ -121,7 +123,7 @@ namespace testapp
 
             TestHeader* testHeader;
             GetController()->GetHeader(payload, server::PAYLOAD_END, testHeader);
-            Header * receivedHeader = payload->getHeader(testapp::server::PAYLOAD_END);
+            Header * receivedHeader = payload->getHeader(baseapp::server::PAYLOAD_END);
             TestHeader* receivedTestHeader = dynamic_cast<TestHeader*>(receivedHeader);
 
             NS_LOG_INFO(Log() << "Received a test message with content: " << testHeader->getMessage());

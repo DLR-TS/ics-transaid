@@ -41,6 +41,9 @@
 #include "behaviour-test-rsu.h"
 #include "behaviour-test-factory.h"
 
+using namespace baseapp;
+using namespace baseapp::application;
+
 namespace testapp
 {
 	namespace application

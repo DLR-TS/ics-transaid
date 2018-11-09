@@ -43,6 +43,9 @@
 #include <map>
 #include "structs.h"
 
+using namespace baseapp;
+using namespace baseapp::application;
+
 namespace testapp
 {
 	namespace application
