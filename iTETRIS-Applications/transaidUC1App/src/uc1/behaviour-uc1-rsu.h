@@ -67,14 +67,7 @@ namespace uc1app
 				void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
 				void processTraCIResult(const int result, const Command& command);
 
-                /**
-                 * @brief Called after a random timeout when a uc1 message is received, @see Receive()
-                 * @input[in] sender The source of the received message
-                 */
-                void EventSendResponse(UC1Header::ResponseInfo response);
-
                 void RSUBroadcastCommSimple2();
-
 
                 void abortBroadcast();
 
@@ -87,26 +80,9 @@ namespace uc1app
                 {
                     return TYPE_BEHAVIOUR_UC1_RSU;
                 }
-
-			private:
-
-                /// @name Flags to be used by uc1 cases
-                /// @{
-                bool m_firstBroadcast;
-                bool m_broadcastActive;
-                int m_broadcastInterval;
-                /// @}
-
-
-                /// @name Events
-                /// @{
-                /// @brief used to refer to abort event scheduled at start
-                event_id m_eventBroadcast;
-                event_id m_eventAbortBroadcast;
-                /// @}
 		};
 
 	} /* namespace application */
-} /* namespace protocol */
+} /* namespace uc1app */
 
 #endif /* BEHAVIOUR_UC1_RSU_H_ */

@@ -65,7 +65,7 @@ int main(int argc, char **argv)
   if (argc != 2 && argc != 3 && argc != 5)
   {
       Console::Error("Wrong number of command line arguments.");
-      Console::Error("Usage: testApp [-c] <config-file> [--remote-port <port>]");
+      Console::Error("Usage: uc1App [-c] <config-file> [--remote-port <port>]");
       return -1;
   }
   char * configFile;
@@ -77,7 +77,7 @@ int main(int argc, char **argv)
       if (arg == "-c") {
           configFile = argv[2];
       } else {
-          Console::Error("Expected '-c' read " + arg + " Usage: testApp [-c] <config-file> [--remote-port <port>]");
+          Console::Error("Expected '-c' read " + arg + " Usage: uc1App [-c] <config-file> [--remote-port <port>]");
           return -2;
       }
       if (argc == 5) {
@@ -85,7 +85,7 @@ int main(int argc, char **argv)
           if (arg == "--remote-port") {
               port = atoi(argv[4]);
           } else {
-              Console::Error("Expected '--remote-port' read " + arg + " Usage: testApp [-c] <config-file> [--remote-port <port>]");
+              Console::Error("Expected '--remote-port' read " + arg + " Usage: uc1App [-c] <config-file> [--remote-port <port>]");
               return -2;
           }
       }
@@ -97,12 +97,9 @@ int main(int argc, char **argv)
                                      "commSimple", "commSimple2", "CAMsimple",
                                      "testMobility", "testTrajectory", "testToC"});
     // start-up
-    Console::Log("Starting iTetris test app");
+    Console::Log("Starting TransAID UC1 app");
     if (ProgramConfiguration::LoadConfiguration(configFile, port) == EXIT_FAILURE)
       throw ProcessError("Could not load configuration file");
-    if (testCases.count(ProgramConfiguration::GetTestCase()) == 0) {
-      throw ProcessError("Unknown test case '" + ProgramConfiguration::GetTestCase() + "'");
-    }
 
     Console::Log("Load Configuration done");
     // Initialize log file
@@ -119,14 +116,14 @@ int main(int argc, char **argv)
     }
     if (ProgramConfiguration::GetLogFileName(DATA_FILE, log))
     {
-      application::OutputHelper::Start(log);
+      baseapp::application::OutputHelper::Start(log);
     }
 
     if (ProgramConfiguration::GetSocketPort() < 1024)
       throw ProcessError("Please use a socket port above 1024");
 
     // Start the server
-    server::Server::RunServer(new application::BehaviourTestFactory());
+    baseapp::server::Server::RunServer(new uc1app::application::BehaviourUC1Factory());
 
     ret = 0;
 
@@ -143,7 +140,7 @@ int main(int argc, char **argv)
     Console::Error("Quitting (on unknown error).");
     ret = 2;
   }
-  delete application::OutputHelper::Instance();
+  delete baseapp::application::OutputHelper::Instance();
   Log::Close();
   return ret;
 }

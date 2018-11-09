@@ -66,12 +66,6 @@ namespace uc1app
 		    virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
             virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
 
-		    /**
-		     * @brief Called after a random timeout when a uc1 message is received, @see Receive()
-		     * @input[in] sendingRSU The source of the received message
-		     */
-		    void EventSendResponse(UC1Header::ResponseInfo response);
-
 		    void abortWaitingForRSUResponse();
 
 		    TypeBehaviour GetType() const
@@ -84,26 +78,9 @@ namespace uc1app
 		        return TYPE_BEHAVIOUR_UC1_NODE;
 		    }
 
-		private:
-		    /// @name Flags to be used by uc1 cases
-		    /// @{
-		    /// @brief Vehicle check this if the RSU responded to their message.
-		    bool m_waitForRSUAcknowledgement;
-            bool m_vehicleStopScheduled;
-            bool m_firstBroadcast;
-            int m_broadcastInterval;
-		    /// @}
-
-
-		    /// @name Events
-		    /// @{
-		    /// @brief used to refer to abort event scheduled at start
-            event_id m_eventAbortWaitingForRSU;
-            event_id m_eventBroadcast;
-		    /// @}
 		};
 
 	} /* namespace application */
-} /* namespace protocol */
+} /* namespace uc1app */
 
 #endif /* BEHAVIOUR_UC1_NODE_H_ */

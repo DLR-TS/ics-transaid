@@ -41,14 +41,13 @@
 using namespace baseapp;
 using namespace baseapp::application;
 
+class baseapp::application::iCSInterface;
+class baseapp::application::Node;
+
 namespace uc1app
 {
 	namespace application
 	{
-
-		class iCSInterface;
-		class Node;
-
 		/**
 		 * Factory for the behaviour uc1 instances
 		 */

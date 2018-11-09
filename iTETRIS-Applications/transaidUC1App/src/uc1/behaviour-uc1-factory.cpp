@@ -59,4 +59,4 @@ namespace uc1app
 		}
 
 	} /* namespace application */
-} /* namespace protocol */
+} /* namespace uc1app */
