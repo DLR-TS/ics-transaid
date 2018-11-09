@@ -1,8 +1,8 @@
-bin_PROGRAMS = uc1App
+bin_PROGRAMS = uc5App
 
-uc1App_SOURCES = app-main.cpp 
+uc5App_SOURCES = app-main.cpp 
 
-uc1App_LDADD = $(AM_CPPFLAGS) ./uc1/libuc1.a \
+uc5App_LDADD = $(AM_CPPFLAGS) ./uc5/libuc5.a \
 ../../baseApp/src/server/payload.o \
 ../../baseApp/src/application/traci-helper.o \
 ../../baseApp/src/server/libserver.a \
@@ -15,4 +15,4 @@ uc1App_LDADD = $(AM_CPPFLAGS) ./uc1/libuc1.a \
 ../../baseApp/src/utils/xml/libxml.a \
 ../../../sumo/src/foreign/tcpip/libtcpip.a 
 
-SUBDIRS = uc1
+SUBDIRS = uc5

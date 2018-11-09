@@ -43,14 +43,14 @@
 #include "program-configuration.h"
 #include "output-helper.h"
 #include "model/behaviour-factory.h"
-#include "uc1/behaviour-uc1-factory.h"
+#include "uc5/behaviour-uc5-factory.h"
 
 
 // ===========================================================================
 // used namespaces
 // ===========================================================================
 using namespace std;
-using namespace uc1app;
+using namespace uc5app;
 
 // ===========================================================================
 // functions
@@ -65,7 +65,7 @@ int main(int argc, char **argv)
   if (argc != 2 && argc != 3 && argc != 5)
   {
       Console::Error("Wrong number of command line arguments.");
-      Console::Error("Usage: uc1App [-c] <config-file> [--remote-port <port>]");
+      Console::Error("Usage: uc5App [-c] <config-file> [--remote-port <port>]");
       return -1;
   }
   char * configFile;
@@ -77,7 +77,7 @@ int main(int argc, char **argv)
       if (arg == "-c") {
           configFile = argv[2];
       } else {
-          Console::Error("Expected '-c' read " + arg + " Usage: uc1App [-c] <config-file> [--remote-port <port>]");
+          Console::Error("Expected '-c' read " + arg + " Usage: uc5App [-c] <config-file> [--remote-port <port>]");
           return -2;
       }
       if (argc == 5) {
@@ -85,7 +85,7 @@ int main(int argc, char **argv)
           if (arg == "--remote-port") {
               port = atoi(argv[4]);
           } else {
-              Console::Error("Expected '--remote-port' read " + arg + " Usage: uc1App [-c] <config-file> [--remote-port <port>]");
+              Console::Error("Expected '--remote-port' read " + arg + " Usage: uc5App [-c] <config-file> [--remote-port <port>]");
               return -2;
           }
       }
@@ -97,7 +97,7 @@ int main(int argc, char **argv)
                                      "commSimple", "commSimple2", "CAMsimple",
                                      "testMobility", "testTrajectory", "testToC"});
     // start-up
-    Console::Log("Starting TransAID UC1 app");
+    Console::Log("Starting TransAID UC5 app");
     if (ProgramConfiguration::LoadConfiguration(configFile, port) == EXIT_FAILURE)
       throw ProcessError("Could not load configuration file");
 
@@ -123,7 +123,7 @@ int main(int argc, char **argv)
       throw ProcessError("Please use a socket port above 1024");
 
     // Start the server
-    baseapp::server::Server::RunServer(new uc1app::application::BehaviourUC1Factory());
+    baseapp::server::Server::RunServer(new uc5app::application::BehaviourUC5Factory());
 
     ret = 0;
 

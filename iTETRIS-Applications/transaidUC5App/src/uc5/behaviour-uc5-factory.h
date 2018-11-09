@@ -30,57 +30,41 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  ***************************************************************************************/
 /****************************************************************************************
- * Author Federico Caselli <f.caselli@unibo.it>
- * University of Bologna
+ * Author Michael Behrisch
  ***************************************************************************************/
 
-#ifndef BEHAVIOUR_UC1_NODE_H_
-#define BEHAVIOUR_UC1_NODE_H_
+#ifndef BEHAVIOUR_UC5_FACTORY_H_
+#define BEHAVIOUR_UC5_FACTORY_H_
 
-#include "behaviour-node.h"
-#include "scheduler.h"
-#include "random-variable.h"
-#include <map>
-#include "structs.h"
+#include "behaviour-factory.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
 
-namespace uc1app
+class baseapp::application::iCSInterface;
+class baseapp::application::Node;
+
+namespace uc5app
 {
 	namespace application
 	{
 		/**
-		 * Behaviour for mobile nodes in uc1 cases.
+		 * Factory for the behaviour uc5 instances
 		 */
-		class BehaviourUC1Node: public BehaviourNode
+		class BehaviourUC5Factory : public BehaviourFactory
 		{
 		public:
-		    BehaviourUC1Node(iCSInterface* controller);
-		    ~BehaviourUC1Node();
-
-		    void Start();
-
-		    virtual bool IsSubscribedTo(ProtocolId pid) const;
-		    virtual void Receive(server::Payload *payload, double snr);
-		    virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
-            virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
-
-		    void abortWaitingForRSUResponse();
-
-		    TypeBehaviour GetType() const
-		    {
-		        return Type();
-		    }
-
-		    static TypeBehaviour Type()
-		    {
-		        return TYPE_BEHAVIOUR_UC1_NODE;
-		    }
-
+			/**
+			 * @brief Create one or several new RSU behaviour(s) and add them to the interface
+			 */
+			virtual void createRSUBehaviour(iCSInterface* interface, Node* node);
+			/**
+			 * @brief Create one or several new node behaviour(s) and add them to the interface
+			 */
+			virtual void createNodeBehaviour(iCSInterface* interface, Node* node);
 		};
 
 	} /* namespace application */
-} /* namespace uc1app */
+} /* namespace uc5app */
 
-#endif /* BEHAVIOUR_UC1_NODE_H_ */
+#endif /* BEHAVIOUR_UC5_FACTORY_H_ */

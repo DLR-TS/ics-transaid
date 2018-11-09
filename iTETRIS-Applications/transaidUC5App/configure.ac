@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([uc1App], [0.1])
+AC_INIT([uc5App], [0.1])
 AC_CONFIG_SRCDIR([src/app-main.cpp])
 AC_CANONICAL_SYSTEM
 
@@ -58,7 +58,7 @@ AC_CHECK_FUNCS([floor getcwd gettimeofday memset pow select socket sqrt])
 
 
 AC_CONFIG_FILES([
-src/uc1/Makefile
+src/uc5/Makefile
 src/Makefile
 Makefile])
 AC_OUTPUT

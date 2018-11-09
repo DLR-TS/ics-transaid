@@ -30,33 +30,57 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  ***************************************************************************************/
 /****************************************************************************************
- * Author Michael Behrisch
+ * Author Federico Caselli <f.caselli@unibo.it>
+ * University of Bologna
  ***************************************************************************************/
 
-#include "program-configuration.h"
-#include "node.h"
-#include "ics-interface.h"
-#include "behaviour-uc1-node.h"
-#include "behaviour-uc1-rsu.h"
-#include "behaviour-uc1-factory.h"
+#ifndef BEHAVIOUR_UC5_NODE_H_
+#define BEHAVIOUR_UC5_NODE_H_
+
+#include "behaviour-node.h"
+#include "scheduler.h"
+#include "random-variable.h"
+#include <map>
+#include "structs.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
 
-namespace uc1app
+namespace uc5app
 {
 	namespace application
 	{
-
-		void BehaviourUC1Factory::createRSUBehaviour(iCSInterface* interface, Node* node)
+		/**
+		 * Behaviour for mobile nodes in uc5 cases.
+		 */
+		class BehaviourUC5Node: public BehaviourNode
 		{
-			interface->SubscribeBehaviour(new BehaviourUC1RSU(interface));
-		}
+		public:
+		    BehaviourUC5Node(iCSInterface* controller);
+		    ~BehaviourUC5Node();
 
-		void BehaviourUC1Factory::createNodeBehaviour(iCSInterface* interface, Node* node)
-		{
-			interface->SubscribeBehaviour(new BehaviourUC1Node(interface));
-		}
+		    void Start();
+
+		    virtual bool IsSubscribedTo(ProtocolId pid) const;
+		    virtual void Receive(server::Payload *payload, double snr);
+		    virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
+            virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+
+		    void abortWaitingForRSUResponse();
+
+		    TypeBehaviour GetType() const
+		    {
+		        return Type();
+		    }
+
+		    static TypeBehaviour Type()
+		    {
+		        return TYPE_BEHAVIOUR_UC5_NODE;
+		    }
+
+		};
 
 	} /* namespace application */
-} /* namespace uc1app */
+} /* namespace uc5app */
+
+#endif /* BEHAVIOUR_UC5_NODE_H_ */

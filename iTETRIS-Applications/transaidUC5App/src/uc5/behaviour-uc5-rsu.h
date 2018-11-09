@@ -34,82 +34,55 @@
  * University of Bologna
  ***************************************************************************************/
 
-#include "behaviour-uc1-node.h"
-#include "ics-interface.h"
-#include "program-configuration.h"
-#include "node.h"
-#include "../../app-commands-subscriptions-constants.h"
-#include "current-time.h"
-#include "log/console.h"
+#ifndef BEHAVIOUR_UC5_RSU_H_
+#define BEHAVIOUR_UC5_RSU_H_
+
+#include "behaviour-node.h"
+#include "scheduler.h"
+#include "random-variable.h"
+#include <map>
+#include "structs.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
 
-namespace uc1app
+namespace uc5app
 {
 	namespace application
 	{
-
-		///BehaviourUC1Node implementation
-		BehaviourUC1Node::BehaviourUC1Node(iCSInterface* controller) :
-				BehaviourNode(controller)
-		{}
-
-        BehaviourUC1Node::~BehaviourUC1Node() {}
-
-		void BehaviourUC1Node::Start()
+        /**
+         * Behaviour for rsu in uc5 cases. Inherits from BehaviourNode to have the random response offset variables at hand.
+         */
+		class BehaviourUC5RSU: public BehaviourNode
 		{
-			if (!m_enabled)
-				return;
-			BehaviourNode::Start();
-		}
+			public:
+				BehaviourUC5RSU(baseapp::application::iCSInterface* controller);
+				~BehaviourUC5RSU();
 
-		bool BehaviourUC1Node::IsSubscribedTo(ProtocolId pid) const
-		{
-			return pid == PID_UNKNOWN;
-		}
+				void Start();
 
-		void BehaviourUC1Node::Receive(server::Payload *payload, double snr)
-		{
-            NS_LOG_FUNCTION(Log());
-            if (!m_enabled)
-                return;
-            CommHeader* commHeader;
-            GetController()->GetHeader(payload, server::PAYLOAD_FRONT, commHeader);
-            if (commHeader->getMessageType() != MT_RSU_TEST)
-            {
-                NS_LOG_WARN(Log()<< "Received an unknown message "<< commHeader->getMessageType());
-                return;
-            }
-            NodeInfo rsu;
-            rsu.nodeId = commHeader->getSourceId();
-            rsu.position = commHeader->getSourcePosition();
+				bool IsSubscribedTo(ProtocolId pid) const;
+				void Receive(server::Payload *payload, double snr);
+				bool Execute(const int currentTimeStep, DirectionValueMap &data);
+				void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+				void processTraCIResult(const int result, const Command& command);
 
+                void RSUBroadcastCommSimple2();
 
-            TestHeader* uc1Header;
-            GetController()->GetHeader(payload, server::PAYLOAD_END, uc1Header);
-            Header * receivedHeader = payload->getHeader(server::PAYLOAD_END);
-            TestHeader* receivedUC1Header = dynamic_cast<TestHeader*>(receivedHeader);
+                void abortBroadcast();
 
-            NS_LOG_INFO(Log() << "Received a test message with content: " << uc1Header->getMessage());
-		}
+                TypeBehaviour GetType() const
+                {
+                    return Type();
+                }
 
-		bool BehaviourUC1Node::Execute(const int currentTimeStep, DirectionValueMap &data)
-		{
-			return false;
-		}
-
-        void BehaviourUC1Node::abortWaitingForRSUResponse()
-        {
-            NS_LOG_FUNCTION(Log());
-        }
-
-
-        void BehaviourUC1Node::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
-        {
-            NS_LOG_FUNCTION(Log());
-        }
-
+                static TypeBehaviour Type()
+                {
+                    return TYPE_BEHAVIOUR_UC5_RSU;
+                }
+		};
 
 	} /* namespace application */
-} /* namespace uc1app */
+} /* namespace uc5app */
+
+#endif /* BEHAVIOUR_UC5_RSU_H_ */

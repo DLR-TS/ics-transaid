@@ -30,41 +30,86 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  ***************************************************************************************/
 /****************************************************************************************
- * Author Michael Behrisch
+ * Author Federico Caselli <f.caselli@unibo.it>
+ * University of Bologna
  ***************************************************************************************/
 
-#ifndef BEHAVIOUR_UC1_FACTORY_H_
-#define BEHAVIOUR_UC1_FACTORY_H_
-
-#include "behaviour-factory.h"
+#include "behaviour-uc5-node.h"
+#include "ics-interface.h"
+#include "program-configuration.h"
+#include "node.h"
+#include "../../app-commands-subscriptions-constants.h"
+#include "current-time.h"
+#include "log/console.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
 
-class baseapp::application::iCSInterface;
-class baseapp::application::Node;
-
-namespace uc1app
+namespace uc5app
 {
 	namespace application
 	{
-		/**
-		 * Factory for the behaviour uc1 instances
-		 */
-		class BehaviourUC1Factory : public BehaviourFactory
+
+		///BehaviourUC5Node implementation
+		BehaviourUC5Node::BehaviourUC5Node(iCSInterface* controller) :
+				BehaviourNode(controller)
+		{}
+
+        BehaviourUC5Node::~BehaviourUC5Node() {}
+
+		void BehaviourUC5Node::Start()
 		{
-		public:
-			/**
-			 * @brief Create one or several new RSU behaviour(s) and add them to the interface
-			 */
-			virtual void createRSUBehaviour(iCSInterface* interface, Node* node);
-			/**
-			 * @brief Create one or several new node behaviour(s) and add them to the interface
-			 */
-			virtual void createNodeBehaviour(iCSInterface* interface, Node* node);
-		};
+			if (!m_enabled)
+				return;
+			BehaviourNode::Start();
+		}
+
+		bool BehaviourUC5Node::IsSubscribedTo(ProtocolId pid) const
+		{
+			return pid == PID_UNKNOWN;
+		}
+
+		void BehaviourUC5Node::Receive(server::Payload *payload, double snr)
+		{
+            NS_LOG_FUNCTION(Log());
+            if (!m_enabled)
+                return;
+            CommHeader* commHeader;
+            GetController()->GetHeader(payload, server::PAYLOAD_FRONT, commHeader);
+            if (commHeader->getMessageType() != MT_RSU_TEST)
+            {
+                NS_LOG_WARN(Log()<< "Received an unknown message "<< commHeader->getMessageType());
+                return;
+            }
+            NodeInfo rsu;
+            rsu.nodeId = commHeader->getSourceId();
+            rsu.position = commHeader->getSourcePosition();
+
+
+            TestHeader* uc5Header;
+            GetController()->GetHeader(payload, server::PAYLOAD_END, uc5Header);
+            Header * receivedHeader = payload->getHeader(server::PAYLOAD_END);
+            TestHeader* receivedUC5Header = dynamic_cast<TestHeader*>(receivedHeader);
+
+            NS_LOG_INFO(Log() << "Received a test message with content: " << uc5Header->getMessage());
+		}
+
+		bool BehaviourUC5Node::Execute(const int currentTimeStep, DirectionValueMap &data)
+		{
+			return false;
+		}
+
+        void BehaviourUC5Node::abortWaitingForRSUResponse()
+        {
+            NS_LOG_FUNCTION(Log());
+        }
+
+
+        void BehaviourUC5Node::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
+        {
+            NS_LOG_FUNCTION(Log());
+        }
+
 
 	} /* namespace application */
-} /* namespace uc1app */
-
-#endif /* BEHAVIOUR_UC1_FACTORY_H_ */
+} /* namespace uc5app */

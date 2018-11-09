@@ -30,59 +30,33 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  ***************************************************************************************/
 /****************************************************************************************
- * Author Federico Caselli <f.caselli@unibo.it>
- * University of Bologna
+ * Author Michael Behrisch
  ***************************************************************************************/
 
-#ifndef BEHAVIOUR_UC1_RSU_H_
-#define BEHAVIOUR_UC1_RSU_H_
-
-#include "behaviour-node.h"
-#include "scheduler.h"
-#include "random-variable.h"
-#include <map>
-#include "structs.h"
+#include "program-configuration.h"
+#include "node.h"
+#include "ics-interface.h"
+#include "behaviour-uc5-node.h"
+#include "behaviour-uc5-rsu.h"
+#include "behaviour-uc5-factory.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
 
-namespace uc1app
+namespace uc5app
 {
 	namespace application
 	{
-        /**
-         * Behaviour for rsu in uc1 cases. Inherits from BehaviourNode to have the random response offset variables at hand.
-         */
-		class BehaviourUC1RSU: public BehaviourNode
+
+		void BehaviourUC5Factory::createRSUBehaviour(iCSInterface* interface, Node* node)
 		{
-			public:
-				BehaviourUC1RSU(baseapp::application::iCSInterface* controller);
-				~BehaviourUC1RSU();
+			interface->SubscribeBehaviour(new BehaviourUC5RSU(interface));
+		}
 
-				void Start();
-
-				bool IsSubscribedTo(ProtocolId pid) const;
-				void Receive(server::Payload *payload, double snr);
-				bool Execute(const int currentTimeStep, DirectionValueMap &data);
-				void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
-				void processTraCIResult(const int result, const Command& command);
-
-                void RSUBroadcastCommSimple2();
-
-                void abortBroadcast();
-
-                TypeBehaviour GetType() const
-                {
-                    return Type();
-                }
-
-                static TypeBehaviour Type()
-                {
-                    return TYPE_BEHAVIOUR_UC1_RSU;
-                }
-		};
+		void BehaviourUC5Factory::createNodeBehaviour(iCSInterface* interface, Node* node)
+		{
+			interface->SubscribeBehaviour(new BehaviourUC5Node(interface));
+		}
 
 	} /* namespace application */
-} /* namespace uc1app */
-
-#endif /* BEHAVIOUR_UC1_RSU_H_ */
+} /* namespace uc5app */

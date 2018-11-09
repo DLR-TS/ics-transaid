@@ -34,7 +34,7 @@
  * University of Bologna
  ***************************************************************************************/
 
-#include "behaviour-uc1-rsu.h"
+#include "behaviour-uc5-rsu.h"
 #include "ics-interface.h"
 #include "program-configuration.h"
 #include "node.h"
@@ -45,42 +45,42 @@
 using namespace baseapp;
 using namespace baseapp::application;
 
-namespace uc1app
+namespace uc5app
 {
 	namespace application
 	{
 
-		///BehaviourUC1RSU implementation
-		BehaviourUC1RSU::BehaviourUC1RSU(iCSInterface* controller) :
+		///BehaviourUC5RSU implementation
+		BehaviourUC5RSU::BehaviourUC5RSU(iCSInterface* controller) :
 				BehaviourNode(controller)
 		{}
 
-		BehaviourUC1RSU::~BehaviourUC1RSU() {}
+		BehaviourUC5RSU::~BehaviourUC5RSU() {}
 
-		void BehaviourUC1RSU::Start()
+		void BehaviourUC5RSU::Start()
 		{}
 
-		bool BehaviourUC1RSU::IsSubscribedTo(ProtocolId pid) const
+		bool BehaviourUC5RSU::IsSubscribedTo(ProtocolId pid) const
 		{
 			return pid == PID_UNKNOWN;
 		}
 
-		void BehaviourUC1RSU::Receive(server::Payload *payload, double snr)
+		void BehaviourUC5RSU::Receive(server::Payload *payload, double snr)
 		{
             NS_LOG_FUNCTION(Log());
 		}
 
-		bool BehaviourUC1RSU::Execute(const int currentTimeStep, DirectionValueMap &data) {}
+		bool BehaviourUC5RSU::Execute(const int currentTimeStep, DirectionValueMap &data) {}
 
-        void BehaviourUC1RSU::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
+        void BehaviourUC5RSU::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
         {
             NS_LOG_FUNCTION(Log());
         }
 
-        void BehaviourUC1RSU::processTraCIResult(const int result, const Command& command) {
+        void BehaviourUC5RSU::processTraCIResult(const int result, const Command& command) {
             processTraCIResult(result, command);
         }
 
 
 	} /* namespace application */
-} /* namespace uc1app */
+} /* namespace uc5app */
