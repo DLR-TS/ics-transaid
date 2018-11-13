@@ -62,6 +62,7 @@ namespace baseapp
 		 */
 		class iCSInterface: public TraceManager
 		{
+		    friend class Behaviour; // To access the node
 			public:
 				static double DirectionTolerance;
 				static uint16_t AverageSpeedSampleSmall;
@@ -151,15 +152,24 @@ namespace baseapp
 				 * @param[in] pid Protocol id
 				 */
 				void Send(NodeType dstType, Header* header, ProtocolId pid, const int messageCategory);
-				/**
-				 * @brief Used to send a Unicast message.
-				 * @param[in] destId Id of the destination node
-				 * @param[in] header Message to send
+                /**
+                 * @brief Used to send a Unicast message.
+                 * @param[in] destId Id of the destination node
+                 * @param[in] header Message to send
                  * @param[in] pid Protocol id
                  * @param[in] messageCategory message category (used to filter received geobroadcast
                  *                            messages on iCS side), @see SubscriptionHelper::ReceiveGeobroadcast()
-				 */
-				void SendTo(int destId, Header* header, ProtocolId pid, const int messageCategory);
+                 */
+                void SendTo(int destId, Header* header, ProtocolId pid, const int messageCategory);
+                /**
+                 * @brief Used to start sending CAM messages.
+                 * @param[in] destId Id of the destination node
+                 * @param[in] header Message to send
+                 * @param[in] pid Protocol id
+                 * @param[in] messageCategory message category (used to filter received geobroadcast
+                 *                            messages on iCS side), @see SubscriptionHelper::ReceiveGeobroadcast()
+                 */
+                void StartSendingCAMs(int destId, Header* header, ProtocolId pid, const int messageCategory);
 				/**
 				 * @brief Called by the node class when the node has received the message from iCS
 				 * @param[in] payload Message received
@@ -190,9 +200,8 @@ namespace baseapp
                 /// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
                 void AddTraciSubscription(const int cmdID, const int varID, const int varTypeID = 0, tcpip::Storage* value = 0);
 
-								/// @brief helper function that adds GetMobilityInfo subscription 
-								void requestMobilityInfo();
-
+                /// @brief helper function that adds GetMobilityInfo subscription
+                void requestMobilityInfo();
 
                 /// @brief schedule a traci command to be executed
                 /// @param[in] objID ID for the object to be addressed
@@ -234,6 +243,13 @@ namespace baseapp
 				 * @brief Utility method to get the node name. Used in the logs
 				 */
 				std::string LogNode() const;
+
+			protected:
+                /**
+                 * @brief Get the node instance on which it this interface is installed.
+                 */
+                Node* GetNodeMutable();
+
 			private:
 
 				/**

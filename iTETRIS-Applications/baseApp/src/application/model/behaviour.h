@@ -53,6 +53,7 @@ namespace baseapp
 	{
 
 		class iCSInterface;
+		class Node;
 		struct Command;
 
 		/**
@@ -60,6 +61,8 @@ namespace baseapp
 		 */
 		class Behaviour: public TraceManager
 		{
+		    public:
+                static uint16_t DefaultResponseTimeSpacing;
 			public:
 				Behaviour(iCSInterface* controller);
 				virtual ~Behaviour();
@@ -123,13 +126,13 @@ namespace baseapp
 
 			protected:
 				virtual std::string Log() const;
-				iCSInterface* GetController() const;
-
+				iCSInterface* GetController();
+                virtual Node* GetNode();
 				bool m_enabled;
-			private:
 
+			private:
+                iCSInterface* m_controller;
 				bool m_running;
-				iCSInterface* m_controller;
 
 				// trace sources
 				TracedCallback<bool> m_traceStartToggle;

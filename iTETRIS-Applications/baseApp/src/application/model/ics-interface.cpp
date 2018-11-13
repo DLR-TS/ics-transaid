@@ -92,10 +92,15 @@ namespace baseapp
 				delete it->second;
 		}
 
-		Node* iCSInterface::GetNode() const
-		{
-			return m_node;
-		}
+        Node* iCSInterface::GetNode() const
+        {
+            return m_node;
+        }
+
+        Node* iCSInterface::GetNodeMutable()
+        {
+            return m_node;
+        }
 
 		int iCSInterface::GetId() const
 		{
@@ -527,12 +532,11 @@ namespace baseapp
         }
 
 
-				void iCSInterface::requestMobilityInfo()
-				{
-					  //TODO: specify for which nodes to get the info, as function parameter 
-					  m_node->nodeGetMobilityInformation();
-				}
-
+        void iCSInterface::requestMobilityInfo()
+        {
+            //TODO: specify for which nodes to get the info, as function parameter
+            m_node->nodeGetMobilityInformation();
+        }
 
 	} /* namespace application */
 } /* namespace protocol */

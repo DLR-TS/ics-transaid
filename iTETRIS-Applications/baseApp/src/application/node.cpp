@@ -231,27 +231,7 @@ namespace baseapp
 		}
 
 		void Node::addSubscriptions()
-		{
-		    if (ProgramConfiguration::GetTestCase() == "acosta" || ProgramConfiguration::GetTestCase() == "") {
-		        if (!m_subReceiveMessage)
-		        {
-		            //Subscribe to both
-		            m_toSubscribe.push(SubscriptionHelper::ReceiveUnicast(m_id));
-		            m_toSubscribe.push(SubscriptionHelper::ReceiveGeobroadcast(PROTOCOL_MESSAGE));
-		            m_subReceiveMessage = true;
-		        }
-		    } else if (ProgramConfiguration::GetTestCase() == "commSimple" || ProgramConfiguration::GetTestCase() == "commSimple2") {
-                //Subscribe to both
-                if (!m_subReceiveMessage) {
-                    if (!isFixed()) {
-                        // Mobile nodes can receive unicast
-                        m_toSubscribe.push(SubscriptionHelper::ReceiveUnicast(m_id));
-                    }
-                    m_toSubscribe.push(SubscriptionHelper::ReceiveGeobroadcast(MSGCAT_TESTAPP));
-                    m_subReceiveMessage = true;
-                }
-            }
-		}
+		{}
 
 		float Node::getPropagationRadius() const
 		{
@@ -289,6 +269,21 @@ namespace baseapp
             m_controller->processCAMmessagesReceived(nodeID ,receivedCAMmessages);
         }
 
+        void Node::subscribeToCAMInfo() {
+            m_toSubscribe.push(SubscriptionHelper::GetReceivedCamInfo());
+        }
+
+        void Node::subscribeToUnicastReception(){
+            m_toSubscribe.push(SubscriptionHelper::ReceiveUnicast(m_id));
+        }
+
+        void Node::subscribeToGeobroadcastReception(const int messageId){
+            m_toSubscribe.push(SubscriptionHelper::ReceiveGeobroadcast(messageId));
+        }
+
+        void Node::subscribeTrafficLightInformation() {
+            m_toSubscribe.push(SubscriptionHelper::GetTrafficLightInformation());
+        }
 
 	} /* namespace application */
 } /* namespace protocol */

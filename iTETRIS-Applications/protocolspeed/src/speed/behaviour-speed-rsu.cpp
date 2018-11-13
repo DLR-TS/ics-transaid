@@ -34,43 +34,55 @@
  * University of Bologna
  ***************************************************************************************/
 
-#ifndef MOBILE_NODE_H_
-#define MOBILE_NODE_H_
-
+#include "ics-interface.h"
 #include "node.h"
-#include "structs.h"
+#include "app-commands-subscriptions-constants.h"
+#include "behaviour-speed-rsu.h"
 
-namespace baseapp
+using namespace baseapp;
+using namespace baseapp::application;
+
+namespace protocolspeedapp
 {
-namespace application
-{
-class BehaviourFactory;
+	namespace application
+	{
 
-class MobileNode: public Node
-{
-public:
-  MobileNode(int id, BehaviourFactory* factory);
-  MobileNode(MobilityInfo* info, BehaviourFactory* factory);
-  MobileNode(const int nodeId, const int ns3NodeId, const std::string & sumoNodeId,
-  						const std::string & sumoType, const std::string & sumoClass, BehaviourFactory* factory);
-  virtual ~MobileNode();
+	///BehaviourNodeWithSink implementation
 
-  void updateMobilityInformation(MobilityInfo * info);
-  Vector2D getPosition();
-  Vector2D getVelocity();
-  double getDirection();
+	BehaviourSpeedRSU::BehaviourSpeedRSU(iCSInterface * controller) :
+				        BehaviourRsu(controller)
+	{}
 
-  /// @brief helper function that adds SetCAMArea subscription
-  void subscribeSendingCAMs();
+	BehaviourSpeedRSU::~BehaviourSpeedRSU()
+	{}
 
-protected:
-  void addSubscriptions();
-private:
-  MobilityInfo * m_position;
-  void selectNodeType();
-};
+	void BehaviourSpeedRSU::Start()
+	{
 
-} /* namespace application */
+        if (m_directions.size() == 0)
+            NS_FATAL_ERROR(Log()<<"Can't start the RSU with 0 directions");
+        int totTime = 0;
+        for (std::vector<VehicleDirection>::iterator it = m_directions.begin(); it != m_directions.end(); ++it)
+        {
+            if (it->time == 0)
+            {
+                it->time = m_timeBeaconMin;
+                NS_LOG_INFO(Log() << "Direction " << *it << " beacon time was Zero. Set to " << m_timeBeaconMin);
+            } else
+                NS_LOG_INFO(Log() << "Direction " << *it << " beacon time is " << it->time);
+            totTime += it->time;
+        }
+        NS_LOG_INFO(Log() << "Total beacon time will be " << totTime);
+        m_eventBeacon = Scheduler::Schedule(0, &BehaviourSpeedRSU::EventBeacon, this, 0);
+        m_eventCheck = Scheduler::Schedule(m_timeCheck, &BehaviourSpeedRSU::EventCheck, this);
+
+	    BehaviourRsu::Start();
+        GetNode()->subscribeToUnicastReception();
+        GetNode()->subscribeToGeobroadcastReception(PROTOCOL_MESSAGE);
+	    GetNode()->nodeGetMobilityInformation();
+	    GetNode()->subscribeTrafficLightInformation();
+	}
+
+
+	} /* namespace application */
 } /* namespace protocol */
-
-#endif /* MOBILE_NODE_H_ */

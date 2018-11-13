@@ -48,9 +48,9 @@ namespace baseapp
 				Node(id)
 		{
 			m_type = NT_RSU;
-            m_mobilitySubscription = m_positionUpdated = m_trafficLightSubscription = m_setCAMareaSubscription= false;
 			m_rsuData = ProgramConfiguration::GetRsuData(id);
 			m_trafficLight = NULL;
+            m_positionUpdated = false;
 			init(factory);
 		}
 
@@ -64,28 +64,6 @@ namespace baseapp
 		{
 			//Subscribe to receive messages
 			Node::addSubscriptions();
-			if (ProgramConfiguration::GetTestCase() == "acosta" || ProgramConfiguration::GetTestCase() == "") {
-			    // in original demo-app this was included, but not needed for most simple test cases
-	            if (!m_mobilitySubscription)
-	            {
-	                m_mobilitySubscription = true;
-	                m_toSubscribe.push(SubscriptionHelper::GetMobilityInformation());
-	            }
-
-                if (!m_trafficLightSubscription)
-                {
-                    m_trafficLightSubscription = true;
-                    m_toSubscribe.push(SubscriptionHelper::GetTrafficLightInformation());
-                }
-			}
-            if (ProgramConfiguration::GetTestCase() == "CAMsimple"){
-                if (!m_setCAMareaSubscription)
-                {
-                    m_setCAMareaSubscription = true;
-                    m_toSubscribe.push(SubscriptionHelper::SetCamArea(m_rsuData.cam_area));
-                    m_toSubscribe.push(SubscriptionHelper::GetReceivedCamInfo());
-                }
-            }
 		}
 
 		void FixedStation::updateMobilityInformation(MobilityInfo * info)
@@ -160,6 +138,10 @@ namespace baseapp
 				Log::WriteLog(oss);
 			}
 		}
+
+        void FixedStation::subscribeSendingCAMs() {
+            m_toSubscribe.push(SubscriptionHelper::SetCamArea(m_rsuData.cam_area));
+        }
 
 	} /* namespace application */
 } /* namespace protocol */

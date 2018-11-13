@@ -65,9 +65,10 @@ namespace baseapp
 			m_timeCheck = TimeCheck;
 			m_timeOut = Timeout;
 			m_timeBeaconMin = TimeBeaconMin;
+            m_responseTimeSpacing = Behaviour::DefaultResponseTimeSpacing;
 
 			m_beaconInterval = m_timeBeacon;
-			m_eventBeacon = m_eventCheck = 0;
+			m_eventBeacon = m_eventCheck = m_eventResponse = 0;
 			m_executeAtThisStep = false;
 
 			RegisterTrace("NodeReceiveData", m_traceBeaconResponse);
@@ -79,7 +80,7 @@ namespace baseapp
 		BehaviourRsu::~BehaviourRsu()
 		{
 			Scheduler::Cancel(m_eventBeacon);
-			Scheduler::Cancel(m_eventCheck);
+            Scheduler::Cancel(m_eventCheck);
 		}
 
 		void BehaviourRsu::AddDirections(std::vector<Direction> directions)
@@ -123,22 +124,6 @@ namespace baseapp
 		{
 			if (!m_enabled)
 				return;
-			if (m_directions.size() == 0)
-				NS_FATAL_ERROR(Log()<<"Can't start the RSU with 0 directions");
-			int totTime = 0;
-			for (std::vector<VehicleDirection>::iterator it = m_directions.begin(); it != m_directions.end(); ++it)
-			{
-				if (it->time == 0)
-				{
-					it->time = m_timeBeaconMin;
-					NS_LOG_INFO(Log() << "Direction " << *it << " beacon time was Zero. Set to " << m_timeBeaconMin);
-				} else
-					NS_LOG_INFO(Log() << "Direction " << *it << " beacon time is " << it->time);
-				totTime += it->time;
-			}
-			NS_LOG_INFO(Log() << "Total beacon time will be " << totTime);
-			m_eventBeacon = Scheduler::Schedule(0, &BehaviourRsu::EventBeacon, this, 0);
-			m_eventCheck = Scheduler::Schedule(m_timeCheck, &BehaviourRsu::EventCheck, this);
 			Behaviour::Start();
 		}
 

@@ -38,7 +38,7 @@
 #include "node.h"
 #include "ics-interface.h"
 #include "behaviour-speed-node.h"
-#include "behaviour-rsu.h"
+#include "behaviour-speed-rsu.h"
 #include "data-manager.h"
 #include "behaviour-speed-factory.h"
 
@@ -52,7 +52,7 @@ namespace protocolspeedapp
 
 		void BehaviourSpeedFactory::createRSUBehaviour(iCSInterface* interface, Node* node)
 		{
-			BehaviourRsu* rsu = new BehaviourRsu(interface);
+		    BehaviourSpeedRSU* rsu = new BehaviourSpeedRSU(interface);
 			RsuData data = ProgramConfiguration::GetRsuData(node->getId());
 			rsu->AddDirections(data.directions);
 			interface->SubscribeBehaviour(rsu);

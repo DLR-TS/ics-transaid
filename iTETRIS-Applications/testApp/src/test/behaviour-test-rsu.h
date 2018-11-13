@@ -37,7 +37,7 @@
 #ifndef BEHAVIOUR_TEST_RSU_H_
 #define BEHAVIOUR_TEST_RSU_H_
 
-#include "behaviour-node.h"
+#include "behaviour-rsu.h"
 #include "scheduler.h"
 #include "random-variable.h"
 #include <map>
@@ -53,7 +53,7 @@ namespace testapp
         /**
          * Behaviour for rsu in test cases. Inherits from BehaviourNode to have the random response offset variables at hand.
          */
-		class BehaviourTestRSU: public BehaviourNode
+		class BehaviourTestRSU: public BehaviourRsu
 		{
 			public:
 				BehaviourTestRSU(iCSInterface* controller);
@@ -95,6 +95,10 @@ namespace testapp
                 bool m_firstBroadcast;
                 bool m_broadcastActive;
                 int m_broadcastInterval;
+                bool m_mobilitySubscription;
+                bool m_trafficLightSubscription;
+                bool m_setCAMareaSubscription;
+                bool m_subReceiveMessage;
                 /// @}
 
 
@@ -104,6 +108,7 @@ namespace testapp
                 event_id m_eventBroadcast;
                 event_id m_eventAbortBroadcast;
                 /// @}
+
 		};
 
 	} /* namespace application */

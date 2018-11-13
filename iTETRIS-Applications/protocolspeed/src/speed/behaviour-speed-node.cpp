@@ -36,6 +36,7 @@
 
 #include "program-configuration.h"
 #include "ics-interface.h"
+#include "node.h"
 #include "node-sampler.h"
 #include "app-commands-subscriptions-constants.h"
 #include "behaviour-speed-node.h"
@@ -173,6 +174,7 @@ namespace protocolspeedapp
 			if (!m_enabled)
 				return;
 			BehaviourNode::Start();
+
             //Example use of a traci command subscription
             if (ProgramConfiguration::GetTestCase()=="") {
                 // conserve behaviour for old demo app
@@ -181,6 +183,11 @@ namespace protocolspeedapp
                 maxSpeed.writeDouble(20);
                 GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_MAXSPEED, TYPE_DOUBLE, &maxSpeed);
             }
+
+            //Subscribe to geobroadcast and unicast
+            GetNode()->subscribeToUnicastReception();
+            GetNode()->subscribeToGeobroadcastReception(PROTOCOL_MESSAGE);
+
 		}
 
 		void BehaviourNodeWithoutSink::Receive(server::Payload *payload, double snr)

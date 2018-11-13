@@ -37,7 +37,7 @@
 #ifndef BEHAVIOUR_UC1_RSU_H_
 #define BEHAVIOUR_UC1_RSU_H_
 
-#include "behaviour-node.h"
+#include "behaviour-rsu.h"
 #include "scheduler.h"
 #include "random-variable.h"
 #include <map>
@@ -53,7 +53,7 @@ namespace uc1app
         /**
          * Behaviour for rsu in uc1 cases. Inherits from BehaviourNode to have the random response offset variables at hand.
          */
-		class BehaviourUC1RSU: public BehaviourNode
+		class BehaviourUC1RSU: public BehaviourRsu
 		{
 			public:
 				BehaviourUC1RSU(baseapp::application::iCSInterface* controller);

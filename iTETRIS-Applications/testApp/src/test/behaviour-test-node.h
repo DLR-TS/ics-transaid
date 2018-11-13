@@ -92,6 +92,8 @@ namespace testapp
             bool m_vehicleStopScheduled;
             bool m_firstBroadcast;
             int m_broadcastInterval;
+            bool m_setCAMareaSubscription;
+            bool m_subReceiveMessage;
 		    /// @}
 
 
@@ -101,6 +103,7 @@ namespace testapp
             event_id m_eventAbortWaitingForRSU;
             event_id m_eventBroadcast;
 		    /// @}
+
 		};
 
 	} /* namespace application */

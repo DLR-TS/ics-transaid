@@ -45,6 +45,8 @@ namespace baseapp
 	namespace application
 	{
 
+	    uint16_t Behaviour::DefaultResponseTimeSpacing = 10;
+
 		Behaviour::Behaviour(iCSInterface* controller) :
 				m_running(false), m_enabled(true)
 		{
@@ -67,10 +69,14 @@ namespace baseapp
 			return m_running;
 		}
 
-		iCSInterface* Behaviour::GetController() const
+		iCSInterface* Behaviour::GetController()
 		{
 			return m_controller;
 		}
+
+        Node* Behaviour::GetNode() {
+            return m_controller->GetNodeMutable();
+        }
 
 		void Behaviour::Start()
 		{
@@ -96,9 +102,7 @@ namespace baseapp
 		}
 
         void Behaviour::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
-        {
-
-        }
+        {}
 
         void Behaviour::processTraCIResult(const int result, const Command& command) {
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);

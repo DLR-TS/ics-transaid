@@ -363,7 +363,7 @@ namespace baseapp
 				BehaviourNode::Enabled = bVal;
 			if (xmlElem->QueryIntAttribute("response-time-spacing", &iVal) == XML_NO_ERROR)
 				if (iVal >= 0 && iVal <= 65535)
-					BehaviourNode::ResponseTimeSpacing = iVal;
+                    Behaviour::DefaultResponseTimeSpacing = iVal;
 			if (xmlElem->QueryDoubleAttribute("sink-threshold", &dVal) == XML_NO_ERROR)
 				BehaviourNode::SinkThreshold = dVal;
 		}

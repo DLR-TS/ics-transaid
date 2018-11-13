@@ -34,43 +34,33 @@
  * University of Bologna
  ***************************************************************************************/
 
-#ifndef MOBILE_NODE_H_
-#define MOBILE_NODE_H_
+#ifndef BEHAVIOUR_SPEED_RSU_H_
+#define BEHAVIOUR_SPEED_RSU_H_
 
-#include "node.h"
-#include "structs.h"
+#include "behaviour-rsu.h"
 
-namespace baseapp
+using namespace baseapp;
+using namespace baseapp::application;
+
+namespace protocolspeedapp
 {
-namespace application
-{
-class BehaviourFactory;
+	namespace application
+	{
 
-class MobileNode: public Node
-{
-public:
-  MobileNode(int id, BehaviourFactory* factory);
-  MobileNode(MobilityInfo* info, BehaviourFactory* factory);
-  MobileNode(const int nodeId, const int ns3NodeId, const std::string & sumoNodeId,
-  						const std::string & sumoType, const std::string & sumoClass, BehaviourFactory* factory);
-  virtual ~MobileNode();
+		/**
+		 * Installed on the nodes if IcsInterface::UseSink is set to true
+		 * It uses a threshold to communicate to the rsu that it has reached the center of the
+		 * intersection and that the current message will be its last one the current direction
+		 */
+		class BehaviourSpeedRSU: public BehaviourRsu
+		{
+			public:
+		    BehaviourSpeedRSU(iCSInterface * controller);
+		    virtual ~BehaviourSpeedRSU();
+		    void Start();
 
-  void updateMobilityInformation(MobilityInfo * info);
-  Vector2D getPosition();
-  Vector2D getVelocity();
-  double getDirection();
-
-  /// @brief helper function that adds SetCAMArea subscription
-  void subscribeSendingCAMs();
-
-protected:
-  void addSubscriptions();
-private:
-  MobilityInfo * m_position;
-  void selectNodeType();
-};
-
-} /* namespace application */
+		};
+	} /* namespace application */
 } /* namespace protocol */
 
-#endif /* MOBILE_NODE_H_ */
+#endif /* BEHAVIOUR_SPEED_RSU_H_ */

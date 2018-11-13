@@ -45,25 +45,21 @@ namespace baseapp
 
 		///BehaviourNode implementation
 		bool BehaviourNode::Enabled = true;
-		uint16_t BehaviourNode::ResponseTimeSpacing = 10;
 		double BehaviourNode::SinkThreshold = 20;
 
 		BehaviourNode::BehaviourNode(iCSInterface* controller) :
 				Behaviour(controller)
 		{
 			m_enabled = Enabled;
-			m_responseTimeSpacing = ResponseTimeSpacing;
-
+            m_responseTimeSpacing = Behaviour::DefaultResponseTimeSpacing;
 			m_rnd = ns3::UniformVariable();
-			m_eventResponse = 0;
+            m_eventResponse = 0;
 
 			RegisterTrace("NodeSendData", m_traceSendData);
 		}
 
 		BehaviourNode::~BehaviourNode()
-		{
-			Scheduler::Cancel(m_eventResponse);
-		}
+		{}
 
 		void BehaviourNode::Start()
 		{
@@ -73,7 +69,6 @@ namespace baseapp
 		}
 		void BehaviourNode::Stop()
 		{
-			Scheduler::Cancel(m_eventResponse);
 			Behaviour::Stop();
 		}
 
@@ -90,11 +85,6 @@ namespace baseapp
 		{
 			return false;
 		}
-
-        void BehaviourNode::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
-        {
-
-        }
 
 
 	} /* namespace application */

@@ -36,6 +36,7 @@
 
 #include "behaviour-test-rsu.h"
 #include "ics-interface.h"
+#include "fixed-station.h"
 #include "program-configuration.h"
 #include "node.h"
 #include "../../app-commands-subscriptions-constants.h"
@@ -52,9 +53,10 @@ namespace testapp
 
 		///BehaviourTestRSU implementation
 		BehaviourTestRSU::BehaviourTestRSU(iCSInterface* controller) :
-				BehaviourNode(controller), m_firstBroadcast(true), m_broadcastInterval(1000),
+				BehaviourRsu(controller), m_firstBroadcast(true), m_broadcastInterval(1000),
 				m_broadcastActive(true), m_eventBroadcast(0), m_eventAbortBroadcast(0)
 		{
+            m_mobilitySubscription = m_trafficLightSubscription = m_setCAMareaSubscription = m_subReceiveMessage = false;
 		}
 
 		BehaviourTestRSU::~BehaviourTestRSU() {
@@ -66,24 +68,56 @@ namespace testapp
 		{
 			if (!m_enabled)
 				return;
-			BehaviourNode::Start();
+			BehaviourRsu::Start();
 
             //Example use of a traci command subscription
             if (ProgramConfiguration::GetTestCase()=="simpleExecute") {
                 // rsu does nothing
             } else if (ProgramConfiguration::GetTestCase()=="setVType") {
                 // rsu does nothing
-            } else if (ProgramConfiguration::GetTestCase() == "commSimple") {
-                // TODO: Subscribe to receive CAMs?
-           } else if (ProgramConfiguration::GetTestCase() == "commSimple2") {
-               // Start broadcasting at 5000
-               int broadcastStart = 5000;
-               int broadcastEnd = 10000;
-               m_eventBroadcast = Scheduler::Schedule(broadcastStart, &BehaviourTestRSU::RSUBroadcastCommSimple2, this);
-               m_eventAbortBroadcast = Scheduler::Schedule(broadcastEnd, &BehaviourTestRSU::abortBroadcast, this);
-               NS_LOG_INFO(Log() << "RSU scheduled broadcast start at " << broadcastStart << " and broadcastEnd at " << broadcastEnd);
-          }
+            } else if (ProgramConfiguration::GetTestCase() == "commSimple" || ProgramConfiguration::GetTestCase() == "commSimple2") {
 
+                // Subscribe to receive geobroadcast messages
+                GetNode()->subscribeToGeobroadcastReception(MSGCAT_TESTAPP);
+                m_subReceiveMessage = true;
+
+                if (ProgramConfiguration::GetTestCase() == "commSimple2") {
+                    // Start broadcasting at 5000
+                    int broadcastStart = 5000;
+                    int broadcastEnd = 10000;
+                    m_eventBroadcast = Scheduler::Schedule(broadcastStart, &BehaviourTestRSU::RSUBroadcastCommSimple2, this);
+                    m_eventAbortBroadcast = Scheduler::Schedule(broadcastEnd, &BehaviourTestRSU::abortBroadcast, this);
+                    NS_LOG_INFO(Log() << "RSU scheduled broadcast start at " << broadcastStart << " and broadcastEnd at " << broadcastEnd);
+                }
+            } else if (ProgramConfiguration::GetTestCase() == "CAMsimple"){
+              if (!m_setCAMareaSubscription)
+              {
+                  GetNode()->subscribeSendingCAMs();
+                  GetNode()->subscribeToCAMInfo();
+                  m_setCAMareaSubscription = true;
+              }
+          } else if (ProgramConfiguration::GetTestCase() == "acosta" || ProgramConfiguration::GetTestCase() == "") {
+                // in original demo-app this was included, but not needed for most simple test cases
+                if (!m_mobilitySubscription)
+                {
+                    GetNode()->nodeGetMobilityInformation();
+                    m_mobilitySubscription = true;
+                }
+
+                if (!m_trafficLightSubscription)
+                {
+                    GetNode()->subscribeTrafficLightInformation();
+                    m_trafficLightSubscription = true;
+                }
+
+                if (!m_subReceiveMessage)
+                {
+                    //Subscribe to geobroadcast and unicast
+                    GetNode()->subscribeToUnicastReception();
+                    GetNode()->subscribeToGeobroadcastReception(PROTOCOL_MESSAGE);
+                    m_subReceiveMessage = true;
+                }
+            }
 		}
 
 		bool BehaviourTestRSU::IsSubscribedTo(ProtocolId pid) const
@@ -115,6 +149,7 @@ namespace testapp
                 Scheduler::Cancel(m_eventResponse);
                 if (receivedTestHeader->getMessage() == "Vehicle response to RSU Vehicle acknowledgement") {
                     // Random offset for responseTime
+//                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends stop advice response on reception of Vehicle response to RSU Vehicle acknowledgement.");
                     NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends stop advice response on reception of Vehicle response to RSU Vehicle acknowledgement.");
                     TestHeader::ResponseInfo response;
                     response.message = "RSU Stop advice";
@@ -125,6 +160,7 @@ namespace testapp
                     NS_LOG_INFO(Log() << "scheduled a test response to Vehicle response to RSU Vehicle acknowledgement in " << responseTime);
                 } else if (receivedTestHeader->getMessage() == "Vehicle response to RSU broadcast") {
                     // Random offset for responseTime
+//                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends acknowledgement response on reception of vehicle's first response.");
                     NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends acknowledgement response on reception of vehicle's first response.");
                     TestHeader::ResponseInfo response;
                     response.message = "RSU Vehicle acknowledgement";

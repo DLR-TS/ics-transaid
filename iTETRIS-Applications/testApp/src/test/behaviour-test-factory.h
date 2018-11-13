@@ -42,8 +42,8 @@
 using namespace baseapp;
 using namespace baseapp::application;
 
-class baseapp::application::iCSInterface;
-class baseapp::application::Node;
+//class baseapp::application::iCSInterface;
+//class baseapp::application::Node;
 
 namespace testapp
 {

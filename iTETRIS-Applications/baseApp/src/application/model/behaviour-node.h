@@ -73,7 +73,6 @@ namespace baseapp
 		{
 			public:
 				static bool Enabled;
-				static uint16_t ResponseTimeSpacing;
 				static double SinkThreshold;
 
 				BehaviourNode(iCSInterface* controller);
@@ -85,8 +84,6 @@ namespace baseapp
 				virtual bool IsSubscribedTo(ProtocolId pid) const;
 				virtual void Receive(server::Payload *payload, double snr);
 				virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
-                virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
-
 
 				TypeBehaviour GetType() const
 				{
@@ -100,13 +97,13 @@ namespace baseapp
 
 			protected:
 				ns3::UniformVariable m_rnd;
-				//Configuration
-				uint16_t m_responseTimeSpacing;
-
-				// Events
-				event_id m_eventResponse;
 
 				TracedCallback<NodeInfo&> m_traceSendData;
+	            //Configuration
+	            uint16_t m_responseTimeSpacing;
+
+	            // Events
+	            event_id m_eventResponse;
 		};
 
 	} /* namespace application */

@@ -74,7 +74,6 @@ namespace baseapp
 			m_sumoClass = sumoClass;
 			selectNodeType();
 			m_position = new MobilityInfo(nodeId);
-            m_setCAMareaSubscription=false;
 			init(factory);
 		}
 
@@ -125,15 +124,10 @@ namespace baseapp
         void MobileNode::addSubscriptions()
         {
             Node::addSubscriptions();
-            if (ProgramConfiguration::GetTestCase() == "CAMsimple"){
-                if (!m_setCAMareaSubscription)
-                {
-                    m_setCAMareaSubscription = true;
-                    m_toSubscribe.push(SubscriptionHelper::SetCamArea(Circle( MobileNode::getPosition(), Node::getPropagationRadius())));
-                    m_toSubscribe.push(SubscriptionHelper::GetReceivedCamInfo());
-                }
-            }
         }
 
+        void MobileNode::subscribeSendingCAMs() {
+            m_toSubscribe.push(SubscriptionHelper::SetCamArea(Circle( MobileNode::getPosition(), Node::getPropagationRadius())));
+        }
 	} /* namespace application */
 } /* namespace protocol */

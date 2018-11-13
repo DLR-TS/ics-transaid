@@ -69,13 +69,13 @@ namespace baseapp
 				 */
 				void trafficLightInformation(const bool error, const std::vector<std::string> & data);
 
+                /// @brief helper function that adds SetCAMArea subscription
+                void subscribeSendingCAMs();
+
 			protected:
 				void addSubscriptions();
 			private:
-				bool m_mobilitySubscription;
-				bool m_trafficLightSubscription;
-				bool m_positionUpdated;
-                bool m_setCAMareaSubscription;
+                bool m_positionUpdated;
 				RsuData m_rsuData;
 				TrafficLight* m_trafficLight;
 		};

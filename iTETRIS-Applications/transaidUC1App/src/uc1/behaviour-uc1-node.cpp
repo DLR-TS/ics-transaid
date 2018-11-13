@@ -50,6 +50,8 @@ namespace uc1app
 	namespace application
 	{
 
+
+
 		///BehaviourUC1Node implementation
 		BehaviourUC1Node::BehaviourUC1Node(iCSInterface* controller) :
 				BehaviourNode(controller)

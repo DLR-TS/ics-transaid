@@ -194,10 +194,10 @@
 // ****************************************
 
 // Used for protocolspeed / traffic-monitor demo app
-#define PROTOCOL_MESSAGE 0x0b
+#define PROTOCOL_MESSAGE 0x0b // 11
 
 // Used for testApp messages
-#define MSGCAT_TESTAPP 0x0c
+#define MSGCAT_TESTAPP 0x0c // 12
 
 
 // ****************************************

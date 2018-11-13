@@ -182,6 +182,20 @@ namespace baseapp
 				 */
 				virtual void nodeGetMobilityInformation();
 
+				/// @brief helper function that adds SetCAMArea subscription
+                virtual void subscribeSendingCAMs() = 0;
+
+                /// @brief helper function that adds receiveCAMInfo subscription
+                virtual void subscribeToCAMInfo();
+
+                /// @brief helper function that add appMessageReceive subscriptions (for unicast)
+                virtual void subscribeToUnicastReception();
+
+                /// @brief helper function that add appMessageReceive subscriptions (for geobroadcast)
+                virtual void subscribeToGeobroadcastReception(const int messageId);
+
+                /// @brief helper function that add trafficLightInformation subscription
+                virtual void subscribeTrafficLightInformation();
 
 				/*****************************
 				 * Utility methods

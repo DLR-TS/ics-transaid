@@ -37,7 +37,7 @@
 #ifndef BEHAVIOUR_UC5_RSU_H_
 #define BEHAVIOUR_UC5_RSU_H_
 
-#include "behaviour-node.h"
+#include "behaviour-rsu.h"
 #include "scheduler.h"
 #include "random-variable.h"
 #include <map>
@@ -53,7 +53,7 @@ namespace uc5app
         /**
          * Behaviour for rsu in uc5 cases. Inherits from BehaviourNode to have the random response offset variables at hand.
          */
-		class BehaviourUC5RSU: public BehaviourNode
+		class BehaviourUC5RSU: public BehaviourRsu
 		{
 			public:
 				BehaviourUC5RSU(baseapp::application::iCSInterface* controller);

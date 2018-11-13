@@ -34,13 +34,13 @@
  * University of Bologna
  ***************************************************************************************/
 
-#include "behaviour-test-node.h"
+#include "log/console.h"
 #include "ics-interface.h"
+#include "behaviour-test-node.h"
 #include "program-configuration.h"
 #include "node.h"
 #include "../../app-commands-subscriptions-constants.h"
 #include "current-time.h"
-#include "log/console.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
@@ -49,7 +49,6 @@ namespace testapp
 {
 	namespace application
 	{
-
 		///BehaviourTestNode implementation
 		BehaviourTestNode::BehaviourTestNode(iCSInterface* controller) :
 				BehaviourNode(controller)
@@ -60,6 +59,8 @@ namespace testapp
             m_eventAbortWaitingForRSU = 0;
             m_eventBroadcast = 0;
             m_broadcastInterval = 1000;
+            m_setCAMareaSubscription=false;
+            m_subReceiveMessage = false;
 		}
 
         BehaviourTestNode::~BehaviourTestNode() {
@@ -86,17 +87,41 @@ namespace testapp
                 // Will be ineffective if communication runs as intended (test case commSimple2).
                 // Used for testing purposes before random offsets were assigned to messages. (test case commSimple)
                 // (=> abort at 12000, as the test vehicle is inserted at t=2000)
+                if (!m_subReceiveMessage) {
+                    GetNode()->subscribeToUnicastReception();
+                    GetNode()->subscribeToGeobroadcastReception(MSGCAT_TESTAPP);
+                    m_subReceiveMessage = true;
+                }
                 const int endWaitingTime = 10000;
                 m_eventAbortWaitingForRSU = Scheduler::Schedule(endWaitingTime, &BehaviourTestNode::abortWaitingForRSUResponse, this);
-                // TODO: Subscribe to receive CAMs?
             } else if (ProgramConfiguration::GetTestCase() == "commSimple2") {
                 // After t=8000, vehicle starts broadcasting until its broadcast is acknowledged or aborted at t = 12000
                 const int endWaitingTime = 10000;
                 const int insertionAccordingToRoutresFile = 2000;
+                if (!m_subReceiveMessage) {
+                    GetNode()->subscribeToUnicastReception();
+                    GetNode()->subscribeToGeobroadcastReception(MSGCAT_TESTAPP);
+                    m_subReceiveMessage = true;
+                }
                 m_eventAbortWaitingForRSU = Scheduler::Schedule(endWaitingTime, &BehaviourTestNode::abortWaitingForRSUResponse, this);
                 NS_LOG_INFO(Log() << "Vehicle scheduled abort waiting for RSU acknowledgement at " << endWaitingTime + insertionAccordingToRoutresFile);
+            } else if (ProgramConfiguration::GetTestCase() == "CAMsimple"){
+                if (!m_setCAMareaSubscription)
+                {
+                    GetNode()->subscribeSendingCAMs();
+                    GetNode()->subscribeToCAMInfo();
+                    m_setCAMareaSubscription = true;
+                }
+            } else if (ProgramConfiguration::GetTestCase() == "acosta" || ProgramConfiguration::GetTestCase() == "") {
+                if (!m_subReceiveMessage)
+                {
+                    //Subscribe to geobraodcast and unicast
+                    GetNode()->nodeGetMobilityInformation();
+                    GetNode()->subscribeToUnicastReception();
+                    GetNode()->subscribeToGeobroadcastReception(PROTOCOL_MESSAGE);
+                    m_subReceiveMessage = true;
+                }
             }
-
 		}
 
 		bool BehaviourTestNode::IsSubscribedTo(ProtocolId pid) const
@@ -140,6 +165,7 @@ namespace testapp
                 TestHeader::ResponseInfo response;
                 response.targetID = commHeader->getSourceId();
                 if (m_waitForRSUAcknowledgement && receivedTestHeader->getMessage() == "RSU regular broadcast message") {
+//                    NS_LOG_DEBUG(Log() << "Vehicle " << GetController()->GetNode()->getId() << "  and responds.");
                     NS_LOG_DEBUG(Log() << "Vehicle " << GetController()->GetNode()->getId() << "  and responds.");
                     response.message = "Vehicle response to RSU broadcast";
                     Scheduler::Cancel(m_eventResponse);

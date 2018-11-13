@@ -37,6 +37,7 @@
 #define BEHAVIOUR_RSU_H_
 
 #include "behaviour.h"
+#include "random-variable.h"
 #include "scheduler.h"
 #include "program-configuration.h"
 #include <map>
@@ -116,8 +117,26 @@ namespace baseapp
 					return TYPE_BEHAVIOUR_RSU;
 				}
 
-			private:
+			protected:
+                ns3::UniformVariable m_rnd;
+                uint16_t m_responseTimeSpacing;
+                event_id m_eventResponse;
 				std::vector<VehicleDirection> m_directions;
+
+				//Configuration
+				uint16_t m_timeBeaconMin;
+				uint16_t m_timeBeacon;
+				uint16_t m_timeCheck;
+				uint16_t m_timeOut;
+
+				//Events
+				event_id m_eventBeacon;
+				event_id m_eventCheck;
+
+				void EventBeacon(int position);
+				void EventCheck();
+
+			private:
 				double m_beaconInterval;
 
 				typedef std::map<const VehicleDirection, int, VehicleDirectionOrdering> DirMap;
@@ -137,19 +156,8 @@ namespace baseapp
 				 */
 				void CheckTimeout();
 
-				//Configuration
-				uint16_t m_timeBeaconMin;
-				uint16_t m_timeBeacon;
-				uint16_t m_timeCheck;
-				uint16_t m_timeOut;
 
-				//Events
-				event_id m_eventBeacon;
-				event_id m_eventCheck;
-
-				void EventBeacon(int position);
 				bool m_executeAtThisStep;
-				void EventCheck();
 
 				/**
 				 * @brief Called when a beacon response is received
