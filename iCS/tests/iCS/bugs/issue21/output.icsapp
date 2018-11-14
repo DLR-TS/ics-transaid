@@ -8,6 +8,7 @@ iCS --> ns-3 launched.
 
 STEP 2 - SETUP PHASE
 testApp -> Starting iTetris test app
+testApp -> [WARNING]Ignoring socket port specified in configuration. (Overridden by command line argument.)
 testApp -> Test case set to simpleExecute
 testApp -> ParseGeneral done
 testApp -> ParseInfrastructure done
@@ -24,4 +25,4 @@ iCS -->  Could not connect to SUMO
 
 iCS --> #Error while sending command: no connection to serveriCS --> [ERROR] CloseNs3() Finishing NS-3
 iCS --> Error occurred during iCS set-up
-Elapsed time (in seconds): 3.00
+Elapsed time (in seconds): 2.00

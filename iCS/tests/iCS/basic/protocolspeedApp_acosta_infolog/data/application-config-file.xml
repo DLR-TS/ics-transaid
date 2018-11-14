@@ -4,7 +4,7 @@
     <name>protocolspeedApp</name>
     <executable>protocolspeedApp -c protocol-config-file.xml</executable> 
     <ip>localhost</ip>
-    <port>1987</port>
+    <port>0</port>
     <seed>123456</seed>
     <rate>100</rate>
     <result-container>OUTPUT_GENERIC</result-container> 
