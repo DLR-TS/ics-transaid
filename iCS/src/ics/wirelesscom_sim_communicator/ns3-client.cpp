@@ -102,9 +102,8 @@ namespace ics
 // ===========================================================================
 // member method definitions
 // ===========================================================================
-	Ns3Client::Ns3Client()
-	{
-	}
+	Ns3Client::Ns3Client() : m_socket(nullptr), m_port(0)
+	{}
 
 	Ns3Client::~Ns3Client()
 	{
@@ -912,7 +911,7 @@ namespace ics
 		StorageNs3 outMsg;
 		StorageNs3 inMsg;
 
-		if (m_socket == NULL)
+		if (m_socket == nullptr)
 		{
 			cout << "iCS --> #Error while sending command: no connection to server";
 			return EXIT_FAILURE;
