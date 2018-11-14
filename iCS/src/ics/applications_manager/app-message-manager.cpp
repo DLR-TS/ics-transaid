@@ -97,7 +97,7 @@ namespace ics
 				cout << "iCS --> Trying " << i << " to connect Application on port " << port << "..." << endl;
 				m_socket->connect();
 				return true;
-			} catch (SocketException e)
+			} catch (exception& e)
 			{
 				cout << "iCS --> No connection to Application; waiting..." << endl;
 				Sleep(3);
