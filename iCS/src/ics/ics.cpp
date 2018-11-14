@@ -433,6 +433,10 @@ ICS::SetupApplications(string filePath)
             snprintf(executable, s.size()+1, "%s", ss.str().c_str());
         }
 
+		// DEBUG:
+//        std::string s = std::string("echo '##### Bypassing app start for debugging' ####");
+//        snprintf(executable, s.size()+1, "%s", s.c_str());
+
 		m_syncManager->RecognizeNewApplication(appHandler);
 
 		// Loop fixed nodes and install the application on nodes defined by the configuration file
