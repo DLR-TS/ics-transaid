@@ -1,0 +1,38 @@
+# Create automated vType distribution.
+
+# Parametrization Scheme: Pessimistic Safety (PS)
+
+#############################################
+# Attribute distributions for the ACC model.#
+# Aggressive ACC.							#
+#############################################
+carFollowModel ; ACC
+tau            ; normal(1.2, 0.1); [1.1, 1.3]
+accel          ; normal(1.5, 1.0); [0.75, 2.0]
+decel          ; normal(3.0, 1.0); [2.0, 4.0]
+emergencyDecel ; 9.0
+
+######################
+# Generic Attributes.#
+######################
+color; blue
+actionStepLength ; 0.1
+
+################################################
+# Attribute distributions for the SL2015 model.#
+# Aggressive SL2015.						   #
+################################################
+lcAssertive ; normal(0.9, 0.1); [0.8, 1.0]
+
+#################################################
+# Attribute distributions for the TOC/MRM model.#
+# Conservative TOC/MRM.							#
+#################################################
+param; has.toc.device              ; true
+param; device.toc.manualType       ; vehLVPS
+param; device.toc.automatedType    ; vehCVToCPS
+param; device.toc.responseTime     ; 0.0
+param; device.toc.initialAwareness ; normal(0.3, 0.3); [0.1, 1.0]
+param; device.toc.recoveryRate     ; normal(0.2, 0.1); [0.01, 0.5]
+param; device.toc.mrmDecel         ; 3.0
+param; device.toc.useColorScheme   ; true

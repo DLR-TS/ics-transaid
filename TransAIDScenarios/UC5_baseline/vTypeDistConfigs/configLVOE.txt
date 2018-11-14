@@ -1,0 +1,19 @@
+# Create automated vType distribution
+
+############################################
+# LVs Car-following Model (Manual Driving) #
+############################################
+carFollowModel ; Krauss
+sigma          ; normal(0.2, 0.5); [0.0, 1.0]
+tau            ; normal(0.6, 0.5); [0.5, 1.6]
+decel          ; normal(3.5, 1.0); [2.0, 4.5]
+accel          ; normal(2.0, 1.0); [1.0, 3.5]
+speedFactor    ; normal(1.1, 0.2); [0.8, 1.2]
+emergencyDecel ; 9.0
+
+######################
+# Generic Attributes.#
+######################
+color; yellow
+actionStepLength ; 0.1
+lcAssertive; 1.3
