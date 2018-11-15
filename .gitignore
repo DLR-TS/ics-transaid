@@ -72,3 +72,4 @@ iTETRIS-Applications/testApp/testScenario/*.txt
 iTETRIS-Applications/testApp/docs/html
 iTETRIS-Applications/testApp/docs/man
 iTETRIS-Applications/testApp/docs/latex
+TransAIDScenarios/**/los_*
