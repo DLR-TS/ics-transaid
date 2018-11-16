@@ -74,6 +74,10 @@ FacilitiesGetConfig::FacilitiesGetConfig() {
     ATTR_LDMrulesConFilename    = XMLString::transcode("LDMrulesConFilename");
 
     m_ConfigFileParser = new XercesDOMParser;
+
+    referenceLatitude = -1;
+    referenceLongitude = -1;
+    referenceAltitude = -1;
 }
 
 /**
@@ -83,17 +87,17 @@ FacilitiesGetConfig::FacilitiesGetConfig() {
  */
 
 FacilitiesGetConfig::~FacilitiesGetConfig() {
-    delete[] TAG_Facilties;
-    delete[] TAG_LocalCoordinates;
-    delete[] TAG_MapConfig;
-    delete[] TAG_StationsConfig;
-    delete[] TAG_LDMrulesConfig;
-    delete[] ATTR_latitude;
-    delete[] ATTR_longitude;
-    delete[] ATTR_altitude;
-    delete[] ATTR_MapConFilename;
-    delete[] ATTR_StationsConFilename;
-    delete[] ATTR_LDMrulesConFilename;
+    XMLString::release(&TAG_Facilties);
+    XMLString::release(&TAG_LocalCoordinates);
+    XMLString::release(&TAG_MapConfig);
+    XMLString::release(&TAG_StationsConfig);
+    XMLString::release(&TAG_LDMrulesConfig);
+    XMLString::release(&ATTR_latitude);
+    XMLString::release(&ATTR_longitude);
+    XMLString::release(&ATTR_altitude);
+    XMLString::release(&ATTR_MapConFilename);
+    XMLString::release(&ATTR_StationsConFilename);
+    XMLString::release(&ATTR_LDMrulesConFilename);
 }
 
 /**
@@ -157,7 +161,7 @@ throw(std::runtime_error) {
                 const XMLCh* xmlch_mapConfFileName = currentElement->getAttribute(ATTR_MapConFilename);
                 char* tmpString = XMLString::transcode(xmlch_mapConfFileName);
                 mapConfigurationFilename = tmpString;
-                delete[] tmpString;
+                XMLString::release(&tmpString);
             }
         }
 
@@ -172,19 +176,19 @@ throw(std::runtime_error) {
                     const XMLCh* xmlch_latitude = currentElement->getAttribute(ATTR_latitude);
                     char* tmpString = XMLString::transcode(xmlch_latitude);
                     referenceLatitude = TplConvert::_2SUMOReal(tmpString);
-                    delete[] tmpString;
+                    XMLString::release(&tmpString);
                 }
                 if (currentElement->hasAttribute(ATTR_longitude)) {
                     const XMLCh* xmlch_longitude = currentElement->getAttribute(ATTR_longitude);
                     char* tmpString = XMLString::transcode(xmlch_longitude);
                     referenceLongitude = TplConvert::_2SUMOReal(tmpString);
-                    delete[] tmpString;
+                    XMLString::release(&tmpString);
                 }
                 if (currentElement->hasAttribute(ATTR_altitude)) {
                     const XMLCh* xmlch_altitude = currentElement->getAttribute(ATTR_altitude);
                     char* tmpString = XMLString::transcode(xmlch_altitude);
                     referenceAltitude = TplConvert::_2SUMOReal(tmpString);
-                    delete[] tmpString;
+                    XMLString::release(&tmpString);
                 } else
                     referenceAltitude = -10000;     // Clearly you cannot be -10000 meters below the see level!
             }
@@ -202,7 +206,7 @@ throw(std::runtime_error) {
                 const XMLCh* xmlch_mapConfFileName = currentElement->getAttribute(ATTR_StationsConFilename);
                 char* tmpString = XMLString::transcode(xmlch_mapConfFileName);
                 stationsConfigurationFilename = tmpString;
-                delete[] tmpString;
+                XMLString::release(&tmpString);
             }
         }
 
@@ -219,7 +223,7 @@ throw(std::runtime_error) {
                 const XMLCh* xmlch_mapConfFileName = currentElement->getAttribute(ATTR_LDMrulesConFilename);
                 char* tmpString = XMLString::transcode(xmlch_mapConfFileName);
                 LDMrulesConfigurationFilename = tmpString;
-                delete[] tmpString;
+                XMLString::release(&tmpString);
             }
         }
 

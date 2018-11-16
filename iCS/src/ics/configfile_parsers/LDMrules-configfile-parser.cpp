@@ -159,89 +159,89 @@ LDMrulesGetConfig::LDMrulesGetConfig() {
  */
 
 LDMrulesGetConfig::~LDMrulesGetConfig() {
-    delete[] TAG_LDMrules;
+    XMLString::release(&TAG_LDMrules);
 
-    delete[] TAG_defaultMessageLifeInterval;
-    delete[] ATTR_value;
+    XMLString::release(&TAG_defaultMessageLifeInterval);
+    XMLString::release(&ATTR_value);
 
-    delete[] TAG_relevantArea;
+    XMLString::release(&TAG_relevantArea);
 
-    delete[] TAG_lane;
-    delete[] TAG_edge;
-    delete[] TAG_junction;
-    delete[] ATTR_ID;
+    XMLString::release(&TAG_lane);
+    XMLString::release(&TAG_edge);
+    XMLString::release(&TAG_junction);
+    XMLString::release(&ATTR_ID);
 
-    delete[] TAG_circle;
-    delete[] ATTR_centerX;
-    delete[] ATTR_centerY;
-    delete[] ATTR_centerLat;
-    delete[] ATTR_centerLon;
-    delete[] ATTR_radius;
+    XMLString::release(&TAG_circle);
+    XMLString::release(&ATTR_centerX);
+    XMLString::release(&ATTR_centerY);
+    XMLString::release(&ATTR_centerLat);
+    XMLString::release(&ATTR_centerLon);
+    XMLString::release(&ATTR_radius);
 
-    delete[] TAG_ellipse;
-    delete[] ATTR_focus1X;
-    delete[] ATTR_focus1Y;
-    delete[] ATTR_focus1Lat;
-    delete[] ATTR_focus1Lon;
-    delete[] ATTR_focus2X;
-    delete[] ATTR_focus2Y;
-    delete[] ATTR_focus2Lat;
-    delete[] ATTR_focus2Lon;
-    delete[] ATTR_eccentricity;
-    delete[] ATTR_majorAxis;
-    delete[] ATTR_minorAxis;
-    delete[] ATTR_rotationAngleRadians;
+    XMLString::release(&TAG_ellipse);
+    XMLString::release(&ATTR_focus1X);
+    XMLString::release(&ATTR_focus1Y);
+    XMLString::release(&ATTR_focus1Lat);
+    XMLString::release(&ATTR_focus1Lon);
+    XMLString::release(&ATTR_focus2X);
+    XMLString::release(&ATTR_focus2Y);
+    XMLString::release(&ATTR_focus2Lat);
+    XMLString::release(&ATTR_focus2Lon);
+    XMLString::release(&ATTR_eccentricity);
+    XMLString::release(&ATTR_majorAxis);
+    XMLString::release(&ATTR_minorAxis);
+    XMLString::release(&ATTR_rotationAngleRadians);
 
-    delete[] TAG_rectangle;
-    delete[] ATTR_vertexAX;
-    delete[] ATTR_vertexAY;
-    delete[] ATTR_vertexALat;
-    delete[] ATTR_vertexALon;
-    delete[] ATTR_vertexBX;
-    delete[] ATTR_vertexBY;
-    delete[] ATTR_vertexBLat;
-    delete[] ATTR_vertexBLon;
-    delete[] ATTR_vertexCX;
-    delete[] ATTR_vertexCY;
-    delete[] ATTR_vertexCLat;
-    delete[] ATTR_vertexCLon;
-    delete[] ATTR_vertexDX;
-    delete[] ATTR_vertexDY;
-    delete[] ATTR_vertexDLat;
-    delete[] ATTR_vertexDLon;
-    delete[] ATTR_pointAX;
-    delete[] ATTR_pointAY;
-    delete[] ATTR_pointALat;
-    delete[] ATTR_pointALon;
-    delete[] ATTR_pointBX;
-    delete[] ATTR_pointBY;
-    delete[] ATTR_pointBLat;
-    delete[] ATTR_pointBLon;
-    delete[] ATTR_height;
+    XMLString::release(&TAG_rectangle);
+    XMLString::release(&ATTR_vertexAX);
+    XMLString::release(&ATTR_vertexAY);
+    XMLString::release(&ATTR_vertexALat);
+    XMLString::release(&ATTR_vertexALon);
+    XMLString::release(&ATTR_vertexBX);
+    XMLString::release(&ATTR_vertexBY);
+    XMLString::release(&ATTR_vertexBLat);
+    XMLString::release(&ATTR_vertexBLon);
+    XMLString::release(&ATTR_vertexCX);
+    XMLString::release(&ATTR_vertexCY);
+    XMLString::release(&ATTR_vertexCLat);
+    XMLString::release(&ATTR_vertexCLon);
+    XMLString::release(&ATTR_vertexDX);
+    XMLString::release(&ATTR_vertexDY);
+    XMLString::release(&ATTR_vertexDLat);
+    XMLString::release(&ATTR_vertexDLon);
+    XMLString::release(&ATTR_pointAX);
+    XMLString::release(&ATTR_pointAY);
+    XMLString::release(&ATTR_pointALat);
+    XMLString::release(&ATTR_pointALon);
+    XMLString::release(&ATTR_pointBX);
+    XMLString::release(&ATTR_pointBY);
+    XMLString::release(&ATTR_pointBLat);
+    XMLString::release(&ATTR_pointBLon);
+    XMLString::release(&ATTR_height);
 
-    delete[] TAG_convexPolygon;
-    delete[] TAG_vertex;
-    delete[] ATTR_X;
-    delete[] ATTR_Y;
-    delete[] ATTR_Lat;
-    delete[] ATTR_Lon;
+    XMLString::release(&TAG_convexPolygon);
+    XMLString::release(&TAG_vertex);
+    XMLString::release(&ATTR_X);
+    XMLString::release(&ATTR_Y);
+    XMLString::release(&ATTR_Lat);
+    XMLString::release(&ATTR_Lon);
 
-    delete[] TAG_relevantDirection;
-    delete[] ATTR_radiansFromNorth;
-    delete[] ATTR_accuracy;
+    XMLString::release(&TAG_relevantDirection);
+    XMLString::release(&ATTR_radiansFromNorth);
+    XMLString::release(&ATTR_accuracy);
 
-    delete[] TAG_relevantStationTypes;
-    delete[] ATTR_fixed;
-    delete[] ATTR_mobile;
+    XMLString::release(&TAG_relevantStationTypes);
+    XMLString::release(&ATTR_fixed);
+    XMLString::release(&ATTR_mobile);
 
-    delete[] TAG_relevantMessages;
-    delete[] ATTR_cam;
-    delete[] ATTR_denm;
-    delete[] ATTR_topobroadcast;
-    delete[] ATTR_geobroadcast;
-    delete[] ATTR_geoanycast;
-    delete[] ATTR_unicast;
-    delete[] ATTR_multicast;
+    XMLString::release(&TAG_relevantMessages);
+    XMLString::release(&ATTR_cam);
+    XMLString::release(&ATTR_denm);
+    XMLString::release(&ATTR_topobroadcast);
+    XMLString::release(&ATTR_geobroadcast);
+    XMLString::release(&ATTR_geoanycast);
+    XMLString::release(&ATTR_unicast);
+    XMLString::release(&ATTR_multicast);
 }
 
 /**
@@ -308,7 +308,7 @@ throw(std::runtime_error) {
                 const XMLCh* xmlch_string = element->getAttribute(ATTR_value);
                 char* tmp_string_ch = XMLString::transcode(xmlch_string);
                 sscanf(tmp_string_ch, "%u", &m_defaultMessageLifeInterval);
-                delete[] tmp_string_ch;
+                XMLString::release(&tmp_string_ch);
             }
         }
 
@@ -334,11 +334,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_centerX);
                             char* tmp_stringX_ch = XMLString::transcode(xmlch_string);
                             newCircle.m_center.m_X = TplConvert::_2SUMOReal(tmp_stringX_ch);
-                            delete[] tmp_stringX_ch;
+                            XMLString::release(&tmp_stringX_ch);
                             xmlch_string = _element->getAttribute(ATTR_centerY);
                             char* tmp_stringY_ch = XMLString::transcode(xmlch_string);
                             newCircle.m_center.m_Y = TplConvert::_2SUMOReal(tmp_stringY_ch);
-                            delete[] tmp_stringY_ch;
+                            XMLString::release(&tmp_stringY_ch);
                         } else {
                             newCircle.m_center.m_X = NAN;
                             newCircle.m_center.m_Y = NAN;
@@ -350,11 +350,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_centerLat);
                             char * tmp_stringLat_ch = XMLString::transcode(xmlch_string);
                             newCircle.m_center.m_Lat = TplConvert::_2SUMOReal(tmp_stringLat_ch);
-                            delete[] tmp_stringLat_ch;
+                            XMLString::release(&tmp_stringLat_ch);
                             xmlch_string = _element->getAttribute(ATTR_centerLon);
                             char* tmp_stringLon_ch = XMLString::transcode(xmlch_string);
                             newCircle.m_center.m_Lon = TplConvert::_2SUMOReal(tmp_stringLon_ch);
-                            delete[] tmp_stringLon_ch;
+                            XMLString::release(&tmp_stringLon_ch);
                         } else {
                             newCircle.m_center.m_Lat = NAN;
                             newCircle.m_center.m_Lon = NAN;
@@ -365,7 +365,7 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_stringRadius = _element->getAttribute(ATTR_radius);
                             char* tmp_stringRadius_ch = XMLString::transcode(xmlch_stringRadius);
                             newCircle.m_radius = TplConvert::_2SUMOReal(tmp_stringRadius_ch);
-                            delete[] tmp_stringRadius_ch;
+                            XMLString::release(&tmp_stringRadius_ch);
                         } else newCircle.m_radius = NAN;
 
                         m_relevantCircles.push_back(newCircle);
@@ -380,11 +380,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_centerX);
                             char* tmp_stringCenterX_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_center.m_X = TplConvert::_2SUMOReal(tmp_stringCenterX_ch);
-                            delete[] tmp_stringCenterX_ch;
+                            XMLString::release(&tmp_stringCenterX_ch);
                             xmlch_string = _element->getAttribute(ATTR_centerY);
                             char* tmp_stringCenterY_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_center.m_Y = TplConvert::_2SUMOReal(tmp_stringCenterY_ch);
-                            delete[] tmp_stringCenterY_ch;
+                            XMLString::release(&tmp_stringCenterY_ch);
                         } else {
                             newEllipse.m_center.m_Y = NAN;
                             newEllipse.m_center.m_Y = NAN;
@@ -395,11 +395,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_centerLat);
                             char* tmp_stringCenterLat_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_center.m_Lat = TplConvert::_2SUMOReal(tmp_stringCenterLat_ch);
-                            delete[] tmp_stringCenterLat_ch;
+                            XMLString::release(&tmp_stringCenterLat_ch);
                             xmlch_string = _element->getAttribute(ATTR_centerLon);
                             char* tmp_stringCenterLon_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_center.m_Lon = TplConvert::_2SUMOReal(tmp_stringCenterLon_ch);
-                            delete[] tmp_stringCenterLon_ch;
+                            XMLString::release(&tmp_stringCenterLon_ch);
                         } else {
                             newEllipse.m_center.m_Lat = NAN;
                             newEllipse.m_center.m_Lon = NAN;
@@ -410,11 +410,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_focus1X);
                             char* tmp_stringFocus1X_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_focus1.m_X = TplConvert::_2SUMOReal(tmp_stringFocus1X_ch);
-                            delete[] tmp_stringFocus1X_ch;
+                            XMLString::release(&tmp_stringFocus1X_ch);
                             xmlch_string = _element->getAttribute(ATTR_focus1Y);
                             char* tmp_stringFocus1Y_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_focus1.m_Y = TplConvert::_2SUMOReal(tmp_stringFocus1Y_ch);
-                            delete[] tmp_stringFocus1Y_ch;
+                            XMLString::release(&tmp_stringFocus1Y_ch);
                         } else {
                             newEllipse.m_focus1.m_X = NAN;
                             newEllipse.m_focus1.m_Y = NAN;
@@ -425,11 +425,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_focus1Lat);
                             char* tmp_stringFocus1Lat_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_focus1.m_Lat = TplConvert::_2SUMOReal(tmp_stringFocus1Lat_ch);
-                            delete[] tmp_stringFocus1Lat_ch;
+                            XMLString::release(&tmp_stringFocus1Lat_ch);
                             xmlch_string = _element->getAttribute(ATTR_focus1Lon);
                             char* tmp_stringFocus1Lon_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_focus1.m_Lon = TplConvert::_2SUMOReal(tmp_stringFocus1Lon_ch);
-                            delete[] tmp_stringFocus1Lon_ch;
+                            XMLString::release(&tmp_stringFocus1Lon_ch);
                         } else {
                             newEllipse.m_focus1.m_Lat = NAN;
                             newEllipse.m_focus1.m_Lon = NAN;
@@ -440,11 +440,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_focus2X);
                             char* tmp_stringFocus2X_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_focus2.m_X = TplConvert::_2SUMOReal(tmp_stringFocus2X_ch);
-                            delete[] tmp_stringFocus2X_ch;
+                            XMLString::release(&tmp_stringFocus2X_ch);
                             xmlch_string = _element->getAttribute(ATTR_focus2Y);
                             char* tmp_stringFocus2Y_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_focus2.m_Y = TplConvert::_2SUMOReal(tmp_stringFocus2Y_ch);
-                            delete[] tmp_stringFocus2Y_ch;
+                            XMLString::release(&tmp_stringFocus2Y_ch);
                         } else {
                             newEllipse.m_focus2.m_X = NAN;
                             newEllipse.m_focus2.m_Y = NAN;
@@ -455,11 +455,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_focus2Lat);
                             char* tmp_stringFocus2Lat_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_focus2.m_Lat = TplConvert::_2SUMOReal(tmp_stringFocus2Lat_ch);
-                            delete[] tmp_stringFocus2Lat_ch;
+                            XMLString::release(&tmp_stringFocus2Lat_ch);
                             xmlch_string = _element->getAttribute(ATTR_focus2Lon);
                             char* tmp_stringFocus2Lon_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_focus2.m_Lon = TplConvert::_2SUMOReal(tmp_stringFocus2Lon_ch);
-                            delete[] tmp_stringFocus2Lon_ch;
+                            XMLString::release(&tmp_stringFocus2Lon_ch);
                         } else {
                             newEllipse.m_focus2.m_Lat = NAN;
                             newEllipse.m_focus2.m_Lon = NAN;
@@ -469,28 +469,28 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_eccentricity);
                             char* tmp_stringEcc_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_eccentricity = TplConvert::_2SUMOReal(tmp_stringEcc_ch);
-                            delete[] tmp_stringEcc_ch;
+                            XMLString::release(&tmp_stringEcc_ch);
                         } else newEllipse.m_eccentricity = NAN;
 
                         if (_element->hasAttribute(ATTR_minorAxis)) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_minorAxis);
                             char* tmp_stringMinor_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_minorAxis = TplConvert::_2SUMOReal(tmp_stringMinor_ch);
-                            delete[] tmp_stringMinor_ch;
+                            XMLString::release(&tmp_stringMinor_ch);
                         } else newEllipse.m_minorAxis = NAN;
 
                         if (_element->hasAttribute(ATTR_majorAxis)) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_majorAxis);
                             char* tmp_stringMajor_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_majorAxis = TplConvert::_2SUMOReal(tmp_stringMajor_ch);
-                            delete[] tmp_stringMajor_ch;
+                            XMLString::release(&tmp_stringMajor_ch);
                         } else newEllipse.m_majorAxis = NAN;
 
                         if (_element->hasAttribute(ATTR_rotationAngleRadians)) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_rotationAngleRadians);
                             char* tmp_stringAngle_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_rotationAngleRadians = TplConvert::_2SUMOReal(tmp_stringAngle_ch);
-                            delete[] tmp_stringAngle_ch;
+                            XMLString::release(&tmp_stringAngle_ch);
                         } else newEllipse.m_rotationAngleRadians = NAN;
 
                         m_relevantEllipses.push_back(newEllipse);
@@ -506,11 +506,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_vertexAX);
                             char* tmp_stringVertexAX_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexA.m_X = TplConvert::_2SUMOReal(tmp_stringVertexAX_ch);
-                            delete[] tmp_stringVertexAX_ch;
+                            XMLString::release(&tmp_stringVertexAX_ch);
                             xmlch_string = _element->getAttribute(ATTR_vertexAY);
                             char* tmp_stringVertexAY_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexA.m_Y = TplConvert::_2SUMOReal(tmp_stringVertexAY_ch);
-                            delete[] tmp_stringVertexAY_ch;
+                            XMLString::release(&tmp_stringVertexAY_ch);
                         } else {
                             newRectangle.m_vertexA.m_X = NAN;
                             newRectangle.m_vertexA.m_Y = NAN;
@@ -521,11 +521,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_vertexALat);
                             char* tmp_stringVertexALat_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexA.m_Lat = TplConvert::_2SUMOReal(tmp_stringVertexALat_ch);
-                            delete[] tmp_stringVertexALat_ch;
+                            XMLString::release(&tmp_stringVertexALat_ch);
                             xmlch_string = _element->getAttribute(ATTR_vertexALon);
                             char* tmp_stringVertexALon_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexA.m_Lon = TplConvert::_2SUMOReal(tmp_stringVertexALon_ch);
-                            delete[] tmp_stringVertexALon_ch;
+                            XMLString::release(&tmp_stringVertexALon_ch);
                         } else {
                             newRectangle.m_vertexA.m_Lat = NAN;
                             newRectangle.m_vertexA.m_Lon = NAN;
@@ -536,11 +536,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_vertexBX);
                             char* tmp_stringVertexBX_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexB.m_X = TplConvert::_2SUMOReal(tmp_stringVertexBX_ch);
-                            delete[] tmp_stringVertexBX_ch;
+                            XMLString::release(&tmp_stringVertexBX_ch);
                             xmlch_string = _element->getAttribute(ATTR_vertexBY);
                             char* tmp_stringVertexBY_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexB.m_Y = TplConvert::_2SUMOReal(tmp_stringVertexBY_ch);
-                            delete[] tmp_stringVertexBY_ch;
+                            XMLString::release(&tmp_stringVertexBY_ch);
                         } else {
                             newRectangle.m_vertexB.m_X = NAN;
                             newRectangle.m_vertexB.m_Y = NAN;
@@ -551,11 +551,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_vertexBLat);
                             char* tmp_stringVertexBLat_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexB.m_Lat = TplConvert::_2SUMOReal(tmp_stringVertexBLat_ch);
-                            delete[] tmp_stringVertexBLat_ch;
+                            XMLString::release(&tmp_stringVertexBLat_ch);
                             xmlch_string = _element->getAttribute(ATTR_vertexBLon);
                             char* tmp_stringVertexBLon_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexB.m_Lon = TplConvert::_2SUMOReal(tmp_stringVertexBLon_ch);
-                            delete[] tmp_stringVertexBLon_ch;
+                            XMLString::release(&tmp_stringVertexBLon_ch);
                         } else {
                             newRectangle.m_vertexB.m_Lat = NAN;
                             newRectangle.m_vertexB.m_Lon = NAN;
@@ -566,11 +566,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_vertexCX);
                             char* tmp_stringVertexCX_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexC.m_X = TplConvert::_2SUMOReal(tmp_stringVertexCX_ch);
-                            delete[] tmp_stringVertexCX_ch;
+                            XMLString::release(&tmp_stringVertexCX_ch);
                             xmlch_string = _element->getAttribute(ATTR_vertexCY);
                             char* tmp_stringVertexCY_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexC.m_Y = TplConvert::_2SUMOReal(tmp_stringVertexCY_ch);
-                            delete[] tmp_stringVertexCY_ch;
+                            XMLString::release(&tmp_stringVertexCY_ch);
                         } else {
                             newRectangle.m_vertexC.m_X = NAN;
                             newRectangle.m_vertexC.m_Y = NAN;
@@ -581,11 +581,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_vertexCLat);
                             char* tmp_stringVertexCLat_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexC.m_Lat = TplConvert::_2SUMOReal(tmp_stringVertexCLat_ch);
-                            delete[] tmp_stringVertexCLat_ch;
+                            XMLString::release(&tmp_stringVertexCLat_ch);
                             xmlch_string = _element->getAttribute(ATTR_vertexCLon);
                             char* tmp_stringVertexCLon_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexC.m_Lon = TplConvert::_2SUMOReal(tmp_stringVertexCLon_ch);
-                            delete[] tmp_stringVertexCLon_ch;
+                            XMLString::release(&tmp_stringVertexCLon_ch);
                         } else {
                             newRectangle.m_vertexC.m_Lat = NAN;
                             newRectangle.m_vertexC.m_Lon = NAN;
@@ -596,11 +596,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_vertexDX);
                             char* tmp_stringVertexDX_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexD.m_X = TplConvert::_2SUMOReal(tmp_stringVertexDX_ch);
-                            delete[] tmp_stringVertexDX_ch;
+                            XMLString::release(&tmp_stringVertexDX_ch);
                             xmlch_string = _element->getAttribute(ATTR_vertexDY);
                             char* tmp_stringVertexDY_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexD.m_Y = TplConvert::_2SUMOReal(tmp_stringVertexDY_ch);
-                            delete[] tmp_stringVertexDY_ch;
+                            XMLString::release(&tmp_stringVertexDY_ch);
                         } else {
                             newRectangle.m_vertexD.m_X = NAN;
                             newRectangle.m_vertexD.m_Y = NAN;
@@ -611,11 +611,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_vertexDLat);
                             char* tmp_stringVertexDLat_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexD.m_Lat = TplConvert::_2SUMOReal(tmp_stringVertexDLat_ch);
-                            delete[] tmp_stringVertexDLat_ch;
+                            XMLString::release(&tmp_stringVertexDLat_ch);
                             xmlch_string = _element->getAttribute(ATTR_vertexDLon);
                             char* tmp_stringVertexDLon_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_vertexD.m_Lon = TplConvert::_2SUMOReal(tmp_stringVertexDLon_ch);
-                            delete[] tmp_stringVertexDLon_ch;
+                            XMLString::release(&tmp_stringVertexDLon_ch);
                         } else {
                             newRectangle.m_vertexD.m_Lat = NAN;
                             newRectangle.m_vertexD.m_Lon = NAN;
@@ -626,11 +626,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_centerX);
                             char* tmp_stringCenterX_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_center.m_X = TplConvert::_2SUMOReal(tmp_stringCenterX_ch);
-                            delete[] tmp_stringCenterX_ch;
+                            XMLString::release(&tmp_stringCenterX_ch);
                             xmlch_string = _element->getAttribute(ATTR_centerY);
                             char* tmp_stringCenterY_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_center.m_Y = TplConvert::_2SUMOReal(tmp_stringCenterY_ch);
-                            delete[] tmp_stringCenterY_ch;
+                            XMLString::release(&tmp_stringCenterY_ch);
                         } else {
                             newRectangle.m_center.m_X = NAN;
                             newRectangle.m_center.m_Y = NAN;
@@ -641,11 +641,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_centerLat);
                             char* tmp_stringCenterLat_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_center.m_Lat = TplConvert::_2SUMOReal(tmp_stringCenterLat_ch);
-                            delete[] tmp_stringCenterLat_ch;
+                            XMLString::release(&tmp_stringCenterLat_ch);
                             xmlch_string = _element->getAttribute(ATTR_centerLon);
                             char* tmp_stringCenterLon_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_center.m_Lon = TplConvert::_2SUMOReal(tmp_stringCenterLon_ch);
-                            delete[] tmp_stringCenterLon_ch;
+                            XMLString::release(&tmp_stringCenterLon_ch);
                         } else {
                             newRectangle.m_center.m_Lat = NAN;
                             newRectangle.m_center.m_Lon = NAN;
@@ -656,11 +656,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_pointAX);
                             char* tmp_stringPointAX_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_pointA.m_X = TplConvert::_2SUMOReal(tmp_stringPointAX_ch);
-                            delete[] tmp_stringPointAX_ch;
+                            XMLString::release(&tmp_stringPointAX_ch);
                             xmlch_string = _element->getAttribute(ATTR_pointAY);
                             char* tmp_stringPointAY_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_pointA.m_Y = TplConvert::_2SUMOReal(tmp_stringPointAY_ch);
-                            delete[] tmp_stringPointAY_ch;
+                            XMLString::release(&tmp_stringPointAY_ch);
                         } else {
                             newRectangle.m_pointA.m_X = NAN;
                             newRectangle.m_pointA.m_Y = NAN;
@@ -671,11 +671,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_pointALat);
                             char* tmp_stringPointALat_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_pointA.m_Lat = TplConvert::_2SUMOReal(tmp_stringPointALat_ch);
-                            delete[] tmp_stringPointALat_ch;
+                            XMLString::release(&tmp_stringPointALat_ch);
                             xmlch_string = _element->getAttribute(ATTR_pointALon);
                             char* tmp_stringPointALon_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_pointA.m_Lon = TplConvert::_2SUMOReal(tmp_stringPointALon_ch);
-                            delete[] tmp_stringPointALon_ch;
+                            XMLString::release(&tmp_stringPointALon_ch);
                         } else {
                             newRectangle.m_pointA.m_Lat = NAN;
                             newRectangle.m_pointA.m_Lon = NAN;
@@ -686,11 +686,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_pointBX);
                             char* tmp_stringPointBX_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_pointB.m_X = TplConvert::_2SUMOReal(tmp_stringPointBX_ch);
-                            delete[] tmp_stringPointBX_ch;
+                            XMLString::release(&tmp_stringPointBX_ch);
                             xmlch_string = _element->getAttribute(ATTR_pointBY);
                             char* tmp_stringPointBY_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_pointB.m_Y = TplConvert::_2SUMOReal(tmp_stringPointBY_ch);
-                            delete[] tmp_stringPointBY_ch;
+                            XMLString::release(&tmp_stringPointBY_ch);
                         } else {
                             newRectangle.m_pointB.m_X = NAN;
                             newRectangle.m_pointB.m_Y = NAN;
@@ -701,11 +701,11 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_pointBLat);
                             char* tmp_stringPointBLat_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_pointB.m_Lat = TplConvert::_2SUMOReal(tmp_stringPointBLat_ch);
-                            delete[] tmp_stringPointBLat_ch;
+                            XMLString::release(&tmp_stringPointBLat_ch);
                             xmlch_string = _element->getAttribute(ATTR_pointBLon);
                             char* tmp_stringPointBLon_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_pointB.m_Lon = TplConvert::_2SUMOReal(tmp_stringPointBLon_ch);
-                            delete[] tmp_stringPointBLon_ch;
+                            XMLString::release(&tmp_stringPointBLon_ch);
                         } else {
                             newRectangle.m_pointB.m_Lat = NAN;
                             newRectangle.m_pointB.m_Lon = NAN;
@@ -715,7 +715,7 @@ throw(std::runtime_error) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_height);
                             char* tmp_stringHeight_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_height = TplConvert::_2SUMOReal(tmp_stringHeight_ch);
-                            delete[] tmp_stringHeight_ch;
+                            XMLString::release(&tmp_stringHeight_ch);
                         } else newRectangle.m_height = NAN;
 
                         m_relevantRectangles.push_back(newRectangle);
@@ -737,11 +737,11 @@ throw(std::runtime_error) {
                                     const XMLCh* xmlch_stringX = __element->getAttribute(ATTR_X);
                                     char* tmp_stringX_ch = XMLString::transcode(xmlch_stringX);
                                     vertex.m_X = TplConvert::_2SUMOReal(tmp_stringX_ch);
-                                    delete[] tmp_stringX_ch;
+                                    XMLString::release(&tmp_stringX_ch);
                                     const XMLCh* xmlch_stringY = __element->getAttribute(ATTR_Y);
                                     char* tmp_stringY_ch = XMLString::transcode(xmlch_stringY);
                                     vertex.m_Y = TplConvert::_2SUMOReal(tmp_stringY_ch);
-                                    delete[] tmp_stringY_ch;
+                                    XMLString::release(&tmp_stringY_ch);
                                 } else {
                                     vertex.m_X = NAN;
                                     vertex.m_Y = NAN;
@@ -752,11 +752,11 @@ throw(std::runtime_error) {
                                     const XMLCh* xmlch_stringLat = __element->getAttribute(ATTR_Lat);
                                     char* tmp_stringLat_ch = XMLString::transcode(xmlch_stringLat);
                                     vertex.m_Lat = TplConvert::_2SUMOReal(tmp_stringLat_ch);
-                                    delete[] tmp_stringLat_ch;
+                                    XMLString::release(&tmp_stringLat_ch);
                                     const XMLCh* xmlch_stringLon = __element->getAttribute(ATTR_Lon);
                                     char* tmp_stringLon_ch = XMLString::transcode(xmlch_stringLon);
                                     vertex.m_Lon = TplConvert::_2SUMOReal(tmp_stringLon_ch);
-                                    delete[] tmp_stringLon_ch;
+                                    XMLString::release(&tmp_stringLon_ch);
                                 } else {
                                     vertex.m_Lat = NAN;
                                     vertex.m_Lon = NAN;
@@ -772,7 +772,7 @@ throw(std::runtime_error) {
                         const XMLCh* xmlch_string = _element->getAttribute(ATTR_ID);
                         char* tmp_stringID_ch = XMLString::transcode(xmlch_string);
                         newLane.ID = (char*) tmp_stringID_ch;
-                        delete[] tmp_stringID_ch;
+                        XMLString::release(&tmp_stringID_ch);
 
                         m_relevantLanes.push_back(newLane);
                     }
@@ -782,7 +782,7 @@ throw(std::runtime_error) {
                         const XMLCh* xmlch_string = _element->getAttribute(ATTR_ID);
                         char* tmp_stringID_ch = XMLString::transcode(xmlch_string);
                         newEdge.ID = (char*) tmp_stringID_ch;
-                        delete[] tmp_stringID_ch;
+                        XMLString::release(&tmp_stringID_ch);
 
                         m_relevantEdges.push_back(newEdge);
                     }
@@ -792,7 +792,7 @@ throw(std::runtime_error) {
                         const XMLCh* xmlch_string = _element->getAttribute(ATTR_ID);
                         char* tmp_stringID_ch = XMLString::transcode(xmlch_string);
                         newJunction.ID = (char*) tmp_stringID_ch;
-                        delete[] tmp_stringID_ch;
+                        XMLString::release(&tmp_stringID_ch);
 
                         m_relevantJunctions.push_back(newJunction);
                     }
@@ -812,11 +812,11 @@ throw(std::runtime_error) {
                 const XMLCh* xmlch_stringAng = element->getAttribute(ATTR_radiansFromNorth);
                 char* tmp_stringAngle_ch = XMLString::transcode(xmlch_stringAng);
                 m_relevantDirection.m_radiansFromNorth = TplConvert::_2SUMOReal(tmp_stringAngle_ch);
-                delete[] tmp_stringAngle_ch;
+                XMLString::release(&tmp_stringAngle_ch);
                 const XMLCh* xmlch_stringAcc = element->getAttribute(ATTR_accuracy);
                 char* tmp_stringAccuracy_ch = XMLString::transcode(xmlch_stringAcc);
                 m_relevantDirection.m_accuracy = TplConvert::_2SUMOReal(tmp_stringAccuracy_ch);
-                delete[] tmp_stringAccuracy_ch;
+                XMLString::release(&tmp_stringAccuracy_ch);
             }
         } else
             m_relevantDirection.m_defined = false;
@@ -831,11 +831,11 @@ throw(std::runtime_error) {
                 const XMLCh* xmlch_stringFixed = element->getAttribute(ATTR_fixed);
                 char* tmp_stringFixed_ch = XMLString::transcode(xmlch_stringFixed);
                 m_relevantStationTypes.m_fixed = (bool)TplConvert::_2int(tmp_stringFixed_ch);
-                delete[] tmp_stringFixed_ch;
+                XMLString::release(&tmp_stringFixed_ch);
                 const XMLCh* xmlch_stringMobile = element->getAttribute(ATTR_mobile);
                 char* tmp_stringMobile_ch = XMLString::transcode(xmlch_stringMobile);
                 m_relevantStationTypes.m_mobile = (bool)TplConvert::_2int(tmp_stringMobile_ch);
-                delete[] tmp_stringMobile_ch;
+                XMLString::release(&tmp_stringMobile_ch);
             }
         }
 
@@ -849,31 +849,31 @@ throw(std::runtime_error) {
                 const XMLCh* xmlch_stringCAM = element->getAttribute(ATTR_cam);
                 char* tmp_stringCAM_ch = XMLString::transcode(xmlch_stringCAM);
                 m_relevantMessages.m_cam = (bool)TplConvert::_2int(tmp_stringCAM_ch);
-                delete[] tmp_stringCAM_ch;
+                XMLString::release(&tmp_stringCAM_ch);
                 const XMLCh* xmlch_stringDENM = element->getAttribute(ATTR_denm);
                 char* tmp_stringDENM_ch = XMLString::transcode(xmlch_stringDENM);
                 m_relevantMessages.m_denm = (bool)TplConvert::_2int(tmp_stringDENM_ch);
-                delete[] tmp_stringDENM_ch;
+                XMLString::release(&tmp_stringDENM_ch);
                 const XMLCh* xmlch_stringBROADCAST = element->getAttribute(ATTR_topobroadcast);
                 char* tmp_stringTOPOBROADCAST_ch = XMLString::transcode(xmlch_stringBROADCAST);
                 m_relevantMessages.m_topobroadcast = (bool)TplConvert::_2int(tmp_stringTOPOBROADCAST_ch);
-                delete[] tmp_stringTOPOBROADCAST_ch;
+                XMLString::release(&tmp_stringTOPOBROADCAST_ch);
                 const XMLCh* xmlch_stringGEOBROADCAST = element->getAttribute(ATTR_geobroadcast);
                 char* tmp_stringGEOBROADCAST_ch = XMLString::transcode(xmlch_stringGEOBROADCAST);
                 m_relevantMessages.m_geobroadcast = (bool)TplConvert::_2int(tmp_stringGEOBROADCAST_ch);
-                delete[] tmp_stringGEOBROADCAST_ch;
+                XMLString::release(&tmp_stringGEOBROADCAST_ch);
                 const XMLCh* xmlch_stringGEOANYCAST = element->getAttribute(ATTR_geoanycast);
                 char* tmp_stringGEOANYCAST_ch = XMLString::transcode(xmlch_stringGEOANYCAST);
                 m_relevantMessages.m_geoanycast = (bool)TplConvert::_2int(tmp_stringGEOANYCAST_ch);
-                delete[] tmp_stringGEOANYCAST_ch;
+                XMLString::release(&tmp_stringGEOANYCAST_ch);
                 const XMLCh* xmlch_stringUNICAST = element->getAttribute(ATTR_unicast);
                 char* tmp_stringUNICAST_ch = XMLString::transcode(xmlch_stringUNICAST);
                 m_relevantMessages.m_unicast = (bool)TplConvert::_2int(tmp_stringUNICAST_ch);
-                delete[] tmp_stringUNICAST_ch;
+                XMLString::release(&tmp_stringUNICAST_ch);
                 const XMLCh* xmlch_stringMULTICAST = element->getAttribute(ATTR_multicast);
                 char* tmp_stringMULTICAST_ch = XMLString::transcode(xmlch_stringMULTICAST);
                 m_relevantMessages.m_multicast = (bool)TplConvert::_2int(tmp_stringMULTICAST_ch);
-                delete[] tmp_stringMULTICAST_ch;
+                XMLString::release(&tmp_stringMULTICAST_ch);
             }
         }
 

@@ -89,22 +89,22 @@ StationsGetConfig::StationsGetConfig() {
  */
 
 StationsGetConfig::~StationsGetConfig() {
-    delete[] TAG_Default;
-    delete[] TAG_MobileStas;
-    delete[] TAG_RATseed;
-    delete[] ATTR_RATseedValue;
-    delete[] TAG_MobileSta;
-    delete[] ATTR_MobRATtype;
-    delete[] ATTR_PenetrationRate;
-    delete[] ATTR_MobileCommunicationProfile;
-    delete[] TAG_FixedStas;
-    delete[] TAG_FixedSta;
-    delete[] ATTR_id;
-    delete[] ATTR_x;
-    delete[] ATTR_y;
-    delete[] ATTR_FixRATtype;
-    delete[] ATTR_enabledRAT;
-    delete[] ATTR_FixedCommunicationProfile;
+    XMLString::release(&TAG_Default);
+    XMLString::release(&TAG_MobileStas);
+    XMLString::release(&TAG_RATseed);
+    XMLString::release(&ATTR_RATseedValue);
+    XMLString::release(&TAG_MobileSta);
+    XMLString::release(&ATTR_MobRATtype);
+    XMLString::release(&ATTR_PenetrationRate);
+    XMLString::release(&ATTR_MobileCommunicationProfile);
+    XMLString::release(&TAG_FixedStas);
+    XMLString::release(&TAG_FixedSta);
+    XMLString::release(&ATTR_id);
+    XMLString::release(&ATTR_x);
+    XMLString::release(&ATTR_y);
+    XMLString::release(&ATTR_FixRATtype);
+    XMLString::release(&ATTR_enabledRAT);
+    XMLString::release(&ATTR_FixedCommunicationProfile);
 }
 
 /**
@@ -179,7 +179,7 @@ throw(std::runtime_error) {
                         const XMLCh* xmlch_stringRATseed = _element->getAttribute(ATTR_RATseedValue);
                         char* stringRATseed_ch = XMLString::transcode(xmlch_stringRATseed);
                         sscanf(stringRATseed_ch, "%u", &RATseed);
-                        delete[] stringRATseed_ch;
+                        XMLString::release(&stringRATseed_ch);
                     }
 
                     // parse "mobileStas"
@@ -195,18 +195,18 @@ throw(std::runtime_error) {
                                     const XMLCh* xmlch_MobRATtype = currentElement->getAttribute(ATTR_MobRATtype);
                                     char *type_ch = XMLString::transcode(xmlch_MobRATtype);
                                     int type = (bool)TplConvert::_2int(type_ch);
-                                    delete[] type_ch;
+                                    XMLString::release(&type_ch);
 
                                     const XMLCh* xmlch_PenetrationRate = currentElement->getAttribute(ATTR_PenetrationRate);
                                     char *penRate_ch = XMLString::transcode(xmlch_PenetrationRate);
                                     float penRate = TplConvert::_2SUMOReal(penRate_ch);
-                                    delete[] penRate_ch;
+                                    XMLString::release(&penRate_ch);
                                     defaultPenetrationRates.insert(pair<int, float>(type,penRate));
 
                                     const XMLCh* xmlch_commProfile = currentElement->getAttribute(ATTR_MobileCommunicationProfile);
                                     char *profile_ch = XMLString::transcode(xmlch_commProfile);
                                     string profile = profile_ch;
-                                    delete[] profile_ch;
+                                    XMLString::release(&profile_ch);
 
                                     mobileCommunicationProfiles.insert(pair<int, string>(type,profile));
 
@@ -234,32 +234,32 @@ throw(std::runtime_error) {
                                     const XMLCh* xmlch_id = currentElement->getAttribute(ATTR_id);
                                     char* m_ID_ch = XMLString::transcode(xmlch_id);
                                     sscanf(m_ID_ch, "%u", &(fs.m_ID));
-                                    delete[] m_ID_ch;
+                                    XMLString::release(&m_ID_ch);
 
                                     const XMLCh* xmlch_x = currentElement->getAttribute(ATTR_x);
                                     char* m_X_ch = XMLString::transcode(xmlch_x);
                                     sscanf(m_X_ch, "%f", &(fs.m_X));
-                                    delete[] m_X_ch;
+                                    XMLString::release(&m_X_ch);
 
                                     const XMLCh* xmlch_y = currentElement->getAttribute(ATTR_y);
                                     char* m_Y_ch = XMLString::transcode(xmlch_y);
                                     sscanf(m_Y_ch, "%f", &(fs.m_Y));
-                                    delete[] m_Y_ch;
+                                    XMLString::release(&m_Y_ch);
 
                                     const XMLCh* xmlch_RATtype = currentElement->getAttribute(ATTR_FixRATtype);
                                     char* m_RATtype_ch = XMLString::transcode(xmlch_RATtype);
                                     sscanf(m_RATtype_ch, "%d", &(fs.m_RATtype));
-                                    delete[] m_RATtype_ch;
+                                    XMLString::release(&m_RATtype_ch);
 
                                     const XMLCh* xmlch_enabledRAT = currentElement->getAttribute(ATTR_enabledRAT);
                                     char* m_enabledRAT_ch = XMLString::transcode(xmlch_enabledRAT);
                                     sscanf(m_enabledRAT_ch, "%d", &(fs.m_enabledRAT));
-                                    delete[] m_enabledRAT_ch;
+                                    XMLString::release(&m_enabledRAT_ch);
 
                                     const XMLCh* xmlch_commProfile = currentElement->getAttribute(ATTR_FixedCommunicationProfile);
                                     char* profile_ch = XMLString::transcode(xmlch_commProfile);
                                     fs.m_communicationprofile = profile_ch;
-                                    delete[] profile_ch;
+                                    XMLString::release(&profile_ch);
 
                                     m_FixedStationCollection.push_back(fs);
                                 }

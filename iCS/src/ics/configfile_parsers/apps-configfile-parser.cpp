@@ -72,6 +72,7 @@ AppConfigFileParse::AppConfigFileParse() {
 AppConfigFileParse::~AppConfigFileParse() {
     delete m_ApplicationCollection;
     delete m_ConfigFileParser;
+    // FIXME: Commenting out this, since it causes crash in tests. The root of the problem must lie elsewhere, refs #40
     XMLString::release(&TAG_Applications);
     XMLString::release(&TAG_Application);
     XMLString::release(&TAG_Name);
@@ -81,9 +82,7 @@ AppConfigFileParse::~AppConfigFileParse() {
     XMLString::release(&TAG_Seed);
     XMLString::release(&TAG_Rate);
     XMLString::release(&TAG_ResultContainer);
-//    cout << TAG_Stations << endl;
-// FIXME: Commenting out this, since it causes crash in tests. The root of the problem must lie elsewhere, refs #40
-//    XMLString::release(&TAG_Stations);
+    XMLString::release(&TAG_Stations);
     XMLString::release(&TAG_Id);
     XMLString::release(&TAG_ServiceId);
     XMLString::release(&ATTR_Unicast);
