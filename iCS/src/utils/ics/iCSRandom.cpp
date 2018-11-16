@@ -35,7 +35,8 @@ namespace ics
 // ===========================================================================
 // static member variables
 // ===========================================================================
-MTRand iCSRandom::myRandomNumberGenerator;
+std::default_random_engine  iCSRandom::myRandomNumberGenerator;
+std::uniform_real_distribution<float> iCSRandom::myRandomRealDistribution(0,1);
 
 void iCSRandom::seed(const unsigned long oneSeed) {
        iCSRandom::myRandomNumberGenerator.seed(oneSeed);

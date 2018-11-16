@@ -33,6 +33,7 @@
 #include <utils/common/SysUtils.h>
 #include "RandHelper.h"
 #include <ctime>
+#include <limits>
 #include <cmath>
 
 #ifdef CHECK_MEMORY_LEAKS
@@ -43,7 +44,8 @@
 // ===========================================================================
 // static member variables
 // ===========================================================================
-MTRand RandHelper::myRandomNumberGenerator;
+std::default_random_engine RandHelper::myRandomNumberGenerator;
+std::uniform_real_distribution<SUMOReal> RandHelper::myRandomRealDistribution(0,1);
 
 
 // ===========================================================================
@@ -65,9 +67,9 @@ RandHelper::insertRandOptions() {
 }
 
 void
-RandHelper::initRandGlobal(MTRand* which) {
+RandHelper::initRandGlobal(std::default_random_engine* which) {
     OptionsCont& oc = OptionsCont::getOptions();
-    if (which == 0) {
+    if (which == nullptr) {
         which = &myRandomNumberGenerator;
     }
     if (oc.getBool("random")) {

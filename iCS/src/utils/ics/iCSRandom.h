@@ -27,7 +27,7 @@
 #endif
 
 #include <vector>
-#include "../../foreign/mersenne/MersenneTwister.h"
+#include <random>
 
 
 namespace ics
@@ -48,7 +48,7 @@ public:
 
     /// Returns a random real number in [0, 1)
     static inline float rand() {
-        return (float) iCSRandom::myRandomNumberGenerator.randExc();
+        return (float) myRandomRealDistribution(myRandomNumberGenerator);
     }
 
     /// Returns a random real number in [0, maxV)
@@ -63,12 +63,14 @@ public:
 
     /// Returns a random integer in [0, maxV-1]
     static inline size_t rand(size_t maxV) {
-        return (size_t) iCSRandom::myRandomNumberGenerator.randInt((MTRand::uint32)(maxV-1));
+        std::uniform_int_distribution<size_t> dist(0, maxV - 1);
+        return dist(myRandomNumberGenerator);
     }
 
     /// Returns a random integer in [0, maxV-1]
     static inline int rand(int maxV) {
-        return (int) iCSRandom::myRandomNumberGenerator.randInt((MTRand::uint32)(maxV-1));
+        std::uniform_int_distribution<int> dist(0, maxV - 1);
+        return dist(myRandomNumberGenerator);
     }
 
     /// Returns a random integer in [minV, maxV-1]
@@ -77,8 +79,9 @@ public:
     }
 
     /// Access to a random number from a normal distribution
-    static inline float randNorm(float mean, float variance) {
-        return (float) iCSRandom::myRandomNumberGenerator.randNorm(mean, variance);
+    static inline float randNorm(float mean, float stddev) {
+        std::normal_distribution<float> dist(mean, stddev);
+        return dist(myRandomNumberGenerator);
     }
 
     /// Returns a random element from the given vector
@@ -90,7 +93,8 @@ public:
 
 protected:
     /// the random number generator to use
-    static MTRand myRandomNumberGenerator;
+    static std::default_random_engine myRandomNumberGenerator;
+    static std::uniform_real_distribution<float> myRandomRealDistribution;
 
 };
 

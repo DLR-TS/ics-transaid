@@ -33,8 +33,7 @@
 
 #include <cassert>
 #include <vector>
-#include <foreign/mersenne/MersenneTwister.h>
-
+#include <random>
 
 // ===========================================================================
 // class declarations
@@ -55,11 +54,11 @@ public:
     static void insertRandOptions();
 
     /// @brief Reads the given random number options and initialises the random number generator in accordance
-    static void initRandGlobal(MTRand* which = 0);
+    static void initRandGlobal(std::default_random_engine* which = nullptr);
 
     /// @brief Returns a random real number in [0, 1)
     static inline SUMOReal rand() {
-        return (SUMOReal) RandHelper::myRandomNumberGenerator.randExc();
+        return (SUMOReal) myRandomRealDistribution(myRandomNumberGenerator);
     }
 
     /// @brief Returns a random real number in [0, maxV)
@@ -74,12 +73,14 @@ public:
 
     /// @brief Returns a random integer in [0, maxV-1]
     static inline size_t rand(size_t maxV) {
-        return (size_t) RandHelper::myRandomNumberGenerator.randInt((MTRand::uint32)(maxV - 1));
+        std::uniform_int_distribution<size_t> dist(0, maxV - 1);
+        return dist(myRandomNumberGenerator);
     }
 
     /// @brief Returns a random integer in [0, maxV-1]
     static inline int rand(int maxV) {
-        return (int) RandHelper::myRandomNumberGenerator.randInt((MTRand::uint32)(maxV - 1));
+        std::uniform_int_distribution<int> dist(0, maxV - 1);
+        return dist(myRandomNumberGenerator);
     }
 
     /// @brief Returns a random integer in [minV, maxV-1]
@@ -88,8 +89,9 @@ public:
     }
 
     /// @brief Access to a random number from a normal distribution
-    static inline SUMOReal randNorm(SUMOReal mean, SUMOReal variance, MTRand& rng = myRandomNumberGenerator) {
-        return (SUMOReal) rng.randNorm(mean, variance);
+    static inline SUMOReal randNorm(SUMOReal mean, SUMOReal stddev, std::default_random_engine& rng = myRandomNumberGenerator) {
+        std::normal_distribution<SUMOReal> dist(mean, stddev);
+        return dist(rng);
     }
 
     /// @brief Returns a random element from the given vector
@@ -100,10 +102,15 @@ public:
         return v[rand(v.size())];
     }
 
+    /// @brief seeds the defautl random generator
+    static inline void seedDefaultRNG(unsigned long s) {
+        myRandomNumberGenerator.seed(s);
+    }
 
 protected:
     /// @brief the random number generator to use
-    static MTRand myRandomNumberGenerator;
+    static std::default_random_engine myRandomNumberGenerator;
+    static std::uniform_real_distribution<SUMOReal> myRandomRealDistribution;
 
 };
 

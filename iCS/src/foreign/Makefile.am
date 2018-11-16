@@ -1,4 +1,4 @@
 
 EXTRA_DIST = additional.txt
 
-SUBDIRS = mersenne tcpip
+SUBDIRS = tcpip
