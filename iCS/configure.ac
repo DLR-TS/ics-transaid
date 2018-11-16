@@ -290,7 +290,6 @@ bin/Makefile
 src/Makefile
 src/unittest/Makefile
 src/foreign/Makefile
-src/foreign/mersenne/Makefile
 src/foreign/tcpip/Makefile
 src/ics/Makefile
 src/ics/traffic_sim_communicator/Makefile
