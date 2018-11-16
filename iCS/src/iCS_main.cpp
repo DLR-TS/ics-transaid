@@ -347,10 +347,10 @@ void *launchSystemExecutable(void *ptr)
 }
 
 ICS*
-launchIcsThreadless()
+launchIcsThreadless(int commPort, int trafficPort)
 {
   OptionsCont &oc = OptionsCont::getOptions();
-  ICS *ics = new ICS(oc.getInt("communication-port"), oc.getInt("traffic-port"), oc.getString("traffic-host"),
+  ICS *ics = new ICS(commPort, trafficPort, oc.getString("traffic-host"),
       oc.getString("communication-host"), oc.getInt("begin"), oc.getInt("end"), oc.getInt("resolution"),
       oc.getInt("penetration-rate"), oc.getBool("interactive"));
 
@@ -507,7 +507,11 @@ int main(int argc, char **argv)
 
 #ifdef SUMO_ON
     //Launch SUMO
-    std::string sumoCall = oc.getString("traffic-executable") + " " + oc.getString("traffic-file");
+    int trafficPort = oc.getInt("traffic-port");
+    if (trafficPort == 0) {
+        trafficPort = tcpip::Socket::getFreeSocketPort();
+    }
+    std::string sumoCall = oc.getString("traffic-executable") + " " + oc.getString("traffic-file") + " --remote-port=" + to_string(trafficPort);
     char* sumoChain = strdup(sumoCall.c_str());
     pthread_create(&sumoThread, NULL, launchSystemExecutable, (void *) sumoChain);
     cout << "iCS --> SUMO launched." << endl;
@@ -518,39 +522,37 @@ int main(int argc, char **argv)
 #endif
 
 #ifdef NS3_ON
+    int commPort = oc.getInt("communication-port");
+    if (commPort == 0) {
+        commPort = tcpip::Socket::getFreeSocketPort();
+    }
     string exec_aux = oc.getString("communication-executable");
     if (exec_aux.find("lightcomm") == string::npos ){
-    //Launch ns-3
-    int ns3Port = oc.getInt("communication-port");
-    string ns3sPort;
-    stringstream out;
-    out << ns3Port;
-    std::string ns3Call;
-    //ns3Call = " gdb --args " + oc.getString("communication-executable") + " ";
-    ns3Call = oc.getString("communication-executable") + " ";
-    ns3Call += " --inciPort=" + out.str();
-    ns3Call += " --fileGeneralParameters=" + oc.getString("communication-general-params-file");
-    ns3Call += " --fileConfTechnologies=" + oc.getString("communication-config-technologies-file");
-    if (!oc.getString("ns3-log-path").empty())
-      ns3Call += " --logFile=" + oc.getString("ns3-log-path");
-
-    char* ns3Chain = strdup(ns3Call.c_str());
-    pthread_create(&ns3Thread, NULL, launchSystemExecutable, (void *) ns3Chain);
-    cout << "iCS --> ns-3 launched." << endl;
-    Sleep(1);
+        //Launch ns-3
+        std::string ns3Call;
+        //ns3Call = " gdb --args " + oc.getString("communication-executable") + " ";
+        ns3Call = oc.getString("communication-executable") + " ";
+        ns3Call += " --inciPort=" + to_string(commPort);
+        ns3Call += " --fileGeneralParameters=" + oc.getString("communication-general-params-file");
+        ns3Call += " --fileConfTechnologies=" + oc.getString("communication-config-technologies-file");
+        if (!oc.getString("ns3-log-path").empty())
+            ns3Call += " --logFile=" + oc.getString("ns3-log-path");
+        char* ns3Chain = strdup(ns3Call.c_str());
+        pthread_create(&ns3Thread, NULL, launchSystemExecutable, (void *) ns3Chain);
+        cout << "iCS --> ns-3 launched." << endl;
+        Sleep(1);
     }else{
-     //Launch Lightcomm simulator
-     std::string lightcommCall= oc.getString("communication-executable");
-     char* executable_lightcomm =strdup(lightcommCall.c_str());
-     pthread_create(&ns3Thread, NULL, launchSystemExecutable, (void *) executable_lightcomm);
-     cout << "iCS --> lightcomm launched." << endl;
-     Sleep(1);
-
+        //Launch Lightcomm simulator
+        std::string lightcommCall= oc.getString("communication-executable");
+        char* executable_lightcomm =strdup(lightcommCall.c_str());
+        pthread_create(&ns3Thread, NULL, launchSystemExecutable, (void *) executable_lightcomm);
+        cout << "iCS --> lightcomm launched." << endl;
+        Sleep(1);
     }
 #endif
 
     //Launch iCS
-    ics = launchIcsThreadless();
+    ics = launchIcsThreadless(commPort, trafficPort);
     if (ics == 0)
     {
       throw ProcessError();
