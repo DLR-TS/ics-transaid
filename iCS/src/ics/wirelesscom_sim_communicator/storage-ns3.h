@@ -74,7 +74,7 @@ public:
     StorageNs3();
 
     /// Constructor, that fills the storage with an char array. If length is -1, the whole array is handed over
-    StorageNs3(unsigned char[], int length=-1);
+    StorageNs3(unsigned char[], int length);
 
     // Destructor
     virtual ~StorageNs3();

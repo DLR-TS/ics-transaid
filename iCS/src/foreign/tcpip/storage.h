@@ -72,7 +72,7 @@ public:
 	Storage();
 
 	/// Constructor, that fills the storage with an char array. If length is -1, the whole array is handed over
-	Storage(const unsigned char[], int length=-1);
+	Storage(const unsigned char[], int length);
 
 	// Destructor
 	virtual ~Storage();

@@ -133,7 +133,7 @@ SubsStopTravelTimeCalculation::AddStoppedTravelTimeStation(stationID_t nodeId)
 int
 SubsStopTravelTimeCalculation::ProcessReceivedUnicastMessage(ScheduledUnicastMessageData message)
 {
-    message.receiverIcsID;
+//    message.receiverIcsID;
 #ifdef LOG_ON
     IcsLog::LogLevel("ProcessReceivedUnicastMessage() SubsCalculateTravelTime not based on Unicasting", kLogLevelWarning);
 #endif

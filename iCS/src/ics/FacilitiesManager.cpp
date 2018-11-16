@@ -1350,12 +1350,12 @@ unsigned short FacilitiesManager::getApplicationMessageLength(actionID_t actionI
   FacilityMessagePayload* facPayload = getReceivedMessagePayload(actionID);
   messageType_t messageType = facPayload->getMessageType();
   if (messageType == CAM || messageType == DENM)
-    return NULL;
+    return 0;
 
   ApplicationMessagePayload* appPayload = NULL;
   appPayload = dynamic_cast<ApplicationMessagePayload*>(facPayload);
-  if (appPayload == NULL)
-    return NULL;
+  if (appPayload == nullptr)
+    return 0;
 
   return appPayload->getMessageLength();
 }

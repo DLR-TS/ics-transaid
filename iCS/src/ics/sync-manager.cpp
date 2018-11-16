@@ -2062,7 +2062,7 @@ int SyncManager::ScheduleV2xUnicastMessages(stationID_t sender, int appHandlerId
 
 	string extra;
 	std::vector<unsigned char> *container = new std::vector<unsigned char>();
-	ScheduleV2xUnicastMessages(sender, appHandlerId, destination, appMessageId, appMessageType, frequency,
+	return ScheduleV2xUnicastMessages(sender, appHandlerId, destination, appMessageId, appMessageType, frequency,
 			payloadLength, msgRegenerationTime, commProfile, preferredRATs, msgLifetime, extra, m_simStep, container);
 
 }
@@ -2268,7 +2268,7 @@ int SyncManager::ScheduleV2XApplicationMessages(stationID_t sender, int appHandl
 		unsigned int msgLifetime)
 {
 	std::vector<unsigned char> *container = new std::vector<unsigned char>();
-	ScheduleV2XApplicationMessages(sender, appHandlerId, destination, appMessageId, appMessageType, frequency,
+	return ScheduleV2XApplicationMessages(sender, appHandlerId, destination, appMessageId, appMessageType, frequency,
 			payloadLength, msgRegenerationTime, commProfile, preferredRATs, areas, numHops, msgLifetime, container);
 
 }
@@ -2348,7 +2348,7 @@ int SyncManager::ScheduleV2xTopobroadcastMessages(stationID_t sender, int appHan
 {
 	string extra;
 	std::vector<unsigned char> *container = new std::vector<unsigned char>();
-	ScheduleV2xTopobroadcastMessages(sender, appHandlerId, appMessageId, frequency, payloadLength, msgRegenerationTime,
+	return ScheduleV2xTopobroadcastMessages(sender, appHandlerId, appMessageId, frequency, payloadLength, msgRegenerationTime,
 			appMessageType, commProfile, preferredRATs, numHops, msgLifetime, extra, container);
 
 }
@@ -2469,7 +2469,7 @@ int SyncManager::ScheduleV2xGeobroadcastMessages(ics_types::stationID_t sender, 
 {
 	string extra;
 	std::vector<unsigned char> *container = new std::vector<unsigned char>();
-	ScheduleV2xGeobroadcastMessages(sender, appHandlerId, appMessageId, frequency, payloadLength, msgRegenerationTime,
+	return ScheduleV2xGeobroadcastMessages(sender, appHandlerId, appMessageId, frequency, payloadLength, msgRegenerationTime,
 			appMessageType, commProfile, preferredRATs, areas, msgLifetime, extra, m_simStep, container);
 
 }

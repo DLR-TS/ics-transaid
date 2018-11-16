@@ -86,6 +86,7 @@ struct Message
 class WirelessComSimulatorCommunicator
 {
 public:
+    virtual ~WirelessComSimulatorCommunicator() {};
 
   /**
    * @brief Creates a socket and establishes the connection with ns-3

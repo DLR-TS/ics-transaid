@@ -50,6 +50,7 @@ class TrafficSimulatorCommunicator
 {
 
 public:
+    virtual ~TrafficSimulatorCommunicator() {};
 
     /**
     * @brief Creates a socket and establishes the connection with SUMO

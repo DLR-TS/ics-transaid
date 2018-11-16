@@ -61,7 +61,7 @@ string name, ext;
 IcsLog::IcsLog(string path, string timeThreshold, ics_types::icstime_t logStart, ics_types::icstime_t logEnd, bool omitSysTime)
 {
   path_ = path;
-  unsigned pointPos = path.rfind(".");
+  string::size_type pointPos = path.rfind(".");
   if (pointPos != string::npos)
   {
     ext = path.substr(pointPos);

@@ -48,7 +48,7 @@ StorageNs3::StorageNs3()
 StorageNs3::StorageNs3(unsigned char packet[], int length)
 {
     // Length is calculated, if -1, or given
-    if (length == -1) length = sizeof(packet) / sizeof(unsigned char);
+    // if (length == -1) length = sizeof(packet) / sizeof(unsigned char);
 
     store.reserve(length);
     // Get the content

@@ -2080,6 +2080,7 @@ namespace ics
 				return -1;
 			}
 		}
+        return -1;
 	}
 
 	int AppMessageManager::CommandSendSubscriptionSumoTraciCommand(const int nodeId, const int subscriptionId,
