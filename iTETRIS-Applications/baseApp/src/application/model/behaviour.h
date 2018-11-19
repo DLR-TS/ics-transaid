@@ -78,6 +78,11 @@ namespace baseapp
 				 */
 				virtual void Stop();
 
+
+				/** @brief onAddSubscriptions is called at the begin of the app-interaction phase of the iCS simstep.
+				 */
+				virtual void onAddSubscriptions();
+
 				/**
 				 * @brief If a message of the specified pid should be forwarded to the class
 				 * @param[in] pid the ProtocolId of the message
@@ -98,7 +103,7 @@ namespace baseapp
 				 * @param[out] data Data to send back to iCS. The application has to fill the map
 				 * @return Whatever the application executed. If true data will be sent to iCS. If false data is discarded
 				 */
-				virtual bool Execute(const int currentTimeStep, DirectionValueMap &data) = 0;
+				virtual bool Execute(const int currentTimeStep, DirectionValueMap &data) {};
 
                 /**
                  * @brief Called by the ics-interface if a CAM message is received by the node

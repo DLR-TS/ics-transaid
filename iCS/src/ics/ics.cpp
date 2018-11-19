@@ -433,7 +433,7 @@ ICS::SetupApplications(string filePath)
         }
 
 		// DEBUG:
-//        execString = std::string("echo '##### Bypassing app start for debugging' ####");
+//        execString = std::string("echo '##### Bypassing app start for debugging (expecting app on port " + to_string(_port) + ") ####'");
 
 		m_syncManager->RecognizeNewApplication(appHandler);
 

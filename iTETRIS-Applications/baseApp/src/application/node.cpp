@@ -231,7 +231,9 @@ namespace baseapp
 		}
 
 		void Node::addSubscriptions()
-		{}
+		{
+		    m_controller->onAddSubscriptions();
+		}
 
 		float Node::getPropagationRadius() const
 		{

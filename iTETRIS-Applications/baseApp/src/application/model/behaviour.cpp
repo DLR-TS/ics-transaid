@@ -94,6 +94,11 @@ namespace baseapp
 			m_traceStartToggle(false);
 		}
 
+		void Behaviour::onAddSubscriptions()
+		{
+//            NS_LOG_FUNCTION(Log());
+		}
+
 		std::string Behaviour::Log() const
 		{
 			std::ostringstream outstr;

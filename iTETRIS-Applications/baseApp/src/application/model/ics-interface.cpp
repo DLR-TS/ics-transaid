@@ -521,6 +521,17 @@ namespace baseapp
             }
         }
 
+        void iCSInterface::onAddSubscriptions() {
+//            NS_LOG_INFO(LogNode() << ": onAddSubscriptions()");
+            // activate behaviours if requested
+            for (BehaviourMap::const_iterator it = m_behaviours.begin(); it != m_behaviours.end(); ++it)
+            {
+                if (it->second->IsRunning()) {
+                    it->second->onAddSubscriptions();
+                }
+            }
+        }
+
         void iCSInterface::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
         {
             for (BehaviourMap::const_iterator it = m_behaviours.begin(); it != m_behaviours.end(); ++it)
