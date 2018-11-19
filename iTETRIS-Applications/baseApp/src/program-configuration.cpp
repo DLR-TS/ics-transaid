@@ -99,7 +99,7 @@ namespace baseapp
 			if (m_instance->ParseOutput(xmlElem) == EXIT_FAILURE)
 				return EXIT_FAILURE;
 		}
-		Console::Log("ParseSetup done");
+		Console::Log("ParseOutput done");
 		delete doc;
 		return EXIT_SUCCESS;
 	}

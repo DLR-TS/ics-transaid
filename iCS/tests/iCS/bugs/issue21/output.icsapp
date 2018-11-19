@@ -7,22 +7,22 @@ iCS --> SUMO launched.
 iCS --> ns-3 launched.
 
 STEP 2 - SETUP PHASE
+Loading configuration... done.
 testApp -> Starting iTetris test app
 testApp -> [WARNING]Ignoring socket port specified in configuration. (Overridden by command line argument.)
 testApp -> Test case set to simpleExecute
 testApp -> ParseGeneral done
 testApp -> ParseInfrastructure done
 testApp -> ParseSetup done
-testApp -> ParseSetup done
+testApp -> ParseOutput done
 testApp -> Load Configuration done
-Loading configuration... done.
 main-inci v 3.20
 
 STEP 3 - SETUP PHASE
-iCS --> Trying 0 to connect SUMO on port 5500...
+iCS --> Trying 0 to connect SUMO on port 45819...
 iCS --> [ERROR] setTrafficSimStep() traffic simstep length (310 ms.) is no multiple of iCS simstep length (50ms.)
 iCS -->  Could not connect to SUMO
 
 iCS --> #Error while sending command: no connection to serveriCS --> [ERROR] CloseNs3() Finishing NS-3
 iCS --> Error occurred during iCS set-up
-Elapsed time (in seconds): 2.00
+Elapsed time (in seconds): 1.00
