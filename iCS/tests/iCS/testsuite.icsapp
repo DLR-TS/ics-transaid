@@ -4,3 +4,7 @@ meta
 # initial tests
 basic
 bugs
+
+# Tests for the demo app provided by the iTETRIS 2.0 release by EURECOM.
+# To run these tests, disable parallel test runs in tab "Running" -> check "Run tests sequentially"
+traffic_monitor_(no_parallel_runs!)

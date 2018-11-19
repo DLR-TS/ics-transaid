@@ -1,0 +1,2 @@
+# prevent parallel execution of tests
+config_module:default

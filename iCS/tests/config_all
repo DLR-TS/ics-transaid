@@ -1,5 +1,5 @@
 home_operating_system:posix
-config_module:default
+#config_module:default
 
 batch_result_repository:$ICS_BATCH_RESULT
 historical_report_location:$ICS_REPORT

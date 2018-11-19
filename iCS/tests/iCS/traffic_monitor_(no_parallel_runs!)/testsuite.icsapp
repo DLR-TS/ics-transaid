@@ -1,0 +1,5 @@
+# Tests simple example
+traffic_monitor_acosta
+
+# Tests simple example with extensive log, shortened sim time, and larger iCS step.
+traffic_monitor_acosta_infolog
