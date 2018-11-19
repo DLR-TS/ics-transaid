@@ -406,13 +406,13 @@ ICS::SetupApplications(string filePath)
 		}
 
 		int _port, _rate;
-		_port = TplConvert::_2int(port);
+		_port = atoi(port);
 		bool portEq0 = _port == 0;
 		if (portEq0) {
 		    // Port == 0 => Get a random free port
 		    _port = tcpip::Socket::getFreeSocketPort();
 		}
-		_rate = TplConvert::_2int(rate);
+		_rate = atoi(rate);
 
 		ServiceId serviceId;
 		serviceId.unicastServiceId = (string) m_unicastServiceId;
@@ -423,19 +423,17 @@ ICS::SetupApplications(string filePath)
 
 		long _seed = TplConvert::_2long(seed);
 
+		string execString(executable);
+
 		// Create the instance of the application in the iCS
-		ApplicationHandler* appHandler = new ApplicationHandler(m_syncManager, (string)name, (string)ip, (string)executable, _port, _seed, _rate, _result, serviceId);
+		ApplicationHandler* appHandler = new ApplicationHandler(m_syncManager, (string)name, (string)ip, execString, _port, _seed, _rate, _result, serviceId);
 		if (portEq0) {
             // Open port was chosen randomly, override the applications configuration by giving the port via commandline
-            std::stringstream ss;
-            ss << executable << " --remote-port " << _port;
-            std::string s = ss.str();
-            snprintf(executable, s.size()+1, "%s", ss.str().c_str());
+	        execString += " --remote-port " + to_string(_port);
         }
 
 		// DEBUG:
-//        std::string s = std::string("echo '##### Bypassing app start for debugging' ####");
-//        snprintf(executable, s.size()+1, "%s", s.c_str());
+//        execString = std::string("echo '##### Bypassing app start for debugging' ####");
 
 		m_syncManager->RecognizeNewApplication(appHandler);
 
@@ -463,7 +461,7 @@ ICS::SetupApplications(string filePath)
 		// Execute the application in a separate thread
 		pthread_t myThread;
 		m_applicationsThreads.push_back(myThread);
-		pthread_create(&(m_applicationsThreads[i]), NULL, launchApplication,(void *) executable);
+		pthread_create(&(m_applicationsThreads[i]), NULL, launchApplication,(void *) execString.c_str());
 		Sleep(1000);
 	}
 
