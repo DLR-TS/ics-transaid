@@ -219,6 +219,11 @@ namespace baseapp
                         const int flags=0, const double startPos=std::numeric_limits<double>::min(),
                         const double until=-1);
 
+                /// @brief Request a vehicle to open a gap
+                ///        see http://sumo.dlr.de/wiki/TraCI/Change_Vehicle_State
+                void commandTraciOpenGap(const double newTimeHeadway, const double newSpaceHeadway,
+                        const double duration, const double changeRate, const double maxDecel);
+
                 /// @brief Set parameter for ToC model
                 void SetTraciParameter(const std::string key, const std::string value);
 

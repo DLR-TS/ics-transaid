@@ -479,6 +479,37 @@ namespace baseapp
             }
         }
 
+
+        void iCSInterface::commandTraciOpenGap(const double newTimeHeadway, const double newSpaceHeadway,
+                const double duration, const double changeRate, const double maxDecel)
+        {
+            if (m_node->getSumoId() != INVALID_STRING)
+            {
+                int cmdID = CMD_SET_VEHICLE_VARIABLE;
+                int varID = CMD_OPENGAP;
+                int varTypeID = TYPE_COMPOUND;
+
+                const int length = 5 - int(maxDecel==-1);
+
+                tcpip::Storage content;
+                content.writeInt(5);
+                content.writeUnsignedByte(TYPE_DOUBLE);
+                content.writeDouble(newTimeHeadway);
+                content.writeUnsignedByte(TYPE_DOUBLE);
+                content.writeDouble(newSpaceHeadway);
+                content.writeUnsignedByte(TYPE_DOUBLE);
+                content.writeDouble(duration);
+                content.writeUnsignedByte(TYPE_DOUBLE);
+                content.writeDouble(changeRate);
+                if (length==5) {
+                    content.writeUnsignedByte(TYPE_DOUBLE);
+                    content.writeDouble(maxDecel);
+                }
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(cmdID, varID, varTypeID, &content);
+            }
+        }
+
         void iCSInterface::SetTraciParameter(const std::string key, const std::string value)
         {
             if (m_node->getSumoId() != INVALID_STRING)
