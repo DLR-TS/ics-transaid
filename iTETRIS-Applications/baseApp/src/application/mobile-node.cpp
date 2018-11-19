@@ -121,11 +121,6 @@ namespace baseapp
 			Log::WriteLog(oss);
 		}
 
-        void MobileNode::addSubscriptions()
-        {
-            Node::addSubscriptions();
-        }
-
         void MobileNode::subscribeSendingCAMs() {
             m_toSubscribe.push(SubscriptionHelper::SetCamArea(Circle( MobileNode::getPosition(), Node::getPropagationRadius())));
         }

@@ -72,8 +72,6 @@ namespace baseapp
                 /// @brief helper function that adds SetCAMArea subscription
                 void subscribeSendingCAMs();
 
-			protected:
-				void addSubscriptions();
 			private:
                 bool m_positionUpdated;
 				RsuData m_rsuData;

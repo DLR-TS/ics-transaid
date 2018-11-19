@@ -60,12 +60,6 @@ namespace baseapp
 			m_trafficLight = NULL;
 		}
 
-		void FixedStation::addSubscriptions()
-		{
-			//Subscribe to receive messages
-			Node::addSubscriptions();
-		}
-
 		void FixedStation::updateMobilityInformation(MobilityInfo * info)
 		{
 			if (!m_positionUpdated)

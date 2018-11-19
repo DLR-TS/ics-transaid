@@ -63,8 +63,6 @@ public:
   /// @brief helper function that adds SetCAMArea subscription
   void subscribeSendingCAMs();
 
-protected:
-  void addSubscriptions();
 private:
   MobilityInfo * m_position;
   void selectNodeType();
