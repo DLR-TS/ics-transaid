@@ -72,7 +72,6 @@ AppConfigFileParse::AppConfigFileParse() {
 AppConfigFileParse::~AppConfigFileParse() {
     delete m_ApplicationCollection;
     delete m_ConfigFileParser;
-    // FIXME: Commenting out this, since it causes crash in tests. The root of the problem must lie elsewhere, refs #40
     XMLString::release(&TAG_Applications);
     XMLString::release(&TAG_Application);
     XMLString::release(&TAG_Name);
