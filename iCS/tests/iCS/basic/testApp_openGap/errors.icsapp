@@ -1,5 +1,3 @@
-sumo: no process found
-main-inci5: no process found
 Error: Attribute 'from' is missing in definition of edge ':C_0'.
 Error: Attribute 'to' is missing in definition of edge ':C_0'.
 Error: Attribute 'from' is missing in definition of edge ':C_1'.
@@ -55,4 +53,5 @@ YansWifiPhyHelper::Default ns3::NistErrorRateModel
 YansWifiPhyHelper::Default ns3::NistErrorRateModel
 YansWifiPhyHelper::Default ns3::NistErrorRateModel
 YansWifiPhyHelper::Default ns3::NistErrorRateModel
-2 Install on node 1 com WaveVehicle
+1 Install on node 1 com WaveVehicle
+4 Install on node 2 com WaveVehicle
