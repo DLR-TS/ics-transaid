@@ -1,5 +1,3 @@
-sumo: no process found
-main-inci5: no process found
 Error: Attribute 'from' is missing in definition of edge ':0_0'.
 Error: Attribute 'to' is missing in definition of edge ':0_0'.
 Error: Attribute 'from' is missing in definition of edge ':0_1'.
@@ -971,44 +969,34 @@ YansWifiPhyHelper::Default ns3::NistErrorRateModel
 YansWifiPhyHelper::Default ns3::NistErrorRateModel
 YansWifiPhyHelper::Default ns3::NistErrorRateModel
 Warning: The shape 'bus/city' for vType 'bus' is deprecated, use 'bus' instead.
-0 Install on node 1 com WaveVehicle
-0 Install on node 2 com WaveVehicle
-0 Install on node 3 com WaveVehicle
-0 Install on node 4 com WaveVehicle
-0 Install on node 5 com WaveVehicle
-0 Install on node 6 com WaveVehicle
-0 Install on node 7 com WaveVehicle
-0 Install on node 8 com WaveVehicle
-0 Install on node 9 com WaveVehicle
-0 Install on node 10 com WaveVehicle
-1 Install on node 11 com WaveVehicle
-1 Install on node 12 com WaveVehicle
-1 Install on node 13 com WaveVehicle
-1 Install on node 14 com WaveVehicle
-1 Install on node 15 com WaveVehicle
-1 Install on node 16 com WaveVehicle
-1 Install on node 17 com WaveVehicle
-1 Install on node 18 com WaveVehicle
-1 Install on node 19 com WaveVehicle
-1 Install on node 20 com WaveVehicle
-3 Install on node 21 com WaveVehicle
-3 Install on node 22 com WaveVehicle
-4 Install on node 23 com WaveVehicle
-4 Install on node 24 com WaveVehicle
-4 Install on node 25 com WaveVehicle
-5 Install on node 26 com WaveVehicle
-5 Install on node 27 com WaveVehicle
-5 Install on node 28 com WaveVehicle
-5 Install on node 29 com WaveVehicle
-5 Install on node 30 com WaveVehicle
-6 Install on node 31 com WaveVehicle
-7 Install on node 32 com WaveVehicle
-8 Install on node 33 com WaveVehicle
-8 Install on node 34 com WaveVehicle
-8 Install on node 35 com WaveVehicle
-9 Install on node 36 com WaveVehicle
-9 Install on node 37 com WaveVehicle
-9 Install on node 38 com WaveVehicle
-9 Install on node 39 com WaveVehicle
-10 Install on node 40 com WaveVehicle
-10 Install on node 41 com WaveVehicle
+1 Install on node 1 com WaveVehicle
+1 Install on node 2 com WaveVehicle
+1 Install on node 3 com WaveVehicle
+1 Install on node 4 com WaveVehicle
+1 Install on node 5 com WaveVehicle
+1 Install on node 6 com WaveVehicle
+1 Install on node 7 com WaveVehicle
+1 Install on node 8 com WaveVehicle
+1 Install on node 9 com WaveVehicle
+1 Install on node 10 com WaveVehicle
+3 Install on node 11 com WaveVehicle
+3 Install on node 12 com WaveVehicle
+4 Install on node 13 com WaveVehicle
+4 Install on node 14 com WaveVehicle
+4 Install on node 15 com WaveVehicle
+5 Install on node 16 com WaveVehicle
+5 Install on node 17 com WaveVehicle
+5 Install on node 18 com WaveVehicle
+5 Install on node 19 com WaveVehicle
+5 Install on node 20 com WaveVehicle
+6 Install on node 21 com WaveVehicle
+7 Install on node 22 com WaveVehicle
+8 Install on node 23 com WaveVehicle
+8 Install on node 24 com WaveVehicle
+8 Install on node 25 com WaveVehicle
+9 Install on node 26 com WaveVehicle
+9 Install on node 27 com WaveVehicle
+9 Install on node 28 com WaveVehicle
+9 Install on node 29 com WaveVehicle
+10 Install on node 30 com WaveVehicle
+10 Install on node 31 com WaveVehicle
