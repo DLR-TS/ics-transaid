@@ -226,8 +226,10 @@ namespace testapp
                     TestHeader * header = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, "Vehicle regular broadcast");
                     GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
                 }
-            } if (ProgramConfiguration::GetTestCase() == "commSimple2") {
-                // do nothing
+            } else if (ProgramConfiguration::GetTestCase() == "testOpenGap") {
+                if (currentTimeStep == 8000 && GetNode()->getSumoId() == "veh0") {
+                    GetController()->commandTraciOpenGap(5, 50, 100, 0.1, 1);
+                }
             }
 			return false;
 		}

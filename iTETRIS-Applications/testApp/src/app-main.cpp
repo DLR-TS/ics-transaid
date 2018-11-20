@@ -95,7 +95,7 @@ int main(int argc, char **argv)
   {
     std::set<std::string> testCases({"", "acosta", "simpleExecute", "setVType", "inductionLoop",
                                      "commSimple", "commSimple2", "CAMsimple",
-                                     "testMobility", "testTrajectory", "testToC"});
+                                     "testMobility", "testTrajectory", "testToC", "testOpenGap"});
     // start-up
     Console::Log("Starting iTetris test app");
     if (ProgramConfiguration::LoadConfiguration(configFile, port) == EXIT_FAILURE)

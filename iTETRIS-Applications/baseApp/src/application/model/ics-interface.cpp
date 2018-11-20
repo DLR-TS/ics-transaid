@@ -492,7 +492,7 @@ namespace baseapp
                 const int length = 5 - int(maxDecel==-1);
 
                 tcpip::Storage content;
-                content.writeInt(5);
+                content.writeInt(length);
                 content.writeUnsignedByte(TYPE_DOUBLE);
                 content.writeDouble(newTimeHeadway);
                 content.writeUnsignedByte(TYPE_DOUBLE);

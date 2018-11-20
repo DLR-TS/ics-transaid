@@ -31,3 +31,6 @@ testApp_CAMsimple
 testApp_mobility
 testApp_trajectory
 testApp_ToC
+
+# Tests iCSInterface::openGap
+testApp_openGap

@@ -104,7 +104,7 @@ namespace baseapp
 		return EXIT_SUCCESS;
 	}
 
-	ProgramConfiguration::ProgramConfiguration() : m_messageLifetime(10), m_socket(-1) {}
+	ProgramConfiguration::ProgramConfiguration() : m_messageLifetime(10), m_socket(-1), m_testCase(""), m_start(0) {}
 
 	ProgramConfiguration::~ProgramConfiguration() {}
 
@@ -139,8 +139,7 @@ namespace baseapp
 		{
 			m_start = xmlElem->IntAttribute("value") * 1000;
 			NS_ASSERT(m_start >= 0);
-		} else
-			m_start = 0;
+		}
 
 		xmlElem = general->FirstChildElement("log-file");
 		if (xmlElem)
