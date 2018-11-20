@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/xmlschema-instance" xsi:nonamespaceschemalocation="http://sumo.sf.net/xsd/demoappconfiguration.xsd">
+
+    <general>
+        <start value="5"/>
+        <socket value="1987"/>
+	    <log-file value="../app-log.txt"/>
+		<ns-log-file value="../app-ns-log.txt"/>
+		<data-file value="../app-data.txt"/>
+        <message-lifetime value="10" />
+        <test-case value="testOpenGap" />
+    </general>
+	
+	<infrastructure>
+		<rsu id="5000" xpos="50.00" ypos="100.00" >
+            <direction value="0" approaching="true" leaving="true" approaching-time="150" leaving-time="150" >
+                <lane friendly-name="right" controlled-lane="WC_0" following-lane="CS_0" />
+                <lane friendly-name="straight" controlled-lane="WC_0" following-lane="CE_0" />
+                <lane friendly-name="left" controlled-lane="WC_0" following-lane="CN_0" />
+            </direction>
+            <direction value="90" approaching="true" leaving="true" approaching-time="150" leaving-time="150" >
+                <lane friendly-name="right" controlled-lane="SC_0" following-lane="CE_0" />
+                <lane friendly-name="straight" controlled-lane="SC_0" following-lane="CN_0" />
+                <lane friendly-name="left" controlled-lane="SC_0" following-lane="CW_0" />
+            </direction>
+            <direction value="180" approaching="true" leaving="true" approaching-time="150" leaving-time="150" >
+                <lane friendly-name="right" controlled-lane="EC_0" following-lane="CN_0" />
+                <lane friendly-name="straight" controlled-lane="EC_0" following-lane="CW_0" />
+                <lane friendly-name="left" controlled-lane="EC_0" following-lane="CS_0" />
+            </direction>
+            <direction value="-90" approaching="true" leaving="true" approaching-time="150" leaving-time="150" >
+                <lane friendly-name="right" controlled-lane="NC_0" following-lane="CW_0" />
+                <lane friendly-name="straight" controlled-lane="NC_0" following-lane="CS_0" />
+                <lane friendly-name="left" controlled-lane="NC_0" following-lane="CE_0" />
+            </direction>
+        </rsu>
+	</infrastructure>    
+	
+	<setup>
+		<node probability-full="1" probability-medium="0" propagation-radius-rsu="170.0" propagation-radius-full="170.0" propagation-radius-medium="100.0"/>		
+		<controller direction-tolerance="12.0" average-speed-sample-small="5" average-speed-sample-high="15" use-sink="false" />		
+		<node-sampler quantity="5" movement-threshold="2.0" steer-filter-threshold="20.0" steer-filter-count="3" speed-bound="2.0" speed-variance="0.25" default-resolution="1000" default-position-radius="20.0" default-position-variance="1.8" default-direction-variance="0.002" default-speed-error="0.15" > 
+			<node-class type="full" resolution="1000" position-radius="20.0" position-variance="1.8" direction-variance="0.002" speed-error="0.15" />
+			<node-class type="medium" resolution="1000" position-radius="20.0" position-variance="7.2" direction-variance="0.008" speed-error="1.5" /> 
+			<!-- <node-class type="medium" resolution="1000" position-radius="20.0" position-variance="1.8" direction-variance="0.002" speed-error="0.5" /> -->
+		</node-sampler>
+		<behaviour-node enabled="true" response-time-spacing="1" sink-threshold="20.0" />
+		<behaviour-rsu enabled="true" time-beacon="1000" time-beacon-min="250" time-check="1000" timeout="3000" />
+		<data-manager enabled="true" execute-time="1000" enable-centralized-protocol="true" enable-mob-sampling-protocol="true" />
+		<centralized-protocol space-threshold="50" return-data="false" />
+		<mob-sampling-protocol estimation-period-minutes="3" radius="200" sample-rate="5000" />
+	</setup>
+	
+	<output	sink-threshold-min="0" sink-threshold-max="170" sink-tolerance="17.0" sample-interval="1000" sample-packets="false" mob-sampling-radius="200" mob-sampling-interval="5000" mob-sampling-estimation-period-minutes="3" />
+	
+</configuration>
