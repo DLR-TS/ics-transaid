@@ -498,11 +498,15 @@ namespace ics
 			 * @brief Executes the logic of SUMO for the current timestep.
 			 * @return 0 if timestep was correctly executed.
 			 * @return 1 If timestep didn't execute correctly.
-			 * @todo Remove the vehicles that left the simulation.
-			 * @todo Update the facilities with new information.
-			 * @todo Inform applications???
 			 */
 			int RunOneSumoTimeStep();
+
+			/**
+             * @brief Queries the tl state from SUMO and updates the state stored in the facilities.
+             * @return 0 if no failure occurred.
+             * @return 1 if a failure occurred.
+             */
+			int updateTrafficLightInformation();
 
 			/**
 			 * @brief Executes the logic of ns-3 for the next timestep.

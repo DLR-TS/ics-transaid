@@ -331,10 +331,21 @@ int SyncManager::Run(bool interactive)
 		            utils::Conversion::Wait("iCS --> [ERROR] RunOneSumoTimeStep()");
 		            return EXIT_FAILURE;
 		        }
+                if (updateTrafficLightInformation() == EXIT_FAILURE)
+                {
+                    utils::Conversion::Wait("iCS --> [ERROR] updateTrafficLightInformation()");
+                    return EXIT_FAILURE;
+                }
 		    } else {
 		        // Don't run a sumo time step
 		        IcsLog::LogLevel("RunOneSumoTimeStep() Skipping SUMO simulation step since the current iCS time is less than the next traffic simulator time.",
 		                kLogLevelInfo);
+		        // TrafficLight info needs to be present already at the first iCS simulation step, though
+                if (updateTrafficLightInformation() == EXIT_FAILURE)
+                {
+                    utils::Conversion::Wait("iCS --> [ERROR] updateTrafficLightInformation()");
+                    return EXIT_FAILURE;
+                }
 		    }
 		}
 #endif
@@ -661,6 +672,11 @@ int SyncManager::RunOneSumoTimeStep()
 
 	}
 
+    return EXIT_SUCCESS;
+}
+
+int SyncManager::updateTrafficLightInformation()
+    {
 	// Update traffic lights
 	std::vector<ics_types::trafficLightID_t> trafficLigthIds;
 	if (m_trafficSimCommunicator->GetTrafficLights(trafficLigthIds) == EXIT_FAILURE)
@@ -687,7 +703,6 @@ int SyncManager::RunOneSumoTimeStep()
 	}
 
 	return EXIT_SUCCESS;
-
 }
 
 int SyncManager::RunOneNs3TimeStep()
