@@ -325,11 +325,17 @@ int SyncManager::Run(bool interactive)
 #ifdef SUMO_ON
 		if (m_simStep % m_trafficSimstep == 0)
 		{
-			if (RunOneSumoTimeStep() == EXIT_FAILURE)
-			{
-				utils::Conversion::Wait("iCS --> [ERROR] RunOneSumoTimeStep()");
-				return EXIT_FAILURE;
-			}
+		    if(m_simStep > m_trafficSimCommunicator->getStartTime()) {
+		        if (RunOneSumoTimeStep() == EXIT_FAILURE)
+		        {
+		            utils::Conversion::Wait("iCS --> [ERROR] RunOneSumoTimeStep()");
+		            return EXIT_FAILURE;
+		        }
+		    } else {
+		        // Don't run a sumo time step
+		        IcsLog::LogLevel("RunOneSumoTimeStep() Skipping SUMO simulation step since the current iCS time is less than the next traffic simulator time.",
+		                kLogLevelInfo);
+		    }
 		}
 #endif
 
@@ -623,7 +629,9 @@ int SyncManager::RunOneSumoTimeStep()
 			int32_t id = 1;
 #endif
 			vehicle->m_nsId = id; // Assign the ns-3 node ID returned by ns-3
-			AddNode(vehicle);
+			if (!AddNode(vehicle)) {
+                return EXIT_FAILURE;
+			}
 			nodesToActivateInNs3.push_back(vehicle->m_nsId);  // Add vehicle to activate
 
 			// Inform Apps of mobile node creation
@@ -2840,20 +2848,33 @@ int SyncManager::ProcessAppMessages(Message & appMessage)
 	return EXIT_SUCCESS;
 }
 
-void SyncManager::AddNode(ITetrisNode * node, bool assingToOtherTables)
+bool SyncManager::AddNode(ITetrisNode * node, bool assingToOtherTables)
 {
-	m_iTetrisNodeMap->operator[](node->m_icsId) = node;
-	if (assingToOtherTables)
-	{
-		m_NS3IdToIcsIdMap->operator[](node->m_nsId) = node->m_icsId;
-		m_SumoIdToIcsIdMap->operator[](node->m_tsId) = node->m_icsId;
-	}
+    //    cout << "Adding node " << node->m_icsId << ".\n"
+    //            << "SUMO-ID: '" << node->m_tsId << "', "
+    //            << "ns3-ID: '" << node->m_nsId << "'" << endl;
+    m_iTetrisNodeMap->operator[](node->m_icsId) = node;
+    if (assingToOtherTables)
+    {
+        if (m_SumoIdToIcsIdMap->find(node->m_tsId) != m_SumoIdToIcsIdMap->end()) {
+#ifdef LOG_ON
+            stringstream log;
+            log << "Tried to add existing node '"<< node->m_tsId <<"' to SUMO-ID map.";
+            IcsLog::LogLevel((log.str()).c_str(), kLogLevelError);
+#endif
+            return false;
+        } else {
+            m_SumoIdToIcsIdMap->operator[](node->m_tsId) = node->m_icsId;
+            m_NS3IdToIcsIdMap->operator[](node->m_nsId) = node->m_icsId;
+        }
+    }
 #ifdef LOG_ON
     ostringstream log;
-	log << "AddNode() Added node. icsId=" << node->m_icsId << ", ns3Id=" << node->m_nsId << ", sumoId=" << node->m_tsId
-			<< ". Assing=" << assingToOtherTables;
-	IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+    log << "AddNode() Added node. icsId=" << node->m_icsId << ", ns3Id=" << node->m_nsId << ", sumoId=" << node->m_tsId
+            << ". Assing=" << assingToOtherTables;
+    IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
+    return true;
 }
 
 void SyncManager::DeleteNode(ITetrisNode * node)

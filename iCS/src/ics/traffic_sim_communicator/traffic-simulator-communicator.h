@@ -86,6 +86,12 @@ public:
     virtual double getSimstepLength() = 0;
 
     /**
+    * @brief Query the simulation time of the simulator
+    * @return The simulation time in milliseconds
+    */
+    virtual int getCurrentTime() = 0;
+
+    /**
     * @brief S6 Sends a message to SUMO in order to establish the value of the maximum speed for a certain vehicle.
     * @param[in] node The node
     * @param[in] maxSeep The value of the maximum speed to assign to the node
@@ -231,6 +237,8 @@ public:
     */
     virtual void controlTraCI(tcpip::Storage &inMsg, tcpip::Storage &outMsg) = 0;
 
+    /// @brief returns the start time of the traffic simulation
+    virtual int getStartTime() = 0;
 };
 
 }

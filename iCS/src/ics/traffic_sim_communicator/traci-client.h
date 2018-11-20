@@ -121,6 +121,11 @@ public:
   */
   double getSimstepLength();
 
+  /**
+  * @brief Query the simulation time of the simulator
+  * @return The simulation time in milliseconds
+  */
+  int getCurrentTime();
 
   /**
    * @brief Sends a message to SUMO in order to establish the value of the maximum speed for a certain vehicle.
@@ -269,6 +274,11 @@ public:
   /// @todo to be commented
 	int TraciCommand(tcpip::Storage & command,tcpip::Storage & result);
 
+  /// @brief returns the start time of the traffic simulation
+  int getStartTime() {
+      return m_startTime;
+  }
+
   /// @brief Port used for the connection with SUMO.
   int m_port;
 
@@ -308,6 +318,12 @@ private:
    */
   bool ReportResultState(tcpip::Storage& inMsg, int command);
 
+  /**
+  * @brief Stores the start time
+  * @note This is to be called on connect() and used by the iCS to determine whether a traffic simstep has to be executed
+  */
+  void storeStartTime();
+
   /// @brief Socket for the connection.
   tcpip::Socket* m_socket;
 
@@ -315,6 +331,7 @@ private:
   bool m_tlsIDs_cached;
   std::vector<ics_types::trafficLightID_t> m_tlsIDs;
 
+  double m_startTime;
 };
 
 }

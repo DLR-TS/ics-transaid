@@ -94,7 +94,7 @@ namespace ics
 			SumoIdToIcsIdMap * m_SumoIdToIcsIdMap;
 			MessageMap m_messageMap;
 
-			void AddNode(ITetrisNode * node, bool assingToOtherTables = true);
+			bool AddNode(ITetrisNode * node, bool assingToOtherTables = true);
 			void UpdateNodeId(ITetrisNode * node, bool addNs3, bool addSumo);
 			void DeleteNode(ITetrisNode *);
 			void RefreshScheduledMessageMap();

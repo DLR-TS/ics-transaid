@@ -66,7 +66,8 @@ TraCIClient::TraCIClient() :
 
 TraCIClient::TraCIClient(int port, std::string host) :
     m_tlsIDs_cached (false),
-    m_socket(0)
+    m_socket(0),
+    m_startTime(-1)
 {
   m_port = port;
   m_host = host;
@@ -91,6 +92,7 @@ bool TraCIClient::Connect()
     {
       cout << "iCS --> Trying " << i << " to connect SUMO on port " << m_port << "..." << endl;
       m_socket->connect();
+      storeStartTime();
       // subscribe departures and arrivals
       std: string objID;
       int noSubscribedVars = 2;
@@ -351,6 +353,21 @@ TraCIClient::getSimstepLength() {
     const double simstepLength = inMsg.readDouble();
     return simstepLength;
 }
+
+int
+TraCIClient::getCurrentTime() {
+    int commandID = CMD_GET_SIM_VARIABLE;
+    tcpip::Storage inMsg;
+    beginValueRetrieval("", VAR_TIME_STEP, inMsg, commandID);
+    const double simstep = inMsg.readInt();
+    return simstep;
+}
+
+void
+TraCIClient::storeStartTime() {
+    m_startTime = getCurrentTime();
+}
+
 
 int TraCIClient::CommandSetMaximumSpeed(const ITetrisNode &node, float maxSpeed)
 {
