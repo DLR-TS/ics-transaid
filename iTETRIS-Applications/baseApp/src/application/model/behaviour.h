@@ -103,7 +103,7 @@ namespace baseapp
 				 * @param[out] data Data to send back to iCS. The application has to fill the map
 				 * @return Whatever the application executed. If true data will be sent to iCS. If false data is discarded
 				 */
-				virtual bool Execute(const int currentTimeStep, DirectionValueMap &data) {return false;};
+				virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
 
                 /**
                  * @brief Called by the ics-interface if a CAM message is received by the node
@@ -132,7 +132,6 @@ namespace baseapp
 			protected:
 				virtual std::string Log() const;
 				iCSInterface* GetController();
-                virtual Node* GetNode();
 				bool m_enabled;
 
 			private:

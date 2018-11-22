@@ -88,8 +88,8 @@ namespace testapp
                 // Used for testing purposes before random offsets were assigned to messages. (test case commSimple)
                 // (=> abort at 12000, as the test vehicle is inserted at t=2000)
                 if (!m_subReceiveMessage) {
-                    GetNode()->subscribeToUnicastReception();
-                    GetNode()->subscribeToGeobroadcastReception(MSGCAT_TESTAPP);
+                    GetController()->startReceivingUnicast();
+                    GetController()->startReceivingGeobroadcast(MSGCAT_TESTAPP);
                     m_subReceiveMessage = true;
                 }
                 const int endWaitingTime = 10000;
@@ -99,8 +99,8 @@ namespace testapp
                 const int endWaitingTime = 10000;
                 const int insertionAccordingToRoutresFile = 2000;
                 if (!m_subReceiveMessage) {
-                    GetNode()->subscribeToUnicastReception();
-                    GetNode()->subscribeToGeobroadcastReception(MSGCAT_TESTAPP);
+                    GetController()->startReceivingUnicast();
+                    GetController()->startReceivingGeobroadcast(MSGCAT_TESTAPP);
                     m_subReceiveMessage = true;
                 }
                 m_eventAbortWaitingForRSU = Scheduler::Schedule(endWaitingTime, &BehaviourTestNode::abortWaitingForRSUResponse, this);
@@ -108,17 +108,17 @@ namespace testapp
             } else if (ProgramConfiguration::GetTestCase() == "CAMsimple"){
                 if (!m_setCAMareaSubscription)
                 {
-                    GetNode()->subscribeSendingCAMs();
-                    GetNode()->subscribeToCAMInfo();
+                    GetController()->StartSendingCAMs();
+                    GetController()->startReceivingCAMs();
                     m_setCAMareaSubscription = true;
                 }
             } else if (ProgramConfiguration::GetTestCase() == "acosta" || ProgramConfiguration::GetTestCase() == "") {
                 if (!m_subReceiveMessage)
                 {
                     //Subscribe to geobraodcast and unicast
-                    GetNode()->nodeGetMobilityInformation();
-                    GetNode()->subscribeToUnicastReception();
-                    GetNode()->subscribeToGeobroadcastReception(PROTOCOL_MESSAGE);
+                    GetController()->requestMobilityInfo();
+                    GetController()->startReceivingUnicast();
+                    GetController()->startReceivingGeobroadcast(PROTOCOL_MESSAGE);
                     m_subReceiveMessage = true;
                 }
             }
@@ -227,7 +227,7 @@ namespace testapp
                     GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
                 }
             } else if (ProgramConfiguration::GetTestCase() == "testOpenGap") {
-                if (currentTimeStep == 8000 && GetNode()->getSumoId() == "veh0") {
+                if (currentTimeStep == 8000 && GetController()->GetNode()->getSumoId() == "veh0") {
                     GetController()->commandTraciOpenGap(5, 50, 100, 0.1, 1);
                 }
             }

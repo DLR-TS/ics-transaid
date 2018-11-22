@@ -185,8 +185,8 @@ namespace protocolspeedapp
             }
 
             //Subscribe to geobroadcast and unicast
-            GetNode()->subscribeToUnicastReception();
-            GetNode()->subscribeToGeobroadcastReception(PROTOCOL_MESSAGE);
+            GetController()->startReceivingUnicast();
+            GetController()->startReceivingGeobroadcast(PROTOCOL_MESSAGE);
 
 		}
 

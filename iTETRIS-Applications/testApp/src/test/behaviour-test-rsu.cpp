@@ -79,7 +79,7 @@ namespace testapp
             } else if (ProgramConfiguration::GetTestCase() == "commSimple" || ProgramConfiguration::GetTestCase() == "commSimple2") {
 
                 // Subscribe to receive geobroadcast messages
-                GetNode()->subscribeToGeobroadcastReception(MSGCAT_TESTAPP);
+                GetController()->startReceivingGeobroadcast(MSGCAT_TESTAPP);
                 m_subReceiveMessage = true;
 
                 if (ProgramConfiguration::GetTestCase() == "commSimple2") {
@@ -93,29 +93,29 @@ namespace testapp
             } else if (ProgramConfiguration::GetTestCase() == "CAMsimple"){
               if (!m_setCAMareaSubscription)
               {
-                  GetNode()->subscribeSendingCAMs();
-                  GetNode()->subscribeToCAMInfo();
+                  GetController()->StartSendingCAMs();
+                  GetController()->startReceivingCAMs();
                   m_setCAMareaSubscription = true;
               }
           } else if (ProgramConfiguration::GetTestCase() == "acosta" || ProgramConfiguration::GetTestCase() == "") {
                 // in original demo-app this was included, but not needed for most simple test cases
                 if (!m_mobilitySubscription)
                 {
-                    GetNode()->nodeGetMobilityInformation();
+                    GetController()->requestMobilityInfo();
                     m_mobilitySubscription = true;
                 }
 
                 if (!m_trafficLightSubscription)
                 {
-                    GetNode()->subscribeTrafficLightInformation();
+                    GetController()->requestTrafficLightInfo();
                     m_trafficLightSubscription = true;
                 }
 
                 if (!m_subReceiveMessage)
                 {
                     //Subscribe to geobroadcast and unicast
-                    GetNode()->subscribeToUnicastReception();
-                    GetNode()->subscribeToGeobroadcastReception(PROTOCOL_MESSAGE);
+                    GetController()->startReceivingUnicast();
+                    GetController()->startReceivingGeobroadcast(PROTOCOL_MESSAGE);
                     m_subReceiveMessage = true;
                 }
             }

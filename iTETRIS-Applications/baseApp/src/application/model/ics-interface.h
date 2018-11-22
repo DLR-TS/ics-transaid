@@ -153,6 +153,10 @@ namespace baseapp
 				 * @param[in] pid Protocol id
 				 */
 				void Send(NodeType dstType, Header* header, ProtocolId pid, const int messageCategory);
+
+                /// @brief Let the node receive geobroadcast messages
+                void startReceivingGeobroadcast(const int messageId);
+
                 /**
                  * @brief Used to send a Unicast message.
                  * @param[in] destId Id of the destination node
@@ -162,8 +166,15 @@ namespace baseapp
                  *                            messages on iCS side), @see SubscriptionHelper::ReceiveGeobroadcast()
                  */
                 void SendTo(int destId, Header* header, ProtocolId pid, const int messageCategory);
+
+                /// @brief Let the node receive unicast messages
+                void startReceivingUnicast();
+
                 /**
                  * @brief Used to start sending CAM messages.
+                 * @todo Revise. This uses a simplified implementation on the node's side,
+                 *       although this declaration (which doesn't have an implementation)
+                 *       suggests a more complex method.
                  * @param[in] destId Id of the destination node
                  * @param[in] header Message to send
                  * @param[in] pid Protocol id
@@ -171,6 +182,12 @@ namespace baseapp
                  *                            messages on iCS side), @see SubscriptionHelper::ReceiveGeobroadcast()
                  */
                 void StartSendingCAMs(int destId, Header* header, ProtocolId pid, const int messageCategory);
+                /// @brief Shortcut to address the simplified implementation.
+                void StartSendingCAMs();
+
+                /// @brief Let the node receive CAMs
+                void startReceivingCAMs();
+
 				/**
 				 * @brief Called by the node class when the node has received the message from iCS
 				 * @param[in] payload Message received
@@ -192,8 +209,6 @@ namespace baseapp
 				 */
 				void TraciCommandResult(const int executionId, tcpip::Storage & traciReply);
 
-
-
                 /// @brief schedule a traci command to be executed
                 /// @param[in] cmdID traci command id
                 /// @param[in] varID traci variable id
@@ -203,6 +218,9 @@ namespace baseapp
 
                 /// @brief helper function that adds GetMobilityInfo subscription
                 void requestMobilityInfo();
+
+                /// @brief helper function that adds TrafficLightInfo subscription
+                void requestTrafficLightInfo();
 
                 /// @brief schedule a traci command to be executed
                 /// @param[in] objID ID for the object to be addressed
@@ -255,12 +273,6 @@ namespace baseapp
 				 * @brief Utility method to get the node name. Used in the logs
 				 */
 				std::string LogNode() const;
-
-			protected:
-                /**
-                 * @brief Get the node instance on which it this interface is installed.
-                 */
-                Node* GetNodeMutable();
 
 			private:
 

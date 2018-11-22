@@ -74,10 +74,6 @@ namespace baseapp
 			return m_controller;
 		}
 
-        Node* Behaviour::GetNode() {
-            return m_controller->GetNodeMutable();
-        }
-
 		void Behaviour::Start()
 		{
 			NS_LOG_FUNCTION(Log());
@@ -106,7 +102,12 @@ namespace baseapp
 			return outstr.str();
 		}
 
-        void Behaviour::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
+		bool Behaviour::Execute(const int currentTimeStep, DirectionValueMap &data)
+		{
+		    return false;
+		}
+
+		void Behaviour::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
         {}
 
         void Behaviour::processTraCIResult(const int result, const Command& command) {

@@ -97,11 +97,6 @@ namespace baseapp
             return m_node;
         }
 
-        Node* iCSInterface::GetNodeMutable()
-        {
-            return m_node;
-        }
-
 		int iCSInterface::GetId() const
 		{
 			return m_node->getId();
@@ -314,6 +309,11 @@ namespace baseapp
                     LogNode() << "[" << Scheduler::GetCurrentTime() << "] Sent packet. Its Header: " << PrintHeader(commHeader) << ", and following " << header->Name() << ": " << PrintHeader(header));
 		}
 
+        /// @brief Let the node receive geobroadcast messages
+        void iCSInterface::startReceivingGeobroadcast(const int messageId) {
+            m_node->subscribeToGeobroadcastReception(messageId);
+        }
+
 		void iCSInterface::SendTo(int destId, Header* header, ProtocolId pid, const int messageCategory)
 		{
 			if (!m_active)
@@ -350,6 +350,23 @@ namespace baseapp
 			//  m_node->sendTo(dest, payload);
 			return commHeader;
 		}
+
+		void iCSInterface::startReceivingUnicast(){
+		    m_node->subscribeToUnicastReception();
+		}
+
+		void iCSInterface::StartSendingCAMs() {
+		    StartSendingCAMs(0, nullptr, PID_UNKNOWN, 0);
+		}
+
+        void iCSInterface::startReceivingCAMs() {
+            m_node->subscribeToCAMInfo();
+        }
+
+        void iCSInterface::StartSendingCAMs(int /*destId*/, Header* /*header*/, ProtocolId /*pid*/, const int /*messageCategory*/)
+        {
+            m_node->subscribeSendingCAMs();
+        }
 
 		bool iCSInterface::Execute(const int currentTimeStep, DirectionValueMap &data)
 		{
@@ -573,11 +590,14 @@ namespace baseapp
             }
         }
 
-
         void iCSInterface::requestMobilityInfo()
         {
             //TODO: specify for which nodes to get the info, as function parameter
             m_node->nodeGetMobilityInformation();
+        }
+
+        void iCSInterface::requestTrafficLightInfo(){
+            m_node->subscribeTrafficLightInformation();
         }
 
 	} /* namespace application */

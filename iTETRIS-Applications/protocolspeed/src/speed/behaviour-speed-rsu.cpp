@@ -77,10 +77,10 @@ namespace protocolspeedapp
         m_eventCheck = Scheduler::Schedule(m_timeCheck, &BehaviourSpeedRSU::EventCheck, this);
 
 	    BehaviourRsu::Start();
-        GetNode()->subscribeToUnicastReception();
-        GetNode()->subscribeToGeobroadcastReception(PROTOCOL_MESSAGE);
-	    GetNode()->nodeGetMobilityInformation();
-	    GetNode()->subscribeTrafficLightInformation();
+        GetController()->startReceivingUnicast();
+        GetController()->startReceivingGeobroadcast(PROTOCOL_MESSAGE);
+	    GetController()->requestMobilityInfo();
+	    GetController()->requestTrafficLightInfo();
 	}
 
 
