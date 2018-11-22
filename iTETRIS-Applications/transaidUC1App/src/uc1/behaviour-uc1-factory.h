@@ -36,13 +36,10 @@
 #ifndef BEHAVIOUR_UC1_FACTORY_H_
 #define BEHAVIOUR_UC1_FACTORY_H_
 
-#include "behaviour-factory.h"
+#include "application/model/behaviour-factory.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
-
-class baseapp::application::iCSInterface;
-class baseapp::application::Node;
 
 namespace uc1app
 {
@@ -54,6 +51,7 @@ namespace uc1app
 		class BehaviourUC1Factory : public BehaviourFactory
 		{
 		public:
+		    virtual ~BehaviourUC1Factory();
 			/**
 			 * @brief Create one or several new RSU behaviour(s) and add them to the interface
 			 */

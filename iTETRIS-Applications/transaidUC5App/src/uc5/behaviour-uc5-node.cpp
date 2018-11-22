@@ -94,20 +94,33 @@ namespace uc5app
             NS_LOG_INFO(Log() << "Received a test message with content: " << uc5Header->getMessage());
 		}
 
-		bool BehaviourUC5Node::Execute(const int currentTimeStep, DirectionValueMap &data)
-		{
-			return false;
-		}
-
-        void BehaviourUC5Node::abortWaitingForRSUResponse()
-        {
-            NS_LOG_FUNCTION(Log());
+        bool BehaviourUC5Node::Execute(const int currentTimeStep, DirectionValueMap &data) {
+            return false;
         }
 
-
         void BehaviourUC5Node::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
-        {
-            NS_LOG_FUNCTION(Log());
+        {}
+
+        void BehaviourUC5Node::processTraCIResult(const int result, const Command& command) {
+            NS_LOG_INFO(GetController()->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void BehaviourUC5Node::processTraCIResult(const double result, const Command& command) {
+            NS_LOG_INFO(GetController()->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void BehaviourUC5Node::processTraCIResult(const std::string result, const Command& command) {
+            NS_LOG_INFO(GetController()->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void BehaviourUC5Node::processTraCIResult(const std::vector<std::string> result, const Command& command) {
+            std::stringstream ss;
+            ss << "[";
+            for (std::vector<std::string>::const_iterator i = result.begin(); i != result.end(); ++i) {
+                ss  << *i << ", ";
+            }
+            ss << "]";
+            NS_LOG_INFO(GetController()->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " is " << ss.str());
         }
 
 

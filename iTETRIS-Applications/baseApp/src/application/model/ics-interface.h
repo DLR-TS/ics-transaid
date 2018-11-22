@@ -45,6 +45,7 @@
 #include "structs.h"
 #include "traci-helper.h"
 #include "behaviour.h"
+#include "foreign/tcpip/storage.h"
 
 namespace baseapp
 {

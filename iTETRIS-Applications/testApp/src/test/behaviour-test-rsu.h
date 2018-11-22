@@ -37,10 +37,10 @@
 #ifndef BEHAVIOUR_TEST_RSU_H_
 #define BEHAVIOUR_TEST_RSU_H_
 
-#include "behaviour-rsu.h"
-#include "scheduler.h"
-#include "random-variable.h"
 #include <map>
+#include "application/model/behaviour-rsu.h"
+#include "application/helper/scheduler.h"
+#include "application/helper/random-variable.h"
 #include "structs.h"
 
 using namespace baseapp;

@@ -49,9 +49,6 @@ namespace uc1app
 {
 	namespace application
 	{
-
-
-
 		///BehaviourUC1Node implementation
 		BehaviourUC1Node::BehaviourUC1Node(iCSInterface* controller) :
 				BehaviourNode(controller)
@@ -96,20 +93,33 @@ namespace uc1app
             NS_LOG_INFO(Log() << "Received a test message with content: " << uc1Header->getMessage());
 		}
 
-		bool BehaviourUC1Node::Execute(const int currentTimeStep, DirectionValueMap &data)
-		{
-			return false;
-		}
-
-        void BehaviourUC1Node::abortWaitingForRSUResponse()
-        {
-            NS_LOG_FUNCTION(Log());
+        bool BehaviourUC1Node::Execute(const int currentTimeStep, DirectionValueMap &data) {
+            return false;
         }
 
-
         void BehaviourUC1Node::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
-        {
-            NS_LOG_FUNCTION(Log());
+        {}
+
+        void BehaviourUC1Node::processTraCIResult(const int result, const Command& command) {
+            NS_LOG_INFO(GetController()->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void BehaviourUC1Node::processTraCIResult(const double result, const Command& command) {
+            NS_LOG_INFO(GetController()->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void BehaviourUC1Node::processTraCIResult(const std::string result, const Command& command) {
+            NS_LOG_INFO(GetController()->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void BehaviourUC1Node::processTraCIResult(const std::vector<std::string> result, const Command& command) {
+            std::stringstream ss;
+            ss << "[";
+            for (std::vector<std::string>::const_iterator i = result.begin(); i != result.end(); ++i) {
+                ss  << *i << ", ";
+            }
+            ss << "]";
+            NS_LOG_INFO(GetController()->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " is " << ss.str());
         }
 
 

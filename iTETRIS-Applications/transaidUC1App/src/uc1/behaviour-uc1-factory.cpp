@@ -34,8 +34,8 @@
  ***************************************************************************************/
 
 #include "program-configuration.h"
-#include "node.h"
-#include "ics-interface.h"
+#include "application/node.h"
+#include "application/model/ics-interface.h"
 #include "behaviour-uc1-node.h"
 #include "behaviour-uc1-rsu.h"
 #include "behaviour-uc1-factory.h"
@@ -47,6 +47,7 @@ namespace uc1app
 {
 	namespace application
 	{
+	    BehaviourUC1Factory::~BehaviourUC1Factory() {};
 
 		void BehaviourUC1Factory::createRSUBehaviour(iCSInterface* interface, Node* node)
 		{

@@ -37,10 +37,10 @@
 #ifndef BEHAVIOUR_UC5_NODE_H_
 #define BEHAVIOUR_UC5_NODE_H_
 
-#include "behaviour-node.h"
-#include "scheduler.h"
-#include "random-variable.h"
 #include <map>
+#include "application/model/behaviour-node.h"
+#include "application/helper/scheduler.h"
+#include "application/helper/random-variable.h"
 #include "structs.h"
 
 using namespace baseapp;
@@ -64,7 +64,11 @@ namespace uc5app
 		    virtual bool IsSubscribedTo(ProtocolId pid) const;
 		    virtual void Receive(server::Payload *payload, double snr);
 		    virtual bool Execute(const int currentTimeStep, DirectionValueMap &data);
-            virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+            void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+            void processTraCIResult(const int result, const Command& command);
+            void processTraCIResult(const double result, const Command& command);
+            void processTraCIResult(const std::string result, const Command& command);
+            void processTraCIResult(const std::vector<std::string> result, const Command& command);
 
 		    void abortWaitingForRSUResponse();
 

@@ -34,6 +34,7 @@
  * University of Bologna
  ***************************************************************************************/
 
+#include "application/model/behaviour-rsu.h"
 #include "behaviour-uc1-rsu.h"
 #include "ics-interface.h"
 #include "program-configuration.h"
@@ -52,7 +53,7 @@ namespace uc1app
 
 		///BehaviourUC1RSU implementation
 		BehaviourUC1RSU::BehaviourUC1RSU(iCSInterface* controller) :
-				BehaviourNode(controller)
+				BehaviourRsu(controller)
 		{}
 
 		BehaviourUC1RSU::~BehaviourUC1RSU() {}
@@ -70,15 +71,33 @@ namespace uc1app
             NS_LOG_FUNCTION(Log());
 		}
 
-		bool BehaviourUC1RSU::Execute(const int currentTimeStep, DirectionValueMap &data) {}
+		bool BehaviourUC1RSU::Execute(const int currentTimeStep, DirectionValueMap &data) {
+		    return false;
+		}
 
         void BehaviourUC1RSU::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
-        {
-            NS_LOG_FUNCTION(Log());
-        }
+        {}
 
         void BehaviourUC1RSU::processTraCIResult(const int result, const Command& command) {
-            processTraCIResult(result, command);
+            NS_LOG_INFO(GetController()->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void BehaviourUC1RSU::processTraCIResult(const double result, const Command& command) {
+            NS_LOG_INFO(GetController()->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void BehaviourUC1RSU::processTraCIResult(const std::string result, const Command& command) {
+            NS_LOG_INFO(GetController()->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+        }
+
+        void BehaviourUC1RSU::processTraCIResult(const std::vector<std::string> result, const Command& command) {
+            std::stringstream ss;
+            ss << "[";
+            for (std::vector<std::string>::const_iterator i = result.begin(); i != result.end(); ++i) {
+                ss  << *i << ", ";
+            }
+            ss << "]";
+            NS_LOG_INFO(GetController()->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " is " << ss.str());
         }
 
 

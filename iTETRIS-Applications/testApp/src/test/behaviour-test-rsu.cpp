@@ -34,6 +34,7 @@
  * University of Bologna
  ***************************************************************************************/
 
+#include "application/model/behaviour-rsu.h"
 #include "behaviour-test-rsu.h"
 #include "ics-interface.h"
 #include "fixed-station.h"

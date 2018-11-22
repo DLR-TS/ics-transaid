@@ -37,10 +37,11 @@
 #ifndef BEHAVIOUR_UC1_RSU_H_
 #define BEHAVIOUR_UC1_RSU_H_
 
-#include "behaviour-rsu.h"
-#include "scheduler.h"
-#include "random-variable.h"
+
 #include <map>
+#include "application/model/behaviour-rsu.h"
+#include "application/helper/scheduler.h"
+#include "application/helper/random-variable.h"
 #include "structs.h"
 
 using namespace baseapp;
@@ -56,7 +57,7 @@ namespace uc1app
 		class BehaviourUC1RSU: public BehaviourRsu
 		{
 			public:
-				BehaviourUC1RSU(baseapp::application::iCSInterface* controller);
+				BehaviourUC1RSU(iCSInterface* controller);
 				~BehaviourUC1RSU();
 
 				void Start();
@@ -64,12 +65,11 @@ namespace uc1app
 				bool IsSubscribedTo(ProtocolId pid) const;
 				void Receive(server::Payload *payload, double snr);
 				bool Execute(const int currentTimeStep, DirectionValueMap &data);
-				void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
-				void processTraCIResult(const int result, const Command& command);
-
-                void RSUBroadcastCommSimple2();
-
-                void abortBroadcast();
+                void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
+                void processTraCIResult(const int result, const Command& command);
+                void processTraCIResult(const double result, const Command& command);
+                void processTraCIResult(const std::string result, const Command& command);
+                void processTraCIResult(const std::vector<std::string> result, const Command& command);
 
                 TypeBehaviour GetType() const
                 {
