@@ -109,7 +109,13 @@ std::string ToString(TypeBehaviour type)
   case TYPE_BEHAVIOUR_TEST_NODE:
     return "TestNode";
   case TYPE_BEHAVIOUR_TEST_RSU:
-    return "TestRSU";
+      return "TestRSU";
+  default:
+  {
+      std::stringstream ss;
+      ss << "<behavior type without known string conversion (type code: " << type << ")>";
+      return ss.str();
+  }
   }
 }
 
@@ -121,6 +127,8 @@ std::string ToString(VehicleMovement direction)
     return "Approaching";
   case LEAVING:
     return "Leaving";
+  default:
+      return "UNKNOWN DIRECTION";
 
   }
 }
