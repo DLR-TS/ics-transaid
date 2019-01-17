@@ -252,7 +252,7 @@ else
 fi
 
 
-AM_CPPFLAGS="-I$PWD/$srcdir/src $AM_CPPFLAGS"
+AM_CPPFLAGS="-I$PWD/$srcdir/src -I$PWD/$srcdir/../../sumo/src $AM_CPPFLAGS"
 AC_SUBST(AM_CPPFLAGS)
 AC_SUBST(AM_CXXFLAGS)
 

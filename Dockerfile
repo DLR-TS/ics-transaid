@@ -14,13 +14,13 @@ ENV PATH=$SUMO_HOME/bin:/transaid/bin:$PATH
 ENV LD_LIBRARY_PATH=/transaid/lib
 
 RUN apt-get -y update
-RUN apt-get -y install psmisc vim git libxerces-c-dev autoconf automake libtool libfox-1.6-dev libgl1-mesa-dev libglu1-mesa-dev libgdal-dev libproj-dev libgeographic-dev python-pip
+RUN apt-get -y install psmisc vim git cmake autoconf automake libtool libxerces-c-dev libfox-1.6-dev libgl1-mesa-dev libglu1-mesa-dev libgdal-dev libproj-dev libgeographic-dev python-pip
 RUN pip install texttest
 
 RUN git clone --recursive https://$CREDS@gitlab.imet.gr/hit/transaid
 RUN cd transaid; git checkout transaid-dev; git submodule update --init
 
-RUN cd transaid/sumo; autoreconf -i; ./configure; make -j
+RUN cd transaid/sumo; mkdir build/cmake-build; cd build/cmake-build; cmake ../.. -DSUMO_UTILS=TRUE; make -j
 
 RUN cd transaid/ns-3.20; ./waf configure --prefix=$PWD/..; ./waf -j8; ./waf install
 

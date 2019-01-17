@@ -1,6 +1,6 @@
 Step 1 - Install required libraries
 $ sudo apt-get update
-$ sudo apt-get install git libxerces-c-dev autoconf automake libtool libfox-1.6-dev libgl1-mesa-dev libglu1-mesa-dev libgdal-dev libproj-dev libgeographic-dev python-pip
+$ sudo apt-get install git autoconf automake libtool cmake libxerces-c-dev libfox-1.6-dev libgl1-mesa-dev libglu1-mesa-dev libgdal-dev libproj-dev libgeographic-dev python-pip
 $ sudo pip install texttest
 
 all following steps do not require sudo
@@ -17,11 +17,12 @@ The "original" repository containing the master branch for iTetris is located at
 --------------------------------
 Step 3 - Build SUMO
 $ cd sumo
-$ autoreconf -i
-$ ./configure
-$ make -j
 $ export SUMO_HOME=$PWD
-$ cd ..
+$ mkdir build/cmake-build
+$ cd build/cmake-build
+$ cmake ../.. -DSUMO_UTILS=TRUE
+$ make -j
+$ cd ../../..
 
 --------------------------------
 Step 4 - Build NS-3.20
