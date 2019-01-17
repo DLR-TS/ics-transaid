@@ -85,7 +85,6 @@ AC_PROG_MAKE_SET
 dnl enable libtool-support
 dnl gives a deprecated warning for RANLIB with newer libtools
 AC_PROG_RANLIB
-AM_PROG_LIBTOOL
 
 
 dnl Check for enable-features that shall go into config.h
@@ -309,7 +308,6 @@ src/utils/geom/Makefile
 src/utils/importio/Makefile
 src/utils/common/Makefile
 src/utils/shapes/Makefile
-src/utils/traci/Makefile
 src/utils/iodevices/Makefile
 src/utils/options/Makefile
 src/utils/xml/Makefile
