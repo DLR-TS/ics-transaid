@@ -1,9 +1,6 @@
-XERCES_LIBS = -l$(LIB_XERCES)
-GEOGRAPHIC_LIBS = -l$(LIB_GEOGRAPHIC)
-
 bin_PROGRAMS = iCS
 
-COMMON_LIBS = ./ics/libics.a \
+iCS_LDADD = ./ics/libics.a \
 ./ics/traffic_sim_communicator/libtrafficsimulatorcommunicator.a \
 ./ics/wirelesscom_sim_communicator/libwirelesscommunicationsimulatorcommunicator.a \
 ./ics/applications_manager/libapplicationsmanager.a \
@@ -19,29 +16,20 @@ COMMON_LIBS = ./ics/libics.a \
 ./utils/ics/log/libicslog.a \
 ./utils/ics/geometric/libutilsicsgeometric.a \
 ./utils/ics/libutilsics.a \
-./utils/options/liboptions.a \
-./utils/xml/libxml.a \
-./utils/geom/libgeom.a \
-./utils/common/libcommon.a \
-./utils/iodevices/libiodevices.a \
-./foreign/tcpip/libtcpip.a \
-$(XERCES_LIBS) \
-$(GEOGRAPHIC_LIBS) \
+-lsumoutils \
+-l$(LIB_XERCES) \
+-l$(LIB_GEOGRAPHIC) \
 -lpthread
 
 
 iCS_SOURCES = iCS_main.cpp
 
-iCS_LDFLAGS = $(XERCES_LDFLAGS) $(GEOGRAPHIC_LDFLAGS)
-
-iCS_LDADD   =  $(COMMON_LIBS) 
+iCS_LDFLAGS = $(XERCES_LDFLAGS) $(GEOGRAPHIC_LDFLAGS) $(SUMOUTILS_LDFLAGS) 
 
 
+SUBDIRS = utils ics unittest
 
-SUBDIRS = foreign utils ics unittest
-
-EXTRA_DIST = config.h config.h.in \
-windows_config.h
+EXTRA_DIST = config.h.in windows_config.h
 
 if WITH_VERSION_H
 all: version.h

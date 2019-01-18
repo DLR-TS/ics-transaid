@@ -19,7 +19,7 @@
 #endif
 
 #include "stations-configfile-parser.h"
-#include "../../utils/common/TplConvert.h"
+#include <utils/common/StringUtils.h>
 
 #include <string>
 #include <iostream>
@@ -194,12 +194,12 @@ throw(std::runtime_error) {
 
                                     const XMLCh* xmlch_MobRATtype = currentElement->getAttribute(ATTR_MobRATtype);
                                     char *type_ch = XMLString::transcode(xmlch_MobRATtype);
-                                    int type = (bool)TplConvert::_2int(type_ch);
+                                    int type = (bool)StringUtils::toInt(type_ch);
                                     XMLString::release(&type_ch);
 
                                     const XMLCh* xmlch_PenetrationRate = currentElement->getAttribute(ATTR_PenetrationRate);
                                     char *penRate_ch = XMLString::transcode(xmlch_PenetrationRate);
-                                    float penRate = TplConvert::_2SUMOReal(penRate_ch);
+                                    float penRate = (float)StringUtils::toDouble(penRate_ch);
                                     XMLString::release(&penRate_ch);
                                     defaultPenetrationRates.insert(pair<int, float>(type,penRate));
 

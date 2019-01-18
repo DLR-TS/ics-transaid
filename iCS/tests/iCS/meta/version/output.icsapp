@@ -1,5 +1,13 @@
 iTETRIS Control System Version 0.1.0
+ Build features: Linux-4.15.0-43-generic x86_64 GNU 7.3.0 Release SumoUtilsLibrary Proj GUI GDAL GL2PS SWIG
  (c) iTETRIS consortium 2008-2010; http://www.ict-itetris.eu/
  (c) COLOMBO consortium 2012-2015; http://www.colombo-fp7.eu/
  (c) TransAID consortium 2018; http://www.trainsaid.eu/
  ... and others (see source files).
+
+iTETRIS Control System Version 0.1.0 is part of SUMO.
+This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v2.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v20.html
+SPDX-License-Identifier: EPL-2.0

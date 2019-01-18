@@ -18,8 +18,8 @@
 #include <config.h>
 #endif
 
-#include "./facilities-configfile-parser.h"
-#include "../../utils/common/TplConvert.h"
+#include "facilities-configfile-parser.h"
+#include <utils/common/StringUtils.h>
 
 #include <string>
 #include <iostream>
@@ -175,19 +175,19 @@ throw(std::runtime_error) {
                 if (currentElement->hasAttribute(ATTR_latitude)) {
                     const XMLCh* xmlch_latitude = currentElement->getAttribute(ATTR_latitude);
                     char* tmpString = XMLString::transcode(xmlch_latitude);
-                    referenceLatitude = TplConvert::_2SUMOReal(tmpString);
+                    referenceLatitude = StringUtils::toDouble(tmpString);
                     XMLString::release(&tmpString);
                 }
                 if (currentElement->hasAttribute(ATTR_longitude)) {
                     const XMLCh* xmlch_longitude = currentElement->getAttribute(ATTR_longitude);
                     char* tmpString = XMLString::transcode(xmlch_longitude);
-                    referenceLongitude = TplConvert::_2SUMOReal(tmpString);
+                    referenceLongitude = StringUtils::toDouble(tmpString);
                     XMLString::release(&tmpString);
                 }
                 if (currentElement->hasAttribute(ATTR_altitude)) {
                     const XMLCh* xmlch_altitude = currentElement->getAttribute(ATTR_altitude);
                     char* tmpString = XMLString::transcode(xmlch_altitude);
-                    referenceAltitude = TplConvert::_2SUMOReal(tmpString);
+                    referenceAltitude = StringUtils::toDouble(tmpString);
                     XMLString::release(&tmpString);
                 } else
                     referenceAltitude = -10000;     // Clearly you cannot be -10000 meters below the see level!

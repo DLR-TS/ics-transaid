@@ -15,7 +15,7 @@
 #include <time.h>
 #include "utilities.h"
 #include "sync-manager.h"
-#include "utils/common/TplConvert.h"
+#include <utils/common/StringUtils.h>
 
 namespace utils
 {
@@ -36,7 +36,7 @@ Conversion::string2Int(std::string stringValue)
 {
     int rValue;
 
-    rValue = TplConvert::_2int(stringValue.c_str());
+    rValue = StringUtils::toInt(stringValue.c_str());
 
     return rValue;
 }

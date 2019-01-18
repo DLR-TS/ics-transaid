@@ -1,7 +1,8 @@
 iTETRIS Control System Version 0.1.0
+ Build features: Linux-4.15.0-43-generic x86_64 GNU 7.3.0 Release SumoUtilsLibrary Proj GUI GDAL GL2PS SWIG
  (c) iTETRIS consortium 2008-2010; http://www.ict-itetris.eu/
  (c) COLOMBO consortium 2012-2015; http://www.colombo-fp7.eu/
  (c) TransAID consortium 2018; http://www.trainsaid.eu/
  ... and others (see source files).
- License GPLv3+: GNU GPL Version 3 or later <http://gnu.org/licenses/gpl.html>
+ License EPL-2.0: Eclipse Public License Version 2 <https://eclipse.org/legal/epl-v20.html>
  Use --help to get the list of options.

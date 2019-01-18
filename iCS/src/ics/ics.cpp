@@ -85,8 +85,8 @@
 #include "applications_manager/app-result-traffic-jam-detection.h"
 #include "FacilitiesManager.h"
 #include "../utils/ics/log/ics-log.h"
-#include "../utils/common/FileHelpers.h"
-#include <utils/common/TplConvert.h>
+#include <utils/common/FileHelpers.h>
+#include <utils/common/StringUtils.h>
 
 #ifdef _WIN32
 #include <windows.h> // needed for Sleep
@@ -175,7 +175,7 @@ ICS::Setup(string facilitiesConfigFile, string appConfigFile)
 #ifdef APPLICATIONS_ON
 	// Check the existence of the appConfigFile
 
-	if (!FileHelpers::exists(appConfigFile)) {
+	if (!FileHelpers::isReadable(appConfigFile)) {
 		cout << "iCS --> ERROR application configuration file '" << appConfigFile << "' not found." << endl;
 		return EXIT_FAILURE;
 	}
@@ -421,7 +421,7 @@ ICS::SetupApplications(string filePath)
 		serviceId.geoBroadcastServiceId = (string) m_geoBroadcastServiceId;
 		serviceId.topoBroadcastServiceId = (string) m_topoBroadcastServiceId;
 
-		long _seed = TplConvert::_2long(seed);
+		long _seed = StringUtils::toLong(seed);
 
 		string execString(executable);
 
@@ -441,7 +441,7 @@ ICS::SetupApplications(string filePath)
 		for (vector<char*>::iterator stationIt = stations.begin(); stationIt != stations.end(); stationIt++) {
 			char* stationId = *stationIt;
 			ITetrisNode* node = NULL;
-			int auxi = TplConvert::_2int(stationId);
+			int auxi = StringUtils::toInt(stationId);
 			node = m_syncManager->GetNodeByIcsId(auxi);
 			if (node == NULL) {
 #ifdef LOG_ON

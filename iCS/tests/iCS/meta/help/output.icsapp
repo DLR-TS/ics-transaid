@@ -8,7 +8,7 @@ The 'iTETRIS Control System'.
 Usage: iCS [OPTION]*
 Configuration Options:
   -c, --configuration-file FILE        Loads the named config on startup
-  --save-configuration FILE            Saves current configuration into FILE
+  -C, --save-configuration FILE        Saves current configuration into FILE
   --save-template FILE                 Saves a configuration template (empty)
                                          into FILE
   --save-schema FILE                   Saves the configuration schema into FILE
@@ -76,10 +76,14 @@ Logs Options:
 
 Report Options:
   -v, --verbose                        Switches to verbose output
-  -p, --print-options                  Prints option values before processing
+  --print-options                      Prints option values before processing
   -?, --help                           Prints this screen
   -V, --version                        Prints the current version
-  -X, --xml-validation                 Enable schema validation of XML inputs
+  -X, --xml-validation STR             Set schema validation scheme of XML
+                                         inputs ("never", "auto" or "always")
+  --xml-validation.net STR             Set schema validation scheme of SUMO
+                                         network inputs ("never", "auto" or
+                                         "always")
   -W, --no-warnings                    Disables output of warnings
   -l, --log FILE                       Writes all messages to FILE (implies
                                          verbose)
@@ -98,5 +102,5 @@ Examples:
   iCS -c <CONFIGURATION>
     
 
-Report bugs at <http://sourceforge.net/apps/trac/sumo/>.
-Get in contact via <sumo-user@lists.sourceforge.net>.
+Report bugs at <https://github.com/eclipse/sumo/issues>.
+Get in contact via <sumo@dlr.de>.

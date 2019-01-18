@@ -34,7 +34,7 @@
 #include "../../configfile_parsers/LDMrules-configfile-parser.h"
 #include "../../../utils/ics/iCSGeoUtils.h"
 #include "../../../utils/ics/log/ics-log.h"
-#include "../../../utils/common/TplConvert.h"
+#include <utils/common/StringUtils.h>
 #include "../../sync-manager.h"
 
 #ifdef WIN32
@@ -1242,13 +1242,13 @@ actionID_t LDMLogic::createActionID(stationID_t stationID, seqNo_t seqNo)
 stationID_t LDMLogic::getStationIDfromActionID(actionID_t actionID)
 {
   std::string stationIDString = actionID.substr(0, ceil(2.41 * sizeof(stationID_t)));
-  return (stationID_t) TplConvert::_2int(stationIDString.c_str());
+  return (stationID_t) StringUtils::toInt(stationIDString.c_str());
 }
 
 seqNo_t LDMLogic::getSequenceNumberfromActionID(actionID_t actionID)
 {
   std::string seqNoString = actionID.substr(ceil(2.41 * sizeof(stationID_t)), ceil(2.41 * sizeof(seqNo_t)));
-  return (seqNo_t) TplConvert::_2int(seqNoString.c_str());
+  return (seqNo_t) StringUtils::toInt(seqNoString.c_str());
 }
 
 seqNo_t LDMLogic::getNewSeqNo(stationID_t stationID)

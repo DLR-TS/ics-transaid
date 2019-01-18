@@ -9,8 +9,8 @@ FROM ubuntu:bionic
 
 ARG CREDS
 
-ENV SUMO_HOME=/transaid/sumo
-ENV PATH=$SUMO_HOME/bin:/transaid/bin:$PATH
+ENV SUMO_HOME=/transaid/share/sumo
+ENV PATH=/transaid/bin:$PATH
 ENV LD_LIBRARY_PATH=/transaid/lib
 
 RUN apt-get -y update
@@ -20,7 +20,7 @@ RUN pip install texttest
 RUN git clone --recursive https://$CREDS@gitlab.imet.gr/hit/transaid
 RUN cd transaid; git checkout transaid-dev; git submodule update --init
 
-RUN cd transaid/sumo; mkdir build/cmake-build; cd build/cmake-build; cmake ../.. -DSUMO_UTILS=TRUE; make -j
+RUN cd transaid/sumo; mkdir build/cmake-build; cd build/cmake-build; cmake ../.. -DSUMO_UTILS=TRUE -DCMAKE_INSTALL_PREFIX=$PWD/../../..; make -j; make install
 
 RUN cd transaid/ns-3.20; ./waf configure --prefix=$PWD/..; ./waf -j8; ./waf install
 

@@ -23,7 +23,6 @@
 #endif
 
 #include "SUMOdigital-map.h"
-#include <utils/common/TplConvert.h>
 #include <utils/xml/XMLSubSys.h>
 #include <utils/geom/Boundary.h>
 #include <utils/geom/PositionVector.h>
@@ -150,8 +149,8 @@ SUMODigitalMap::myStartElement(int element, const SUMOSAXAttributes& attrs) {
         SUMOReal x = attrs.get<SUMOReal>(SUMO_ATTR_X, j.id.c_str(), ok);
         SUMOReal y = attrs.get<SUMOReal>(SUMO_ATTR_Y, j.id.c_str(), ok);
         j.center = Point2D(x, y);
-        attrs.parseStringVector(attrs.getOpt<std::string>(SUMO_ATTR_INTLANES, j.id.c_str(), ok, ""), j.stringIntSUMOLanes);
-        attrs.parseStringVector(attrs.getOpt<std::string>(SUMO_ATTR_INCLANES, j.id.c_str(), ok, ""), j.stringIncSUMOLanes);
+        j.stringIntSUMOLanes = attrs.getOptStringVector(SUMO_ATTR_INTLANES, j.id.c_str(), ok);
+        j.stringIncSUMOLanes = attrs.getOptStringVector(SUMO_ATTR_INCLANES, j.id.c_str(), ok);
         PositionVector shape;
         if (attrs.hasAttribute(SUMO_ATTR_SHAPE)) {
             // inner junctions have no shape

@@ -26,7 +26,7 @@
 
 #include "FacilitiesManager.h"
 #include "./configfile_parsers/facilities-configfile-parser.h"
-#include "../utils/common/FileHelpers.h"
+#include <utils/common/FileHelpers.h>
 
 #ifdef LOG_ON
 #include "../utils/ics/log/ics-log.h"
@@ -62,7 +62,7 @@ bool FacilitiesManager::configureICSFacilities(string facilitiesConfigFilename)
   bool configFlag = true;
 
   // Check the existence of the facilitiesConfigFilename
-  if (!FileHelpers::exists(facilitiesConfigFilename))
+  if (!FileHelpers::isReadable(facilitiesConfigFilename))
   {
     cerr << "[iCS - Facilities] - ERROR: The iCS Facilities configuration file '" << facilitiesConfigFilename
         << "' was not found." << endl;
@@ -78,7 +78,7 @@ bool FacilitiesManager::configureICSFacilities(string facilitiesConfigFilename)
 
   // Check the existence of the mapConFileName
   string mapConFileName = facConfig.getMapConfigFilename();
-  if (!FileHelpers::exists(mapConFileName))
+  if (!FileHelpers::isReadable(mapConFileName))
   {
     cerr << "[iCS - Facilities] - ERROR: The map configuration file '" << mapConFileName
         << "' of the iCS Facilities was not found." << endl;
@@ -86,7 +86,7 @@ bool FacilitiesManager::configureICSFacilities(string facilitiesConfigFilename)
   }
   // Check the existence of the stationConfFileName
   string stationConfFileName = facConfig.getStationsConfigFilename();
-  if (!FileHelpers::exists(stationConfFileName))
+  if (!FileHelpers::isReadable(stationConfFileName))
   {
     cerr << "[iCS - Facilities] - ERROR: The stations configuration file '" << stationConfFileName
         << "' of the iCS Facilities was not found." << endl;
@@ -94,7 +94,7 @@ bool FacilitiesManager::configureICSFacilities(string facilitiesConfigFilename)
   }
   // Check the existence of the relevConfFilename
   string relevConfFilename = facConfig.getLDMrulesConfigFilename();
-  if (!FileHelpers::exists(relevConfFilename))
+  if (!FileHelpers::isReadable(relevConfFilename))
   {
     cerr << "[iCS - Facilities] - ERROR: The received message storage rules configuration file '" << relevConfFilename
         << "' of the iCS Facilities was not found." << endl;

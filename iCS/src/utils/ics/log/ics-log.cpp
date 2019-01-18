@@ -37,10 +37,9 @@
 #include <iomanip>
 //#include <sys/time.h>
 
-#include "ics-log.h"
+#include <utils/common/StringUtils.h>
 #include "../../../ics/sync-manager.h"
-#include <utils/common/TplConvert.h>
-//#include "../../common/TplConvert.h"
+#include "ics-log.h"
 
 using namespace std;
 
@@ -103,7 +102,7 @@ void IcsLog::SetLogTimeThreshold(char* logThreshold)
 {
   try
   {
-    timeStepThreshold_ = TplConvert::_2long(logThreshold);
+    timeStepThreshold_ = StringUtils::toLong(logThreshold);
   } catch (EmptyData e)
   {
     cout << "[INFO] Log time files maximum timestep set to 200." << endl;
@@ -115,7 +114,7 @@ void IcsLog::SetLogTimeThreshold(string logThreshold)
 {
   try
   {
-    timeStepThreshold_ = TplConvert::_2long(logThreshold.c_str());
+    timeStepThreshold_ = StringUtils::toLong(logThreshold);
   } catch (EmptyData e)
   {
     cout << "[INFO] Log time files maximum timestep set to 200." << endl;

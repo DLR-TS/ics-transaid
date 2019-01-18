@@ -70,7 +70,6 @@
 #include <pthread.h>
 #include <xercesc/sax/SAXException.hpp>
 #include <xercesc/sax/SAXParseException.hpp>
-#include <utils/common/TplConvert.h>
 #include <iostream>
 #include <string>
 #include <limits.h>
@@ -130,20 +129,20 @@ void fillOptions()
   oc.doRegister("begin", 'b', new Option_Integer(0));
   oc.addDescription("begin", "Scenario", "Defines the begin time of the scenario simulation");
 
-  oc.doRegister("end", 'e', new Option_Integer());
+  oc.doRegister("end", 'e', new Option_Integer(-1));
   oc.addDescription("end", "Scenario", "Defines the end time of the scenario simulation");
 
   oc.doRegister("resolution", new Option_Integer(1000));
   oc.addDescription("resolution", "Scenario", "Time resolution of every simulation step (ms)");
 
-  oc.doRegister("penetration-rate", 'r', new Option_Integer());
+  oc.doRegister("penetration-rate", 'r', new Option_Integer(-1));
   oc.addDescription("penetration-rate", "Scenario", "Defines the percentage of vehicles equiped with a RAT");
 
   oc.doRegister("facilities-config-file", 'f', new Option_FileName());
   oc.addDescription("facilities-config-file", "Scenario",
       "The entry point file for the facilities block configuration.");
 
-  oc.doRegister("message-reception-window", 'm', new Option_Integer());
+  oc.doRegister("message-reception-window", 'm', new Option_Integer(0));
   oc.addDescription("message-reception-window", "Scenario",
       "Defines the time the iCS will keep schedule messages in the internal tables. That time window past, they are erased.");
 
@@ -160,7 +159,7 @@ void fillOptions()
   oc.doRegister("traffic-host", new Option_String("localhost"));
   oc.addDescription("traffic-host", "TrafficSim", "Defines the host the traffic simulation shall run on");
 
-  oc.doRegister("traffic-port", new Option_Integer());
+  oc.doRegister("traffic-port", new Option_Integer(-1));
   oc.addDescription("traffic-port", "TrafficSim", "Defines the port the traffic simulation shall use");
 
   // insert options for communication simulation
@@ -171,7 +170,7 @@ void fillOptions()
   oc.addDescription("communication-host", "CommunicationSim",
       "Defines the host the communication simulation shall run on");
 
-  oc.doRegister("communication-port", new Option_Integer());
+  oc.doRegister("communication-port", new Option_Integer(-1));
   oc.addDescription("communication-port", "CommunicationSim",
       "Defines the port the communication simulation shall use");
 
@@ -201,13 +200,13 @@ void fillOptions()
   oc.addDescription("ics-log-level", "Logs", "Defines the output level of the log [ERROR, WARNING, INFO]");
 
   // insert option for log start and end (to slice a small part for tests)
-  oc.doRegister("ics-log-begin", new Option_Integer());
+  oc.doRegister("ics-log-begin", new Option_Integer(-1));
   oc.addDescription("ics-log-begin", "Logs", "Defines the time for the start of the ics-log in [ms].");
 
-  oc.doRegister("ics-log-end", new Option_Integer());
+  oc.doRegister("ics-log-end", new Option_Integer(-1));
   oc.addDescription("ics-log-end", "Logs", "Defines the time for the end of the ics-log in [ms].");
 
-  oc.doRegister("ics-log-omit-systime", new Option_Bool());
+  oc.doRegister("ics-log-omit-systime", new Option_Bool(false));
   oc.addDescription("ics-log-omit-systime", "Logs", "Whether system time shall be omitted in logging output");
 
   // insert option for ns3 log file
@@ -224,16 +223,16 @@ bool checkOptions()
   OptionsCont &oc = OptionsCont::getOptions();
 
   // check last time step
-  if (!oc.isSet("end"))
+  if (oc.getInt("end") < 0)
   {
-    MsgHandler::getErrorInstance()->inform("Missing ending simulation timestep.");
+    MsgHandler::getErrorInstance()->inform("Invalid ending simulation timestep.");
     ret = false;
   }
 
   // vehicle penetration rate
-  if (!oc.isSet("penetration-rate"))
+  if (oc.getInt("penetration-rate") < 0)
   {
-    MsgHandler::getErrorInstance()->inform("Missing overall vehicle penetration rate.");
+    MsgHandler::getErrorInstance()->inform("Invalid overall vehicle penetration rate.");
     ret = false;
   }
 
@@ -245,9 +244,9 @@ bool checkOptions()
   }
 
   // check facilities config file
-  if (!oc.isSet("message-reception-window"))
+  if (oc.getInt("message-reception-window") < 0)
   {
-    MsgHandler::getErrorInstance()->inform("Missing message reception time window.");
+    MsgHandler::getErrorInstance()->inform("Invalid message reception time window.");
     ret = false;
   }
 
@@ -267,9 +266,9 @@ bool checkOptions()
   }
 
   // check traffic simulation settings
-  if (!oc.isSet("traffic-port"))
+  if (oc.getInt("traffic-port") < 0)
   {
-    MsgHandler::getErrorInstance()->inform("Missing definition of the traffic simulation port to use.");
+    MsgHandler::getErrorInstance()->inform("Invalid definition of the traffic simulation port to use.");
     ret = false;
   }
 #endif
@@ -283,9 +282,9 @@ bool checkOptions()
   }
 
   // check communication settings
-  if (!oc.isSet("communication-port"))
+  if (oc.getInt("communication-port") < 0)
   {
-    MsgHandler::getErrorInstance()->inform("Missing definition of the communication simulation port to use.");
+    MsgHandler::getErrorInstance()->inform("Invalid definition of the communication simulation port to use.");
     ret = false;
   }
 
@@ -396,7 +395,8 @@ int main(int argc, char **argv)
     XMLSubSys::init(); // xml-initialization
     //  options parsing
     fillOptions();
-    OptionsIO::getOptions(true, argc, argv);
+    OptionsIO::setArgs(argc, argv);
+    OptionsIO::getOptions();
     if (oc.processMetaOptions(argc < 2))
     {
       SystemFrame::close();
@@ -422,23 +422,9 @@ int main(int argc, char **argv)
     {
       // parse log start and end
       icstime_t logStart, logEnd ;
-      if (oc.isDefault("ics-log-begin")) {
-            logStart = -1;
-        } else {
-            logStart = oc.getInt("ics-log-begin");
-        }
-      if (oc.isDefault("ics-log-end")) {
-            logEnd = -1;
-        } else {
-            logEnd = oc.getInt("ics-log-end");
-        }
-      bool omitSysTime;
-      if (oc.isDefault("ics-log-omit-systime")) {
-          omitSysTime = false;
-        } else {
-          omitSysTime = oc.getBool("ics-log-omit-systime");
-        }
-
+      logStart = oc.getInt("ics-log-begin");
+      logEnd = oc.getInt("ics-log-end");
+      bool omitSysTime = oc.getBool("ics-log-omit-systime");
 
       IcsLog::StartLog(oc.getString("ics-log-path"), oc.getString("ics-log-time-size"), logStart, logEnd, omitSysTime);
       string loglevel = oc.getString("ics-log-level");

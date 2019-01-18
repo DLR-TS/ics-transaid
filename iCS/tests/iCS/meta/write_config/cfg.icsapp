@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/iCSConfiguration.xsd">
+<!-- generated on Fri Jan 18 07:48:29 2019 by iTETRIS Control System Version 0.1.0
+-->
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/iCSConfiguration.xsd">
 
     <trafficsim>
         <traffic-file value="foo.xml"/>

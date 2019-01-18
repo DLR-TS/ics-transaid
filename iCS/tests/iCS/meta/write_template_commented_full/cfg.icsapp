@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/iCSConfiguration.xsd">
+<!-- generated on Fri Jan 18 07:48:29 2019 by iTETRIS Control System Version 0.1.0
+-->
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/iCSConfiguration.xsd">
 
     <configuration>
         <!-- Loads the named config on startup -->
         <configuration-file value="" synonymes="c configuration" type="FILE"/>
 
         <!-- Saves current configuration into FILE -->
-        <save-configuration value="" synonymes="save-config" type="FILE"/>
+        <save-configuration value="" synonymes="C save-config" type="FILE"/>
 
         <!-- Saves a configuration template (empty) into FILE -->
         <save-template value="" type="FILE"/>
@@ -25,19 +28,19 @@
         <begin value="0" synonymes="b" type="INT"/>
 
         <!-- Defines the end time of the scenario simulation -->
-        <end value="" synonymes="e" type="INT"/>
+        <end value="-1" synonymes="e" type="INT"/>
 
         <!-- Time resolution of every simulation step (ms) -->
         <resolution value="1000" type="INT"/>
 
         <!-- Defines the percentage of vehicles equiped with a RAT -->
-        <penetration-rate value="" synonymes="r" type="INT"/>
+        <penetration-rate value="-1" synonymes="r" type="INT"/>
 
         <!-- The entry point file for the facilities block configuration. -->
         <facilities-config-file value="" synonymes="f" type="FILE"/>
 
         <!-- Defines the time the iCS will keep schedule messages in the internal tables. That time window past, they are erased. -->
-        <message-reception-window value="" synonymes="m" type="INT"/>
+        <message-reception-window value="0" synonymes="m" type="INT"/>
 
         <!-- Whether iCS shall be run in interactive mode -->
         <interactive value="false" type="BOOL"/>
@@ -55,7 +58,7 @@
         <traffic-host value="localhost" type="STR"/>
 
         <!-- Defines the port the traffic simulation shall use -->
-        <traffic-port value="" type="INT"/>
+        <traffic-port value="-1" type="INT"/>
 
     </trafficsim>
 
@@ -67,7 +70,7 @@
         <communication-host value="localhost" type="STR"/>
 
         <!-- Defines the port the communication simulation shall use -->
-        <communication-port value="" type="INT"/>
+        <communication-port value="-1" type="INT"/>
 
         <!-- Defines the general ns-3 script configuration. -->
         <communication-general-params-file value="" type="STR"/>
@@ -94,13 +97,13 @@
         <ics-log-level value="" type="STR"/>
 
         <!-- Defines the time for the start of the ics-log in [ms]. -->
-        <ics-log-begin value="" type="INT"/>
+        <ics-log-begin value="-1" type="INT"/>
 
         <!-- Defines the time for the end of the ics-log in [ms]. -->
-        <ics-log-end value="" type="INT"/>
+        <ics-log-end value="-1" type="INT"/>
 
         <!-- Whether system time shall be omitted in logging output -->
-        <ics-log-omit-systime value="" type="BOOL"/>
+        <ics-log-omit-systime value="false" type="BOOL"/>
 
         <!-- Defines the place where the ns-3 log file will be stored -->
         <ns3-log-path value="" type="FILE"/>
@@ -112,7 +115,7 @@
         <verbose value="false" synonymes="v" type="BOOL"/>
 
         <!-- Prints option values before processing -->
-        <print-options value="false" synonymes="p" type="BOOL"/>
+        <print-options value="false" type="BOOL"/>
 
         <!-- Prints this screen -->
         <help value="false" synonymes="?" type="BOOL"/>
@@ -120,8 +123,11 @@
         <!-- Prints the current version -->
         <version value="false" synonymes="V" type="BOOL"/>
 
-        <!-- Enable schema validation of XML inputs -->
-        <xml-validation value="false" synonymes="X" type="BOOL"/>
+        <!-- Set schema validation scheme of XML inputs (&quot;never&quot;, &quot;auto&quot; or &quot;always&quot;) -->
+        <xml-validation value="auto" synonymes="X" type="STR"/>
+
+        <!-- Set schema validation scheme of SUMO network inputs (&quot;never&quot;, &quot;auto&quot; or &quot;always&quot;) -->
+        <xml-validation.net value="never" type="STR"/>
 
         <!-- Disables output of warnings -->
         <no-warnings value="false" synonymes="W suppress-warnings" type="BOOL"/>

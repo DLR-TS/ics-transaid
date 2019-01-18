@@ -16,12 +16,12 @@ The "original" repository containing the master branch for iTetris is located at
 
 --------------------------------
 Step 3 - Build SUMO
-$ cd sumo
-$ export SUMO_HOME=$PWD
-$ mkdir build/cmake-build
-$ cd build/cmake-build
-$ cmake ../.. -DSUMO_UTILS=TRUE
-$ make -j
+$ export SUMO_HOME=$PWD/share/sumo
+$ mkdir sumo/build/cmake-build
+$ cd sumo/build/cmake-build
+$ cmake ../.. -DSUMO_UTILS=TRUE -DCMAKE_INSTALL_PREFIX=$PWD/../../..
+$ make -j8
+$ make install
 $ cd ../../..
 
 --------------------------------
@@ -76,7 +76,7 @@ When changing the baseApp remember to rebuild baseApp and afterwards every deriv
 
 --------------------------------
 Step 9 - Set required environment variables
-$ export PATH=$SUMO_HOME/bin:$PWD/bin:$PATH
+$ export PATH=$PWD/bin:$PATH
 $ export LD_LIBRARY_PATH=$PWD/lib
 
 --------------------------------

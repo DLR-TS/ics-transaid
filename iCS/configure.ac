@@ -22,14 +22,7 @@ else
     ac_disabled="$ac_disabled Debug"
 fi
 
-AC_ARG_ENABLE([double-precision], [AS_HELP_STRING([--enable-double-precision],[Use "double" instead of "float" for calculations.])])
-if test x$enable_double_precision = xyes; then
-    AC_DEFINE([SUMOReal], [double], [defines the precision of floats])
-    ac_enabled="$ac_enabled DoublePrecision"
-else
-    AC_DEFINE([SUMOReal], [float], [defines the precision of floats])
-    ac_disabled="$ac_disabled DoublePrecision"
-fi
+AC_DEFINE([SUMOReal], [double], [defines the precision of floats])
 AC_DEFINE([POSITION_EPS], [0.1], [defines the epsilon to use on position comparison])
 AC_DEFINE([NUMERICAL_EPS], [0.001], [defines the epsilon to use on general floating point comparison])
 AC_DEFINE([OUTPUT_ACCURACY], [2], [defines the number of digits after the comma in output])
@@ -251,8 +244,10 @@ else
     ac_disabled="$ac_disabled UnitTests"
 fi
 
+SUMOUTILS_LDFLAGS=-L$PWD/$srcdir/../sumo/bin
+AC_SUBST(SUMOUTILS_LDFLAGS)
 
-AM_CPPFLAGS="-I$PWD/$srcdir/src -I$PWD/$srcdir/../../sumo/src $AM_CPPFLAGS"
+AM_CPPFLAGS="-I$PWD/$srcdir/src -I$PWD/$srcdir/../sumo/src $AM_CPPFLAGS"
 AC_SUBST(AM_CPPFLAGS)
 AC_SUBST(AM_CXXFLAGS)
 
@@ -288,8 +283,6 @@ AC_CONFIG_FILES([
 bin/Makefile
 src/Makefile
 src/unittest/Makefile
-src/foreign/Makefile
-src/foreign/tcpip/Makefile
 src/ics/Makefile
 src/ics/traffic_sim_communicator/Makefile
 src/ics/wirelesscom_sim_communicator/Makefile
@@ -303,14 +296,6 @@ src/ics/facilities/mapFacilities/road/Makefile
 src/ics/facilities/stationFacilities/Makefile
 src/ics/facilities/messageFacilities/Makefile
 src/utils/Makefile
-src/utils/distribution/Makefile
-src/utils/geom/Makefile
-src/utils/importio/Makefile
-src/utils/common/Makefile
-src/utils/shapes/Makefile
-src/utils/iodevices/Makefile
-src/utils/options/Makefile
-src/utils/xml/Makefile
 src/utils/ics/geometric/Makefile
 src/utils/ics/log/Makefile
 src/utils/ics/Makefile
