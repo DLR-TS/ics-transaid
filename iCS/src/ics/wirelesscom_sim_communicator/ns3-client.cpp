@@ -75,7 +75,6 @@
 #include <cstdlib>
 
 #include "ns3-client.h"
-#include "storage-ns3.h"
 #include "../utilities.h"
 #include "../ics.h"
 #include "../../utils/ics/iCStypes.h"
@@ -112,7 +111,7 @@ namespace ics
 
 	bool Ns3Client::Connect()
 	{
-		m_socket = new SocketNs3(m_host, m_port);
+		m_socket = new tcpip::Socket(m_host, m_port);
 
 		for (int i = 0; i < 10; ++i)
 		{
@@ -122,7 +121,7 @@ namespace ics
 						<< endl;
 				m_socket->connect();
 				return true;
-			} catch (SocketException e)
+			} catch (tcpip::SocketException& e)
 			{
 				cout << "iCS --> No connection to ns-3; waiting..." << endl;
 				Sleep(3000);
@@ -146,8 +145,8 @@ namespace ics
 
 	bool Ns3Client::CommandSimulationStep(int time)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 #ifdef LOG_ON
 		IcsLog::LogLevel("Reached CommandSimulationStep... = ", kLogLevelInfo);
@@ -170,7 +169,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to ns-3: " << e.what();
 			return false;
@@ -182,7 +181,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -204,8 +203,8 @@ namespace ics
 
 	int Ns3Client::CommandUpdateNodePosition(int nodeId, float x, float y)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -228,7 +227,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command: " << e.what();
 			return EXIT_FAILURE;
@@ -238,7 +237,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return EXIT_FAILURE;
@@ -256,8 +255,8 @@ namespace ics
 	int Ns3Client::CommandUpdateNodePosition2(int nodeId, float x, float y, float speed, float heading,
 			std::string laneId)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -286,7 +285,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command: " << e.what();
 			return EXIT_FAILURE;
@@ -296,7 +295,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return EXIT_FAILURE;
@@ -313,8 +312,8 @@ namespace ics
 
 	int Ns3Client::CommandCreateNode(float x, float y, std::vector<std::string> techList)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -354,7 +353,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return -1;
@@ -364,7 +363,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return -1;
@@ -388,8 +387,8 @@ namespace ics
 	int Ns3Client::CommandCreateNode2(float x, float y, float speed, float heading, std::string laneId,
 			std::vector<std::string> techList)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -434,7 +433,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return -1;
@@ -444,7 +443,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return -1;
@@ -467,8 +466,8 @@ namespace ics
 
 	bool Ns3Client::CommandStartSendingCam(vector<string> sendersId, unsigned int payloadLength, float frequency)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -506,7 +505,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -516,7 +515,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -533,8 +532,8 @@ namespace ics
 
 	bool Ns3Client::CommandStopSendingCam(vector<string> sendersId)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -569,7 +568,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -579,7 +578,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -596,8 +595,8 @@ namespace ics
 
 	bool Ns3Client::CommandGetReceivedMessages(int nodeId, vector<ReceivedMessage>* receivedMessages, int timeResolution)
     {
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -616,7 +615,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -626,7 +625,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -754,8 +753,8 @@ namespace ics
 
 	bool Ns3Client::CommandGetAllReceivedMessages(map<int, vector<Message> >* receivedMessages, int timeResolution)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -772,7 +771,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -782,7 +781,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -849,8 +848,8 @@ namespace ics
 			std::vector<unsigned char> *genericContainer)
 	{
 
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -881,7 +880,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -891,7 +890,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -908,8 +907,8 @@ namespace ics
 
 	int Ns3Client::CommandClose()
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == nullptr)
 		{
@@ -926,7 +925,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return EXIT_FAILURE;
@@ -936,7 +935,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return EXIT_FAILURE;
@@ -951,7 +950,7 @@ namespace ics
 		return EXIT_SUCCESS;
 	}
 
-	bool Ns3Client::ReportResultState(StorageNs3& inMsg, int command)
+	bool Ns3Client::ReportResultState(tcpip::Storage& inMsg, int command)
 	{
 		int cmdLength;
 		int cmdId;
@@ -1041,8 +1040,8 @@ namespace ics
 			unsigned int payloadLength, unsigned int destination, float msgRegenerationTime,
 			std::vector<unsigned char> *genericContainer)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -1068,7 +1067,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -1078,7 +1077,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -1098,8 +1097,8 @@ namespace ics
 			unsigned int destination, float msgRegenerationTime, unsigned int msgLifetime, double time, int messageId,
 			std::vector<unsigned char> *genericContainer)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -1145,7 +1144,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -1155,7 +1154,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -1179,8 +1178,8 @@ namespace ics
 			float frequency, uint32_t payloadLength, double msgRegenerationTime, uint8_t msgLifetime,
 			std::vector<unsigned char> *genericContainer)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -1214,7 +1213,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -1224,7 +1223,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -1241,8 +1240,8 @@ namespace ics
 
 	bool Ns3Client::CommandStopServiceTxon(std::vector<std::string> sendersId, std::string serviceId)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -1261,7 +1260,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -1271,7 +1270,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -1288,8 +1287,8 @@ namespace ics
 
 	bool Ns3Client::CommandStopIpCiuServiceTxon(std::vector<std::string> sendersId, std::string serviceId)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -1308,7 +1307,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -1318,7 +1317,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -1335,8 +1334,8 @@ namespace ics
 
 	bool Ns3Client::CommandStopMWServiceTxon(std::vector<std::string> sendersId, std::string serviceId)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -1355,7 +1354,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -1365,7 +1364,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -1385,8 +1384,8 @@ namespace ics
 			unsigned int payloadLength, float msgRegenerationTime, unsigned int msgLifetime, double time, int messageId,
 			std::vector<unsigned char> *genericContainer)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -1420,7 +1419,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -1430,7 +1429,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -1450,8 +1449,8 @@ namespace ics
 			unsigned int payloadLength, float msgRegenerationTime, unsigned int msgLifetime,
 			std::vector<unsigned char> *genericContainer)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -1485,7 +1484,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -1495,7 +1494,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -1512,8 +1511,8 @@ namespace ics
 
 	bool Ns3Client::CommandActivateNode(const vector<int> & sendersId)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -1535,7 +1534,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -1545,7 +1544,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;
@@ -1562,8 +1561,8 @@ namespace ics
 
 	bool Ns3Client::CommandDeactivateNode(const vector<int> & sendersId)
 	{
-		StorageNs3 outMsg;
-		StorageNs3 inMsg;
+		tcpip::Storage outMsg;
+		tcpip::Storage inMsg;
 
 		if (m_socket == NULL)
 		{
@@ -1585,7 +1584,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what();
 			return false;
@@ -1595,7 +1594,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (tcpip::SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what();
 			return false;

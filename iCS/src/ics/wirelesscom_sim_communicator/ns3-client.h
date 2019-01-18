@@ -31,19 +31,13 @@
 #include <vector>
 
 #include "wireless-communication-simulator-communicator.h"
-#include "socket-ns3.h"
-#include "storage-ns3.h"
+#include <foreign/tcpip/socket.h>
+#include <foreign/tcpip/storage.h>
 #include "ns3-comm-constants.h"
 #include "../../utils/ics/iCStypes.h"
 
 namespace ics
 {
-
-// ===========================================================================
-// class declarations
-// ===========================================================================
-class SocketNs3;
-class StorageNs3;
 
 // ===========================================================================
 // class definitions
@@ -324,10 +318,10 @@ private:
    * @return True: If the command messages match.
    * @return False: If the command messages don't match.
    */
-  bool ReportResultState(StorageNs3& inMsg, int command);
+  bool ReportResultState(tcpip::Storage& inMsg, int command);
 
   /// @brief Socket for the connection.
-  SocketNs3* m_socket;
+  tcpip::Socket* m_socket;
 
   /// @brief String to identify Cam messages.
   static std::string CAM_TYPE;
