@@ -60,14 +60,6 @@ public:
      */
     static bool HasRat();
 
-    /**
-    * @brief Decide wether the application will be installed in the node.
-    * @param[in] rate The penetration rate of the application.
-    * @param[in] seed The seed value to generate random numbers.
-    */
-    static bool AssignApplication(double rate, long seed);
-
-
     /// @brief Time in seconds to assume the message will not be received.
     static int m_scheduleMessageCleanUp;
 };

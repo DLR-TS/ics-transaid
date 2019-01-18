@@ -28,7 +28,6 @@
 
 #include "itetris-simulation-config.h"
 #include "itetris-node.h"
-#include "../utils/ics/iCSRandom.h"
 
 // ===========================================================================
 // used namespaces
@@ -59,26 +58,6 @@ ITetrisSimulationConfig::HasRat()
     int randomNumber = rand() % 100;
 
     if (randomNumber < m_simulatedVehiclesPenetrationRate) {
-        return true;
-    }
-
-    return false;
-}
-
-bool
-ITetrisSimulationConfig::AssignApplication(double rate, long seed)
-{
-    //initialize random seed
-#ifndef _WIN32
-    srand(time(NULL) + getpid());
-#endif
-
-    //Generates random number
-    iCSRandom randomGenerator;
-    randomGenerator.seed(seed);
-    double randomNumber = randomGenerator.rand(100); // to get a number between 0 and 100
-
-    if (randomNumber < rate) {
         return true;
     }
 

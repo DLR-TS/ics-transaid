@@ -23,13 +23,13 @@
 
 #include <map>
 #include <string>
+#include <random>
 using namespace std;
 
 #include "../mapFacilities/MapFacilities.h"
 #include "MobileStation.h"
 #include "FixedStation.h"
 
-#include "../../../utils/ics/iCSRandom.h"
 
 namespace ics_facilities {
 
@@ -227,10 +227,7 @@ private:
     map<RATID, string> defaultCommunicationProfiles;
 
     ///@brief Random generator used to assign the radio access technologies to mobile nodes entering the scenario.
-    ics::iCSRandom staFacRand;
-
-    ///@brief Seed of the random generator used to assign the radio access technologies to mobile nodes entering the scenario.
-    unsigned int RATseed;
+    std::mt19937 staFacRand;
 
     ///@brief This variable allows to generate a trace file containing the position history of all the vehicles.
     bool recordMobilityHistory;

@@ -79,6 +79,7 @@
 #include <math.h>
 #include <sys/timeb.h>
 
+#include <utils/common/RandHelper.h>
 #include "sync-manager.h"
 #include "vehicle-node.h"
 #include "fixed-node.h"
@@ -1138,21 +1139,18 @@ int SyncManager::ForwardSubscribedDataToApplication(ITetrisNode *node)
 
 bool SyncManager::AssignApplication(ITetrisNode *node)
 {
-	if (node == NULL)
+	if (node == nullptr)
 		return false;
 
-	vector<ApplicationHandler*>::iterator it;
-
-	for (it = m_applicationHandlerCollection->begin(); it < m_applicationHandlerCollection->end(); it++)
+	for (ApplicationHandler* const appHand : *m_applicationHandlerCollection)
 	{
-		ApplicationHandler* appHand = (*it);
 		// Decide if the application will be assigned based on the penetration rates
-		if (ITetrisSimulationConfig::AssignApplication(appHand->m_rate, appHand->m_seed))
+		if (RandHelper::rand(100, &appHand->m_rng) < appHand->m_rate)
 		{
 			node->m_applicationHandlerInstalled->push_back(appHand);
 			ResultContainer* result = ResultContainer::CreateResultContainer(appHand->m_resultType, node->m_icsId,
 					appHand->m_id);
-			if (result == NULL)
+			if (result == nullptr)
 				return false;
 			node->m_resultContainerCollection->push_back(result);
 		}

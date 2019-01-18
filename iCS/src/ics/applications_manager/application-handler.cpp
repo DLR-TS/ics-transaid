@@ -34,6 +34,7 @@
 
 #include <typeinfo>
 
+#include <utils/common/RandHelper.h>
 #include "application-handler.h"
 #include "subscription.h"
 #include "subs-return-cars-zone.h"
@@ -88,7 +89,7 @@ ApplicationHandler::ApplicationHandler(SyncManager* syncManager, string name, st
   m_executable = executable;
   m_host = host;
   m_port = port;
-  m_seed = seed;
+  RandHelper::initRand(&m_rng, false, seed);
   m_rate = rate;
   m_resultType = resultType;
   m_serviceId = serviceIds;

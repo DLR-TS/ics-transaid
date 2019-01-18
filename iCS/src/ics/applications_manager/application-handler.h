@@ -43,6 +43,7 @@
 
 #include <string>
 #include <vector>
+#include <random>
 
 #include <foreign/tcpip/socket.h>
 #include "../../utils/ics/iCStypes.h"
@@ -125,8 +126,8 @@ public:
     /// @brief The port number the application is lintening to.
     int m_port;
 
-    /// @brief The seed to generate ramdom numbers for the app.
-    long m_seed;
+    /// @brief The random number generator for the app.
+    std::mt19937 m_rng;
 
     /// @brief The penetration percentage of the application.
     double m_rate;

@@ -30,6 +30,7 @@
 #include <config.h>
 #endif
 
+#include <utils/common/RandHelper.h>
 #include "StationFacilities.h"
 #include "../../configfile_parsers/stations-configfile-parser.h"
 
@@ -75,8 +76,7 @@ bool StationFacilities::configure(string stationConfigFilename) {
 	ics_parsing::StationsGetConfig staConfig;
 	staConfig.readConfigFile(stationConfigFilename);
 
-	RATseed = staConfig.getRATseed();
-	staFacRand.seed(RATseed);
+	RandHelper::initRand(&staFacRand, false, staConfig.getRATseed());
 
 	map<int, float> penRates = staConfig.getDefaultPenetrationRates();
 	map<int, float>::iterator itPenRates;
@@ -233,8 +233,7 @@ bool StationFacilities::updateMobileStationDynamicInformation(stationID_t statio
 		map<RATID, float>::iterator RATit;
 		vector< pair<RATID, bool> > RATs;
 		for (RATit = defaultPenetrationRates.begin(); RATit != defaultPenetrationRates.end(); RATit++) {
-			float randomValue = staFacRand.rand((float) 100.0);
-			if (RATit->second > randomValue) {
+			if (RATit->second > RandHelper::rand(100.0, &staFacRand)) {
 				RATs.push_back(pair<RATID, bool>(RATit->first, true));
 			}
 		}
