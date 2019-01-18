@@ -11,3 +11,4 @@ batch_recipients:sumo-tests@dlr.de
 
 [run_dependent_text]
 output:Version
+output:Build features
