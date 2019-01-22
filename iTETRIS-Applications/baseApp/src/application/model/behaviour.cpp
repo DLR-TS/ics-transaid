@@ -39,6 +39,7 @@
 #include "ics-interface.h"
 #include "log/log.h"
 #include "program-configuration.h"
+#include "libsumo/TraCIDefs.h"
 
 namespace baseapp
 {
@@ -46,6 +47,8 @@ namespace baseapp
 	{
 
 	    uint16_t Behaviour::DefaultResponseTimeSpacing = 10;
+        TraCIResponseMap Behaviour::TraCIResponses;
+        std::pair<double, std::shared_ptr<libsumo::TraCIResult> > Behaviour::noResponse = std::make_pair(0.0, nullptr);
 
 		Behaviour::Behaviour(iCSInterface* controller) :
 				m_running(false), m_enabled(true)
@@ -112,14 +115,29 @@ namespace baseapp
 
         void Behaviour::processTraCIResult(const int result, const Command& command) {
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+            if (command.type == GET_COMMAND) {
+                std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(std::make_shared<libsumo::TraCIInt>(result));
+                double time = 0.0; // TODO: get current time
+                storeTraCIResult(time, res, command);
+            }
         }
 
         void Behaviour::processTraCIResult(const double result, const Command& command) {
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+            if (command.type == GET_COMMAND) {
+                std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(std::make_shared<libsumo::TraCIDouble>(result));
+                double time = 0.0; // TODO: get current time
+                storeTraCIResult(time, res, command);
+            }
         }
 
         void Behaviour::processTraCIResult(const std::string result, const Command& command) {
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
+            if (command.type == GET_COMMAND) {
+                std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(std::make_shared<libsumo::TraCIString>(result));
+                double time = 0.0; // TODO: get current time
+                storeTraCIResult(time, res, command);
+            }
         }
 
         void Behaviour::processTraCIResult(const std::vector<std::string> result, const Command& command) {
@@ -130,7 +148,35 @@ namespace baseapp
             }
             ss << "]";
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " is " << ss.str());
+            if (command.type == GET_COMMAND) {
+                // bare pointer base
+                std::shared_ptr<libsumo::TraCIStringList> list;
+                list->value = result;
+                std::shared_ptr<libsumo::TraCIResult> res = list;
+                double time = 0.0; // TODO: get current time
+                storeTraCIResult(time, res, command);
+            }
         }
+
+        void Behaviour::storeTraCIResult(const double time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command) {
+            if(TraCIResponses.find(command.objId) == end(TraCIResponses)){
+                TraCIResponses[command.objId] = std::map<int, std::pair <double, std::shared_ptr<libsumo::TraCIResult> > >();
+            }
+            TraCIResponses[command.objId][command.variableId] = std::make_pair(time, result);
+        }
+
+        const std::pair<double, std::shared_ptr<libsumo::TraCIResult> >&
+        Behaviour::getLastTraCIResponse(std::string objID, int cmdID) {
+            auto objMapIt = TraCIResponses.find(objID);
+            if (objMapIt != end(TraCIResponses)){
+                auto cmdMapIt = objMapIt->second.find(cmdID);
+                if (cmdMapIt != end(objMapIt->second)){
+                    return cmdMapIt->second;
+                }
+            }
+            return noResponse;
+        }
+
 
 	} /* namespace application */
 } /* namespace baseapp */

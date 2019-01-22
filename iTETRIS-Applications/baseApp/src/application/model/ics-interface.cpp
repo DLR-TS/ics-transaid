@@ -527,17 +527,14 @@ namespace baseapp
             }
         }
 
-        void iCSInterface::SetTraciParameter(const std::string key, const std::string value)
+        void iCSInterface::SetTraciParameter(const std::string key, const std::string value, const std::string vehID)
         {
-            if (m_node->getSumoId() != INVALID_STRING)
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+            if (ID != INVALID_STRING)
             {
                 int cmdID = CMD_SET_VEHICLE_VARIABLE;
                 int varID = VAR_PARAMETER;
                 int varTypeID = TYPE_COMPOUND;
-                /*QUESTION: For a reason that i don't understand I don't have to
-								specify the vehicle ID, it is being done automatically
-								(so does happen in addTraciStop). Where is vehicle ID specified ? */
-								//TODO: specify ToC for a single vehicle ID.
                 tcpip::Storage content;
                 content.writeInt(2);
                 content.writeUnsignedByte(TYPE_STRING);
@@ -545,8 +542,16 @@ namespace baseapp
                 content.writeUnsignedByte(TYPE_STRING);
                 content.writeString(value);
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
-                AddTraciSubscription(cmdID, varID, varTypeID, &content);
+                AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
             }
+        }
+
+        void iCSInterface::getDepartedVehicles() {
+            AddTraciSubscription("_SIM", CMD_GET_SIM_VARIABLE, VAR_DEPARTED_VEHICLES_IDS);
+        }
+
+        void iCSInterface::getArrivedVehicles() {
+            AddTraciSubscription("_SIM", CMD_GET_SIM_VARIABLE, VAR_ARRIVED_VEHICLES_IDS);
         }
 
         void iCSInterface::requestToC(const std::string vehID, const double timeTillMRM)

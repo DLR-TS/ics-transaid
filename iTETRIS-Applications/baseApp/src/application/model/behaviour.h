@@ -37,10 +37,16 @@
 #ifndef BEHAVIOUR_H_
 #define BEHAVIOUR_H_
 
+#include <memory>
 #include "trace-manager.h"
 #include "headers.h"
 #include "fatal-error.h"
 #include "structs.h"
+//#include "libsumo/TraCIDefs.h"
+
+namespace libsumo {
+    class TraCIResult;
+}
 
 namespace baseapp
 {
@@ -55,6 +61,11 @@ namespace baseapp
 		class iCSInterface;
 		class Node;
 		struct Command;
+
+        /// @brief Structure to hold the TraCI responses for all GET-commands
+        /// @brief maps: objID -> CMD -> Response-object (time x value)
+        /// @todo  Consider including the domain as top level. (Problem: it is not sent to the app currently)
+		typedef std::map<std::string, std::map<int, std::pair <double, std::shared_ptr<libsumo::TraCIResult> > > > TraCIResponseMap;
 
 		/**
 		 * Abstract behaviour class
@@ -111,12 +122,13 @@ namespace baseapp
                  */
 				virtual void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
 
+				/// @brief Called whenever a GET-command result is returned from TraCI.
+				///        Writes the according information into TraCIResponses
+				/// @note if this is overridden, the call to Behaviour::processTraCIResult should be
+				///       included in the derived method to store the response
 				virtual void processTraCIResult(const int result, const Command& command);
-
 				virtual void processTraCIResult(const double result, const Command& command);
-
 				virtual void processTraCIResult(const std::string result, const Command& command);
-
 				virtual void processTraCIResult(const std::vector<std::string> result, const Command& command);
 
 				virtual TypeBehaviour GetType() const
@@ -132,14 +144,30 @@ namespace baseapp
 			protected:
 				virtual std::string Log() const;
 				iCSInterface* GetController();
+				/// @brief return time and result object for the last TraCI response received for the given object and command
+				/// returns noResponse if no entry exists in TraCIResponses
+                const std::pair<double, std::shared_ptr<libsumo::TraCIResult> >& getLastTraCIResponse(std::string objID, int cmdID);
+
+                /// @brief noResponse is returned by @getLastTraCIResponse if there is no entry for the requested
+                /// object/command in TraCIResponses
+                static std::pair<double, std::shared_ptr<libsumo::TraCIResult> > noResponse;
+
 				bool m_enabled;
 
 			private:
+                /// @brief Stores TraCI response in TraCIResponses
+                virtual void storeTraCIResult(const double time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command);
+
                 iCSInterface* m_controller;
 				bool m_running;
 
 				// trace sources
 				TracedCallback<bool> m_traceStartToggle;
+
+                /// @brief Structure to hold the TraCI responses for all GET-commands
+                /// @todo  Consider including the domain as top level. (Problem: it is not sent to the app currently)
+                /// maps: objID -> CMD -> Response (time x value)
+                static TraCIResponseMap TraCIResponses;
 		};
 
 	} /* namespace application */
