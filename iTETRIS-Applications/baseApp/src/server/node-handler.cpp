@@ -112,7 +112,7 @@ namespace baseapp
 			return true;
 		}
 
-		bool NodeHandler::askForSubscription(const int nodeId, const int subscriptionId, tcpip::Storage * & request)
+		bool NodeHandler::askForSubscription(const int currentTimeStep, const int nodeId, const int subscriptionId, tcpip::Storage * & request)
 		{
 			Node * node;
 			if (!getNode(nodeId, node))
@@ -128,7 +128,7 @@ namespace baseapp
 				}
 				addNode(node);
 			}
-			return node->askForSubscription(subscriptionId, request);
+			return node->askForSubscription(currentTimeStep, subscriptionId, request);
 		}
 
 		bool NodeHandler::endSubscription(const int nodeId, const int subscriptionId, const int subscriptionType)

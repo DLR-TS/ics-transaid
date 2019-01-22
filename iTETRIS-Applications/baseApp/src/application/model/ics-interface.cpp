@@ -574,8 +574,9 @@ namespace baseapp
             }
         }
 
-        void iCSInterface::onAddSubscriptions() {
+        void iCSInterface::onAddSubscriptions(const int currentTimeStep) {
 //            NS_LOG_INFO(LogNode() << ": onAddSubscriptions()");
+            m_currentTimeStep = currentTimeStep;
             // activate behaviours if requested
             for (BehaviourMap::const_iterator it = m_behaviours.begin(); it != m_behaviours.end(); ++it)
             {

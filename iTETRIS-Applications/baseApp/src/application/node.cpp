@@ -151,14 +151,14 @@ namespace baseapp
 			return true;
 		}
 
-		bool Node::askForSubscription(const int subscriptionId, tcpip::Storage * & request)
+		bool Node::askForSubscription(const int currentTimeStep, const int subscriptionId, tcpip::Storage * & request)
 		{
 			if (m_type == NT_VEHICLE_SHADOW)
 				return false;
 			if (m_firstAskSubscription)
 			{
 				m_firstAskSubscription = false;
-				addSubscriptions();
+				addSubscriptions(currentTimeStep);
 			} else
 			{
 				//  remove the subscription I used the last time. I delete it now otherwise I can't delete the request storage
@@ -230,9 +230,9 @@ namespace baseapp
 			m_toSubscribe.push( SubscriptionHelper::GetMobilityInformation() );
 		}
 
-		void Node::addSubscriptions()
+		void Node::addSubscriptions(const int currentTimeStep)
 		{
-		    m_controller->onAddSubscriptions();
+		    m_controller->onAddSubscriptions(currentTimeStep);
 		}
 
 		float Node::getPropagationRadius() const

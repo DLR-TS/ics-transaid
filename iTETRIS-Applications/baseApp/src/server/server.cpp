@@ -161,7 +161,7 @@ namespace baseapp
 				success = createMobileNode();
 				break;
 			case CMD_ASK_FOR_SUBSCRIPTION:
-				success = askForSubscription();
+				success = askForSubscription(m_currentTimeStep);
 				break;
 			case CMD_END_SUBSCRIPTION:
 				success = endSubscription();
@@ -280,14 +280,14 @@ namespace baseapp
 			return true;
 		}
 
-		bool Server::askForSubscription()
+		bool Server::askForSubscription(const int currentTimeStep)
 		{
 			int nodeId = m_inputStorage.readInt();
 			int subscriptionId = m_inputStorage.readInt();
 
 			writeStatusCmd(CMD_ASK_FOR_SUBSCRIPTION, APP_RTYPE_OK, "Ask For Subscription node " + toString(nodeId));
 			Storage * subscription;
-			if (m_nodeHandler->askForSubscription(nodeId, subscriptionId, subscription))
+			if (m_nodeHandler->askForSubscription(currentTimeStep, nodeId, subscriptionId, subscription))
 			{
 				m_outputStorage.writeStorage(*subscription);
 			} else

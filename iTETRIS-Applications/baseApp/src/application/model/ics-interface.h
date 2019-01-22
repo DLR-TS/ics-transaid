@@ -143,6 +143,11 @@ namespace baseapp
 						NS_FATAL_ERROR(LogNode() << "Wrong header type");
 				}
 
+				/// @brief Returns the current time step (updated in @see OnAddSubscriptions())
+				int GetCurrentTimeStep() const {
+				    return m_currentTimeStep;
+				};
+
 				/************************
 				 * iCS interaction methods
 				 */
@@ -262,7 +267,7 @@ namespace baseapp
                 ///        It calls the corresponding method for all installed behaviors. In particular, this allows to issue
                 ///        a TraCI GET call, whose result will be delivered in the same simulation step when subscription results
                 ///        are sent to the app.
-                void onAddSubscriptions();
+                void onAddSubscriptions(const int currentTimeStep);
 
                 /**
                  * @brief Called by the node class when the node has received CAM messages
@@ -303,6 +308,7 @@ namespace baseapp
 				NodeType m_nodeType;
 
 				bool m_active;
+				int m_currentTimeStep;
 				double m_direction_tolerance;
 
 				// behaviours collection

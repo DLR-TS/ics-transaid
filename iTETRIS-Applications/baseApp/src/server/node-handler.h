@@ -94,7 +94,7 @@ namespace baseapp
 				bool createMobileNode(const int nodeId, const int ns3NodeId, const std::string & sumoNodeId,
 						const std::string & sumoType, const std::string & sumoClass);
 				//returns whatever it has added a new subscription
-				bool askForSubscription(const int nodeId, const int subscriptionId, tcpip::Storage * & request);
+				bool askForSubscription(const int currentTimeStep, const int nodeId, const int subscriptionId, tcpip::Storage * & request);
 				//returns if a subscription needs to be dropped
 				bool endSubscription(const int nodeId, const int subscriptionId, const int subscriptionType);
 				//returns the new cars that have entered the zone

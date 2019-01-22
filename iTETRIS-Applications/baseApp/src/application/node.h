@@ -133,7 +133,7 @@ namespace baseapp
 				 * @param[out] request Request to be sent do iCS with all the information to create the selected subscription
 				 * @return False if no new subscriptions are scheduled. True otherwise
 				 */
-				bool askForSubscription(const int subscriptionId, tcpip::Storage * & request);
+				bool askForSubscription(const int currentTimeStep, const int subscriptionId, tcpip::Storage * & request);
 
 				/******************************
 				 * Methods that will call the ics-interface when the named action happens
@@ -244,7 +244,7 @@ namespace baseapp
 
 				Node(int id);
 				void init(BehaviourFactory* factory);
-				virtual void addSubscriptions();
+				virtual void addSubscriptions(const int currentTimeStep);
 				static NodeType GetRandomNodeType();
 			private:
 				static ns3::UniformVariable m_random;
