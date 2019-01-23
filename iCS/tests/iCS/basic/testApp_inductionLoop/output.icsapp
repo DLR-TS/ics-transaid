@@ -7,7 +7,6 @@ iCS --> SUMO launched.
 iCS --> ns-3 launched.
 
 STEP 2 - SETUP PHASE
-Loading configuration... done.
 testApp -> Starting iTetris test app
 testApp -> [WARNING]Ignoring socket port specified in configuration. (Overridden by command line argument.)
 testApp -> Test case set to inductionLoop
@@ -16,23 +15,24 @@ testApp -> ParseInfrastructure done
 testApp -> ParseSetup done
 testApp -> ParseOutput done
 testApp -> Load Configuration done
+Loading configuration... done.
 main-inci v 3.20
 ns3 -> No option file found. Must be named option.txt
 
 STEP 3 - SETUP PHASE
-iCS --> Trying 0 to connect SUMO on port 47131...
+iCS --> Trying 0 to connect SUMO on port 42495...
 iCS --> Connected to SUMO
 
-iCS --> Trying 0 to connect ns-3 on port 44839 and Host localhost...
+iCS --> Trying 0 to connect ns-3 on port 46463 and Host localhost...
 iCS --> Connected to ns-3
 
-iCS --> Trying 0 to connect Application on port 50567...
+iCS --> Trying 0 to connect Application on port 34409...
 iCS --> Application testApp connected.
 
 
 STEP 4 - SETUP PHASE
 jin <iCS/ns3-client.cc> CMD_CREATENODE=8
-testApp -> Server listening on port: 50567
+testApp -> Server listening on port: 34409
 WaveRsuInstaller::AllocateIpv6Prefix()3001:0:0:1::
 
 iCS --> Starting scheduling V2X messages in setup phase
@@ -1325,6 +1325,8 @@ STEP 9 - SIMULATION PHASE - Tics = 7950
 STEP 5 - SIMULATION PHASE - Tics = 8000
 STEP 6 - SIMULATION PHASE - Tics = 8000
 STEP 7 - SIMULATION PHASE - Tics = 8000
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8000
 STEP 9 - SIMULATION PHASE - Tics = 8000
@@ -1333,6 +1335,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8000
 STEP 5 - SIMULATION PHASE - Tics = 8050
 STEP 6 - SIMULATION PHASE - Tics = 8050
 STEP 7 - SIMULATION PHASE - Tics = 8050
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8050
 STEP 9 - SIMULATION PHASE - Tics = 8050
@@ -1341,6 +1345,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8050
 STEP 5 - SIMULATION PHASE - Tics = 8100
 STEP 6 - SIMULATION PHASE - Tics = 8100
 STEP 7 - SIMULATION PHASE - Tics = 8100
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8100
 STEP 9 - SIMULATION PHASE - Tics = 8100
@@ -1349,6 +1355,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8100
 STEP 5 - SIMULATION PHASE - Tics = 8150
 STEP 6 - SIMULATION PHASE - Tics = 8150
 STEP 7 - SIMULATION PHASE - Tics = 8150
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8150
 STEP 9 - SIMULATION PHASE - Tics = 8150
@@ -1357,6 +1365,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8150
 STEP 5 - SIMULATION PHASE - Tics = 8200
 STEP 6 - SIMULATION PHASE - Tics = 8200
 STEP 7 - SIMULATION PHASE - Tics = 8200
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8200
 STEP 9 - SIMULATION PHASE - Tics = 8200
@@ -1365,6 +1375,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8200
 STEP 5 - SIMULATION PHASE - Tics = 8250
 STEP 6 - SIMULATION PHASE - Tics = 8250
 STEP 7 - SIMULATION PHASE - Tics = 8250
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8250
 STEP 9 - SIMULATION PHASE - Tics = 8250
@@ -1373,6 +1385,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8250
 STEP 5 - SIMULATION PHASE - Tics = 8300
 STEP 6 - SIMULATION PHASE - Tics = 8300
 STEP 7 - SIMULATION PHASE - Tics = 8300
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8300
 STEP 9 - SIMULATION PHASE - Tics = 8300
@@ -1381,6 +1395,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8300
 STEP 5 - SIMULATION PHASE - Tics = 8350
 STEP 6 - SIMULATION PHASE - Tics = 8350
 STEP 7 - SIMULATION PHASE - Tics = 8350
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8350
 STEP 9 - SIMULATION PHASE - Tics = 8350
@@ -1389,6 +1405,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8350
 STEP 5 - SIMULATION PHASE - Tics = 8400
 STEP 6 - SIMULATION PHASE - Tics = 8400
 STEP 7 - SIMULATION PHASE - Tics = 8400
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8400
 STEP 9 - SIMULATION PHASE - Tics = 8400
@@ -1397,6 +1415,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8400
 STEP 5 - SIMULATION PHASE - Tics = 8450
 STEP 6 - SIMULATION PHASE - Tics = 8450
 STEP 7 - SIMULATION PHASE - Tics = 8450
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8450
 STEP 9 - SIMULATION PHASE - Tics = 8450
@@ -1405,6 +1425,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8450
 STEP 5 - SIMULATION PHASE - Tics = 8500
 STEP 6 - SIMULATION PHASE - Tics = 8500
 STEP 7 - SIMULATION PHASE - Tics = 8500
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8500
 STEP 9 - SIMULATION PHASE - Tics = 8500
@@ -1413,6 +1435,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8500
 STEP 5 - SIMULATION PHASE - Tics = 8550
 STEP 6 - SIMULATION PHASE - Tics = 8550
 STEP 7 - SIMULATION PHASE - Tics = 8550
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8550
 STEP 9 - SIMULATION PHASE - Tics = 8550
@@ -1421,6 +1445,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8550
 STEP 5 - SIMULATION PHASE - Tics = 8600
 STEP 6 - SIMULATION PHASE - Tics = 8600
 STEP 7 - SIMULATION PHASE - Tics = 8600
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8600
 STEP 9 - SIMULATION PHASE - Tics = 8600
@@ -1429,6 +1455,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8600
 STEP 5 - SIMULATION PHASE - Tics = 8650
 STEP 6 - SIMULATION PHASE - Tics = 8650
 STEP 7 - SIMULATION PHASE - Tics = 8650
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8650
 STEP 9 - SIMULATION PHASE - Tics = 8650
@@ -1437,6 +1465,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8650
 STEP 5 - SIMULATION PHASE - Tics = 8700
 STEP 6 - SIMULATION PHASE - Tics = 8700
 STEP 7 - SIMULATION PHASE - Tics = 8700
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8700
 STEP 9 - SIMULATION PHASE - Tics = 8700
@@ -1445,6 +1475,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8700
 STEP 5 - SIMULATION PHASE - Tics = 8750
 STEP 6 - SIMULATION PHASE - Tics = 8750
 STEP 7 - SIMULATION PHASE - Tics = 8750
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8750
 STEP 9 - SIMULATION PHASE - Tics = 8750
@@ -1453,6 +1485,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8750
 STEP 5 - SIMULATION PHASE - Tics = 8800
 STEP 6 - SIMULATION PHASE - Tics = 8800
 STEP 7 - SIMULATION PHASE - Tics = 8800
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8800
 STEP 9 - SIMULATION PHASE - Tics = 8800
@@ -1461,6 +1495,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8800
 STEP 5 - SIMULATION PHASE - Tics = 8850
 STEP 6 - SIMULATION PHASE - Tics = 8850
 STEP 7 - SIMULATION PHASE - Tics = 8850
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8850
 STEP 9 - SIMULATION PHASE - Tics = 8850
@@ -1469,6 +1505,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8850
 STEP 5 - SIMULATION PHASE - Tics = 8900
 STEP 6 - SIMULATION PHASE - Tics = 8900
 STEP 7 - SIMULATION PHASE - Tics = 8900
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8900
 STEP 9 - SIMULATION PHASE - Tics = 8900
@@ -1477,6 +1515,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8900
 STEP 5 - SIMULATION PHASE - Tics = 8950
 STEP 6 - SIMULATION PHASE - Tics = 8950
 STEP 7 - SIMULATION PHASE - Tics = 8950
+Result in TraCIResponses:
+   Number of vehicles on detector 'WC' in step 0: 1
 
 STEP 8 - SIMULATION PHASE - Tics = 8950
 STEP 9 - SIMULATION PHASE - Tics = 8950
@@ -4051,4 +4091,4 @@ STEP 9 - SIMULATION PHASE - Tics = 25000
 ns-3 server --> Finishing server.... 
 
 Success.
-Elapsed time (in seconds): 4.00
+Elapsed time (in seconds): 3.00

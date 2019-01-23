@@ -15,6 +15,7 @@ testApp_setSUMOVType
 
 # Runs testApp test case "inductionLoop"
 # This subscribes to number of vehicles on the inductionLoop in every execution step  (could be done as persistent subscription) and if there is a vehicle, it reports more info.
+# It also tests retrieving traci responses from the global map in the Behaviour base class (see output on stdout).
 testApp_inductionLoop
 
 # Tests communication behaviour with test case commSimple:
