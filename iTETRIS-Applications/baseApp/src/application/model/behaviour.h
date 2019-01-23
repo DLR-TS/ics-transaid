@@ -144,9 +144,9 @@ namespace baseapp
 			protected:
 				virtual std::string Log() const;
 				iCSInterface* GetController();
-				/// @brief return time and result object for the last TraCI response received for the given object and command
+				/// @brief return time and result object for the last TraCI response received for the given object and variable
 				/// returns noResponse if no entry exists in TraCIResponses
-                const std::pair<double, std::shared_ptr<libsumo::TraCIResult> >& getLastTraCIResponse(std::string objID, int cmdID);
+                const std::pair<double, std::shared_ptr<libsumo::TraCIResult> >& GetLastTraCIResponse(std::string objID, int variableID);
 
                 /// @brief noResponse is returned by @getLastTraCIResponse if there is no entry for the requested
                 /// object/command in TraCIResponses

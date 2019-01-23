@@ -150,9 +150,9 @@ namespace baseapp
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " is " << ss.str());
             if (command.type == GET_COMMAND) {
                 // bare pointer base
-                std::shared_ptr<libsumo::TraCIStringList> list;
+                std::shared_ptr<libsumo::TraCIStringList> list = std::make_shared<libsumo::TraCIStringList>();
                 list->value = result;
-                std::shared_ptr<libsumo::TraCIResult> res = list;
+                std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(list);
                 double time = 0.0; // TODO: get current time
                 storeTraCIResult(time, res, command);
             }
@@ -166,10 +166,10 @@ namespace baseapp
         }
 
         const std::pair<double, std::shared_ptr<libsumo::TraCIResult> >&
-        Behaviour::getLastTraCIResponse(std::string objID, int cmdID) {
+        Behaviour::GetLastTraCIResponse(std::string objID, int variableID) {
             auto objMapIt = TraCIResponses.find(objID);
             if (objMapIt != end(TraCIResponses)){
-                auto cmdMapIt = objMapIt->second.find(cmdID);
+                auto cmdMapIt = objMapIt->second.find(variableID);
                 if (cmdMapIt != end(objMapIt->second)){
                     return cmdMapIt->second;
                 }
