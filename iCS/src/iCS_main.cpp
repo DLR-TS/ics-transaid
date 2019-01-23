@@ -123,6 +123,7 @@ void fillOptions()
   oc.addOptionSubTopic("CommunicationSim");
   oc.addOptionSubTopic("Applications");
   oc.addOptionSubTopic("Logs");
+  oc.addOptionSubTopic("Output");
   SystemFrame::addReportOptions(oc);
 
   // insert options for scenario
