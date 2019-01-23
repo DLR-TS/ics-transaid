@@ -43,6 +43,7 @@
 #include "../../app-commands-subscriptions-constants.h"
 #include "current-time.h"
 #include "log/console.h"
+#include "libsumo/TraCIDefs.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
@@ -252,6 +253,10 @@ namespace testapp
                 if (command.commandId == CMD_GET_INDUCTIONLOOP_VARIABLE
                         && command.variableId == LAST_STEP_VEHICLE_NUMBER
                         && result > 0) {
+                    std::cout << "Result in TraCIResponses:\n";
+                    const std::pair<double, std::shared_ptr<libsumo::TraCIResult> >& response = GetLastTraCIResponse(command.objId, command.variableId);
+                    std::cout << "   Number of vehicles on detector '" << command.objId << "' in step " << response.first << ": ";
+                    std::cout << std::dynamic_pointer_cast<libsumo::TraCIInt>(response.second)->value << std::endl;
                     GetController()->AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_ID_LIST);
                     GetController()->AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_MEAN_SPEED);
                     GetController()->AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_OCCUPANCY);
