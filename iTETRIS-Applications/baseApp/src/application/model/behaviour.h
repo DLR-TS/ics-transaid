@@ -65,7 +65,7 @@ namespace baseapp
         /// @brief Structure to hold the TraCI responses for all GET-commands
         /// @brief maps: objID -> CMD -> Response-object (time x value)
         /// @todo  Consider including the domain as top level. (Problem: it is not sent to the app currently)
-		typedef std::map<std::string, std::map<int, std::pair <double, std::shared_ptr<libsumo::TraCIResult> > > > TraCIResponseMap;
+		typedef std::map<std::string, std::map<int, std::pair <int, std::shared_ptr<libsumo::TraCIResult> > > > TraCIResponseMap;
 
 		/**
 		 * Abstract behaviour class
@@ -146,17 +146,17 @@ namespace baseapp
 				iCSInterface* GetController();
 				/// @brief return time and result object for the last TraCI response received for the given object and variable
 				/// returns noResponse if no entry exists in TraCIResponses
-                const std::pair<double, std::shared_ptr<libsumo::TraCIResult> >& GetLastTraCIResponse(std::string objID, int variableID);
+                const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >& GetLastTraCIResponse(std::string objID, int variableID);
 
                 /// @brief noResponse is returned by @getLastTraCIResponse if there is no entry for the requested
                 /// object/command in TraCIResponses
-                static std::pair<double, std::shared_ptr<libsumo::TraCIResult> > noResponse;
+                static std::pair<int, std::shared_ptr<libsumo::TraCIResult> > noResponse;
 
 				bool m_enabled;
 
 			private:
                 /// @brief Stores TraCI response in TraCIResponses
-                virtual void storeTraCIResult(const double time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command);
+                virtual void storeTraCIResult(const int time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command);
 
                 iCSInterface* m_controller;
 				bool m_running;
