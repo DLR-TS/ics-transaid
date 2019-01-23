@@ -99,6 +99,8 @@ namespace testapp
                 bool m_trafficLightSubscription;
                 bool m_setCAMareaSubscription;
                 bool m_subReceiveMessage;
+                // see test "setVType"
+                std::string m_lastVType;
                 /// @}
 
 

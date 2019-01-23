@@ -56,7 +56,8 @@ namespace testapp
 		///BehaviourTestRSU implementation
 		BehaviourTestRSU::BehaviourTestRSU(iCSInterface* controller) :
 				BehaviourRsu(controller), m_firstBroadcast(true), m_broadcastInterval(1000),
-				m_broadcastActive(true), m_eventBroadcast(0), m_eventAbortBroadcast(0)
+				m_broadcastActive(true), m_eventBroadcast(0), m_eventAbortBroadcast(0),
+				m_lastVType("NONE")
 		{
             m_mobilitySubscription = m_trafficLightSubscription = m_setCAMareaSubscription = m_subReceiveMessage = false;
 		}
@@ -176,7 +177,19 @@ namespace testapp
 		bool BehaviourTestRSU::Execute(const int currentTimeStep, DirectionValueMap &data)
 		{
             if (ProgramConfiguration::GetTestCase() == "setVType") {
-                // rsu does nothing
+
+                std::string vehID = "veh0";
+                std::pair<int, std::shared_ptr<libsumo::TraCIResult> > response = GetLastTraCIResponse(vehID, VAR_TYPE);
+                if (response != noResponse) {
+                    // response exists
+                    std::string vType = std::dynamic_pointer_cast<libsumo::TraCIString>(response.second)->value;
+                    if (vType != m_lastVType) {
+                        // Report new vType info
+                        std::cout << "Updated vType information for Vehicle '" << vehID << "' from '" << m_lastVType
+                                << "' to '" << vType << "' at time " << response.first << std::endl;
+                        m_lastVType = vType;
+                    }
+                }
             } else if (ProgramConfiguration::GetTestCase() == "inductionLoop") {
                 // constantly query induction loop status via RSU
                 GetController()->AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
