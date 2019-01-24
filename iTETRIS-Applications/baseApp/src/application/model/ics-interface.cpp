@@ -527,6 +527,52 @@ namespace baseapp
             }
         }
 
+        void iCSInterface::commandTraciChangeLane(const int laneIndex, const double duration)
+        {
+            if (m_node->getSumoId() != INVALID_STRING)
+            {
+                int cmdID = CMD_SET_VEHICLE_VARIABLE;
+                int varID = CMD_CHANGELANE;
+                int varTypeID = TYPE_COMPOUND;
+
+                const int length = 2;
+
+                tcpip::Storage content;
+                content.writeInt(length);
+                content.writeUnsignedByte(TYPE_INT);
+                content.writeInt(laneIndex);
+                content.writeUnsignedByte(TYPE_DOUBLE);
+                content.writeDouble(duration);
+
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(cmdID, varID, varTypeID, &content);
+            }
+        }
+
+        void iCSInterface::commandTraciGetDrivingDistance(const std::string edgeID, const double pos, const int laneIndex)
+        {
+            if (m_node->getSumoId() != INVALID_STRING)
+            {
+                int cmdID = CMD_GET_VEHICLE_VARIABLE;
+                int varID = DISTANCE_REQUEST;
+                int varTypeID = TYPE_COMPOUND;
+
+                const int length = 3;
+
+                tcpip::Storage content;
+                content.writeInt(length);
+                content.writeUnsignedByte(TYPE_STRING);
+                content.writeString(edgeID);
+                content.writeUnsignedByte(TYPE_DOUBLE);
+                content.writeDouble(pos);
+                content.writeUnsignedByte(TYPE_INT);
+                content.writeInt(laneIndex);
+
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(cmdID, varID, varTypeID, &content);
+            }
+        }
+
         void iCSInterface::SetTraciParameter(const std::string key, const std::string value, const std::string vehID)
         {
             std::string ID = vehID == "" ? m_node->getSumoId() : vehID;

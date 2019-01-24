@@ -248,6 +248,14 @@ namespace baseapp
                 void commandTraciOpenGap(const double newTimeHeadway, const double newSpaceHeadway,
                         const double duration, const double changeRate, const double maxDecel);
 
+                /// @brief Request a lane change
+                ///        see http://sumo.dlr.de/wiki/TraCI/Change_Vehicle_State
+                void commandTraciChangeLane(const int laneIndex, const double duration);
+
+                /// @brief Get the driving distance to given edge and position
+                ///        see http://sumo.dlr.de/wiki/TraCI/Vehicle_Value_Retrieval
+                void commandTraciGetDrivingDistance(const std::string edgeID, const double pos, const int laneIndex = 0);
+
                 /// @brief Set parameter for ToC model
                 void SetTraciParameter(const std::string key, const std::string value, const std::string vehID = "");
 
