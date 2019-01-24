@@ -546,11 +546,11 @@ namespace baseapp
             }
         }
 
-        void iCSInterface::getDepartedVehicles() {
+        void iCSInterface::requestDepartedVehicles() {
             AddTraciSubscription("_SIM", CMD_GET_SIM_VARIABLE, VAR_DEPARTED_VEHICLES_IDS);
         }
 
-        void iCSInterface::getArrivedVehicles() {
+        void iCSInterface::requestArrivedVehicles() {
             AddTraciSubscription("_SIM", CMD_GET_SIM_VARIABLE, VAR_ARRIVED_VEHICLES_IDS);
         }
 

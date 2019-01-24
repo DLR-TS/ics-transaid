@@ -252,9 +252,9 @@ namespace baseapp
                 void SetTraciParameter(const std::string key, const std::string value, const std::string vehID = "");
 
                 /// @brief Request IDs of vehicles that entered the simulation
-                void getDepartedVehicles();
+                void requestDepartedVehicles();
                 /// @brief Request IDs of vehicles that left the simulation
-                void getArrivedVehicles();
+                void requestArrivedVehicles();
 
                 /// @brief Helper function for setting the required parameters for ToC
                 void requestToC(const std::string vehID, const double timeTillMRM);
