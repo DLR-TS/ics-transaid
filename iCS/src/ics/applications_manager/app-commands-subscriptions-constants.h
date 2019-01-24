@@ -40,6 +40,9 @@
 // command create new node
 #define CMD_CREATE_MOBILE_NODE 0x01
 
+// command remove node
+#define CMD_REMOVE_MOBILE_NODE 0xEE
+
 // subscription: Return cars in a zone
 #define SUB_RETURNS_CARS_IN_ZONE 0x02
 

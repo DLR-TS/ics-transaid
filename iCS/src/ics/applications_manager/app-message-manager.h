@@ -90,11 +90,18 @@ namespace ics
 			/// @brief Command to close
 			int CommandClose();
 
+
 			/**
-			 * @brief Informs the applications of the creation of a new node.
-			 * @param[in] node The node created.
+			 * @brief Informs the applications of the creation or removal of a new node.
+			 * @param[in] node The node created or removed.
+			 * @param[in] node Whether the node was created (or removed, if false).
 			 * @return True If the function executes successfully, False otherwise.
 			 */
+			bool CommandUpdateVehicleNodeExistence(VehicleNode *node, bool create = true);
+			/**
+			 * @brief Convenience interfaces for CommandUpdateVehicleNodeExistence
+			 */
+			bool CommandRemoveVehicleNode(VehicleNode *node);
 			bool CommandCreateVehicleNodeApplication(VehicleNode *node);
 
 			/**

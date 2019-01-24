@@ -113,11 +113,17 @@ ApplicationHandler::~ApplicationHandler()
   delete m_appMessageManager;
 }
 
+bool ApplicationHandler::RemoveVehicleNode(VehicleNode *node) {
+	if (node==NULL)
+			return false;
+		return m_appMessageManager->CommandRemoveVehicleNode(node);
+}
+
 bool ApplicationHandler::CreateVehicleNodeApplication(VehicleNode *node)
 {
 	if (node==NULL)
 		return false;
-	return m_appMessageManager->CommandCreateVehicleNodeApplication(node);
+	return m_appMessageManager->CommandUpdateVehicleNodeExistence(node);
 }
 
 bool ApplicationHandler::AskForNewSubscriptions(int nodeId, vector<Subscription*> *subscriptions)

@@ -63,6 +63,7 @@ namespace baseapp
 				void writeStatusCmd(int commandId, int status, const std::string & description);
 
 				bool createMobileNode();
+				bool removeMobileNode();
 				bool askForSubscription(const int currentTimeStep);
 				bool endSubscription();
 				//bool carsInZone();

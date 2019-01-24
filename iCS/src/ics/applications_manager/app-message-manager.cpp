@@ -163,8 +163,18 @@ namespace ics
 		return EXIT_SUCCESS;
 	}
 
-	bool AppMessageManager::CommandCreateVehicleNodeApplication(VehicleNode *node)
+	bool AppMessageManager::CommandRemoveVehicleNode(VehicleNode *node) {
+		return CommandUpdateVehicleNodeExistence(node, false);
+	}
+
+	bool AppMessageManager::CommandCreateVehicleNodeApplication(VehicleNode *node) {
+		return CommandUpdateVehicleNodeExistence(node, true);
+	}
+
+	bool AppMessageManager::CommandUpdateVehicleNodeExistence(VehicleNode *node, bool create)
 	{
+		int cmd = create ? CMD_CREATE_MOBILE_NODE : CMD_REMOVE_MOBILE_NODE;
+
 		tcpip::Storage outMsg;
 		tcpip::Storage tmpMsg;
 		tcpip::Storage inMsg;
@@ -187,15 +197,17 @@ namespace ics
 		tmpMsg.writeInt(node->m_nsId);
 		//sumo id
 		tmpMsg.writeString(node->m_tsId);
-		//sumo type
-		tmpMsg.writeString(node->m_SumoType);
-		//sumo class
-		tmpMsg.writeString(node->m_SumoClass);
+		if (create) {
+			//sumo type
+			tmpMsg.writeString(node->m_SumoType);
+			//sumo class
+			tmpMsg.writeString(node->m_SumoClass);
+		}
 
 		// command length
 		outMsg.writeInt(4 + 1 + 4 + tmpMsg.size());
 		// command id
-		outMsg.writeUnsignedByte(CMD_CREATE_MOBILE_NODE);
+		outMsg.writeUnsignedByte(cmd);
 		// simulation timestep
 		outMsg.writeInt(SyncManager::m_simStep);
 
@@ -221,7 +233,7 @@ namespace ics
 			return false;
 		}
 
-		if (!ReportResultState(inMsg, CMD_CREATE_MOBILE_NODE))
+		if (!ReportResultState(inMsg, cmd))
 		{
 			cout << "iCS --> #Error after ReportResultState" << endl;
 			return false;

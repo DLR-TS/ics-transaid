@@ -161,6 +161,13 @@ public:
     bool CreateVehicleNodeApplication(VehicleNode *node);
 
     /**
+     * @brief Informs the applications of the removal of a node.
+     * @param[in] node The node removed.
+     * @return True If the function executes successfully, False otherwise.
+     */
+    bool RemoveVehicleNode(VehicleNode *node);
+
+    /**
     * @brief Asks a node if it wants to execute an unsubscription.
     * @param[in] nodeId iCS identifier of the node.
     * @param[in] subscriptions Collection of subscriptions associated to the node.

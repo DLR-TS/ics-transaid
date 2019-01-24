@@ -536,6 +536,10 @@ int SyncManager::RunOneSumoTimeStep()
 #endif
 			((Station *) m_facilitiesManager->getStation(node->m_icsId))->isActive = false;
 			m_vehiclesToBeDeactivated.push_back(node->m_nsId);
+			// TODO: Inform apps about node removal
+			for (auto ah : *m_applicationHandlerCollection) {
+				ah->RemoveVehicleNode(node);
+			}
 			RemoveNodeInTheArea(node);
 			DeleteNode(node);
 		}

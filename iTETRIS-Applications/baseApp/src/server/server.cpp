@@ -160,6 +160,9 @@ namespace baseapp
 			case CMD_CREATE_MOBILE_NODE:
 				success = createMobileNode();
 				break;
+			case CMD_REMOVE_MOBILE_NODE:
+				success = removeMobileNode();
+				break;
 			case CMD_ASK_FOR_SUBSCRIPTION:
 				success = askForSubscription(m_currentTimeStep);
 				break;
@@ -262,6 +265,11 @@ namespace baseapp
 			m_outputStorage.writeUnsignedByte(status);
 			// description
 			m_outputStorage.writeString(description);
+		}
+
+		bool Server::removeMobileNode() {
+			// TODO
+			return true;
 		}
 
 		bool Server::createMobileNode()
