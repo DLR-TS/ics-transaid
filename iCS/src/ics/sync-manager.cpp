@@ -525,7 +525,7 @@ int SyncManager::RunOneSumoTimeStep()
 
 	for (vector<string>::const_iterator i = arrived.begin(); i != arrived.end(); ++i)
 	{
-		ITetrisNode * node = GetNodeBySumoId(*i);
+		VehicleNode * node = dynamic_cast<VehicleNode*>(GetNodeBySumoId(*i));
 
 		if (node != NULL)
 		{
@@ -536,9 +536,9 @@ int SyncManager::RunOneSumoTimeStep()
 #endif
 			((Station *) m_facilitiesManager->getStation(node->m_icsId))->isActive = false;
 			m_vehiclesToBeDeactivated.push_back(node->m_nsId);
-			// TODO: Inform apps about node removal
+			// Inform apps about node removal
 			for (auto ah : *m_applicationHandlerCollection) {
-				ah->RemoveVehicleNode(node);
+				//ah->RemoveVehicleNode(node);
 			}
 			RemoveNodeInTheArea(node);
 			DeleteNode(node);
