@@ -45,6 +45,7 @@
 #include "output-helper.h"
 #include "ics-interface.h"
 #include "../../app-commands-subscriptions-constants.h"
+#include <libsumo/TraCIDefs.h>
 
 namespace baseapp
 {
@@ -428,6 +429,11 @@ namespace baseapp
                         processTraCIResult(traciReply.readStringList(), command);
                     }
                     break;
+                    case TYPE_COLOR:
+                    {
+                        processTraCIResult(readColor(traciReply), command);
+                    }
+                    break;
 				    default:
 				        NS_LOG_ERROR(LogNode() <<"iCSInferface::TraciCommandResult unknown/unimplemented return type " << Log::toHex(varType));
 				    }
@@ -453,6 +459,17 @@ namespace baseapp
 //			For a more general approach it can be used Command.type to check if the command was a value retrieval or
 //			a state change
 		}
+
+		std::shared_ptr<libsumo::TraCIColor>
+		iCSInterface::readColor(tcpip::Storage& inputStorage) {
+		    std::shared_ptr<libsumo::TraCIColor> res;
+		    res->r = static_cast<unsigned char>(inputStorage.readUnsignedByte());
+		    res->g = static_cast<unsigned char>(inputStorage.readUnsignedByte());
+		    res->b = static_cast<unsigned char>(inputStorage.readUnsignedByte());
+		    res->a = static_cast<unsigned char>(inputStorage.readUnsignedByte());
+		    return res;
+		}
+
 
         void iCSInterface::AddTraciSubscription(const int cmdID, const int varID, const int varTypeID, tcpip::Storage * value)
         {
@@ -587,6 +604,24 @@ namespace baseapp
                 content.writeString(key);
                 content.writeUnsignedByte(TYPE_STRING);
                 content.writeString(value);
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
+            }
+        }
+
+
+        void iCSInterface::SetTraCIColor(const std::string& vehID, std::shared_ptr<libsumo::TraCIColor> color) {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = CMD_SET_VEHICLE_VARIABLE;
+                int varID = VAR_COLOR;
+                int varTypeID = TYPE_COLOR;
+                tcpip::Storage content;
+                content.writeUnsignedByte(color->r);
+                content.writeUnsignedByte(color->g);
+                content.writeUnsignedByte(color->b);
+                content.writeUnsignedByte(color->a);
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
                 AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
             }

@@ -38,6 +38,7 @@
 
 #include <map>
 #include <limits>
+#include <memory>
 #include "payload.h"
 #include "fatal-error.h"
 #include "trace-manager.h"
@@ -46,6 +47,10 @@
 #include "traci-helper.h"
 #include "behaviour.h"
 #include "foreign/tcpip/storage.h"
+
+namespace libsumo {
+    class TraCIColor;
+}
 
 namespace baseapp
 {
@@ -259,6 +264,9 @@ namespace baseapp
                 /// @brief Set parameter for ToC model
                 void SetTraciParameter(const std::string key, const std::string value, const std::string vehID = "");
 
+                /// @brief Set vehicle color via TraCI
+                void SetTraCIColor(const std::string& vehID, std::shared_ptr<libsumo::TraCIColor> color);
+
                 /// @brief Request IDs of vehicles that entered the simulation
                 void requestDepartedVehicles();
                 /// @brief Request IDs of vehicles that left the simulation
@@ -304,6 +312,8 @@ namespace baseapp
 						it.second->processTraCIResult(result, command);
 					}
 				}
+
+                static std::shared_ptr<libsumo::TraCIColor> readColor(tcpip::Storage& inputStorage);
                 ///@}
 
 				/**

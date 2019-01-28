@@ -72,7 +72,7 @@ namespace baseapp
 			return m_running;
 		}
 
-		iCSInterface* Behaviour::GetController()
+		iCSInterface* Behaviour::GetController () const
 		{
 			return m_controller;
 		}
@@ -135,6 +135,15 @@ namespace baseapp
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
             if (command.type == GET_COMMAND) {
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(std::make_shared<libsumo::TraCIString>(result));
+                const int time = GetController()->GetCurrentTimeStep();
+                storeTraCIResult(time, res, command);
+            }
+        }
+
+        void Behaviour::processTraCIResult(std::shared_ptr<libsumo::TraCIColor> color, const Command& command) {
+            NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << color->getString());
+            if (command.type == GET_COMMAND) {
+                std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(color);
                 const int time = GetController()->GetCurrentTimeStep();
                 storeTraCIResult(time, res, command);
             }

@@ -42,10 +42,10 @@
 #include "headers.h"
 #include "fatal-error.h"
 #include "structs.h"
-//#include "libsumo/TraCIDefs.h"
 
 namespace libsumo {
     class TraCIResult;
+    class TraCIColor;
 }
 
 namespace baseapp
@@ -130,6 +130,7 @@ namespace baseapp
 				virtual void processTraCIResult(const double result, const Command& command);
 				virtual void processTraCIResult(const std::string result, const Command& command);
 				virtual void processTraCIResult(const std::vector<std::string> result, const Command& command);
+		        void processTraCIResult(std::shared_ptr<libsumo::TraCIColor> color, const Command& command);
 
 				virtual TypeBehaviour GetType() const
 				{
@@ -143,7 +144,7 @@ namespace baseapp
 
 			protected:
 				virtual std::string Log() const;
-				iCSInterface* GetController();
+				iCSInterface* GetController() const;
 				/// @brief return time and result object for the last TraCI response received for the given object and variable
 				/// returns noResponse if no entry exists in TraCIResponses
                 const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >& GetLastTraCIResponse(std::string objID, int variableID);
