@@ -268,8 +268,16 @@ namespace baseapp
 		}
 
 		bool Server::removeMobileNode() {
-			// TODO
-			return true;
+            int nodeId = m_inputStorage.readInt();
+            int ns3NodeId = m_inputStorage.readInt();
+            std::string sumoNodeId = m_inputStorage.readString();
+            if (!m_nodeHandler->removeMobileNode(nodeId, ns3NodeId, sumoNodeId))
+            {
+                writeStatusCmd(CMD_REMOVE_MOBILE_NODE, APP_RTYPE_ERR, "Node " + toString(nodeId) + " doesn't exists");
+                return false;
+            }
+            writeStatusCmd(CMD_REMOVE_MOBILE_NODE, APP_RTYPE_OK, "Remove node " + toString(nodeId));
+            return true;
 		}
 
 		bool Server::createMobileNode()

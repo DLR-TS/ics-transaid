@@ -90,9 +90,11 @@ namespace baseapp
 					return m_nodes.end();
 				}
 
-				//return whatever a new node was created
-				bool createMobileNode(const int nodeId, const int ns3NodeId, const std::string & sumoNodeId,
-						const std::string & sumoType, const std::string & sumoClass);
+                //return whatever a new node was created
+                bool createMobileNode(const int nodeId, const int ns3NodeId, const std::string & sumoNodeId,
+                        const std::string & sumoType, const std::string & sumoClass);
+                //return if the node was removed successfully
+                bool removeMobileNode(const int nodeId, const int ns3NodeId, const std::string & sumoNodeId);
 				//returns whatever it has added a new subscription
 				bool askForSubscription(const int currentTimeStep, const int nodeId, const int subscriptionId, tcpip::Storage * & request);
 				//returns if a subscription needs to be dropped

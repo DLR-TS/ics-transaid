@@ -539,7 +539,7 @@ namespace baseapp
 
                 tcpip::Storage content;
                 content.writeInt(length);
-                content.writeUnsignedByte(TYPE_INT);
+                content.writeUnsignedByte(TYPE_INTEGER);
                 content.writeInt(laneIndex);
                 content.writeUnsignedByte(TYPE_DOUBLE);
                 content.writeDouble(duration);
@@ -565,7 +565,7 @@ namespace baseapp
                 content.writeString(edgeID);
                 content.writeUnsignedByte(TYPE_DOUBLE);
                 content.writeDouble(pos);
-                content.writeUnsignedByte(TYPE_INT);
+                content.writeUnsignedByte(TYPE_INTEGER);
                 content.writeInt(laneIndex);
 
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only

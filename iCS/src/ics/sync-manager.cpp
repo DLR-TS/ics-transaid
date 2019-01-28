@@ -538,7 +538,7 @@ int SyncManager::RunOneSumoTimeStep()
 			m_vehiclesToBeDeactivated.push_back(node->m_nsId);
 			// Inform apps about node removal
 			for (auto ah : *m_applicationHandlerCollection) {
-				//ah->RemoveVehicleNode(node);
+				ah->RemoveVehicleNode(node);
 			}
 			RemoveNodeInTheArea(node);
 			DeleteNode(node);

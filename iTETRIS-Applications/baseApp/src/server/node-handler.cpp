@@ -98,19 +98,35 @@ namespace baseapp
 			return false;
 		}
 
-		bool NodeHandler::createMobileNode(const int nodeId, const int ns3NodeId, const std::string & sumoNodeId,
-				const std::string & sumoType, const std::string & sumoClass)
-		{
-			if (m_nodes.find(nodeId) != m_nodes.end())
-				return false;
-			Node * node = new MobileNode(nodeId, ns3NodeId, sumoNodeId, sumoType, sumoClass, m_factory);
-			ostringstream oss;
-			oss << "Added new mobile node with id " << nodeId << " ns3id " << ns3NodeId << " sumoId " << sumoNodeId
-					<< " sumoType " << sumoType << " sumoClass " << sumoClass;
-			Log::WriteLog(oss);
-			addNode(node);
-			return true;
-		}
+        bool NodeHandler::createMobileNode(const int nodeId, const int ns3NodeId, const std::string & sumoNodeId,
+                const std::string & sumoType, const std::string & sumoClass)
+        {
+            if (m_nodes.find(nodeId) != m_nodes.end())
+                return false;
+            Node * node = new MobileNode(nodeId, ns3NodeId, sumoNodeId, sumoType, sumoClass, m_factory);
+            ostringstream oss;
+            oss << "Added new mobile node with id " << nodeId << " ns3id " << ns3NodeId << " sumoId " << sumoNodeId
+                    << " sumoType " << sumoType << " sumoClass " << sumoClass;
+            Log::WriteLog(oss);
+            addNode(node);
+            return true;
+        }
+
+
+        bool NodeHandler::removeMobileNode(const int nodeId, const int ns3NodeId, const std::string & sumoNodeId)
+        {
+            auto nodeIt = m_nodes.find(nodeId);
+            if (nodeIt == m_nodes.end()) {
+                return false;
+            } else {
+                delete nodeIt->second;
+                m_nodes.erase(nodeIt);
+            }
+            ostringstream oss;
+            oss << "Removed mobile node with id " << nodeId << " ns3id " << ns3NodeId << " sumoId " << sumoNodeId;
+            Log::WriteLog(oss);
+            return true;
+        }
 
 		bool NodeHandler::askForSubscription(const int currentTimeStep, const int nodeId, const int subscriptionId, tcpip::Storage * & request)
 		{
