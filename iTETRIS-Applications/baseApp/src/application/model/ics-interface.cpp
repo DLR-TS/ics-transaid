@@ -627,7 +627,7 @@ namespace baseapp
             for (BehaviourMap::const_iterator it = m_behaviours.begin(); it != m_behaviours.end(); ++it)
             {
                 if (it->second->IsRunning()) {
-                    it->second->onAddSubscriptions();
+                    it->second->OnAddSubscriptions();
                 }
             }
         }

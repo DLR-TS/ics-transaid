@@ -93,7 +93,7 @@ namespace baseapp
 			m_traceStartToggle(false);
 		}
 
-		void Behaviour::onAddSubscriptions()
+		void Behaviour::OnAddSubscriptions()
 		{
 //            NS_LOG_FUNCTION(Log());
 		}

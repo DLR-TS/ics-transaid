@@ -92,7 +92,7 @@ namespace baseapp
 
 				/** @brief onAddSubscriptions is called at the begin of the app-interaction phase of the iCS simstep.
 				 */
-				virtual void onAddSubscriptions();
+				virtual void OnAddSubscriptions();
 
 				/**
 				 * @brief If a message of the specified pid should be forwarded to the class
