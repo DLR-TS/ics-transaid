@@ -462,7 +462,7 @@ namespace baseapp
 
 		std::shared_ptr<libsumo::TraCIColor>
 		iCSInterface::readColor(tcpip::Storage& inputStorage) {
-		    std::shared_ptr<libsumo::TraCIColor> res;
+		    std::shared_ptr<libsumo::TraCIColor> res = std::make_shared<libsumo::TraCIColor>();
 		    res->r = static_cast<unsigned char>(inputStorage.readUnsignedByte());
 		    res->g = static_cast<unsigned char>(inputStorage.readUnsignedByte());
 		    res->b = static_cast<unsigned char>(inputStorage.readUnsignedByte());
@@ -638,7 +638,7 @@ namespace baseapp
         void iCSInterface::requestToC(const std::string vehID, const double timeTillMRM)
         {
             // Set parameter for ToC model
-            SetTraciParameter("device.toc.requestToC", toString(timeTillMRM));
+            SetTraciParameter("device.toc.requestToC", toString(timeTillMRM), vehID);
         }
 
         void iCSInterface::AddTraciSubscription(const std::string objID, const int cmdID, const int varID, const int varTypeID, tcpip::Storage * value)
