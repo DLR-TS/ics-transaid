@@ -180,7 +180,7 @@ namespace testapp
 
                 std::string vehID = "veh0";
                 std::pair<int, std::shared_ptr<libsumo::TraCIResult> > response = GetLastTraCIResponse(vehID, VAR_TYPE);
-                if (response != noResponse) {
+                if (response.second != nullptr) {
                     // response exists
                     std::string vType = std::dynamic_pointer_cast<libsumo::TraCIString>(response.second)->value;
                     if (vType != m_lastVType) {
@@ -268,8 +268,10 @@ namespace testapp
                         && result > 0) {
                     std::cout << "Result in TraCIResponses:\n";
                     const std::pair<double, std::shared_ptr<libsumo::TraCIResult> >& response = GetLastTraCIResponse(command.objId, command.variableId);
-                    std::cout << "   Number of vehicles on detector '" << command.objId << "' in step " << response.first << ": ";
-                    std::cout << std::dynamic_pointer_cast<libsumo::TraCIInt>(response.second)->value << std::endl;
+                    if (response.second != nullptr) {
+                        std::cout << "   Number of vehicles on detector '" << command.objId << "' in step " << response.first << ": ";
+                        std::cout << std::dynamic_pointer_cast<libsumo::TraCIInt>(response.second)->value << std::endl;
+                    }
                     GetController()->AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_ID_LIST);
                     GetController()->AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_MEAN_SPEED);
                     GetController()->AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_OCCUPANCY);
