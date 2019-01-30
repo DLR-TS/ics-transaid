@@ -487,6 +487,10 @@ int main(int argc, char **argv)
         trafficPort = tcpip::Socket::getFreeSocketPort();
     }
     std::string sumoCall = oc.getString("traffic-executable") + " " + oc.getString("traffic-file") + " --remote-port=" + to_string(trafficPort);
+
+    // Debug: bypass for manual debug launch
+//    sumoCall = "echo '" + sumoCall + "'";
+
     char* sumoChain = strdup(sumoCall.c_str());
     pthread_create(&sumoThread, NULL, launchSystemExecutable, (void *) sumoChain);
     cout << "iCS --> SUMO launched." << endl;
