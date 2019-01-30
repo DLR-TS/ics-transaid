@@ -544,6 +544,28 @@ namespace baseapp
             }
         }
 
+        void iCSInterface::updateBestLanes() {
+            std::string objID = m_node->getSumoId();
+            if (objID != INVALID_STRING)
+            {
+                int cmdID = CMD_SET_VEHICLE_VARIABLE;
+                int varID = VAR_UPDATE_BESTLANES;
+                tcpip::Storage sumoQuery;
+                sumoQuery.writeUnsignedByte(1 + 1 + 1 + 4 + objID.length()); // command length
+                sumoQuery.writeUnsignedByte(cmdID); // command id
+                sumoQuery.writeUnsignedByte(varID); // variable id
+                sumoQuery.writeString(objID); // object id
+
+                m_node->traciCommand(TraciHelper::AddSetCommand(cmdID, varID, objID), sumoQuery);
+            }
+        }
+
+        void iCSInterface::setVehicleClass(std::string vClass) {
+            tcpip::Storage vehicleClass;
+            vehicleClass.writeString(vClass);
+            AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_VEHICLECLASS, TYPE_STRING, &vehicleClass);
+        }
+
         void iCSInterface::commandTraciChangeLane(const int laneIndex, const double duration)
         {
             if (m_node->getSumoId() != INVALID_STRING)
@@ -648,7 +670,7 @@ namespace baseapp
                 const int execID = TraciHelper::AddValueGetStorage(sumoQuery, cmdID, varID, objID);
                 m_node->traciCommand(execID, sumoQuery);
             } else {
-                int type = TraciHelper::getValueType(varID);
+//                int type = TraciHelper::getValueType(varID);
                 const int execID = TraciHelper::AddValueSetStorage(sumoQuery, cmdID, varID,
                         objID, varTypeID, *value);
                 m_node->traciCommand(execID, sumoQuery);
