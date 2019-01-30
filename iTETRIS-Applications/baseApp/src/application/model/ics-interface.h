@@ -253,6 +253,13 @@ namespace baseapp
                 void commandTraciOpenGap(const double newTimeHeadway, const double newSpaceHeadway,
                         const double duration, const double changeRate, const double maxDecel);
 
+
+                /// @brief request to update best lanes structure for vehicle
+                void updateBestLanes();
+
+                /// @brief set the vehicles sumo vehicleClass
+                void setVehicleClass(std::string vClass);
+
                 /// @brief Request a lane change
                 ///        see http://sumo.dlr.de/wiki/TraCI/Change_Vehicle_State
                 void commandTraciChangeLane(const int laneIndex, const double duration);
