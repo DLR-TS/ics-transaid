@@ -34,7 +34,7 @@ cd iTETRIS-Applications/baseApp
 echo "## Rebuilding baseApp in $PWD..."
 autoreconf -i
 ./configure
-make -j
+make -j8
 
 cd ../testApp
 echo "## Rebuilding testApp in $PWD..."
