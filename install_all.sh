@@ -34,7 +34,7 @@ echo "## Setting up baseApp..."
 cd iTETRIS-Applications/baseApp
 autoreconf -i
 ./configure
-make -j
+make -j8
 
 echo "## Setting up testApp..."
 cd ../testApp
