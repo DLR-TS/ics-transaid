@@ -174,7 +174,7 @@ namespace testapp
             }
 		}
 
-		bool BehaviourTestRSU::Execute(const int currentTimeStep, DirectionValueMap &data)
+		bool BehaviourTestRSU::Execute(DirectionValueMap &data)
 		{
             if (ProgramConfiguration::GetTestCase() == "setVType") {
 
@@ -195,7 +195,7 @@ namespace testapp
                 GetController()->AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
             } else if (ProgramConfiguration::GetTestCase() == "commSimple") {
                 // RSU constantly broadcasts for 5 secs (starting at t=5000)
-                if (currentTimeStep < 10000) {
+                if (CurrentTime::Now() < 10000) {
                     TestHeader * header = new TestHeader(PID_UNKNOWN, MT_RSU_TEST, "RSU regular broadcast message");
                     GetController()->Send(NT_VEHICLE_FULL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
                 }

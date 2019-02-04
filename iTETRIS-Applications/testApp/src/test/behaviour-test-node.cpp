@@ -190,10 +190,10 @@ namespace testapp
             }
 		}
 
-		bool BehaviourTestNode::Execute(const int currentTimeStep, DirectionValueMap &data)
+		bool BehaviourTestNode::Execute(DirectionValueMap &data)
 		{
             if (ProgramConfiguration::GetTestCase() == "setVType") {
-                if (currentTimeStep == 10000) {
+                if (CurrentTime::Now() == 10000) {
                     // check vType at time 10.
                     GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
                 }
@@ -201,7 +201,7 @@ namespace testapp
                 // Vehicle does nothing
 						} else if (ProgramConfiguration::GetTestCase() == "testTrajectory") {
 							  //QUESTION: This seems to work only on specifi values. Why ?
-							  if (currentTimeStep % 1000 == 0.0) {
+							  if (CurrentTime::Now() % 1000 == 0.0) {
 								  	// retrieve speed every 10[sec].
 									  GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
 										// retrieve lane id every 10[sec].
@@ -211,23 +211,23 @@ namespace testapp
 							  }
 						} else if (ProgramConfiguration::GetTestCase() == "testToC") {
 							  // TODO: instead of time, trigger ToC via lane ID and position
-						  	if (currentTimeStep == 10000 ) {
+						  	if (CurrentTime::Now() == 10000 ) {
 										// Requesting ToC at 10[sec].
 										GetController()->requestToC("veh0",4.0);
 								}
 						} else if (ProgramConfiguration::GetTestCase() == "testMobility") {
-								if (currentTimeStep == 12000 ) {
+								if (CurrentTime::Now() == 12000 ) {
 										// Requesting Mobility Info at 12[sec].
 										GetController()->requestMobilityInfo();
 								}
             } else if (ProgramConfiguration::GetTestCase() == "commSimple") {
                 // After t=8000, vehicle starts broadcasting until its broadcast is acknowledged or aborted at t = 12000
-                if (currentTimeStep > 8000 && m_waitForRSUAcknowledgement){
+                if (CurrentTime::Now() > 8000 && m_waitForRSUAcknowledgement){
                     TestHeader * header = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, "Vehicle regular broadcast");
                     GetController()->SendTo(5000, header, PID_UNKNOWN, MSGCAT_TESTAPP);
                 }
             } else if (ProgramConfiguration::GetTestCase() == "testOpenGap") {
-                if (currentTimeStep == 8000 && GetController()->GetNode()->getSumoId() == "veh0") {
+                if (CurrentTime::Now() == 8000 && GetController()->GetNode()->getSumoId() == "veh0") {
                     GetController()->commandTraciOpenGap(5, 50, 100, 0.1, 1);
                 }
             }

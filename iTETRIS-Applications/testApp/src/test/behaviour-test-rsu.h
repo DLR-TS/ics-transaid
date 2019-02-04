@@ -63,7 +63,7 @@ namespace testapp
 
 				bool IsSubscribedTo(ProtocolId pid) const;
 				void Receive(server::Payload *payload, double snr);
-				bool Execute(const int currentTimeStep, DirectionValueMap &data);
+				bool Execute(DirectionValueMap &data);
 				void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
 				void processTraCIResult(const int result, const Command& command);
 
