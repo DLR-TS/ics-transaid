@@ -280,7 +280,7 @@ namespace baseapp
 			}
 		}
 
-		bool BehaviourRsu::Execute(const int currentTimeStep, DirectionValueMap &data)
+		bool BehaviourRsu::Execute(DirectionValueMap &data)
 		{
 			return false;
 		}

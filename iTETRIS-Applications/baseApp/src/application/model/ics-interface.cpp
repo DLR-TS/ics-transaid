@@ -369,12 +369,12 @@ namespace baseapp
             m_node->subscribeSendingCAMs();
         }
 
-		bool iCSInterface::Execute(const int currentTimeStep, DirectionValueMap &data)
+		bool iCSInterface::Execute(DirectionValueMap &data)
 		{
 			bool retVal = false;
 			for (BehaviourMap::const_iterator it = m_behaviours.begin(); it != m_behaviours.end(); ++it)
 			{
-				if (it->second->Execute(currentTimeStep, data))
+				if (it->second->Execute(data))
 					retVal = true;
 			}
 			return retVal;
@@ -677,9 +677,8 @@ namespace baseapp
             }
         }
 
-        void iCSInterface::onAddSubscriptions(const int currentTimeStep) {
+        void iCSInterface::onAddSubscriptions() {
 //            NS_LOG_INFO(LogNode() << ": onAddSubscriptions()");
-            m_currentTimeStep = currentTimeStep;
             // activate behaviours if requested
             for (BehaviourMap::const_iterator it = m_behaviours.begin(); it != m_behaviours.end(); ++it)
             {

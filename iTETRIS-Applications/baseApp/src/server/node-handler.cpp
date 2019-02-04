@@ -128,7 +128,7 @@ namespace baseapp
             return true;
         }
 
-		bool NodeHandler::askForSubscription(const int currentTimeStep, const int nodeId, const int subscriptionId, tcpip::Storage * & request)
+		bool NodeHandler::askForSubscription(const int nodeId, const int subscriptionId, tcpip::Storage * & request)
 		{
 			Node * node;
 			if (!getNode(nodeId, node))
@@ -144,7 +144,7 @@ namespace baseapp
 				}
 				addNode(node);
 			}
-			return node->askForSubscription(currentTimeStep, subscriptionId, request);
+			return node->askForSubscription(subscriptionId, request);
 		}
 
 		bool NodeHandler::endSubscription(const int nodeId, const int subscriptionId, const int subscriptionType)
@@ -215,14 +215,14 @@ namespace baseapp
 			}
 		}
 
-		bool NodeHandler::applicationExecute(const int nodeId, const int currentTimeStep, DirectionValueMap &data)
+		bool NodeHandler::applicationExecute(const int nodeId, DirectionValueMap &data)
 		{
 			if (ProgramConfiguration::GetStartTime() >= CurrentTime::Now())
 				return false;
 			Node * node;
 			if (getNode(nodeId, node))
 			{
-				return node->applicationExecute(currentTimeStep, data);
+				return node->applicationExecute(data);
 			}
 			return false;
 		}

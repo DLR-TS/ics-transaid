@@ -164,7 +164,7 @@ namespace baseapp
 				success = removeMobileNode();
 				break;
 			case CMD_ASK_FOR_SUBSCRIPTION:
-				success = askForSubscription(m_currentTimeStep);
+				success = askForSubscription();
 				break;
 			case CMD_END_SUBSCRIPTION:
 				success = endSubscription();
@@ -183,7 +183,7 @@ namespace baseapp
 				success = applicationConfirmSubscription(commandId);
 				break;
 			case CMD_NOTIFY_APP_EXECUTE:
-				success = applicationExecute(m_currentTimeStep);
+				success = applicationExecute();
 				break;
 			case CMD_APP_CLOSE:
 				m_closeConnection = true;
@@ -296,14 +296,14 @@ namespace baseapp
 			return true;
 		}
 
-		bool Server::askForSubscription(const int currentTimeStep)
+		bool Server::askForSubscription()
 		{
 			int nodeId = m_inputStorage.readInt();
 			int subscriptionId = m_inputStorage.readInt();
 
 			writeStatusCmd(CMD_ASK_FOR_SUBSCRIPTION, APP_RTYPE_OK, "Ask For Subscription node " + toString(nodeId));
 			Storage * subscription;
-			if (m_nodeHandler->askForSubscription(currentTimeStep, nodeId, subscriptionId, subscription))
+			if (m_nodeHandler->askForSubscription(nodeId, subscriptionId, subscription))
 			{
 				m_outputStorage.writeStorage(*subscription);
 			} else
@@ -423,7 +423,7 @@ namespace baseapp
 			return true;
 		}
 
-		bool Server::applicationExecute(const int currentTimeStep)
+		bool Server::applicationExecute()
 		{
 			int nodeId = m_inputStorage.readInt();
 			//Reset the last seen counter
@@ -435,7 +435,7 @@ namespace baseapp
 			// create reply message
 			writeStatusCmd(CMD_NOTIFY_APP_EXECUTE, APP_RTYPE_OK, "CMD_NOTIFY_APP_EXECUTE");
 			DirectionValueMap data;
-			if (m_nodeHandler->applicationExecute(nodeId, currentTimeStep, data))
+			if (m_nodeHandler->applicationExecute(nodeId, data))
 			{
 				Storage dataStorage;
 				dataStorage.writeUnsignedByte(data.size());

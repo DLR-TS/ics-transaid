@@ -148,11 +148,6 @@ namespace baseapp
 						NS_FATAL_ERROR(LogNode() << "Wrong header type");
 				}
 
-				/// @brief Returns the current time step (updated in @see OnAddSubscriptions())
-				int GetCurrentTimeStep() const {
-				    return m_currentTimeStep;
-				};
-
 				/************************
 				 * iCS interaction methods
 				 */
@@ -210,7 +205,7 @@ namespace baseapp
                  * @param[out] data Data to send back to iCS. The application has to fill the map
                  * @return Whatever the application executed. If true data will be sent to iCS. If false data is discarded
                  */
-                bool Execute(const int currentTimeStep, DirectionValueMap &data);
+                bool Execute(DirectionValueMap &data);
 
 				/**
 				 * @brief Called by the node class when the reply from a sumo command is received.
@@ -290,7 +285,7 @@ namespace baseapp
                 ///        It calls the corresponding method for all installed behaviors. In particular, this allows to issue
                 ///        a TraCI GET call, whose result will be delivered in the same simulation step when subscription results
                 ///        are sent to the app.
-                void onAddSubscriptions(const int currentTimeStep);
+                void onAddSubscriptions();
 
                 /**
                  * @brief Called by the node class when the node has received CAM messages
@@ -333,7 +328,6 @@ namespace baseapp
 				NodeType m_nodeType;
 
 				bool m_active;
-				int m_currentTimeStep;
 				double m_direction_tolerance;
 
 				// behaviours collection

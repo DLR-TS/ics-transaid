@@ -64,13 +64,13 @@ namespace baseapp
 
 				bool createMobileNode();
 				bool removeMobileNode();
-				bool askForSubscription(const int currentTimeStep);
+				bool askForSubscription();
 				bool endSubscription();
 				//bool carsInZone();
 				bool mobilityInformation();
 				bool applicationMessageReceive();
 				bool applicationConfirmSubscription(int commandId);
-				bool applicationExecute(const int currentTimeStep);
+				bool applicationExecute();
 				bool trafficLightInformation();
 				bool sumoTraciCommand();
                 bool getReceivedCAMinfo();

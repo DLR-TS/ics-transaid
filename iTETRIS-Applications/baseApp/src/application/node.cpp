@@ -151,14 +151,14 @@ namespace baseapp
 			return true;
 		}
 
-		bool Node::askForSubscription(const int currentTimeStep, const int subscriptionId, tcpip::Storage * & request)
+		bool Node::askForSubscription(const int subscriptionId, tcpip::Storage * & request)
 		{
 			if (m_type == NT_VEHICLE_SHADOW)
 				return false;
 			if (m_firstAskSubscription)
 			{
 				m_firstAskSubscription = false;
-				addSubscriptions(currentTimeStep);
+				addSubscriptions();
 			} else
 			{
 				//  remove the subscription I used the last time. I delete it now otherwise I can't delete the request storage
@@ -189,11 +189,11 @@ namespace baseapp
 				Log::WriteLog("MessageReceive: payload is NULL");
 		}
 
-		bool Node::applicationExecute(const int currentTimeStep, DirectionValueMap &data)
+		bool Node::applicationExecute(DirectionValueMap &data)
 		{
 			if (m_type == NT_VEHICLE_SHADOW)
 				return false;
-			return m_controller->Execute(currentTimeStep, data);
+			return m_controller->Execute(data);
 		}
 
 		void Node::send(server::Payload * payload, double time, const int messageCategory)
@@ -230,9 +230,9 @@ namespace baseapp
 			m_toSubscribe.push( SubscriptionHelper::GetMobilityInformation() );
 		}
 
-		void Node::addSubscriptions(const int currentTimeStep)
+		void Node::addSubscriptions()
 		{
-		    m_controller->onAddSubscriptions(currentTimeStep);
+		    m_controller->onAddSubscriptions();
 		}
 
 		float Node::getPropagationRadius() const

@@ -40,6 +40,7 @@
 #include "log/log.h"
 #include "program-configuration.h"
 #include "libsumo/TraCIDefs.h"
+#include "current-time.h"
 
 namespace baseapp
 {
@@ -105,7 +106,7 @@ namespace baseapp
 			return outstr.str();
 		}
 
-		bool Behaviour::Execute(const int currentTimeStep, DirectionValueMap &data)
+		bool Behaviour::Execute(DirectionValueMap &data)
 		{
 		    return false;
 		}
@@ -117,7 +118,7 @@ namespace baseapp
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
             if (command.type == GET_COMMAND) {
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(std::make_shared<libsumo::TraCIInt>(result));
-                const int time = GetController()->GetCurrentTimeStep();
+                const int time = CurrentTime::Now();
                 storeTraCIResult(time, res, command);
             }
         }
@@ -126,7 +127,7 @@ namespace baseapp
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
             if (command.type == GET_COMMAND) {
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(std::make_shared<libsumo::TraCIDouble>(result));
-                const int time = GetController()->GetCurrentTimeStep();
+                const int time = CurrentTime::Now();
                 storeTraCIResult(time, res, command);
             }
         }
@@ -135,7 +136,7 @@ namespace baseapp
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
             if (command.type == GET_COMMAND) {
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(std::make_shared<libsumo::TraCIString>(result));
-                const int time = GetController()->GetCurrentTimeStep();
+                const int time = CurrentTime::Now();
                 storeTraCIResult(time, res, command);
             }
         }
@@ -144,7 +145,7 @@ namespace baseapp
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << color->getString());
             if (command.type == GET_COMMAND) {
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(color);
-                const int time = GetController()->GetCurrentTimeStep();
+                const int time = CurrentTime::Now();
                 storeTraCIResult(time, res, command);
             }
         }
@@ -162,7 +163,7 @@ namespace baseapp
                 std::shared_ptr<libsumo::TraCIStringList> list = std::make_shared<libsumo::TraCIStringList>();
                 list->value = result;
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(list);
-                const int time = GetController()->GetCurrentTimeStep();
+                const int time = CurrentTime::Now();
                 storeTraCIResult(time, res, command);
             }
         }

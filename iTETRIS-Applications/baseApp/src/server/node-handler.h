@@ -96,7 +96,7 @@ namespace baseapp
                 //return if the node was removed successfully
                 bool removeMobileNode(const int nodeId, const int ns3NodeId, const std::string & sumoNodeId);
 				//returns whatever it has added a new subscription
-				bool askForSubscription(const int currentTimeStep, const int nodeId, const int subscriptionId, tcpip::Storage * & request);
+				bool askForSubscription(const int nodeId, const int subscriptionId, tcpip::Storage * & request);
 				//returns if a subscription needs to be dropped
 				bool endSubscription(const int nodeId, const int subscriptionId, const int subscriptionType);
 				//returns the new cars that have entered the zone
@@ -106,7 +106,7 @@ namespace baseapp
 				std::string insertPayload(const Payload* payload, bool deleteOnRead = true);
 				void applicationMessageReceive(const std::vector<Message> & messages);
 				//returns if there is data to send to iCS
-				bool applicationExecute(const int nodeId, const int currentTimeStep, DirectionValueMap &data);
+				bool applicationExecute(const int nodeId, DirectionValueMap &data);
 				void ConfirmSubscription(const int nodeId, const int subscriptionId, const bool status);
 
 				void deleteNode(int);
