@@ -232,7 +232,7 @@ namespace baseapp
 
 		void Node::addSubscriptions()
 		{
-		    m_controller->onAddSubscriptions();
+		    m_controller->OnAddSubscriptions();
 		}
 
 		float Node::getPropagationRadius() const

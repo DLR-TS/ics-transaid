@@ -46,6 +46,8 @@
 #include "ics-interface.h"
 #include "../../app-commands-subscriptions-constants.h"
 #include <libsumo/TraCIDefs.h>
+//#include "traci-server/TraCIConstants.h"
+//#include <foreign/tcpip/storage.h>
 
 namespace baseapp
 {
@@ -596,16 +598,15 @@ namespace baseapp
                 int varID = DISTANCE_REQUEST;
                 int varTypeID = TYPE_COMPOUND;
 
-                const int length = 3;
+                const int length = 2;
 
                 tcpip::Storage content;
                 content.writeInt(length);
-                content.writeUnsignedByte(TYPE_STRING);
+                content.writeUnsignedByte(POSITION_ROADMAP);
                 content.writeString(edgeID);
-                content.writeUnsignedByte(TYPE_DOUBLE);
                 content.writeDouble(pos);
-                content.writeUnsignedByte(TYPE_BYTE);
-                content.writeByte(laneIndex);
+                content.writeUnsignedByte(laneIndex);
+                content.writeUnsignedByte(REQUEST_DRIVINGDIST);
 
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
                 AddTraciSubscription(cmdID, varID, varTypeID, &content);
@@ -677,8 +678,8 @@ namespace baseapp
             }
         }
 
-        void iCSInterface::onAddSubscriptions() {
-//            NS_LOG_INFO(LogNode() << ": onAddSubscriptions()");
+        void iCSInterface::OnAddSubscriptions() {
+//            NS_LOG_INFO(LogNode() << ": OnAddSubscriptions()");
             // activate behaviours if requested
             for (BehaviourMap::const_iterator it = m_behaviours.begin(); it != m_behaviours.end(); ++it)
             {

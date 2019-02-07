@@ -90,7 +90,7 @@ namespace baseapp
 				virtual void Stop();
 
 
-				/** @brief onAddSubscriptions is called at the begin of the app-interaction phase of the iCS simstep.
+				/** @brief OnAddSubscriptions is called at the begin of the app-interaction phase of the iCS simstep.
 				 */
 				virtual void OnAddSubscriptions();
 

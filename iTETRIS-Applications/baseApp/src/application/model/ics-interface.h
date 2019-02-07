@@ -281,11 +281,11 @@ namespace baseapp
                 /// @brief Add a subscription
                 void AddSubscription(Subscription * sub);
 
-                /// @brief onAddSubscriptions is called at the begin of each simstep when the iCS asks for new subscriptions.
+                /// @brief OnAddSubscriptions is called at the begin of each simstep when the iCS asks for new subscriptions.
                 ///        It calls the corresponding method for all installed behaviors. In particular, this allows to issue
                 ///        a TraCI GET call, whose result will be delivered in the same simulation step when subscription results
                 ///        are sent to the app.
-                void onAddSubscriptions();
+                void OnAddSubscriptions();
 
                 /**
                  * @brief Called by the node class when the node has received CAM messages
