@@ -41,6 +41,7 @@
 #include "node.h"
 #include "../../app-commands-subscriptions-constants.h"
 #include "current-time.h"
+#include "libsumo/TraCIDefs.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
@@ -124,6 +125,15 @@ namespace testapp
             }
 		}
 
+
+        void BehaviourTestNode::OnAddSubscriptions() {
+            if (ProgramConfiguration::GetTestCase() == "drivingDistance") {
+                if (CurrentTime::Now() == 5000) {
+                    GetController()->commandTraciGetDrivingDistance("CE", 50);
+                }
+            }
+        }
+
 		bool BehaviourTestNode::IsSubscribedTo(ProtocolId pid) const
 		{
 			return pid == PID_UNKNOWN;
@@ -192,7 +202,19 @@ namespace testapp
 
 		bool BehaviourTestNode::Execute(DirectionValueMap &data)
 		{
-            if (ProgramConfiguration::GetTestCase() == "setVType") {
+
+            if (ProgramConfiguration::GetTestCase() == "drivingDistance") {
+                if (CurrentTime::Now() == 5000) {
+                    std::string sumoID = GetController()->GetNode()->getSumoId();
+                    auto distResponse = std::dynamic_pointer_cast<libsumo::TraCIDouble>(GetLastTraCIResponse(sumoID, DISTANCE_REQUEST).second);
+                    if (distResponse != nullptr) {
+                        double dist = distResponse->value;
+                        NS_LOG_INFO(Log() << "Driving distance for veh " << sumoID << " at time " << CurrentTime::Now() << " is " << dist);
+                    } else {
+                        NS_LOG_INFO(Log() << "No driving distance result for veh " << sumoID);
+                    }
+                }
+            } else if (ProgramConfiguration::GetTestCase() == "setVType") {
                 if (CurrentTime::Now() == 10000) {
                     // check vType at time 10.
                     GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);

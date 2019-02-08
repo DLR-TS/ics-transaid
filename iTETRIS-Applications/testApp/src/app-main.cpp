@@ -94,7 +94,7 @@ int main(int argc, char **argv)
   try
   {
     std::set<std::string> testCases({"", "acosta", "simpleExecute", "setVType", "inductionLoop",
-                                     "commSimple", "commSimple2", "CAMsimple",
+                                     "commSimple", "commSimple2", "CAMsimple", "drivingDistance",
                                      "testMobility", "testTrajectory", "testToC", "testOpenGap"});
     // start-up
     Console::Log("Starting iTetris test app");
