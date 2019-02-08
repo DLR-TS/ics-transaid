@@ -64,6 +64,7 @@ LightCommSimulator/src/config.h.in
 LightCommSimulator/src/lightcomm
 .project
 **.project
+**.settings
 **.cproject
 **.pydevproject
 **language.settings.xml
