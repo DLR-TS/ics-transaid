@@ -35,3 +35,6 @@ testApp_ToC
 
 # Tests iCSInterface::openGap
 testApp_openGap
+
+# Tests iCSInterface::getDrivingDistance
+testApp_getDrivingDistance
