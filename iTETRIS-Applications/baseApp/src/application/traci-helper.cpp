@@ -69,7 +69,13 @@ namespace baseapp
 
 		int TraciHelper::AddSetCommand(const int commandId, const int variableId, const std::string & objId)
 		{
-			Command c(commandId, variableId, objId, SET_COMMAND);
+		    CommandType t = SET_COMMAND;
+		    if (variableId == DISTANCE_REQUEST) {
+		        // Hack for retrieving driving distance response.
+		        // TODO: allow parameters for GET_COMMANDS, @see AddTraciSubscription()
+		        t = GET_COMMAND;
+		    }
+			Command c(commandId, variableId, objId, t);
 			return AddCommand(c);
 		}
 

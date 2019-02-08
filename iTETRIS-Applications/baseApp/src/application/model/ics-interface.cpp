@@ -666,6 +666,7 @@ namespace baseapp
 
         void iCSInterface::AddTraciSubscription(const std::string objID, const int cmdID, const int varID, const int varTypeID, tcpip::Storage * value)
         {
+            // TODO: get command with value != 0 (e.g. DISTANCE_REQUEST for getDrivingDistance())
             tcpip::Storage sumoQuery;
             if (value == 0) {
                 const int execID = TraciHelper::AddValueGetStorage(sumoQuery, cmdID, varID, objID);
