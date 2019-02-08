@@ -24,6 +24,7 @@
 
 #include "SUMOdigital-map.h"
 #include <utils/xml/XMLSubSys.h>
+#include <utils/xml/SUMOSAXAttributes.h>
 #include <utils/geom/Boundary.h>
 #include <utils/geom/PositionVector.h>
 
