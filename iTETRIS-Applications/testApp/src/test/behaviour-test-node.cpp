@@ -122,6 +122,8 @@ namespace testapp
                     GetController()->startReceivingGeobroadcast(PROTOCOL_MESSAGE);
                     m_subReceiveMessage = true;
                 }
+            } else if (ProgramConfiguration::GetTestCase() == "getSUMOStepLength") {
+                NS_LOG_INFO(Log() << "SUMO step length is " << GetController()->getSUMOStepLength() << " milliseconds");
             }
 		}
 

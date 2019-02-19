@@ -10,6 +10,9 @@ testApp_test_case_unknown
 # Tests testApp execution with test case simpleExecute
 testApp_simpleExecute
 
+# Tests iCSInterface::getSUMOStepLength()
+testApp_getSUMOStepLength
+
 # Runs testApp test case "setVType"
 testApp_setSUMOVType
 

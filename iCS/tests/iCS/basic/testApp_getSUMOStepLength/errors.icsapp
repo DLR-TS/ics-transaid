@@ -1,0 +1,26 @@
+Error: Attribute 'delta' is missing in definition of a location.
+Error: Index out of range in bracket operator of PositionVector
+Could not set default value for ns3::c2cMessageStore::MaxPacketNumber
+Could not set default value for ns3::c2cNotificationGenerator::MaxPackets
+Could not set default value for ns3::c2cNotificationGenerator::Timeout
+Could not set default value for ns3::c2cNotificationGenerator::Interval
+Could not set default value for ns3::c2cNotificationGenerator::PacketSize
+Could not set default value for ns3::c2cInfrastructureMessageManagement::RemotePort
+Could not set default value for ns3::c2cRoadsideMessageManagement::Port
+Could not set default value for ns3::c2cVehicleMessageManagement::Port
+Could not set default value for ns3::c2cVehicleMessageManagement::PacketWindowSize
+Could not set default value for ns3::Ipv6RawSocketImpl::IcmpFilter
+Could not set default value for ns3::TcpL4Protocol::RttEstimatorFactory
+Could not set default value for ns3::JakesPropagationLossModel::NumberOfRaysPerPath
+Could not set default value for ns3::JakesPropagationLossModel::NumberOfOscillatorsPerRay
+Could not set default value for ns3::JakesPropagationLossModel::DopplerFreq
+Could not set default value for ns3::JakesPropagationLossModel::Distribution
+Could not set default value for ns3::FriisPropagationLossModel::Lambda
+Could not set default value for ns3::FriisPropagationLossModel::MinDistance
+Could not set default value for ns3::TwoRayGroundPropagationLossModel::Lambda
+Could not set default value for ns3::RateErrorModel::ErrorUnit
+YansWifiPhyHelper::Default ns3::NistErrorRateModel
+YansWifiPhyHelper::Default ns3::NistErrorRateModel
+YansWifiPhyHelper::Default ns3::NistErrorRateModel
+YansWifiPhyHelper::Default ns3::NistErrorRateModel
+2 Install on node 1 com WaveVehicle
