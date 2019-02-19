@@ -889,8 +889,9 @@ int SyncManager::ConnectToApps()
 			appHandlerIt < m_applicationHandlerCollection->end(); appHandlerIt++)
 	{
 		ApplicationHandler* appHandler = (*appHandlerIt);
-
-		if (appHandler->m_appMessageManager->Connect(appHandler->m_host, appHandler->m_port))
+		success = appHandler->m_appMessageManager->Connect(appHandler->m_host, appHandler->m_port);
+		success = success && appHandler->m_appMessageManager->initSUMOStepLength(m_trafficSimstep);
+		if (success)
 		{
 			cout << "iCS --> Application " << appHandler->m_name << " connected." << endl;
 		} else

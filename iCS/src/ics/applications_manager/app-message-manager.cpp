@@ -107,6 +107,53 @@ namespace ics
 		return false;
 	}
 
+	bool AppMessageManager::initSUMOStepLength(int stepLength) {
+        Storage outMsg;
+        Storage inMsg;
+        std::stringstream msg;
+
+        if (m_socket == NULL)
+        {
+            cout << "iCS --> #Error while sending command: no connection to server" << endl;
+            return false;
+        }
+
+        // command length
+        outMsg.writeInt(4 + 1 + 4); // len + cmd + steplength
+        // command id
+        outMsg.writeUnsignedByte(CMD_SUMO_STEPLENGTH);
+        // command id
+        outMsg.writeInt(stepLength);
+
+        // send message
+        try
+        {
+            m_socket->sendExact(outMsg);
+        } catch (SocketException e)
+        {
+            cout << "iCS --> Error while sending command: " << e.what() << endl;
+            return false;
+        }
+
+        // receive answer message
+        try
+        {
+            m_socket->receiveExact(inMsg);
+        } catch (SocketException e)
+        {
+            cout << "iCS --> #Error while receiving command: " << e.what() << endl;
+            return false;
+        }
+
+        // validate result state
+        if (!ReportResultState(inMsg, CMD_SUMO_STEPLENGTH))
+        {
+            return false;
+        }
+
+        return true;
+	}
+
 	bool AppMessageManager::Close()
 	{
 		if (m_socket != NULL)

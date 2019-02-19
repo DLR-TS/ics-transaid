@@ -80,6 +80,12 @@ namespace ics
 			 */
 			bool Connect(std::string host, int port);
 
+
+			/**
+			 * @brief Informs the application about the SUMO simulation step length
+			 */
+		    bool initSUMOStepLength(int stepLength);
+
 			/**
 			 * @brief Closes the connection with the application module.
 			 * @return True: If the connection closes successfully.

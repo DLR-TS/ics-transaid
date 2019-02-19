@@ -56,6 +56,7 @@ namespace baseapp
 
 		Server* Server::m_instance;
 		bool Server::m_closeConnection;
+		int Server::SUMO_STEPLENGTH = -1;
 
 		Server::Server(application::BehaviourFactory* factory)
 		{
@@ -144,13 +145,18 @@ namespace baseapp
 			return CurrentTime::Now();
 		}
 
+		int Server::getSUMOStepLength()
+		{
+		    return SUMO_STEPLENGTH;
+		}
+
 		int Server::dispatchCommand()
 		{
 			int commandStart = m_inputStorage.position();
 			int commandLength = m_inputStorage.readInt();
 
 			int commandId = m_inputStorage.readUnsignedByte();
-			if (commandId != CMD_APP_CLOSE)
+			if (commandId != CMD_APP_CLOSE && commandId != CMD_SUMO_STEPLENGTH)
 				updateTimeStep(m_inputStorage.readInt());
 
 			bool success = false;
@@ -195,6 +201,9 @@ namespace baseapp
             case CMD_RECEIVED_CAM_INFO:
                 success = getReceivedCAMinfo();
                 break;
+            case CMD_SUMO_STEPLENGTH:
+                success = storeSUMOStepLength();
+                break;
 
 			default:
 				writeStatusCmd(commandId, APP_RTYPE_NOTIMPLEMENTED, "Command not implemented");
@@ -219,19 +228,26 @@ namespace baseapp
 			return commandId;
 		}
 
-		void Server::updateTimeStep(int current)
-		{
-			if (m_currentTimeStep != current)
-			{
-				CurrentTime::m_currentTime = current;
-				Log::WriteLog(ostringstream("#@# Current timestep " + toString(current)));
-				NS_LOG_DEBUG("#@# Current timestep " << current);
-				m_currentTimeStep = current;
-				checkNodeToRemove();
-				m_nodeHandler->updateTimeStep(current);
-				application::Scheduler::Notify(current);
-			}
-		}
+        void Server::updateTimeStep(int current)
+        {
+            if (m_currentTimeStep != current)
+            {
+                CurrentTime::m_currentTime = current;
+                Log::WriteLog(ostringstream("#@# Current timestep " + toString(current)));
+                NS_LOG_DEBUG("#@# Current timestep " << current);
+                m_currentTimeStep = current;
+                checkNodeToRemove();
+                m_nodeHandler->updateTimeStep(current);
+                application::Scheduler::Notify(current);
+            }
+        }
+
+
+        bool Server::storeSUMOStepLength() {
+            SUMO_STEPLENGTH = m_inputStorage.readInt();
+            writeStatusCmd(CMD_SUMO_STEPLENGTH, APP_RTYPE_OK, "CMD_SUMO_STEPLENGTH");
+            return true;
+        }
 
 		void Server::writeStatusCmd(int commandId, int status, const std::string & description)
 		{

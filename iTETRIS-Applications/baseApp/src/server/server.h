@@ -52,6 +52,7 @@ namespace baseapp
 				static void RunServer(application::BehaviourFactory* factory);
 				static NodeHandler* GetNodeHandler();
 				static int CurrentTimeStep();
+				static int getSUMOStepLength();
 
 			private:
 				Server(application::BehaviourFactory* factory);
@@ -61,6 +62,9 @@ namespace baseapp
 				void updateTimeStep(int current);
 				void checkNodeToRemove();
 				void writeStatusCmd(int commandId, int status, const std::string & description);
+
+				/// @brief Reads SUMO step length info from input storage.
+				bool storeSUMOStepLength();
 
 				bool createMobileNode();
 				bool removeMobileNode();
@@ -91,6 +95,7 @@ namespace baseapp
 				NodeHandler * m_nodeHandler;
 				std::map<int, int> m_lastSeenNodes;
 				static const int MAX_NODE_TIMESTEP = 5;
+				static int SUMO_STEPLENGTH;
 		};
 
 	} /* namespace server */

@@ -44,6 +44,7 @@
 #include "node-sampler.h"
 #include "output-helper.h"
 #include "ics-interface.h"
+#include "server.h"
 #include "../../app-commands-subscriptions-constants.h"
 #include <libsumo/TraCIDefs.h>
 //#include "traci-server/TraCIConstants.h"
@@ -708,6 +709,10 @@ namespace baseapp
 
         void iCSInterface::requestTrafficLightInfo(){
             m_node->subscribeTrafficLightInformation();
+        }
+
+        int iCSInterface::getSUMOStepLength() {
+            return baseapp::server::Server::getSUMOStepLength();
         }
 
 	} /* namespace application */

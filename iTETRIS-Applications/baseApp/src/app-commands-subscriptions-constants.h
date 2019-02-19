@@ -47,6 +47,9 @@
 // command: close connection
 #define CMD_APP_CLOSE 0xFF
 
+// command: inform app about SUMO simulation step length
+#define CMD_SUMO_STEPLENGTH 0x17 // 23
+
 // command create new node
 #define CMD_CREATE_MOBILE_NODE 0x01
 
@@ -92,14 +95,14 @@
 // subscription Set area to send CAM
 #define SUB_SET_CAM_AREA 0x11	//17
 
-// notify app of arrived messages
-#define CMD_NOTIFY_APP_MESSAGE_STATUS 0x14	//20
-
 // subscription start travel time estimation
 #define SUB_TRAVEL_TIME_ESTIMATION_START 0x12	//18
 
 // subscription end travel time estimation
 #define SUB_TRAVEL_TIME_ESTIMATION_END 0x13	//19
+
+// notify app of arrived messages
+#define CMD_NOTIFY_APP_MESSAGE_STATUS 0x14  //20
 
 // subscription to monitor the travel time estimation
 #define SUB_TRAVEL_TIME_ESTIMATION 0x15	//21

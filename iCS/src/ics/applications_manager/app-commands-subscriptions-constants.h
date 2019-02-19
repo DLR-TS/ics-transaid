@@ -37,6 +37,9 @@
 // command: close connection
 #define CMD_APP_CLOSE 0xFF
 
+// command: inform app about SUMO simulation step length
+#define CMD_SUMO_STEPLENGTH 0x17 // 23
+
 // command create new node
 #define CMD_CREATE_MOBILE_NODE 0x01
 

@@ -148,6 +148,9 @@ namespace baseapp
 						NS_FATAL_ERROR(LogNode() << "Wrong header type");
 				}
 
+				/// @brief Get SUMO simulation step length (in milliseconds) from server
+				static int getSUMOStepLength();
+
 				/************************
 				 * iCS interaction methods
 				 */
