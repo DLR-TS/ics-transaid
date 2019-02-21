@@ -110,6 +110,26 @@ std::string ToString(TypeBehaviour type)
     return "TestNode";
   case TYPE_BEHAVIOUR_TEST_RSU:
       return "TestRSU";
+  case TYPE_BEHAVIOUR_UC1_NODE:
+    return "UC1Node";
+  case TYPE_BEHAVIOUR_UC1_RSU:
+      return "UC1RSU";
+  case TYPE_BEHAVIOUR_UC2_NODE:
+      return "UC2Node";
+  case TYPE_BEHAVIOUR_UC2_RSU:
+      return "UC2RSU";
+  case TYPE_BEHAVIOUR_UC3_NODE:
+      return "UC3Node";
+  case TYPE_BEHAVIOUR_UC3_RSU:
+      return "UC3RSU";
+  case TYPE_BEHAVIOUR_UC4_NODE:
+      return "UC4Node";
+  case TYPE_BEHAVIOUR_UC4_RSU:
+      return "UC4RSU";
+  case TYPE_BEHAVIOUR_UC5_NODE:
+      return "UC5Node";
+  case TYPE_BEHAVIOUR_UC5_RSU:
+      return "UC5RSU";
   default:
   {
       std::stringstream ss;
