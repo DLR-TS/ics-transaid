@@ -1,5 +1,35 @@
-Error: Attribute 'delta' is missing in definition of a location.
-Error: Index out of range in bracket operator of PositionVector
+Error: Attribute 'from' is missing in definition of edge ':C_0'.
+Error: Attribute 'to' is missing in definition of edge ':C_0'.
+Error: Attribute 'from' is missing in definition of edge ':C_1'.
+Error: Attribute 'to' is missing in definition of edge ':C_1'.
+Error: Attribute 'from' is missing in definition of edge ':C_2'.
+Error: Attribute 'to' is missing in definition of edge ':C_2'.
+Error: Attribute 'from' is missing in definition of edge ':C_12'.
+Error: Attribute 'to' is missing in definition of edge ':C_12'.
+Error: Attribute 'from' is missing in definition of edge ':C_3'.
+Error: Attribute 'to' is missing in definition of edge ':C_3'.
+Error: Attribute 'from' is missing in definition of edge ':C_4'.
+Error: Attribute 'to' is missing in definition of edge ':C_4'.
+Error: Attribute 'from' is missing in definition of edge ':C_5'.
+Error: Attribute 'to' is missing in definition of edge ':C_5'.
+Error: Attribute 'from' is missing in definition of edge ':C_6'.
+Error: Attribute 'to' is missing in definition of edge ':C_6'.
+Error: Attribute 'from' is missing in definition of edge ':C_7'.
+Error: Attribute 'to' is missing in definition of edge ':C_7'.
+Error: Attribute 'from' is missing in definition of edge ':C_8'.
+Error: Attribute 'to' is missing in definition of edge ':C_8'.
+Error: Attribute 'from' is missing in definition of edge ':C_13'.
+Error: Attribute 'to' is missing in definition of edge ':C_13'.
+Error: Attribute 'from' is missing in definition of edge ':C_9'.
+Error: Attribute 'to' is missing in definition of edge ':C_9'.
+Error: Attribute 'from' is missing in definition of edge ':C_10'.
+Error: Attribute 'to' is missing in definition of edge ':C_10'.
+Error: Attribute 'from' is missing in definition of edge ':C_11'.
+Error: Attribute 'to' is missing in definition of edge ':C_11'.
+Error: Attribute 'intLanes' in definition of junction 'E' is empty.
+Error: Attribute 'intLanes' in definition of junction 'N' is empty.
+Error: Attribute 'intLanes' in definition of junction 'S' is empty.
+Error: Attribute 'intLanes' in definition of junction 'W' is empty.
 Could not set default value for ns3::c2cMessageStore::MaxPacketNumber
 Could not set default value for ns3::c2cNotificationGenerator::MaxPackets
 Could not set default value for ns3::c2cNotificationGenerator::Timeout

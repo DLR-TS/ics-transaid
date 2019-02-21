@@ -1,1059 +1,1059 @@
 Test App Log File
 ===============================
-[2018-08-21T13:56:41.080] [INFO ] #@# Current timestep -1000
-[2018-08-21T13:56:41.081] [INFO ] Added new fixed station with id 5000
-[2018-08-21T13:56:41.081] [INFO ] [Node 5000] added subscription 1 type 0x3a
-[2018-08-21T13:56:41.085] [INFO ] #@# Current timestep 0
-[2018-08-21T13:56:41.087] [INFO ] #@# Current timestep 50
-[2018-08-21T13:56:41.089] [INFO ] #@# Current timestep 100
-[2018-08-21T13:56:41.092] [INFO ] #@# Current timestep 150
-[2018-08-21T13:56:41.094] [INFO ] #@# Current timestep 200
-[2018-08-21T13:56:41.096] [INFO ] #@# Current timestep 250
-[2018-08-21T13:56:41.098] [INFO ] #@# Current timestep 300
-[2018-08-21T13:56:41.100] [INFO ] #@# Current timestep 350
-[2018-08-21T13:56:41.102] [INFO ] #@# Current timestep 400
-[2018-08-21T13:56:41.105] [INFO ] #@# Current timestep 450
-[2018-08-21T13:56:41.105] [INFO ] ExpiredPayloadCleanUp for time: -1000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.107] [INFO ] #@# Current timestep 500
-[2018-08-21T13:56:41.107] [INFO ] ExpiredPayloadCleanUp for time: 0. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.109] [INFO ] #@# Current timestep 550
-[2018-08-21T13:56:41.109] [INFO ] ExpiredPayloadCleanUp for time: 50. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.111] [INFO ] #@# Current timestep 600
-[2018-08-21T13:56:41.111] [INFO ] ExpiredPayloadCleanUp for time: 100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.112] [INFO ] #@# Current timestep 650
-[2018-08-21T13:56:41.112] [INFO ] ExpiredPayloadCleanUp for time: 150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.114] [INFO ] #@# Current timestep 700
-[2018-08-21T13:56:41.114] [INFO ] ExpiredPayloadCleanUp for time: 200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.116] [INFO ] #@# Current timestep 750
-[2018-08-21T13:56:41.116] [INFO ] ExpiredPayloadCleanUp for time: 250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.117] [INFO ] #@# Current timestep 800
-[2018-08-21T13:56:41.117] [INFO ] ExpiredPayloadCleanUp for time: 300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.119] [INFO ] #@# Current timestep 850
-[2018-08-21T13:56:41.119] [INFO ] ExpiredPayloadCleanUp for time: 350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.120] [INFO ] #@# Current timestep 900
-[2018-08-21T13:56:41.120] [INFO ] ExpiredPayloadCleanUp for time: 400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.122] [INFO ] #@# Current timestep 950
-[2018-08-21T13:56:41.122] [INFO ] ExpiredPayloadCleanUp for time: 450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.124] [INFO ] #@# Current timestep 1000
-[2018-08-21T13:56:41.124] [INFO ] ExpiredPayloadCleanUp for time: 500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.126] [INFO ] #@# Current timestep 1050
-[2018-08-21T13:56:41.126] [INFO ] ExpiredPayloadCleanUp for time: 550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.127] [INFO ] #@# Current timestep 1100
-[2018-08-21T13:56:41.128] [INFO ] ExpiredPayloadCleanUp for time: 600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.129] [INFO ] #@# Current timestep 1150
-[2018-08-21T13:56:41.129] [INFO ] ExpiredPayloadCleanUp for time: 650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.131] [INFO ] #@# Current timestep 1200
-[2018-08-21T13:56:41.131] [INFO ] ExpiredPayloadCleanUp for time: 700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.132] [INFO ] #@# Current timestep 1250
-[2018-08-21T13:56:41.132] [INFO ] ExpiredPayloadCleanUp for time: 750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.134] [INFO ] #@# Current timestep 1300
-[2018-08-21T13:56:41.134] [INFO ] ExpiredPayloadCleanUp for time: 800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.135] [INFO ] #@# Current timestep 1350
-[2018-08-21T13:56:41.135] [INFO ] ExpiredPayloadCleanUp for time: 850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.137] [INFO ] #@# Current timestep 1400
-[2018-08-21T13:56:41.137] [INFO ] ExpiredPayloadCleanUp for time: 900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.138] [INFO ] #@# Current timestep 1450
-[2018-08-21T13:56:41.138] [INFO ] ExpiredPayloadCleanUp for time: 950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.139] [INFO ] #@# Current timestep 1500
-[2018-08-21T13:56:41.139] [INFO ] ExpiredPayloadCleanUp for time: 1000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.140] [INFO ] #@# Current timestep 1550
-[2018-08-21T13:56:41.140] [INFO ] ExpiredPayloadCleanUp for time: 1050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.141] [INFO ] #@# Current timestep 1600
-[2018-08-21T13:56:41.141] [INFO ] ExpiredPayloadCleanUp for time: 1100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.142] [INFO ] #@# Current timestep 1650
-[2018-08-21T13:56:41.142] [INFO ] ExpiredPayloadCleanUp for time: 1150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.143] [INFO ] #@# Current timestep 1700
-[2018-08-21T13:56:41.143] [INFO ] ExpiredPayloadCleanUp for time: 1200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.144] [INFO ] #@# Current timestep 1750
-[2018-08-21T13:56:41.144] [INFO ] ExpiredPayloadCleanUp for time: 1250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.145] [INFO ] #@# Current timestep 1800
-[2018-08-21T13:56:41.145] [INFO ] ExpiredPayloadCleanUp for time: 1300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.146] [INFO ] #@# Current timestep 1850
-[2018-08-21T13:56:41.146] [INFO ] ExpiredPayloadCleanUp for time: 1350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.147] [INFO ] #@# Current timestep 1900
-[2018-08-21T13:56:41.147] [INFO ] ExpiredPayloadCleanUp for time: 1400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.147] [INFO ] #@# Current timestep 1950
-[2018-08-21T13:56:41.148] [INFO ] ExpiredPayloadCleanUp for time: 1450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.153] [INFO ] #@# Current timestep 2000
-[2018-08-21T13:56:41.153] [INFO ] ExpiredPayloadCleanUp for time: 1500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.181] [INFO ] Selected class for node 2 is 6
-[2018-08-21T13:56:41.181] [INFO ] Added new mobile node with id 2 ns3id 1 sumoId veh0 sumoType t1 sumoClass passenger
-[2018-08-21T13:56:41.182] [INFO ] [Node 2] added subscription 2 type 0x3a
-[2018-08-21T13:56:41.183] [INFO ] [Node 2] added subscription 3 type 0x3a
-[2018-08-21T13:56:41.184] [INFO ] #@# Current timestep 2050
-[2018-08-21T13:56:41.185] [INFO ] ExpiredPayloadCleanUp for time: 1550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.186] [INFO ] #@# Current timestep 2100
-[2018-08-21T13:56:41.186] [INFO ] ExpiredPayloadCleanUp for time: 1600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.188] [INFO ] #@# Current timestep 2150
-[2018-08-21T13:56:41.188] [INFO ] ExpiredPayloadCleanUp for time: 1650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.189] [INFO ] #@# Current timestep 2200
-[2018-08-21T13:56:41.189] [INFO ] ExpiredPayloadCleanUp for time: 1700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.191] [INFO ] #@# Current timestep 2250
-[2018-08-21T13:56:41.191] [INFO ] ExpiredPayloadCleanUp for time: 1750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.192] [INFO ] #@# Current timestep 2300
-[2018-08-21T13:56:41.192] [INFO ] ExpiredPayloadCleanUp for time: 1800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.194] [INFO ] #@# Current timestep 2350
-[2018-08-21T13:56:41.194] [INFO ] ExpiredPayloadCleanUp for time: 1850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.195] [INFO ] #@# Current timestep 2400
-[2018-08-21T13:56:41.195] [INFO ] ExpiredPayloadCleanUp for time: 1900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.196] [INFO ] #@# Current timestep 2450
-[2018-08-21T13:56:41.197] [INFO ] ExpiredPayloadCleanUp for time: 1950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.198] [INFO ] #@# Current timestep 2500
-[2018-08-21T13:56:41.198] [INFO ] ExpiredPayloadCleanUp for time: 2000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.199] [INFO ] #@# Current timestep 2550
-[2018-08-21T13:56:41.199] [INFO ] ExpiredPayloadCleanUp for time: 2050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.201] [INFO ] #@# Current timestep 2600
-[2018-08-21T13:56:41.201] [INFO ] ExpiredPayloadCleanUp for time: 2100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.202] [INFO ] #@# Current timestep 2650
-[2018-08-21T13:56:41.202] [INFO ] ExpiredPayloadCleanUp for time: 2150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.204] [INFO ] #@# Current timestep 2700
-[2018-08-21T13:56:41.204] [INFO ] ExpiredPayloadCleanUp for time: 2200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.205] [INFO ] #@# Current timestep 2750
-[2018-08-21T13:56:41.205] [INFO ] ExpiredPayloadCleanUp for time: 2250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.207] [INFO ] #@# Current timestep 2800
-[2018-08-21T13:56:41.207] [INFO ] ExpiredPayloadCleanUp for time: 2300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.208] [INFO ] #@# Current timestep 2850
-[2018-08-21T13:56:41.208] [INFO ] ExpiredPayloadCleanUp for time: 2350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.209] [INFO ] #@# Current timestep 2900
-[2018-08-21T13:56:41.209] [INFO ] ExpiredPayloadCleanUp for time: 2400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.211] [INFO ] #@# Current timestep 2950
-[2018-08-21T13:56:41.211] [INFO ] ExpiredPayloadCleanUp for time: 2450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.214] [INFO ] #@# Current timestep 3000
-[2018-08-21T13:56:41.214] [INFO ] ExpiredPayloadCleanUp for time: 2500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.215] [INFO ] #@# Current timestep 3050
-[2018-08-21T13:56:41.215] [INFO ] ExpiredPayloadCleanUp for time: 2550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.217] [INFO ] #@# Current timestep 3100
-[2018-08-21T13:56:41.217] [INFO ] ExpiredPayloadCleanUp for time: 2600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.218] [INFO ] #@# Current timestep 3150
-[2018-08-21T13:56:41.218] [INFO ] ExpiredPayloadCleanUp for time: 2650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.220] [INFO ] #@# Current timestep 3200
-[2018-08-21T13:56:41.220] [INFO ] ExpiredPayloadCleanUp for time: 2700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.221] [INFO ] #@# Current timestep 3250
-[2018-08-21T13:56:41.221] [INFO ] ExpiredPayloadCleanUp for time: 2750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.223] [INFO ] #@# Current timestep 3300
-[2018-08-21T13:56:41.223] [INFO ] ExpiredPayloadCleanUp for time: 2800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.224] [INFO ] #@# Current timestep 3350
-[2018-08-21T13:56:41.224] [INFO ] ExpiredPayloadCleanUp for time: 2850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.225] [INFO ] #@# Current timestep 3400
-[2018-08-21T13:56:41.225] [INFO ] ExpiredPayloadCleanUp for time: 2900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.226] [INFO ] #@# Current timestep 3450
-[2018-08-21T13:56:41.226] [INFO ] ExpiredPayloadCleanUp for time: 2950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.227] [INFO ] #@# Current timestep 3500
-[2018-08-21T13:56:41.227] [INFO ] ExpiredPayloadCleanUp for time: 3000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.228] [INFO ] #@# Current timestep 3550
-[2018-08-21T13:56:41.228] [INFO ] ExpiredPayloadCleanUp for time: 3050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.230] [INFO ] #@# Current timestep 3600
-[2018-08-21T13:56:41.230] [INFO ] ExpiredPayloadCleanUp for time: 3100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.231] [INFO ] #@# Current timestep 3650
-[2018-08-21T13:56:41.231] [INFO ] ExpiredPayloadCleanUp for time: 3150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.232] [INFO ] #@# Current timestep 3700
-[2018-08-21T13:56:41.232] [INFO ] ExpiredPayloadCleanUp for time: 3200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.233] [INFO ] #@# Current timestep 3750
-[2018-08-21T13:56:41.233] [INFO ] ExpiredPayloadCleanUp for time: 3250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.234] [INFO ] #@# Current timestep 3800
-[2018-08-21T13:56:41.234] [INFO ] ExpiredPayloadCleanUp for time: 3300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.235] [INFO ] #@# Current timestep 3850
-[2018-08-21T13:56:41.235] [INFO ] ExpiredPayloadCleanUp for time: 3350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.237] [INFO ] #@# Current timestep 3900
-[2018-08-21T13:56:41.237] [INFO ] ExpiredPayloadCleanUp for time: 3400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.238] [INFO ] #@# Current timestep 3950
-[2018-08-21T13:56:41.238] [INFO ] ExpiredPayloadCleanUp for time: 3450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.241] [INFO ] #@# Current timestep 4000
-[2018-08-21T13:56:41.241] [INFO ] ExpiredPayloadCleanUp for time: 3500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.242] [INFO ] #@# Current timestep 4050
-[2018-08-21T13:56:41.242] [INFO ] ExpiredPayloadCleanUp for time: 3550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.243] [INFO ] #@# Current timestep 4100
-[2018-08-21T13:56:41.243] [INFO ] ExpiredPayloadCleanUp for time: 3600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.245] [INFO ] #@# Current timestep 4150
-[2018-08-21T13:56:41.245] [INFO ] ExpiredPayloadCleanUp for time: 3650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.246] [INFO ] #@# Current timestep 4200
-[2018-08-21T13:56:41.246] [INFO ] ExpiredPayloadCleanUp for time: 3700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.248] [INFO ] #@# Current timestep 4250
-[2018-08-21T13:56:41.248] [INFO ] ExpiredPayloadCleanUp for time: 3750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.249] [INFO ] #@# Current timestep 4300
-[2018-08-21T13:56:41.249] [INFO ] ExpiredPayloadCleanUp for time: 3800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.250] [INFO ] #@# Current timestep 4350
-[2018-08-21T13:56:41.250] [INFO ] ExpiredPayloadCleanUp for time: 3850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.252] [INFO ] #@# Current timestep 4400
-[2018-08-21T13:56:41.252] [INFO ] ExpiredPayloadCleanUp for time: 3900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.253] [INFO ] #@# Current timestep 4450
-[2018-08-21T13:56:41.253] [INFO ] ExpiredPayloadCleanUp for time: 3950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.254] [INFO ] #@# Current timestep 4500
-[2018-08-21T13:56:41.254] [INFO ] ExpiredPayloadCleanUp for time: 4000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.255] [INFO ] #@# Current timestep 4550
-[2018-08-21T13:56:41.255] [INFO ] ExpiredPayloadCleanUp for time: 4050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.256] [INFO ] #@# Current timestep 4600
-[2018-08-21T13:56:41.256] [INFO ] ExpiredPayloadCleanUp for time: 4100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.258] [INFO ] #@# Current timestep 4650
-[2018-08-21T13:56:41.258] [INFO ] ExpiredPayloadCleanUp for time: 4150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.259] [INFO ] #@# Current timestep 4700
-[2018-08-21T13:56:41.259] [INFO ] ExpiredPayloadCleanUp for time: 4200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.260] [INFO ] #@# Current timestep 4750
-[2018-08-21T13:56:41.260] [INFO ] ExpiredPayloadCleanUp for time: 4250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.261] [INFO ] #@# Current timestep 4800
-[2018-08-21T13:56:41.261] [INFO ] ExpiredPayloadCleanUp for time: 4300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.263] [INFO ] #@# Current timestep 4850
-[2018-08-21T13:56:41.263] [INFO ] ExpiredPayloadCleanUp for time: 4350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.264] [INFO ] #@# Current timestep 4900
-[2018-08-21T13:56:41.264] [INFO ] ExpiredPayloadCleanUp for time: 4400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.265] [INFO ] #@# Current timestep 4950
-[2018-08-21T13:56:41.265] [INFO ] ExpiredPayloadCleanUp for time: 4450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.267] [INFO ] #@# Current timestep 5000
-[2018-08-21T13:56:41.267] [INFO ] ExpiredPayloadCleanUp for time: 4500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.267] [INFO ] [Node 5000] send to all. Key=m1. Time=5000
-[2018-08-21T13:56:41.268] [INFO ] [Node 5000] added subscription 4 type 0x1e
-[2018-08-21T13:56:41.269] [INFO ] [Node 5000] Confirmed subscription 4. Will be unsuscribed on the next timestep
-[2018-08-21T13:56:41.272] [INFO ] #@# Current timestep 5050
-[2018-08-21T13:56:41.272] [INFO ] ExpiredPayloadCleanUp for time: 4550. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.272] [INFO ] [Node 5000] removed subscription 4
-[2018-08-21T13:56:41.274] [INFO ] #@# Current timestep 5100
-[2018-08-21T13:56:41.274] [INFO ] ExpiredPayloadCleanUp for time: 4600. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.275] [INFO ] [2|12|m1] RSSI= -1 SNR= 20.3382 POWER= 0 MSGID=1 []
-[2018-08-21T13:56:41.275] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 1 timestep 5000
-[2018-08-21T13:56:41.276] [INFO ] #@# Current timestep 5150
-[2018-08-21T13:56:41.276] [INFO ] ExpiredPayloadCleanUp for time: 4650. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.277] [INFO ] #@# Current timestep 5200
-[2018-08-21T13:56:41.277] [INFO ] ExpiredPayloadCleanUp for time: 4700. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.277] [INFO ] [Node 2] send to all. Key=m2. Time=5193.5
-[2018-08-21T13:56:41.278] [INFO ] [Node 2] added subscription 5 type 0x1e
-[2018-08-21T13:56:41.279] [INFO ] [Node 2] Confirmed subscription 5. Will be unsuscribed on the next timestep
-[2018-08-21T13:56:41.280] [INFO ] #@# Current timestep 5250
-[2018-08-21T13:56:41.280] [INFO ] ExpiredPayloadCleanUp for time: 4750. Removing keys: noting to remove Current size: 2
-[2018-08-21T13:56:41.281] [INFO ] [Node 2] removed subscription 5
-[2018-08-21T13:56:41.281] [INFO ] [5000|12|m2] RSSI= -1 SNR= 20.3382 POWER= 0 MSGID=2 []
-[2018-08-21T13:56:41.281] [INFO ] Node 5000 (sumoID: '') received message 12 payload 2 timestep 5200
-[2018-08-21T13:56:41.282] [INFO ] #@# Current timestep 5300
-[2018-08-21T13:56:41.282] [INFO ] ExpiredPayloadCleanUp for time: 4800. Removing keys: noting to remove Current size: 2
-[2018-08-21T13:56:41.284] [INFO ] #@# Current timestep 5350
-[2018-08-21T13:56:41.284] [INFO ] ExpiredPayloadCleanUp for time: 4850. Removing keys: noting to remove Current size: 2
-[2018-08-21T13:56:41.284] [INFO ] [Node 5000] send to all. Key=m3. Time=5302.56
-[2018-08-21T13:56:41.284] [INFO ] [Node 5000] added subscription 6 type 0x1e
-[2018-08-21T13:56:41.285] [INFO ] [Node 5000] Confirmed subscription 6. Will be unsuscribed on the next timestep
-[2018-08-21T13:56:41.286] [INFO ] #@# Current timestep 5400
-[2018-08-21T13:56:41.286] [INFO ] ExpiredPayloadCleanUp for time: 4900. Removing keys: noting to remove Current size: 3
-[2018-08-21T13:56:41.287] [INFO ] [2|12|m3] RSSI= -1 SNR= 20.3382 POWER= 0 MSGID=3 []
-[2018-08-21T13:56:41.287] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 3 timestep 5350
-[2018-08-21T13:56:41.288] [INFO ] [Node 5000] removed subscription 6
-[2018-08-21T13:56:41.288] [INFO ] #@# Current timestep 5450
-[2018-08-21T13:56:41.288] [INFO ] ExpiredPayloadCleanUp for time: 4950. Removing keys: noting to remove Current size: 3
-[2018-08-21T13:56:41.290] [INFO ] #@# Current timestep 5500
-[2018-08-21T13:56:41.290] [INFO ] ExpiredPayloadCleanUp for time: 5000. Removing keys: 1 Current size: 2
-[2018-08-21T13:56:41.290] [INFO ] [Node 2] send to all. Key=m4. Time=5469.61
-[2018-08-21T13:56:41.290] [INFO ] [Node 2] added subscription 7 type 0x1e
-[2018-08-21T13:56:41.291] [INFO ] [Node 2] Confirmed subscription 7. Will be unsuscribed on the next timestep
-[2018-08-21T13:56:41.292] [INFO ] #@# Current timestep 5550
-[2018-08-21T13:56:41.292] [INFO ] ExpiredPayloadCleanUp for time: 5050. Removing keys: noting to remove Current size: 3
-[2018-08-21T13:56:41.293] [INFO ] [Node 2] removed subscription 7
-[2018-08-21T13:56:41.293] [INFO ] [5000|12|m4] RSSI= -1 SNR= 20.3382 POWER= 0 MSGID=4 []
-[2018-08-21T13:56:41.294] [INFO ] Node 5000 (sumoID: '') received message 12 payload 4 timestep 5500
-[2018-08-21T13:56:41.294] [INFO ] #@# Current timestep 5600
-[2018-08-21T13:56:41.294] [INFO ] ExpiredPayloadCleanUp for time: 5100. Removing keys: noting to remove Current size: 3
-[2018-08-21T13:56:41.294] [INFO ] [Node 5000] send to all. Key=m5. Time=5591.3
-[2018-08-21T13:56:41.295] [INFO ] [Node 5000] added subscription 8 type 0x1e
-[2018-08-21T13:56:41.296] [INFO ] [Node 5000] Confirmed subscription 8. Will be unsuscribed on the next timestep
-[2018-08-21T13:56:41.297] [INFO ] #@# Current timestep 5650
-[2018-08-21T13:56:41.297] [INFO ] ExpiredPayloadCleanUp for time: 5150. Removing keys: noting to remove Current size: 4
-[2018-08-21T13:56:41.297] [INFO ] [2|12|m5] RSSI= -1 SNR= 20.3382 POWER= 0 MSGID=5 []
-[2018-08-21T13:56:41.297] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 5 timestep 5600
-[2018-08-21T13:56:41.298] [INFO ] [Node 5000] removed subscription 8
-[2018-08-21T13:56:41.299] [INFO ] #@# Current timestep 5700
-[2018-08-21T13:56:41.299] [INFO ] ExpiredPayloadCleanUp for time: 5200. Removing keys: 2 Current size: 3
-[2018-08-21T13:56:41.299] [INFO ] [Node 2] added subscription 9 type 0x46
-[2018-08-21T13:56:41.300] [INFO ] SUMO Command acknowledged (0xc4), [description: ]
-[2018-08-21T13:56:41.301] [INFO ] #@# Current timestep 5750
-[2018-08-21T13:56:41.301] [INFO ] ExpiredPayloadCleanUp for time: 5250. Removing keys: noting to remove Current size: 3
-[2018-08-21T13:56:41.301] [INFO ] [Node 2] removed subscription 9
-[2018-08-21T13:56:41.302] [INFO ] #@# Current timestep 5800
-[2018-08-21T13:56:41.302] [INFO ] ExpiredPayloadCleanUp for time: 5300. Removing keys: noting to remove Current size: 3
-[2018-08-21T13:56:41.304] [INFO ] #@# Current timestep 5850
-[2018-08-21T13:56:41.304] [INFO ] ExpiredPayloadCleanUp for time: 5350. Removing keys: 3 Current size: 2
-[2018-08-21T13:56:41.305] [INFO ] #@# Current timestep 5900
-[2018-08-21T13:56:41.305] [INFO ] ExpiredPayloadCleanUp for time: 5400. Removing keys: noting to remove Current size: 2
-[2018-08-21T13:56:41.307] [INFO ] #@# Current timestep 5950
-[2018-08-21T13:56:41.307] [INFO ] ExpiredPayloadCleanUp for time: 5450. Removing keys: noting to remove Current size: 2
-[2018-08-21T13:56:41.309] [INFO ] #@# Current timestep 6000
-[2018-08-21T13:56:41.309] [INFO ] ExpiredPayloadCleanUp for time: 5500. Removing keys: 4 Current size: 1
-[2018-08-21T13:56:41.311] [INFO ] #@# Current timestep 6050
-[2018-08-21T13:56:41.311] [INFO ] ExpiredPayloadCleanUp for time: 5550. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.312] [INFO ] #@# Current timestep 6100
-[2018-08-21T13:56:41.313] [INFO ] ExpiredPayloadCleanUp for time: 5600. Removing keys: 5 Current size: 0
-[2018-08-21T13:56:41.313] [INFO ] [Node 5000] send to all. Key=m6. Time=6083.52
-[2018-08-21T13:56:41.313] [INFO ] [Node 5000] added subscription 10 type 0x1e
-[2018-08-21T13:56:41.314] [INFO ] [Node 5000] Confirmed subscription 10. Will be unsuscribed on the next timestep
-[2018-08-21T13:56:41.315] [INFO ] #@# Current timestep 6150
-[2018-08-21T13:56:41.315] [INFO ] ExpiredPayloadCleanUp for time: 5650. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.316] [INFO ] [2|12|m6] RSSI= -1 SNR= 22.1689 POWER= 0 MSGID=6 []
-[2018-08-21T13:56:41.316] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 6 timestep 6100
-[2018-08-21T13:56:41.316] [INFO ] [Node 5000] removed subscription 10
-[2018-08-21T13:56:41.317] [INFO ] #@# Current timestep 6200
-[2018-08-21T13:56:41.317] [INFO ] ExpiredPayloadCleanUp for time: 5700. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.319] [INFO ] #@# Current timestep 6250
-[2018-08-21T13:56:41.319] [INFO ] ExpiredPayloadCleanUp for time: 5750. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.320] [INFO ] #@# Current timestep 6300
-[2018-08-21T13:56:41.320] [INFO ] ExpiredPayloadCleanUp for time: 5800. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.321] [INFO ] #@# Current timestep 6350
-[2018-08-21T13:56:41.321] [INFO ] ExpiredPayloadCleanUp for time: 5850. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.323] [INFO ] #@# Current timestep 6400
-[2018-08-21T13:56:41.323] [INFO ] ExpiredPayloadCleanUp for time: 5900. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.324] [INFO ] #@# Current timestep 6450
-[2018-08-21T13:56:41.324] [INFO ] ExpiredPayloadCleanUp for time: 5950. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.326] [INFO ] #@# Current timestep 6500
-[2018-08-21T13:56:41.326] [INFO ] ExpiredPayloadCleanUp for time: 6000. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.327] [INFO ] #@# Current timestep 6550
-[2018-08-21T13:56:41.327] [INFO ] ExpiredPayloadCleanUp for time: 6050. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.328] [INFO ] #@# Current timestep 6600
-[2018-08-21T13:56:41.328] [INFO ] ExpiredPayloadCleanUp for time: 6100. Removing keys: 6 Current size: 0
-[2018-08-21T13:56:41.330] [INFO ] #@# Current timestep 6650
-[2018-08-21T13:56:41.330] [INFO ] ExpiredPayloadCleanUp for time: 6150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.331] [INFO ] #@# Current timestep 6700
-[2018-08-21T13:56:41.331] [INFO ] ExpiredPayloadCleanUp for time: 6200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.333] [INFO ] #@# Current timestep 6750
-[2018-08-21T13:56:41.333] [INFO ] ExpiredPayloadCleanUp for time: 6250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.334] [INFO ] #@# Current timestep 6800
-[2018-08-21T13:56:41.334] [INFO ] ExpiredPayloadCleanUp for time: 6300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.335] [INFO ] #@# Current timestep 6850
-[2018-08-21T13:56:41.335] [INFO ] ExpiredPayloadCleanUp for time: 6350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.337] [INFO ] #@# Current timestep 6900
-[2018-08-21T13:56:41.337] [INFO ] ExpiredPayloadCleanUp for time: 6400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.338] [INFO ] #@# Current timestep 6950
-[2018-08-21T13:56:41.338] [INFO ] ExpiredPayloadCleanUp for time: 6450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.341] [INFO ] #@# Current timestep 7000
-[2018-08-21T13:56:41.341] [INFO ] ExpiredPayloadCleanUp for time: 6500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.343] [INFO ] #@# Current timestep 7050
-[2018-08-21T13:56:41.343] [INFO ] ExpiredPayloadCleanUp for time: 6550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.344] [INFO ] #@# Current timestep 7100
-[2018-08-21T13:56:41.344] [INFO ] ExpiredPayloadCleanUp for time: 6600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.345] [INFO ] #@# Current timestep 7150
-[2018-08-21T13:56:41.345] [INFO ] ExpiredPayloadCleanUp for time: 6650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.345] [INFO ] [Node 5000] send to all. Key=m7. Time=7101.63
-[2018-08-21T13:56:41.346] [INFO ] [Node 5000] added subscription 11 type 0x1e
-[2018-08-21T13:56:41.347] [INFO ] [Node 5000] Confirmed subscription 11. Will be unsuscribed on the next timestep
-[2018-08-21T13:56:41.348] [INFO ] #@# Current timestep 7200
-[2018-08-21T13:56:41.348] [INFO ] ExpiredPayloadCleanUp for time: 6700. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.348] [INFO ] [2|12|m7] RSSI= -1 SNR= 24.8912 POWER= 0 MSGID=7 []
-[2018-08-21T13:56:41.348] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 7 timestep 7150
-[2018-08-21T13:56:41.349] [INFO ] [Node 5000] removed subscription 11
-[2018-08-21T13:56:41.350] [INFO ] #@# Current timestep 7250
-[2018-08-21T13:56:41.350] [INFO ] ExpiredPayloadCleanUp for time: 6750. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.351] [INFO ] #@# Current timestep 7300
-[2018-08-21T13:56:41.351] [INFO ] ExpiredPayloadCleanUp for time: 6800. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.353] [INFO ] #@# Current timestep 7350
-[2018-08-21T13:56:41.353] [INFO ] ExpiredPayloadCleanUp for time: 6850. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.354] [INFO ] #@# Current timestep 7400
-[2018-08-21T13:56:41.354] [INFO ] ExpiredPayloadCleanUp for time: 6900. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.355] [INFO ] #@# Current timestep 7450
-[2018-08-21T13:56:41.355] [INFO ] ExpiredPayloadCleanUp for time: 6950. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.357] [INFO ] #@# Current timestep 7500
-[2018-08-21T13:56:41.357] [INFO ] ExpiredPayloadCleanUp for time: 7000. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.358] [INFO ] #@# Current timestep 7550
-[2018-08-21T13:56:41.358] [INFO ] ExpiredPayloadCleanUp for time: 7050. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.359] [INFO ] #@# Current timestep 7600
-[2018-08-21T13:56:41.359] [INFO ] ExpiredPayloadCleanUp for time: 7100. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.361] [INFO ] #@# Current timestep 7650
-[2018-08-21T13:56:41.361] [INFO ] ExpiredPayloadCleanUp for time: 7150. Removing keys: 7 Current size: 0
-[2018-08-21T13:56:41.362] [INFO ] #@# Current timestep 7700
-[2018-08-21T13:56:41.362] [INFO ] ExpiredPayloadCleanUp for time: 7200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.364] [INFO ] #@# Current timestep 7750
-[2018-08-21T13:56:41.364] [INFO ] ExpiredPayloadCleanUp for time: 7250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.365] [INFO ] #@# Current timestep 7800
-[2018-08-21T13:56:41.365] [INFO ] ExpiredPayloadCleanUp for time: 7300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.366] [INFO ] #@# Current timestep 7850
-[2018-08-21T13:56:41.366] [INFO ] ExpiredPayloadCleanUp for time: 7350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.368] [INFO ] #@# Current timestep 7900
-[2018-08-21T13:56:41.368] [INFO ] ExpiredPayloadCleanUp for time: 7400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.369] [INFO ] #@# Current timestep 7950
-[2018-08-21T13:56:41.369] [INFO ] ExpiredPayloadCleanUp for time: 7450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.372] [INFO ] #@# Current timestep 8000
-[2018-08-21T13:56:41.372] [INFO ] ExpiredPayloadCleanUp for time: 7500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.374] [INFO ] #@# Current timestep 8050
-[2018-08-21T13:56:41.374] [INFO ] ExpiredPayloadCleanUp for time: 7550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.375] [INFO ] #@# Current timestep 8100
-[2018-08-21T13:56:41.375] [INFO ] ExpiredPayloadCleanUp for time: 7600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.376] [INFO ] #@# Current timestep 8150
-[2018-08-21T13:56:41.376] [INFO ] ExpiredPayloadCleanUp for time: 7650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.378] [INFO ] #@# Current timestep 8200
-[2018-08-21T13:56:41.378] [INFO ] ExpiredPayloadCleanUp for time: 7700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.378] [INFO ] [Node 5000] send to all. Key=m8. Time=8194.03
-[2018-08-21T13:56:41.379] [INFO ] [Node 5000] added subscription 12 type 0x1e
-[2018-08-21T13:56:41.379] [INFO ] [Node 5000] Confirmed subscription 12. Will be unsuscribed on the next timestep
-[2018-08-21T13:56:41.381] [INFO ] #@# Current timestep 8250
-[2018-08-21T13:56:41.381] [INFO ] ExpiredPayloadCleanUp for time: 7750. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.381] [INFO ] [2|12|m8] RSSI= -1 SNR= 28.6086 POWER= 0 MSGID=8 []
-[2018-08-21T13:56:41.381] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 8 timestep 8200
-[2018-08-21T13:56:41.382] [INFO ] [Node 5000] removed subscription 12
-[2018-08-21T13:56:41.382] [INFO ] #@# Current timestep 8300
-[2018-08-21T13:56:41.382] [INFO ] ExpiredPayloadCleanUp for time: 7800. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.384] [INFO ] #@# Current timestep 8350
-[2018-08-21T13:56:41.384] [INFO ] ExpiredPayloadCleanUp for time: 7850. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.385] [INFO ] #@# Current timestep 8400
-[2018-08-21T13:56:41.385] [INFO ] ExpiredPayloadCleanUp for time: 7900. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.387] [INFO ] #@# Current timestep 8450
-[2018-08-21T13:56:41.387] [INFO ] ExpiredPayloadCleanUp for time: 7950. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.388] [INFO ] #@# Current timestep 8500
-[2018-08-21T13:56:41.388] [INFO ] ExpiredPayloadCleanUp for time: 8000. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.389] [INFO ] #@# Current timestep 8550
-[2018-08-21T13:56:41.389] [INFO ] ExpiredPayloadCleanUp for time: 8050. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.391] [INFO ] #@# Current timestep 8600
-[2018-08-21T13:56:41.391] [INFO ] ExpiredPayloadCleanUp for time: 8100. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.392] [INFO ] #@# Current timestep 8650
-[2018-08-21T13:56:41.392] [INFO ] ExpiredPayloadCleanUp for time: 8150. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.394] [INFO ] #@# Current timestep 8700
-[2018-08-21T13:56:41.394] [INFO ] ExpiredPayloadCleanUp for time: 8200. Removing keys: 8 Current size: 0
-[2018-08-21T13:56:41.395] [INFO ] #@# Current timestep 8750
-[2018-08-21T13:56:41.395] [INFO ] ExpiredPayloadCleanUp for time: 8250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.396] [INFO ] #@# Current timestep 8800
-[2018-08-21T13:56:41.396] [INFO ] ExpiredPayloadCleanUp for time: 8300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.398] [INFO ] #@# Current timestep 8850
-[2018-08-21T13:56:41.398] [INFO ] ExpiredPayloadCleanUp for time: 8350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.399] [INFO ] #@# Current timestep 8900
-[2018-08-21T13:56:41.399] [INFO ] ExpiredPayloadCleanUp for time: 8400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.400] [INFO ] #@# Current timestep 8950
-[2018-08-21T13:56:41.400] [INFO ] ExpiredPayloadCleanUp for time: 8450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.403] [INFO ] #@# Current timestep 9000
-[2018-08-21T13:56:41.403] [INFO ] ExpiredPayloadCleanUp for time: 8500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.405] [INFO ] #@# Current timestep 9050
-[2018-08-21T13:56:41.405] [INFO ] ExpiredPayloadCleanUp for time: 8550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.406] [INFO ] #@# Current timestep 9100
-[2018-08-21T13:56:41.406] [INFO ] ExpiredPayloadCleanUp for time: 8600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.408] [INFO ] #@# Current timestep 9150
-[2018-08-21T13:56:41.408] [INFO ] ExpiredPayloadCleanUp for time: 8650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.409] [INFO ] #@# Current timestep 9200
-[2018-08-21T13:56:41.409] [INFO ] ExpiredPayloadCleanUp for time: 8700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.410] [INFO ] #@# Current timestep 9250
-[2018-08-21T13:56:41.410] [INFO ] ExpiredPayloadCleanUp for time: 8750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.412] [INFO ] #@# Current timestep 9300
-[2018-08-21T13:56:41.412] [INFO ] ExpiredPayloadCleanUp for time: 8800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.412] [INFO ] [Node 5000] send to all. Key=m9. Time=9291.78
-[2018-08-21T13:56:41.412] [INFO ] [Node 5000] added subscription 13 type 0x1e
-[2018-08-21T13:56:41.413] [INFO ] [Node 5000] Confirmed subscription 13. Will be unsuscribed on the next timestep
-[2018-08-21T13:56:41.414] [INFO ] #@# Current timestep 9350
-[2018-08-21T13:56:41.414] [INFO ] ExpiredPayloadCleanUp for time: 8850. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.415] [INFO ] [2|12|m9] RSSI= -1 SNR= 33.8263 POWER= 0 MSGID=9 []
-[2018-08-21T13:56:41.415] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 9 timestep 9300
-[2018-08-21T13:56:41.415] [INFO ] [Node 5000] removed subscription 13
-[2018-08-21T13:56:41.416] [INFO ] #@# Current timestep 9400
-[2018-08-21T13:56:41.416] [INFO ] ExpiredPayloadCleanUp for time: 8900. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.417] [INFO ] #@# Current timestep 9450
-[2018-08-21T13:56:41.418] [INFO ] ExpiredPayloadCleanUp for time: 8950. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.419] [INFO ] #@# Current timestep 9500
-[2018-08-21T13:56:41.419] [INFO ] ExpiredPayloadCleanUp for time: 9000. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.420] [INFO ] #@# Current timestep 9550
-[2018-08-21T13:56:41.420] [INFO ] ExpiredPayloadCleanUp for time: 9050. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.422] [INFO ] #@# Current timestep 9600
-[2018-08-21T13:56:41.422] [INFO ] ExpiredPayloadCleanUp for time: 9100. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.423] [INFO ] #@# Current timestep 9650
-[2018-08-21T13:56:41.423] [INFO ] ExpiredPayloadCleanUp for time: 9150. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.425] [INFO ] #@# Current timestep 9700
-[2018-08-21T13:56:41.425] [INFO ] ExpiredPayloadCleanUp for time: 9200. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.426] [INFO ] #@# Current timestep 9750
-[2018-08-21T13:56:41.426] [INFO ] ExpiredPayloadCleanUp for time: 9250. Removing keys: noting to remove Current size: 1
-[2018-08-21T13:56:41.427] [INFO ] #@# Current timestep 9800
-[2018-08-21T13:56:41.427] [INFO ] ExpiredPayloadCleanUp for time: 9300. Removing keys: 9 Current size: 0
-[2018-08-21T13:56:41.429] [INFO ] #@# Current timestep 9850
-[2018-08-21T13:56:41.429] [INFO ] ExpiredPayloadCleanUp for time: 9350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.430] [INFO ] #@# Current timestep 9900
-[2018-08-21T13:56:41.430] [INFO ] ExpiredPayloadCleanUp for time: 9400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.432] [INFO ] #@# Current timestep 9950
-[2018-08-21T13:56:41.432] [INFO ] ExpiredPayloadCleanUp for time: 9450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.434] [INFO ] #@# Current timestep 10000
-[2018-08-21T13:56:41.434] [INFO ] ExpiredPayloadCleanUp for time: 9500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.436] [INFO ] #@# Current timestep 10050
-[2018-08-21T13:56:41.436] [INFO ] ExpiredPayloadCleanUp for time: 9550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.437] [INFO ] #@# Current timestep 10100
-[2018-08-21T13:56:41.437] [INFO ] ExpiredPayloadCleanUp for time: 9600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.439] [INFO ] #@# Current timestep 10150
-[2018-08-21T13:56:41.439] [INFO ] ExpiredPayloadCleanUp for time: 9650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.440] [INFO ] #@# Current timestep 10200
-[2018-08-21T13:56:41.440] [INFO ] ExpiredPayloadCleanUp for time: 9700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.442] [INFO ] #@# Current timestep 10250
-[2018-08-21T13:56:41.442] [INFO ] ExpiredPayloadCleanUp for time: 9750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.443] [INFO ] #@# Current timestep 10300
-[2018-08-21T13:56:41.443] [INFO ] ExpiredPayloadCleanUp for time: 9800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.444] [INFO ] #@# Current timestep 10350
-[2018-08-21T13:56:41.444] [INFO ] ExpiredPayloadCleanUp for time: 9850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.446] [INFO ] #@# Current timestep 10400
-[2018-08-21T13:56:41.446] [INFO ] ExpiredPayloadCleanUp for time: 9900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.447] [INFO ] #@# Current timestep 10450
-[2018-08-21T13:56:41.447] [INFO ] ExpiredPayloadCleanUp for time: 9950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.448] [INFO ] #@# Current timestep 10500
-[2018-08-21T13:56:41.449] [INFO ] ExpiredPayloadCleanUp for time: 10000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.450] [INFO ] #@# Current timestep 10550
-[2018-08-21T13:56:41.450] [INFO ] ExpiredPayloadCleanUp for time: 10050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.451] [INFO ] #@# Current timestep 10600
-[2018-08-21T13:56:41.451] [INFO ] ExpiredPayloadCleanUp for time: 10100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.453] [INFO ] #@# Current timestep 10650
-[2018-08-21T13:56:41.453] [INFO ] ExpiredPayloadCleanUp for time: 10150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.454] [INFO ] #@# Current timestep 10700
-[2018-08-21T13:56:41.454] [INFO ] ExpiredPayloadCleanUp for time: 10200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.455] [INFO ] #@# Current timestep 10750
-[2018-08-21T13:56:41.455] [INFO ] ExpiredPayloadCleanUp for time: 10250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.457] [INFO ] #@# Current timestep 10800
-[2018-08-21T13:56:41.457] [INFO ] ExpiredPayloadCleanUp for time: 10300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.458] [INFO ] #@# Current timestep 10850
-[2018-08-21T13:56:41.458] [INFO ] ExpiredPayloadCleanUp for time: 10350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.460] [INFO ] #@# Current timestep 10900
-[2018-08-21T13:56:41.460] [INFO ] ExpiredPayloadCleanUp for time: 10400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.461] [INFO ] #@# Current timestep 10950
-[2018-08-21T13:56:41.461] [INFO ] ExpiredPayloadCleanUp for time: 10450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.464] [INFO ] #@# Current timestep 11000
-[2018-08-21T13:56:41.464] [INFO ] ExpiredPayloadCleanUp for time: 10500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.466] [INFO ] #@# Current timestep 11050
-[2018-08-21T13:56:41.466] [INFO ] ExpiredPayloadCleanUp for time: 10550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.467] [INFO ] #@# Current timestep 11100
-[2018-08-21T13:56:41.467] [INFO ] ExpiredPayloadCleanUp for time: 10600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.468] [INFO ] #@# Current timestep 11150
-[2018-08-21T13:56:41.468] [INFO ] ExpiredPayloadCleanUp for time: 10650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.470] [INFO ] #@# Current timestep 11200
-[2018-08-21T13:56:41.470] [INFO ] ExpiredPayloadCleanUp for time: 10700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.471] [INFO ] #@# Current timestep 11250
-[2018-08-21T13:56:41.471] [INFO ] ExpiredPayloadCleanUp for time: 10750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.472] [INFO ] #@# Current timestep 11300
-[2018-08-21T13:56:41.472] [INFO ] ExpiredPayloadCleanUp for time: 10800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.474] [INFO ] #@# Current timestep 11350
-[2018-08-21T13:56:41.474] [INFO ] ExpiredPayloadCleanUp for time: 10850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.475] [INFO ] #@# Current timestep 11400
-[2018-08-21T13:56:41.475] [INFO ] ExpiredPayloadCleanUp for time: 10900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.476] [INFO ] #@# Current timestep 11450
-[2018-08-21T13:56:41.476] [INFO ] ExpiredPayloadCleanUp for time: 10950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.478] [INFO ] #@# Current timestep 11500
-[2018-08-21T13:56:41.478] [INFO ] ExpiredPayloadCleanUp for time: 11000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.479] [INFO ] #@# Current timestep 11550
-[2018-08-21T13:56:41.479] [INFO ] ExpiredPayloadCleanUp for time: 11050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.481] [INFO ] #@# Current timestep 11600
-[2018-08-21T13:56:41.481] [INFO ] ExpiredPayloadCleanUp for time: 11100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.482] [INFO ] #@# Current timestep 11650
-[2018-08-21T13:56:41.482] [INFO ] ExpiredPayloadCleanUp for time: 11150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.483] [INFO ] #@# Current timestep 11700
-[2018-08-21T13:56:41.483] [INFO ] ExpiredPayloadCleanUp for time: 11200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.485] [INFO ] #@# Current timestep 11750
-[2018-08-21T13:56:41.485] [INFO ] ExpiredPayloadCleanUp for time: 11250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.486] [INFO ] #@# Current timestep 11800
-[2018-08-21T13:56:41.486] [INFO ] ExpiredPayloadCleanUp for time: 11300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.487] [INFO ] #@# Current timestep 11850
-[2018-08-21T13:56:41.488] [INFO ] ExpiredPayloadCleanUp for time: 11350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.489] [INFO ] #@# Current timestep 11900
-[2018-08-21T13:56:41.489] [INFO ] ExpiredPayloadCleanUp for time: 11400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.490] [INFO ] #@# Current timestep 11950
-[2018-08-21T13:56:41.490] [INFO ] ExpiredPayloadCleanUp for time: 11450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.493] [INFO ] #@# Current timestep 12000
-[2018-08-21T13:56:41.493] [INFO ] ExpiredPayloadCleanUp for time: 11500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.495] [INFO ] #@# Current timestep 12050
-[2018-08-21T13:56:41.495] [INFO ] ExpiredPayloadCleanUp for time: 11550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.496] [INFO ] #@# Current timestep 12100
-[2018-08-21T13:56:41.496] [INFO ] ExpiredPayloadCleanUp for time: 11600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.497] [INFO ] #@# Current timestep 12150
-[2018-08-21T13:56:41.497] [INFO ] ExpiredPayloadCleanUp for time: 11650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.499] [INFO ] #@# Current timestep 12200
-[2018-08-21T13:56:41.499] [INFO ] ExpiredPayloadCleanUp for time: 11700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.500] [INFO ] #@# Current timestep 12250
-[2018-08-21T13:56:41.500] [INFO ] ExpiredPayloadCleanUp for time: 11750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.502] [INFO ] #@# Current timestep 12300
-[2018-08-21T13:56:41.502] [INFO ] ExpiredPayloadCleanUp for time: 11800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.503] [INFO ] #@# Current timestep 12350
-[2018-08-21T13:56:41.503] [INFO ] ExpiredPayloadCleanUp for time: 11850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.504] [INFO ] #@# Current timestep 12400
-[2018-08-21T13:56:41.504] [INFO ] ExpiredPayloadCleanUp for time: 11900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.506] [INFO ] #@# Current timestep 12450
-[2018-08-21T13:56:41.506] [INFO ] ExpiredPayloadCleanUp for time: 11950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.507] [INFO ] #@# Current timestep 12500
-[2018-08-21T13:56:41.507] [INFO ] ExpiredPayloadCleanUp for time: 12000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.509] [INFO ] #@# Current timestep 12550
-[2018-08-21T13:56:41.509] [INFO ] ExpiredPayloadCleanUp for time: 12050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.510] [INFO ] #@# Current timestep 12600
-[2018-08-21T13:56:41.510] [INFO ] ExpiredPayloadCleanUp for time: 12100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.511] [INFO ] #@# Current timestep 12650
-[2018-08-21T13:56:41.511] [INFO ] ExpiredPayloadCleanUp for time: 12150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.513] [INFO ] #@# Current timestep 12700
-[2018-08-21T13:56:41.513] [INFO ] ExpiredPayloadCleanUp for time: 12200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.514] [INFO ] #@# Current timestep 12750
-[2018-08-21T13:56:41.514] [INFO ] ExpiredPayloadCleanUp for time: 12250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.515] [INFO ] #@# Current timestep 12800
-[2018-08-21T13:56:41.515] [INFO ] ExpiredPayloadCleanUp for time: 12300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.517] [INFO ] #@# Current timestep 12850
-[2018-08-21T13:56:41.517] [INFO ] ExpiredPayloadCleanUp for time: 12350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.518] [INFO ] #@# Current timestep 12900
-[2018-08-21T13:56:41.518] [INFO ] ExpiredPayloadCleanUp for time: 12400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.519] [INFO ] #@# Current timestep 12950
-[2018-08-21T13:56:41.519] [INFO ] ExpiredPayloadCleanUp for time: 12450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.522] [INFO ] #@# Current timestep 13000
-[2018-08-21T13:56:41.522] [INFO ] ExpiredPayloadCleanUp for time: 12500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.524] [INFO ] #@# Current timestep 13050
-[2018-08-21T13:56:41.524] [INFO ] ExpiredPayloadCleanUp for time: 12550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.525] [INFO ] #@# Current timestep 13100
-[2018-08-21T13:56:41.525] [INFO ] ExpiredPayloadCleanUp for time: 12600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.527] [INFO ] #@# Current timestep 13150
-[2018-08-21T13:56:41.527] [INFO ] ExpiredPayloadCleanUp for time: 12650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.528] [INFO ] #@# Current timestep 13200
-[2018-08-21T13:56:41.528] [INFO ] ExpiredPayloadCleanUp for time: 12700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.529] [INFO ] #@# Current timestep 13250
-[2018-08-21T13:56:41.529] [INFO ] ExpiredPayloadCleanUp for time: 12750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.531] [INFO ] #@# Current timestep 13300
-[2018-08-21T13:56:41.531] [INFO ] ExpiredPayloadCleanUp for time: 12800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.532] [INFO ] #@# Current timestep 13350
-[2018-08-21T13:56:41.532] [INFO ] ExpiredPayloadCleanUp for time: 12850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.533] [INFO ] #@# Current timestep 13400
-[2018-08-21T13:56:41.533] [INFO ] ExpiredPayloadCleanUp for time: 12900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.535] [INFO ] #@# Current timestep 13450
-[2018-08-21T13:56:41.535] [INFO ] ExpiredPayloadCleanUp for time: 12950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.536] [INFO ] #@# Current timestep 13500
-[2018-08-21T13:56:41.536] [INFO ] ExpiredPayloadCleanUp for time: 13000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.537] [INFO ] #@# Current timestep 13550
-[2018-08-21T13:56:41.537] [INFO ] ExpiredPayloadCleanUp for time: 13050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.539] [INFO ] #@# Current timestep 13600
-[2018-08-21T13:56:41.539] [INFO ] ExpiredPayloadCleanUp for time: 13100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.540] [INFO ] #@# Current timestep 13650
-[2018-08-21T13:56:41.540] [INFO ] ExpiredPayloadCleanUp for time: 13150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.542] [INFO ] #@# Current timestep 13700
-[2018-08-21T13:56:41.542] [INFO ] ExpiredPayloadCleanUp for time: 13200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.543] [INFO ] #@# Current timestep 13750
-[2018-08-21T13:56:41.543] [INFO ] ExpiredPayloadCleanUp for time: 13250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.544] [INFO ] #@# Current timestep 13800
-[2018-08-21T13:56:41.544] [INFO ] ExpiredPayloadCleanUp for time: 13300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.546] [INFO ] #@# Current timestep 13850
-[2018-08-21T13:56:41.546] [INFO ] ExpiredPayloadCleanUp for time: 13350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.547] [INFO ] #@# Current timestep 13900
-[2018-08-21T13:56:41.547] [INFO ] ExpiredPayloadCleanUp for time: 13400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.548] [INFO ] #@# Current timestep 13950
-[2018-08-21T13:56:41.548] [INFO ] ExpiredPayloadCleanUp for time: 13450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.551] [INFO ] #@# Current timestep 14000
-[2018-08-21T13:56:41.551] [INFO ] ExpiredPayloadCleanUp for time: 13500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.553] [INFO ] #@# Current timestep 14050
-[2018-08-21T13:56:41.553] [INFO ] ExpiredPayloadCleanUp for time: 13550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.554] [INFO ] #@# Current timestep 14100
-[2018-08-21T13:56:41.554] [INFO ] ExpiredPayloadCleanUp for time: 13600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.556] [INFO ] #@# Current timestep 14150
-[2018-08-21T13:56:41.556] [INFO ] ExpiredPayloadCleanUp for time: 13650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.557] [INFO ] #@# Current timestep 14200
-[2018-08-21T13:56:41.557] [INFO ] ExpiredPayloadCleanUp for time: 13700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.558] [INFO ] #@# Current timestep 14250
-[2018-08-21T13:56:41.558] [INFO ] ExpiredPayloadCleanUp for time: 13750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.560] [INFO ] #@# Current timestep 14300
-[2018-08-21T13:56:41.560] [INFO ] ExpiredPayloadCleanUp for time: 13800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.561] [INFO ] #@# Current timestep 14350
-[2018-08-21T13:56:41.561] [INFO ] ExpiredPayloadCleanUp for time: 13850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.563] [INFO ] #@# Current timestep 14400
-[2018-08-21T13:56:41.563] [INFO ] ExpiredPayloadCleanUp for time: 13900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.564] [INFO ] #@# Current timestep 14450
-[2018-08-21T13:56:41.564] [INFO ] ExpiredPayloadCleanUp for time: 13950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.565] [INFO ] #@# Current timestep 14500
-[2018-08-21T13:56:41.565] [INFO ] ExpiredPayloadCleanUp for time: 14000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.567] [INFO ] #@# Current timestep 14550
-[2018-08-21T13:56:41.567] [INFO ] ExpiredPayloadCleanUp for time: 14050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.568] [INFO ] #@# Current timestep 14600
-[2018-08-21T13:56:41.568] [INFO ] ExpiredPayloadCleanUp for time: 14100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.569] [INFO ] #@# Current timestep 14650
-[2018-08-21T13:56:41.570] [INFO ] ExpiredPayloadCleanUp for time: 14150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.571] [INFO ] #@# Current timestep 14700
-[2018-08-21T13:56:41.571] [INFO ] ExpiredPayloadCleanUp for time: 14200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.572] [INFO ] #@# Current timestep 14750
-[2018-08-21T13:56:41.572] [INFO ] ExpiredPayloadCleanUp for time: 14250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.574] [INFO ] #@# Current timestep 14800
-[2018-08-21T13:56:41.574] [INFO ] ExpiredPayloadCleanUp for time: 14300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.575] [INFO ] #@# Current timestep 14850
-[2018-08-21T13:56:41.575] [INFO ] ExpiredPayloadCleanUp for time: 14350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.576] [INFO ] #@# Current timestep 14900
-[2018-08-21T13:56:41.576] [INFO ] ExpiredPayloadCleanUp for time: 14400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.578] [INFO ] #@# Current timestep 14950
-[2018-08-21T13:56:41.578] [INFO ] ExpiredPayloadCleanUp for time: 14450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.581] [INFO ] #@# Current timestep 15000
-[2018-08-21T13:56:41.581] [INFO ] ExpiredPayloadCleanUp for time: 14500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.582] [INFO ] #@# Current timestep 15050
-[2018-08-21T13:56:41.582] [INFO ] ExpiredPayloadCleanUp for time: 14550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.584] [INFO ] #@# Current timestep 15100
-[2018-08-21T13:56:41.584] [INFO ] ExpiredPayloadCleanUp for time: 14600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.585] [INFO ] #@# Current timestep 15150
-[2018-08-21T13:56:41.585] [INFO ] ExpiredPayloadCleanUp for time: 14650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.586] [INFO ] #@# Current timestep 15200
-[2018-08-21T13:56:41.586] [INFO ] ExpiredPayloadCleanUp for time: 14700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.588] [INFO ] #@# Current timestep 15250
-[2018-08-21T13:56:41.588] [INFO ] ExpiredPayloadCleanUp for time: 14750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.589] [INFO ] #@# Current timestep 15300
-[2018-08-21T13:56:41.589] [INFO ] ExpiredPayloadCleanUp for time: 14800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.590] [INFO ] #@# Current timestep 15350
-[2018-08-21T13:56:41.590] [INFO ] ExpiredPayloadCleanUp for time: 14850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.592] [INFO ] #@# Current timestep 15400
-[2018-08-21T13:56:41.592] [INFO ] ExpiredPayloadCleanUp for time: 14900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.593] [INFO ] #@# Current timestep 15450
-[2018-08-21T13:56:41.593] [INFO ] ExpiredPayloadCleanUp for time: 14950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.594] [INFO ] #@# Current timestep 15500
-[2018-08-21T13:56:41.594] [INFO ] ExpiredPayloadCleanUp for time: 15000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.596] [INFO ] #@# Current timestep 15550
-[2018-08-21T13:56:41.596] [INFO ] ExpiredPayloadCleanUp for time: 15050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.597] [INFO ] #@# Current timestep 15600
-[2018-08-21T13:56:41.597] [INFO ] ExpiredPayloadCleanUp for time: 15100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.598] [INFO ] #@# Current timestep 15650
-[2018-08-21T13:56:41.598] [INFO ] ExpiredPayloadCleanUp for time: 15150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.600] [INFO ] #@# Current timestep 15700
-[2018-08-21T13:56:41.600] [INFO ] ExpiredPayloadCleanUp for time: 15200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.601] [INFO ] #@# Current timestep 15750
-[2018-08-21T13:56:41.601] [INFO ] ExpiredPayloadCleanUp for time: 15250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.603] [INFO ] #@# Current timestep 15800
-[2018-08-21T13:56:41.603] [INFO ] ExpiredPayloadCleanUp for time: 15300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.604] [INFO ] #@# Current timestep 15850
-[2018-08-21T13:56:41.604] [INFO ] ExpiredPayloadCleanUp for time: 15350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.606] [INFO ] #@# Current timestep 15900
-[2018-08-21T13:56:41.606] [INFO ] ExpiredPayloadCleanUp for time: 15400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.607] [INFO ] #@# Current timestep 15950
-[2018-08-21T13:56:41.607] [INFO ] ExpiredPayloadCleanUp for time: 15450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.610] [INFO ] #@# Current timestep 16000
-[2018-08-21T13:56:41.610] [INFO ] ExpiredPayloadCleanUp for time: 15500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.611] [INFO ] #@# Current timestep 16050
-[2018-08-21T13:56:41.611] [INFO ] ExpiredPayloadCleanUp for time: 15550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.613] [INFO ] #@# Current timestep 16100
-[2018-08-21T13:56:41.613] [INFO ] ExpiredPayloadCleanUp for time: 15600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.614] [INFO ] #@# Current timestep 16150
-[2018-08-21T13:56:41.614] [INFO ] ExpiredPayloadCleanUp for time: 15650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.615] [INFO ] #@# Current timestep 16200
-[2018-08-21T13:56:41.615] [INFO ] ExpiredPayloadCleanUp for time: 15700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.617] [INFO ] #@# Current timestep 16250
-[2018-08-21T13:56:41.617] [INFO ] ExpiredPayloadCleanUp for time: 15750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.618] [INFO ] #@# Current timestep 16300
-[2018-08-21T13:56:41.618] [INFO ] ExpiredPayloadCleanUp for time: 15800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.620] [INFO ] #@# Current timestep 16350
-[2018-08-21T13:56:41.620] [INFO ] ExpiredPayloadCleanUp for time: 15850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.621] [INFO ] #@# Current timestep 16400
-[2018-08-21T13:56:41.621] [INFO ] ExpiredPayloadCleanUp for time: 15900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.622] [INFO ] #@# Current timestep 16450
-[2018-08-21T13:56:41.622] [INFO ] ExpiredPayloadCleanUp for time: 15950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.624] [INFO ] #@# Current timestep 16500
-[2018-08-21T13:56:41.624] [INFO ] ExpiredPayloadCleanUp for time: 16000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.625] [INFO ] #@# Current timestep 16550
-[2018-08-21T13:56:41.625] [INFO ] ExpiredPayloadCleanUp for time: 16050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.626] [INFO ] #@# Current timestep 16600
-[2018-08-21T13:56:41.626] [INFO ] ExpiredPayloadCleanUp for time: 16100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.628] [INFO ] #@# Current timestep 16650
-[2018-08-21T13:56:41.628] [INFO ] ExpiredPayloadCleanUp for time: 16150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.629] [INFO ] #@# Current timestep 16700
-[2018-08-21T13:56:41.629] [INFO ] ExpiredPayloadCleanUp for time: 16200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.631] [INFO ] #@# Current timestep 16750
-[2018-08-21T13:56:41.631] [INFO ] ExpiredPayloadCleanUp for time: 16250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.632] [INFO ] #@# Current timestep 16800
-[2018-08-21T13:56:41.632] [INFO ] ExpiredPayloadCleanUp for time: 16300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.633] [INFO ] #@# Current timestep 16850
-[2018-08-21T13:56:41.633] [INFO ] ExpiredPayloadCleanUp for time: 16350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.635] [INFO ] #@# Current timestep 16900
-[2018-08-21T13:56:41.635] [INFO ] ExpiredPayloadCleanUp for time: 16400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.636] [INFO ] #@# Current timestep 16950
-[2018-08-21T13:56:41.636] [INFO ] ExpiredPayloadCleanUp for time: 16450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.639] [INFO ] #@# Current timestep 17000
-[2018-08-21T13:56:41.639] [INFO ] ExpiredPayloadCleanUp for time: 16500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.640] [INFO ] #@# Current timestep 17050
-[2018-08-21T13:56:41.640] [INFO ] ExpiredPayloadCleanUp for time: 16550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.642] [INFO ] #@# Current timestep 17100
-[2018-08-21T13:56:41.642] [INFO ] ExpiredPayloadCleanUp for time: 16600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.643] [INFO ] #@# Current timestep 17150
-[2018-08-21T13:56:41.643] [INFO ] ExpiredPayloadCleanUp for time: 16650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.645] [INFO ] #@# Current timestep 17200
-[2018-08-21T13:56:41.645] [INFO ] ExpiredPayloadCleanUp for time: 16700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.646] [INFO ] #@# Current timestep 17250
-[2018-08-21T13:56:41.646] [INFO ] ExpiredPayloadCleanUp for time: 16750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.647] [INFO ] #@# Current timestep 17300
-[2018-08-21T13:56:41.647] [INFO ] ExpiredPayloadCleanUp for time: 16800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.649] [INFO ] #@# Current timestep 17350
-[2018-08-21T13:56:41.649] [INFO ] ExpiredPayloadCleanUp for time: 16850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.650] [INFO ] #@# Current timestep 17400
-[2018-08-21T13:56:41.650] [INFO ] ExpiredPayloadCleanUp for time: 16900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.651] [INFO ] #@# Current timestep 17450
-[2018-08-21T13:56:41.652] [INFO ] ExpiredPayloadCleanUp for time: 16950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.653] [INFO ] #@# Current timestep 17500
-[2018-08-21T13:56:41.653] [INFO ] ExpiredPayloadCleanUp for time: 17000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.654] [INFO ] #@# Current timestep 17550
-[2018-08-21T13:56:41.654] [INFO ] ExpiredPayloadCleanUp for time: 17050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.656] [INFO ] #@# Current timestep 17600
-[2018-08-21T13:56:41.656] [INFO ] ExpiredPayloadCleanUp for time: 17100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.657] [INFO ] #@# Current timestep 17650
-[2018-08-21T13:56:41.657] [INFO ] ExpiredPayloadCleanUp for time: 17150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.658] [INFO ] #@# Current timestep 17700
-[2018-08-21T13:56:41.658] [INFO ] ExpiredPayloadCleanUp for time: 17200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.660] [INFO ] #@# Current timestep 17750
-[2018-08-21T13:56:41.660] [INFO ] ExpiredPayloadCleanUp for time: 17250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.661] [INFO ] #@# Current timestep 17800
-[2018-08-21T13:56:41.661] [INFO ] ExpiredPayloadCleanUp for time: 17300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.663] [INFO ] #@# Current timestep 17850
-[2018-08-21T13:56:41.663] [INFO ] ExpiredPayloadCleanUp for time: 17350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.664] [INFO ] #@# Current timestep 17900
-[2018-08-21T13:56:41.664] [INFO ] ExpiredPayloadCleanUp for time: 17400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.665] [INFO ] #@# Current timestep 17950
-[2018-08-21T13:56:41.665] [INFO ] ExpiredPayloadCleanUp for time: 17450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.668] [INFO ] #@# Current timestep 18000
-[2018-08-21T13:56:41.668] [INFO ] ExpiredPayloadCleanUp for time: 17500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.669] [INFO ] #@# Current timestep 18050
-[2018-08-21T13:56:41.669] [INFO ] ExpiredPayloadCleanUp for time: 17550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.671] [INFO ] #@# Current timestep 18100
-[2018-08-21T13:56:41.671] [INFO ] ExpiredPayloadCleanUp for time: 17600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.672] [INFO ] #@# Current timestep 18150
-[2018-08-21T13:56:41.672] [INFO ] ExpiredPayloadCleanUp for time: 17650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.674] [INFO ] #@# Current timestep 18200
-[2018-08-21T13:56:41.674] [INFO ] ExpiredPayloadCleanUp for time: 17700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.675] [INFO ] #@# Current timestep 18250
-[2018-08-21T13:56:41.675] [INFO ] ExpiredPayloadCleanUp for time: 17750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.676] [INFO ] #@# Current timestep 18300
-[2018-08-21T13:56:41.676] [INFO ] ExpiredPayloadCleanUp for time: 17800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.678] [INFO ] #@# Current timestep 18350
-[2018-08-21T13:56:41.678] [INFO ] ExpiredPayloadCleanUp for time: 17850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.679] [INFO ] #@# Current timestep 18400
-[2018-08-21T13:56:41.679] [INFO ] ExpiredPayloadCleanUp for time: 17900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.680] [INFO ] #@# Current timestep 18450
-[2018-08-21T13:56:41.680] [INFO ] ExpiredPayloadCleanUp for time: 17950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.682] [INFO ] #@# Current timestep 18500
-[2018-08-21T13:56:41.682] [INFO ] ExpiredPayloadCleanUp for time: 18000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.683] [INFO ] #@# Current timestep 18550
-[2018-08-21T13:56:41.683] [INFO ] ExpiredPayloadCleanUp for time: 18050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.685] [INFO ] #@# Current timestep 18600
-[2018-08-21T13:56:41.685] [INFO ] ExpiredPayloadCleanUp for time: 18100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.686] [INFO ] #@# Current timestep 18650
-[2018-08-21T13:56:41.686] [INFO ] ExpiredPayloadCleanUp for time: 18150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.687] [INFO ] #@# Current timestep 18700
-[2018-08-21T13:56:41.687] [INFO ] ExpiredPayloadCleanUp for time: 18200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.689] [INFO ] #@# Current timestep 18750
-[2018-08-21T13:56:41.689] [INFO ] ExpiredPayloadCleanUp for time: 18250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.690] [INFO ] #@# Current timestep 18800
-[2018-08-21T13:56:41.690] [INFO ] ExpiredPayloadCleanUp for time: 18300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.691] [INFO ] #@# Current timestep 18850
-[2018-08-21T13:56:41.691] [INFO ] ExpiredPayloadCleanUp for time: 18350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.693] [INFO ] #@# Current timestep 18900
-[2018-08-21T13:56:41.693] [INFO ] ExpiredPayloadCleanUp for time: 18400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.694] [INFO ] #@# Current timestep 18950
-[2018-08-21T13:56:41.694] [INFO ] ExpiredPayloadCleanUp for time: 18450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.697] [INFO ] #@# Current timestep 19000
-[2018-08-21T13:56:41.697] [INFO ] ExpiredPayloadCleanUp for time: 18500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.698] [INFO ] #@# Current timestep 19050
-[2018-08-21T13:56:41.698] [INFO ] ExpiredPayloadCleanUp for time: 18550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.699] [INFO ] #@# Current timestep 19100
-[2018-08-21T13:56:41.699] [INFO ] ExpiredPayloadCleanUp for time: 18600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.701] [INFO ] #@# Current timestep 19150
-[2018-08-21T13:56:41.701] [INFO ] ExpiredPayloadCleanUp for time: 18650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.702] [INFO ] #@# Current timestep 19200
-[2018-08-21T13:56:41.702] [INFO ] ExpiredPayloadCleanUp for time: 18700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.703] [INFO ] #@# Current timestep 19250
-[2018-08-21T13:56:41.703] [INFO ] ExpiredPayloadCleanUp for time: 18750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.705] [INFO ] #@# Current timestep 19300
-[2018-08-21T13:56:41.705] [INFO ] ExpiredPayloadCleanUp for time: 18800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.706] [INFO ] #@# Current timestep 19350
-[2018-08-21T13:56:41.706] [INFO ] ExpiredPayloadCleanUp for time: 18850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.708] [INFO ] #@# Current timestep 19400
-[2018-08-21T13:56:41.708] [INFO ] ExpiredPayloadCleanUp for time: 18900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.709] [INFO ] #@# Current timestep 19450
-[2018-08-21T13:56:41.709] [INFO ] ExpiredPayloadCleanUp for time: 18950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.710] [INFO ] #@# Current timestep 19500
-[2018-08-21T13:56:41.710] [INFO ] ExpiredPayloadCleanUp for time: 19000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.712] [INFO ] #@# Current timestep 19550
-[2018-08-21T13:56:41.712] [INFO ] ExpiredPayloadCleanUp for time: 19050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.713] [INFO ] #@# Current timestep 19600
-[2018-08-21T13:56:41.713] [INFO ] ExpiredPayloadCleanUp for time: 19100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.715] [INFO ] #@# Current timestep 19650
-[2018-08-21T13:56:41.715] [INFO ] ExpiredPayloadCleanUp for time: 19150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.716] [INFO ] #@# Current timestep 19700
-[2018-08-21T13:56:41.716] [INFO ] ExpiredPayloadCleanUp for time: 19200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.717] [INFO ] #@# Current timestep 19750
-[2018-08-21T13:56:41.717] [INFO ] ExpiredPayloadCleanUp for time: 19250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.719] [INFO ] #@# Current timestep 19800
-[2018-08-21T13:56:41.719] [INFO ] ExpiredPayloadCleanUp for time: 19300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.720] [INFO ] #@# Current timestep 19850
-[2018-08-21T13:56:41.720] [INFO ] ExpiredPayloadCleanUp for time: 19350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.722] [INFO ] #@# Current timestep 19900
-[2018-08-21T13:56:41.722] [INFO ] ExpiredPayloadCleanUp for time: 19400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.723] [INFO ] #@# Current timestep 19950
-[2018-08-21T13:56:41.723] [INFO ] ExpiredPayloadCleanUp for time: 19450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.726] [INFO ] #@# Current timestep 20000
-[2018-08-21T13:56:41.726] [INFO ] ExpiredPayloadCleanUp for time: 19500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.727] [INFO ] #@# Current timestep 20050
-[2018-08-21T13:56:41.727] [INFO ] ExpiredPayloadCleanUp for time: 19550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.729] [INFO ] #@# Current timestep 20100
-[2018-08-21T13:56:41.729] [INFO ] ExpiredPayloadCleanUp for time: 19600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.730] [INFO ] #@# Current timestep 20150
-[2018-08-21T13:56:41.730] [INFO ] ExpiredPayloadCleanUp for time: 19650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.731] [INFO ] #@# Current timestep 20200
-[2018-08-21T13:56:41.731] [INFO ] ExpiredPayloadCleanUp for time: 19700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.733] [INFO ] #@# Current timestep 20250
-[2018-08-21T13:56:41.733] [INFO ] ExpiredPayloadCleanUp for time: 19750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.734] [INFO ] #@# Current timestep 20300
-[2018-08-21T13:56:41.734] [INFO ] ExpiredPayloadCleanUp for time: 19800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.735] [INFO ] #@# Current timestep 20350
-[2018-08-21T13:56:41.735] [INFO ] ExpiredPayloadCleanUp for time: 19850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.737] [INFO ] #@# Current timestep 20400
-[2018-08-21T13:56:41.737] [INFO ] ExpiredPayloadCleanUp for time: 19900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.738] [INFO ] #@# Current timestep 20450
-[2018-08-21T13:56:41.738] [INFO ] ExpiredPayloadCleanUp for time: 19950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.740] [INFO ] #@# Current timestep 20500
-[2018-08-21T13:56:41.740] [INFO ] ExpiredPayloadCleanUp for time: 20000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.741] [INFO ] #@# Current timestep 20550
-[2018-08-21T13:56:41.741] [INFO ] ExpiredPayloadCleanUp for time: 20050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.742] [INFO ] #@# Current timestep 20600
-[2018-08-21T13:56:41.742] [INFO ] ExpiredPayloadCleanUp for time: 20100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.744] [INFO ] #@# Current timestep 20650
-[2018-08-21T13:56:41.744] [INFO ] ExpiredPayloadCleanUp for time: 20150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.745] [INFO ] #@# Current timestep 20700
-[2018-08-21T13:56:41.745] [INFO ] ExpiredPayloadCleanUp for time: 20200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.746] [INFO ] #@# Current timestep 20750
-[2018-08-21T13:56:41.746] [INFO ] ExpiredPayloadCleanUp for time: 20250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.748] [INFO ] #@# Current timestep 20800
-[2018-08-21T13:56:41.748] [INFO ] ExpiredPayloadCleanUp for time: 20300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.749] [INFO ] #@# Current timestep 20850
-[2018-08-21T13:56:41.749] [INFO ] ExpiredPayloadCleanUp for time: 20350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.750] [INFO ] #@# Current timestep 20900
-[2018-08-21T13:56:41.750] [INFO ] ExpiredPayloadCleanUp for time: 20400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.752] [INFO ] #@# Current timestep 20950
-[2018-08-21T13:56:41.752] [INFO ] ExpiredPayloadCleanUp for time: 20450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.755] [INFO ] #@# Current timestep 21000
-[2018-08-21T13:56:41.755] [INFO ] ExpiredPayloadCleanUp for time: 20500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.756] [INFO ] #@# Current timestep 21050
-[2018-08-21T13:56:41.756] [INFO ] ExpiredPayloadCleanUp for time: 20550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.758] [INFO ] #@# Current timestep 21100
-[2018-08-21T13:56:41.758] [INFO ] ExpiredPayloadCleanUp for time: 20600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.759] [INFO ] #@# Current timestep 21150
-[2018-08-21T13:56:41.759] [INFO ] ExpiredPayloadCleanUp for time: 20650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.760] [INFO ] #@# Current timestep 21200
-[2018-08-21T13:56:41.760] [INFO ] ExpiredPayloadCleanUp for time: 20700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.762] [INFO ] #@# Current timestep 21250
-[2018-08-21T13:56:41.762] [INFO ] ExpiredPayloadCleanUp for time: 20750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.763] [INFO ] #@# Current timestep 21300
-[2018-08-21T13:56:41.763] [INFO ] ExpiredPayloadCleanUp for time: 20800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.764] [INFO ] #@# Current timestep 21350
-[2018-08-21T13:56:41.764] [INFO ] ExpiredPayloadCleanUp for time: 20850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.766] [INFO ] #@# Current timestep 21400
-[2018-08-21T13:56:41.766] [INFO ] ExpiredPayloadCleanUp for time: 20900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.767] [INFO ] #@# Current timestep 21450
-[2018-08-21T13:56:41.767] [INFO ] ExpiredPayloadCleanUp for time: 20950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.768] [INFO ] #@# Current timestep 21500
-[2018-08-21T13:56:41.768] [INFO ] ExpiredPayloadCleanUp for time: 21000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.770] [INFO ] #@# Current timestep 21550
-[2018-08-21T13:56:41.770] [INFO ] ExpiredPayloadCleanUp for time: 21050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.771] [INFO ] #@# Current timestep 21600
-[2018-08-21T13:56:41.771] [INFO ] ExpiredPayloadCleanUp for time: 21100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.773] [INFO ] #@# Current timestep 21650
-[2018-08-21T13:56:41.773] [INFO ] ExpiredPayloadCleanUp for time: 21150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.774] [INFO ] #@# Current timestep 21700
-[2018-08-21T13:56:41.774] [INFO ] ExpiredPayloadCleanUp for time: 21200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.776] [INFO ] #@# Current timestep 21750
-[2018-08-21T13:56:41.776] [INFO ] ExpiredPayloadCleanUp for time: 21250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.777] [INFO ] #@# Current timestep 21800
-[2018-08-21T13:56:41.777] [INFO ] ExpiredPayloadCleanUp for time: 21300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.778] [INFO ] #@# Current timestep 21850
-[2018-08-21T13:56:41.778] [INFO ] ExpiredPayloadCleanUp for time: 21350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.780] [INFO ] #@# Current timestep 21900
-[2018-08-21T13:56:41.780] [INFO ] ExpiredPayloadCleanUp for time: 21400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.781] [INFO ] #@# Current timestep 21950
-[2018-08-21T13:56:41.781] [INFO ] ExpiredPayloadCleanUp for time: 21450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.784] [INFO ] #@# Current timestep 22000
-[2018-08-21T13:56:41.784] [INFO ] ExpiredPayloadCleanUp for time: 21500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.785] [INFO ] #@# Current timestep 22050
-[2018-08-21T13:56:41.785] [INFO ] ExpiredPayloadCleanUp for time: 21550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.787] [INFO ] #@# Current timestep 22100
-[2018-08-21T13:56:41.787] [INFO ] ExpiredPayloadCleanUp for time: 21600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.788] [INFO ] #@# Current timestep 22150
-[2018-08-21T13:56:41.788] [INFO ] ExpiredPayloadCleanUp for time: 21650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.789] [INFO ] #@# Current timestep 22200
-[2018-08-21T13:56:41.789] [INFO ] ExpiredPayloadCleanUp for time: 21700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.791] [INFO ] #@# Current timestep 22250
-[2018-08-21T13:56:41.791] [INFO ] ExpiredPayloadCleanUp for time: 21750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.792] [INFO ] #@# Current timestep 22300
-[2018-08-21T13:56:41.792] [INFO ] ExpiredPayloadCleanUp for time: 21800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.794] [INFO ] #@# Current timestep 22350
-[2018-08-21T13:56:41.794] [INFO ] ExpiredPayloadCleanUp for time: 21850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.795] [INFO ] #@# Current timestep 22400
-[2018-08-21T13:56:41.795] [INFO ] ExpiredPayloadCleanUp for time: 21900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.796] [INFO ] #@# Current timestep 22450
-[2018-08-21T13:56:41.796] [INFO ] ExpiredPayloadCleanUp for time: 21950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.798] [INFO ] #@# Current timestep 22500
-[2018-08-21T13:56:41.798] [INFO ] ExpiredPayloadCleanUp for time: 22000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.799] [INFO ] #@# Current timestep 22550
-[2018-08-21T13:56:41.799] [INFO ] ExpiredPayloadCleanUp for time: 22050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.801] [INFO ] #@# Current timestep 22600
-[2018-08-21T13:56:41.801] [INFO ] ExpiredPayloadCleanUp for time: 22100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.802] [INFO ] #@# Current timestep 22650
-[2018-08-21T13:56:41.802] [INFO ] ExpiredPayloadCleanUp for time: 22150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.803] [INFO ] #@# Current timestep 22700
-[2018-08-21T13:56:41.803] [INFO ] ExpiredPayloadCleanUp for time: 22200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.805] [INFO ] #@# Current timestep 22750
-[2018-08-21T13:56:41.805] [INFO ] ExpiredPayloadCleanUp for time: 22250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.806] [INFO ] #@# Current timestep 22800
-[2018-08-21T13:56:41.806] [INFO ] ExpiredPayloadCleanUp for time: 22300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.808] [INFO ] #@# Current timestep 22850
-[2018-08-21T13:56:41.808] [INFO ] ExpiredPayloadCleanUp for time: 22350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.809] [INFO ] #@# Current timestep 22900
-[2018-08-21T13:56:41.809] [INFO ] ExpiredPayloadCleanUp for time: 22400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.811] [INFO ] #@# Current timestep 22950
-[2018-08-21T13:56:41.811] [INFO ] ExpiredPayloadCleanUp for time: 22450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.813] [INFO ] #@# Current timestep 23000
-[2018-08-21T13:56:41.813] [INFO ] ExpiredPayloadCleanUp for time: 22500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.815] [INFO ] #@# Current timestep 23050
-[2018-08-21T13:56:41.815] [INFO ] ExpiredPayloadCleanUp for time: 22550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.816] [INFO ] #@# Current timestep 23100
-[2018-08-21T13:56:41.816] [INFO ] ExpiredPayloadCleanUp for time: 22600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.817] [INFO ] #@# Current timestep 23150
-[2018-08-21T13:56:41.817] [INFO ] ExpiredPayloadCleanUp for time: 22650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.819] [INFO ] #@# Current timestep 23200
-[2018-08-21T13:56:41.819] [INFO ] ExpiredPayloadCleanUp for time: 22700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.820] [INFO ] #@# Current timestep 23250
-[2018-08-21T13:56:41.820] [INFO ] ExpiredPayloadCleanUp for time: 22750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.822] [INFO ] #@# Current timestep 23300
-[2018-08-21T13:56:41.822] [INFO ] ExpiredPayloadCleanUp for time: 22800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.823] [INFO ] #@# Current timestep 23350
-[2018-08-21T13:56:41.823] [INFO ] ExpiredPayloadCleanUp for time: 22850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.824] [INFO ] #@# Current timestep 23400
-[2018-08-21T13:56:41.824] [INFO ] ExpiredPayloadCleanUp for time: 22900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.826] [INFO ] #@# Current timestep 23450
-[2018-08-21T13:56:41.826] [INFO ] ExpiredPayloadCleanUp for time: 22950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.827] [INFO ] #@# Current timestep 23500
-[2018-08-21T13:56:41.827] [INFO ] ExpiredPayloadCleanUp for time: 23000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.828] [INFO ] #@# Current timestep 23550
-[2018-08-21T13:56:41.828] [INFO ] ExpiredPayloadCleanUp for time: 23050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.830] [INFO ] #@# Current timestep 23600
-[2018-08-21T13:56:41.830] [INFO ] ExpiredPayloadCleanUp for time: 23100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.831] [INFO ] #@# Current timestep 23650
-[2018-08-21T13:56:41.831] [INFO ] ExpiredPayloadCleanUp for time: 23150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.833] [INFO ] #@# Current timestep 23700
-[2018-08-21T13:56:41.833] [INFO ] ExpiredPayloadCleanUp for time: 23200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.834] [INFO ] #@# Current timestep 23750
-[2018-08-21T13:56:41.834] [INFO ] ExpiredPayloadCleanUp for time: 23250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.835] [INFO ] #@# Current timestep 23800
-[2018-08-21T13:56:41.835] [INFO ] ExpiredPayloadCleanUp for time: 23300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.837] [INFO ] #@# Current timestep 23850
-[2018-08-21T13:56:41.837] [INFO ] ExpiredPayloadCleanUp for time: 23350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.838] [INFO ] #@# Current timestep 23900
-[2018-08-21T13:56:41.838] [INFO ] ExpiredPayloadCleanUp for time: 23400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.839] [INFO ] #@# Current timestep 23950
-[2018-08-21T13:56:41.839] [INFO ] ExpiredPayloadCleanUp for time: 23450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.842] [INFO ] #@# Current timestep 24000
-[2018-08-21T13:56:41.842] [INFO ] ExpiredPayloadCleanUp for time: 23500. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.844] [INFO ] #@# Current timestep 24050
-[2018-08-21T13:56:41.844] [INFO ] ExpiredPayloadCleanUp for time: 23550. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.845] [INFO ] #@# Current timestep 24100
-[2018-08-21T13:56:41.845] [INFO ] ExpiredPayloadCleanUp for time: 23600. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.847] [INFO ] #@# Current timestep 24150
-[2018-08-21T13:56:41.847] [INFO ] ExpiredPayloadCleanUp for time: 23650. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.848] [INFO ] #@# Current timestep 24200
-[2018-08-21T13:56:41.848] [INFO ] ExpiredPayloadCleanUp for time: 23700. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.849] [INFO ] #@# Current timestep 24250
-[2018-08-21T13:56:41.850] [INFO ] ExpiredPayloadCleanUp for time: 23750. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.851] [INFO ] #@# Current timestep 24300
-[2018-08-21T13:56:41.851] [INFO ] ExpiredPayloadCleanUp for time: 23800. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.852] [INFO ] #@# Current timestep 24350
-[2018-08-21T13:56:41.852] [INFO ] ExpiredPayloadCleanUp for time: 23850. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.854] [INFO ] #@# Current timestep 24400
-[2018-08-21T13:56:41.854] [INFO ] ExpiredPayloadCleanUp for time: 23900. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.855] [INFO ] #@# Current timestep 24450
-[2018-08-21T13:56:41.855] [INFO ] ExpiredPayloadCleanUp for time: 23950. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.856] [INFO ] #@# Current timestep 24500
-[2018-08-21T13:56:41.856] [INFO ] ExpiredPayloadCleanUp for time: 24000. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.858] [INFO ] #@# Current timestep 24550
-[2018-08-21T13:56:41.858] [INFO ] ExpiredPayloadCleanUp for time: 24050. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.859] [INFO ] #@# Current timestep 24600
-[2018-08-21T13:56:41.859] [INFO ] ExpiredPayloadCleanUp for time: 24100. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.861] [INFO ] #@# Current timestep 24650
-[2018-08-21T13:56:41.861] [INFO ] ExpiredPayloadCleanUp for time: 24150. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.862] [INFO ] #@# Current timestep 24700
-[2018-08-21T13:56:41.862] [INFO ] ExpiredPayloadCleanUp for time: 24200. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.863] [INFO ] #@# Current timestep 24750
-[2018-08-21T13:56:41.863] [INFO ] ExpiredPayloadCleanUp for time: 24250. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.865] [INFO ] #@# Current timestep 24800
-[2018-08-21T13:56:41.865] [INFO ] ExpiredPayloadCleanUp for time: 24300. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.866] [INFO ] #@# Current timestep 24850
-[2018-08-21T13:56:41.866] [INFO ] ExpiredPayloadCleanUp for time: 24350. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.867] [INFO ] #@# Current timestep 24900
-[2018-08-21T13:56:41.867] [INFO ] ExpiredPayloadCleanUp for time: 24400. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.869] [INFO ] #@# Current timestep 24950
-[2018-08-21T13:56:41.869] [INFO ] ExpiredPayloadCleanUp for time: 24450. Removing keys: noting to remove Current size: 0
-[2018-08-21T13:56:41.871] [INFO ] #@# Current timestep 25000
-[2018-08-21T13:56:41.871] [INFO ] ExpiredPayloadCleanUp for time: 24500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.499] [INFO ] #@# Current timestep -1000
+[2019-02-21T18:28:39.500] [INFO ] Added new fixed station with id 5000
+[2019-02-21T18:28:39.500] [INFO ] [Node 5000] added subscription 1 type 0x3a
+[2019-02-21T18:28:39.501] [INFO ] #@# Current timestep 0
+[2019-02-21T18:28:39.502] [INFO ] #@# Current timestep 50
+[2019-02-21T18:28:39.502] [INFO ] #@# Current timestep 100
+[2019-02-21T18:28:39.503] [INFO ] #@# Current timestep 150
+[2019-02-21T18:28:39.504] [INFO ] #@# Current timestep 200
+[2019-02-21T18:28:39.504] [INFO ] #@# Current timestep 250
+[2019-02-21T18:28:39.505] [INFO ] #@# Current timestep 300
+[2019-02-21T18:28:39.506] [INFO ] #@# Current timestep 350
+[2019-02-21T18:28:39.506] [INFO ] #@# Current timestep 400
+[2019-02-21T18:28:39.507] [INFO ] #@# Current timestep 450
+[2019-02-21T18:28:39.507] [INFO ] ExpiredPayloadCleanUp for time: -1000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.508] [INFO ] #@# Current timestep 500
+[2019-02-21T18:28:39.508] [INFO ] ExpiredPayloadCleanUp for time: 0. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.508] [INFO ] #@# Current timestep 550
+[2019-02-21T18:28:39.508] [INFO ] ExpiredPayloadCleanUp for time: 50. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.509] [INFO ] #@# Current timestep 600
+[2019-02-21T18:28:39.509] [INFO ] ExpiredPayloadCleanUp for time: 100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.510] [INFO ] #@# Current timestep 650
+[2019-02-21T18:28:39.510] [INFO ] ExpiredPayloadCleanUp for time: 150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.510] [INFO ] #@# Current timestep 700
+[2019-02-21T18:28:39.510] [INFO ] ExpiredPayloadCleanUp for time: 200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.511] [INFO ] #@# Current timestep 750
+[2019-02-21T18:28:39.511] [INFO ] ExpiredPayloadCleanUp for time: 250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.512] [INFO ] #@# Current timestep 800
+[2019-02-21T18:28:39.512] [INFO ] ExpiredPayloadCleanUp for time: 300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.512] [INFO ] #@# Current timestep 850
+[2019-02-21T18:28:39.512] [INFO ] ExpiredPayloadCleanUp for time: 350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.513] [INFO ] #@# Current timestep 900
+[2019-02-21T18:28:39.513] [INFO ] ExpiredPayloadCleanUp for time: 400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.514] [INFO ] #@# Current timestep 950
+[2019-02-21T18:28:39.514] [INFO ] ExpiredPayloadCleanUp for time: 450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.515] [INFO ] #@# Current timestep 1000
+[2019-02-21T18:28:39.515] [INFO ] ExpiredPayloadCleanUp for time: 500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.515] [INFO ] #@# Current timestep 1050
+[2019-02-21T18:28:39.515] [INFO ] ExpiredPayloadCleanUp for time: 550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.516] [INFO ] #@# Current timestep 1100
+[2019-02-21T18:28:39.516] [INFO ] ExpiredPayloadCleanUp for time: 600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.517] [INFO ] #@# Current timestep 1150
+[2019-02-21T18:28:39.517] [INFO ] ExpiredPayloadCleanUp for time: 650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.517] [INFO ] #@# Current timestep 1200
+[2019-02-21T18:28:39.517] [INFO ] ExpiredPayloadCleanUp for time: 700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.518] [INFO ] #@# Current timestep 1250
+[2019-02-21T18:28:39.518] [INFO ] ExpiredPayloadCleanUp for time: 750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.519] [INFO ] #@# Current timestep 1300
+[2019-02-21T18:28:39.519] [INFO ] ExpiredPayloadCleanUp for time: 800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.519] [INFO ] #@# Current timestep 1350
+[2019-02-21T18:28:39.519] [INFO ] ExpiredPayloadCleanUp for time: 850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.520] [INFO ] #@# Current timestep 1400
+[2019-02-21T18:28:39.520] [INFO ] ExpiredPayloadCleanUp for time: 900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.520] [INFO ] #@# Current timestep 1450
+[2019-02-21T18:28:39.520] [INFO ] ExpiredPayloadCleanUp for time: 950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.521] [INFO ] #@# Current timestep 1500
+[2019-02-21T18:28:39.521] [INFO ] ExpiredPayloadCleanUp for time: 1000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.522] [INFO ] #@# Current timestep 1550
+[2019-02-21T18:28:39.522] [INFO ] ExpiredPayloadCleanUp for time: 1050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.522] [INFO ] #@# Current timestep 1600
+[2019-02-21T18:28:39.522] [INFO ] ExpiredPayloadCleanUp for time: 1100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.523] [INFO ] #@# Current timestep 1650
+[2019-02-21T18:28:39.523] [INFO ] ExpiredPayloadCleanUp for time: 1150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.524] [INFO ] #@# Current timestep 1700
+[2019-02-21T18:28:39.524] [INFO ] ExpiredPayloadCleanUp for time: 1200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.524] [INFO ] #@# Current timestep 1750
+[2019-02-21T18:28:39.524] [INFO ] ExpiredPayloadCleanUp for time: 1250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.525] [INFO ] #@# Current timestep 1800
+[2019-02-21T18:28:39.525] [INFO ] ExpiredPayloadCleanUp for time: 1300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.526] [INFO ] #@# Current timestep 1850
+[2019-02-21T18:28:39.526] [INFO ] ExpiredPayloadCleanUp for time: 1350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.526] [INFO ] #@# Current timestep 1900
+[2019-02-21T18:28:39.526] [INFO ] ExpiredPayloadCleanUp for time: 1400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.527] [INFO ] #@# Current timestep 1950
+[2019-02-21T18:28:39.527] [INFO ] ExpiredPayloadCleanUp for time: 1450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.535] [INFO ] #@# Current timestep 2000
+[2019-02-21T18:28:39.535] [INFO ] ExpiredPayloadCleanUp for time: 1500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.553] [INFO ] Selected class for node 2 is 6
+[2019-02-21T18:28:39.553] [INFO ] Added new mobile node with id 2 ns3id 1 sumoId veh0 sumoType t1 sumoClass passenger
+[2019-02-21T18:28:39.554] [INFO ] [Node 2] added subscription 2 type 0x3a
+[2019-02-21T18:28:39.554] [INFO ] [Node 2] added subscription 3 type 0x3a
+[2019-02-21T18:28:39.556] [INFO ] #@# Current timestep 2050
+[2019-02-21T18:28:39.556] [INFO ] ExpiredPayloadCleanUp for time: 1550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.557] [INFO ] #@# Current timestep 2100
+[2019-02-21T18:28:39.558] [INFO ] ExpiredPayloadCleanUp for time: 1600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.559] [INFO ] #@# Current timestep 2150
+[2019-02-21T18:28:39.559] [INFO ] ExpiredPayloadCleanUp for time: 1650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.560] [INFO ] #@# Current timestep 2200
+[2019-02-21T18:28:39.561] [INFO ] ExpiredPayloadCleanUp for time: 1700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.562] [INFO ] #@# Current timestep 2250
+[2019-02-21T18:28:39.562] [INFO ] ExpiredPayloadCleanUp for time: 1750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.564] [INFO ] #@# Current timestep 2300
+[2019-02-21T18:28:39.564] [INFO ] ExpiredPayloadCleanUp for time: 1800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.565] [INFO ] #@# Current timestep 2350
+[2019-02-21T18:28:39.565] [INFO ] ExpiredPayloadCleanUp for time: 1850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.567] [INFO ] #@# Current timestep 2400
+[2019-02-21T18:28:39.567] [INFO ] ExpiredPayloadCleanUp for time: 1900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.568] [INFO ] #@# Current timestep 2450
+[2019-02-21T18:28:39.568] [INFO ] ExpiredPayloadCleanUp for time: 1950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.570] [INFO ] #@# Current timestep 2500
+[2019-02-21T18:28:39.570] [INFO ] ExpiredPayloadCleanUp for time: 2000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.571] [INFO ] #@# Current timestep 2550
+[2019-02-21T18:28:39.571] [INFO ] ExpiredPayloadCleanUp for time: 2050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.573] [INFO ] #@# Current timestep 2600
+[2019-02-21T18:28:39.573] [INFO ] ExpiredPayloadCleanUp for time: 2100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.574] [INFO ] #@# Current timestep 2650
+[2019-02-21T18:28:39.574] [INFO ] ExpiredPayloadCleanUp for time: 2150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.576] [INFO ] #@# Current timestep 2700
+[2019-02-21T18:28:39.576] [INFO ] ExpiredPayloadCleanUp for time: 2200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.577] [INFO ] #@# Current timestep 2750
+[2019-02-21T18:28:39.577] [INFO ] ExpiredPayloadCleanUp for time: 2250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.579] [INFO ] #@# Current timestep 2800
+[2019-02-21T18:28:39.579] [INFO ] ExpiredPayloadCleanUp for time: 2300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.580] [INFO ] #@# Current timestep 2850
+[2019-02-21T18:28:39.580] [INFO ] ExpiredPayloadCleanUp for time: 2350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.581] [INFO ] #@# Current timestep 2900
+[2019-02-21T18:28:39.581] [INFO ] ExpiredPayloadCleanUp for time: 2400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.582] [INFO ] #@# Current timestep 2950
+[2019-02-21T18:28:39.582] [INFO ] ExpiredPayloadCleanUp for time: 2450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.584] [INFO ] #@# Current timestep 3000
+[2019-02-21T18:28:39.584] [INFO ] ExpiredPayloadCleanUp for time: 2500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.585] [INFO ] #@# Current timestep 3050
+[2019-02-21T18:28:39.585] [INFO ] ExpiredPayloadCleanUp for time: 2550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.586] [INFO ] #@# Current timestep 3100
+[2019-02-21T18:28:39.586] [INFO ] ExpiredPayloadCleanUp for time: 2600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.587] [INFO ] #@# Current timestep 3150
+[2019-02-21T18:28:39.587] [INFO ] ExpiredPayloadCleanUp for time: 2650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.588] [INFO ] #@# Current timestep 3200
+[2019-02-21T18:28:39.588] [INFO ] ExpiredPayloadCleanUp for time: 2700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.589] [INFO ] #@# Current timestep 3250
+[2019-02-21T18:28:39.589] [INFO ] ExpiredPayloadCleanUp for time: 2750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.590] [INFO ] #@# Current timestep 3300
+[2019-02-21T18:28:39.590] [INFO ] ExpiredPayloadCleanUp for time: 2800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.591] [INFO ] #@# Current timestep 3350
+[2019-02-21T18:28:39.591] [INFO ] ExpiredPayloadCleanUp for time: 2850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.592] [INFO ] #@# Current timestep 3400
+[2019-02-21T18:28:39.592] [INFO ] ExpiredPayloadCleanUp for time: 2900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.593] [INFO ] #@# Current timestep 3450
+[2019-02-21T18:28:39.593] [INFO ] ExpiredPayloadCleanUp for time: 2950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.595] [INFO ] #@# Current timestep 3500
+[2019-02-21T18:28:39.595] [INFO ] ExpiredPayloadCleanUp for time: 3000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.596] [INFO ] #@# Current timestep 3550
+[2019-02-21T18:28:39.596] [INFO ] ExpiredPayloadCleanUp for time: 3050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.597] [INFO ] #@# Current timestep 3600
+[2019-02-21T18:28:39.597] [INFO ] ExpiredPayloadCleanUp for time: 3100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.598] [INFO ] #@# Current timestep 3650
+[2019-02-21T18:28:39.598] [INFO ] ExpiredPayloadCleanUp for time: 3150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.599] [INFO ] #@# Current timestep 3700
+[2019-02-21T18:28:39.599] [INFO ] ExpiredPayloadCleanUp for time: 3200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.600] [INFO ] #@# Current timestep 3750
+[2019-02-21T18:28:39.600] [INFO ] ExpiredPayloadCleanUp for time: 3250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.601] [INFO ] #@# Current timestep 3800
+[2019-02-21T18:28:39.601] [INFO ] ExpiredPayloadCleanUp for time: 3300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.602] [INFO ] #@# Current timestep 3850
+[2019-02-21T18:28:39.602] [INFO ] ExpiredPayloadCleanUp for time: 3350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.603] [INFO ] #@# Current timestep 3900
+[2019-02-21T18:28:39.603] [INFO ] ExpiredPayloadCleanUp for time: 3400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.604] [INFO ] #@# Current timestep 3950
+[2019-02-21T18:28:39.604] [INFO ] ExpiredPayloadCleanUp for time: 3450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.606] [INFO ] #@# Current timestep 4000
+[2019-02-21T18:28:39.606] [INFO ] ExpiredPayloadCleanUp for time: 3500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.607] [INFO ] #@# Current timestep 4050
+[2019-02-21T18:28:39.607] [INFO ] ExpiredPayloadCleanUp for time: 3550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.609] [INFO ] #@# Current timestep 4100
+[2019-02-21T18:28:39.609] [INFO ] ExpiredPayloadCleanUp for time: 3600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.610] [INFO ] #@# Current timestep 4150
+[2019-02-21T18:28:39.610] [INFO ] ExpiredPayloadCleanUp for time: 3650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.611] [INFO ] #@# Current timestep 4200
+[2019-02-21T18:28:39.611] [INFO ] ExpiredPayloadCleanUp for time: 3700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.612] [INFO ] #@# Current timestep 4250
+[2019-02-21T18:28:39.612] [INFO ] ExpiredPayloadCleanUp for time: 3750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.613] [INFO ] #@# Current timestep 4300
+[2019-02-21T18:28:39.613] [INFO ] ExpiredPayloadCleanUp for time: 3800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.614] [INFO ] #@# Current timestep 4350
+[2019-02-21T18:28:39.614] [INFO ] ExpiredPayloadCleanUp for time: 3850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.616] [INFO ] #@# Current timestep 4400
+[2019-02-21T18:28:39.616] [INFO ] ExpiredPayloadCleanUp for time: 3900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.617] [INFO ] #@# Current timestep 4450
+[2019-02-21T18:28:39.617] [INFO ] ExpiredPayloadCleanUp for time: 3950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.619] [INFO ] #@# Current timestep 4500
+[2019-02-21T18:28:39.619] [INFO ] ExpiredPayloadCleanUp for time: 4000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.620] [INFO ] #@# Current timestep 4550
+[2019-02-21T18:28:39.620] [INFO ] ExpiredPayloadCleanUp for time: 4050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.621] [INFO ] #@# Current timestep 4600
+[2019-02-21T18:28:39.621] [INFO ] ExpiredPayloadCleanUp for time: 4100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.622] [INFO ] #@# Current timestep 4650
+[2019-02-21T18:28:39.622] [INFO ] ExpiredPayloadCleanUp for time: 4150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.623] [INFO ] #@# Current timestep 4700
+[2019-02-21T18:28:39.623] [INFO ] ExpiredPayloadCleanUp for time: 4200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.624] [INFO ] #@# Current timestep 4750
+[2019-02-21T18:28:39.624] [INFO ] ExpiredPayloadCleanUp for time: 4250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.625] [INFO ] #@# Current timestep 4800
+[2019-02-21T18:28:39.625] [INFO ] ExpiredPayloadCleanUp for time: 4300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.626] [INFO ] #@# Current timestep 4850
+[2019-02-21T18:28:39.626] [INFO ] ExpiredPayloadCleanUp for time: 4350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.627] [INFO ] #@# Current timestep 4900
+[2019-02-21T18:28:39.628] [INFO ] ExpiredPayloadCleanUp for time: 4400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.629] [INFO ] #@# Current timestep 4950
+[2019-02-21T18:28:39.629] [INFO ] ExpiredPayloadCleanUp for time: 4450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.630] [INFO ] #@# Current timestep 5000
+[2019-02-21T18:28:39.630] [INFO ] ExpiredPayloadCleanUp for time: 4500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.630] [INFO ] [Node 5000] send to all. Key=m1. Time=5000
+[2019-02-21T18:28:39.631] [INFO ] [Node 5000] added subscription 4 type 0x1e
+[2019-02-21T18:28:39.632] [INFO ] [Node 5000] Confirmed subscription 4. Will be unsuscribed on the next timestep
+[2019-02-21T18:28:39.634] [INFO ] #@# Current timestep 5050
+[2019-02-21T18:28:39.634] [INFO ] ExpiredPayloadCleanUp for time: 4550. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.635] [INFO ] [Node 5000] removed subscription 4
+[2019-02-21T18:28:39.637] [INFO ] #@# Current timestep 5100
+[2019-02-21T18:28:39.637] [INFO ] ExpiredPayloadCleanUp for time: 4600. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.638] [INFO ] [2|12|m1] RSSI= -1 SNR= 20.3382 POWER= 112 MSGID=1 []
+[2019-02-21T18:28:39.638] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 1 timestep 5000
+[2019-02-21T18:28:39.639] [INFO ] #@# Current timestep 5150
+[2019-02-21T18:28:39.639] [INFO ] ExpiredPayloadCleanUp for time: 4650. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.640] [INFO ] #@# Current timestep 5200
+[2019-02-21T18:28:39.640] [INFO ] ExpiredPayloadCleanUp for time: 4700. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.640] [INFO ] [Node 2] send to all. Key=m2. Time=5193.5
+[2019-02-21T18:28:39.640] [INFO ] [Node 2] added subscription 5 type 0x1e
+[2019-02-21T18:28:39.641] [INFO ] [Node 2] Confirmed subscription 5. Will be unsuscribed on the next timestep
+[2019-02-21T18:28:39.643] [INFO ] #@# Current timestep 5250
+[2019-02-21T18:28:39.643] [INFO ] ExpiredPayloadCleanUp for time: 4750. Removing keys: noting to remove Current size: 2
+[2019-02-21T18:28:39.644] [INFO ] [Node 2] removed subscription 5
+[2019-02-21T18:28:39.644] [INFO ] [5000|12|m2] RSSI= -1 SNR= 20.3382 POWER= 0 MSGID=2 []
+[2019-02-21T18:28:39.644] [INFO ] Node 5000 (sumoID: '') received message 12 payload 2 timestep 5200
+[2019-02-21T18:28:39.645] [INFO ] #@# Current timestep 5300
+[2019-02-21T18:28:39.645] [INFO ] ExpiredPayloadCleanUp for time: 4800. Removing keys: noting to remove Current size: 2
+[2019-02-21T18:28:39.646] [INFO ] #@# Current timestep 5350
+[2019-02-21T18:28:39.646] [INFO ] ExpiredPayloadCleanUp for time: 4850. Removing keys: noting to remove Current size: 2
+[2019-02-21T18:28:39.646] [INFO ] [Node 5000] send to all. Key=m3. Time=5302.56
+[2019-02-21T18:28:39.647] [INFO ] [Node 5000] added subscription 6 type 0x1e
+[2019-02-21T18:28:39.647] [INFO ] [Node 5000] Confirmed subscription 6. Will be unsuscribed on the next timestep
+[2019-02-21T18:28:39.648] [INFO ] #@# Current timestep 5400
+[2019-02-21T18:28:39.649] [INFO ] ExpiredPayloadCleanUp for time: 4900. Removing keys: noting to remove Current size: 3
+[2019-02-21T18:28:39.649] [INFO ] [2|12|m3] RSSI= -1 SNR= 20.3382 POWER= 0 MSGID=3 []
+[2019-02-21T18:28:39.649] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 3 timestep 5350
+[2019-02-21T18:28:39.649] [INFO ] [Node 5000] removed subscription 6
+[2019-02-21T18:28:39.650] [INFO ] #@# Current timestep 5450
+[2019-02-21T18:28:39.650] [INFO ] ExpiredPayloadCleanUp for time: 4950. Removing keys: noting to remove Current size: 3
+[2019-02-21T18:28:39.651] [INFO ] #@# Current timestep 5500
+[2019-02-21T18:28:39.651] [INFO ] ExpiredPayloadCleanUp for time: 5000. Removing keys: 1 Current size: 2
+[2019-02-21T18:28:39.651] [INFO ] [Node 2] send to all. Key=m4. Time=5469.61
+[2019-02-21T18:28:39.651] [INFO ] [Node 2] added subscription 7 type 0x1e
+[2019-02-21T18:28:39.652] [INFO ] [Node 2] Confirmed subscription 7. Will be unsuscribed on the next timestep
+[2019-02-21T18:28:39.654] [INFO ] #@# Current timestep 5550
+[2019-02-21T18:28:39.654] [INFO ] ExpiredPayloadCleanUp for time: 5050. Removing keys: noting to remove Current size: 3
+[2019-02-21T18:28:39.654] [INFO ] [Node 2] removed subscription 7
+[2019-02-21T18:28:39.654] [INFO ] [5000|12|m4] RSSI= -1 SNR= 20.3382 POWER= 0 MSGID=4 []
+[2019-02-21T18:28:39.654] [INFO ] Node 5000 (sumoID: '') received message 12 payload 4 timestep 5500
+[2019-02-21T18:28:39.655] [INFO ] #@# Current timestep 5600
+[2019-02-21T18:28:39.655] [INFO ] ExpiredPayloadCleanUp for time: 5100. Removing keys: noting to remove Current size: 3
+[2019-02-21T18:28:39.655] [INFO ] [Node 5000] send to all. Key=m5. Time=5591.3
+[2019-02-21T18:28:39.656] [INFO ] [Node 5000] added subscription 8 type 0x1e
+[2019-02-21T18:28:39.656] [INFO ] [Node 5000] Confirmed subscription 8. Will be unsuscribed on the next timestep
+[2019-02-21T18:28:39.658] [INFO ] #@# Current timestep 5650
+[2019-02-21T18:28:39.658] [INFO ] ExpiredPayloadCleanUp for time: 5150. Removing keys: noting to remove Current size: 4
+[2019-02-21T18:28:39.658] [INFO ] [2|12|m5] RSSI= -1 SNR= 20.3382 POWER= 0 MSGID=5 []
+[2019-02-21T18:28:39.658] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 5 timestep 5600
+[2019-02-21T18:28:39.658] [INFO ] [Node 5000] removed subscription 8
+[2019-02-21T18:28:39.659] [INFO ] #@# Current timestep 5700
+[2019-02-21T18:28:39.659] [INFO ] ExpiredPayloadCleanUp for time: 5200. Removing keys: 2 Current size: 3
+[2019-02-21T18:28:39.659] [INFO ] [Node 2] added subscription 9 type 0x46
+[2019-02-21T18:28:39.660] [INFO ] SUMO Command acknowledged (0xc4), [description: ]
+[2019-02-21T18:28:39.660] [INFO ] #@# Current timestep 5750
+[2019-02-21T18:28:39.660] [INFO ] ExpiredPayloadCleanUp for time: 5250. Removing keys: noting to remove Current size: 3
+[2019-02-21T18:28:39.661] [INFO ] [Node 2] removed subscription 9
+[2019-02-21T18:28:39.662] [INFO ] #@# Current timestep 5800
+[2019-02-21T18:28:39.662] [INFO ] ExpiredPayloadCleanUp for time: 5300. Removing keys: noting to remove Current size: 3
+[2019-02-21T18:28:39.663] [INFO ] #@# Current timestep 5850
+[2019-02-21T18:28:39.663] [INFO ] ExpiredPayloadCleanUp for time: 5350. Removing keys: 3 Current size: 2
+[2019-02-21T18:28:39.664] [INFO ] #@# Current timestep 5900
+[2019-02-21T18:28:39.664] [INFO ] ExpiredPayloadCleanUp for time: 5400. Removing keys: noting to remove Current size: 2
+[2019-02-21T18:28:39.665] [INFO ] #@# Current timestep 5950
+[2019-02-21T18:28:39.665] [INFO ] ExpiredPayloadCleanUp for time: 5450. Removing keys: noting to remove Current size: 2
+[2019-02-21T18:28:39.666] [INFO ] #@# Current timestep 6000
+[2019-02-21T18:28:39.666] [INFO ] ExpiredPayloadCleanUp for time: 5500. Removing keys: 4 Current size: 1
+[2019-02-21T18:28:39.668] [INFO ] #@# Current timestep 6050
+[2019-02-21T18:28:39.668] [INFO ] ExpiredPayloadCleanUp for time: 5550. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.669] [INFO ] #@# Current timestep 6100
+[2019-02-21T18:28:39.669] [INFO ] ExpiredPayloadCleanUp for time: 5600. Removing keys: 5 Current size: 0
+[2019-02-21T18:28:39.669] [INFO ] [Node 5000] send to all. Key=m6. Time=6083.52
+[2019-02-21T18:28:39.669] [INFO ] [Node 5000] added subscription 10 type 0x1e
+[2019-02-21T18:28:39.670] [INFO ] [Node 5000] Confirmed subscription 10. Will be unsuscribed on the next timestep
+[2019-02-21T18:28:39.671] [INFO ] #@# Current timestep 6150
+[2019-02-21T18:28:39.672] [INFO ] ExpiredPayloadCleanUp for time: 5650. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.672] [INFO ] [2|12|m6] RSSI= -1 SNR= 22.1689 POWER= 0 MSGID=6 []
+[2019-02-21T18:28:39.672] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 6 timestep 6100
+[2019-02-21T18:28:39.672] [INFO ] [Node 5000] removed subscription 10
+[2019-02-21T18:28:39.673] [INFO ] #@# Current timestep 6200
+[2019-02-21T18:28:39.673] [INFO ] ExpiredPayloadCleanUp for time: 5700. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.674] [INFO ] #@# Current timestep 6250
+[2019-02-21T18:28:39.674] [INFO ] ExpiredPayloadCleanUp for time: 5750. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.675] [INFO ] #@# Current timestep 6300
+[2019-02-21T18:28:39.675] [INFO ] ExpiredPayloadCleanUp for time: 5800. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.676] [INFO ] #@# Current timestep 6350
+[2019-02-21T18:28:39.676] [INFO ] ExpiredPayloadCleanUp for time: 5850. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.677] [INFO ] #@# Current timestep 6400
+[2019-02-21T18:28:39.677] [INFO ] ExpiredPayloadCleanUp for time: 5900. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.678] [INFO ] #@# Current timestep 6450
+[2019-02-21T18:28:39.678] [INFO ] ExpiredPayloadCleanUp for time: 5950. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.679] [INFO ] #@# Current timestep 6500
+[2019-02-21T18:28:39.680] [INFO ] ExpiredPayloadCleanUp for time: 6000. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.681] [INFO ] #@# Current timestep 6550
+[2019-02-21T18:28:39.681] [INFO ] ExpiredPayloadCleanUp for time: 6050. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.682] [INFO ] #@# Current timestep 6600
+[2019-02-21T18:28:39.682] [INFO ] ExpiredPayloadCleanUp for time: 6100. Removing keys: 6 Current size: 0
+[2019-02-21T18:28:39.683] [INFO ] #@# Current timestep 6650
+[2019-02-21T18:28:39.683] [INFO ] ExpiredPayloadCleanUp for time: 6150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.684] [INFO ] #@# Current timestep 6700
+[2019-02-21T18:28:39.684] [INFO ] ExpiredPayloadCleanUp for time: 6200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.685] [INFO ] #@# Current timestep 6750
+[2019-02-21T18:28:39.685] [INFO ] ExpiredPayloadCleanUp for time: 6250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.686] [INFO ] #@# Current timestep 6800
+[2019-02-21T18:28:39.686] [INFO ] ExpiredPayloadCleanUp for time: 6300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.687] [INFO ] #@# Current timestep 6850
+[2019-02-21T18:28:39.687] [INFO ] ExpiredPayloadCleanUp for time: 6350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.688] [INFO ] #@# Current timestep 6900
+[2019-02-21T18:28:39.688] [INFO ] ExpiredPayloadCleanUp for time: 6400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.689] [INFO ] #@# Current timestep 6950
+[2019-02-21T18:28:39.689] [INFO ] ExpiredPayloadCleanUp for time: 6450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.691] [INFO ] #@# Current timestep 7000
+[2019-02-21T18:28:39.691] [INFO ] ExpiredPayloadCleanUp for time: 6500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.692] [INFO ] #@# Current timestep 7050
+[2019-02-21T18:28:39.692] [INFO ] ExpiredPayloadCleanUp for time: 6550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.693] [INFO ] #@# Current timestep 7100
+[2019-02-21T18:28:39.693] [INFO ] ExpiredPayloadCleanUp for time: 6600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.694] [INFO ] #@# Current timestep 7150
+[2019-02-21T18:28:39.694] [INFO ] ExpiredPayloadCleanUp for time: 6650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.694] [INFO ] [Node 5000] send to all. Key=m7. Time=7101.63
+[2019-02-21T18:28:39.695] [INFO ] [Node 5000] added subscription 11 type 0x1e
+[2019-02-21T18:28:39.695] [INFO ] [Node 5000] Confirmed subscription 11. Will be unsuscribed on the next timestep
+[2019-02-21T18:28:39.697] [INFO ] #@# Current timestep 7200
+[2019-02-21T18:28:39.697] [INFO ] ExpiredPayloadCleanUp for time: 6700. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.697] [INFO ] [2|12|m7] RSSI= -1 SNR= 24.8912 POWER= 0 MSGID=7 []
+[2019-02-21T18:28:39.697] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 7 timestep 7150
+[2019-02-21T18:28:39.698] [INFO ] [Node 5000] removed subscription 11
+[2019-02-21T18:28:39.698] [INFO ] #@# Current timestep 7250
+[2019-02-21T18:28:39.698] [INFO ] ExpiredPayloadCleanUp for time: 6750. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.699] [INFO ] #@# Current timestep 7300
+[2019-02-21T18:28:39.699] [INFO ] ExpiredPayloadCleanUp for time: 6800. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.700] [INFO ] #@# Current timestep 7350
+[2019-02-21T18:28:39.700] [INFO ] ExpiredPayloadCleanUp for time: 6850. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.701] [INFO ] #@# Current timestep 7400
+[2019-02-21T18:28:39.701] [INFO ] ExpiredPayloadCleanUp for time: 6900. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.703] [INFO ] #@# Current timestep 7450
+[2019-02-21T18:28:39.703] [INFO ] ExpiredPayloadCleanUp for time: 6950. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.704] [INFO ] #@# Current timestep 7500
+[2019-02-21T18:28:39.704] [INFO ] ExpiredPayloadCleanUp for time: 7000. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.705] [INFO ] #@# Current timestep 7550
+[2019-02-21T18:28:39.705] [INFO ] ExpiredPayloadCleanUp for time: 7050. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.706] [INFO ] #@# Current timestep 7600
+[2019-02-21T18:28:39.706] [INFO ] ExpiredPayloadCleanUp for time: 7100. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.707] [INFO ] #@# Current timestep 7650
+[2019-02-21T18:28:39.707] [INFO ] ExpiredPayloadCleanUp for time: 7150. Removing keys: 7 Current size: 0
+[2019-02-21T18:28:39.708] [INFO ] #@# Current timestep 7700
+[2019-02-21T18:28:39.708] [INFO ] ExpiredPayloadCleanUp for time: 7200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.709] [INFO ] #@# Current timestep 7750
+[2019-02-21T18:28:39.709] [INFO ] ExpiredPayloadCleanUp for time: 7250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.710] [INFO ] #@# Current timestep 7800
+[2019-02-21T18:28:39.710] [INFO ] ExpiredPayloadCleanUp for time: 7300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.711] [INFO ] #@# Current timestep 7850
+[2019-02-21T18:28:39.711] [INFO ] ExpiredPayloadCleanUp for time: 7350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.712] [INFO ] #@# Current timestep 7900
+[2019-02-21T18:28:39.712] [INFO ] ExpiredPayloadCleanUp for time: 7400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.713] [INFO ] #@# Current timestep 7950
+[2019-02-21T18:28:39.713] [INFO ] ExpiredPayloadCleanUp for time: 7450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.715] [INFO ] #@# Current timestep 8000
+[2019-02-21T18:28:39.715] [INFO ] ExpiredPayloadCleanUp for time: 7500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.716] [INFO ] #@# Current timestep 8050
+[2019-02-21T18:28:39.716] [INFO ] ExpiredPayloadCleanUp for time: 7550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.717] [INFO ] #@# Current timestep 8100
+[2019-02-21T18:28:39.717] [INFO ] ExpiredPayloadCleanUp for time: 7600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.718] [INFO ] #@# Current timestep 8150
+[2019-02-21T18:28:39.718] [INFO ] ExpiredPayloadCleanUp for time: 7650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.719] [INFO ] #@# Current timestep 8200
+[2019-02-21T18:28:39.719] [INFO ] ExpiredPayloadCleanUp for time: 7700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.720] [INFO ] [Node 5000] send to all. Key=m8. Time=8194.03
+[2019-02-21T18:28:39.720] [INFO ] [Node 5000] added subscription 12 type 0x1e
+[2019-02-21T18:28:39.721] [INFO ] [Node 5000] Confirmed subscription 12. Will be unsuscribed on the next timestep
+[2019-02-21T18:28:39.722] [INFO ] #@# Current timestep 8250
+[2019-02-21T18:28:39.722] [INFO ] ExpiredPayloadCleanUp for time: 7750. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.722] [INFO ] [2|12|m8] RSSI= -1 SNR= 28.6086 POWER= 0 MSGID=8 []
+[2019-02-21T18:28:39.722] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 8 timestep 8200
+[2019-02-21T18:28:39.723] [INFO ] [Node 5000] removed subscription 12
+[2019-02-21T18:28:39.723] [INFO ] #@# Current timestep 8300
+[2019-02-21T18:28:39.723] [INFO ] ExpiredPayloadCleanUp for time: 7800. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.724] [INFO ] #@# Current timestep 8350
+[2019-02-21T18:28:39.724] [INFO ] ExpiredPayloadCleanUp for time: 7850. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.725] [INFO ] #@# Current timestep 8400
+[2019-02-21T18:28:39.725] [INFO ] ExpiredPayloadCleanUp for time: 7900. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.727] [INFO ] #@# Current timestep 8450
+[2019-02-21T18:28:39.727] [INFO ] ExpiredPayloadCleanUp for time: 7950. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.728] [INFO ] #@# Current timestep 8500
+[2019-02-21T18:28:39.728] [INFO ] ExpiredPayloadCleanUp for time: 8000. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.729] [INFO ] #@# Current timestep 8550
+[2019-02-21T18:28:39.729] [INFO ] ExpiredPayloadCleanUp for time: 8050. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.730] [INFO ] #@# Current timestep 8600
+[2019-02-21T18:28:39.730] [INFO ] ExpiredPayloadCleanUp for time: 8100. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.731] [INFO ] #@# Current timestep 8650
+[2019-02-21T18:28:39.731] [INFO ] ExpiredPayloadCleanUp for time: 8150. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.732] [INFO ] #@# Current timestep 8700
+[2019-02-21T18:28:39.732] [INFO ] ExpiredPayloadCleanUp for time: 8200. Removing keys: 8 Current size: 0
+[2019-02-21T18:28:39.733] [INFO ] #@# Current timestep 8750
+[2019-02-21T18:28:39.733] [INFO ] ExpiredPayloadCleanUp for time: 8250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.734] [INFO ] #@# Current timestep 8800
+[2019-02-21T18:28:39.734] [INFO ] ExpiredPayloadCleanUp for time: 8300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.735] [INFO ] #@# Current timestep 8850
+[2019-02-21T18:28:39.735] [INFO ] ExpiredPayloadCleanUp for time: 8350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.736] [INFO ] #@# Current timestep 8900
+[2019-02-21T18:28:39.736] [INFO ] ExpiredPayloadCleanUp for time: 8400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.737] [INFO ] #@# Current timestep 8950
+[2019-02-21T18:28:39.737] [INFO ] ExpiredPayloadCleanUp for time: 8450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.739] [INFO ] #@# Current timestep 9000
+[2019-02-21T18:28:39.739] [INFO ] ExpiredPayloadCleanUp for time: 8500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.740] [INFO ] #@# Current timestep 9050
+[2019-02-21T18:28:39.740] [INFO ] ExpiredPayloadCleanUp for time: 8550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.741] [INFO ] #@# Current timestep 9100
+[2019-02-21T18:28:39.741] [INFO ] ExpiredPayloadCleanUp for time: 8600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.742] [INFO ] #@# Current timestep 9150
+[2019-02-21T18:28:39.742] [INFO ] ExpiredPayloadCleanUp for time: 8650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.743] [INFO ] #@# Current timestep 9200
+[2019-02-21T18:28:39.743] [INFO ] ExpiredPayloadCleanUp for time: 8700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.744] [INFO ] #@# Current timestep 9250
+[2019-02-21T18:28:39.744] [INFO ] ExpiredPayloadCleanUp for time: 8750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.746] [INFO ] #@# Current timestep 9300
+[2019-02-21T18:28:39.746] [INFO ] ExpiredPayloadCleanUp for time: 8800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.746] [INFO ] [Node 5000] send to all. Key=m9. Time=9291.78
+[2019-02-21T18:28:39.746] [INFO ] [Node 5000] added subscription 13 type 0x1e
+[2019-02-21T18:28:39.747] [INFO ] [Node 5000] Confirmed subscription 13. Will be unsuscribed on the next timestep
+[2019-02-21T18:28:39.748] [INFO ] #@# Current timestep 9350
+[2019-02-21T18:28:39.748] [INFO ] ExpiredPayloadCleanUp for time: 8850. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.748] [INFO ] [2|12|m9] RSSI= -1 SNR= 33.8263 POWER= 0 MSGID=9 []
+[2019-02-21T18:28:39.748] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 9 timestep 9300
+[2019-02-21T18:28:39.749] [INFO ] [Node 5000] removed subscription 13
+[2019-02-21T18:28:39.749] [INFO ] #@# Current timestep 9400
+[2019-02-21T18:28:39.749] [INFO ] ExpiredPayloadCleanUp for time: 8900. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.750] [INFO ] #@# Current timestep 9450
+[2019-02-21T18:28:39.750] [INFO ] ExpiredPayloadCleanUp for time: 8950. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.751] [INFO ] #@# Current timestep 9500
+[2019-02-21T18:28:39.752] [INFO ] ExpiredPayloadCleanUp for time: 9000. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.753] [INFO ] #@# Current timestep 9550
+[2019-02-21T18:28:39.753] [INFO ] ExpiredPayloadCleanUp for time: 9050. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.754] [INFO ] #@# Current timestep 9600
+[2019-02-21T18:28:39.754] [INFO ] ExpiredPayloadCleanUp for time: 9100. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.755] [INFO ] #@# Current timestep 9650
+[2019-02-21T18:28:39.755] [INFO ] ExpiredPayloadCleanUp for time: 9150. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.756] [INFO ] #@# Current timestep 9700
+[2019-02-21T18:28:39.756] [INFO ] ExpiredPayloadCleanUp for time: 9200. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.757] [INFO ] #@# Current timestep 9750
+[2019-02-21T18:28:39.757] [INFO ] ExpiredPayloadCleanUp for time: 9250. Removing keys: noting to remove Current size: 1
+[2019-02-21T18:28:39.758] [INFO ] #@# Current timestep 9800
+[2019-02-21T18:28:39.758] [INFO ] ExpiredPayloadCleanUp for time: 9300. Removing keys: 9 Current size: 0
+[2019-02-21T18:28:39.759] [INFO ] #@# Current timestep 9850
+[2019-02-21T18:28:39.759] [INFO ] ExpiredPayloadCleanUp for time: 9350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.760] [INFO ] #@# Current timestep 9900
+[2019-02-21T18:28:39.760] [INFO ] ExpiredPayloadCleanUp for time: 9400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.761] [INFO ] #@# Current timestep 9950
+[2019-02-21T18:28:39.761] [INFO ] ExpiredPayloadCleanUp for time: 9450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.763] [INFO ] #@# Current timestep 10000
+[2019-02-21T18:28:39.763] [INFO ] ExpiredPayloadCleanUp for time: 9500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.765] [INFO ] #@# Current timestep 10050
+[2019-02-21T18:28:39.765] [INFO ] ExpiredPayloadCleanUp for time: 9550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.766] [INFO ] #@# Current timestep 10100
+[2019-02-21T18:28:39.766] [INFO ] ExpiredPayloadCleanUp for time: 9600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.768] [INFO ] #@# Current timestep 10150
+[2019-02-21T18:28:39.768] [INFO ] ExpiredPayloadCleanUp for time: 9650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.770] [INFO ] #@# Current timestep 10200
+[2019-02-21T18:28:39.770] [INFO ] ExpiredPayloadCleanUp for time: 9700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.771] [INFO ] #@# Current timestep 10250
+[2019-02-21T18:28:39.771] [INFO ] ExpiredPayloadCleanUp for time: 9750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.772] [INFO ] #@# Current timestep 10300
+[2019-02-21T18:28:39.772] [INFO ] ExpiredPayloadCleanUp for time: 9800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.773] [INFO ] #@# Current timestep 10350
+[2019-02-21T18:28:39.773] [INFO ] ExpiredPayloadCleanUp for time: 9850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.774] [INFO ] #@# Current timestep 10400
+[2019-02-21T18:28:39.774] [INFO ] ExpiredPayloadCleanUp for time: 9900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.775] [INFO ] #@# Current timestep 10450
+[2019-02-21T18:28:39.775] [INFO ] ExpiredPayloadCleanUp for time: 9950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.776] [INFO ] #@# Current timestep 10500
+[2019-02-21T18:28:39.776] [INFO ] ExpiredPayloadCleanUp for time: 10000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.777] [INFO ] #@# Current timestep 10550
+[2019-02-21T18:28:39.777] [INFO ] ExpiredPayloadCleanUp for time: 10050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.778] [INFO ] #@# Current timestep 10600
+[2019-02-21T18:28:39.778] [INFO ] ExpiredPayloadCleanUp for time: 10100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.780] [INFO ] #@# Current timestep 10650
+[2019-02-21T18:28:39.780] [INFO ] ExpiredPayloadCleanUp for time: 10150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.781] [INFO ] #@# Current timestep 10700
+[2019-02-21T18:28:39.781] [INFO ] ExpiredPayloadCleanUp for time: 10200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.782] [INFO ] #@# Current timestep 10750
+[2019-02-21T18:28:39.782] [INFO ] ExpiredPayloadCleanUp for time: 10250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.783] [INFO ] #@# Current timestep 10800
+[2019-02-21T18:28:39.783] [INFO ] ExpiredPayloadCleanUp for time: 10300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.784] [INFO ] #@# Current timestep 10850
+[2019-02-21T18:28:39.784] [INFO ] ExpiredPayloadCleanUp for time: 10350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.785] [INFO ] #@# Current timestep 10900
+[2019-02-21T18:28:39.785] [INFO ] ExpiredPayloadCleanUp for time: 10400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.786] [INFO ] #@# Current timestep 10950
+[2019-02-21T18:28:39.786] [INFO ] ExpiredPayloadCleanUp for time: 10450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.788] [INFO ] #@# Current timestep 11000
+[2019-02-21T18:28:39.788] [INFO ] ExpiredPayloadCleanUp for time: 10500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.789] [INFO ] #@# Current timestep 11050
+[2019-02-21T18:28:39.789] [INFO ] ExpiredPayloadCleanUp for time: 10550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.790] [INFO ] #@# Current timestep 11100
+[2019-02-21T18:28:39.790] [INFO ] ExpiredPayloadCleanUp for time: 10600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.791] [INFO ] #@# Current timestep 11150
+[2019-02-21T18:28:39.791] [INFO ] ExpiredPayloadCleanUp for time: 10650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.792] [INFO ] #@# Current timestep 11200
+[2019-02-21T18:28:39.792] [INFO ] ExpiredPayloadCleanUp for time: 10700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.793] [INFO ] #@# Current timestep 11250
+[2019-02-21T18:28:39.793] [INFO ] ExpiredPayloadCleanUp for time: 10750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.795] [INFO ] #@# Current timestep 11300
+[2019-02-21T18:28:39.795] [INFO ] ExpiredPayloadCleanUp for time: 10800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.796] [INFO ] #@# Current timestep 11350
+[2019-02-21T18:28:39.796] [INFO ] ExpiredPayloadCleanUp for time: 10850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.797] [INFO ] #@# Current timestep 11400
+[2019-02-21T18:28:39.797] [INFO ] ExpiredPayloadCleanUp for time: 10900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.798] [INFO ] #@# Current timestep 11450
+[2019-02-21T18:28:39.798] [INFO ] ExpiredPayloadCleanUp for time: 10950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.799] [INFO ] #@# Current timestep 11500
+[2019-02-21T18:28:39.799] [INFO ] ExpiredPayloadCleanUp for time: 11000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.800] [INFO ] #@# Current timestep 11550
+[2019-02-21T18:28:39.800] [INFO ] ExpiredPayloadCleanUp for time: 11050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.801] [INFO ] #@# Current timestep 11600
+[2019-02-21T18:28:39.801] [INFO ] ExpiredPayloadCleanUp for time: 11100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.802] [INFO ] #@# Current timestep 11650
+[2019-02-21T18:28:39.802] [INFO ] ExpiredPayloadCleanUp for time: 11150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.803] [INFO ] #@# Current timestep 11700
+[2019-02-21T18:28:39.803] [INFO ] ExpiredPayloadCleanUp for time: 11200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.804] [INFO ] #@# Current timestep 11750
+[2019-02-21T18:28:39.804] [INFO ] ExpiredPayloadCleanUp for time: 11250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.805] [INFO ] #@# Current timestep 11800
+[2019-02-21T18:28:39.805] [INFO ] ExpiredPayloadCleanUp for time: 11300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.807] [INFO ] #@# Current timestep 11850
+[2019-02-21T18:28:39.807] [INFO ] ExpiredPayloadCleanUp for time: 11350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.808] [INFO ] #@# Current timestep 11900
+[2019-02-21T18:28:39.808] [INFO ] ExpiredPayloadCleanUp for time: 11400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.809] [INFO ] #@# Current timestep 11950
+[2019-02-21T18:28:39.809] [INFO ] ExpiredPayloadCleanUp for time: 11450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.810] [INFO ] #@# Current timestep 12000
+[2019-02-21T18:28:39.810] [INFO ] ExpiredPayloadCleanUp for time: 11500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.812] [INFO ] #@# Current timestep 12050
+[2019-02-21T18:28:39.812] [INFO ] ExpiredPayloadCleanUp for time: 11550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.813] [INFO ] #@# Current timestep 12100
+[2019-02-21T18:28:39.813] [INFO ] ExpiredPayloadCleanUp for time: 11600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.814] [INFO ] #@# Current timestep 12150
+[2019-02-21T18:28:39.814] [INFO ] ExpiredPayloadCleanUp for time: 11650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.815] [INFO ] #@# Current timestep 12200
+[2019-02-21T18:28:39.815] [INFO ] ExpiredPayloadCleanUp for time: 11700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.816] [INFO ] #@# Current timestep 12250
+[2019-02-21T18:28:39.816] [INFO ] ExpiredPayloadCleanUp for time: 11750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.817] [INFO ] #@# Current timestep 12300
+[2019-02-21T18:28:39.817] [INFO ] ExpiredPayloadCleanUp for time: 11800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.818] [INFO ] #@# Current timestep 12350
+[2019-02-21T18:28:39.818] [INFO ] ExpiredPayloadCleanUp for time: 11850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.819] [INFO ] #@# Current timestep 12400
+[2019-02-21T18:28:39.819] [INFO ] ExpiredPayloadCleanUp for time: 11900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.820] [INFO ] #@# Current timestep 12450
+[2019-02-21T18:28:39.820] [INFO ] ExpiredPayloadCleanUp for time: 11950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.821] [INFO ] #@# Current timestep 12500
+[2019-02-21T18:28:39.821] [INFO ] ExpiredPayloadCleanUp for time: 12000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.822] [INFO ] #@# Current timestep 12550
+[2019-02-21T18:28:39.822] [INFO ] ExpiredPayloadCleanUp for time: 12050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.823] [INFO ] #@# Current timestep 12600
+[2019-02-21T18:28:39.823] [INFO ] ExpiredPayloadCleanUp for time: 12100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.824] [INFO ] #@# Current timestep 12650
+[2019-02-21T18:28:39.824] [INFO ] ExpiredPayloadCleanUp for time: 12150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.825] [INFO ] #@# Current timestep 12700
+[2019-02-21T18:28:39.826] [INFO ] ExpiredPayloadCleanUp for time: 12200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.827] [INFO ] #@# Current timestep 12750
+[2019-02-21T18:28:39.827] [INFO ] ExpiredPayloadCleanUp for time: 12250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.828] [INFO ] #@# Current timestep 12800
+[2019-02-21T18:28:39.828] [INFO ] ExpiredPayloadCleanUp for time: 12300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.829] [INFO ] #@# Current timestep 12850
+[2019-02-21T18:28:39.829] [INFO ] ExpiredPayloadCleanUp for time: 12350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.830] [INFO ] #@# Current timestep 12900
+[2019-02-21T18:28:39.830] [INFO ] ExpiredPayloadCleanUp for time: 12400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.831] [INFO ] #@# Current timestep 12950
+[2019-02-21T18:28:39.831] [INFO ] ExpiredPayloadCleanUp for time: 12450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.833] [INFO ] #@# Current timestep 13000
+[2019-02-21T18:28:39.833] [INFO ] ExpiredPayloadCleanUp for time: 12500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.835] [INFO ] #@# Current timestep 13050
+[2019-02-21T18:28:39.835] [INFO ] ExpiredPayloadCleanUp for time: 12550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.837] [INFO ] #@# Current timestep 13100
+[2019-02-21T18:28:39.837] [INFO ] ExpiredPayloadCleanUp for time: 12600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.838] [INFO ] #@# Current timestep 13150
+[2019-02-21T18:28:39.838] [INFO ] ExpiredPayloadCleanUp for time: 12650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.840] [INFO ] #@# Current timestep 13200
+[2019-02-21T18:28:39.840] [INFO ] ExpiredPayloadCleanUp for time: 12700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.841] [INFO ] #@# Current timestep 13250
+[2019-02-21T18:28:39.841] [INFO ] ExpiredPayloadCleanUp for time: 12750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.843] [INFO ] #@# Current timestep 13300
+[2019-02-21T18:28:39.843] [INFO ] ExpiredPayloadCleanUp for time: 12800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.844] [INFO ] #@# Current timestep 13350
+[2019-02-21T18:28:39.844] [INFO ] ExpiredPayloadCleanUp for time: 12850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.846] [INFO ] #@# Current timestep 13400
+[2019-02-21T18:28:39.846] [INFO ] ExpiredPayloadCleanUp for time: 12900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.847] [INFO ] #@# Current timestep 13450
+[2019-02-21T18:28:39.848] [INFO ] ExpiredPayloadCleanUp for time: 12950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.849] [INFO ] #@# Current timestep 13500
+[2019-02-21T18:28:39.849] [INFO ] ExpiredPayloadCleanUp for time: 13000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.851] [INFO ] #@# Current timestep 13550
+[2019-02-21T18:28:39.851] [INFO ] ExpiredPayloadCleanUp for time: 13050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.852] [INFO ] #@# Current timestep 13600
+[2019-02-21T18:28:39.852] [INFO ] ExpiredPayloadCleanUp for time: 13100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.854] [INFO ] #@# Current timestep 13650
+[2019-02-21T18:28:39.854] [INFO ] ExpiredPayloadCleanUp for time: 13150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.855] [INFO ] #@# Current timestep 13700
+[2019-02-21T18:28:39.855] [INFO ] ExpiredPayloadCleanUp for time: 13200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.857] [INFO ] #@# Current timestep 13750
+[2019-02-21T18:28:39.857] [INFO ] ExpiredPayloadCleanUp for time: 13250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.858] [INFO ] #@# Current timestep 13800
+[2019-02-21T18:28:39.858] [INFO ] ExpiredPayloadCleanUp for time: 13300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.860] [INFO ] #@# Current timestep 13850
+[2019-02-21T18:28:39.860] [INFO ] ExpiredPayloadCleanUp for time: 13350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.861] [INFO ] #@# Current timestep 13900
+[2019-02-21T18:28:39.861] [INFO ] ExpiredPayloadCleanUp for time: 13400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.863] [INFO ] #@# Current timestep 13950
+[2019-02-21T18:28:39.863] [INFO ] ExpiredPayloadCleanUp for time: 13450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.865] [INFO ] #@# Current timestep 14000
+[2019-02-21T18:28:39.865] [INFO ] ExpiredPayloadCleanUp for time: 13500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.867] [INFO ] #@# Current timestep 14050
+[2019-02-21T18:28:39.867] [INFO ] ExpiredPayloadCleanUp for time: 13550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.868] [INFO ] #@# Current timestep 14100
+[2019-02-21T18:28:39.868] [INFO ] ExpiredPayloadCleanUp for time: 13600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.870] [INFO ] #@# Current timestep 14150
+[2019-02-21T18:28:39.870] [INFO ] ExpiredPayloadCleanUp for time: 13650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.871] [INFO ] #@# Current timestep 14200
+[2019-02-21T18:28:39.871] [INFO ] ExpiredPayloadCleanUp for time: 13700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.873] [INFO ] #@# Current timestep 14250
+[2019-02-21T18:28:39.873] [INFO ] ExpiredPayloadCleanUp for time: 13750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.874] [INFO ] #@# Current timestep 14300
+[2019-02-21T18:28:39.874] [INFO ] ExpiredPayloadCleanUp for time: 13800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.876] [INFO ] #@# Current timestep 14350
+[2019-02-21T18:28:39.876] [INFO ] ExpiredPayloadCleanUp for time: 13850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.877] [INFO ] #@# Current timestep 14400
+[2019-02-21T18:28:39.878] [INFO ] ExpiredPayloadCleanUp for time: 13900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.879] [INFO ] #@# Current timestep 14450
+[2019-02-21T18:28:39.879] [INFO ] ExpiredPayloadCleanUp for time: 13950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.881] [INFO ] #@# Current timestep 14500
+[2019-02-21T18:28:39.881] [INFO ] ExpiredPayloadCleanUp for time: 14000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.882] [INFO ] #@# Current timestep 14550
+[2019-02-21T18:28:39.882] [INFO ] ExpiredPayloadCleanUp for time: 14050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.884] [INFO ] #@# Current timestep 14600
+[2019-02-21T18:28:39.884] [INFO ] ExpiredPayloadCleanUp for time: 14100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.885] [INFO ] #@# Current timestep 14650
+[2019-02-21T18:28:39.885] [INFO ] ExpiredPayloadCleanUp for time: 14150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.887] [INFO ] #@# Current timestep 14700
+[2019-02-21T18:28:39.887] [INFO ] ExpiredPayloadCleanUp for time: 14200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.888] [INFO ] #@# Current timestep 14750
+[2019-02-21T18:28:39.888] [INFO ] ExpiredPayloadCleanUp for time: 14250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.890] [INFO ] #@# Current timestep 14800
+[2019-02-21T18:28:39.890] [INFO ] ExpiredPayloadCleanUp for time: 14300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.891] [INFO ] #@# Current timestep 14850
+[2019-02-21T18:28:39.891] [INFO ] ExpiredPayloadCleanUp for time: 14350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.893] [INFO ] #@# Current timestep 14900
+[2019-02-21T18:28:39.893] [INFO ] ExpiredPayloadCleanUp for time: 14400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.894] [INFO ] #@# Current timestep 14950
+[2019-02-21T18:28:39.894] [INFO ] ExpiredPayloadCleanUp for time: 14450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.896] [INFO ] #@# Current timestep 15000
+[2019-02-21T18:28:39.897] [INFO ] ExpiredPayloadCleanUp for time: 14500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.898] [INFO ] #@# Current timestep 15050
+[2019-02-21T18:28:39.898] [INFO ] ExpiredPayloadCleanUp for time: 14550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.900] [INFO ] #@# Current timestep 15100
+[2019-02-21T18:28:39.900] [INFO ] ExpiredPayloadCleanUp for time: 14600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.901] [INFO ] #@# Current timestep 15150
+[2019-02-21T18:28:39.901] [INFO ] ExpiredPayloadCleanUp for time: 14650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.903] [INFO ] #@# Current timestep 15200
+[2019-02-21T18:28:39.903] [INFO ] ExpiredPayloadCleanUp for time: 14700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.904] [INFO ] #@# Current timestep 15250
+[2019-02-21T18:28:39.904] [INFO ] ExpiredPayloadCleanUp for time: 14750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.906] [INFO ] #@# Current timestep 15300
+[2019-02-21T18:28:39.906] [INFO ] ExpiredPayloadCleanUp for time: 14800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.907] [INFO ] #@# Current timestep 15350
+[2019-02-21T18:28:39.907] [INFO ] ExpiredPayloadCleanUp for time: 14850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.909] [INFO ] #@# Current timestep 15400
+[2019-02-21T18:28:39.909] [INFO ] ExpiredPayloadCleanUp for time: 14900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.910] [INFO ] #@# Current timestep 15450
+[2019-02-21T18:28:39.910] [INFO ] ExpiredPayloadCleanUp for time: 14950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.912] [INFO ] #@# Current timestep 15500
+[2019-02-21T18:28:39.912] [INFO ] ExpiredPayloadCleanUp for time: 15000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.913] [INFO ] #@# Current timestep 15550
+[2019-02-21T18:28:39.914] [INFO ] ExpiredPayloadCleanUp for time: 15050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.915] [INFO ] #@# Current timestep 15600
+[2019-02-21T18:28:39.915] [INFO ] ExpiredPayloadCleanUp for time: 15100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.916] [INFO ] #@# Current timestep 15650
+[2019-02-21T18:28:39.916] [INFO ] ExpiredPayloadCleanUp for time: 15150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.918] [INFO ] #@# Current timestep 15700
+[2019-02-21T18:28:39.918] [INFO ] ExpiredPayloadCleanUp for time: 15200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.919] [INFO ] #@# Current timestep 15750
+[2019-02-21T18:28:39.919] [INFO ] ExpiredPayloadCleanUp for time: 15250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.921] [INFO ] #@# Current timestep 15800
+[2019-02-21T18:28:39.921] [INFO ] ExpiredPayloadCleanUp for time: 15300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.923] [INFO ] #@# Current timestep 15850
+[2019-02-21T18:28:39.923] [INFO ] ExpiredPayloadCleanUp for time: 15350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.924] [INFO ] #@# Current timestep 15900
+[2019-02-21T18:28:39.924] [INFO ] ExpiredPayloadCleanUp for time: 15400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.926] [INFO ] #@# Current timestep 15950
+[2019-02-21T18:28:39.926] [INFO ] ExpiredPayloadCleanUp for time: 15450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.928] [INFO ] #@# Current timestep 16000
+[2019-02-21T18:28:39.928] [INFO ] ExpiredPayloadCleanUp for time: 15500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.930] [INFO ] #@# Current timestep 16050
+[2019-02-21T18:28:39.930] [INFO ] ExpiredPayloadCleanUp for time: 15550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.931] [INFO ] #@# Current timestep 16100
+[2019-02-21T18:28:39.931] [INFO ] ExpiredPayloadCleanUp for time: 15600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.933] [INFO ] #@# Current timestep 16150
+[2019-02-21T18:28:39.933] [INFO ] ExpiredPayloadCleanUp for time: 15650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.934] [INFO ] #@# Current timestep 16200
+[2019-02-21T18:28:39.934] [INFO ] ExpiredPayloadCleanUp for time: 15700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.936] [INFO ] #@# Current timestep 16250
+[2019-02-21T18:28:39.936] [INFO ] ExpiredPayloadCleanUp for time: 15750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.937] [INFO ] #@# Current timestep 16300
+[2019-02-21T18:28:39.937] [INFO ] ExpiredPayloadCleanUp for time: 15800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.939] [INFO ] #@# Current timestep 16350
+[2019-02-21T18:28:39.939] [INFO ] ExpiredPayloadCleanUp for time: 15850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.940] [INFO ] #@# Current timestep 16400
+[2019-02-21T18:28:39.940] [INFO ] ExpiredPayloadCleanUp for time: 15900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.942] [INFO ] #@# Current timestep 16450
+[2019-02-21T18:28:39.942] [INFO ] ExpiredPayloadCleanUp for time: 15950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.943] [INFO ] #@# Current timestep 16500
+[2019-02-21T18:28:39.943] [INFO ] ExpiredPayloadCleanUp for time: 16000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.945] [INFO ] #@# Current timestep 16550
+[2019-02-21T18:28:39.945] [INFO ] ExpiredPayloadCleanUp for time: 16050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.946] [INFO ] #@# Current timestep 16600
+[2019-02-21T18:28:39.946] [INFO ] ExpiredPayloadCleanUp for time: 16100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.948] [INFO ] #@# Current timestep 16650
+[2019-02-21T18:28:39.948] [INFO ] ExpiredPayloadCleanUp for time: 16150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.949] [INFO ] #@# Current timestep 16700
+[2019-02-21T18:28:39.949] [INFO ] ExpiredPayloadCleanUp for time: 16200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.950] [INFO ] #@# Current timestep 16750
+[2019-02-21T18:28:39.950] [INFO ] ExpiredPayloadCleanUp for time: 16250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.951] [INFO ] #@# Current timestep 16800
+[2019-02-21T18:28:39.951] [INFO ] ExpiredPayloadCleanUp for time: 16300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.952] [INFO ] #@# Current timestep 16850
+[2019-02-21T18:28:39.952] [INFO ] ExpiredPayloadCleanUp for time: 16350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.953] [INFO ] #@# Current timestep 16900
+[2019-02-21T18:28:39.953] [INFO ] ExpiredPayloadCleanUp for time: 16400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.954] [INFO ] #@# Current timestep 16950
+[2019-02-21T18:28:39.954] [INFO ] ExpiredPayloadCleanUp for time: 16450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.956] [INFO ] #@# Current timestep 17000
+[2019-02-21T18:28:39.956] [INFO ] ExpiredPayloadCleanUp for time: 16500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.957] [INFO ] #@# Current timestep 17050
+[2019-02-21T18:28:39.957] [INFO ] ExpiredPayloadCleanUp for time: 16550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.958] [INFO ] #@# Current timestep 17100
+[2019-02-21T18:28:39.958] [INFO ] ExpiredPayloadCleanUp for time: 16600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.959] [INFO ] #@# Current timestep 17150
+[2019-02-21T18:28:39.959] [INFO ] ExpiredPayloadCleanUp for time: 16650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.960] [INFO ] #@# Current timestep 17200
+[2019-02-21T18:28:39.960] [INFO ] ExpiredPayloadCleanUp for time: 16700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.961] [INFO ] #@# Current timestep 17250
+[2019-02-21T18:28:39.961] [INFO ] ExpiredPayloadCleanUp for time: 16750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.962] [INFO ] #@# Current timestep 17300
+[2019-02-21T18:28:39.962] [INFO ] ExpiredPayloadCleanUp for time: 16800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.964] [INFO ] #@# Current timestep 17350
+[2019-02-21T18:28:39.964] [INFO ] ExpiredPayloadCleanUp for time: 16850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.965] [INFO ] #@# Current timestep 17400
+[2019-02-21T18:28:39.965] [INFO ] ExpiredPayloadCleanUp for time: 16900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.966] [INFO ] #@# Current timestep 17450
+[2019-02-21T18:28:39.966] [INFO ] ExpiredPayloadCleanUp for time: 16950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.968] [INFO ] #@# Current timestep 17500
+[2019-02-21T18:28:39.968] [INFO ] ExpiredPayloadCleanUp for time: 17000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.969] [INFO ] #@# Current timestep 17550
+[2019-02-21T18:28:39.969] [INFO ] ExpiredPayloadCleanUp for time: 17050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.971] [INFO ] #@# Current timestep 17600
+[2019-02-21T18:28:39.971] [INFO ] ExpiredPayloadCleanUp for time: 17100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.972] [INFO ] #@# Current timestep 17650
+[2019-02-21T18:28:39.972] [INFO ] ExpiredPayloadCleanUp for time: 17150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.974] [INFO ] #@# Current timestep 17700
+[2019-02-21T18:28:39.974] [INFO ] ExpiredPayloadCleanUp for time: 17200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.975] [INFO ] #@# Current timestep 17750
+[2019-02-21T18:28:39.975] [INFO ] ExpiredPayloadCleanUp for time: 17250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.977] [INFO ] #@# Current timestep 17800
+[2019-02-21T18:28:39.977] [INFO ] ExpiredPayloadCleanUp for time: 17300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.978] [INFO ] #@# Current timestep 17850
+[2019-02-21T18:28:39.978] [INFO ] ExpiredPayloadCleanUp for time: 17350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.980] [INFO ] #@# Current timestep 17900
+[2019-02-21T18:28:39.980] [INFO ] ExpiredPayloadCleanUp for time: 17400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.981] [INFO ] #@# Current timestep 17950
+[2019-02-21T18:28:39.981] [INFO ] ExpiredPayloadCleanUp for time: 17450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.984] [INFO ] #@# Current timestep 18000
+[2019-02-21T18:28:39.984] [INFO ] ExpiredPayloadCleanUp for time: 17500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.986] [INFO ] #@# Current timestep 18050
+[2019-02-21T18:28:39.986] [INFO ] ExpiredPayloadCleanUp for time: 17550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.987] [INFO ] #@# Current timestep 18100
+[2019-02-21T18:28:39.987] [INFO ] ExpiredPayloadCleanUp for time: 17600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.989] [INFO ] #@# Current timestep 18150
+[2019-02-21T18:28:39.989] [INFO ] ExpiredPayloadCleanUp for time: 17650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.990] [INFO ] #@# Current timestep 18200
+[2019-02-21T18:28:39.990] [INFO ] ExpiredPayloadCleanUp for time: 17700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.991] [INFO ] #@# Current timestep 18250
+[2019-02-21T18:28:39.991] [INFO ] ExpiredPayloadCleanUp for time: 17750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.993] [INFO ] #@# Current timestep 18300
+[2019-02-21T18:28:39.993] [INFO ] ExpiredPayloadCleanUp for time: 17800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.994] [INFO ] #@# Current timestep 18350
+[2019-02-21T18:28:39.994] [INFO ] ExpiredPayloadCleanUp for time: 17850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.995] [INFO ] #@# Current timestep 18400
+[2019-02-21T18:28:39.995] [INFO ] ExpiredPayloadCleanUp for time: 17900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.996] [INFO ] #@# Current timestep 18450
+[2019-02-21T18:28:39.996] [INFO ] ExpiredPayloadCleanUp for time: 17950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.997] [INFO ] #@# Current timestep 18500
+[2019-02-21T18:28:39.997] [INFO ] ExpiredPayloadCleanUp for time: 18000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.998] [INFO ] #@# Current timestep 18550
+[2019-02-21T18:28:39.998] [INFO ] ExpiredPayloadCleanUp for time: 18050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:39.999] [INFO ] #@# Current timestep 18600
+[2019-02-21T18:28:39.999] [INFO ] ExpiredPayloadCleanUp for time: 18100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.000] [INFO ] #@# Current timestep 18650
+[2019-02-21T18:28:40.000] [INFO ] ExpiredPayloadCleanUp for time: 18150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.001] [INFO ] #@# Current timestep 18700
+[2019-02-21T18:28:40.001] [INFO ] ExpiredPayloadCleanUp for time: 18200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.002] [INFO ] #@# Current timestep 18750
+[2019-02-21T18:28:40.002] [INFO ] ExpiredPayloadCleanUp for time: 18250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.003] [INFO ] #@# Current timestep 18800
+[2019-02-21T18:28:40.003] [INFO ] ExpiredPayloadCleanUp for time: 18300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.004] [INFO ] #@# Current timestep 18850
+[2019-02-21T18:28:40.004] [INFO ] ExpiredPayloadCleanUp for time: 18350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.005] [INFO ] #@# Current timestep 18900
+[2019-02-21T18:28:40.006] [INFO ] ExpiredPayloadCleanUp for time: 18400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.007] [INFO ] #@# Current timestep 18950
+[2019-02-21T18:28:40.007] [INFO ] ExpiredPayloadCleanUp for time: 18450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.008] [INFO ] #@# Current timestep 19000
+[2019-02-21T18:28:40.008] [INFO ] ExpiredPayloadCleanUp for time: 18500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.009] [INFO ] #@# Current timestep 19050
+[2019-02-21T18:28:40.009] [INFO ] ExpiredPayloadCleanUp for time: 18550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.010] [INFO ] #@# Current timestep 19100
+[2019-02-21T18:28:40.010] [INFO ] ExpiredPayloadCleanUp for time: 18600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.012] [INFO ] #@# Current timestep 19150
+[2019-02-21T18:28:40.012] [INFO ] ExpiredPayloadCleanUp for time: 18650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.013] [INFO ] #@# Current timestep 19200
+[2019-02-21T18:28:40.013] [INFO ] ExpiredPayloadCleanUp for time: 18700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.014] [INFO ] #@# Current timestep 19250
+[2019-02-21T18:28:40.014] [INFO ] ExpiredPayloadCleanUp for time: 18750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.015] [INFO ] #@# Current timestep 19300
+[2019-02-21T18:28:40.015] [INFO ] ExpiredPayloadCleanUp for time: 18800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.016] [INFO ] #@# Current timestep 19350
+[2019-02-21T18:28:40.016] [INFO ] ExpiredPayloadCleanUp for time: 18850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.017] [INFO ] #@# Current timestep 19400
+[2019-02-21T18:28:40.017] [INFO ] ExpiredPayloadCleanUp for time: 18900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.018] [INFO ] #@# Current timestep 19450
+[2019-02-21T18:28:40.018] [INFO ] ExpiredPayloadCleanUp for time: 18950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.019] [INFO ] #@# Current timestep 19500
+[2019-02-21T18:28:40.019] [INFO ] ExpiredPayloadCleanUp for time: 19000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.020] [INFO ] #@# Current timestep 19550
+[2019-02-21T18:28:40.020] [INFO ] ExpiredPayloadCleanUp for time: 19050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.021] [INFO ] #@# Current timestep 19600
+[2019-02-21T18:28:40.021] [INFO ] ExpiredPayloadCleanUp for time: 19100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.022] [INFO ] #@# Current timestep 19650
+[2019-02-21T18:28:40.023] [INFO ] ExpiredPayloadCleanUp for time: 19150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.024] [INFO ] #@# Current timestep 19700
+[2019-02-21T18:28:40.024] [INFO ] ExpiredPayloadCleanUp for time: 19200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.025] [INFO ] #@# Current timestep 19750
+[2019-02-21T18:28:40.025] [INFO ] ExpiredPayloadCleanUp for time: 19250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.026] [INFO ] #@# Current timestep 19800
+[2019-02-21T18:28:40.026] [INFO ] ExpiredPayloadCleanUp for time: 19300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.027] [INFO ] #@# Current timestep 19850
+[2019-02-21T18:28:40.027] [INFO ] ExpiredPayloadCleanUp for time: 19350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.028] [INFO ] #@# Current timestep 19900
+[2019-02-21T18:28:40.028] [INFO ] ExpiredPayloadCleanUp for time: 19400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.029] [INFO ] #@# Current timestep 19950
+[2019-02-21T18:28:40.029] [INFO ] ExpiredPayloadCleanUp for time: 19450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.031] [INFO ] #@# Current timestep 20000
+[2019-02-21T18:28:40.031] [INFO ] ExpiredPayloadCleanUp for time: 19500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.032] [INFO ] #@# Current timestep 20050
+[2019-02-21T18:28:40.032] [INFO ] ExpiredPayloadCleanUp for time: 19550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.033] [INFO ] #@# Current timestep 20100
+[2019-02-21T18:28:40.033] [INFO ] ExpiredPayloadCleanUp for time: 19600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.034] [INFO ] #@# Current timestep 20150
+[2019-02-21T18:28:40.034] [INFO ] ExpiredPayloadCleanUp for time: 19650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.035] [INFO ] #@# Current timestep 20200
+[2019-02-21T18:28:40.035] [INFO ] ExpiredPayloadCleanUp for time: 19700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.036] [INFO ] #@# Current timestep 20250
+[2019-02-21T18:28:40.036] [INFO ] ExpiredPayloadCleanUp for time: 19750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.037] [INFO ] #@# Current timestep 20300
+[2019-02-21T18:28:40.037] [INFO ] ExpiredPayloadCleanUp for time: 19800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.038] [INFO ] #@# Current timestep 20350
+[2019-02-21T18:28:40.038] [INFO ] ExpiredPayloadCleanUp for time: 19850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.039] [INFO ] #@# Current timestep 20400
+[2019-02-21T18:28:40.039] [INFO ] ExpiredPayloadCleanUp for time: 19900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.040] [INFO ] #@# Current timestep 20450
+[2019-02-21T18:28:40.040] [INFO ] ExpiredPayloadCleanUp for time: 19950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.042] [INFO ] #@# Current timestep 20500
+[2019-02-21T18:28:40.042] [INFO ] ExpiredPayloadCleanUp for time: 20000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.043] [INFO ] #@# Current timestep 20550
+[2019-02-21T18:28:40.043] [INFO ] ExpiredPayloadCleanUp for time: 20050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.044] [INFO ] #@# Current timestep 20600
+[2019-02-21T18:28:40.044] [INFO ] ExpiredPayloadCleanUp for time: 20100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.045] [INFO ] #@# Current timestep 20650
+[2019-02-21T18:28:40.045] [INFO ] ExpiredPayloadCleanUp for time: 20150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.046] [INFO ] #@# Current timestep 20700
+[2019-02-21T18:28:40.046] [INFO ] ExpiredPayloadCleanUp for time: 20200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.047] [INFO ] #@# Current timestep 20750
+[2019-02-21T18:28:40.047] [INFO ] ExpiredPayloadCleanUp for time: 20250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.048] [INFO ] #@# Current timestep 20800
+[2019-02-21T18:28:40.048] [INFO ] ExpiredPayloadCleanUp for time: 20300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.049] [INFO ] #@# Current timestep 20850
+[2019-02-21T18:28:40.049] [INFO ] ExpiredPayloadCleanUp for time: 20350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.050] [INFO ] #@# Current timestep 20900
+[2019-02-21T18:28:40.050] [INFO ] ExpiredPayloadCleanUp for time: 20400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.051] [INFO ] #@# Current timestep 20950
+[2019-02-21T18:28:40.051] [INFO ] ExpiredPayloadCleanUp for time: 20450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.053] [INFO ] #@# Current timestep 21000
+[2019-02-21T18:28:40.053] [INFO ] ExpiredPayloadCleanUp for time: 20500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.054] [INFO ] #@# Current timestep 21050
+[2019-02-21T18:28:40.054] [INFO ] ExpiredPayloadCleanUp for time: 20550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.055] [INFO ] #@# Current timestep 21100
+[2019-02-21T18:28:40.055] [INFO ] ExpiredPayloadCleanUp for time: 20600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.056] [INFO ] #@# Current timestep 21150
+[2019-02-21T18:28:40.056] [INFO ] ExpiredPayloadCleanUp for time: 20650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.057] [INFO ] #@# Current timestep 21200
+[2019-02-21T18:28:40.057] [INFO ] ExpiredPayloadCleanUp for time: 20700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.058] [INFO ] #@# Current timestep 21250
+[2019-02-21T18:28:40.058] [INFO ] ExpiredPayloadCleanUp for time: 20750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.060] [INFO ] #@# Current timestep 21300
+[2019-02-21T18:28:40.060] [INFO ] ExpiredPayloadCleanUp for time: 20800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.061] [INFO ] #@# Current timestep 21350
+[2019-02-21T18:28:40.061] [INFO ] ExpiredPayloadCleanUp for time: 20850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.062] [INFO ] #@# Current timestep 21400
+[2019-02-21T18:28:40.062] [INFO ] ExpiredPayloadCleanUp for time: 20900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.063] [INFO ] #@# Current timestep 21450
+[2019-02-21T18:28:40.063] [INFO ] ExpiredPayloadCleanUp for time: 20950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.064] [INFO ] #@# Current timestep 21500
+[2019-02-21T18:28:40.064] [INFO ] ExpiredPayloadCleanUp for time: 21000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.065] [INFO ] #@# Current timestep 21550
+[2019-02-21T18:28:40.065] [INFO ] ExpiredPayloadCleanUp for time: 21050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.066] [INFO ] #@# Current timestep 21600
+[2019-02-21T18:28:40.066] [INFO ] ExpiredPayloadCleanUp for time: 21100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.067] [INFO ] #@# Current timestep 21650
+[2019-02-21T18:28:40.067] [INFO ] ExpiredPayloadCleanUp for time: 21150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.068] [INFO ] #@# Current timestep 21700
+[2019-02-21T18:28:40.068] [INFO ] ExpiredPayloadCleanUp for time: 21200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.069] [INFO ] #@# Current timestep 21750
+[2019-02-21T18:28:40.069] [INFO ] ExpiredPayloadCleanUp for time: 21250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.070] [INFO ] #@# Current timestep 21800
+[2019-02-21T18:28:40.070] [INFO ] ExpiredPayloadCleanUp for time: 21300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.071] [INFO ] #@# Current timestep 21850
+[2019-02-21T18:28:40.071] [INFO ] ExpiredPayloadCleanUp for time: 21350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.072] [INFO ] #@# Current timestep 21900
+[2019-02-21T18:28:40.072] [INFO ] ExpiredPayloadCleanUp for time: 21400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.073] [INFO ] #@# Current timestep 21950
+[2019-02-21T18:28:40.074] [INFO ] ExpiredPayloadCleanUp for time: 21450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.075] [INFO ] #@# Current timestep 22000
+[2019-02-21T18:28:40.075] [INFO ] ExpiredPayloadCleanUp for time: 21500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.076] [INFO ] #@# Current timestep 22050
+[2019-02-21T18:28:40.076] [INFO ] ExpiredPayloadCleanUp for time: 21550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.077] [INFO ] #@# Current timestep 22100
+[2019-02-21T18:28:40.078] [INFO ] ExpiredPayloadCleanUp for time: 21600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.079] [INFO ] #@# Current timestep 22150
+[2019-02-21T18:28:40.079] [INFO ] ExpiredPayloadCleanUp for time: 21650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.080] [INFO ] #@# Current timestep 22200
+[2019-02-21T18:28:40.080] [INFO ] ExpiredPayloadCleanUp for time: 21700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.081] [INFO ] #@# Current timestep 22250
+[2019-02-21T18:28:40.081] [INFO ] ExpiredPayloadCleanUp for time: 21750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.082] [INFO ] #@# Current timestep 22300
+[2019-02-21T18:28:40.082] [INFO ] ExpiredPayloadCleanUp for time: 21800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.083] [INFO ] #@# Current timestep 22350
+[2019-02-21T18:28:40.083] [INFO ] ExpiredPayloadCleanUp for time: 21850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.084] [INFO ] #@# Current timestep 22400
+[2019-02-21T18:28:40.084] [INFO ] ExpiredPayloadCleanUp for time: 21900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.085] [INFO ] #@# Current timestep 22450
+[2019-02-21T18:28:40.085] [INFO ] ExpiredPayloadCleanUp for time: 21950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.086] [INFO ] #@# Current timestep 22500
+[2019-02-21T18:28:40.086] [INFO ] ExpiredPayloadCleanUp for time: 22000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.087] [INFO ] #@# Current timestep 22550
+[2019-02-21T18:28:40.087] [INFO ] ExpiredPayloadCleanUp for time: 22050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.088] [INFO ] #@# Current timestep 22600
+[2019-02-21T18:28:40.088] [INFO ] ExpiredPayloadCleanUp for time: 22100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.089] [INFO ] #@# Current timestep 22650
+[2019-02-21T18:28:40.089] [INFO ] ExpiredPayloadCleanUp for time: 22150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.090] [INFO ] #@# Current timestep 22700
+[2019-02-21T18:28:40.090] [INFO ] ExpiredPayloadCleanUp for time: 22200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.091] [INFO ] #@# Current timestep 22750
+[2019-02-21T18:28:40.092] [INFO ] ExpiredPayloadCleanUp for time: 22250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.093] [INFO ] #@# Current timestep 22800
+[2019-02-21T18:28:40.093] [INFO ] ExpiredPayloadCleanUp for time: 22300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.094] [INFO ] #@# Current timestep 22850
+[2019-02-21T18:28:40.094] [INFO ] ExpiredPayloadCleanUp for time: 22350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.095] [INFO ] #@# Current timestep 22900
+[2019-02-21T18:28:40.095] [INFO ] ExpiredPayloadCleanUp for time: 22400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.096] [INFO ] #@# Current timestep 22950
+[2019-02-21T18:28:40.096] [INFO ] ExpiredPayloadCleanUp for time: 22450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.097] [INFO ] #@# Current timestep 23000
+[2019-02-21T18:28:40.097] [INFO ] ExpiredPayloadCleanUp for time: 22500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.099] [INFO ] #@# Current timestep 23050
+[2019-02-21T18:28:40.099] [INFO ] ExpiredPayloadCleanUp for time: 22550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.100] [INFO ] #@# Current timestep 23100
+[2019-02-21T18:28:40.100] [INFO ] ExpiredPayloadCleanUp for time: 22600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.101] [INFO ] #@# Current timestep 23150
+[2019-02-21T18:28:40.101] [INFO ] ExpiredPayloadCleanUp for time: 22650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.102] [INFO ] #@# Current timestep 23200
+[2019-02-21T18:28:40.102] [INFO ] ExpiredPayloadCleanUp for time: 22700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.103] [INFO ] #@# Current timestep 23250
+[2019-02-21T18:28:40.103] [INFO ] ExpiredPayloadCleanUp for time: 22750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.104] [INFO ] #@# Current timestep 23300
+[2019-02-21T18:28:40.104] [INFO ] ExpiredPayloadCleanUp for time: 22800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.106] [INFO ] #@# Current timestep 23350
+[2019-02-21T18:28:40.106] [INFO ] ExpiredPayloadCleanUp for time: 22850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.107] [INFO ] #@# Current timestep 23400
+[2019-02-21T18:28:40.107] [INFO ] ExpiredPayloadCleanUp for time: 22900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.108] [INFO ] #@# Current timestep 23450
+[2019-02-21T18:28:40.108] [INFO ] ExpiredPayloadCleanUp for time: 22950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.109] [INFO ] #@# Current timestep 23500
+[2019-02-21T18:28:40.109] [INFO ] ExpiredPayloadCleanUp for time: 23000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.111] [INFO ] #@# Current timestep 23550
+[2019-02-21T18:28:40.111] [INFO ] ExpiredPayloadCleanUp for time: 23050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.112] [INFO ] #@# Current timestep 23600
+[2019-02-21T18:28:40.112] [INFO ] ExpiredPayloadCleanUp for time: 23100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.113] [INFO ] #@# Current timestep 23650
+[2019-02-21T18:28:40.113] [INFO ] ExpiredPayloadCleanUp for time: 23150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.114] [INFO ] #@# Current timestep 23700
+[2019-02-21T18:28:40.114] [INFO ] ExpiredPayloadCleanUp for time: 23200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.115] [INFO ] #@# Current timestep 23750
+[2019-02-21T18:28:40.115] [INFO ] ExpiredPayloadCleanUp for time: 23250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.116] [INFO ] #@# Current timestep 23800
+[2019-02-21T18:28:40.116] [INFO ] ExpiredPayloadCleanUp for time: 23300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.117] [INFO ] #@# Current timestep 23850
+[2019-02-21T18:28:40.117] [INFO ] ExpiredPayloadCleanUp for time: 23350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.118] [INFO ] #@# Current timestep 23900
+[2019-02-21T18:28:40.118] [INFO ] ExpiredPayloadCleanUp for time: 23400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.119] [INFO ] #@# Current timestep 23950
+[2019-02-21T18:28:40.119] [INFO ] ExpiredPayloadCleanUp for time: 23450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.121] [INFO ] #@# Current timestep 24000
+[2019-02-21T18:28:40.121] [INFO ] ExpiredPayloadCleanUp for time: 23500. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.122] [INFO ] #@# Current timestep 24050
+[2019-02-21T18:28:40.122] [INFO ] ExpiredPayloadCleanUp for time: 23550. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.123] [INFO ] #@# Current timestep 24100
+[2019-02-21T18:28:40.123] [INFO ] ExpiredPayloadCleanUp for time: 23600. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.124] [INFO ] #@# Current timestep 24150
+[2019-02-21T18:28:40.124] [INFO ] ExpiredPayloadCleanUp for time: 23650. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.125] [INFO ] #@# Current timestep 24200
+[2019-02-21T18:28:40.125] [INFO ] ExpiredPayloadCleanUp for time: 23700. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.127] [INFO ] #@# Current timestep 24250
+[2019-02-21T18:28:40.127] [INFO ] ExpiredPayloadCleanUp for time: 23750. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.128] [INFO ] #@# Current timestep 24300
+[2019-02-21T18:28:40.128] [INFO ] ExpiredPayloadCleanUp for time: 23800. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.129] [INFO ] #@# Current timestep 24350
+[2019-02-21T18:28:40.129] [INFO ] ExpiredPayloadCleanUp for time: 23850. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.130] [INFO ] #@# Current timestep 24400
+[2019-02-21T18:28:40.130] [INFO ] ExpiredPayloadCleanUp for time: 23900. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.131] [INFO ] #@# Current timestep 24450
+[2019-02-21T18:28:40.131] [INFO ] ExpiredPayloadCleanUp for time: 23950. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.132] [INFO ] #@# Current timestep 24500
+[2019-02-21T18:28:40.132] [INFO ] ExpiredPayloadCleanUp for time: 24000. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.133] [INFO ] #@# Current timestep 24550
+[2019-02-21T18:28:40.133] [INFO ] ExpiredPayloadCleanUp for time: 24050. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.134] [INFO ] #@# Current timestep 24600
+[2019-02-21T18:28:40.134] [INFO ] ExpiredPayloadCleanUp for time: 24100. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.135] [INFO ] #@# Current timestep 24650
+[2019-02-21T18:28:40.135] [INFO ] ExpiredPayloadCleanUp for time: 24150. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.136] [INFO ] #@# Current timestep 24700
+[2019-02-21T18:28:40.136] [INFO ] ExpiredPayloadCleanUp for time: 24200. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.137] [INFO ] #@# Current timestep 24750
+[2019-02-21T18:28:40.137] [INFO ] ExpiredPayloadCleanUp for time: 24250. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.138] [INFO ] #@# Current timestep 24800
+[2019-02-21T18:28:40.138] [INFO ] ExpiredPayloadCleanUp for time: 24300. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.139] [INFO ] #@# Current timestep 24850
+[2019-02-21T18:28:40.139] [INFO ] ExpiredPayloadCleanUp for time: 24350. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.140] [INFO ] #@# Current timestep 24900
+[2019-02-21T18:28:40.140] [INFO ] ExpiredPayloadCleanUp for time: 24400. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.141] [INFO ] #@# Current timestep 24950
+[2019-02-21T18:28:40.141] [INFO ] ExpiredPayloadCleanUp for time: 24450. Removing keys: noting to remove Current size: 0
+[2019-02-21T18:28:40.143] [INFO ] #@# Current timestep 25000
+[2019-02-21T18:28:40.143] [INFO ] ExpiredPayloadCleanUp for time: 24500. Removing keys: noting to remove Current size: 0
