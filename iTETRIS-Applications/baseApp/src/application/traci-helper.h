@@ -39,7 +39,7 @@
 
 #include <map>
 #include "foreign/tcpip/storage.h"
-#include "traci-server/TraCIConstants.h"
+#include "libsumo/TraCIConstants.h"
 
 // result type: Ok
 #define SUMO_RTYPE_OK 0x00
@@ -216,8 +216,8 @@ namespace baseapp
 
 		        static std::map<const int, int> createValueMap() {
 		            std::map<const int, int> ret;
-                    ret[VAR_SPEED] = TYPE_DOUBLE;
-                    ret[VAR_MAXSPEED] = TYPE_DOUBLE;
+                    ret[libsumo::VAR_SPEED] = libsumo::TYPE_DOUBLE;
+                    ret[libsumo::VAR_MAXSPEED] = libsumo::TYPE_DOUBLE;
 		            return ret;
 		        }
 

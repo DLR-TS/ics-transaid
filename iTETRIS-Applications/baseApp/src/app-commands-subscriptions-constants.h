@@ -271,7 +271,7 @@
 
 #define VALUE_GET_DATA_BY_RESULT_CONTAINER_ID      0x01
 
-#define VAR_SPEED 0x40
+//#define VAR_SPEED 0x40
 
 #define VALUE__ALL_ID        0x11
 #define VALUE__LIST_ID       0x12

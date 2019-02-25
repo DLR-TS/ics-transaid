@@ -79,10 +79,10 @@ namespace testapp
             if (ProgramConfiguration::GetTestCase()=="simpleExecute") {
                 // do nothing
             } else if (ProgramConfiguration::GetTestCase()=="setVType") {
-                GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
+                GetController()->AddTraciSubscription(libsumo::CMD_GET_VEHICLE_VARIABLE, libsumo::VAR_TYPE);
                 tcpip::Storage type;
                 type.writeString("t2");
-                GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_TYPE, TYPE_STRING, &type);
+                GetController()->AddTraciSubscription(libsumo::CMD_SET_VEHICLE_VARIABLE, libsumo::VAR_TYPE, libsumo::TYPE_STRING, &type);
             } else if (ProgramConfiguration::GetTestCase() == "commSimple") {
                 // Time to abort waiting for a response after insertion.
                 // Will be ineffective if communication runs as intended (test case commSimple2).
@@ -208,7 +208,7 @@ namespace testapp
             if (ProgramConfiguration::GetTestCase() == "drivingDistance") {
                 if (CurrentTime::Now() == 5000) {
                     std::string sumoID = GetController()->GetNode()->getSumoId();
-                    auto distResponse = std::dynamic_pointer_cast<libsumo::TraCIDouble>(GetLastTraCIResponse(sumoID, DISTANCE_REQUEST).second);
+                    auto distResponse = std::dynamic_pointer_cast<libsumo::TraCIDouble>(GetLastTraCIResponse(sumoID, libsumo::DISTANCE_REQUEST).second);
                     if (distResponse != nullptr) {
                         double dist = distResponse->value;
                         NS_LOG_INFO(Log() << "Driving distance for veh " << sumoID << " at time " << CurrentTime::Now() << " is " << dist);
@@ -219,7 +219,7 @@ namespace testapp
             } else if (ProgramConfiguration::GetTestCase() == "setVType") {
                 if (CurrentTime::Now() == 10000) {
                     // check vType at time 10.
-                    GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_TYPE);
+                    GetController()->AddTraciSubscription(libsumo::CMD_GET_VEHICLE_VARIABLE, libsumo::VAR_TYPE);
                 }
             } else if (ProgramConfiguration::GetTestCase() == "inductionLoop") {
                 // Vehicle does nothing
@@ -227,11 +227,11 @@ namespace testapp
 							  //QUESTION: This seems to work only on specifi values. Why ?
 							  if (CurrentTime::Now() % 1000 == 0.0) {
 								  	// retrieve speed every 10[sec].
-									  GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
+									  GetController()->AddTraciSubscription(libsumo::CMD_GET_VEHICLE_VARIABLE, libsumo::VAR_SPEED);
 										// retrieve lane id every 10[sec].
-									  GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_LANE_ID);
+									  GetController()->AddTraciSubscription(libsumo::CMD_GET_VEHICLE_VARIABLE, libsumo::VAR_LANE_ID);
 										// retrieve 1D position every lane at 10[sec].
-									  GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_LANEPOSITION);
+									  GetController()->AddTraciSubscription(libsumo::CMD_GET_VEHICLE_VARIABLE, libsumo::VAR_LANEPOSITION);
 							  }
 						} else if (ProgramConfiguration::GetTestCase() == "testToC") {
 							  // TODO: instead of time, trigger ToC via lane ID and position

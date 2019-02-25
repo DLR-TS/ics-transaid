@@ -178,10 +178,10 @@ namespace protocolspeedapp
             //Example use of a traci command subscription
             if (ProgramConfiguration::GetTestCase()=="") {
                 // conserve behaviour for old demo app
-                GetController()->AddTraciSubscription(CMD_GET_VEHICLE_VARIABLE, VAR_SPEED);
+                GetController()->AddTraciSubscription(libsumo::CMD_GET_VEHICLE_VARIABLE, libsumo::VAR_SPEED);
                 tcpip::Storage maxSpeed;
                 maxSpeed.writeDouble(20);
-                GetController()->AddTraciSubscription(CMD_SET_VEHICLE_VARIABLE, VAR_MAXSPEED, TYPE_DOUBLE, &maxSpeed);
+                GetController()->AddTraciSubscription(libsumo::CMD_SET_VEHICLE_VARIABLE, libsumo::VAR_MAXSPEED, libsumo::TYPE_DOUBLE, &maxSpeed);
             }
 
             //Subscribe to geobroadcast and unicast

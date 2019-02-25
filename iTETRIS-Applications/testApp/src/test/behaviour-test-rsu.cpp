@@ -179,7 +179,7 @@ namespace testapp
             if (ProgramConfiguration::GetTestCase() == "setVType") {
 
                 std::string vehID = "veh0";
-                std::pair<int, std::shared_ptr<libsumo::TraCIResult> > response = GetLastTraCIResponse(vehID, VAR_TYPE);
+                std::pair<int, std::shared_ptr<libsumo::TraCIResult> > response = GetLastTraCIResponse(vehID, libsumo::VAR_TYPE);
                 if (response.second != nullptr) {
                     // response exists
                     std::string vType = std::dynamic_pointer_cast<libsumo::TraCIString>(response.second)->value;
@@ -192,7 +192,7 @@ namespace testapp
                 }
             } else if (ProgramConfiguration::GetTestCase() == "inductionLoop") {
                 // constantly query induction loop status via RSU
-                GetController()->AddTraciSubscription("WC", CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_NUMBER);
+                GetController()->AddTraciSubscription("WC", libsumo::CMD_GET_INDUCTIONLOOP_VARIABLE, libsumo::LAST_STEP_VEHICLE_NUMBER);
             } else if (ProgramConfiguration::GetTestCase() == "commSimple") {
                 // RSU constantly broadcasts for 5 secs (starting at t=5000)
                 if (CurrentTime::Now() < 10000) {
@@ -263,8 +263,8 @@ namespace testapp
         void BehaviourTestRSU::processTraCIResult(const int result, const Command& command) {
             Behaviour::processTraCIResult(result, command);
             if (ProgramConfiguration::GetTestCase() == "inductionLoop") {
-                if (command.commandId == CMD_GET_INDUCTIONLOOP_VARIABLE
-                        && command.variableId == LAST_STEP_VEHICLE_NUMBER
+                if (command.commandId == libsumo::CMD_GET_INDUCTIONLOOP_VARIABLE
+                        && command.variableId == libsumo::LAST_STEP_VEHICLE_NUMBER
                         && result > 0) {
                     std::cout << "Result in TraCIResponses:\n";
                     const std::pair<double, std::shared_ptr<libsumo::TraCIResult> >& response = GetLastTraCIResponse(command.objId, command.variableId);
@@ -272,9 +272,9 @@ namespace testapp
                         std::cout << "   Number of vehicles on detector '" << command.objId << "' in step " << response.first << ": ";
                         std::cout << std::dynamic_pointer_cast<libsumo::TraCIInt>(response.second)->value << std::endl;
                     }
-                    GetController()->AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_VEHICLE_ID_LIST);
-                    GetController()->AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_MEAN_SPEED);
-                    GetController()->AddTraciSubscription(command.objId, CMD_GET_INDUCTIONLOOP_VARIABLE, LAST_STEP_OCCUPANCY);
+                    GetController()->AddTraciSubscription(command.objId, libsumo::CMD_GET_INDUCTIONLOOP_VARIABLE, libsumo::LAST_STEP_VEHICLE_ID_LIST);
+                    GetController()->AddTraciSubscription(command.objId, libsumo::CMD_GET_INDUCTIONLOOP_VARIABLE, libsumo::LAST_STEP_MEAN_SPEED);
+                    GetController()->AddTraciSubscription(command.objId, libsumo::CMD_GET_INDUCTIONLOOP_VARIABLE, libsumo::LAST_STEP_OCCUPANCY);
                 }
             }
         }

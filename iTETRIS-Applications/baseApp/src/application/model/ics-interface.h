@@ -249,7 +249,7 @@ namespace baseapp
                 /// @brief Request a vehicle to open a gap
                 ///        see http://sumo.dlr.de/wiki/TraCI/Change_Vehicle_State
                 void commandTraciOpenGap(const double newTimeHeadway, const double newSpaceHeadway,
-                        const double duration, const double changeRate, const double maxDecel);
+                        const double duration, const double changeRate, const double maxDecel, const std::string& referenceVehicleID = "");
 
 
                 /// @brief request to update best lanes structure for vehicle
