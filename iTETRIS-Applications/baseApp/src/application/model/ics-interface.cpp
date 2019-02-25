@@ -527,7 +527,7 @@ namespace baseapp
                 int varTypeID = libsumo::TYPE_COMPOUND;
 
                 const bool referenceVehicleGiven = referenceVehicleID == "";
-                const int length = 6 - int(referenceVehicleGiven);
+                const int length = 6 - int(!referenceVehicleGiven);
 
                 tcpip::Storage content;
                 content.writeInt(length);
