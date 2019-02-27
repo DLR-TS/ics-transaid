@@ -123,6 +123,8 @@ namespace baseapp
       static bool IsRunning(event_id id);
       static double GetCurrentTime();
       template<typename Method, class Class>
+
+      /// @brief this schedules the given event aftert the given time (in ms.) from the time of scheduling.
       static event_id Schedule(double time, Method function, Class* instance)
       {
         time += CurrentTime::Now() > 0 ? CurrentTime::Now() : 0;
