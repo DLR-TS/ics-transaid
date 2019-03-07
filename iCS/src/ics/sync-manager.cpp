@@ -2635,12 +2635,9 @@ int SyncManager::ScheduleV2xGeobroadcastMessages(ics_types::stationID_t sender, 
 		//Need to check if the returned pointer is not the one inside the vector
 		if (areas.size() == 1 && areas[0] != area2D)
 			delete area2D;
-		double x = (double) circle.getCenter().x();
-		double y = (double) circle.getCenter().y();
-		vector<double> degreesCoordinates = LocToGeoConvert(x, y, 0, m_facilitiesManager->getLat0(),
-				m_facilitiesManager->getLon0(), m_facilitiesManager->getAlt0());
-		destination.lat = degreesCoordinates.at(0);
-		destination.lon = degreesCoordinates.at(1);
+
+		destination.lat = (uint32_t) (circle.getCenter().x()<0?0:circle.getCenter().x()); // Modified by acorrea to use cartesian coordinates
+		destination.lon = (uint32_t) (circle.getCenter().y()<0?0:circle.getCenter().y()); // Modified by acorrea to use cartesian coordinates
 		destination.areaSize = (uint32_t) circle.getArea();
 
 		if (sender == 0)

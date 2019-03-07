@@ -1,0 +1,1563 @@
+Test App Log File
+===============================
+[2019-03-07T17:13:28.655] [INFO ] #@# Current timestep -1000
+[2019-03-07T17:13:28.656] [INFO ] Added new fixed station with id 5000
+[2019-03-07T17:13:28.656] [INFO ] [Node 5000] added subscription 1 type 0x3a
+[2019-03-07T17:13:28.656] [INFO ] [Node 5000] added subscription 2 type 0x42
+[2019-03-07T17:13:28.657] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.657] [INFO ] Rsu 5000 position update: -250:-250
+[2019-03-07T17:13:28.660] [INFO ] #@# Current timestep 0
+[2019-03-07T17:13:28.661] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.663] [INFO ] #@# Current timestep 50
+[2019-03-07T17:13:28.663] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.664] [INFO ] #@# Current timestep 100
+[2019-03-07T17:13:28.665] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.666] [INFO ] #@# Current timestep 150
+[2019-03-07T17:13:28.666] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.667] [INFO ] #@# Current timestep 200
+[2019-03-07T17:13:28.668] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.669] [INFO ] #@# Current timestep 250
+[2019-03-07T17:13:28.669] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.670] [INFO ] #@# Current timestep 300
+[2019-03-07T17:13:28.670] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.671] [INFO ] #@# Current timestep 350
+[2019-03-07T17:13:28.671] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.672] [INFO ] #@# Current timestep 400
+[2019-03-07T17:13:28.672] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.673] [INFO ] #@# Current timestep 450
+[2019-03-07T17:13:28.673] [INFO ] ExpiredPayloadCleanUp for time: -1000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.673] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.674] [INFO ] #@# Current timestep 500
+[2019-03-07T17:13:28.674] [INFO ] ExpiredPayloadCleanUp for time: 0. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.674] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.675] [INFO ] #@# Current timestep 550
+[2019-03-07T17:13:28.675] [INFO ] ExpiredPayloadCleanUp for time: 50. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.675] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.676] [INFO ] #@# Current timestep 600
+[2019-03-07T17:13:28.676] [INFO ] ExpiredPayloadCleanUp for time: 100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.676] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.677] [INFO ] #@# Current timestep 650
+[2019-03-07T17:13:28.677] [INFO ] ExpiredPayloadCleanUp for time: 150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.677] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.677] [INFO ] #@# Current timestep 700
+[2019-03-07T17:13:28.677] [INFO ] ExpiredPayloadCleanUp for time: 200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.678] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.678] [INFO ] #@# Current timestep 750
+[2019-03-07T17:13:28.678] [INFO ] ExpiredPayloadCleanUp for time: 250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.679] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.679] [INFO ] #@# Current timestep 800
+[2019-03-07T17:13:28.679] [INFO ] ExpiredPayloadCleanUp for time: 300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.679] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.680] [INFO ] #@# Current timestep 850
+[2019-03-07T17:13:28.680] [INFO ] ExpiredPayloadCleanUp for time: 350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.680] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.681] [INFO ] #@# Current timestep 900
+[2019-03-07T17:13:28.681] [INFO ] ExpiredPayloadCleanUp for time: 400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.681] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.681] [INFO ] #@# Current timestep 950
+[2019-03-07T17:13:28.681] [INFO ] ExpiredPayloadCleanUp for time: 450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.682] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.683] [INFO ] #@# Current timestep 1000
+[2019-03-07T17:13:28.683] [INFO ] ExpiredPayloadCleanUp for time: 500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.683] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.684] [INFO ] #@# Current timestep 1050
+[2019-03-07T17:13:28.684] [INFO ] ExpiredPayloadCleanUp for time: 550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.684] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.685] [INFO ] #@# Current timestep 1100
+[2019-03-07T17:13:28.685] [INFO ] ExpiredPayloadCleanUp for time: 600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.686] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.687] [INFO ] #@# Current timestep 1150
+[2019-03-07T17:13:28.687] [INFO ] ExpiredPayloadCleanUp for time: 650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.687] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.688] [INFO ] #@# Current timestep 1200
+[2019-03-07T17:13:28.688] [INFO ] ExpiredPayloadCleanUp for time: 700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.688] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.688] [INFO ] #@# Current timestep 1250
+[2019-03-07T17:13:28.688] [INFO ] ExpiredPayloadCleanUp for time: 750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.689] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.689] [INFO ] #@# Current timestep 1300
+[2019-03-07T17:13:28.689] [INFO ] ExpiredPayloadCleanUp for time: 800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.689] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.690] [INFO ] #@# Current timestep 1350
+[2019-03-07T17:13:28.690] [INFO ] ExpiredPayloadCleanUp for time: 850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.690] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.690] [INFO ] #@# Current timestep 1400
+[2019-03-07T17:13:28.690] [INFO ] ExpiredPayloadCleanUp for time: 900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.691] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.691] [INFO ] #@# Current timestep 1450
+[2019-03-07T17:13:28.691] [INFO ] ExpiredPayloadCleanUp for time: 950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.691] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.692] [INFO ] #@# Current timestep 1500
+[2019-03-07T17:13:28.692] [INFO ] ExpiredPayloadCleanUp for time: 1000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.692] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.692] [INFO ] #@# Current timestep 1550
+[2019-03-07T17:13:28.692] [INFO ] ExpiredPayloadCleanUp for time: 1050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.693] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.693] [INFO ] #@# Current timestep 1600
+[2019-03-07T17:13:28.693] [INFO ] ExpiredPayloadCleanUp for time: 1100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.693] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.694] [INFO ] #@# Current timestep 1650
+[2019-03-07T17:13:28.694] [INFO ] ExpiredPayloadCleanUp for time: 1150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.694] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.694] [INFO ] #@# Current timestep 1700
+[2019-03-07T17:13:28.694] [INFO ] ExpiredPayloadCleanUp for time: 1200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.695] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.695] [INFO ] #@# Current timestep 1750
+[2019-03-07T17:13:28.695] [INFO ] ExpiredPayloadCleanUp for time: 1250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.695] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.697] [INFO ] #@# Current timestep 1800
+[2019-03-07T17:13:28.697] [INFO ] ExpiredPayloadCleanUp for time: 1300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.697] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.698] [INFO ] #@# Current timestep 1850
+[2019-03-07T17:13:28.698] [INFO ] ExpiredPayloadCleanUp for time: 1350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.698] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.698] [INFO ] #@# Current timestep 1900
+[2019-03-07T17:13:28.699] [INFO ] ExpiredPayloadCleanUp for time: 1400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.699] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.700] [INFO ] #@# Current timestep 1950
+[2019-03-07T17:13:28.700] [INFO ] ExpiredPayloadCleanUp for time: 1450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.700] [INFO ] Mobility info on nodes: 5000 
+[2019-03-07T17:13:28.706] [INFO ] #@# Current timestep 2000
+[2019-03-07T17:13:28.706] [INFO ] ExpiredPayloadCleanUp for time: 1500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.718] [INFO ] Selected class for node 2 is 6
+[2019-03-07T17:13:28.718] [INFO ] Added new mobile node with id 2 ns3id 1 sumoId veh0 sumoType t1 sumoClass passenger
+[2019-03-07T17:13:28.720] [INFO ] [Node 2] added subscription 3 type 0x3a
+[2019-03-07T17:13:28.720] [INFO ] [Node 2] added subscription 4 type 0x3a
+[2019-03-07T17:13:28.721] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.721] [INFO ] #@# Current timestep 2050
+[2019-03-07T17:13:28.721] [INFO ] ExpiredPayloadCleanUp for time: 1550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.722] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.722] [INFO ] #@# Current timestep 2100
+[2019-03-07T17:13:28.722] [INFO ] ExpiredPayloadCleanUp for time: 1600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.723] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.723] [INFO ] #@# Current timestep 2150
+[2019-03-07T17:13:28.723] [INFO ] ExpiredPayloadCleanUp for time: 1650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.724] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.724] [INFO ] #@# Current timestep 2200
+[2019-03-07T17:13:28.724] [INFO ] ExpiredPayloadCleanUp for time: 1700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.725] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.725] [INFO ] #@# Current timestep 2250
+[2019-03-07T17:13:28.725] [INFO ] ExpiredPayloadCleanUp for time: 1750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.726] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.726] [INFO ] #@# Current timestep 2300
+[2019-03-07T17:13:28.726] [INFO ] ExpiredPayloadCleanUp for time: 1800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.727] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.727] [INFO ] #@# Current timestep 2350
+[2019-03-07T17:13:28.727] [INFO ] ExpiredPayloadCleanUp for time: 1850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.728] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.728] [INFO ] #@# Current timestep 2400
+[2019-03-07T17:13:28.728] [INFO ] ExpiredPayloadCleanUp for time: 1900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.729] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.729] [INFO ] #@# Current timestep 2450
+[2019-03-07T17:13:28.729] [INFO ] ExpiredPayloadCleanUp for time: 1950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.730] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.730] [INFO ] #@# Current timestep 2500
+[2019-03-07T17:13:28.730] [INFO ] ExpiredPayloadCleanUp for time: 2000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.731] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.731] [INFO ] #@# Current timestep 2550
+[2019-03-07T17:13:28.731] [INFO ] ExpiredPayloadCleanUp for time: 2050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.732] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.732] [INFO ] #@# Current timestep 2600
+[2019-03-07T17:13:28.732] [INFO ] ExpiredPayloadCleanUp for time: 2100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.733] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.733] [INFO ] #@# Current timestep 2650
+[2019-03-07T17:13:28.733] [INFO ] ExpiredPayloadCleanUp for time: 2150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.734] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.735] [INFO ] #@# Current timestep 2700
+[2019-03-07T17:13:28.735] [INFO ] ExpiredPayloadCleanUp for time: 2200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.735] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.736] [INFO ] #@# Current timestep 2750
+[2019-03-07T17:13:28.736] [INFO ] ExpiredPayloadCleanUp for time: 2250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.736] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.737] [INFO ] #@# Current timestep 2800
+[2019-03-07T17:13:28.737] [INFO ] ExpiredPayloadCleanUp for time: 2300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.737] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.738] [INFO ] #@# Current timestep 2850
+[2019-03-07T17:13:28.738] [INFO ] ExpiredPayloadCleanUp for time: 2350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.738] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.739] [INFO ] #@# Current timestep 2900
+[2019-03-07T17:13:28.739] [INFO ] ExpiredPayloadCleanUp for time: 2400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.739] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.740] [INFO ] #@# Current timestep 2950
+[2019-03-07T17:13:28.740] [INFO ] ExpiredPayloadCleanUp for time: 2450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.740] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.741] [INFO ] #@# Current timestep 3000
+[2019-03-07T17:13:28.741] [INFO ] ExpiredPayloadCleanUp for time: 2500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.743] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.743] [INFO ] #@# Current timestep 3050
+[2019-03-07T17:13:28.744] [INFO ] ExpiredPayloadCleanUp for time: 2550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.744] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.745] [INFO ] #@# Current timestep 3100
+[2019-03-07T17:13:28.745] [INFO ] ExpiredPayloadCleanUp for time: 2600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.745] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.746] [INFO ] #@# Current timestep 3150
+[2019-03-07T17:13:28.746] [INFO ] ExpiredPayloadCleanUp for time: 2650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.747] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.747] [INFO ] #@# Current timestep 3200
+[2019-03-07T17:13:28.747] [INFO ] ExpiredPayloadCleanUp for time: 2700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.748] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.750] [INFO ] #@# Current timestep 3250
+[2019-03-07T17:13:28.751] [INFO ] ExpiredPayloadCleanUp for time: 2750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.752] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.753] [INFO ] #@# Current timestep 3300
+[2019-03-07T17:13:28.753] [INFO ] ExpiredPayloadCleanUp for time: 2800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.753] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.754] [INFO ] #@# Current timestep 3350
+[2019-03-07T17:13:28.754] [INFO ] ExpiredPayloadCleanUp for time: 2850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.754] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.755] [INFO ] #@# Current timestep 3400
+[2019-03-07T17:13:28.755] [INFO ] ExpiredPayloadCleanUp for time: 2900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.755] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.756] [INFO ] #@# Current timestep 3450
+[2019-03-07T17:13:28.756] [INFO ] ExpiredPayloadCleanUp for time: 2950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.757] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.757] [INFO ] #@# Current timestep 3500
+[2019-03-07T17:13:28.757] [INFO ] ExpiredPayloadCleanUp for time: 3000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.758] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.758] [INFO ] #@# Current timestep 3550
+[2019-03-07T17:13:28.758] [INFO ] ExpiredPayloadCleanUp for time: 3050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.759] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.759] [INFO ] #@# Current timestep 3600
+[2019-03-07T17:13:28.759] [INFO ] ExpiredPayloadCleanUp for time: 3100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.760] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.760] [INFO ] #@# Current timestep 3650
+[2019-03-07T17:13:28.760] [INFO ] ExpiredPayloadCleanUp for time: 3150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.761] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.761] [INFO ] #@# Current timestep 3700
+[2019-03-07T17:13:28.761] [INFO ] ExpiredPayloadCleanUp for time: 3200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.761] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.762] [INFO ] #@# Current timestep 3750
+[2019-03-07T17:13:28.762] [INFO ] ExpiredPayloadCleanUp for time: 3250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.762] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.763] [INFO ] #@# Current timestep 3800
+[2019-03-07T17:13:28.763] [INFO ] ExpiredPayloadCleanUp for time: 3300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.763] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.764] [INFO ] #@# Current timestep 3850
+[2019-03-07T17:13:28.764] [INFO ] ExpiredPayloadCleanUp for time: 3350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.764] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.765] [INFO ] #@# Current timestep 3900
+[2019-03-07T17:13:28.765] [INFO ] ExpiredPayloadCleanUp for time: 3400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.765] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.766] [INFO ] #@# Current timestep 3950
+[2019-03-07T17:13:28.766] [INFO ] ExpiredPayloadCleanUp for time: 3450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.766] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.767] [INFO ] #@# Current timestep 4000
+[2019-03-07T17:13:28.767] [INFO ] ExpiredPayloadCleanUp for time: 3500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.769] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.769] [INFO ] #@# Current timestep 4050
+[2019-03-07T17:13:28.769] [INFO ] ExpiredPayloadCleanUp for time: 3550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.770] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.770] [INFO ] #@# Current timestep 4100
+[2019-03-07T17:13:28.770] [INFO ] ExpiredPayloadCleanUp for time: 3600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.771] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.771] [INFO ] #@# Current timestep 4150
+[2019-03-07T17:13:28.771] [INFO ] ExpiredPayloadCleanUp for time: 3650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.772] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.772] [INFO ] #@# Current timestep 4200
+[2019-03-07T17:13:28.772] [INFO ] ExpiredPayloadCleanUp for time: 3700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.773] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.773] [INFO ] #@# Current timestep 4250
+[2019-03-07T17:13:28.773] [INFO ] ExpiredPayloadCleanUp for time: 3750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.774] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.774] [INFO ] #@# Current timestep 4300
+[2019-03-07T17:13:28.774] [INFO ] ExpiredPayloadCleanUp for time: 3800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.775] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.775] [INFO ] #@# Current timestep 4350
+[2019-03-07T17:13:28.775] [INFO ] ExpiredPayloadCleanUp for time: 3850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.776] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.777] [INFO ] #@# Current timestep 4400
+[2019-03-07T17:13:28.777] [INFO ] ExpiredPayloadCleanUp for time: 3900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.778] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.779] [INFO ] #@# Current timestep 4450
+[2019-03-07T17:13:28.779] [INFO ] ExpiredPayloadCleanUp for time: 3950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.780] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.781] [INFO ] #@# Current timestep 4500
+[2019-03-07T17:13:28.782] [INFO ] ExpiredPayloadCleanUp for time: 4000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.782] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.784] [INFO ] #@# Current timestep 4550
+[2019-03-07T17:13:28.784] [INFO ] ExpiredPayloadCleanUp for time: 4050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.784] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.785] [INFO ] #@# Current timestep 4600
+[2019-03-07T17:13:28.785] [INFO ] ExpiredPayloadCleanUp for time: 4100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.786] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.786] [INFO ] #@# Current timestep 4650
+[2019-03-07T17:13:28.786] [INFO ] ExpiredPayloadCleanUp for time: 4150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.787] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.787] [INFO ] #@# Current timestep 4700
+[2019-03-07T17:13:28.787] [INFO ] ExpiredPayloadCleanUp for time: 4200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.788] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.788] [INFO ] #@# Current timestep 4750
+[2019-03-07T17:13:28.788] [INFO ] ExpiredPayloadCleanUp for time: 4250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.789] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.789] [INFO ] #@# Current timestep 4800
+[2019-03-07T17:13:28.789] [INFO ] ExpiredPayloadCleanUp for time: 4300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.790] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.790] [INFO ] #@# Current timestep 4850
+[2019-03-07T17:13:28.790] [INFO ] ExpiredPayloadCleanUp for time: 4350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.791] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.791] [INFO ] #@# Current timestep 4900
+[2019-03-07T17:13:28.791] [INFO ] ExpiredPayloadCleanUp for time: 4400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.792] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.792] [INFO ] #@# Current timestep 4950
+[2019-03-07T17:13:28.792] [INFO ] ExpiredPayloadCleanUp for time: 4450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.793] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.794] [INFO ] #@# Current timestep 5000
+[2019-03-07T17:13:28.794] [INFO ] ExpiredPayloadCleanUp for time: 4500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.794] [INFO ] [Node 5000] send to all. Key=m1. Time=5000
+[2019-03-07T17:13:28.796] [INFO ] [Node 5000] added subscription 5 type 0x1e
+[2019-03-07T17:13:28.797] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.797] [INFO ] [Node 5000] Confirmed subscription 5. Will be unsuscribed on the next timestep
+[2019-03-07T17:13:28.800] [INFO ] #@# Current timestep 5050
+[2019-03-07T17:13:28.801] [INFO ] ExpiredPayloadCleanUp for time: 4550. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.801] [INFO ] [Node 5000] removed subscription 5
+[2019-03-07T17:13:28.802] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.804] [INFO ] #@# Current timestep 5100
+[2019-03-07T17:13:28.804] [INFO ] ExpiredPayloadCleanUp for time: 4600. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.804] [INFO ] [2|12|m1] RSSI= -1 SNR= 20.2137 POWER= 112 MSGID=1 []
+[2019-03-07T17:13:28.804] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 1 timestep 5000
+[2019-03-07T17:13:28.804] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.805] [INFO ] #@# Current timestep 5150
+[2019-03-07T17:13:28.805] [INFO ] ExpiredPayloadCleanUp for time: 4650. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.805] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.806] [INFO ] #@# Current timestep 5200
+[2019-03-07T17:13:28.806] [INFO ] ExpiredPayloadCleanUp for time: 4700. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.806] [INFO ] [Node 2] send to all. Key=m2. Time=5170.73
+[2019-03-07T17:13:28.806] [INFO ] [Node 2] added subscription 6 type 0x1e
+[2019-03-07T17:13:28.807] [INFO ] [Node 2] Confirmed subscription 6. Will be unsuscribed on the next timestep
+[2019-03-07T17:13:28.807] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.808] [INFO ] #@# Current timestep 5250
+[2019-03-07T17:13:28.808] [INFO ] ExpiredPayloadCleanUp for time: 4750. Removing keys: noting to remove Current size: 2
+[2019-03-07T17:13:28.809] [INFO ] [Node 2] removed subscription 6
+[2019-03-07T17:13:28.809] [INFO ] [5000|12|m2] RSSI= -1 SNR= 20.2137 POWER= 0 MSGID=2 []
+[2019-03-07T17:13:28.809] [INFO ] Node 5000 (sumoID: '') received message 12 payload 2 timestep 5200
+[2019-03-07T17:13:28.809] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.810] [INFO ] #@# Current timestep 5300
+[2019-03-07T17:13:28.810] [INFO ] ExpiredPayloadCleanUp for time: 4800. Removing keys: noting to remove Current size: 2
+[2019-03-07T17:13:28.811] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.811] [INFO ] #@# Current timestep 5350
+[2019-03-07T17:13:28.812] [INFO ] ExpiredPayloadCleanUp for time: 4850. Removing keys: noting to remove Current size: 2
+[2019-03-07T17:13:28.812] [INFO ] [Node 5000] send to all. Key=m3. Time=5304.78
+[2019-03-07T17:13:28.812] [INFO ] [Node 5000] added subscription 7 type 0x1e
+[2019-03-07T17:13:28.813] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.813] [INFO ] [Node 5000] Confirmed subscription 7. Will be unsuscribed on the next timestep
+[2019-03-07T17:13:28.814] [INFO ] #@# Current timestep 5400
+[2019-03-07T17:13:28.814] [INFO ] ExpiredPayloadCleanUp for time: 4900. Removing keys: noting to remove Current size: 3
+[2019-03-07T17:13:28.814] [INFO ] [2|12|m3] RSSI= -1 SNR= 20.2137 POWER= 0 MSGID=3 []
+[2019-03-07T17:13:28.814] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 3 timestep 5350
+[2019-03-07T17:13:28.815] [INFO ] [Node 5000] removed subscription 7
+[2019-03-07T17:13:28.815] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.815] [INFO ] #@# Current timestep 5450
+[2019-03-07T17:13:28.815] [INFO ] ExpiredPayloadCleanUp for time: 4950. Removing keys: noting to remove Current size: 3
+[2019-03-07T17:13:28.816] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.816] [INFO ] #@# Current timestep 5500
+[2019-03-07T17:13:28.816] [INFO ] ExpiredPayloadCleanUp for time: 5000. Removing keys: 1 Current size: 2
+[2019-03-07T17:13:28.816] [INFO ] [Node 2] send to all. Key=m4. Time=5452.72
+[2019-03-07T17:13:28.816] [INFO ] [Node 2] added subscription 8 type 0x1e
+[2019-03-07T17:13:28.817] [INFO ] [Node 2] Confirmed subscription 8. Will be unsuscribed on the next timestep
+[2019-03-07T17:13:28.817] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.818] [INFO ] #@# Current timestep 5550
+[2019-03-07T17:13:28.818] [INFO ] ExpiredPayloadCleanUp for time: 5050. Removing keys: noting to remove Current size: 3
+[2019-03-07T17:13:28.819] [INFO ] [Node 2] removed subscription 8
+[2019-03-07T17:13:28.819] [INFO ] [5000|12|m4] RSSI= -1 SNR= 20.2137 POWER= 0 MSGID=4 []
+[2019-03-07T17:13:28.819] [INFO ] Node 5000 (sumoID: '') received message 12 payload 4 timestep 5500
+[2019-03-07T17:13:28.819] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.820] [INFO ] #@# Current timestep 5600
+[2019-03-07T17:13:28.820] [INFO ] ExpiredPayloadCleanUp for time: 5100. Removing keys: noting to remove Current size: 3
+[2019-03-07T17:13:28.820] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.821] [INFO ] #@# Current timestep 5650
+[2019-03-07T17:13:28.821] [INFO ] ExpiredPayloadCleanUp for time: 5150. Removing keys: noting to remove Current size: 3
+[2019-03-07T17:13:28.821] [INFO ] [Node 5000] send to all. Key=m5. Time=5605.67
+[2019-03-07T17:13:28.821] [INFO ] [Node 5000] added subscription 9 type 0x1e
+[2019-03-07T17:13:28.821] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.822] [INFO ] [Node 5000] Confirmed subscription 9. Will be unsuscribed on the next timestep
+[2019-03-07T17:13:28.823] [INFO ] #@# Current timestep 5700
+[2019-03-07T17:13:28.823] [INFO ] ExpiredPayloadCleanUp for time: 5200. Removing keys: 2 Current size: 3
+[2019-03-07T17:13:28.823] [INFO ] [2|12|m5] RSSI= -1 SNR= 20.2137 POWER= 0 MSGID=5 []
+[2019-03-07T17:13:28.823] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 5 timestep 5650
+[2019-03-07T17:13:28.823] [INFO ] [Node 5000] removed subscription 9
+[2019-03-07T17:13:28.823] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.824] [INFO ] #@# Current timestep 5750
+[2019-03-07T17:13:28.824] [INFO ] ExpiredPayloadCleanUp for time: 5250. Removing keys: noting to remove Current size: 3
+[2019-03-07T17:13:28.824] [INFO ] [Node 2] added subscription 10 type 0x46
+[2019-03-07T17:13:28.824] [INFO ] SUMO Command acknowledged (0xc4), [description: ]
+[2019-03-07T17:13:28.825] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.825] [INFO ] #@# Current timestep 5800
+[2019-03-07T17:13:28.825] [INFO ] ExpiredPayloadCleanUp for time: 5300. Removing keys: noting to remove Current size: 3
+[2019-03-07T17:13:28.825] [INFO ] [Node 2] removed subscription 10
+[2019-03-07T17:13:28.826] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.826] [INFO ] #@# Current timestep 5850
+[2019-03-07T17:13:28.826] [INFO ] ExpiredPayloadCleanUp for time: 5350. Removing keys: 3 Current size: 2
+[2019-03-07T17:13:28.827] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.827] [INFO ] #@# Current timestep 5900
+[2019-03-07T17:13:28.827] [INFO ] ExpiredPayloadCleanUp for time: 5400. Removing keys: noting to remove Current size: 2
+[2019-03-07T17:13:28.828] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.828] [INFO ] #@# Current timestep 5950
+[2019-03-07T17:13:28.828] [INFO ] ExpiredPayloadCleanUp for time: 5450. Removing keys: noting to remove Current size: 2
+[2019-03-07T17:13:28.829] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.830] [INFO ] #@# Current timestep 6000
+[2019-03-07T17:13:28.830] [INFO ] ExpiredPayloadCleanUp for time: 5500. Removing keys: 4 Current size: 1
+[2019-03-07T17:13:28.831] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.832] [INFO ] #@# Current timestep 6050
+[2019-03-07T17:13:28.832] [INFO ] ExpiredPayloadCleanUp for time: 5550. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.833] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.834] [INFO ] #@# Current timestep 6100
+[2019-03-07T17:13:28.834] [INFO ] ExpiredPayloadCleanUp for time: 5600. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.834] [INFO ] [Node 5000] send to all. Key=m6. Time=6065.06
+[2019-03-07T17:13:28.835] [INFO ] [Node 5000] added subscription 11 type 0x1e
+[2019-03-07T17:13:28.835] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.835] [INFO ] [Node 5000] Confirmed subscription 11. Will be unsuscribed on the next timestep
+[2019-03-07T17:13:28.836] [INFO ] #@# Current timestep 6150
+[2019-03-07T17:13:28.836] [INFO ] ExpiredPayloadCleanUp for time: 5650. Removing keys: 5 Current size: 1
+[2019-03-07T17:13:28.837] [INFO ] [2|12|m6] RSSI= -1 SNR= 22.0259 POWER= 0 MSGID=6 []
+[2019-03-07T17:13:28.837] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 6 timestep 6100
+[2019-03-07T17:13:28.837] [INFO ] [Node 5000] removed subscription 11
+[2019-03-07T17:13:28.837] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.838] [INFO ] #@# Current timestep 6200
+[2019-03-07T17:13:28.838] [INFO ] ExpiredPayloadCleanUp for time: 5700. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.838] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.839] [INFO ] #@# Current timestep 6250
+[2019-03-07T17:13:28.839] [INFO ] ExpiredPayloadCleanUp for time: 5750. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.839] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.840] [INFO ] #@# Current timestep 6300
+[2019-03-07T17:13:28.840] [INFO ] ExpiredPayloadCleanUp for time: 5800. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.841] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.841] [INFO ] #@# Current timestep 6350
+[2019-03-07T17:13:28.841] [INFO ] ExpiredPayloadCleanUp for time: 5850. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.842] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.843] [INFO ] #@# Current timestep 6400
+[2019-03-07T17:13:28.843] [INFO ] ExpiredPayloadCleanUp for time: 5900. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.844] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.844] [INFO ] #@# Current timestep 6450
+[2019-03-07T17:13:28.844] [INFO ] ExpiredPayloadCleanUp for time: 5950. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.845] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.845] [INFO ] #@# Current timestep 6500
+[2019-03-07T17:13:28.845] [INFO ] ExpiredPayloadCleanUp for time: 6000. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.846] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.847] [INFO ] #@# Current timestep 6550
+[2019-03-07T17:13:28.847] [INFO ] ExpiredPayloadCleanUp for time: 6050. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.848] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.848] [INFO ] #@# Current timestep 6600
+[2019-03-07T17:13:28.848] [INFO ] ExpiredPayloadCleanUp for time: 6100. Removing keys: 6 Current size: 0
+[2019-03-07T17:13:28.849] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.849] [INFO ] #@# Current timestep 6650
+[2019-03-07T17:13:28.850] [INFO ] ExpiredPayloadCleanUp for time: 6150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.851] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.851] [INFO ] #@# Current timestep 6700
+[2019-03-07T17:13:28.851] [INFO ] ExpiredPayloadCleanUp for time: 6200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.852] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.852] [INFO ] #@# Current timestep 6750
+[2019-03-07T17:13:28.852] [INFO ] ExpiredPayloadCleanUp for time: 6250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.853] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.853] [INFO ] #@# Current timestep 6800
+[2019-03-07T17:13:28.853] [INFO ] ExpiredPayloadCleanUp for time: 6300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.854] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.854] [INFO ] #@# Current timestep 6850
+[2019-03-07T17:13:28.854] [INFO ] ExpiredPayloadCleanUp for time: 6350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.855] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.855] [INFO ] #@# Current timestep 6900
+[2019-03-07T17:13:28.855] [INFO ] ExpiredPayloadCleanUp for time: 6400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.856] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.856] [INFO ] #@# Current timestep 6950
+[2019-03-07T17:13:28.857] [INFO ] ExpiredPayloadCleanUp for time: 6450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.857] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.858] [INFO ] #@# Current timestep 7000
+[2019-03-07T17:13:28.858] [INFO ] ExpiredPayloadCleanUp for time: 6500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.860] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.860] [INFO ] #@# Current timestep 7050
+[2019-03-07T17:13:28.860] [INFO ] ExpiredPayloadCleanUp for time: 6550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.861] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.861] [INFO ] #@# Current timestep 7100
+[2019-03-07T17:13:28.861] [INFO ] ExpiredPayloadCleanUp for time: 6600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.862] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.863] [INFO ] #@# Current timestep 7150
+[2019-03-07T17:13:28.863] [INFO ] ExpiredPayloadCleanUp for time: 6650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.864] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.864] [INFO ] #@# Current timestep 7200
+[2019-03-07T17:13:28.864] [INFO ] ExpiredPayloadCleanUp for time: 6700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.864] [INFO ] [Node 5000] send to all. Key=m7. Time=7158.64
+[2019-03-07T17:13:28.865] [INFO ] [Node 5000] added subscription 12 type 0x1e
+[2019-03-07T17:13:28.865] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.866] [INFO ] [Node 5000] Confirmed subscription 12. Will be unsuscribed on the next timestep
+[2019-03-07T17:13:28.868] [INFO ] #@# Current timestep 7250
+[2019-03-07T17:13:28.868] [INFO ] ExpiredPayloadCleanUp for time: 6750. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.868] [INFO ] [2|12|m7] RSSI= -1 SNR= 24.7158 POWER= 0 MSGID=7 []
+[2019-03-07T17:13:28.868] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 7 timestep 7200
+[2019-03-07T17:13:28.869] [INFO ] [Node 5000] removed subscription 12
+[2019-03-07T17:13:28.869] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.869] [INFO ] #@# Current timestep 7300
+[2019-03-07T17:13:28.869] [INFO ] ExpiredPayloadCleanUp for time: 6800. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.870] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.871] [INFO ] #@# Current timestep 7350
+[2019-03-07T17:13:28.871] [INFO ] ExpiredPayloadCleanUp for time: 6850. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.871] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.872] [INFO ] #@# Current timestep 7400
+[2019-03-07T17:13:28.872] [INFO ] ExpiredPayloadCleanUp for time: 6900. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.873] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.873] [INFO ] #@# Current timestep 7450
+[2019-03-07T17:13:28.873] [INFO ] ExpiredPayloadCleanUp for time: 6950. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.874] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.875] [INFO ] #@# Current timestep 7500
+[2019-03-07T17:13:28.875] [INFO ] ExpiredPayloadCleanUp for time: 7000. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.876] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.876] [INFO ] #@# Current timestep 7550
+[2019-03-07T17:13:28.876] [INFO ] ExpiredPayloadCleanUp for time: 7050. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.877] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.877] [INFO ] #@# Current timestep 7600
+[2019-03-07T17:13:28.877] [INFO ] ExpiredPayloadCleanUp for time: 7100. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.877] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.878] [INFO ] #@# Current timestep 7650
+[2019-03-07T17:13:28.878] [INFO ] ExpiredPayloadCleanUp for time: 7150. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.878] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.879] [INFO ] #@# Current timestep 7700
+[2019-03-07T17:13:28.879] [INFO ] ExpiredPayloadCleanUp for time: 7200. Removing keys: 7 Current size: 0
+[2019-03-07T17:13:28.880] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.880] [INFO ] #@# Current timestep 7750
+[2019-03-07T17:13:28.880] [INFO ] ExpiredPayloadCleanUp for time: 7250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.881] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.881] [INFO ] #@# Current timestep 7800
+[2019-03-07T17:13:28.881] [INFO ] ExpiredPayloadCleanUp for time: 7300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.882] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.882] [INFO ] #@# Current timestep 7850
+[2019-03-07T17:13:28.882] [INFO ] ExpiredPayloadCleanUp for time: 7350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.882] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.883] [INFO ] #@# Current timestep 7900
+[2019-03-07T17:13:28.883] [INFO ] ExpiredPayloadCleanUp for time: 7400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.883] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.884] [INFO ] #@# Current timestep 7950
+[2019-03-07T17:13:28.884] [INFO ] ExpiredPayloadCleanUp for time: 7450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.884] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.885] [INFO ] #@# Current timestep 8000
+[2019-03-07T17:13:28.886] [INFO ] ExpiredPayloadCleanUp for time: 7500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.887] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.888] [INFO ] #@# Current timestep 8050
+[2019-03-07T17:13:28.888] [INFO ] ExpiredPayloadCleanUp for time: 7550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.888] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.889] [INFO ] #@# Current timestep 8100
+[2019-03-07T17:13:28.889] [INFO ] ExpiredPayloadCleanUp for time: 7600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.889] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.890] [INFO ] #@# Current timestep 8150
+[2019-03-07T17:13:28.890] [INFO ] ExpiredPayloadCleanUp for time: 7650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.890] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.891] [INFO ] #@# Current timestep 8200
+[2019-03-07T17:13:28.891] [INFO ] ExpiredPayloadCleanUp for time: 7700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.891] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.892] [INFO ] #@# Current timestep 8250
+[2019-03-07T17:13:28.892] [INFO ] ExpiredPayloadCleanUp for time: 7750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.892] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.892] [INFO ] #@# Current timestep 8300
+[2019-03-07T17:13:28.892] [INFO ] ExpiredPayloadCleanUp for time: 7800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.893] [INFO ] [Node 5000] send to all. Key=m8. Time=8252.52
+[2019-03-07T17:13:28.893] [INFO ] [Node 5000] added subscription 13 type 0x1e
+[2019-03-07T17:13:28.893] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.894] [INFO ] [Node 5000] Confirmed subscription 13. Will be unsuscribed on the next timestep
+[2019-03-07T17:13:28.895] [INFO ] #@# Current timestep 8350
+[2019-03-07T17:13:28.895] [INFO ] ExpiredPayloadCleanUp for time: 7850. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.895] [INFO ] [2|12|m8] RSSI= -1 SNR= 28.377 POWER= 0 MSGID=8 []
+[2019-03-07T17:13:28.895] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 8 timestep 8300
+[2019-03-07T17:13:28.895] [INFO ] [Node 5000] removed subscription 13
+[2019-03-07T17:13:28.896] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.897] [INFO ] #@# Current timestep 8400
+[2019-03-07T17:13:28.897] [INFO ] ExpiredPayloadCleanUp for time: 7900. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.898] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.898] [INFO ] #@# Current timestep 8450
+[2019-03-07T17:13:28.898] [INFO ] ExpiredPayloadCleanUp for time: 7950. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.899] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.899] [INFO ] #@# Current timestep 8500
+[2019-03-07T17:13:28.900] [INFO ] ExpiredPayloadCleanUp for time: 8000. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.901] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.901] [INFO ] #@# Current timestep 8550
+[2019-03-07T17:13:28.901] [INFO ] ExpiredPayloadCleanUp for time: 8050. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.902] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.902] [INFO ] #@# Current timestep 8600
+[2019-03-07T17:13:28.902] [INFO ] ExpiredPayloadCleanUp for time: 8100. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.903] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.904] [INFO ] #@# Current timestep 8650
+[2019-03-07T17:13:28.904] [INFO ] ExpiredPayloadCleanUp for time: 8150. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.904] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.905] [INFO ] #@# Current timestep 8700
+[2019-03-07T17:13:28.905] [INFO ] ExpiredPayloadCleanUp for time: 8200. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.906] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.906] [INFO ] #@# Current timestep 8750
+[2019-03-07T17:13:28.906] [INFO ] ExpiredPayloadCleanUp for time: 8250. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.907] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.907] [INFO ] #@# Current timestep 8800
+[2019-03-07T17:13:28.908] [INFO ] ExpiredPayloadCleanUp for time: 8300. Removing keys: 8 Current size: 0
+[2019-03-07T17:13:28.908] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.909] [INFO ] #@# Current timestep 8850
+[2019-03-07T17:13:28.909] [INFO ] ExpiredPayloadCleanUp for time: 8350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.909] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.910] [INFO ] #@# Current timestep 8900
+[2019-03-07T17:13:28.910] [INFO ] ExpiredPayloadCleanUp for time: 8400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.910] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.911] [INFO ] #@# Current timestep 8950
+[2019-03-07T17:13:28.911] [INFO ] ExpiredPayloadCleanUp for time: 8450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.911] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.914] [INFO ] #@# Current timestep 9000
+[2019-03-07T17:13:28.914] [INFO ] ExpiredPayloadCleanUp for time: 8500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.914] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.915] [INFO ] #@# Current timestep 9050
+[2019-03-07T17:13:28.915] [INFO ] ExpiredPayloadCleanUp for time: 8550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.916] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.917] [INFO ] #@# Current timestep 9100
+[2019-03-07T17:13:28.917] [INFO ] ExpiredPayloadCleanUp for time: 8600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.918] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.918] [INFO ] #@# Current timestep 9150
+[2019-03-07T17:13:28.918] [INFO ] ExpiredPayloadCleanUp for time: 8650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.919] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.919] [INFO ] #@# Current timestep 9200
+[2019-03-07T17:13:28.919] [INFO ] ExpiredPayloadCleanUp for time: 8700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.920] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.920] [INFO ] #@# Current timestep 9250
+[2019-03-07T17:13:28.920] [INFO ] ExpiredPayloadCleanUp for time: 8750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.921] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.921] [INFO ] #@# Current timestep 9300
+[2019-03-07T17:13:28.921] [INFO ] ExpiredPayloadCleanUp for time: 8800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.922] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.922] [INFO ] #@# Current timestep 9350
+[2019-03-07T17:13:28.922] [INFO ] ExpiredPayloadCleanUp for time: 8850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.922] [INFO ] [Node 5000] send to all. Key=m9. Time=9346.38
+[2019-03-07T17:13:28.922] [INFO ] [Node 5000] added subscription 14 type 0x1e
+[2019-03-07T17:13:28.923] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.923] [INFO ] [Node 5000] Confirmed subscription 14. Will be unsuscribed on the next timestep
+[2019-03-07T17:13:28.924] [INFO ] #@# Current timestep 9400
+[2019-03-07T17:13:28.924] [INFO ] ExpiredPayloadCleanUp for time: 8900. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.924] [INFO ] [2|12|m9] RSSI= -1 SNR= 33.4859 POWER= 0 MSGID=9 []
+[2019-03-07T17:13:28.924] [INFO ] Node 2 (sumoID: 'veh0') received message 12 payload 9 timestep 9350
+[2019-03-07T17:13:28.925] [INFO ] [Node 5000] removed subscription 14
+[2019-03-07T17:13:28.925] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.925] [INFO ] #@# Current timestep 9450
+[2019-03-07T17:13:28.925] [INFO ] ExpiredPayloadCleanUp for time: 8950. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.926] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.926] [INFO ] #@# Current timestep 9500
+[2019-03-07T17:13:28.926] [INFO ] ExpiredPayloadCleanUp for time: 9000. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.927] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.927] [INFO ] #@# Current timestep 9550
+[2019-03-07T17:13:28.927] [INFO ] ExpiredPayloadCleanUp for time: 9050. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.928] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.928] [INFO ] #@# Current timestep 9600
+[2019-03-07T17:13:28.928] [INFO ] ExpiredPayloadCleanUp for time: 9100. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.929] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.931] [INFO ] #@# Current timestep 9650
+[2019-03-07T17:13:28.931] [INFO ] ExpiredPayloadCleanUp for time: 9150. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.931] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.932] [INFO ] #@# Current timestep 9700
+[2019-03-07T17:13:28.932] [INFO ] ExpiredPayloadCleanUp for time: 9200. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.932] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.934] [INFO ] #@# Current timestep 9750
+[2019-03-07T17:13:28.934] [INFO ] ExpiredPayloadCleanUp for time: 9250. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.935] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.936] [INFO ] #@# Current timestep 9800
+[2019-03-07T17:13:28.936] [INFO ] ExpiredPayloadCleanUp for time: 9300. Removing keys: noting to remove Current size: 1
+[2019-03-07T17:13:28.936] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.937] [INFO ] #@# Current timestep 9850
+[2019-03-07T17:13:28.937] [INFO ] ExpiredPayloadCleanUp for time: 9350. Removing keys: 9 Current size: 0
+[2019-03-07T17:13:28.938] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.939] [INFO ] #@# Current timestep 9900
+[2019-03-07T17:13:28.939] [INFO ] ExpiredPayloadCleanUp for time: 9400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.939] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.940] [INFO ] #@# Current timestep 9950
+[2019-03-07T17:13:28.940] [INFO ] ExpiredPayloadCleanUp for time: 9450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.940] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.941] [INFO ] #@# Current timestep 10000
+[2019-03-07T17:13:28.941] [INFO ] ExpiredPayloadCleanUp for time: 9500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.943] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.943] [INFO ] #@# Current timestep 10050
+[2019-03-07T17:13:28.943] [INFO ] ExpiredPayloadCleanUp for time: 9550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.944] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.944] [INFO ] #@# Current timestep 10100
+[2019-03-07T17:13:28.944] [INFO ] ExpiredPayloadCleanUp for time: 9600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.945] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.946] [INFO ] #@# Current timestep 10150
+[2019-03-07T17:13:28.946] [INFO ] ExpiredPayloadCleanUp for time: 9650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.947] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.948] [INFO ] #@# Current timestep 10200
+[2019-03-07T17:13:28.948] [INFO ] ExpiredPayloadCleanUp for time: 9700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.948] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.949] [INFO ] #@# Current timestep 10250
+[2019-03-07T17:13:28.949] [INFO ] ExpiredPayloadCleanUp for time: 9750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.949] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.951] [INFO ] #@# Current timestep 10300
+[2019-03-07T17:13:28.951] [INFO ] ExpiredPayloadCleanUp for time: 9800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.951] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.952] [INFO ] #@# Current timestep 10350
+[2019-03-07T17:13:28.952] [INFO ] ExpiredPayloadCleanUp for time: 9850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.952] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.953] [INFO ] #@# Current timestep 10400
+[2019-03-07T17:13:28.953] [INFO ] ExpiredPayloadCleanUp for time: 9900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.953] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.954] [INFO ] #@# Current timestep 10450
+[2019-03-07T17:13:28.954] [INFO ] ExpiredPayloadCleanUp for time: 9950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.954] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.955] [INFO ] #@# Current timestep 10500
+[2019-03-07T17:13:28.955] [INFO ] ExpiredPayloadCleanUp for time: 10000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.955] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.956] [INFO ] #@# Current timestep 10550
+[2019-03-07T17:13:28.956] [INFO ] ExpiredPayloadCleanUp for time: 10050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.956] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.957] [INFO ] #@# Current timestep 10600
+[2019-03-07T17:13:28.957] [INFO ] ExpiredPayloadCleanUp for time: 10100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.957] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.958] [INFO ] #@# Current timestep 10650
+[2019-03-07T17:13:28.958] [INFO ] ExpiredPayloadCleanUp for time: 10150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.958] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.959] [INFO ] #@# Current timestep 10700
+[2019-03-07T17:13:28.959] [INFO ] ExpiredPayloadCleanUp for time: 10200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.959] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.960] [INFO ] #@# Current timestep 10750
+[2019-03-07T17:13:28.960] [INFO ] ExpiredPayloadCleanUp for time: 10250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.960] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.961] [INFO ] #@# Current timestep 10800
+[2019-03-07T17:13:28.961] [INFO ] ExpiredPayloadCleanUp for time: 10300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.961] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.962] [INFO ] #@# Current timestep 10850
+[2019-03-07T17:13:28.962] [INFO ] ExpiredPayloadCleanUp for time: 10350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.962] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.963] [INFO ] #@# Current timestep 10900
+[2019-03-07T17:13:28.963] [INFO ] ExpiredPayloadCleanUp for time: 10400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.963] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.964] [INFO ] #@# Current timestep 10950
+[2019-03-07T17:13:28.964] [INFO ] ExpiredPayloadCleanUp for time: 10450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.965] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.966] [INFO ] #@# Current timestep 11000
+[2019-03-07T17:13:28.966] [INFO ] ExpiredPayloadCleanUp for time: 10500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.967] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.968] [INFO ] #@# Current timestep 11050
+[2019-03-07T17:13:28.968] [INFO ] ExpiredPayloadCleanUp for time: 10550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.969] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.969] [INFO ] #@# Current timestep 11100
+[2019-03-07T17:13:28.969] [INFO ] ExpiredPayloadCleanUp for time: 10600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.970] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.971] [INFO ] #@# Current timestep 11150
+[2019-03-07T17:13:28.971] [INFO ] ExpiredPayloadCleanUp for time: 10650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.972] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.972] [INFO ] #@# Current timestep 11200
+[2019-03-07T17:13:28.972] [INFO ] ExpiredPayloadCleanUp for time: 10700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.973] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.973] [INFO ] #@# Current timestep 11250
+[2019-03-07T17:13:28.973] [INFO ] ExpiredPayloadCleanUp for time: 10750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.974] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.974] [INFO ] #@# Current timestep 11300
+[2019-03-07T17:13:28.974] [INFO ] ExpiredPayloadCleanUp for time: 10800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.975] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.975] [INFO ] #@# Current timestep 11350
+[2019-03-07T17:13:28.975] [INFO ] ExpiredPayloadCleanUp for time: 10850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.976] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.976] [INFO ] #@# Current timestep 11400
+[2019-03-07T17:13:28.976] [INFO ] ExpiredPayloadCleanUp for time: 10900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.977] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.977] [INFO ] #@# Current timestep 11450
+[2019-03-07T17:13:28.977] [INFO ] ExpiredPayloadCleanUp for time: 10950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.978] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.978] [INFO ] #@# Current timestep 11500
+[2019-03-07T17:13:28.978] [INFO ] ExpiredPayloadCleanUp for time: 11000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.979] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.980] [INFO ] #@# Current timestep 11550
+[2019-03-07T17:13:28.980] [INFO ] ExpiredPayloadCleanUp for time: 11050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.981] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.982] [INFO ] #@# Current timestep 11600
+[2019-03-07T17:13:28.982] [INFO ] ExpiredPayloadCleanUp for time: 11100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.982] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.983] [INFO ] #@# Current timestep 11650
+[2019-03-07T17:13:28.983] [INFO ] ExpiredPayloadCleanUp for time: 11150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.984] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.985] [INFO ] #@# Current timestep 11700
+[2019-03-07T17:13:28.985] [INFO ] ExpiredPayloadCleanUp for time: 11200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.985] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.986] [INFO ] #@# Current timestep 11750
+[2019-03-07T17:13:28.986] [INFO ] ExpiredPayloadCleanUp for time: 11250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.986] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.987] [INFO ] #@# Current timestep 11800
+[2019-03-07T17:13:28.987] [INFO ] ExpiredPayloadCleanUp for time: 11300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.987] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.988] [INFO ] #@# Current timestep 11850
+[2019-03-07T17:13:28.988] [INFO ] ExpiredPayloadCleanUp for time: 11350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.988] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.989] [INFO ] #@# Current timestep 11900
+[2019-03-07T17:13:28.989] [INFO ] ExpiredPayloadCleanUp for time: 11400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.989] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.990] [INFO ] #@# Current timestep 11950
+[2019-03-07T17:13:28.990] [INFO ] ExpiredPayloadCleanUp for time: 11450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.990] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.991] [INFO ] #@# Current timestep 12000
+[2019-03-07T17:13:28.991] [INFO ] ExpiredPayloadCleanUp for time: 11500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.993] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.994] [INFO ] #@# Current timestep 12050
+[2019-03-07T17:13:28.994] [INFO ] ExpiredPayloadCleanUp for time: 11550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.994] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.995] [INFO ] #@# Current timestep 12100
+[2019-03-07T17:13:28.995] [INFO ] ExpiredPayloadCleanUp for time: 11600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.995] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.997] [INFO ] #@# Current timestep 12150
+[2019-03-07T17:13:28.997] [INFO ] ExpiredPayloadCleanUp for time: 11650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.998] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:28.998] [INFO ] #@# Current timestep 12200
+[2019-03-07T17:13:28.998] [INFO ] ExpiredPayloadCleanUp for time: 11700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:28.999] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.000] [INFO ] #@# Current timestep 12250
+[2019-03-07T17:13:29.000] [INFO ] ExpiredPayloadCleanUp for time: 11750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.001] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.002] [INFO ] #@# Current timestep 12300
+[2019-03-07T17:13:29.002] [INFO ] ExpiredPayloadCleanUp for time: 11800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.003] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.004] [INFO ] #@# Current timestep 12350
+[2019-03-07T17:13:29.004] [INFO ] ExpiredPayloadCleanUp for time: 11850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.005] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.005] [INFO ] #@# Current timestep 12400
+[2019-03-07T17:13:29.005] [INFO ] ExpiredPayloadCleanUp for time: 11900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.006] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.006] [INFO ] #@# Current timestep 12450
+[2019-03-07T17:13:29.006] [INFO ] ExpiredPayloadCleanUp for time: 11950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.006] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.007] [INFO ] #@# Current timestep 12500
+[2019-03-07T17:13:29.007] [INFO ] ExpiredPayloadCleanUp for time: 12000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.007] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.008] [INFO ] #@# Current timestep 12550
+[2019-03-07T17:13:29.008] [INFO ] ExpiredPayloadCleanUp for time: 12050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.008] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.009] [INFO ] #@# Current timestep 12600
+[2019-03-07T17:13:29.009] [INFO ] ExpiredPayloadCleanUp for time: 12100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.009] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.010] [INFO ] #@# Current timestep 12650
+[2019-03-07T17:13:29.010] [INFO ] ExpiredPayloadCleanUp for time: 12150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.010] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.011] [INFO ] #@# Current timestep 12700
+[2019-03-07T17:13:29.011] [INFO ] ExpiredPayloadCleanUp for time: 12200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.011] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.012] [INFO ] #@# Current timestep 12750
+[2019-03-07T17:13:29.012] [INFO ] ExpiredPayloadCleanUp for time: 12250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.012] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.013] [INFO ] #@# Current timestep 12800
+[2019-03-07T17:13:29.013] [INFO ] ExpiredPayloadCleanUp for time: 12300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.013] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.014] [INFO ] #@# Current timestep 12850
+[2019-03-07T17:13:29.014] [INFO ] ExpiredPayloadCleanUp for time: 12350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.014] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.015] [INFO ] #@# Current timestep 12900
+[2019-03-07T17:13:29.015] [INFO ] ExpiredPayloadCleanUp for time: 12400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.015] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.016] [INFO ] #@# Current timestep 12950
+[2019-03-07T17:13:29.016] [INFO ] ExpiredPayloadCleanUp for time: 12450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.016] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.017] [INFO ] #@# Current timestep 13000
+[2019-03-07T17:13:29.017] [INFO ] ExpiredPayloadCleanUp for time: 12500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.019] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.020] [INFO ] #@# Current timestep 13050
+[2019-03-07T17:13:29.020] [INFO ] ExpiredPayloadCleanUp for time: 12550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.020] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.021] [INFO ] #@# Current timestep 13100
+[2019-03-07T17:13:29.021] [INFO ] ExpiredPayloadCleanUp for time: 12600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.021] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.021] [INFO ] #@# Current timestep 13150
+[2019-03-07T17:13:29.021] [INFO ] ExpiredPayloadCleanUp for time: 12650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.022] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.022] [INFO ] #@# Current timestep 13200
+[2019-03-07T17:13:29.022] [INFO ] ExpiredPayloadCleanUp for time: 12700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.023] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.023] [INFO ] #@# Current timestep 13250
+[2019-03-07T17:13:29.023] [INFO ] ExpiredPayloadCleanUp for time: 12750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.024] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.024] [INFO ] #@# Current timestep 13300
+[2019-03-07T17:13:29.024] [INFO ] ExpiredPayloadCleanUp for time: 12800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.025] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.025] [INFO ] #@# Current timestep 13350
+[2019-03-07T17:13:29.025] [INFO ] ExpiredPayloadCleanUp for time: 12850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.026] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.027] [INFO ] #@# Current timestep 13400
+[2019-03-07T17:13:29.027] [INFO ] ExpiredPayloadCleanUp for time: 12900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.027] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.028] [INFO ] #@# Current timestep 13450
+[2019-03-07T17:13:29.028] [INFO ] ExpiredPayloadCleanUp for time: 12950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.028] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.029] [INFO ] #@# Current timestep 13500
+[2019-03-07T17:13:29.029] [INFO ] ExpiredPayloadCleanUp for time: 13000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.031] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.031] [INFO ] #@# Current timestep 13550
+[2019-03-07T17:13:29.031] [INFO ] ExpiredPayloadCleanUp for time: 13050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.032] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.032] [INFO ] #@# Current timestep 13600
+[2019-03-07T17:13:29.032] [INFO ] ExpiredPayloadCleanUp for time: 13100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.033] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.034] [INFO ] #@# Current timestep 13650
+[2019-03-07T17:13:29.034] [INFO ] ExpiredPayloadCleanUp for time: 13150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.034] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.035] [INFO ] #@# Current timestep 13700
+[2019-03-07T17:13:29.035] [INFO ] ExpiredPayloadCleanUp for time: 13200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.036] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.037] [INFO ] #@# Current timestep 13750
+[2019-03-07T17:13:29.037] [INFO ] ExpiredPayloadCleanUp for time: 13250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.039] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.039] [INFO ] #@# Current timestep 13800
+[2019-03-07T17:13:29.039] [INFO ] ExpiredPayloadCleanUp for time: 13300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.040] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.040] [INFO ] #@# Current timestep 13850
+[2019-03-07T17:13:29.040] [INFO ] ExpiredPayloadCleanUp for time: 13350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.041] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.042] [INFO ] #@# Current timestep 13900
+[2019-03-07T17:13:29.042] [INFO ] ExpiredPayloadCleanUp for time: 13400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.042] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.043] [INFO ] #@# Current timestep 13950
+[2019-03-07T17:13:29.043] [INFO ] ExpiredPayloadCleanUp for time: 13450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.043] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.044] [INFO ] #@# Current timestep 14000
+[2019-03-07T17:13:29.045] [INFO ] ExpiredPayloadCleanUp for time: 13500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.048] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.049] [INFO ] #@# Current timestep 14050
+[2019-03-07T17:13:29.049] [INFO ] ExpiredPayloadCleanUp for time: 13550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.050] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.051] [INFO ] #@# Current timestep 14100
+[2019-03-07T17:13:29.051] [INFO ] ExpiredPayloadCleanUp for time: 13600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.051] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.052] [INFO ] #@# Current timestep 14150
+[2019-03-07T17:13:29.052] [INFO ] ExpiredPayloadCleanUp for time: 13650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.052] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.053] [INFO ] #@# Current timestep 14200
+[2019-03-07T17:13:29.053] [INFO ] ExpiredPayloadCleanUp for time: 13700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.053] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.053] [INFO ] #@# Current timestep 14250
+[2019-03-07T17:13:29.053] [INFO ] ExpiredPayloadCleanUp for time: 13750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.054] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.054] [INFO ] #@# Current timestep 14300
+[2019-03-07T17:13:29.054] [INFO ] ExpiredPayloadCleanUp for time: 13800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.055] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.055] [INFO ] #@# Current timestep 14350
+[2019-03-07T17:13:29.055] [INFO ] ExpiredPayloadCleanUp for time: 13850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.056] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.056] [INFO ] #@# Current timestep 14400
+[2019-03-07T17:13:29.056] [INFO ] ExpiredPayloadCleanUp for time: 13900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.057] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.057] [INFO ] #@# Current timestep 14450
+[2019-03-07T17:13:29.057] [INFO ] ExpiredPayloadCleanUp for time: 13950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.058] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.058] [INFO ] #@# Current timestep 14500
+[2019-03-07T17:13:29.058] [INFO ] ExpiredPayloadCleanUp for time: 14000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.059] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.059] [INFO ] #@# Current timestep 14550
+[2019-03-07T17:13:29.059] [INFO ] ExpiredPayloadCleanUp for time: 14050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.060] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.060] [INFO ] #@# Current timestep 14600
+[2019-03-07T17:13:29.061] [INFO ] ExpiredPayloadCleanUp for time: 14100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.061] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.062] [INFO ] #@# Current timestep 14650
+[2019-03-07T17:13:29.062] [INFO ] ExpiredPayloadCleanUp for time: 14150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.063] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.063] [INFO ] #@# Current timestep 14700
+[2019-03-07T17:13:29.063] [INFO ] ExpiredPayloadCleanUp for time: 14200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.064] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.065] [INFO ] #@# Current timestep 14750
+[2019-03-07T17:13:29.065] [INFO ] ExpiredPayloadCleanUp for time: 14250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.065] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.066] [INFO ] #@# Current timestep 14800
+[2019-03-07T17:13:29.066] [INFO ] ExpiredPayloadCleanUp for time: 14300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.066] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.067] [INFO ] #@# Current timestep 14850
+[2019-03-07T17:13:29.067] [INFO ] ExpiredPayloadCleanUp for time: 14350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.067] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.068] [INFO ] #@# Current timestep 14900
+[2019-03-07T17:13:29.068] [INFO ] ExpiredPayloadCleanUp for time: 14400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.068] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.069] [INFO ] #@# Current timestep 14950
+[2019-03-07T17:13:29.069] [INFO ] ExpiredPayloadCleanUp for time: 14450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.069] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.070] [INFO ] #@# Current timestep 15000
+[2019-03-07T17:13:29.070] [INFO ] ExpiredPayloadCleanUp for time: 14500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.072] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.073] [INFO ] #@# Current timestep 15050
+[2019-03-07T17:13:29.073] [INFO ] ExpiredPayloadCleanUp for time: 14550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.073] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.074] [INFO ] #@# Current timestep 15100
+[2019-03-07T17:13:29.074] [INFO ] ExpiredPayloadCleanUp for time: 14600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.074] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.075] [INFO ] #@# Current timestep 15150
+[2019-03-07T17:13:29.075] [INFO ] ExpiredPayloadCleanUp for time: 14650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.075] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.076] [INFO ] #@# Current timestep 15200
+[2019-03-07T17:13:29.076] [INFO ] ExpiredPayloadCleanUp for time: 14700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.076] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.077] [INFO ] #@# Current timestep 15250
+[2019-03-07T17:13:29.077] [INFO ] ExpiredPayloadCleanUp for time: 14750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.077] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.077] [INFO ] #@# Current timestep 15300
+[2019-03-07T17:13:29.077] [INFO ] ExpiredPayloadCleanUp for time: 14800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.078] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.078] [INFO ] #@# Current timestep 15350
+[2019-03-07T17:13:29.080] [INFO ] ExpiredPayloadCleanUp for time: 14850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.081] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.081] [INFO ] #@# Current timestep 15400
+[2019-03-07T17:13:29.081] [INFO ] ExpiredPayloadCleanUp for time: 14900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.082] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.082] [INFO ] #@# Current timestep 15450
+[2019-03-07T17:13:29.083] [INFO ] ExpiredPayloadCleanUp for time: 14950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.084] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.085] [INFO ] #@# Current timestep 15500
+[2019-03-07T17:13:29.085] [INFO ] ExpiredPayloadCleanUp for time: 15000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.085] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.086] [INFO ] #@# Current timestep 15550
+[2019-03-07T17:13:29.086] [INFO ] ExpiredPayloadCleanUp for time: 15050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.086] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.087] [INFO ] #@# Current timestep 15600
+[2019-03-07T17:13:29.087] [INFO ] ExpiredPayloadCleanUp for time: 15100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.087] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.088] [INFO ] #@# Current timestep 15650
+[2019-03-07T17:13:29.088] [INFO ] ExpiredPayloadCleanUp for time: 15150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.088] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.089] [INFO ] #@# Current timestep 15700
+[2019-03-07T17:13:29.089] [INFO ] ExpiredPayloadCleanUp for time: 15200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.089] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.090] [INFO ] #@# Current timestep 15750
+[2019-03-07T17:13:29.090] [INFO ] ExpiredPayloadCleanUp for time: 15250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.090] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.091] [INFO ] #@# Current timestep 15800
+[2019-03-07T17:13:29.091] [INFO ] ExpiredPayloadCleanUp for time: 15300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.091] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.092] [INFO ] #@# Current timestep 15850
+[2019-03-07T17:13:29.092] [INFO ] ExpiredPayloadCleanUp for time: 15350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.093] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.093] [INFO ] #@# Current timestep 15900
+[2019-03-07T17:13:29.093] [INFO ] ExpiredPayloadCleanUp for time: 15400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.094] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.095] [INFO ] #@# Current timestep 15950
+[2019-03-07T17:13:29.095] [INFO ] ExpiredPayloadCleanUp for time: 15450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.095] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.097] [INFO ] #@# Current timestep 16000
+[2019-03-07T17:13:29.097] [INFO ] ExpiredPayloadCleanUp for time: 15500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.098] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.099] [INFO ] #@# Current timestep 16050
+[2019-03-07T17:13:29.099] [INFO ] ExpiredPayloadCleanUp for time: 15550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.100] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.101] [INFO ] #@# Current timestep 16100
+[2019-03-07T17:13:29.101] [INFO ] ExpiredPayloadCleanUp for time: 15600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.102] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.102] [INFO ] #@# Current timestep 16150
+[2019-03-07T17:13:29.102] [INFO ] ExpiredPayloadCleanUp for time: 15650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.103] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.103] [INFO ] #@# Current timestep 16200
+[2019-03-07T17:13:29.103] [INFO ] ExpiredPayloadCleanUp for time: 15700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.104] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.104] [INFO ] #@# Current timestep 16250
+[2019-03-07T17:13:29.104] [INFO ] ExpiredPayloadCleanUp for time: 15750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.105] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.105] [INFO ] #@# Current timestep 16300
+[2019-03-07T17:13:29.105] [INFO ] ExpiredPayloadCleanUp for time: 15800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.106] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.107] [INFO ] #@# Current timestep 16350
+[2019-03-07T17:13:29.107] [INFO ] ExpiredPayloadCleanUp for time: 15850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.107] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.108] [INFO ] #@# Current timestep 16400
+[2019-03-07T17:13:29.108] [INFO ] ExpiredPayloadCleanUp for time: 15900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.108] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.109] [INFO ] #@# Current timestep 16450
+[2019-03-07T17:13:29.109] [INFO ] ExpiredPayloadCleanUp for time: 15950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.109] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.110] [INFO ] #@# Current timestep 16500
+[2019-03-07T17:13:29.110] [INFO ] ExpiredPayloadCleanUp for time: 16000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.110] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.111] [INFO ] #@# Current timestep 16550
+[2019-03-07T17:13:29.111] [INFO ] ExpiredPayloadCleanUp for time: 16050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.111] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.112] [INFO ] #@# Current timestep 16600
+[2019-03-07T17:13:29.112] [INFO ] ExpiredPayloadCleanUp for time: 16100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.113] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.114] [INFO ] #@# Current timestep 16650
+[2019-03-07T17:13:29.114] [INFO ] ExpiredPayloadCleanUp for time: 16150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.115] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.115] [INFO ] #@# Current timestep 16700
+[2019-03-07T17:13:29.115] [INFO ] ExpiredPayloadCleanUp for time: 16200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.116] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.116] [INFO ] #@# Current timestep 16750
+[2019-03-07T17:13:29.116] [INFO ] ExpiredPayloadCleanUp for time: 16250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.117] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.118] [INFO ] #@# Current timestep 16800
+[2019-03-07T17:13:29.118] [INFO ] ExpiredPayloadCleanUp for time: 16300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.119] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.119] [INFO ] #@# Current timestep 16850
+[2019-03-07T17:13:29.119] [INFO ] ExpiredPayloadCleanUp for time: 16350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.120] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.120] [INFO ] #@# Current timestep 16900
+[2019-03-07T17:13:29.120] [INFO ] ExpiredPayloadCleanUp for time: 16400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.121] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.121] [INFO ] #@# Current timestep 16950
+[2019-03-07T17:13:29.121] [INFO ] ExpiredPayloadCleanUp for time: 16450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.122] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.122] [INFO ] #@# Current timestep 17000
+[2019-03-07T17:13:29.123] [INFO ] ExpiredPayloadCleanUp for time: 16500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.124] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.125] [INFO ] #@# Current timestep 17050
+[2019-03-07T17:13:29.125] [INFO ] ExpiredPayloadCleanUp for time: 16550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.126] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.126] [INFO ] #@# Current timestep 17100
+[2019-03-07T17:13:29.126] [INFO ] ExpiredPayloadCleanUp for time: 16600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.127] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.127] [INFO ] #@# Current timestep 17150
+[2019-03-07T17:13:29.127] [INFO ] ExpiredPayloadCleanUp for time: 16650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.128] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.130] [INFO ] #@# Current timestep 17200
+[2019-03-07T17:13:29.130] [INFO ] ExpiredPayloadCleanUp for time: 16700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.131] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.131] [INFO ] #@# Current timestep 17250
+[2019-03-07T17:13:29.131] [INFO ] ExpiredPayloadCleanUp for time: 16750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.132] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.132] [INFO ] #@# Current timestep 17300
+[2019-03-07T17:13:29.132] [INFO ] ExpiredPayloadCleanUp for time: 16800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.133] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.134] [INFO ] #@# Current timestep 17350
+[2019-03-07T17:13:29.134] [INFO ] ExpiredPayloadCleanUp for time: 16850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.135] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.135] [INFO ] #@# Current timestep 17400
+[2019-03-07T17:13:29.135] [INFO ] ExpiredPayloadCleanUp for time: 16900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.136] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.136] [INFO ] #@# Current timestep 17450
+[2019-03-07T17:13:29.136] [INFO ] ExpiredPayloadCleanUp for time: 16950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.137] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.137] [INFO ] #@# Current timestep 17500
+[2019-03-07T17:13:29.137] [INFO ] ExpiredPayloadCleanUp for time: 17000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.138] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.138] [INFO ] #@# Current timestep 17550
+[2019-03-07T17:13:29.138] [INFO ] ExpiredPayloadCleanUp for time: 17050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.139] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.139] [INFO ] #@# Current timestep 17600
+[2019-03-07T17:13:29.139] [INFO ] ExpiredPayloadCleanUp for time: 17100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.140] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.140] [INFO ] #@# Current timestep 17650
+[2019-03-07T17:13:29.140] [INFO ] ExpiredPayloadCleanUp for time: 17150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.141] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.141] [INFO ] #@# Current timestep 17700
+[2019-03-07T17:13:29.141] [INFO ] ExpiredPayloadCleanUp for time: 17200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.142] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.142] [INFO ] #@# Current timestep 17750
+[2019-03-07T17:13:29.142] [INFO ] ExpiredPayloadCleanUp for time: 17250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.143] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.143] [INFO ] #@# Current timestep 17800
+[2019-03-07T17:13:29.143] [INFO ] ExpiredPayloadCleanUp for time: 17300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.143] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.144] [INFO ] #@# Current timestep 17850
+[2019-03-07T17:13:29.144] [INFO ] ExpiredPayloadCleanUp for time: 17350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.144] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.145] [INFO ] #@# Current timestep 17900
+[2019-03-07T17:13:29.145] [INFO ] ExpiredPayloadCleanUp for time: 17400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.146] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.146] [INFO ] #@# Current timestep 17950
+[2019-03-07T17:13:29.146] [INFO ] ExpiredPayloadCleanUp for time: 17450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.147] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.147] [INFO ] #@# Current timestep 18000
+[2019-03-07T17:13:29.148] [INFO ] ExpiredPayloadCleanUp for time: 17500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.149] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.149] [INFO ] #@# Current timestep 18050
+[2019-03-07T17:13:29.149] [INFO ] ExpiredPayloadCleanUp for time: 17550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.150] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.151] [INFO ] #@# Current timestep 18100
+[2019-03-07T17:13:29.151] [INFO ] ExpiredPayloadCleanUp for time: 17600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.151] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.152] [INFO ] #@# Current timestep 18150
+[2019-03-07T17:13:29.152] [INFO ] ExpiredPayloadCleanUp for time: 17650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.152] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.153] [INFO ] #@# Current timestep 18200
+[2019-03-07T17:13:29.153] [INFO ] ExpiredPayloadCleanUp for time: 17700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.153] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.154] [INFO ] #@# Current timestep 18250
+[2019-03-07T17:13:29.154] [INFO ] ExpiredPayloadCleanUp for time: 17750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.154] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.155] [INFO ] #@# Current timestep 18300
+[2019-03-07T17:13:29.155] [INFO ] ExpiredPayloadCleanUp for time: 17800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.155] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.156] [INFO ] #@# Current timestep 18350
+[2019-03-07T17:13:29.156] [INFO ] ExpiredPayloadCleanUp for time: 17850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.157] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.157] [INFO ] #@# Current timestep 18400
+[2019-03-07T17:13:29.157] [INFO ] ExpiredPayloadCleanUp for time: 17900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.158] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.159] [INFO ] #@# Current timestep 18450
+[2019-03-07T17:13:29.159] [INFO ] ExpiredPayloadCleanUp for time: 17950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.160] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.160] [INFO ] #@# Current timestep 18500
+[2019-03-07T17:13:29.160] [INFO ] ExpiredPayloadCleanUp for time: 18000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.161] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.161] [INFO ] #@# Current timestep 18550
+[2019-03-07T17:13:29.161] [INFO ] ExpiredPayloadCleanUp for time: 18050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.162] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.163] [INFO ] #@# Current timestep 18600
+[2019-03-07T17:13:29.163] [INFO ] ExpiredPayloadCleanUp for time: 18100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.164] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.164] [INFO ] #@# Current timestep 18650
+[2019-03-07T17:13:29.164] [INFO ] ExpiredPayloadCleanUp for time: 18150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.165] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.165] [INFO ] #@# Current timestep 18700
+[2019-03-07T17:13:29.166] [INFO ] ExpiredPayloadCleanUp for time: 18200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.166] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.168] [INFO ] #@# Current timestep 18750
+[2019-03-07T17:13:29.168] [INFO ] ExpiredPayloadCleanUp for time: 18250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.169] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.169] [INFO ] #@# Current timestep 18800
+[2019-03-07T17:13:29.169] [INFO ] ExpiredPayloadCleanUp for time: 18300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.170] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.170] [INFO ] #@# Current timestep 18850
+[2019-03-07T17:13:29.170] [INFO ] ExpiredPayloadCleanUp for time: 18350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.171] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.171] [INFO ] #@# Current timestep 18900
+[2019-03-07T17:13:29.171] [INFO ] ExpiredPayloadCleanUp for time: 18400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.172] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.172] [INFO ] #@# Current timestep 18950
+[2019-03-07T17:13:29.172] [INFO ] ExpiredPayloadCleanUp for time: 18450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.173] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.174] [INFO ] #@# Current timestep 19000
+[2019-03-07T17:13:29.174] [INFO ] ExpiredPayloadCleanUp for time: 18500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.175] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.176] [INFO ] #@# Current timestep 19050
+[2019-03-07T17:13:29.176] [INFO ] ExpiredPayloadCleanUp for time: 18550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.176] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.177] [INFO ] #@# Current timestep 19100
+[2019-03-07T17:13:29.177] [INFO ] ExpiredPayloadCleanUp for time: 18600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.177] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.178] [INFO ] #@# Current timestep 19150
+[2019-03-07T17:13:29.178] [INFO ] ExpiredPayloadCleanUp for time: 18650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.178] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.179] [INFO ] #@# Current timestep 19200
+[2019-03-07T17:13:29.179] [INFO ] ExpiredPayloadCleanUp for time: 18700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.181] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.181] [INFO ] #@# Current timestep 19250
+[2019-03-07T17:13:29.181] [INFO ] ExpiredPayloadCleanUp for time: 18750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.182] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.182] [INFO ] #@# Current timestep 19300
+[2019-03-07T17:13:29.182] [INFO ] ExpiredPayloadCleanUp for time: 18800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.183] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.184] [INFO ] #@# Current timestep 19350
+[2019-03-07T17:13:29.184] [INFO ] ExpiredPayloadCleanUp for time: 18850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.185] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.186] [INFO ] #@# Current timestep 19400
+[2019-03-07T17:13:29.186] [INFO ] ExpiredPayloadCleanUp for time: 18900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.187] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.187] [INFO ] #@# Current timestep 19450
+[2019-03-07T17:13:29.187] [INFO ] ExpiredPayloadCleanUp for time: 18950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.188] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.189] [INFO ] #@# Current timestep 19500
+[2019-03-07T17:13:29.189] [INFO ] ExpiredPayloadCleanUp for time: 19000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.189] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.190] [INFO ] #@# Current timestep 19550
+[2019-03-07T17:13:29.190] [INFO ] ExpiredPayloadCleanUp for time: 19050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.191] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.191] [INFO ] #@# Current timestep 19600
+[2019-03-07T17:13:29.191] [INFO ] ExpiredPayloadCleanUp for time: 19100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.192] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.192] [INFO ] #@# Current timestep 19650
+[2019-03-07T17:13:29.192] [INFO ] ExpiredPayloadCleanUp for time: 19150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.193] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.193] [INFO ] #@# Current timestep 19700
+[2019-03-07T17:13:29.193] [INFO ] ExpiredPayloadCleanUp for time: 19200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.194] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.194] [INFO ] #@# Current timestep 19750
+[2019-03-07T17:13:29.194] [INFO ] ExpiredPayloadCleanUp for time: 19250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.195] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.195] [INFO ] #@# Current timestep 19800
+[2019-03-07T17:13:29.195] [INFO ] ExpiredPayloadCleanUp for time: 19300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.196] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.196] [INFO ] #@# Current timestep 19850
+[2019-03-07T17:13:29.196] [INFO ] ExpiredPayloadCleanUp for time: 19350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.197] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.197] [INFO ] #@# Current timestep 19900
+[2019-03-07T17:13:29.197] [INFO ] ExpiredPayloadCleanUp for time: 19400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.198] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.198] [INFO ] #@# Current timestep 19950
+[2019-03-07T17:13:29.198] [INFO ] ExpiredPayloadCleanUp for time: 19450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.199] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.200] [INFO ] #@# Current timestep 20000
+[2019-03-07T17:13:29.200] [INFO ] ExpiredPayloadCleanUp for time: 19500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.201] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.202] [INFO ] #@# Current timestep 20050
+[2019-03-07T17:13:29.202] [INFO ] ExpiredPayloadCleanUp for time: 19550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.203] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.203] [INFO ] #@# Current timestep 20100
+[2019-03-07T17:13:29.203] [INFO ] ExpiredPayloadCleanUp for time: 19600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.204] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.204] [INFO ] #@# Current timestep 20150
+[2019-03-07T17:13:29.204] [INFO ] ExpiredPayloadCleanUp for time: 19650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.205] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.205] [INFO ] #@# Current timestep 20200
+[2019-03-07T17:13:29.205] [INFO ] ExpiredPayloadCleanUp for time: 19700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.206] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.206] [INFO ] #@# Current timestep 20250
+[2019-03-07T17:13:29.206] [INFO ] ExpiredPayloadCleanUp for time: 19750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.207] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.207] [INFO ] #@# Current timestep 20300
+[2019-03-07T17:13:29.207] [INFO ] ExpiredPayloadCleanUp for time: 19800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.208] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.208] [INFO ] #@# Current timestep 20350
+[2019-03-07T17:13:29.208] [INFO ] ExpiredPayloadCleanUp for time: 19850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.209] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.209] [INFO ] #@# Current timestep 20400
+[2019-03-07T17:13:29.209] [INFO ] ExpiredPayloadCleanUp for time: 19900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.210] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.210] [INFO ] #@# Current timestep 20450
+[2019-03-07T17:13:29.210] [INFO ] ExpiredPayloadCleanUp for time: 19950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.211] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.211] [INFO ] #@# Current timestep 20500
+[2019-03-07T17:13:29.211] [INFO ] ExpiredPayloadCleanUp for time: 20000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.212] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.212] [INFO ] #@# Current timestep 20550
+[2019-03-07T17:13:29.212] [INFO ] ExpiredPayloadCleanUp for time: 20050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.214] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.214] [INFO ] #@# Current timestep 20600
+[2019-03-07T17:13:29.214] [INFO ] ExpiredPayloadCleanUp for time: 20100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.215] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.215] [INFO ] #@# Current timestep 20650
+[2019-03-07T17:13:29.215] [INFO ] ExpiredPayloadCleanUp for time: 20150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.216] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.218] [INFO ] #@# Current timestep 20700
+[2019-03-07T17:13:29.218] [INFO ] ExpiredPayloadCleanUp for time: 20200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.219] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.219] [INFO ] #@# Current timestep 20750
+[2019-03-07T17:13:29.219] [INFO ] ExpiredPayloadCleanUp for time: 20250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.220] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.221] [INFO ] #@# Current timestep 20800
+[2019-03-07T17:13:29.221] [INFO ] ExpiredPayloadCleanUp for time: 20300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.221] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.222] [INFO ] #@# Current timestep 20850
+[2019-03-07T17:13:29.222] [INFO ] ExpiredPayloadCleanUp for time: 20350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.223] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.223] [INFO ] #@# Current timestep 20900
+[2019-03-07T17:13:29.223] [INFO ] ExpiredPayloadCleanUp for time: 20400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.224] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.224] [INFO ] #@# Current timestep 20950
+[2019-03-07T17:13:29.224] [INFO ] ExpiredPayloadCleanUp for time: 20450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.225] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.226] [INFO ] #@# Current timestep 21000
+[2019-03-07T17:13:29.226] [INFO ] ExpiredPayloadCleanUp for time: 20500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.227] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.228] [INFO ] #@# Current timestep 21050
+[2019-03-07T17:13:29.228] [INFO ] ExpiredPayloadCleanUp for time: 20550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.229] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.230] [INFO ] #@# Current timestep 21100
+[2019-03-07T17:13:29.230] [INFO ] ExpiredPayloadCleanUp for time: 20600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.232] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.232] [INFO ] #@# Current timestep 21150
+[2019-03-07T17:13:29.232] [INFO ] ExpiredPayloadCleanUp for time: 20650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.233] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.234] [INFO ] #@# Current timestep 21200
+[2019-03-07T17:13:29.234] [INFO ] ExpiredPayloadCleanUp for time: 20700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.234] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.235] [INFO ] #@# Current timestep 21250
+[2019-03-07T17:13:29.235] [INFO ] ExpiredPayloadCleanUp for time: 20750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.235] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.236] [INFO ] #@# Current timestep 21300
+[2019-03-07T17:13:29.236] [INFO ] ExpiredPayloadCleanUp for time: 20800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.236] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.237] [INFO ] #@# Current timestep 21350
+[2019-03-07T17:13:29.237] [INFO ] ExpiredPayloadCleanUp for time: 20850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.237] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.238] [INFO ] #@# Current timestep 21400
+[2019-03-07T17:13:29.238] [INFO ] ExpiredPayloadCleanUp for time: 20900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.238] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.239] [INFO ] #@# Current timestep 21450
+[2019-03-07T17:13:29.239] [INFO ] ExpiredPayloadCleanUp for time: 20950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.239] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.240] [INFO ] #@# Current timestep 21500
+[2019-03-07T17:13:29.240] [INFO ] ExpiredPayloadCleanUp for time: 21000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.241] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.241] [INFO ] #@# Current timestep 21550
+[2019-03-07T17:13:29.241] [INFO ] ExpiredPayloadCleanUp for time: 21050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.241] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.242] [INFO ] #@# Current timestep 21600
+[2019-03-07T17:13:29.242] [INFO ] ExpiredPayloadCleanUp for time: 21100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.242] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.243] [INFO ] #@# Current timestep 21650
+[2019-03-07T17:13:29.243] [INFO ] ExpiredPayloadCleanUp for time: 21150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.243] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.244] [INFO ] #@# Current timestep 21700
+[2019-03-07T17:13:29.244] [INFO ] ExpiredPayloadCleanUp for time: 21200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.244] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.245] [INFO ] #@# Current timestep 21750
+[2019-03-07T17:13:29.245] [INFO ] ExpiredPayloadCleanUp for time: 21250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.245] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.246] [INFO ] #@# Current timestep 21800
+[2019-03-07T17:13:29.246] [INFO ] ExpiredPayloadCleanUp for time: 21300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.246] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.247] [INFO ] #@# Current timestep 21850
+[2019-03-07T17:13:29.247] [INFO ] ExpiredPayloadCleanUp for time: 21350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.247] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.248] [INFO ] #@# Current timestep 21900
+[2019-03-07T17:13:29.248] [INFO ] ExpiredPayloadCleanUp for time: 21400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.249] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.249] [INFO ] #@# Current timestep 21950
+[2019-03-07T17:13:29.249] [INFO ] ExpiredPayloadCleanUp for time: 21450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.250] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.251] [INFO ] #@# Current timestep 22000
+[2019-03-07T17:13:29.251] [INFO ] ExpiredPayloadCleanUp for time: 21500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.252] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.253] [INFO ] #@# Current timestep 22050
+[2019-03-07T17:13:29.253] [INFO ] ExpiredPayloadCleanUp for time: 21550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.254] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.255] [INFO ] #@# Current timestep 22100
+[2019-03-07T17:13:29.255] [INFO ] ExpiredPayloadCleanUp for time: 21600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.256] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.256] [INFO ] #@# Current timestep 22150
+[2019-03-07T17:13:29.257] [INFO ] ExpiredPayloadCleanUp for time: 21650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.257] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.257] [INFO ] #@# Current timestep 22200
+[2019-03-07T17:13:29.258] [INFO ] ExpiredPayloadCleanUp for time: 21700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.258] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.259] [INFO ] #@# Current timestep 22250
+[2019-03-07T17:13:29.259] [INFO ] ExpiredPayloadCleanUp for time: 21750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.259] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.260] [INFO ] #@# Current timestep 22300
+[2019-03-07T17:13:29.260] [INFO ] ExpiredPayloadCleanUp for time: 21800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.260] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.261] [INFO ] #@# Current timestep 22350
+[2019-03-07T17:13:29.261] [INFO ] ExpiredPayloadCleanUp for time: 21850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.261] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.262] [INFO ] #@# Current timestep 22400
+[2019-03-07T17:13:29.262] [INFO ] ExpiredPayloadCleanUp for time: 21900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.262] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.264] [INFO ] #@# Current timestep 22450
+[2019-03-07T17:13:29.264] [INFO ] ExpiredPayloadCleanUp for time: 21950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.264] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.265] [INFO ] #@# Current timestep 22500
+[2019-03-07T17:13:29.265] [INFO ] ExpiredPayloadCleanUp for time: 22000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.265] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.266] [INFO ] #@# Current timestep 22550
+[2019-03-07T17:13:29.266] [INFO ] ExpiredPayloadCleanUp for time: 22050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.267] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.268] [INFO ] #@# Current timestep 22600
+[2019-03-07T17:13:29.268] [INFO ] ExpiredPayloadCleanUp for time: 22100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.268] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.269] [INFO ] #@# Current timestep 22650
+[2019-03-07T17:13:29.269] [INFO ] ExpiredPayloadCleanUp for time: 22150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.269] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.270] [INFO ] #@# Current timestep 22700
+[2019-03-07T17:13:29.270] [INFO ] ExpiredPayloadCleanUp for time: 22200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.270] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.271] [INFO ] #@# Current timestep 22750
+[2019-03-07T17:13:29.271] [INFO ] ExpiredPayloadCleanUp for time: 22250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.271] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.272] [INFO ] #@# Current timestep 22800
+[2019-03-07T17:13:29.272] [INFO ] ExpiredPayloadCleanUp for time: 22300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.272] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.273] [INFO ] #@# Current timestep 22850
+[2019-03-07T17:13:29.273] [INFO ] ExpiredPayloadCleanUp for time: 22350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.273] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.274] [INFO ] #@# Current timestep 22900
+[2019-03-07T17:13:29.274] [INFO ] ExpiredPayloadCleanUp for time: 22400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.274] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.275] [INFO ] #@# Current timestep 22950
+[2019-03-07T17:13:29.275] [INFO ] ExpiredPayloadCleanUp for time: 22450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.275] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.276] [INFO ] #@# Current timestep 23000
+[2019-03-07T17:13:29.276] [INFO ] ExpiredPayloadCleanUp for time: 22500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.278] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.279] [INFO ] #@# Current timestep 23050
+[2019-03-07T17:13:29.279] [INFO ] ExpiredPayloadCleanUp for time: 22550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.280] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.281] [INFO ] #@# Current timestep 23100
+[2019-03-07T17:13:29.281] [INFO ] ExpiredPayloadCleanUp for time: 22600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.281] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.282] [INFO ] #@# Current timestep 23150
+[2019-03-07T17:13:29.282] [INFO ] ExpiredPayloadCleanUp for time: 22650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.283] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.283] [INFO ] #@# Current timestep 23200
+[2019-03-07T17:13:29.283] [INFO ] ExpiredPayloadCleanUp for time: 22700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.284] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.285] [INFO ] #@# Current timestep 23250
+[2019-03-07T17:13:29.285] [INFO ] ExpiredPayloadCleanUp for time: 22750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.286] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.287] [INFO ] #@# Current timestep 23300
+[2019-03-07T17:13:29.287] [INFO ] ExpiredPayloadCleanUp for time: 22800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.288] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.288] [INFO ] #@# Current timestep 23350
+[2019-03-07T17:13:29.288] [INFO ] ExpiredPayloadCleanUp for time: 22850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.289] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.289] [INFO ] #@# Current timestep 23400
+[2019-03-07T17:13:29.289] [INFO ] ExpiredPayloadCleanUp for time: 22900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.290] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.290] [INFO ] #@# Current timestep 23450
+[2019-03-07T17:13:29.290] [INFO ] ExpiredPayloadCleanUp for time: 22950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.291] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.292] [INFO ] #@# Current timestep 23500
+[2019-03-07T17:13:29.292] [INFO ] ExpiredPayloadCleanUp for time: 23000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.292] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.293] [INFO ] #@# Current timestep 23550
+[2019-03-07T17:13:29.293] [INFO ] ExpiredPayloadCleanUp for time: 23050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.293] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.294] [INFO ] #@# Current timestep 23600
+[2019-03-07T17:13:29.294] [INFO ] ExpiredPayloadCleanUp for time: 23100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.294] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.295] [INFO ] #@# Current timestep 23650
+[2019-03-07T17:13:29.295] [INFO ] ExpiredPayloadCleanUp for time: 23150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.296] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.296] [INFO ] #@# Current timestep 23700
+[2019-03-07T17:13:29.296] [INFO ] ExpiredPayloadCleanUp for time: 23200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.297] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.297] [INFO ] #@# Current timestep 23750
+[2019-03-07T17:13:29.297] [INFO ] ExpiredPayloadCleanUp for time: 23250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.298] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.298] [INFO ] #@# Current timestep 23800
+[2019-03-07T17:13:29.298] [INFO ] ExpiredPayloadCleanUp for time: 23300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.298] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.299] [INFO ] #@# Current timestep 23850
+[2019-03-07T17:13:29.299] [INFO ] ExpiredPayloadCleanUp for time: 23350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.299] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.300] [INFO ] #@# Current timestep 23900
+[2019-03-07T17:13:29.300] [INFO ] ExpiredPayloadCleanUp for time: 23400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.300] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.301] [INFO ] #@# Current timestep 23950
+[2019-03-07T17:13:29.301] [INFO ] ExpiredPayloadCleanUp for time: 23450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.301] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.302] [INFO ] #@# Current timestep 24000
+[2019-03-07T17:13:29.302] [INFO ] ExpiredPayloadCleanUp for time: 23500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.304] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.305] [INFO ] #@# Current timestep 24050
+[2019-03-07T17:13:29.305] [INFO ] ExpiredPayloadCleanUp for time: 23550. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.305] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.306] [INFO ] #@# Current timestep 24100
+[2019-03-07T17:13:29.306] [INFO ] ExpiredPayloadCleanUp for time: 23600. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.306] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.307] [INFO ] #@# Current timestep 24150
+[2019-03-07T17:13:29.307] [INFO ] ExpiredPayloadCleanUp for time: 23650. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.307] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.308] [INFO ] #@# Current timestep 24200
+[2019-03-07T17:13:29.308] [INFO ] ExpiredPayloadCleanUp for time: 23700. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.308] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.309] [INFO ] #@# Current timestep 24250
+[2019-03-07T17:13:29.309] [INFO ] ExpiredPayloadCleanUp for time: 23750. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.309] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.309] [INFO ] #@# Current timestep 24300
+[2019-03-07T17:13:29.310] [INFO ] ExpiredPayloadCleanUp for time: 23800. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.310] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.310] [INFO ] #@# Current timestep 24350
+[2019-03-07T17:13:29.310] [INFO ] ExpiredPayloadCleanUp for time: 23850. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.311] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.311] [INFO ] #@# Current timestep 24400
+[2019-03-07T17:13:29.312] [INFO ] ExpiredPayloadCleanUp for time: 23900. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.312] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.313] [INFO ] #@# Current timestep 24450
+[2019-03-07T17:13:29.313] [INFO ] ExpiredPayloadCleanUp for time: 23950. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.314] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.315] [INFO ] #@# Current timestep 24500
+[2019-03-07T17:13:29.315] [INFO ] ExpiredPayloadCleanUp for time: 24000. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.317] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.318] [INFO ] #@# Current timestep 24550
+[2019-03-07T17:13:29.318] [INFO ] ExpiredPayloadCleanUp for time: 24050. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.318] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.319] [INFO ] #@# Current timestep 24600
+[2019-03-07T17:13:29.319] [INFO ] ExpiredPayloadCleanUp for time: 24100. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.320] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.320] [INFO ] #@# Current timestep 24650
+[2019-03-07T17:13:29.320] [INFO ] ExpiredPayloadCleanUp for time: 24150. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.321] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.322] [INFO ] #@# Current timestep 24700
+[2019-03-07T17:13:29.322] [INFO ] ExpiredPayloadCleanUp for time: 24200. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.322] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.323] [INFO ] #@# Current timestep 24750
+[2019-03-07T17:13:29.323] [INFO ] ExpiredPayloadCleanUp for time: 24250. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.323] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.324] [INFO ] #@# Current timestep 24800
+[2019-03-07T17:13:29.324] [INFO ] ExpiredPayloadCleanUp for time: 24300. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.324] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.325] [INFO ] #@# Current timestep 24850
+[2019-03-07T17:13:29.325] [INFO ] ExpiredPayloadCleanUp for time: 24350. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.325] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.326] [INFO ] #@# Current timestep 24900
+[2019-03-07T17:13:29.326] [INFO ] ExpiredPayloadCleanUp for time: 24400. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.326] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.327] [INFO ] #@# Current timestep 24950
+[2019-03-07T17:13:29.327] [INFO ] ExpiredPayloadCleanUp for time: 24450. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.327] [INFO ] Mobility info on nodes: 2 5000 
+[2019-03-07T17:13:29.328] [INFO ] #@# Current timestep 25000
+[2019-03-07T17:13:29.328] [INFO ] ExpiredPayloadCleanUp for time: 24500. Removing keys: noting to remove Current size: 0
+[2019-03-07T17:13:29.330] [INFO ] Mobility info on nodes: 2 5000 

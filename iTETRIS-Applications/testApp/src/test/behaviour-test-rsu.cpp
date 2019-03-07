@@ -83,6 +83,7 @@ namespace testapp
                 // Subscribe to receive geobroadcast messages
                 GetController()->startReceivingGeobroadcast(MSGCAT_TESTAPP);
                 m_subReceiveMessage = true;
+                GetController()->requestMobilityInfo();
 
                 if (ProgramConfiguration::GetTestCase() == "commSimple2") {
                     // Start broadcasting at 5000

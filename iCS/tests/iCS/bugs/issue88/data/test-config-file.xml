@@ -9,11 +9,11 @@
 		<ns-log-file value="../app-ns-log.txt"/>
 		<data-file value="../app-data.txt"/>
         <message-lifetime value="10" />
-        <test-case value="commSimple" />
+        <test-case value="commSimple2" />
     </general>
 	
 	<infrastructure>
-		<rsu id="5000" xpos="100.00" ypos="50.00" >
+		<rsu id="5000" xpos="-250.00" ypos="-250.00" >
             <direction value="0" approaching="true" leaving="true" approaching-time="150" leaving-time="150" >
                 <lane friendly-name="right" controlled-lane="WC_0" following-lane="CS_0" />
                 <lane friendly-name="straight" controlled-lane="WC_0" following-lane="CE_0" />

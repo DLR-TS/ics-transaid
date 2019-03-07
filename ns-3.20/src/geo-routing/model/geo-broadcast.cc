@@ -167,8 +167,8 @@ geoBroadcast::RouteInput (Ptr<const Packet> p, const c2cCommonHeader &header,
      c2cCommonHeader::ShortPositionVector m_posvector;
      Ptr<MobilityModel> model = m_c2c->GetObject<Node>()->GetObject<MobilityModel> ();
      m_posvector.gnAddr = m_c2c->GetObject<Node>()->GetId ();
-     m_posvector.Lat = (uint32_t) model->GetPosition().x;
-     m_posvector.Long = (uint32_t) model->GetPosition().y;
+     m_posvector.Lat = (uint32_t) (model->GetPosition().x<0?0:model->GetPosition().x); // Modified by acorrea to avoid overflow
+     m_posvector.Long = (uint32_t) (model->GetPosition().y<0?0:model->GetPosition().y); // Modified by acorrea to avoid overflow
 
 
      double distanceReceiver = CartesianDistance(m_posvector.Lat, m_posvector.Long, daddr->GetGeoAreaPos1 ()->lat, daddr->GetGeoAreaPos1 ()->lon);
