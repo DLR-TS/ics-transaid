@@ -1,2 +1,9 @@
+# Duplicates test case commSimple, but moves network coords into negative y-coordinates, which corrupts communications.
+# 
+# Tests communication behaviour with test case commSimple:
+# RSU broadcasts from 0 to 10000 and vehicle starts broadcasting at 8000 until its scheduled abort signal arrives at 12000.
+# As the vehicle is inserted at 5000, it receives the stations broadcast until 8000, where it begins to broadcast itself. From 8000 to 10000 no messages are received as both stations are sending simultaneously. From 10000 to 12000, the silent RSU receives the messages from the vehicle.
+issue88
+
 # traffic simstep length must be a multiple of the iCS simstep length
 issue21
