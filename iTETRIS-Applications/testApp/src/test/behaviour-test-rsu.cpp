@@ -55,9 +55,9 @@ namespace testapp
 
 		///BehaviourTestRSU implementation
 		BehaviourTestRSU::BehaviourTestRSU(iCSInterface* controller) :
-				BehaviourRsu(controller), m_firstBroadcast(true), m_broadcastInterval(1000),
+				BehaviourRsu(controller), m_firstBroadcast(true), m_broadcastInterval(1000), m_broadcastCheckInterval(100),
 				m_broadcastActive(true), m_eventBroadcast(0), m_eventAbortBroadcast(0),
-				m_lastVType("NONE")
+				m_lastVType("NONE"),m_eventBroadcastCAM(0), m_eventBroadcastDENM(0),m_eventBroadcastCPM(0), m_eventBroadcastMCM(0), m_eventBroadcastIVI(0), m_eventBroadcastMAP(0)
 		{
             m_mobilitySubscription = m_trafficLightSubscription = m_setCAMareaSubscription = m_subReceiveMessage = false;
 		}
@@ -65,6 +65,12 @@ namespace testapp
 		BehaviourTestRSU::~BehaviourTestRSU() {
             Scheduler::Cancel(m_eventBroadcast);
             Scheduler::Cancel(m_eventAbortBroadcast);
+            Scheduler::Cancel(m_eventBroadcastCAM);
+            Scheduler::Cancel(m_eventBroadcastDENM);
+            Scheduler::Cancel(m_eventBroadcastCPM);
+            Scheduler::Cancel(m_eventBroadcastMCM);
+            Scheduler::Cancel(m_eventBroadcastMAP);
+            Scheduler::Cancel(m_eventBroadcastIVI);
         }
 
 		void BehaviourTestRSU::Start()
@@ -121,7 +127,16 @@ namespace testapp
                     GetController()->startReceivingGeobroadcast(PROTOCOL_MESSAGE);
                     m_subReceiveMessage = true;
                 }
+            } else if (ProgramConfiguration::GetTestCase() == "testV2XmsgSet"){
+
+                GetController()->startReceivingGeobroadcast(MSGCAT_TESTAPP);
+                m_subReceiveMessage = true;
+                GetController()->requestMobilityInfo();
+
+                m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &BehaviourTestRSU::RSUBroadcastTestV2XmsgSet, this);
+
             }
+
 		}
 
 		bool BehaviourTestRSU::IsSubscribedTo(ProtocolId pid) const
@@ -136,42 +151,87 @@ namespace testapp
                 return;
             CommHeader* commHeader;
             GetController()->GetHeader(payload, server::PAYLOAD_FRONT, commHeader);
-            if (commHeader->getMessageType() != MT_TEST_RESPONSE)
-            {
-                NS_LOG_WARN(Log()<< "Received an unknown message "<< commHeader->getMessageType());
-                return;
-            }
-            TestHeader* testHeader;
-            GetController()->GetHeader(payload, server::PAYLOAD_END, testHeader);
-            Header * receivedHeader = payload->getHeader(baseapp::server::PAYLOAD_END);
-            TestHeader* receivedTestHeader = dynamic_cast<TestHeader*>(receivedHeader);
 
-            NS_LOG_INFO(Log() << "Received a test message with content: " << testHeader->getMessage());
+            if (ProgramConfiguration::GetTestCase() == "testV2XmsgSet"){
 
-            if (ProgramConfiguration::GetTestCase() == "commSimple2") {
-                double responseTime = m_rnd.GetValue(m_responseTimeSpacing, testHeader->getMaxResponseTime() - m_responseTimeSpacing);
-                Scheduler::Cancel(m_eventResponse);
-                if (receivedTestHeader->getMessage() == "Vehicle response to RSU Vehicle acknowledgement") {
-                    // Random offset for responseTime
-//                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends stop advice response on reception of Vehicle response to RSU Vehicle acknowledgement.");
-                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends stop advice response on reception of Vehicle response to RSU Vehicle acknowledgement.");
-                    TestHeader::ResponseInfo response;
-                    response.message = "RSU Stop advice";
-                    response.targetID = commHeader->getSourceId();
-                    response.stopEdge = "CE";
-                    response.stopPosition = 50;
-                    m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestRSU::EventSendResponse, this, response);
-                    NS_LOG_INFO(Log() << "scheduled a test response to Vehicle response to RSU Vehicle acknowledgement in " << responseTime);
-                } else if (receivedTestHeader->getMessage() == "Vehicle response to RSU broadcast") {
-                    // Random offset for responseTime
-//                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends acknowledgement response on reception of vehicle's first response.");
-                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends acknowledgement response on reception of vehicle's first response.");
-                    TestHeader::ResponseInfo response;
-                    response.message = "RSU Vehicle acknowledgement";
-                    response.targetID = commHeader->getSourceId();
-                    m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestRSU::EventSendResponse, this, response);
-                    NS_LOG_INFO(Log() << "scheduled a test response to Vehicle regular broadcast in " << responseTime);
-                }
+            	TransaidHeader* transaidHeader;
+				GetController()->GetHeader(payload, server::PAYLOAD_END, transaidHeader);
+				Header * receivedHeader = payload->getHeader(baseapp::server::PAYLOAD_END);
+				TransaidHeader* receivedTestHeader = dynamic_cast<TransaidHeader*>(receivedHeader);
+
+				NS_LOG_INFO(Log() << "Received a test message from node " << commHeader->getSourceId() << " with message type: " << transaidHeader->getMessageType() );
+
+				if (commHeader->getMessageType() == TRANSAID_CAM)
+				{
+					TransaidHeader::CamInfo camInfo;
+					camInfo = transaidHeader->getCamInfo();
+
+					std::cout << "Received CAM at node " << GetController()->GetId() << "  sender " << camInfo.senderID << " time " << camInfo.generationTime <<  " position " << camInfo.position <<
+							 " speed " << camInfo.speed  <<  " acceleration " << camInfo.acceleration  << std::endl;
+
+					return;
+				}
+
+				if (commHeader->getMessageType() == TRANSAID_CPM)
+				{
+					TransaidHeader::CpmInfo cpmInfo;
+					cpmInfo = transaidHeader->getCpmInfo();
+
+					std::cout << "Received CPM at node " << GetController()->GetId() << "  sender " << cpmInfo.senderID << " time " << cpmInfo.generationTime  << std::endl;
+
+					return;
+				}
+
+				if (commHeader->getMessageType() == TRANSAID_MCM_VEHICLE)
+				{
+					TransaidHeader::McmVehicleInfo mcmInfo;
+					mcmInfo = transaidHeader->getMcmVehicleInfo();
+
+					std::cout << "Received MCM at node " << GetController()->GetId() << "  sender " << mcmInfo.senderID << " time " << mcmInfo.generationTime  << std::endl;
+
+					return;
+				}
+
+            } else{
+
+
+				if (commHeader->getMessageType() != MT_TEST_RESPONSE)
+				{
+					NS_LOG_WARN(Log()<< "Received an unknown message "<< commHeader->getMessageType());
+					return;
+				}
+				TestHeader* testHeader;
+				GetController()->GetHeader(payload, server::PAYLOAD_END, testHeader);
+				Header * receivedHeader = payload->getHeader(baseapp::server::PAYLOAD_END);
+				TestHeader* receivedTestHeader = dynamic_cast<TestHeader*>(receivedHeader);
+
+				NS_LOG_INFO(Log() << "Received a test message with content: " << testHeader->getMessage());
+
+				if (ProgramConfiguration::GetTestCase() == "commSimple2") {
+					double responseTime = m_rnd.GetValue(m_responseTimeSpacing, testHeader->getMaxResponseTime() - m_responseTimeSpacing);
+					Scheduler::Cancel(m_eventResponse);
+					if (receivedTestHeader->getMessage() == "Vehicle response to RSU Vehicle acknowledgement") {
+						// Random offset for responseTime
+	//                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends stop advice response on reception of Vehicle response to RSU Vehicle acknowledgement.");
+						NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends stop advice response on reception of Vehicle response to RSU Vehicle acknowledgement.");
+						TestHeader::ResponseInfo response;
+						response.message = "RSU Stop advice";
+						response.targetID = commHeader->getSourceId();
+						response.stopEdge = "CE";
+						response.stopPosition = 50;
+						m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestRSU::EventSendResponse, this, response);
+						NS_LOG_INFO(Log() << "scheduled a test response to Vehicle response to RSU Vehicle acknowledgement in " << responseTime);
+					} else if (receivedTestHeader->getMessage() == "Vehicle response to RSU broadcast") {
+						// Random offset for responseTime
+	//                    NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends acknowledgement response on reception of vehicle's first response.");
+						NS_LOG_DEBUG(Log() << "RSU " << GetController()->GetNode()->getId() << " sends acknowledgement response on reception of vehicle's first response.");
+						TestHeader::ResponseInfo response;
+						response.message = "RSU Vehicle acknowledgement";
+						response.targetID = commHeader->getSourceId();
+						m_eventResponse = Scheduler::Schedule(responseTime, &BehaviourTestRSU::EventSendResponse, this, response);
+						NS_LOG_INFO(Log() << "scheduled a test response to Vehicle regular broadcast in " << responseTime);
+					}
+				}
             }
 		}
 
@@ -237,6 +297,188 @@ namespace testapp
             double nextTime = m_rnd.GetValue(m_broadcastInterval, m_broadcastInterval+100);
             NS_LOG_DEBUG(Log() << "Scheduled next RSU broadcast at time " << nextTime);
             m_eventBroadcast = Scheduler::Schedule(nextTime, &BehaviourTestRSU::RSUBroadcastCommSimple2, this);
+        }
+
+        void BehaviourTestRSU::RSUBroadcastTestV2XmsgSet()
+        {
+            if (m_firstBroadcast) {
+                NS_LOG_FUNCTION(Log());
+                m_firstBroadcast = false;
+                NS_LOG_DEBUG(Log() << "Starting vehicle broadcast");
+            }
+
+            if (!m_broadcastActive)
+                return;
+
+            //std::cout << "Check the transmission of messages at node  " << GetController()->GetId() << " at time " << CurrentTime::Now() <<  std::endl;
+
+            // Check CAM Tx
+
+            if ((CurrentTime::Now() - m_lastCAMsent.generationTime)>1000)
+            {
+
+            	double nextTime = m_rnd.GetValue(0, 50); // introduce random value to avoid collissions
+            	m_eventBroadcastCAM = Scheduler::Schedule(nextTime, &BehaviourTestRSU::SendCAM, this);
+            }
+
+            // Check DENM Tx
+
+            if ((CurrentTime::Now() - m_lastDENMsent.generationTime)>2000)
+            {
+
+            	double nextTime = m_rnd.GetValue(0, 50); // introduce random value to avoid collissions
+            	m_eventBroadcastDENM = Scheduler::Schedule(nextTime, &BehaviourTestRSU::SendDENM, this);
+            }
+
+            // Check CPM Tx
+
+			if ( (CurrentTime::Now() - m_lastCPMsent.generationTime)>1000  )
+			{
+
+				double nextTime = m_rnd.GetValue(0, 50); // introduce random value to avoid collisions
+				m_eventBroadcastCPM = Scheduler::Schedule(nextTime, &BehaviourTestRSU::SendCPM, this);
+			}
+
+			// Check MCM Tx
+
+			if ( (CurrentTime::Now() - m_lastMCMsent.generationTime)>3000 )
+			{
+
+				double nextTime = m_rnd.GetValue(0, 50); // introduce random value to avoid collisions
+				m_eventBroadcastMCM = Scheduler::Schedule(nextTime, &BehaviourTestRSU::SendMCM, this);
+
+			}
+
+			// Check MAP Tx
+
+			if ( (CurrentTime::Now() - m_lastMAPsent.generationTime)>1500 )
+			{
+
+				double nextTime = m_rnd.GetValue(0, 50); // introduce random value to avoid collisions
+				m_eventBroadcastMAP = Scheduler::Schedule(nextTime, &BehaviourTestRSU::SendMAP, this);
+
+			}
+
+			// Check IVI Tx
+
+			if ( (CurrentTime::Now() - m_lastIVIsent.generationTime)>2000 )
+			{
+
+				double nextTime = m_rnd.GetValue(0, 50); // introduce random value to avoid collisions
+				m_eventBroadcastIVI = Scheduler::Schedule(nextTime, &BehaviourTestRSU::SendIVI, this);
+
+			}
+
+
+            // Schedule next broadcast for check transmission of messages
+            m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &BehaviourTestRSU::RSUBroadcastTestV2XmsgSet, this);
+        }
+
+        void BehaviourTestRSU::SendCAM()
+        {
+
+            TransaidHeader::CamInfo message;
+            message.generationTime = CurrentTime::Now();
+            message.senderID = GetController()->GetId();
+            message.position = GetController()->GetPosition(); // TODO update correctly
+            message.speed = 0 ; // TODO update correctly
+            message.acceleration = 0 ; //TODO update correctly
+
+            m_lastCAMsent = message;
+
+            TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CAM, message);
+            GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+            //std::cout << "Send CAM at node " << GetController()->GetId() <<  std::endl;
+        }
+
+        void BehaviourTestRSU::SendDENM()
+        {
+
+            TransaidHeader::DenmInfo message;
+            message.generationTime = CurrentTime::Now();
+            message.senderID = GetController()->GetId();
+            message.denmType = ROAD_WORKS; // TODO use the appropiate denmType for each use case
+
+            m_lastDENMsent = message;
+
+            TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_DENM, message);
+            GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+            //std::cout << "Send DENM at node " << GetController()->GetId() <<  std::endl;
+        }
+
+        void BehaviourTestRSU::SendCPM()
+        {
+
+        	TransaidHeader::CpmInfo message;
+			message.generationTime = CurrentTime::Now();
+			message.senderID = GetController()->GetId();
+			message.numObstacles = 1;
+
+			m_lastCPMsent = message;
+
+			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CPM, message);
+			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+
+            //std::cout << "Send CPM at node " << GetController()->GetId() <<  std::endl;
+        }
+
+
+        void BehaviourTestRSU::SendMCM()
+        {
+
+        	TransaidHeader::ToCAdviceInfo tocAdvice;
+        	tocAdvice.tocEndPosition = 10;
+        	tocAdvice.tocStartPosition = 1;
+        	tocAdvice.tocTime = 2000;
+
+			TransaidHeader::AdviceInfo adviceInfo;
+        	adviceInfo.adviceId = 1;
+        	adviceInfo.adviceType = TOC;
+        	adviceInfo.tocAdvice = tocAdvice;
+
+        	TransaidHeader::McmRsuInfo message;
+			message.generationTime = CurrentTime::Now();
+			message.senderID = GetController()->GetId();
+			message.advices[1] = adviceInfo;
+
+			m_lastMCMsent = message;
+
+			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN,   TRANSAID_MCM_RSU, message);
+			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+
+            //std::cout << "Send MCM at node " << GetController()->GetId() <<  std::endl;
+        }
+
+        void BehaviourTestRSU::SendMAP()
+        {
+
+        	TransaidHeader::MapInfo message;
+			message.generationTime = CurrentTime::Now();
+			message.senderID = GetController()->GetId();
+
+
+			m_lastMAPsent = message;
+
+			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_MAP, message);
+			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+
+            //std::cout << "Send MAP at node " << GetController()->GetId() <<  std::endl;
+        }
+
+        void BehaviourTestRSU::SendIVI()
+        {
+
+        	TransaidHeader::IviInfo message;
+			message.generationTime = CurrentTime::Now();
+			message.senderID = GetController()->GetId();
+
+
+			m_lastIVIsent = message;
+
+			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_IVI, message);
+			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
+
+            //std::cout << "Send IVI at node " << GetController()->GetId() <<  std::endl;
         }
 
 

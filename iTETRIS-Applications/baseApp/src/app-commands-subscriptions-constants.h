@@ -205,6 +205,8 @@
 // Used for testApp messages
 #define MSGCAT_TESTAPP 0x0c // 12
 
+// Used for TransAID messages
+#define MSGCAT_TRANSAID 0x0d // 13
 
 // ****************************************
 // RESULT TYPES

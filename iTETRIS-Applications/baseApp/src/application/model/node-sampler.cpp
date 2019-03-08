@@ -330,7 +330,10 @@ namespace baseapp
 				direction = atan2(speed.y, speed.x);
 
 			// compute real distance between previous sample
+
+
 			double dist = std::sqrt(pow(m_lastPosition.x - position.x, 2) + pow(m_lastPosition.y - position.y, 2));
+			/* Commented by acorrea to update more frequently the position
 			if (dist < m_movimentThreshold)
 			{
 				// the node didn't move enough:
@@ -339,6 +342,7 @@ namespace baseapp
 						m_controller->NodeName() << ": sample dropped. The node didn't move enough: " << dist << " . Min is: " << m_movimentThreshold);
 				return;
 			}
+			*/
 
 			// compute position error
 			double radius = m_positionErrorRadius.GetValue();

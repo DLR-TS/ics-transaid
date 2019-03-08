@@ -88,6 +88,7 @@ namespace baseapp
 			return velocity;
 		}
 
+
 		double FixedStation::getDirection()
 		{
 			return DIR_INVALID;

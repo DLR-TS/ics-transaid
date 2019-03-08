@@ -42,6 +42,7 @@
 #include "random-variable.h"
 #include <map>
 #include "structs.h"
+#include "application/model/headers.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
@@ -74,6 +75,16 @@ namespace testapp
 
 		    void abortWaitingForRSUResponse();
 
+		    void VehicleBroadcastTestV2XmsgSet();
+
+            void SendCAM();
+
+            void SendCPM();
+
+            void SendMCM();
+
+		    void abortBroadcast();
+
 		    TypeBehaviour GetType() const
 		    {
 		        return Type();
@@ -94,6 +105,7 @@ namespace testapp
             int m_broadcastInterval;
             bool m_setCAMareaSubscription;
             bool m_subReceiveMessage;
+            bool m_broadcastActive;
 		    /// @}
 
 
@@ -102,7 +114,18 @@ namespace testapp
 		    /// @brief used to refer to abort event scheduled at start
             event_id m_eventAbortWaitingForRSU;
             event_id m_eventBroadcast;
+            event_id m_eventAbortBroadcast;
 		    /// @}
+            event_id m_eventBroadcastCAM;
+            event_id m_eventBroadcastMCM;
+            event_id m_eventBroadcastCPM;
+            /// @}
+
+            int m_broadcastCheckInterval;
+            TransaidHeader::CamInfo m_lastCAMsent;
+            TransaidHeader::DenmInfo m_lastDENMsent;
+            TransaidHeader::CpmInfo m_lastCPMsent;
+            TransaidHeader::McmVehicleInfo m_lastMCMsent;
 
 		};
 

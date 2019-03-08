@@ -64,6 +64,145 @@ namespace baseapp
 
 
         /**
+         * Header for the TransAID project, it includes all the types of message of the V2X message set
+         */
+        class TransaidHeader: public Header {
+        public:
+            struct CamInfo
+            {
+            	int senderID;
+            	int generationTime;
+				application::Vector2D position;
+				float speed;
+				float heading;
+				float acceleration;
+            };
+
+            struct DenmInfo
+            {
+            	int senderID;
+            	int generationTime;
+            	DenmType denmType;
+            };
+
+            struct CpmInfo
+            {
+            	int senderID;
+            	int generationTime;
+            	int numObstacles;
+            };
+
+
+
+
+            struct LaneChangeAdviceInfo
+            {
+            	int laneChangeposition;
+            	int laneChangeTime;
+            	int laneChangeSpeed;
+            	int leadingVehicleId;
+            	int followingVehicleId;
+            	int targetLaneId;
+            	int TriggerPointToC;
+            };
+
+            struct CarFollowingAdviceInfo
+            {
+            	int laneId;
+            	int carFollowingPosition;
+            	int targetGap;
+            	int targetSpeed;
+            };
+
+            struct ToCAdviceInfo
+            {
+                int tocStartPosition;
+            	int tocTime;
+            	int tocEndPosition;
+            };
+
+            struct AdviceInfo
+            {
+            	AdviceType adviceType;
+            	int adviceId;
+            	int targetId;
+            	LaneChangeAdviceInfo laneChangeAdvice;
+            	CarFollowingAdviceInfo carFollowingAdvice;
+            	ToCAdviceInfo tocAdvice;
+            };
+
+            struct McmRsuInfo
+            {
+            	int senderID;
+            	int generationTime;
+            	int numberAdvices;
+            	AdviceInfo advices[5];
+            };
+
+
+            struct McmVehicleInfo
+            {
+            	int senderID;
+            	int generationTime;
+            	bool adviceFollowed;
+            	int adviceId;
+            };
+
+            struct MapInfo
+            {
+            	int senderID;
+            	int generationTime;
+
+            };
+
+            struct IviInfo
+            {
+            	int senderID;
+            	int generationTime;
+
+            };
+
+
+
+        public:
+            TransaidHeader (ProtocolId pid, MessageType msgType, const CamInfo& message);
+            TransaidHeader (ProtocolId pid, MessageType msgType, const DenmInfo& message);
+            TransaidHeader (ProtocolId pid, MessageType msgType, const CpmInfo& message);
+            TransaidHeader (ProtocolId pid, MessageType msgType, const McmVehicleInfo& message);
+            TransaidHeader (ProtocolId pid, MessageType msgType, const McmRsuInfo& message);
+            TransaidHeader (ProtocolId pid, MessageType msgType, const MapInfo& message);
+            TransaidHeader (ProtocolId pid, MessageType msgType, const IviInfo& message);
+
+
+            uint32_t GetSerializedSize(void) const;
+            void Print(std::ostream &os) const;
+            std::string Name() const;
+            MessageType getMessageType() const;
+            std::string getMessage() const;
+            uint16_t getMaxResponseTime() const;
+            std::string getStopEdge() const;
+            double getStopPosition() const;
+            CamInfo getCamInfo() const;
+            DenmInfo getDenmInfo() const;
+            CpmInfo getCpmInfo() const    ;
+            McmRsuInfo getMcmRsuInfo() const ;
+            McmVehicleInfo getMcmVehicleInfo() const;
+            MapInfo getMapInfo() const ;
+            IviInfo getIviInfo() const;
+
+        private:
+            ProtocolId m_protocolId;
+            MessageType m_messageType;
+            CamInfo	m_camInfo;
+            DenmInfo m_denmInfo;
+            CpmInfo m_cpmInfo;
+            MapInfo m_mapInfo;
+            McmRsuInfo m_mcmRsuInfo;
+            McmVehicleInfo m_mcmVehicleInfo;
+            IviInfo m_iviInfo;
+		};
+
+        /**
          * Minimal header. Used by test application
          */
         class TestHeader: public Header {

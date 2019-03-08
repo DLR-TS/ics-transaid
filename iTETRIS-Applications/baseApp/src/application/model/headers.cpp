@@ -54,7 +54,114 @@ namespace baseapp
 			return outstr.str();
 		}
 
+// TransaidHeader
 
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const CamInfo& message):
+				m_protocolId(pid), m_messageType(msgType), m_camInfo(message)
+				{};
+
+
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const DenmInfo& message):
+				m_protocolId(pid), m_messageType(msgType), m_denmInfo(message)
+				{};
+
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const CpmInfo& message):
+				m_protocolId(pid), m_messageType(msgType), m_cpmInfo(message)
+				{};
+
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const MapInfo& message):
+				m_protocolId(pid), m_messageType(msgType), m_mapInfo(message)
+				{};
+
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const McmVehicleInfo& message):
+				m_protocolId(pid), m_messageType(msgType), m_mcmVehicleInfo(message)
+				{};
+
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const McmRsuInfo& message):
+				m_protocolId(pid), m_messageType(msgType), m_mcmRsuInfo(message)
+				{};
+
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const IviInfo& message):
+				m_protocolId(pid), m_messageType(msgType), m_iviInfo(message)
+				{};
+
+        uint32_t TransaidHeader::GetSerializedSize(void) const {
+        	if (m_messageType == TRANSAID_CAM)  {
+        		return 2 + sizeof(m_camInfo);
+        	}
+        	else if (m_messageType == TRANSAID_DENM)
+        	{
+        		return 2 + sizeof(m_denmInfo);
+        	}
+        	else if (m_messageType == TRANSAID_CPM)
+        	{
+        		return 2 + sizeof(m_cpmInfo);
+        	}
+        	else if (m_messageType == TRANSAID_MAP)
+        	{
+        		return 2 + sizeof(m_mapInfo);
+        	}
+        	else if (m_messageType == TRANSAID_MCM_VEHICLE)
+        	{
+        		return 2 + sizeof(m_mcmVehicleInfo);
+        	}
+        	else if (m_messageType == TRANSAID_MCM_RSU)
+        	{
+        		return 2 + sizeof(m_mcmRsuInfo);
+        	}
+        	else if (m_messageType == TRANSAID_IVI)
+        	{
+        		return 2 + sizeof(m_iviInfo);
+        	}
+        	else {
+        		return 2;
+        	}
+        };
+
+        void TransaidHeader::Print(std::ostream &os) const {
+            os << " [TransaidHeader] PId:" << m_protocolId << ", MsgTypeId:" << m_messageType << ", size:" << GetSerializedSize();
+        };
+
+        std::string TransaidHeader::Name() const
+        {
+            return "TransaidHeader";
+        };
+
+        MessageType TransaidHeader::getMessageType() const {
+            return m_messageType;
+        }
+
+        TransaidHeader::CamInfo TransaidHeader::getCamInfo() const {
+            return m_camInfo;
+        }
+
+        TransaidHeader::DenmInfo TransaidHeader::getDenmInfo() const {
+            return m_denmInfo;
+        }
+
+        TransaidHeader::CpmInfo TransaidHeader::getCpmInfo() const {
+            return m_cpmInfo;
+        }
+
+        TransaidHeader::McmRsuInfo TransaidHeader::getMcmRsuInfo() const {
+            return m_mcmRsuInfo;
+        }
+
+        TransaidHeader::McmVehicleInfo TransaidHeader::getMcmVehicleInfo() const {
+            return m_mcmVehicleInfo;
+        }
+
+        TransaidHeader::MapInfo TransaidHeader::getMapInfo() const {
+             return m_mapInfo;
+         }
+
+        TransaidHeader::IviInfo TransaidHeader::getIviInfo() const {
+             return m_iviInfo;
+         }
+
+
+
+// TestHeader
 		uint16_t TestHeader::maxResponseTime = 100;
 
         TestHeader::TestHeader(ProtocolId pid, MessageType msgType, const ResponseInfo& response) :

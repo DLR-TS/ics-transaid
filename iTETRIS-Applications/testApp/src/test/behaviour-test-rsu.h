@@ -42,6 +42,7 @@
 #include "application/helper/scheduler.h"
 #include "application/helper/random-variable.h"
 #include "structs.h"
+#include "application/model/headers.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
@@ -75,6 +76,19 @@ namespace testapp
 
                 void RSUBroadcastCommSimple2();
 
+                void RSUBroadcastTestV2XmsgSet();
+
+                void SendCAM();
+
+                void SendDENM();
+
+                void SendMCM();
+
+                void SendCPM();
+
+                void SendMAP();
+
+                void SendIVI();
 
                 void abortBroadcast();
 
@@ -109,8 +123,21 @@ namespace testapp
                 /// @brief used to refer to abort event scheduled at start
                 event_id m_eventBroadcast;
                 event_id m_eventAbortBroadcast;
+                event_id m_eventBroadcastCAM;
+                event_id m_eventBroadcastDENM;
+                event_id m_eventBroadcastMAP;
+                event_id m_eventBroadcastMCM;
+                event_id m_eventBroadcastIVI;
+                event_id m_eventBroadcastCPM;
                 /// @}
+                int m_broadcastCheckInterval;
 
+                TransaidHeader::CamInfo m_lastCAMsent;
+                TransaidHeader::DenmInfo m_lastDENMsent;
+                TransaidHeader::CpmInfo m_lastCPMsent;
+                TransaidHeader::McmRsuInfo m_lastMCMsent;
+                TransaidHeader::MapInfo m_lastMAPsent;
+                TransaidHeader::IviInfo m_lastIVIsent;
 		};
 
 	} /* namespace application */

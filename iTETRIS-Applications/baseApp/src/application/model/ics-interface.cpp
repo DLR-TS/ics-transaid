@@ -138,6 +138,15 @@ namespace baseapp
 				return m_nodeSampler->GetPosition();
 		}
 
+		double iCSInterface::GetSpeed() const
+		{
+			if (m_nodeType == NT_RSU)
+			{
+				return 0;
+			} else
+				return m_nodeSampler->GetSpeed(1);
+		}
+
 		double iCSInterface::GetDirection() const
 		{
 			if (!IsVehicle(m_nodeType))

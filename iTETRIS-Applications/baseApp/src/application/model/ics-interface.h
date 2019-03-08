@@ -105,6 +105,8 @@ namespace baseapp
 				NodeType GetNodeType() const;
 				Vector2D GetPosition() const;
 				double GetDirection() const;
+				double GetSpeed() const;
+
 				/**
 				 * @brief Name of the node. For logging
 				 */

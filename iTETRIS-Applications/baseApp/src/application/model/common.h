@@ -60,7 +60,7 @@ typedef enum
 
 typedef enum
 {
-    PID_UNKNOWN = 0, PID_SPEED = 0x01
+    PID_UNKNOWN = 0, PID_SPEED = 0x01, PID_TRANSAID = 0X02,
 } ProtocolId;
 
 enum Type_Behaviour
@@ -72,13 +72,24 @@ enum Type_Behaviour
 
 typedef enum
 {
-  MT_RSU_BEACON = 0x01, MT_BEACON_RESPONSE = 0x02, MT_NO_LONGHER_CONFORMANT = 0x03, MT_RSU_TEST, MT_TEST_RESPONSE
+  MT_RSU_BEACON = 0x01, MT_BEACON_RESPONSE = 0x02, MT_NO_LONGHER_CONFORMANT = 0x03, MT_RSU_TEST = 0x04, MT_TEST_RESPONSE = 0x05, TRANSAID_CAM = 0x06, TRANSAID_CPM = 0x07,
+  TRANSAID_MCM_VEHICLE = 0x08, TRANSAID_MAP = 0x09, TRANSAID_DENM = 0x0A, TRANSAID_IVI = 0x0B,   TRANSAID_MCM_RSU = 0x0C
 } MessageType;
 
 typedef enum
 {
   APPROACHING = 0x01, LEAVING = 0x02
 } VehicleMovement;
+
+typedef enum
+{
+  ROAD_WORKS = 0x01, NO_AD_ZONE = 0x02
+} DenmType;
+
+typedef enum
+{
+  LANE_CHANGE = 0x01, SPEED = 0x02, GAP = 0x03, TOC = 0x04
+} AdviceType;
 
 const unsigned int ID_ALL = 0xffffffff;
 const double DIR_INVALID = 1000;

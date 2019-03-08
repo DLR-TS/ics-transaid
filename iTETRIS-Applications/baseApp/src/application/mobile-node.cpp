@@ -107,6 +107,8 @@ namespace baseapp
 			return m_position->direction;
 		}
 
+
+
 		void MobileNode::selectNodeType()
 		{
 //			TODO Add appropriate type according the type from sumo. Eg

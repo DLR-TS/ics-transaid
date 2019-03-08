@@ -1,0 +1,2305 @@
+Test App NS-Log File
+===============================
+[2019-03-07T18:23:42.292] [INFO ] Schedule at 1000
+[2019-03-07T18:23:44.330] [DEBUG] #@# Current timestep -1000
+[2019-03-07T18:23:44.330] [INFO ] [Scheduler] Notify time: -1000. Current size: 1
+[2019-03-07T18:23:44.330] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.330] [INFO ] [-1000][Scheduler] next at 1000 in 2000
+[2019-03-07T18:23:44.330] [DEBUG] (RSU 5000): Added behaviour TestRSU
+[2019-03-07T18:23:44.330] [FUNCT] void baseapp::application::iCSInterface::Activate():~(RSU 5000): 
+[2019-03-07T18:23:44.330] [INFO ] (RSU 5000): : Activated
+[2019-03-07T18:23:44.330] [FUNCT] virtual void baseapp::application::Behaviour::Start():~(RSU 5000): TestRSU: 
+[2019-03-07T18:23:44.330] [INFO ] TracedCallback StartToggle number of calls 0
+[2019-03-07T18:23:44.330] [INFO ] Schedule at 5000
+[2019-03-07T18:23:44.330] [INFO ] Schedule at 10000
+[2019-03-07T18:23:44.330] [INFO ] (RSU 5000): TestRSU: RSU scheduled broadcast start at 5000 and broadcastEnd at 10000
+[2019-03-07T18:23:44.330] [INFO ] TracedCallback StateChange number of calls 0
+[2019-03-07T18:23:44.333] [DEBUG] #@# Current timestep 0
+[2019-03-07T18:23:44.333] [INFO ] [Scheduler] Notify time: 0. Current size: 3
+[2019-03-07T18:23:44.333] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.333] [INFO ] [0][Scheduler] next at 1000 in 1000
+[2019-03-07T18:23:44.336] [DEBUG] #@# Current timestep 50
+[2019-03-07T18:23:44.336] [INFO ] [Scheduler] Notify time: 50. Current size: 3
+[2019-03-07T18:23:44.336] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.336] [INFO ] [50][Scheduler] next at 1000 in 950
+[2019-03-07T18:23:44.337] [DEBUG] #@# Current timestep 100
+[2019-03-07T18:23:44.337] [INFO ] [Scheduler] Notify time: 100. Current size: 3
+[2019-03-07T18:23:44.337] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.338] [INFO ] [100][Scheduler] next at 1000 in 900
+[2019-03-07T18:23:44.339] [DEBUG] #@# Current timestep 150
+[2019-03-07T18:23:44.339] [INFO ] [Scheduler] Notify time: 150. Current size: 3
+[2019-03-07T18:23:44.339] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.339] [INFO ] [150][Scheduler] next at 1000 in 850
+[2019-03-07T18:23:44.341] [DEBUG] #@# Current timestep 200
+[2019-03-07T18:23:44.341] [INFO ] [Scheduler] Notify time: 200. Current size: 3
+[2019-03-07T18:23:44.341] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.341] [INFO ] [200][Scheduler] next at 1000 in 800
+[2019-03-07T18:23:44.343] [DEBUG] #@# Current timestep 250
+[2019-03-07T18:23:44.343] [INFO ] [Scheduler] Notify time: 250. Current size: 3
+[2019-03-07T18:23:44.343] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.343] [INFO ] [250][Scheduler] next at 1000 in 750
+[2019-03-07T18:23:44.345] [DEBUG] #@# Current timestep 300
+[2019-03-07T18:23:44.345] [INFO ] [Scheduler] Notify time: 300. Current size: 3
+[2019-03-07T18:23:44.345] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.345] [INFO ] [300][Scheduler] next at 1000 in 700
+[2019-03-07T18:23:44.347] [DEBUG] #@# Current timestep 350
+[2019-03-07T18:23:44.347] [INFO ] [Scheduler] Notify time: 350. Current size: 3
+[2019-03-07T18:23:44.347] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.347] [INFO ] [350][Scheduler] next at 1000 in 650
+[2019-03-07T18:23:44.349] [DEBUG] #@# Current timestep 400
+[2019-03-07T18:23:44.349] [INFO ] [Scheduler] Notify time: 400. Current size: 3
+[2019-03-07T18:23:44.349] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.349] [INFO ] [400][Scheduler] next at 1000 in 600
+[2019-03-07T18:23:44.351] [DEBUG] #@# Current timestep 450
+[2019-03-07T18:23:44.351] [INFO ] [Scheduler] Notify time: 450. Current size: 3
+[2019-03-07T18:23:44.351] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.351] [INFO ] [450][Scheduler] next at 1000 in 550
+[2019-03-07T18:23:44.353] [DEBUG] #@# Current timestep 500
+[2019-03-07T18:23:44.353] [INFO ] [Scheduler] Notify time: 500. Current size: 3
+[2019-03-07T18:23:44.353] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.353] [INFO ] [500][Scheduler] next at 1000 in 500
+[2019-03-07T18:23:44.355] [DEBUG] #@# Current timestep 550
+[2019-03-07T18:23:44.355] [INFO ] [Scheduler] Notify time: 550. Current size: 3
+[2019-03-07T18:23:44.355] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.355] [INFO ] [550][Scheduler] next at 1000 in 450
+[2019-03-07T18:23:44.356] [DEBUG] #@# Current timestep 600
+[2019-03-07T18:23:44.357] [INFO ] [Scheduler] Notify time: 600. Current size: 3
+[2019-03-07T18:23:44.357] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.357] [INFO ] [600][Scheduler] next at 1000 in 400
+[2019-03-07T18:23:44.358] [DEBUG] #@# Current timestep 650
+[2019-03-07T18:23:44.358] [INFO ] [Scheduler] Notify time: 650. Current size: 3
+[2019-03-07T18:23:44.358] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.358] [INFO ] [650][Scheduler] next at 1000 in 350
+[2019-03-07T18:23:44.360] [DEBUG] #@# Current timestep 700
+[2019-03-07T18:23:44.360] [INFO ] [Scheduler] Notify time: 700. Current size: 3
+[2019-03-07T18:23:44.360] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.360] [INFO ] [700][Scheduler] next at 1000 in 300
+[2019-03-07T18:23:44.362] [DEBUG] #@# Current timestep 750
+[2019-03-07T18:23:44.362] [INFO ] [Scheduler] Notify time: 750. Current size: 3
+[2019-03-07T18:23:44.362] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.362] [INFO ] [750][Scheduler] next at 1000 in 250
+[2019-03-07T18:23:44.365] [DEBUG] #@# Current timestep 800
+[2019-03-07T18:23:44.365] [INFO ] [Scheduler] Notify time: 800. Current size: 3
+[2019-03-07T18:23:44.365] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.365] [INFO ] [800][Scheduler] next at 1000 in 200
+[2019-03-07T18:23:44.367] [DEBUG] #@# Current timestep 850
+[2019-03-07T18:23:44.367] [INFO ] [Scheduler] Notify time: 850. Current size: 3
+[2019-03-07T18:23:44.367] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.367] [INFO ] [850][Scheduler] next at 1000 in 150
+[2019-03-07T18:23:44.369] [DEBUG] #@# Current timestep 900
+[2019-03-07T18:23:44.369] [INFO ] [Scheduler] Notify time: 900. Current size: 3
+[2019-03-07T18:23:44.369] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.369] [INFO ] [900][Scheduler] next at 1000 in 100
+[2019-03-07T18:23:44.371] [DEBUG] #@# Current timestep 950
+[2019-03-07T18:23:44.371] [INFO ] [Scheduler] Notify time: 950. Current size: 3
+[2019-03-07T18:23:44.371] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.371] [INFO ] [950][Scheduler] next at 1000 in 50
+[2019-03-07T18:23:44.374] [DEBUG] #@# Current timestep 1000
+[2019-03-07T18:23:44.374] [INFO ] [Scheduler] Notify time: 1000. Current size: 3
+[2019-03-07T18:23:44.374] [INFO ] Schedule at 2000
+[2019-03-07T18:23:44.374] [INFO ] [Scheduler] 1 have been executed.
+[2019-03-07T18:23:44.374] [INFO ] [1000][Scheduler] next at 2000 in 1000
+[2019-03-07T18:23:44.376] [DEBUG] #@# Current timestep 1050
+[2019-03-07T18:23:44.376] [INFO ] [Scheduler] Notify time: 1050. Current size: 3
+[2019-03-07T18:23:44.376] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.376] [INFO ] [1050][Scheduler] next at 2000 in 950
+[2019-03-07T18:23:44.378] [DEBUG] #@# Current timestep 1100
+[2019-03-07T18:23:44.378] [INFO ] [Scheduler] Notify time: 1100. Current size: 3
+[2019-03-07T18:23:44.378] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.378] [INFO ] [1100][Scheduler] next at 2000 in 900
+[2019-03-07T18:23:44.380] [DEBUG] #@# Current timestep 1150
+[2019-03-07T18:23:44.380] [INFO ] [Scheduler] Notify time: 1150. Current size: 3
+[2019-03-07T18:23:44.380] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.380] [INFO ] [1150][Scheduler] next at 2000 in 850
+[2019-03-07T18:23:44.382] [DEBUG] #@# Current timestep 1200
+[2019-03-07T18:23:44.382] [INFO ] [Scheduler] Notify time: 1200. Current size: 3
+[2019-03-07T18:23:44.382] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.382] [INFO ] [1200][Scheduler] next at 2000 in 800
+[2019-03-07T18:23:44.384] [DEBUG] #@# Current timestep 1250
+[2019-03-07T18:23:44.384] [INFO ] [Scheduler] Notify time: 1250. Current size: 3
+[2019-03-07T18:23:44.384] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.384] [INFO ] [1250][Scheduler] next at 2000 in 750
+[2019-03-07T18:23:44.386] [DEBUG] #@# Current timestep 1300
+[2019-03-07T18:23:44.386] [INFO ] [Scheduler] Notify time: 1300. Current size: 3
+[2019-03-07T18:23:44.386] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.386] [INFO ] [1300][Scheduler] next at 2000 in 700
+[2019-03-07T18:23:44.387] [DEBUG] #@# Current timestep 1350
+[2019-03-07T18:23:44.387] [INFO ] [Scheduler] Notify time: 1350. Current size: 3
+[2019-03-07T18:23:44.387] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.387] [INFO ] [1350][Scheduler] next at 2000 in 650
+[2019-03-07T18:23:44.389] [DEBUG] #@# Current timestep 1400
+[2019-03-07T18:23:44.389] [INFO ] [Scheduler] Notify time: 1400. Current size: 3
+[2019-03-07T18:23:44.389] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.389] [INFO ] [1400][Scheduler] next at 2000 in 600
+[2019-03-07T18:23:44.391] [DEBUG] #@# Current timestep 1450
+[2019-03-07T18:23:44.391] [INFO ] [Scheduler] Notify time: 1450. Current size: 3
+[2019-03-07T18:23:44.391] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.391] [INFO ] [1450][Scheduler] next at 2000 in 550
+[2019-03-07T18:23:44.393] [DEBUG] #@# Current timestep 1500
+[2019-03-07T18:23:44.393] [INFO ] [Scheduler] Notify time: 1500. Current size: 3
+[2019-03-07T18:23:44.393] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.393] [INFO ] [1500][Scheduler] next at 2000 in 500
+[2019-03-07T18:23:44.395] [DEBUG] #@# Current timestep 1550
+[2019-03-07T18:23:44.395] [INFO ] [Scheduler] Notify time: 1550. Current size: 3
+[2019-03-07T18:23:44.395] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.395] [INFO ] [1550][Scheduler] next at 2000 in 450
+[2019-03-07T18:23:44.397] [DEBUG] #@# Current timestep 1600
+[2019-03-07T18:23:44.397] [INFO ] [Scheduler] Notify time: 1600. Current size: 3
+[2019-03-07T18:23:44.397] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.397] [INFO ] [1600][Scheduler] next at 2000 in 400
+[2019-03-07T18:23:44.399] [DEBUG] #@# Current timestep 1650
+[2019-03-07T18:23:44.399] [INFO ] [Scheduler] Notify time: 1650. Current size: 3
+[2019-03-07T18:23:44.399] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.399] [INFO ] [1650][Scheduler] next at 2000 in 350
+[2019-03-07T18:23:44.400] [DEBUG] #@# Current timestep 1700
+[2019-03-07T18:23:44.400] [INFO ] [Scheduler] Notify time: 1700. Current size: 3
+[2019-03-07T18:23:44.400] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.400] [INFO ] [1700][Scheduler] next at 2000 in 300
+[2019-03-07T18:23:44.402] [DEBUG] #@# Current timestep 1750
+[2019-03-07T18:23:44.402] [INFO ] [Scheduler] Notify time: 1750. Current size: 3
+[2019-03-07T18:23:44.402] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.403] [INFO ] [1750][Scheduler] next at 2000 in 250
+[2019-03-07T18:23:44.405] [DEBUG] #@# Current timestep 1800
+[2019-03-07T18:23:44.405] [INFO ] [Scheduler] Notify time: 1800. Current size: 3
+[2019-03-07T18:23:44.405] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.405] [INFO ] [1800][Scheduler] next at 2000 in 200
+[2019-03-07T18:23:44.406] [DEBUG] #@# Current timestep 1850
+[2019-03-07T18:23:44.406] [INFO ] [Scheduler] Notify time: 1850. Current size: 3
+[2019-03-07T18:23:44.406] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.406] [INFO ] [1850][Scheduler] next at 2000 in 150
+[2019-03-07T18:23:44.408] [DEBUG] #@# Current timestep 1900
+[2019-03-07T18:23:44.408] [INFO ] [Scheduler] Notify time: 1900. Current size: 3
+[2019-03-07T18:23:44.408] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.408] [INFO ] [1900][Scheduler] next at 2000 in 100
+[2019-03-07T18:23:44.409] [DEBUG] #@# Current timestep 1950
+[2019-03-07T18:23:44.409] [INFO ] [Scheduler] Notify time: 1950. Current size: 3
+[2019-03-07T18:23:44.409] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.410] [INFO ] [1950][Scheduler] next at 2000 in 50
+[2019-03-07T18:23:44.424] [DEBUG] #@# Current timestep 2000
+[2019-03-07T18:23:44.424] [INFO ] [Scheduler] Notify time: 2000. Current size: 3
+[2019-03-07T18:23:44.424] [INFO ] Schedule at 3000
+[2019-03-07T18:23:44.424] [INFO ] [Scheduler] 1 have been executed.
+[2019-03-07T18:23:44.424] [INFO ] [2000][Scheduler] next at 3000 in 1000
+[2019-03-07T18:23:44.435] [DEBUG] (Node 2): Added behaviour TestNode
+[2019-03-07T18:23:44.435] [FUNCT] void baseapp::application::iCSInterface::Activate():~(Node 2): 
+[2019-03-07T18:23:44.435] [INFO ] (Node 2): : Activated
+[2019-03-07T18:23:44.435] [FUNCT] virtual void baseapp::application::Behaviour::Start():~(Node 2): TestNode: 
+[2019-03-07T18:23:44.435] [INFO ] TracedCallback StartToggle number of calls 0
+[2019-03-07T18:23:44.435] [INFO ] Schedule at 12000
+[2019-03-07T18:23:44.435] [INFO ] (Node 2): TestNode: Vehicle scheduled abort waiting for RSU acknowledgement at 12000
+[2019-03-07T18:23:44.435] [INFO ] TracedCallback StateChange number of calls 1
+[2019-03-07T18:23:44.435] [INFO ] Schedule at 3000
+[2019-03-07T18:23:44.437] [DEBUG] #@# Current timestep 2050
+[2019-03-07T18:23:44.437] [INFO ] [Scheduler] Notify time: 2050. Current size: 5
+[2019-03-07T18:23:44.437] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.437] [INFO ] [2050][Scheduler] next at 3000 in 950
+[2019-03-07T18:23:44.438] [DEBUG] #@# Current timestep 2100
+[2019-03-07T18:23:44.438] [INFO ] [Scheduler] Notify time: 2100. Current size: 5
+[2019-03-07T18:23:44.438] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.438] [INFO ] [2100][Scheduler] next at 3000 in 900
+[2019-03-07T18:23:44.439] [DEBUG] #@# Current timestep 2150
+[2019-03-07T18:23:44.439] [INFO ] [Scheduler] Notify time: 2150. Current size: 5
+[2019-03-07T18:23:44.439] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.439] [INFO ] [2150][Scheduler] next at 3000 in 850
+[2019-03-07T18:23:44.440] [DEBUG] #@# Current timestep 2200
+[2019-03-07T18:23:44.440] [INFO ] [Scheduler] Notify time: 2200. Current size: 5
+[2019-03-07T18:23:44.440] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.440] [INFO ] [2200][Scheduler] next at 3000 in 800
+[2019-03-07T18:23:44.441] [DEBUG] #@# Current timestep 2250
+[2019-03-07T18:23:44.441] [INFO ] [Scheduler] Notify time: 2250. Current size: 5
+[2019-03-07T18:23:44.441] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.441] [INFO ] [2250][Scheduler] next at 3000 in 750
+[2019-03-07T18:23:44.442] [DEBUG] #@# Current timestep 2300
+[2019-03-07T18:23:44.442] [INFO ] [Scheduler] Notify time: 2300. Current size: 5
+[2019-03-07T18:23:44.442] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.442] [INFO ] [2300][Scheduler] next at 3000 in 700
+[2019-03-07T18:23:44.443] [DEBUG] #@# Current timestep 2350
+[2019-03-07T18:23:44.443] [INFO ] [Scheduler] Notify time: 2350. Current size: 5
+[2019-03-07T18:23:44.443] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.443] [INFO ] [2350][Scheduler] next at 3000 in 650
+[2019-03-07T18:23:44.444] [DEBUG] #@# Current timestep 2400
+[2019-03-07T18:23:44.444] [INFO ] [Scheduler] Notify time: 2400. Current size: 5
+[2019-03-07T18:23:44.444] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.444] [INFO ] [2400][Scheduler] next at 3000 in 600
+[2019-03-07T18:23:44.445] [DEBUG] #@# Current timestep 2450
+[2019-03-07T18:23:44.445] [INFO ] [Scheduler] Notify time: 2450. Current size: 5
+[2019-03-07T18:23:44.445] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.445] [INFO ] [2450][Scheduler] next at 3000 in 550
+[2019-03-07T18:23:44.446] [DEBUG] #@# Current timestep 2500
+[2019-03-07T18:23:44.446] [INFO ] [Scheduler] Notify time: 2500. Current size: 5
+[2019-03-07T18:23:44.446] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.446] [INFO ] [2500][Scheduler] next at 3000 in 500
+[2019-03-07T18:23:44.448] [DEBUG] #@# Current timestep 2550
+[2019-03-07T18:23:44.448] [INFO ] [Scheduler] Notify time: 2550. Current size: 5
+[2019-03-07T18:23:44.448] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.448] [INFO ] [2550][Scheduler] next at 3000 in 450
+[2019-03-07T18:23:44.449] [DEBUG] #@# Current timestep 2600
+[2019-03-07T18:23:44.449] [INFO ] [Scheduler] Notify time: 2600. Current size: 5
+[2019-03-07T18:23:44.449] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.449] [INFO ] [2600][Scheduler] next at 3000 in 400
+[2019-03-07T18:23:44.451] [DEBUG] #@# Current timestep 2650
+[2019-03-07T18:23:44.451] [INFO ] [Scheduler] Notify time: 2650. Current size: 5
+[2019-03-07T18:23:44.451] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.451] [INFO ] [2650][Scheduler] next at 3000 in 350
+[2019-03-07T18:23:44.452] [DEBUG] #@# Current timestep 2700
+[2019-03-07T18:23:44.452] [INFO ] [Scheduler] Notify time: 2700. Current size: 5
+[2019-03-07T18:23:44.452] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.452] [INFO ] [2700][Scheduler] next at 3000 in 300
+[2019-03-07T18:23:44.453] [DEBUG] #@# Current timestep 2750
+[2019-03-07T18:23:44.453] [INFO ] [Scheduler] Notify time: 2750. Current size: 5
+[2019-03-07T18:23:44.453] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.453] [INFO ] [2750][Scheduler] next at 3000 in 250
+[2019-03-07T18:23:44.454] [DEBUG] #@# Current timestep 2800
+[2019-03-07T18:23:44.454] [INFO ] [Scheduler] Notify time: 2800. Current size: 5
+[2019-03-07T18:23:44.454] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.454] [INFO ] [2800][Scheduler] next at 3000 in 200
+[2019-03-07T18:23:44.455] [DEBUG] #@# Current timestep 2850
+[2019-03-07T18:23:44.455] [INFO ] [Scheduler] Notify time: 2850. Current size: 5
+[2019-03-07T18:23:44.455] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.455] [INFO ] [2850][Scheduler] next at 3000 in 150
+[2019-03-07T18:23:44.456] [DEBUG] #@# Current timestep 2900
+[2019-03-07T18:23:44.456] [INFO ] [Scheduler] Notify time: 2900. Current size: 5
+[2019-03-07T18:23:44.456] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.456] [INFO ] [2900][Scheduler] next at 3000 in 100
+[2019-03-07T18:23:44.457] [DEBUG] #@# Current timestep 2950
+[2019-03-07T18:23:44.457] [INFO ] [Scheduler] Notify time: 2950. Current size: 5
+[2019-03-07T18:23:44.457] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.457] [INFO ] [2950][Scheduler] next at 3000 in 50
+[2019-03-07T18:23:44.459] [DEBUG] #@# Current timestep 3000
+[2019-03-07T18:23:44.459] [INFO ] [Scheduler] Notify time: 3000. Current size: 5
+[2019-03-07T18:23:44.459] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.459] [INFO ] Schedule at 4000
+[2019-03-07T18:23:44.459] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.459] [INFO ] Schedule at 4000
+[2019-03-07T18:23:44.459] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.459] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.459] [INFO ] (Node 2): pos=(3.51810360839, 48.9319149077) spd=(0, 0) avgDir=DIR_INVALID dir=DIR_INVALID
+[2019-03-07T18:23:44.459] [DEBUG] (Node 2): real: dir= DIR_INVALID pos=(5.09999990463, 48.3499984741) dist= 48.6182306494
+[2019-03-07T18:23:44.459] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.459] [INFO ] [3000][Scheduler] next at 4000 in 1000
+[2019-03-07T18:23:44.460] [DEBUG] #@# Current timestep 3050
+[2019-03-07T18:23:44.460] [INFO ] [Scheduler] Notify time: 3050. Current size: 5
+[2019-03-07T18:23:44.460] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.460] [INFO ] [3050][Scheduler] next at 4000 in 950
+[2019-03-07T18:23:44.461] [DEBUG] #@# Current timestep 3100
+[2019-03-07T18:23:44.461] [INFO ] [Scheduler] Notify time: 3100. Current size: 5
+[2019-03-07T18:23:44.461] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.461] [INFO ] [3100][Scheduler] next at 4000 in 900
+[2019-03-07T18:23:44.462] [DEBUG] #@# Current timestep 3150
+[2019-03-07T18:23:44.462] [INFO ] [Scheduler] Notify time: 3150. Current size: 5
+[2019-03-07T18:23:44.462] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.462] [INFO ] [3150][Scheduler] next at 4000 in 850
+[2019-03-07T18:23:44.463] [DEBUG] #@# Current timestep 3200
+[2019-03-07T18:23:44.463] [INFO ] [Scheduler] Notify time: 3200. Current size: 5
+[2019-03-07T18:23:44.463] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.463] [INFO ] [3200][Scheduler] next at 4000 in 800
+[2019-03-07T18:23:44.464] [DEBUG] #@# Current timestep 3250
+[2019-03-07T18:23:44.464] [INFO ] [Scheduler] Notify time: 3250. Current size: 5
+[2019-03-07T18:23:44.464] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.464] [INFO ] [3250][Scheduler] next at 4000 in 750
+[2019-03-07T18:23:44.466] [DEBUG] #@# Current timestep 3300
+[2019-03-07T18:23:44.466] [INFO ] [Scheduler] Notify time: 3300. Current size: 5
+[2019-03-07T18:23:44.466] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.466] [INFO ] [3300][Scheduler] next at 4000 in 700
+[2019-03-07T18:23:44.467] [DEBUG] #@# Current timestep 3350
+[2019-03-07T18:23:44.467] [INFO ] [Scheduler] Notify time: 3350. Current size: 5
+[2019-03-07T18:23:44.467] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.467] [INFO ] [3350][Scheduler] next at 4000 in 650
+[2019-03-07T18:23:44.468] [DEBUG] #@# Current timestep 3400
+[2019-03-07T18:23:44.468] [INFO ] [Scheduler] Notify time: 3400. Current size: 5
+[2019-03-07T18:23:44.468] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.468] [INFO ] [3400][Scheduler] next at 4000 in 600
+[2019-03-07T18:23:44.469] [DEBUG] #@# Current timestep 3450
+[2019-03-07T18:23:44.469] [INFO ] [Scheduler] Notify time: 3450. Current size: 5
+[2019-03-07T18:23:44.469] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.469] [INFO ] [3450][Scheduler] next at 4000 in 550
+[2019-03-07T18:23:44.471] [DEBUG] #@# Current timestep 3500
+[2019-03-07T18:23:44.471] [INFO ] [Scheduler] Notify time: 3500. Current size: 5
+[2019-03-07T18:23:44.471] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.471] [INFO ] [3500][Scheduler] next at 4000 in 500
+[2019-03-07T18:23:44.473] [DEBUG] #@# Current timestep 3550
+[2019-03-07T18:23:44.473] [INFO ] [Scheduler] Notify time: 3550. Current size: 5
+[2019-03-07T18:23:44.473] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.473] [INFO ] [3550][Scheduler] next at 4000 in 450
+[2019-03-07T18:23:44.475] [DEBUG] #@# Current timestep 3600
+[2019-03-07T18:23:44.475] [INFO ] [Scheduler] Notify time: 3600. Current size: 5
+[2019-03-07T18:23:44.475] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.475] [INFO ] [3600][Scheduler] next at 4000 in 400
+[2019-03-07T18:23:44.476] [DEBUG] #@# Current timestep 3650
+[2019-03-07T18:23:44.476] [INFO ] [Scheduler] Notify time: 3650. Current size: 5
+[2019-03-07T18:23:44.476] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.476] [INFO ] [3650][Scheduler] next at 4000 in 350
+[2019-03-07T18:23:44.480] [DEBUG] #@# Current timestep 3700
+[2019-03-07T18:23:44.480] [INFO ] [Scheduler] Notify time: 3700. Current size: 5
+[2019-03-07T18:23:44.480] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.480] [INFO ] [3700][Scheduler] next at 4000 in 300
+[2019-03-07T18:23:44.481] [DEBUG] #@# Current timestep 3750
+[2019-03-07T18:23:44.481] [INFO ] [Scheduler] Notify time: 3750. Current size: 5
+[2019-03-07T18:23:44.481] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.481] [INFO ] [3750][Scheduler] next at 4000 in 250
+[2019-03-07T18:23:44.482] [DEBUG] #@# Current timestep 3800
+[2019-03-07T18:23:44.482] [INFO ] [Scheduler] Notify time: 3800. Current size: 5
+[2019-03-07T18:23:44.482] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.482] [INFO ] [3800][Scheduler] next at 4000 in 200
+[2019-03-07T18:23:44.483] [DEBUG] #@# Current timestep 3850
+[2019-03-07T18:23:44.483] [INFO ] [Scheduler] Notify time: 3850. Current size: 5
+[2019-03-07T18:23:44.483] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.483] [INFO ] [3850][Scheduler] next at 4000 in 150
+[2019-03-07T18:23:44.484] [DEBUG] #@# Current timestep 3900
+[2019-03-07T18:23:44.484] [INFO ] [Scheduler] Notify time: 3900. Current size: 5
+[2019-03-07T18:23:44.484] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.484] [INFO ] [3900][Scheduler] next at 4000 in 100
+[2019-03-07T18:23:44.485] [DEBUG] #@# Current timestep 3950
+[2019-03-07T18:23:44.485] [INFO ] [Scheduler] Notify time: 3950. Current size: 5
+[2019-03-07T18:23:44.485] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.485] [INFO ] [3950][Scheduler] next at 4000 in 50
+[2019-03-07T18:23:44.487] [DEBUG] #@# Current timestep 4000
+[2019-03-07T18:23:44.487] [INFO ] [Scheduler] Notify time: 4000. Current size: 5
+[2019-03-07T18:23:44.487] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.487] [INFO ] Schedule at 5000
+[2019-03-07T18:23:44.487] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.487] [INFO ] Schedule at 5000
+[2019-03-07T18:23:44.487] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.487] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.487] [INFO ] (Node 2): pos=(7.74061254904, 48.4751643412) spd=(2.61463139599, 0) avgDir=2.34696 dir=2.34696
+[2019-03-07T18:23:44.487] [DEBUG] (Node 2): real: dir= 0 pos=(7.69999980927, 48.3499984741) dist= 2.59999990463
+[2019-03-07T18:23:44.487] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.487] [INFO ] [4000][Scheduler] next at 5000 in 1000
+[2019-03-07T18:23:44.488] [DEBUG] #@# Current timestep 4050
+[2019-03-07T18:23:44.488] [INFO ] [Scheduler] Notify time: 4050. Current size: 5
+[2019-03-07T18:23:44.488] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.488] [INFO ] [4050][Scheduler] next at 5000 in 950
+[2019-03-07T18:23:44.490] [DEBUG] #@# Current timestep 4100
+[2019-03-07T18:23:44.490] [INFO ] [Scheduler] Notify time: 4100. Current size: 5
+[2019-03-07T18:23:44.490] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.490] [INFO ] [4100][Scheduler] next at 5000 in 900
+[2019-03-07T18:23:44.491] [DEBUG] #@# Current timestep 4150
+[2019-03-07T18:23:44.491] [INFO ] [Scheduler] Notify time: 4150. Current size: 5
+[2019-03-07T18:23:44.491] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.491] [INFO ] [4150][Scheduler] next at 5000 in 850
+[2019-03-07T18:23:44.492] [DEBUG] #@# Current timestep 4200
+[2019-03-07T18:23:44.492] [INFO ] [Scheduler] Notify time: 4200. Current size: 5
+[2019-03-07T18:23:44.492] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.492] [INFO ] [4200][Scheduler] next at 5000 in 800
+[2019-03-07T18:23:44.493] [DEBUG] #@# Current timestep 4250
+[2019-03-07T18:23:44.493] [INFO ] [Scheduler] Notify time: 4250. Current size: 5
+[2019-03-07T18:23:44.493] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.493] [INFO ] [4250][Scheduler] next at 5000 in 750
+[2019-03-07T18:23:44.494] [DEBUG] #@# Current timestep 4300
+[2019-03-07T18:23:44.494] [INFO ] [Scheduler] Notify time: 4300. Current size: 5
+[2019-03-07T18:23:44.494] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.494] [INFO ] [4300][Scheduler] next at 5000 in 700
+[2019-03-07T18:23:44.495] [DEBUG] #@# Current timestep 4350
+[2019-03-07T18:23:44.495] [INFO ] [Scheduler] Notify time: 4350. Current size: 5
+[2019-03-07T18:23:44.495] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.495] [INFO ] [4350][Scheduler] next at 5000 in 650
+[2019-03-07T18:23:44.496] [DEBUG] #@# Current timestep 4400
+[2019-03-07T18:23:44.496] [INFO ] [Scheduler] Notify time: 4400. Current size: 5
+[2019-03-07T18:23:44.496] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.496] [INFO ] [4400][Scheduler] next at 5000 in 600
+[2019-03-07T18:23:44.497] [DEBUG] #@# Current timestep 4450
+[2019-03-07T18:23:44.498] [INFO ] [Scheduler] Notify time: 4450. Current size: 5
+[2019-03-07T18:23:44.498] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.498] [INFO ] [4450][Scheduler] next at 5000 in 550
+[2019-03-07T18:23:44.499] [DEBUG] #@# Current timestep 4500
+[2019-03-07T18:23:44.499] [INFO ] [Scheduler] Notify time: 4500. Current size: 5
+[2019-03-07T18:23:44.499] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.499] [INFO ] [4500][Scheduler] next at 5000 in 500
+[2019-03-07T18:23:44.500] [DEBUG] #@# Current timestep 4550
+[2019-03-07T18:23:44.500] [INFO ] [Scheduler] Notify time: 4550. Current size: 5
+[2019-03-07T18:23:44.500] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.500] [INFO ] [4550][Scheduler] next at 5000 in 450
+[2019-03-07T18:23:44.501] [DEBUG] #@# Current timestep 4600
+[2019-03-07T18:23:44.501] [INFO ] [Scheduler] Notify time: 4600. Current size: 5
+[2019-03-07T18:23:44.501] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.501] [INFO ] [4600][Scheduler] next at 5000 in 400
+[2019-03-07T18:23:44.502] [DEBUG] #@# Current timestep 4650
+[2019-03-07T18:23:44.502] [INFO ] [Scheduler] Notify time: 4650. Current size: 5
+[2019-03-07T18:23:44.502] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.502] [INFO ] [4650][Scheduler] next at 5000 in 350
+[2019-03-07T18:23:44.503] [DEBUG] #@# Current timestep 4700
+[2019-03-07T18:23:44.503] [INFO ] [Scheduler] Notify time: 4700. Current size: 5
+[2019-03-07T18:23:44.503] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.503] [INFO ] [4700][Scheduler] next at 5000 in 300
+[2019-03-07T18:23:44.504] [DEBUG] #@# Current timestep 4750
+[2019-03-07T18:23:44.504] [INFO ] [Scheduler] Notify time: 4750. Current size: 5
+[2019-03-07T18:23:44.504] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.504] [INFO ] [4750][Scheduler] next at 5000 in 250
+[2019-03-07T18:23:44.506] [DEBUG] #@# Current timestep 4800
+[2019-03-07T18:23:44.506] [INFO ] [Scheduler] Notify time: 4800. Current size: 5
+[2019-03-07T18:23:44.506] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.506] [INFO ] [4800][Scheduler] next at 5000 in 200
+[2019-03-07T18:23:44.507] [DEBUG] #@# Current timestep 4850
+[2019-03-07T18:23:44.507] [INFO ] [Scheduler] Notify time: 4850. Current size: 5
+[2019-03-07T18:23:44.507] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.507] [INFO ] [4850][Scheduler] next at 5000 in 150
+[2019-03-07T18:23:44.508] [DEBUG] #@# Current timestep 4900
+[2019-03-07T18:23:44.508] [INFO ] [Scheduler] Notify time: 4900. Current size: 5
+[2019-03-07T18:23:44.508] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.508] [INFO ] [4900][Scheduler] next at 5000 in 100
+[2019-03-07T18:23:44.512] [DEBUG] #@# Current timestep 4950
+[2019-03-07T18:23:44.512] [INFO ] [Scheduler] Notify time: 4950. Current size: 5
+[2019-03-07T18:23:44.512] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.512] [INFO ] [4950][Scheduler] next at 5000 in 50
+[2019-03-07T18:23:44.513] [DEBUG] #@# Current timestep 5000
+[2019-03-07T18:23:44.513] [INFO ] [Scheduler] Notify time: 5000. Current size: 5
+[2019-03-07T18:23:44.513] [FUNCT] void testapp::application::BehaviourTestRSU::RSUBroadcastCommSimple2():~(RSU 5000): TestRSU: 
+[2019-03-07T18:23:44.513] [DEBUG] (RSU 5000): TestRSU: Starting vehicle broadcast
+[2019-03-07T18:23:44.513] [INFO ] TracedCallback Send number of calls 1
+[2019-03-07T18:23:44.513] [DEBUG] (RSU 5000): [5000] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: Vehicle Id=All, and following TestHeader:  [TestHeader] PId:0, MsgTypeId:4, message:RSU regular broadcast message, size:31
+[2019-03-07T18:23:44.513] [DEBUG] (RSU 5000): TestRSU: Scheduled next RSU broadcast at time 1065.06236401
+[2019-03-07T18:23:44.513] [INFO ] Schedule at 6065.06236401
+[2019-03-07T18:23:44.513] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.513] [INFO ] Schedule at 6000
+[2019-03-07T18:23:44.513] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.513] [INFO ] Schedule at 6000
+[2019-03-07T18:23:44.513] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.513] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.513] [INFO ] (Node 2): pos=(12.9318278819, 48.2964349024) spd=(5.18441944486, 0) avgDir=2.78461 dir=3.22227
+[2019-03-07T18:23:44.513] [DEBUG] (Node 2): real: dir= 0 pos=(12.8999996185, 48.3499984741) dist= 5.19999980927
+[2019-03-07T18:23:44.513] [INFO ] [Scheduler] 3 have been executed.
+[2019-03-07T18:23:44.513] [INFO ] [5000][Scheduler] next at 6000 in 1000
+[2019-03-07T18:23:44.517] [DEBUG] #@# Current timestep 5050
+[2019-03-07T18:23:44.517] [INFO ] [Scheduler] Notify time: 5050. Current size: 5
+[2019-03-07T18:23:44.517] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.517] [INFO ] [5050][Scheduler] next at 6000 in 950
+[2019-03-07T18:23:44.519] [DEBUG] #@# Current timestep 5100
+[2019-03-07T18:23:44.519] [INFO ] [Scheduler] Notify time: 5100. Current size: 5
+[2019-03-07T18:23:44.519] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.519] [INFO ] [5100][Scheduler] next at 6000 in 900
+[2019-03-07T18:23:44.520] [INFO ] TracedCallback Receive number of calls 0
+[2019-03-07T18:23:44.520] [DEBUG] (Node 2): Received packet snr=20.3381699405 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: Vehicle Id=All
+[2019-03-07T18:23:44.520] [DEBUG] (Node 2): Forwarded packet to TestNode
+[2019-03-07T18:23:44.520] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 2): TestNode: 
+[2019-03-07T18:23:44.520] [INFO ] (Node 2): TestNode: Received a test message with content: RSU regular broadcast message
+[2019-03-07T18:23:44.520] [DEBUG] (Node 2): TestNode: Vehicle 2  and responds.
+[2019-03-07T18:23:44.520] [INFO ] Schedule at 5170.73019562
+[2019-03-07T18:23:44.521] [DEBUG] #@# Current timestep 5150
+[2019-03-07T18:23:44.521] [INFO ] [Scheduler] Notify time: 5150. Current size: 6
+[2019-03-07T18:23:44.521] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.521] [INFO ] [5150][Scheduler] next at 5170.73019562 in 20.7301956205
+[2019-03-07T18:23:44.522] [DEBUG] #@# Current timestep 5200
+[2019-03-07T18:23:44.522] [INFO ] [Scheduler] Notify time: 5200. Current size: 6
+[2019-03-07T18:23:44.522] [FUNCT] void testapp::application::BehaviourTestNode::EventSendResponse(baseapp::application::TestHeader::ResponseInfo):~(Node 2): TestNode: 
+[2019-03-07T18:23:44.522] [INFO ] TracedCallback Send number of calls 1
+[2019-03-07T18:23:44.522] [DEBUG] (Node 2): [5170.73019562] Sent packet to node 5000. Its Header:Pid=??? SRC: Vehicle Id=2 Pos=(12.9318:48.2964) DEST: All Id=5000, and following TestHeader:  [TestHeader] PId:0, MsgTypeId:5, message:Vehicle response to RSU broadcast, size:35
+[2019-03-07T18:23:44.522] [DEBUG] (Node 2): TestNode: Sent test response to RSU 5000
+[2019-03-07T18:23:44.522] [INFO ] [Scheduler] 1 have been executed.
+[2019-03-07T18:23:44.522] [INFO ] [5200][Scheduler] next at 6000 in 800
+[2019-03-07T18:23:44.524] [DEBUG] #@# Current timestep 5250
+[2019-03-07T18:23:44.524] [INFO ] [Scheduler] Notify time: 5250. Current size: 5
+[2019-03-07T18:23:44.524] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.524] [INFO ] [5250][Scheduler] next at 6000 in 750
+[2019-03-07T18:23:44.525] [INFO ] TracedCallback Receive number of calls 0
+[2019-03-07T18:23:44.525] [DEBUG] (RSU 5000): Received packet snr=20.3381699405 ItsHeader: Pid=??? SRC: Vehicle Id=2 Pos=(12.9318:48.2964) DEST: All Id=5000
+[2019-03-07T18:23:44.525] [DEBUG] (RSU 5000): Forwarded packet to TestRSU
+[2019-03-07T18:23:44.525] [FUNCT] virtual void testapp::application::BehaviourTestRSU::Receive(baseapp::server::Payload*, double):~(RSU 5000): TestRSU: 
+[2019-03-07T18:23:44.525] [INFO ] (RSU 5000): TestRSU: Received a test message with content: Vehicle response to RSU broadcast
+[2019-03-07T18:23:44.525] [DEBUG] (RSU 5000): TestRSU: RSU 5000 sends acknowledgement response on reception of vehicle's first response.
+[2019-03-07T18:23:44.525] [INFO ] Schedule at 5304.78044165
+[2019-03-07T18:23:44.525] [INFO ] (RSU 5000): TestRSU: scheduled a test response to Vehicle regular broadcast in 54.7804416531
+[2019-03-07T18:23:44.526] [DEBUG] #@# Current timestep 5300
+[2019-03-07T18:23:44.526] [INFO ] [Scheduler] Notify time: 5300. Current size: 6
+[2019-03-07T18:23:44.526] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.526] [INFO ] [5300][Scheduler] next at 5304.78044165 in 4.78044165306
+[2019-03-07T18:23:44.529] [DEBUG] #@# Current timestep 5350
+[2019-03-07T18:23:44.529] [INFO ] [Scheduler] Notify time: 5350. Current size: 6
+[2019-03-07T18:23:44.529] [FUNCT] void testapp::application::BehaviourTestRSU::EventSendResponse(baseapp::application::TestHeader::ResponseInfo):~(RSU 5000): TestRSU: 
+[2019-03-07T18:23:44.529] [INFO ] TracedCallback Send number of calls 1
+[2019-03-07T18:23:44.529] [DEBUG] (RSU 5000): [5304.78044165] Sent packet to node 2. Its Header:Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: All Id=2, and following TestHeader:  [TestHeader] PId:0, MsgTypeId:4, message:RSU Vehicle acknowledgement, size:29
+[2019-03-07T18:23:44.529] [DEBUG] (RSU 5000): TestRSU: Sent test response to vehicle 2
+[2019-03-07T18:23:44.529] [INFO ] [Scheduler] 1 have been executed.
+[2019-03-07T18:23:44.529] [INFO ] [5350][Scheduler] next at 6000 in 650
+[2019-03-07T18:23:44.532] [DEBUG] #@# Current timestep 5400
+[2019-03-07T18:23:44.532] [INFO ] [Scheduler] Notify time: 5400. Current size: 5
+[2019-03-07T18:23:44.532] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.532] [INFO ] [5400][Scheduler] next at 6000 in 600
+[2019-03-07T18:23:44.532] [INFO ] TracedCallback Receive number of calls 0
+[2019-03-07T18:23:44.532] [DEBUG] (Node 2): Received packet snr=20.3381699405 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: All Id=2
+[2019-03-07T18:23:44.532] [DEBUG] (Node 2): Forwarded packet to TestNode
+[2019-03-07T18:23:44.532] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 2): TestNode: 
+[2019-03-07T18:23:44.532] [INFO ] (Node 2): TestNode: Received a test message with content: RSU Vehicle acknowledgement
+[2019-03-07T18:23:44.532] [FUNCT] void testapp::application::BehaviourTestNode::abortWaitingForRSUResponse():~(Node 2): TestNode: 
+[2019-03-07T18:23:44.532] [DEBUG] (Node 2): TestNode: Aborted waiting for RSU response
+[2019-03-07T18:23:44.532] [DEBUG] (Node 2): TestNode: On reception of RSU Vehicle acknowledgement.
+[2019-03-07T18:23:44.532] [INFO ] Schedule at 5452.7229745
+[2019-03-07T18:23:44.532] [INFO ] (Node 2): TestNode: Scheduled a test response in 52.7229745044
+[2019-03-07T18:23:44.533] [DEBUG] #@# Current timestep 5450
+[2019-03-07T18:23:44.533] [INFO ] [Scheduler] Notify time: 5450. Current size: 5
+[2019-03-07T18:23:44.533] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.533] [INFO ] [5450][Scheduler] next at 5452.7229745 in 2.72297450443
+[2019-03-07T18:23:44.535] [DEBUG] #@# Current timestep 5500
+[2019-03-07T18:23:44.535] [INFO ] [Scheduler] Notify time: 5500. Current size: 5
+[2019-03-07T18:23:44.535] [FUNCT] void testapp::application::BehaviourTestNode::EventSendResponse(baseapp::application::TestHeader::ResponseInfo):~(Node 2): TestNode: 
+[2019-03-07T18:23:44.535] [INFO ] TracedCallback Send number of calls 1
+[2019-03-07T18:23:44.535] [DEBUG] (Node 2): [5452.7229745] Sent packet to node 5000. Its Header:Pid=??? SRC: Vehicle Id=2 Pos=(12.9318:48.2964) DEST: All Id=5000, and following TestHeader:  [TestHeader] PId:0, MsgTypeId:5, message:Vehicle response to RSU Vehicle acknowledgement, size:49
+[2019-03-07T18:23:44.535] [DEBUG] (Node 2): TestNode: Sent test response to RSU 5000
+[2019-03-07T18:23:44.535] [INFO ] [Scheduler] 1 have been executed.
+[2019-03-07T18:23:44.535] [INFO ] [5500][Scheduler] next at 6000 in 500
+[2019-03-07T18:23:44.537] [DEBUG] #@# Current timestep 5550
+[2019-03-07T18:23:44.537] [INFO ] [Scheduler] Notify time: 5550. Current size: 4
+[2019-03-07T18:23:44.537] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.537] [INFO ] [5550][Scheduler] next at 6000 in 450
+[2019-03-07T18:23:44.537] [INFO ] TracedCallback Receive number of calls 0
+[2019-03-07T18:23:44.537] [DEBUG] (RSU 5000): Received packet snr=20.3381699405 ItsHeader: Pid=??? SRC: Vehicle Id=2 Pos=(12.9318:48.2964) DEST: All Id=5000
+[2019-03-07T18:23:44.537] [DEBUG] (RSU 5000): Forwarded packet to TestRSU
+[2019-03-07T18:23:44.537] [FUNCT] virtual void testapp::application::BehaviourTestRSU::Receive(baseapp::server::Payload*, double):~(RSU 5000): TestRSU: 
+[2019-03-07T18:23:44.537] [INFO ] (RSU 5000): TestRSU: Received a test message with content: Vehicle response to RSU Vehicle acknowledgement
+[2019-03-07T18:23:44.537] [DEBUG] (RSU 5000): TestRSU: RSU 5000 sends stop advice response on reception of Vehicle response to RSU Vehicle acknowledgement.
+[2019-03-07T18:23:44.537] [INFO ] Schedule at 5605.67152196
+[2019-03-07T18:23:44.537] [INFO ] (RSU 5000): TestRSU: scheduled a test response to Vehicle response to RSU Vehicle acknowledgement in 55.6715219579
+[2019-03-07T18:23:44.538] [DEBUG] #@# Current timestep 5600
+[2019-03-07T18:23:44.538] [INFO ] [Scheduler] Notify time: 5600. Current size: 5
+[2019-03-07T18:23:44.538] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.538] [INFO ] [5600][Scheduler] next at 5605.67152196 in 5.67152195789
+[2019-03-07T18:23:44.539] [DEBUG] #@# Current timestep 5650
+[2019-03-07T18:23:44.539] [INFO ] [Scheduler] Notify time: 5650. Current size: 5
+[2019-03-07T18:23:44.539] [FUNCT] void testapp::application::BehaviourTestRSU::EventSendResponse(baseapp::application::TestHeader::ResponseInfo):~(RSU 5000): TestRSU: 
+[2019-03-07T18:23:44.539] [INFO ] TracedCallback Send number of calls 1
+[2019-03-07T18:23:44.539] [DEBUG] (RSU 5000): [5605.67152196] Sent packet to node 2. Its Header:Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: All Id=2, and following TestHeader:  [TestHeader] PId:0, MsgTypeId:4, message:RSU Stop advice, size:17
+[2019-03-07T18:23:44.539] [DEBUG] (RSU 5000): TestRSU: Sent test response to vehicle 2
+[2019-03-07T18:23:44.539] [INFO ] [Scheduler] 1 have been executed.
+[2019-03-07T18:23:44.539] [INFO ] [5650][Scheduler] next at 6000 in 350
+[2019-03-07T18:23:44.541] [DEBUG] #@# Current timestep 5700
+[2019-03-07T18:23:44.541] [INFO ] [Scheduler] Notify time: 5700. Current size: 4
+[2019-03-07T18:23:44.541] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.541] [INFO ] [5700][Scheduler] next at 6000 in 300
+[2019-03-07T18:23:44.541] [INFO ] TracedCallback Receive number of calls 0
+[2019-03-07T18:23:44.541] [DEBUG] (Node 2): Received packet snr=20.3381699405 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: All Id=2
+[2019-03-07T18:23:44.541] [DEBUG] (Node 2): Forwarded packet to TestNode
+[2019-03-07T18:23:44.541] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 2): TestNode: 
+[2019-03-07T18:23:44.541] [INFO ] (Node 2): TestNode: Received a test message with content: RSU Stop advice
+[2019-03-07T18:23:44.541] [DEBUG] (Node 2): TestNode: On reception of RSU Stop advice.
+[2019-03-07T18:23:44.541] [INFO ] (Node 2): TestNode: Added a stop on edge CE at position50
+[2019-03-07T18:23:44.542] [DEBUG] #@# Current timestep 5750
+[2019-03-07T18:23:44.542] [INFO ] [Scheduler] Notify time: 5750. Current size: 4
+[2019-03-07T18:23:44.542] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.542] [INFO ] [5750][Scheduler] next at 6000 in 250
+[2019-03-07T18:23:44.543] [INFO ] (Node 2): iCSInferface::TraciCommandResult executionId 1 command 0xc4 type SET
+[2019-03-07T18:23:44.543] [INFO ] (Node 2): iCSInferface::TraciCommandResult set command success
+[2019-03-07T18:23:44.544] [DEBUG] #@# Current timestep 5800
+[2019-03-07T18:23:44.544] [INFO ] [Scheduler] Notify time: 5800. Current size: 4
+[2019-03-07T18:23:44.544] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.544] [INFO ] [5800][Scheduler] next at 6000 in 200
+[2019-03-07T18:23:44.545] [DEBUG] #@# Current timestep 5850
+[2019-03-07T18:23:44.545] [INFO ] [Scheduler] Notify time: 5850. Current size: 4
+[2019-03-07T18:23:44.545] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.545] [INFO ] [5850][Scheduler] next at 6000 in 150
+[2019-03-07T18:23:44.546] [DEBUG] #@# Current timestep 5900
+[2019-03-07T18:23:44.546] [INFO ] [Scheduler] Notify time: 5900. Current size: 4
+[2019-03-07T18:23:44.546] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.546] [INFO ] [5900][Scheduler] next at 6000 in 100
+[2019-03-07T18:23:44.547] [DEBUG] #@# Current timestep 5950
+[2019-03-07T18:23:44.547] [INFO ] [Scheduler] Notify time: 5950. Current size: 4
+[2019-03-07T18:23:44.547] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.547] [INFO ] [5950][Scheduler] next at 6000 in 50
+[2019-03-07T18:23:44.549] [DEBUG] #@# Current timestep 6000
+[2019-03-07T18:23:44.549] [INFO ] [Scheduler] Notify time: 6000. Current size: 4
+[2019-03-07T18:23:44.549] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.549] [INFO ] Schedule at 7000
+[2019-03-07T18:23:44.549] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.549] [INFO ] Schedule at 7000
+[2019-03-07T18:23:44.549] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.549] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.549] [INFO ] (Node 2): pos=(20.983747138, 48.5361700665) spd=(7.72251341297, 0) avgDir=1.28321 dir=-1.72055
+[2019-03-07T18:23:44.549] [DEBUG] (Node 2): real: dir= 0 pos=(20.7000007629, 48.3499984741) dist= 7.80000114441
+[2019-03-07T18:23:44.549] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.549] [INFO ] [6000][Scheduler] next at 6065.06236401 in 65.0623640122
+[2019-03-07T18:23:44.550] [DEBUG] #@# Current timestep 6050
+[2019-03-07T18:23:44.550] [INFO ] [Scheduler] Notify time: 6050. Current size: 4
+[2019-03-07T18:23:44.550] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.550] [INFO ] [6050][Scheduler] next at 6065.06236401 in 15.0623640122
+[2019-03-07T18:23:44.551] [DEBUG] #@# Current timestep 6100
+[2019-03-07T18:23:44.552] [INFO ] [Scheduler] Notify time: 6100. Current size: 4
+[2019-03-07T18:23:44.552] [INFO ] TracedCallback Send number of calls 1
+[2019-03-07T18:23:44.552] [DEBUG] (RSU 5000): [6065.06236401] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: Vehicle Id=All, and following TestHeader:  [TestHeader] PId:0, MsgTypeId:4, message:RSU regular broadcast message, size:31
+[2019-03-07T18:23:44.552] [DEBUG] (RSU 5000): TestRSU: Scheduled next RSU broadcast at time 1058.63523779
+[2019-03-07T18:23:44.552] [INFO ] Schedule at 7158.63523779
+[2019-03-07T18:23:44.552] [INFO ] [Scheduler] 1 have been executed.
+[2019-03-07T18:23:44.552] [INFO ] [6100][Scheduler] next at 7000 in 900
+[2019-03-07T18:23:44.554] [DEBUG] #@# Current timestep 6150
+[2019-03-07T18:23:44.554] [INFO ] [Scheduler] Notify time: 6150. Current size: 4
+[2019-03-07T18:23:44.554] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.554] [INFO ] [6150][Scheduler] next at 7000 in 850
+[2019-03-07T18:23:44.554] [INFO ] TracedCallback Receive number of calls 0
+[2019-03-07T18:23:44.554] [DEBUG] (Node 2): Received packet snr=22.1688736359 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: Vehicle Id=All
+[2019-03-07T18:23:44.554] [DEBUG] (Node 2): Forwarded packet to TestNode
+[2019-03-07T18:23:44.554] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 2): TestNode: 
+[2019-03-07T18:23:44.554] [INFO ] (Node 2): TestNode: Received a test message with content: RSU regular broadcast message
+[2019-03-07T18:23:44.555] [DEBUG] #@# Current timestep 6200
+[2019-03-07T18:23:44.555] [INFO ] [Scheduler] Notify time: 6200. Current size: 4
+[2019-03-07T18:23:44.555] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.555] [INFO ] [6200][Scheduler] next at 7000 in 800
+[2019-03-07T18:23:44.556] [DEBUG] #@# Current timestep 6250
+[2019-03-07T18:23:44.556] [INFO ] [Scheduler] Notify time: 6250. Current size: 4
+[2019-03-07T18:23:44.556] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.556] [INFO ] [6250][Scheduler] next at 7000 in 750
+[2019-03-07T18:23:44.557] [DEBUG] #@# Current timestep 6300
+[2019-03-07T18:23:44.557] [INFO ] [Scheduler] Notify time: 6300. Current size: 4
+[2019-03-07T18:23:44.557] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.557] [INFO ] [6300][Scheduler] next at 7000 in 700
+[2019-03-07T18:23:44.558] [DEBUG] #@# Current timestep 6350
+[2019-03-07T18:23:44.558] [INFO ] [Scheduler] Notify time: 6350. Current size: 4
+[2019-03-07T18:23:44.558] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.558] [INFO ] [6350][Scheduler] next at 7000 in 650
+[2019-03-07T18:23:44.559] [DEBUG] #@# Current timestep 6400
+[2019-03-07T18:23:44.559] [INFO ] [Scheduler] Notify time: 6400. Current size: 4
+[2019-03-07T18:23:44.559] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.559] [INFO ] [6400][Scheduler] next at 7000 in 600
+[2019-03-07T18:23:44.560] [DEBUG] #@# Current timestep 6450
+[2019-03-07T18:23:44.560] [INFO ] [Scheduler] Notify time: 6450. Current size: 4
+[2019-03-07T18:23:44.560] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.560] [INFO ] [6450][Scheduler] next at 7000 in 550
+[2019-03-07T18:23:44.562] [DEBUG] #@# Current timestep 6500
+[2019-03-07T18:23:44.562] [INFO ] [Scheduler] Notify time: 6500. Current size: 4
+[2019-03-07T18:23:44.562] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.562] [INFO ] [6500][Scheduler] next at 7000 in 500
+[2019-03-07T18:23:44.565] [DEBUG] #@# Current timestep 6550
+[2019-03-07T18:23:44.565] [INFO ] [Scheduler] Notify time: 6550. Current size: 4
+[2019-03-07T18:23:44.565] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.565] [INFO ] [6550][Scheduler] next at 7000 in 450
+[2019-03-07T18:23:44.566] [DEBUG] #@# Current timestep 6600
+[2019-03-07T18:23:44.566] [INFO ] [Scheduler] Notify time: 6600. Current size: 4
+[2019-03-07T18:23:44.566] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.566] [INFO ] [6600][Scheduler] next at 7000 in 400
+[2019-03-07T18:23:44.568] [DEBUG] #@# Current timestep 6650
+[2019-03-07T18:23:44.568] [INFO ] [Scheduler] Notify time: 6650. Current size: 4
+[2019-03-07T18:23:44.568] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.568] [INFO ] [6650][Scheduler] next at 7000 in 350
+[2019-03-07T18:23:44.569] [DEBUG] #@# Current timestep 6700
+[2019-03-07T18:23:44.569] [INFO ] [Scheduler] Notify time: 6700. Current size: 4
+[2019-03-07T18:23:44.569] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.569] [INFO ] [6700][Scheduler] next at 7000 in 300
+[2019-03-07T18:23:44.570] [DEBUG] #@# Current timestep 6750
+[2019-03-07T18:23:44.570] [INFO ] [Scheduler] Notify time: 6750. Current size: 4
+[2019-03-07T18:23:44.570] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.570] [INFO ] [6750][Scheduler] next at 7000 in 250
+[2019-03-07T18:23:44.571] [DEBUG] #@# Current timestep 6800
+[2019-03-07T18:23:44.571] [INFO ] [Scheduler] Notify time: 6800. Current size: 4
+[2019-03-07T18:23:44.571] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.571] [INFO ] [6800][Scheduler] next at 7000 in 200
+[2019-03-07T18:23:44.572] [DEBUG] #@# Current timestep 6850
+[2019-03-07T18:23:44.572] [INFO ] [Scheduler] Notify time: 6850. Current size: 4
+[2019-03-07T18:23:44.572] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.572] [INFO ] [6850][Scheduler] next at 7000 in 150
+[2019-03-07T18:23:44.573] [DEBUG] #@# Current timestep 6900
+[2019-03-07T18:23:44.573] [INFO ] [Scheduler] Notify time: 6900. Current size: 4
+[2019-03-07T18:23:44.573] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.573] [INFO ] [6900][Scheduler] next at 7000 in 100
+[2019-03-07T18:23:44.574] [DEBUG] #@# Current timestep 6950
+[2019-03-07T18:23:44.574] [INFO ] [Scheduler] Notify time: 6950. Current size: 4
+[2019-03-07T18:23:44.574] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.574] [INFO ] [6950][Scheduler] next at 7000 in 50
+[2019-03-07T18:23:44.576] [DEBUG] #@# Current timestep 7000
+[2019-03-07T18:23:44.576] [INFO ] [Scheduler] Notify time: 7000. Current size: 4
+[2019-03-07T18:23:44.576] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.576] [INFO ] Schedule at 8000
+[2019-03-07T18:23:44.576] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.576] [INFO ] Schedule at 8000
+[2019-03-07T18:23:44.576] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.576] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.576] [INFO ] (Node 2): pos=(31.2381748385, 48.4230100012) spd=(10.2392029361, 0) avgDir=-0.106567 dir=-4.27621
+[2019-03-07T18:23:44.576] [DEBUG] (Node 2): real: dir= 0 pos=(31.1000003815, 48.3499984741) dist= 10.3999996185
+[2019-03-07T18:23:44.576] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.576] [INFO ] [7000][Scheduler] next at 7158.63523779 in 158.635237789
+[2019-03-07T18:23:44.577] [DEBUG] #@# Current timestep 7050
+[2019-03-07T18:23:44.577] [INFO ] [Scheduler] Notify time: 7050. Current size: 4
+[2019-03-07T18:23:44.577] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.577] [INFO ] [7050][Scheduler] next at 7158.63523779 in 108.635237789
+[2019-03-07T18:23:44.579] [DEBUG] #@# Current timestep 7100
+[2019-03-07T18:23:44.579] [INFO ] [Scheduler] Notify time: 7100. Current size: 4
+[2019-03-07T18:23:44.579] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.579] [INFO ] [7100][Scheduler] next at 7158.63523779 in 58.6352377888
+[2019-03-07T18:23:44.580] [DEBUG] #@# Current timestep 7150
+[2019-03-07T18:23:44.580] [INFO ] [Scheduler] Notify time: 7150. Current size: 4
+[2019-03-07T18:23:44.580] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.580] [INFO ] [7150][Scheduler] next at 7158.63523779 in 8.63523778881
+[2019-03-07T18:23:44.581] [DEBUG] #@# Current timestep 7200
+[2019-03-07T18:23:44.581] [INFO ] [Scheduler] Notify time: 7200. Current size: 4
+[2019-03-07T18:23:44.581] [INFO ] TracedCallback Send number of calls 1
+[2019-03-07T18:23:44.581] [DEBUG] (RSU 5000): [7158.63523779] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: Vehicle Id=All, and following TestHeader:  [TestHeader] PId:0, MsgTypeId:4, message:RSU regular broadcast message, size:31
+[2019-03-07T18:23:44.581] [DEBUG] (RSU 5000): TestRSU: Scheduled next RSU broadcast at time 1052.51951907
+[2019-03-07T18:23:44.581] [INFO ] Schedule at 8252.51951907
+[2019-03-07T18:23:44.581] [INFO ] [Scheduler] 1 have been executed.
+[2019-03-07T18:23:44.581] [INFO ] [7200][Scheduler] next at 8000 in 800
+[2019-03-07T18:23:44.583] [DEBUG] #@# Current timestep 7250
+[2019-03-07T18:23:44.583] [INFO ] [Scheduler] Notify time: 7250. Current size: 4
+[2019-03-07T18:23:44.583] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.583] [INFO ] [7250][Scheduler] next at 8000 in 750
+[2019-03-07T18:23:44.583] [INFO ] TracedCallback Receive number of calls 0
+[2019-03-07T18:23:44.583] [DEBUG] (Node 2): Received packet snr=24.8911573044 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: Vehicle Id=All
+[2019-03-07T18:23:44.583] [DEBUG] (Node 2): Forwarded packet to TestNode
+[2019-03-07T18:23:44.583] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 2): TestNode: 
+[2019-03-07T18:23:44.583] [INFO ] (Node 2): TestNode: Received a test message with content: RSU regular broadcast message
+[2019-03-07T18:23:44.584] [DEBUG] #@# Current timestep 7300
+[2019-03-07T18:23:44.584] [INFO ] [Scheduler] Notify time: 7300. Current size: 4
+[2019-03-07T18:23:44.584] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.584] [INFO ] [7300][Scheduler] next at 8000 in 700
+[2019-03-07T18:23:44.585] [DEBUG] #@# Current timestep 7350
+[2019-03-07T18:23:44.585] [INFO ] [Scheduler] Notify time: 7350. Current size: 4
+[2019-03-07T18:23:44.585] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.585] [INFO ] [7350][Scheduler] next at 8000 in 650
+[2019-03-07T18:23:44.586] [DEBUG] #@# Current timestep 7400
+[2019-03-07T18:23:44.587] [INFO ] [Scheduler] Notify time: 7400. Current size: 4
+[2019-03-07T18:23:44.587] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.587] [INFO ] [7400][Scheduler] next at 8000 in 600
+[2019-03-07T18:23:44.588] [DEBUG] #@# Current timestep 7450
+[2019-03-07T18:23:44.588] [INFO ] [Scheduler] Notify time: 7450. Current size: 4
+[2019-03-07T18:23:44.588] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.588] [INFO ] [7450][Scheduler] next at 8000 in 550
+[2019-03-07T18:23:44.589] [DEBUG] #@# Current timestep 7500
+[2019-03-07T18:23:44.589] [INFO ] [Scheduler] Notify time: 7500. Current size: 4
+[2019-03-07T18:23:44.589] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.589] [INFO ] [7500][Scheduler] next at 8000 in 500
+[2019-03-07T18:23:44.590] [DEBUG] #@# Current timestep 7550
+[2019-03-07T18:23:44.590] [INFO ] [Scheduler] Notify time: 7550. Current size: 4
+[2019-03-07T18:23:44.590] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.590] [INFO ] [7550][Scheduler] next at 8000 in 450
+[2019-03-07T18:23:44.593] [DEBUG] #@# Current timestep 7600
+[2019-03-07T18:23:44.593] [INFO ] [Scheduler] Notify time: 7600. Current size: 4
+[2019-03-07T18:23:44.593] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.593] [INFO ] [7600][Scheduler] next at 8000 in 400
+[2019-03-07T18:23:44.597] [DEBUG] #@# Current timestep 7650
+[2019-03-07T18:23:44.597] [INFO ] [Scheduler] Notify time: 7650. Current size: 4
+[2019-03-07T18:23:44.597] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.597] [INFO ] [7650][Scheduler] next at 8000 in 350
+[2019-03-07T18:23:44.598] [DEBUG] #@# Current timestep 7700
+[2019-03-07T18:23:44.598] [INFO ] [Scheduler] Notify time: 7700. Current size: 4
+[2019-03-07T18:23:44.598] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.598] [INFO ] [7700][Scheduler] next at 8000 in 300
+[2019-03-07T18:23:44.599] [DEBUG] #@# Current timestep 7750
+[2019-03-07T18:23:44.599] [INFO ] [Scheduler] Notify time: 7750. Current size: 4
+[2019-03-07T18:23:44.599] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.599] [INFO ] [7750][Scheduler] next at 8000 in 250
+[2019-03-07T18:23:44.600] [DEBUG] #@# Current timestep 7800
+[2019-03-07T18:23:44.600] [INFO ] [Scheduler] Notify time: 7800. Current size: 4
+[2019-03-07T18:23:44.600] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.600] [INFO ] [7800][Scheduler] next at 8000 in 200
+[2019-03-07T18:23:44.601] [DEBUG] #@# Current timestep 7850
+[2019-03-07T18:23:44.601] [INFO ] [Scheduler] Notify time: 7850. Current size: 4
+[2019-03-07T18:23:44.601] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.601] [INFO ] [7850][Scheduler] next at 8000 in 150
+[2019-03-07T18:23:44.602] [DEBUG] #@# Current timestep 7900
+[2019-03-07T18:23:44.602] [INFO ] [Scheduler] Notify time: 7900. Current size: 4
+[2019-03-07T18:23:44.602] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.602] [INFO ] [7900][Scheduler] next at 8000 in 100
+[2019-03-07T18:23:44.603] [DEBUG] #@# Current timestep 7950
+[2019-03-07T18:23:44.603] [INFO ] [Scheduler] Notify time: 7950. Current size: 4
+[2019-03-07T18:23:44.603] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.603] [INFO ] [7950][Scheduler] next at 8000 in 50
+[2019-03-07T18:23:44.605] [DEBUG] #@# Current timestep 8000
+[2019-03-07T18:23:44.605] [INFO ] [Scheduler] Notify time: 8000. Current size: 4
+[2019-03-07T18:23:44.605] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.605] [INFO ] Schedule at 9000
+[2019-03-07T18:23:44.605] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.605] [INFO ] Schedule at 9000
+[2019-03-07T18:23:44.605] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.605] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.605] [INFO ] (Node 2): pos=(45.0100608023, 47.7438972163) spd=(12.8701314503, 0) avgDir=-0.072121 dir=0.0654672
+[2019-03-07T18:23:44.605] [DEBUG] (Node 2): real: dir= 0 pos=(44.0999984741, 48.3499984741) dist= 12.9999980927
+[2019-03-07T18:23:44.605] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.605] [INFO ] [8000][Scheduler] next at 8252.51951907 in 252.519519074
+[2019-03-07T18:23:44.606] [DEBUG] #@# Current timestep 8050
+[2019-03-07T18:23:44.606] [INFO ] [Scheduler] Notify time: 8050. Current size: 4
+[2019-03-07T18:23:44.606] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.606] [INFO ] [8050][Scheduler] next at 8252.51951907 in 202.519519074
+[2019-03-07T18:23:44.608] [DEBUG] #@# Current timestep 8100
+[2019-03-07T18:23:44.608] [INFO ] [Scheduler] Notify time: 8100. Current size: 4
+[2019-03-07T18:23:44.608] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.608] [INFO ] [8100][Scheduler] next at 8252.51951907 in 152.519519074
+[2019-03-07T18:23:44.609] [DEBUG] #@# Current timestep 8150
+[2019-03-07T18:23:44.609] [INFO ] [Scheduler] Notify time: 8150. Current size: 4
+[2019-03-07T18:23:44.609] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.609] [INFO ] [8150][Scheduler] next at 8252.51951907 in 102.519519074
+[2019-03-07T18:23:44.610] [DEBUG] #@# Current timestep 8200
+[2019-03-07T18:23:44.610] [INFO ] [Scheduler] Notify time: 8200. Current size: 4
+[2019-03-07T18:23:44.610] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.610] [INFO ] [8200][Scheduler] next at 8252.51951907 in 52.5195190739
+[2019-03-07T18:23:44.612] [DEBUG] #@# Current timestep 8250
+[2019-03-07T18:23:44.612] [INFO ] [Scheduler] Notify time: 8250. Current size: 4
+[2019-03-07T18:23:44.612] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.612] [INFO ] [8250][Scheduler] next at 8252.51951907 in 2.5195190739
+[2019-03-07T18:23:44.613] [DEBUG] #@# Current timestep 8300
+[2019-03-07T18:23:44.613] [INFO ] [Scheduler] Notify time: 8300. Current size: 4
+[2019-03-07T18:23:44.613] [INFO ] TracedCallback Send number of calls 1
+[2019-03-07T18:23:44.613] [DEBUG] (RSU 5000): [8252.51951907] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: Vehicle Id=All, and following TestHeader:  [TestHeader] PId:0, MsgTypeId:4, message:RSU regular broadcast message, size:31
+[2019-03-07T18:23:44.613] [DEBUG] (RSU 5000): TestRSU: Scheduled next RSU broadcast at time 1046.37522293
+[2019-03-07T18:23:44.613] [INFO ] Schedule at 9346.37522293
+[2019-03-07T18:23:44.613] [INFO ] [Scheduler] 1 have been executed.
+[2019-03-07T18:23:44.613] [INFO ] [8300][Scheduler] next at 9000 in 700
+[2019-03-07T18:23:44.616] [DEBUG] #@# Current timestep 8350
+[2019-03-07T18:23:44.616] [INFO ] [Scheduler] Notify time: 8350. Current size: 4
+[2019-03-07T18:23:44.616] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.616] [INFO ] [8350][Scheduler] next at 9000 in 650
+[2019-03-07T18:23:44.616] [INFO ] TracedCallback Receive number of calls 0
+[2019-03-07T18:23:44.616] [DEBUG] (Node 2): Received packet snr=28.6085635866 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: Vehicle Id=All
+[2019-03-07T18:23:44.616] [DEBUG] (Node 2): Forwarded packet to TestNode
+[2019-03-07T18:23:44.616] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 2): TestNode: 
+[2019-03-07T18:23:44.616] [INFO ] (Node 2): TestNode: Received a test message with content: RSU regular broadcast message
+[2019-03-07T18:23:44.617] [DEBUG] #@# Current timestep 8400
+[2019-03-07T18:23:44.617] [INFO ] [Scheduler] Notify time: 8400. Current size: 4
+[2019-03-07T18:23:44.617] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.617] [INFO ] [8400][Scheduler] next at 9000 in 600
+[2019-03-07T18:23:44.618] [DEBUG] #@# Current timestep 8450
+[2019-03-07T18:23:44.618] [INFO ] [Scheduler] Notify time: 8450. Current size: 4
+[2019-03-07T18:23:44.618] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.618] [INFO ] [8450][Scheduler] next at 9000 in 550
+[2019-03-07T18:23:44.619] [DEBUG] #@# Current timestep 8500
+[2019-03-07T18:23:44.619] [INFO ] [Scheduler] Notify time: 8500. Current size: 4
+[2019-03-07T18:23:44.619] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.619] [INFO ] [8500][Scheduler] next at 9000 in 500
+[2019-03-07T18:23:44.620] [DEBUG] #@# Current timestep 8550
+[2019-03-07T18:23:44.620] [INFO ] [Scheduler] Notify time: 8550. Current size: 4
+[2019-03-07T18:23:44.620] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.620] [INFO ] [8550][Scheduler] next at 9000 in 450
+[2019-03-07T18:23:44.621] [DEBUG] #@# Current timestep 8600
+[2019-03-07T18:23:44.621] [INFO ] [Scheduler] Notify time: 8600. Current size: 4
+[2019-03-07T18:23:44.621] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.621] [INFO ] [8600][Scheduler] next at 9000 in 400
+[2019-03-07T18:23:44.622] [DEBUG] #@# Current timestep 8650
+[2019-03-07T18:23:44.622] [INFO ] [Scheduler] Notify time: 8650. Current size: 4
+[2019-03-07T18:23:44.622] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.622] [INFO ] [8650][Scheduler] next at 9000 in 350
+[2019-03-07T18:23:44.623] [DEBUG] #@# Current timestep 8700
+[2019-03-07T18:23:44.623] [INFO ] [Scheduler] Notify time: 8700. Current size: 4
+[2019-03-07T18:23:44.623] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.623] [INFO ] [8700][Scheduler] next at 9000 in 300
+[2019-03-07T18:23:44.624] [DEBUG] #@# Current timestep 8750
+[2019-03-07T18:23:44.624] [INFO ] [Scheduler] Notify time: 8750. Current size: 4
+[2019-03-07T18:23:44.624] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.624] [INFO ] [8750][Scheduler] next at 9000 in 250
+[2019-03-07T18:23:44.625] [DEBUG] #@# Current timestep 8800
+[2019-03-07T18:23:44.625] [INFO ] [Scheduler] Notify time: 8800. Current size: 4
+[2019-03-07T18:23:44.625] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.625] [INFO ] [8800][Scheduler] next at 9000 in 200
+[2019-03-07T18:23:44.626] [DEBUG] #@# Current timestep 8850
+[2019-03-07T18:23:44.626] [INFO ] [Scheduler] Notify time: 8850. Current size: 4
+[2019-03-07T18:23:44.626] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.626] [INFO ] [8850][Scheduler] next at 9000 in 150
+[2019-03-07T18:23:44.627] [DEBUG] #@# Current timestep 8900
+[2019-03-07T18:23:44.627] [INFO ] [Scheduler] Notify time: 8900. Current size: 4
+[2019-03-07T18:23:44.627] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.627] [INFO ] [8900][Scheduler] next at 9000 in 100
+[2019-03-07T18:23:44.628] [DEBUG] #@# Current timestep 8950
+[2019-03-07T18:23:44.628] [INFO ] [Scheduler] Notify time: 8950. Current size: 4
+[2019-03-07T18:23:44.628] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.628] [INFO ] [8950][Scheduler] next at 9000 in 50
+[2019-03-07T18:23:44.629] [DEBUG] #@# Current timestep 9000
+[2019-03-07T18:23:44.629] [INFO ] [Scheduler] Notify time: 9000. Current size: 4
+[2019-03-07T18:23:44.629] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.629] [INFO ] Schedule at 10000
+[2019-03-07T18:23:44.629] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.629] [INFO ] Schedule at 10000
+[2019-03-07T18:23:44.629] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.629] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.629] [INFO ] (Node 2): pos=(56.9919523616, 50.0683739528) spd=(13.8029724631, 0) avgDir=-0.0657293 dir=2.37891
+[2019-03-07T18:23:44.629] [DEBUG] (Node 2): real: dir= 0 pos=(57.9900016785, 48.3499984741) dist= 13.8900032043
+[2019-03-07T18:23:44.629] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.629] [INFO ] [9000][Scheduler] next at 9346.37522293 in 346.375222934
+[2019-03-07T18:23:44.630] [DEBUG] #@# Current timestep 9050
+[2019-03-07T18:23:44.630] [INFO ] [Scheduler] Notify time: 9050. Current size: 4
+[2019-03-07T18:23:44.630] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.630] [INFO ] [9050][Scheduler] next at 9346.37522293 in 296.375222934
+[2019-03-07T18:23:44.631] [DEBUG] #@# Current timestep 9100
+[2019-03-07T18:23:44.631] [INFO ] [Scheduler] Notify time: 9100. Current size: 4
+[2019-03-07T18:23:44.631] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.631] [INFO ] [9100][Scheduler] next at 9346.37522293 in 246.375222934
+[2019-03-07T18:23:44.632] [DEBUG] #@# Current timestep 9150
+[2019-03-07T18:23:44.632] [INFO ] [Scheduler] Notify time: 9150. Current size: 4
+[2019-03-07T18:23:44.632] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.632] [INFO ] [9150][Scheduler] next at 9346.37522293 in 196.375222934
+[2019-03-07T18:23:44.633] [DEBUG] #@# Current timestep 9200
+[2019-03-07T18:23:44.633] [INFO ] [Scheduler] Notify time: 9200. Current size: 4
+[2019-03-07T18:23:44.633] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.633] [INFO ] [9200][Scheduler] next at 9346.37522293 in 146.375222934
+[2019-03-07T18:23:44.634] [DEBUG] #@# Current timestep 9250
+[2019-03-07T18:23:44.634] [INFO ] [Scheduler] Notify time: 9250. Current size: 4
+[2019-03-07T18:23:44.634] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.634] [INFO ] [9250][Scheduler] next at 9346.37522293 in 96.375222934
+[2019-03-07T18:23:44.635] [DEBUG] #@# Current timestep 9300
+[2019-03-07T18:23:44.635] [INFO ] [Scheduler] Notify time: 9300. Current size: 4
+[2019-03-07T18:23:44.635] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.635] [INFO ] [9300][Scheduler] next at 9346.37522293 in 46.375222934
+[2019-03-07T18:23:44.636] [DEBUG] #@# Current timestep 9350
+[2019-03-07T18:23:44.636] [INFO ] [Scheduler] Notify time: 9350. Current size: 4
+[2019-03-07T18:23:44.636] [INFO ] TracedCallback Send number of calls 1
+[2019-03-07T18:23:44.636] [DEBUG] (RSU 5000): [9346.37522293] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: Vehicle Id=All, and following TestHeader:  [TestHeader] PId:0, MsgTypeId:4, message:RSU regular broadcast message, size:31
+[2019-03-07T18:23:44.636] [DEBUG] (RSU 5000): TestRSU: Scheduled next RSU broadcast at time 1090.36903963
+[2019-03-07T18:23:44.636] [INFO ] Schedule at 10440.3690396
+[2019-03-07T18:23:44.636] [INFO ] [Scheduler] 1 have been executed.
+[2019-03-07T18:23:44.636] [INFO ] [9350][Scheduler] next at 10000 in 650
+[2019-03-07T18:23:44.638] [DEBUG] #@# Current timestep 9400
+[2019-03-07T18:23:44.638] [INFO ] [Scheduler] Notify time: 9400. Current size: 4
+[2019-03-07T18:23:44.638] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.638] [INFO ] [9400][Scheduler] next at 10000 in 600
+[2019-03-07T18:23:44.639] [INFO ] TracedCallback Receive number of calls 0
+[2019-03-07T18:23:44.639] [DEBUG] (Node 2): Received packet snr=33.826333714 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(100:50) DEST: Vehicle Id=All
+[2019-03-07T18:23:44.639] [DEBUG] (Node 2): Forwarded packet to TestNode
+[2019-03-07T18:23:44.639] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 2): TestNode: 
+[2019-03-07T18:23:44.639] [INFO ] (Node 2): TestNode: Received a test message with content: RSU regular broadcast message
+[2019-03-07T18:23:44.640] [DEBUG] #@# Current timestep 9450
+[2019-03-07T18:23:44.640] [INFO ] [Scheduler] Notify time: 9450. Current size: 4
+[2019-03-07T18:23:44.640] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.640] [INFO ] [9450][Scheduler] next at 10000 in 550
+[2019-03-07T18:23:44.641] [DEBUG] #@# Current timestep 9500
+[2019-03-07T18:23:44.641] [INFO ] [Scheduler] Notify time: 9500. Current size: 4
+[2019-03-07T18:23:44.641] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.641] [INFO ] [9500][Scheduler] next at 10000 in 500
+[2019-03-07T18:23:44.642] [DEBUG] #@# Current timestep 9550
+[2019-03-07T18:23:44.642] [INFO ] [Scheduler] Notify time: 9550. Current size: 4
+[2019-03-07T18:23:44.642] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.642] [INFO ] [9550][Scheduler] next at 10000 in 450
+[2019-03-07T18:23:44.643] [DEBUG] #@# Current timestep 9600
+[2019-03-07T18:23:44.643] [INFO ] [Scheduler] Notify time: 9600. Current size: 4
+[2019-03-07T18:23:44.643] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.643] [INFO ] [9600][Scheduler] next at 10000 in 400
+[2019-03-07T18:23:44.645] [DEBUG] #@# Current timestep 9650
+[2019-03-07T18:23:44.645] [INFO ] [Scheduler] Notify time: 9650. Current size: 4
+[2019-03-07T18:23:44.645] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.645] [INFO ] [9650][Scheduler] next at 10000 in 350
+[2019-03-07T18:23:44.646] [DEBUG] #@# Current timestep 9700
+[2019-03-07T18:23:44.646] [INFO ] [Scheduler] Notify time: 9700. Current size: 4
+[2019-03-07T18:23:44.646] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.646] [INFO ] [9700][Scheduler] next at 10000 in 300
+[2019-03-07T18:23:44.647] [DEBUG] #@# Current timestep 9750
+[2019-03-07T18:23:44.647] [INFO ] [Scheduler] Notify time: 9750. Current size: 4
+[2019-03-07T18:23:44.647] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.647] [INFO ] [9750][Scheduler] next at 10000 in 250
+[2019-03-07T18:23:44.648] [DEBUG] #@# Current timestep 9800
+[2019-03-07T18:23:44.648] [INFO ] [Scheduler] Notify time: 9800. Current size: 4
+[2019-03-07T18:23:44.648] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.648] [INFO ] [9800][Scheduler] next at 10000 in 200
+[2019-03-07T18:23:44.649] [DEBUG] #@# Current timestep 9850
+[2019-03-07T18:23:44.649] [INFO ] [Scheduler] Notify time: 9850. Current size: 4
+[2019-03-07T18:23:44.649] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.649] [INFO ] [9850][Scheduler] next at 10000 in 150
+[2019-03-07T18:23:44.650] [DEBUG] #@# Current timestep 9900
+[2019-03-07T18:23:44.650] [INFO ] [Scheduler] Notify time: 9900. Current size: 4
+[2019-03-07T18:23:44.650] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.650] [INFO ] [9900][Scheduler] next at 10000 in 100
+[2019-03-07T18:23:44.651] [DEBUG] #@# Current timestep 9950
+[2019-03-07T18:23:44.651] [INFO ] [Scheduler] Notify time: 9950. Current size: 4
+[2019-03-07T18:23:44.651] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.651] [INFO ] [9950][Scheduler] next at 10000 in 50
+[2019-03-07T18:23:44.653] [DEBUG] #@# Current timestep 10000
+[2019-03-07T18:23:44.653] [INFO ] [Scheduler] Notify time: 10000. Current size: 4
+[2019-03-07T18:23:44.653] [FUNCT] void testapp::application::BehaviourTestRSU::abortBroadcast():~(RSU 5000): TestRSU: 
+[2019-03-07T18:23:44.653] [DEBUG] (RSU 5000): TestRSU: RSU aborted broadcasting
+[2019-03-07T18:23:44.653] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.653] [INFO ] Schedule at 11000
+[2019-03-07T18:23:44.653] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.653] [INFO ] Schedule at 11000
+[2019-03-07T18:23:44.653] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.653] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.653] [INFO ] (Node 2): pos=(70.1593273862, 48.9985961461) spd=(13.7794179877, 0) avgDir=-0.110684 dir=2.99739
+[2019-03-07T18:23:44.653] [DEBUG] (Node 2): real: dir= 0 pos=(71.8799972534, 48.3499984741) dist= 13.889995575
+[2019-03-07T18:23:44.653] [INFO ] [Scheduler] 3 have been executed.
+[2019-03-07T18:23:44.653] [INFO ] [10000][Scheduler] next at 11000 in 1000
+[2019-03-07T18:23:44.654] [DEBUG] #@# Current timestep 10050
+[2019-03-07T18:23:44.654] [INFO ] [Scheduler] Notify time: 10050. Current size: 2
+[2019-03-07T18:23:44.654] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.654] [INFO ] [10050][Scheduler] next at 11000 in 950
+[2019-03-07T18:23:44.655] [DEBUG] #@# Current timestep 10100
+[2019-03-07T18:23:44.655] [INFO ] [Scheduler] Notify time: 10100. Current size: 2
+[2019-03-07T18:23:44.655] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.655] [INFO ] [10100][Scheduler] next at 11000 in 900
+[2019-03-07T18:23:44.656] [DEBUG] #@# Current timestep 10150
+[2019-03-07T18:23:44.656] [INFO ] [Scheduler] Notify time: 10150. Current size: 2
+[2019-03-07T18:23:44.656] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.656] [INFO ] [10150][Scheduler] next at 11000 in 850
+[2019-03-07T18:23:44.657] [DEBUG] #@# Current timestep 10200
+[2019-03-07T18:23:44.657] [INFO ] [Scheduler] Notify time: 10200. Current size: 2
+[2019-03-07T18:23:44.657] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.657] [INFO ] [10200][Scheduler] next at 11000 in 800
+[2019-03-07T18:23:44.658] [DEBUG] #@# Current timestep 10250
+[2019-03-07T18:23:44.658] [INFO ] [Scheduler] Notify time: 10250. Current size: 2
+[2019-03-07T18:23:44.658] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.658] [INFO ] [10250][Scheduler] next at 11000 in 750
+[2019-03-07T18:23:44.659] [DEBUG] #@# Current timestep 10300
+[2019-03-07T18:23:44.659] [INFO ] [Scheduler] Notify time: 10300. Current size: 2
+[2019-03-07T18:23:44.659] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.659] [INFO ] [10300][Scheduler] next at 11000 in 700
+[2019-03-07T18:23:44.660] [DEBUG] #@# Current timestep 10350
+[2019-03-07T18:23:44.660] [INFO ] [Scheduler] Notify time: 10350. Current size: 2
+[2019-03-07T18:23:44.660] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.660] [INFO ] [10350][Scheduler] next at 11000 in 650
+[2019-03-07T18:23:44.661] [DEBUG] #@# Current timestep 10400
+[2019-03-07T18:23:44.661] [INFO ] [Scheduler] Notify time: 10400. Current size: 2
+[2019-03-07T18:23:44.661] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.661] [INFO ] [10400][Scheduler] next at 11000 in 600
+[2019-03-07T18:23:44.662] [DEBUG] #@# Current timestep 10450
+[2019-03-07T18:23:44.662] [INFO ] [Scheduler] Notify time: 10450. Current size: 2
+[2019-03-07T18:23:44.662] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.662] [INFO ] [10450][Scheduler] next at 11000 in 550
+[2019-03-07T18:23:44.664] [DEBUG] #@# Current timestep 10500
+[2019-03-07T18:23:44.664] [INFO ] [Scheduler] Notify time: 10500. Current size: 2
+[2019-03-07T18:23:44.664] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.664] [INFO ] [10500][Scheduler] next at 11000 in 500
+[2019-03-07T18:23:44.665] [DEBUG] #@# Current timestep 10550
+[2019-03-07T18:23:44.665] [INFO ] [Scheduler] Notify time: 10550. Current size: 2
+[2019-03-07T18:23:44.665] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.665] [INFO ] [10550][Scheduler] next at 11000 in 450
+[2019-03-07T18:23:44.666] [DEBUG] #@# Current timestep 10600
+[2019-03-07T18:23:44.666] [INFO ] [Scheduler] Notify time: 10600. Current size: 2
+[2019-03-07T18:23:44.666] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.666] [INFO ] [10600][Scheduler] next at 11000 in 400
+[2019-03-07T18:23:44.667] [DEBUG] #@# Current timestep 10650
+[2019-03-07T18:23:44.667] [INFO ] [Scheduler] Notify time: 10650. Current size: 2
+[2019-03-07T18:23:44.667] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.667] [INFO ] [10650][Scheduler] next at 11000 in 350
+[2019-03-07T18:23:44.668] [DEBUG] #@# Current timestep 10700
+[2019-03-07T18:23:44.668] [INFO ] [Scheduler] Notify time: 10700. Current size: 2
+[2019-03-07T18:23:44.668] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.668] [INFO ] [10700][Scheduler] next at 11000 in 300
+[2019-03-07T18:23:44.669] [DEBUG] #@# Current timestep 10750
+[2019-03-07T18:23:44.669] [INFO ] [Scheduler] Notify time: 10750. Current size: 2
+[2019-03-07T18:23:44.669] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.669] [INFO ] [10750][Scheduler] next at 11000 in 250
+[2019-03-07T18:23:44.670] [DEBUG] #@# Current timestep 10800
+[2019-03-07T18:23:44.670] [INFO ] [Scheduler] Notify time: 10800. Current size: 2
+[2019-03-07T18:23:44.670] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.670] [INFO ] [10800][Scheduler] next at 11000 in 200
+[2019-03-07T18:23:44.671] [DEBUG] #@# Current timestep 10850
+[2019-03-07T18:23:44.671] [INFO ] [Scheduler] Notify time: 10850. Current size: 2
+[2019-03-07T18:23:44.671] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.671] [INFO ] [10850][Scheduler] next at 11000 in 150
+[2019-03-07T18:23:44.672] [DEBUG] #@# Current timestep 10900
+[2019-03-07T18:23:44.672] [INFO ] [Scheduler] Notify time: 10900. Current size: 2
+[2019-03-07T18:23:44.672] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.672] [INFO ] [10900][Scheduler] next at 11000 in 100
+[2019-03-07T18:23:44.673] [DEBUG] #@# Current timestep 10950
+[2019-03-07T18:23:44.673] [INFO ] [Scheduler] Notify time: 10950. Current size: 2
+[2019-03-07T18:23:44.673] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.673] [INFO ] [10950][Scheduler] next at 11000 in 50
+[2019-03-07T18:23:44.675] [DEBUG] #@# Current timestep 11000
+[2019-03-07T18:23:44.675] [INFO ] [Scheduler] Notify time: 11000. Current size: 2
+[2019-03-07T18:23:44.675] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.675] [INFO ] Schedule at 12000
+[2019-03-07T18:23:44.675] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.675] [INFO ] Schedule at 12000
+[2019-03-07T18:23:44.675] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.675] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.675] [INFO ] (Node 2): pos=(86.250981788, 48.3503295081) spd=(13.7745350771, 0) avgDir=-0.459839 dir=-3.46569
+[2019-03-07T18:23:44.675] [DEBUG] (Node 2): real: dir= 0 pos=(85.7699966431, 48.3499984741) dist= 13.8899993896
+[2019-03-07T18:23:44.675] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.675] [INFO ] [11000][Scheduler] next at 12000 in 1000
+[2019-03-07T18:23:44.676] [DEBUG] #@# Current timestep 11050
+[2019-03-07T18:23:44.676] [INFO ] [Scheduler] Notify time: 11050. Current size: 2
+[2019-03-07T18:23:44.676] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.676] [INFO ] [11050][Scheduler] next at 12000 in 950
+[2019-03-07T18:23:44.677] [DEBUG] #@# Current timestep 11100
+[2019-03-07T18:23:44.677] [INFO ] [Scheduler] Notify time: 11100. Current size: 2
+[2019-03-07T18:23:44.677] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.677] [INFO ] [11100][Scheduler] next at 12000 in 900
+[2019-03-07T18:23:44.678] [DEBUG] #@# Current timestep 11150
+[2019-03-07T18:23:44.678] [INFO ] [Scheduler] Notify time: 11150. Current size: 2
+[2019-03-07T18:23:44.678] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.678] [INFO ] [11150][Scheduler] next at 12000 in 850
+[2019-03-07T18:23:44.679] [DEBUG] #@# Current timestep 11200
+[2019-03-07T18:23:44.679] [INFO ] [Scheduler] Notify time: 11200. Current size: 2
+[2019-03-07T18:23:44.679] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.679] [INFO ] [11200][Scheduler] next at 12000 in 800
+[2019-03-07T18:23:44.680] [DEBUG] #@# Current timestep 11250
+[2019-03-07T18:23:44.680] [INFO ] [Scheduler] Notify time: 11250. Current size: 2
+[2019-03-07T18:23:44.680] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.680] [INFO ] [11250][Scheduler] next at 12000 in 750
+[2019-03-07T18:23:44.681] [DEBUG] #@# Current timestep 11300
+[2019-03-07T18:23:44.681] [INFO ] [Scheduler] Notify time: 11300. Current size: 2
+[2019-03-07T18:23:44.681] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.681] [INFO ] [11300][Scheduler] next at 12000 in 700
+[2019-03-07T18:23:44.682] [DEBUG] #@# Current timestep 11350
+[2019-03-07T18:23:44.682] [INFO ] [Scheduler] Notify time: 11350. Current size: 2
+[2019-03-07T18:23:44.682] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.682] [INFO ] [11350][Scheduler] next at 12000 in 650
+[2019-03-07T18:23:44.683] [DEBUG] #@# Current timestep 11400
+[2019-03-07T18:23:44.683] [INFO ] [Scheduler] Notify time: 11400. Current size: 2
+[2019-03-07T18:23:44.683] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.683] [INFO ] [11400][Scheduler] next at 12000 in 600
+[2019-03-07T18:23:44.684] [DEBUG] #@# Current timestep 11450
+[2019-03-07T18:23:44.684] [INFO ] [Scheduler] Notify time: 11450. Current size: 2
+[2019-03-07T18:23:44.684] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.684] [INFO ] [11450][Scheduler] next at 12000 in 550
+[2019-03-07T18:23:44.685] [DEBUG] #@# Current timestep 11500
+[2019-03-07T18:23:44.685] [INFO ] [Scheduler] Notify time: 11500. Current size: 2
+[2019-03-07T18:23:44.685] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.685] [INFO ] [11500][Scheduler] next at 12000 in 500
+[2019-03-07T18:23:44.686] [DEBUG] #@# Current timestep 11550
+[2019-03-07T18:23:44.686] [INFO ] [Scheduler] Notify time: 11550. Current size: 2
+[2019-03-07T18:23:44.686] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.686] [INFO ] [11550][Scheduler] next at 12000 in 450
+[2019-03-07T18:23:44.687] [DEBUG] #@# Current timestep 11600
+[2019-03-07T18:23:44.687] [INFO ] [Scheduler] Notify time: 11600. Current size: 2
+[2019-03-07T18:23:44.687] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.687] [INFO ] [11600][Scheduler] next at 12000 in 400
+[2019-03-07T18:23:44.688] [DEBUG] #@# Current timestep 11650
+[2019-03-07T18:23:44.688] [INFO ] [Scheduler] Notify time: 11650. Current size: 2
+[2019-03-07T18:23:44.688] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.688] [INFO ] [11650][Scheduler] next at 12000 in 350
+[2019-03-07T18:23:44.689] [DEBUG] #@# Current timestep 11700
+[2019-03-07T18:23:44.689] [INFO ] [Scheduler] Notify time: 11700. Current size: 2
+[2019-03-07T18:23:44.689] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.689] [INFO ] [11700][Scheduler] next at 12000 in 300
+[2019-03-07T18:23:44.690] [DEBUG] #@# Current timestep 11750
+[2019-03-07T18:23:44.690] [INFO ] [Scheduler] Notify time: 11750. Current size: 2
+[2019-03-07T18:23:44.690] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.690] [INFO ] [11750][Scheduler] next at 12000 in 250
+[2019-03-07T18:23:44.691] [DEBUG] #@# Current timestep 11800
+[2019-03-07T18:23:44.691] [INFO ] [Scheduler] Notify time: 11800. Current size: 2
+[2019-03-07T18:23:44.691] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.691] [INFO ] [11800][Scheduler] next at 12000 in 200
+[2019-03-07T18:23:44.692] [DEBUG] #@# Current timestep 11850
+[2019-03-07T18:23:44.692] [INFO ] [Scheduler] Notify time: 11850. Current size: 2
+[2019-03-07T18:23:44.692] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.692] [INFO ] [11850][Scheduler] next at 12000 in 150
+[2019-03-07T18:23:44.693] [DEBUG] #@# Current timestep 11900
+[2019-03-07T18:23:44.693] [INFO ] [Scheduler] Notify time: 11900. Current size: 2
+[2019-03-07T18:23:44.693] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.693] [INFO ] [11900][Scheduler] next at 12000 in 100
+[2019-03-07T18:23:44.695] [DEBUG] #@# Current timestep 11950
+[2019-03-07T18:23:44.695] [INFO ] [Scheduler] Notify time: 11950. Current size: 2
+[2019-03-07T18:23:44.695] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.695] [INFO ] [11950][Scheduler] next at 12000 in 50
+[2019-03-07T18:23:44.697] [DEBUG] #@# Current timestep 12000
+[2019-03-07T18:23:44.697] [INFO ] [Scheduler] Notify time: 12000. Current size: 2
+[2019-03-07T18:23:44.697] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.697] [INFO ] Schedule at 13000
+[2019-03-07T18:23:44.697] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.697] [INFO ] Schedule at 13000
+[2019-03-07T18:23:44.697] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.697] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.697] [INFO ] (Node 2): pos=(99.3859281643, 49.1072477355) spd=(13.9048725006, 0) avgDir=1.55253 dir=5.78403
+[2019-03-07T18:23:44.697] [DEBUG] (Node 2): real: dir= 0 pos=(99.6600036621, 48.3499984741) dist= 13.890007019
+[2019-03-07T18:23:44.697] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.697] [INFO ] [12000][Scheduler] next at 13000 in 1000
+[2019-03-07T18:23:44.698] [DEBUG] #@# Current timestep 12050
+[2019-03-07T18:23:44.698] [INFO ] [Scheduler] Notify time: 12050. Current size: 2
+[2019-03-07T18:23:44.698] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.698] [INFO ] [12050][Scheduler] next at 13000 in 950
+[2019-03-07T18:23:44.699] [DEBUG] #@# Current timestep 12100
+[2019-03-07T18:23:44.699] [INFO ] [Scheduler] Notify time: 12100. Current size: 2
+[2019-03-07T18:23:44.699] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.699] [INFO ] [12100][Scheduler] next at 13000 in 900
+[2019-03-07T18:23:44.700] [DEBUG] #@# Current timestep 12150
+[2019-03-07T18:23:44.700] [INFO ] [Scheduler] Notify time: 12150. Current size: 2
+[2019-03-07T18:23:44.700] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.700] [INFO ] [12150][Scheduler] next at 13000 in 850
+[2019-03-07T18:23:44.701] [DEBUG] #@# Current timestep 12200
+[2019-03-07T18:23:44.701] [INFO ] [Scheduler] Notify time: 12200. Current size: 2
+[2019-03-07T18:23:44.701] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.701] [INFO ] [12200][Scheduler] next at 13000 in 800
+[2019-03-07T18:23:44.702] [DEBUG] #@# Current timestep 12250
+[2019-03-07T18:23:44.702] [INFO ] [Scheduler] Notify time: 12250. Current size: 2
+[2019-03-07T18:23:44.702] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.702] [INFO ] [12250][Scheduler] next at 13000 in 750
+[2019-03-07T18:23:44.703] [DEBUG] #@# Current timestep 12300
+[2019-03-07T18:23:44.703] [INFO ] [Scheduler] Notify time: 12300. Current size: 2
+[2019-03-07T18:23:44.703] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.703] [INFO ] [12300][Scheduler] next at 13000 in 700
+[2019-03-07T18:23:44.704] [DEBUG] #@# Current timestep 12350
+[2019-03-07T18:23:44.704] [INFO ] [Scheduler] Notify time: 12350. Current size: 2
+[2019-03-07T18:23:44.704] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.704] [INFO ] [12350][Scheduler] next at 13000 in 650
+[2019-03-07T18:23:44.705] [DEBUG] #@# Current timestep 12400
+[2019-03-07T18:23:44.705] [INFO ] [Scheduler] Notify time: 12400. Current size: 2
+[2019-03-07T18:23:44.705] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.705] [INFO ] [12400][Scheduler] next at 13000 in 600
+[2019-03-07T18:23:44.706] [DEBUG] #@# Current timestep 12450
+[2019-03-07T18:23:44.706] [INFO ] [Scheduler] Notify time: 12450. Current size: 2
+[2019-03-07T18:23:44.706] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.706] [INFO ] [12450][Scheduler] next at 13000 in 550
+[2019-03-07T18:23:44.707] [DEBUG] #@# Current timestep 12500
+[2019-03-07T18:23:44.707] [INFO ] [Scheduler] Notify time: 12500. Current size: 2
+[2019-03-07T18:23:44.707] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.707] [INFO ] [12500][Scheduler] next at 13000 in 500
+[2019-03-07T18:23:44.708] [DEBUG] #@# Current timestep 12550
+[2019-03-07T18:23:44.708] [INFO ] [Scheduler] Notify time: 12550. Current size: 2
+[2019-03-07T18:23:44.708] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.708] [INFO ] [12550][Scheduler] next at 13000 in 450
+[2019-03-07T18:23:44.709] [DEBUG] #@# Current timestep 12600
+[2019-03-07T18:23:44.709] [INFO ] [Scheduler] Notify time: 12600. Current size: 2
+[2019-03-07T18:23:44.709] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.709] [INFO ] [12600][Scheduler] next at 13000 in 400
+[2019-03-07T18:23:44.710] [DEBUG] #@# Current timestep 12650
+[2019-03-07T18:23:44.710] [INFO ] [Scheduler] Notify time: 12650. Current size: 2
+[2019-03-07T18:23:44.710] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.710] [INFO ] [12650][Scheduler] next at 13000 in 350
+[2019-03-07T18:23:44.711] [DEBUG] #@# Current timestep 12700
+[2019-03-07T18:23:44.711] [INFO ] [Scheduler] Notify time: 12700. Current size: 2
+[2019-03-07T18:23:44.711] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.711] [INFO ] [12700][Scheduler] next at 13000 in 300
+[2019-03-07T18:23:44.712] [DEBUG] #@# Current timestep 12750
+[2019-03-07T18:23:44.712] [INFO ] [Scheduler] Notify time: 12750. Current size: 2
+[2019-03-07T18:23:44.712] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.712] [INFO ] [12750][Scheduler] next at 13000 in 250
+[2019-03-07T18:23:44.713] [DEBUG] #@# Current timestep 12800
+[2019-03-07T18:23:44.713] [INFO ] [Scheduler] Notify time: 12800. Current size: 2
+[2019-03-07T18:23:44.713] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.713] [INFO ] [12800][Scheduler] next at 13000 in 200
+[2019-03-07T18:23:44.714] [DEBUG] #@# Current timestep 12850
+[2019-03-07T18:23:44.714] [INFO ] [Scheduler] Notify time: 12850. Current size: 2
+[2019-03-07T18:23:44.714] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.714] [INFO ] [12850][Scheduler] next at 13000 in 150
+[2019-03-07T18:23:44.715] [DEBUG] #@# Current timestep 12900
+[2019-03-07T18:23:44.715] [INFO ] [Scheduler] Notify time: 12900. Current size: 2
+[2019-03-07T18:23:44.715] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.715] [INFO ] [12900][Scheduler] next at 13000 in 100
+[2019-03-07T18:23:44.716] [DEBUG] #@# Current timestep 12950
+[2019-03-07T18:23:44.716] [INFO ] [Scheduler] Notify time: 12950. Current size: 2
+[2019-03-07T18:23:44.716] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.716] [INFO ] [12950][Scheduler] next at 13000 in 50
+[2019-03-07T18:23:44.718] [DEBUG] #@# Current timestep 13000
+[2019-03-07T18:23:44.718] [INFO ] [Scheduler] Notify time: 13000. Current size: 2
+[2019-03-07T18:23:44.718] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.718] [INFO ] Schedule at 14000
+[2019-03-07T18:23:44.718] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.718] [INFO ] Schedule at 14000
+[2019-03-07T18:23:44.718] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.718] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.718] [INFO ] (Node 2): pos=(115.053579283, 48.7047012822) spd=(13.8829315444, 0) avgDir=1.0539 dir=-2.42612
+[2019-03-07T18:23:44.718] [DEBUG] (Node 2): real: dir= 0 pos=(113.550003052, 48.3499984741) dist= 13.8899993896
+[2019-03-07T18:23:44.718] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.718] [INFO ] [13000][Scheduler] next at 14000 in 1000
+[2019-03-07T18:23:44.719] [DEBUG] #@# Current timestep 13050
+[2019-03-07T18:23:44.719] [INFO ] [Scheduler] Notify time: 13050. Current size: 2
+[2019-03-07T18:23:44.719] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.719] [INFO ] [13050][Scheduler] next at 14000 in 950
+[2019-03-07T18:23:44.720] [DEBUG] #@# Current timestep 13100
+[2019-03-07T18:23:44.720] [INFO ] [Scheduler] Notify time: 13100. Current size: 2
+[2019-03-07T18:23:44.720] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.720] [INFO ] [13100][Scheduler] next at 14000 in 900
+[2019-03-07T18:23:44.721] [DEBUG] #@# Current timestep 13150
+[2019-03-07T18:23:44.721] [INFO ] [Scheduler] Notify time: 13150. Current size: 2
+[2019-03-07T18:23:44.721] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.721] [INFO ] [13150][Scheduler] next at 14000 in 850
+[2019-03-07T18:23:44.722] [DEBUG] #@# Current timestep 13200
+[2019-03-07T18:23:44.722] [INFO ] [Scheduler] Notify time: 13200. Current size: 2
+[2019-03-07T18:23:44.722] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.722] [INFO ] [13200][Scheduler] next at 14000 in 800
+[2019-03-07T18:23:44.723] [DEBUG] #@# Current timestep 13250
+[2019-03-07T18:23:44.723] [INFO ] [Scheduler] Notify time: 13250. Current size: 2
+[2019-03-07T18:23:44.723] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.723] [INFO ] [13250][Scheduler] next at 14000 in 750
+[2019-03-07T18:23:44.724] [DEBUG] #@# Current timestep 13300
+[2019-03-07T18:23:44.724] [INFO ] [Scheduler] Notify time: 13300. Current size: 2
+[2019-03-07T18:23:44.724] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.724] [INFO ] [13300][Scheduler] next at 14000 in 700
+[2019-03-07T18:23:44.725] [DEBUG] #@# Current timestep 13350
+[2019-03-07T18:23:44.725] [INFO ] [Scheduler] Notify time: 13350. Current size: 2
+[2019-03-07T18:23:44.725] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.725] [INFO ] [13350][Scheduler] next at 14000 in 650
+[2019-03-07T18:23:44.726] [DEBUG] #@# Current timestep 13400
+[2019-03-07T18:23:44.727] [INFO ] [Scheduler] Notify time: 13400. Current size: 2
+[2019-03-07T18:23:44.727] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.727] [INFO ] [13400][Scheduler] next at 14000 in 600
+[2019-03-07T18:23:44.728] [DEBUG] #@# Current timestep 13450
+[2019-03-07T18:23:44.728] [INFO ] [Scheduler] Notify time: 13450. Current size: 2
+[2019-03-07T18:23:44.728] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.728] [INFO ] [13450][Scheduler] next at 14000 in 550
+[2019-03-07T18:23:44.729] [DEBUG] #@# Current timestep 13500
+[2019-03-07T18:23:44.729] [INFO ] [Scheduler] Notify time: 13500. Current size: 2
+[2019-03-07T18:23:44.729] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.729] [INFO ] [13500][Scheduler] next at 14000 in 500
+[2019-03-07T18:23:44.730] [DEBUG] #@# Current timestep 13550
+[2019-03-07T18:23:44.730] [INFO ] [Scheduler] Notify time: 13550. Current size: 2
+[2019-03-07T18:23:44.730] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.730] [INFO ] [13550][Scheduler] next at 14000 in 450
+[2019-03-07T18:23:44.731] [DEBUG] #@# Current timestep 13600
+[2019-03-07T18:23:44.731] [INFO ] [Scheduler] Notify time: 13600. Current size: 2
+[2019-03-07T18:23:44.731] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.731] [INFO ] [13600][Scheduler] next at 14000 in 400
+[2019-03-07T18:23:44.732] [DEBUG] #@# Current timestep 13650
+[2019-03-07T18:23:44.732] [INFO ] [Scheduler] Notify time: 13650. Current size: 2
+[2019-03-07T18:23:44.732] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.732] [INFO ] [13650][Scheduler] next at 14000 in 350
+[2019-03-07T18:23:44.733] [DEBUG] #@# Current timestep 13700
+[2019-03-07T18:23:44.733] [INFO ] [Scheduler] Notify time: 13700. Current size: 2
+[2019-03-07T18:23:44.733] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.733] [INFO ] [13700][Scheduler] next at 14000 in 300
+[2019-03-07T18:23:44.734] [DEBUG] #@# Current timestep 13750
+[2019-03-07T18:23:44.734] [INFO ] [Scheduler] Notify time: 13750. Current size: 2
+[2019-03-07T18:23:44.734] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.734] [INFO ] [13750][Scheduler] next at 14000 in 250
+[2019-03-07T18:23:44.735] [DEBUG] #@# Current timestep 13800
+[2019-03-07T18:23:44.735] [INFO ] [Scheduler] Notify time: 13800. Current size: 2
+[2019-03-07T18:23:44.735] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.735] [INFO ] [13800][Scheduler] next at 14000 in 200
+[2019-03-07T18:23:44.736] [DEBUG] #@# Current timestep 13850
+[2019-03-07T18:23:44.736] [INFO ] [Scheduler] Notify time: 13850. Current size: 2
+[2019-03-07T18:23:44.736] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.736] [INFO ] [13850][Scheduler] next at 14000 in 150
+[2019-03-07T18:23:44.737] [DEBUG] #@# Current timestep 13900
+[2019-03-07T18:23:44.737] [INFO ] [Scheduler] Notify time: 13900. Current size: 2
+[2019-03-07T18:23:44.737] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.737] [INFO ] [13900][Scheduler] next at 14000 in 100
+[2019-03-07T18:23:44.738] [DEBUG] #@# Current timestep 13950
+[2019-03-07T18:23:44.738] [INFO ] [Scheduler] Notify time: 13950. Current size: 2
+[2019-03-07T18:23:44.738] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.738] [INFO ] [13950][Scheduler] next at 14000 in 50
+[2019-03-07T18:23:44.740] [DEBUG] #@# Current timestep 14000
+[2019-03-07T18:23:44.740] [INFO ] [Scheduler] Notify time: 14000. Current size: 2
+[2019-03-07T18:23:44.740] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.740] [INFO ] Schedule at 15000
+[2019-03-07T18:23:44.740] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.740] [INFO ] Schedule at 15000
+[2019-03-07T18:23:44.740] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.740] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.740] [INFO ] (Node 2): pos=(127.932668281, 47.9923547083) spd=(13.9547601589, 0) avgDir=1.1047 dir=2.63252
+[2019-03-07T18:23:44.740] [DEBUG] (Node 2): real: dir= 0 pos=(127.440002441, 48.3499984741) dist= 13.8899993896
+[2019-03-07T18:23:44.740] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.740] [INFO ] [14000][Scheduler] next at 15000 in 1000
+[2019-03-07T18:23:44.741] [DEBUG] #@# Current timestep 14050
+[2019-03-07T18:23:44.741] [INFO ] [Scheduler] Notify time: 14050. Current size: 2
+[2019-03-07T18:23:44.741] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.741] [INFO ] [14050][Scheduler] next at 15000 in 950
+[2019-03-07T18:23:44.742] [DEBUG] #@# Current timestep 14100
+[2019-03-07T18:23:44.742] [INFO ] [Scheduler] Notify time: 14100. Current size: 2
+[2019-03-07T18:23:44.742] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.742] [INFO ] [14100][Scheduler] next at 15000 in 900
+[2019-03-07T18:23:44.743] [DEBUG] #@# Current timestep 14150
+[2019-03-07T18:23:44.743] [INFO ] [Scheduler] Notify time: 14150. Current size: 2
+[2019-03-07T18:23:44.743] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.743] [INFO ] [14150][Scheduler] next at 15000 in 850
+[2019-03-07T18:23:44.744] [DEBUG] #@# Current timestep 14200
+[2019-03-07T18:23:44.744] [INFO ] [Scheduler] Notify time: 14200. Current size: 2
+[2019-03-07T18:23:44.744] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.744] [INFO ] [14200][Scheduler] next at 15000 in 800
+[2019-03-07T18:23:44.745] [DEBUG] #@# Current timestep 14250
+[2019-03-07T18:23:44.745] [INFO ] [Scheduler] Notify time: 14250. Current size: 2
+[2019-03-07T18:23:44.745] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.745] [INFO ] [14250][Scheduler] next at 15000 in 750
+[2019-03-07T18:23:44.746] [DEBUG] #@# Current timestep 14300
+[2019-03-07T18:23:44.746] [INFO ] [Scheduler] Notify time: 14300. Current size: 2
+[2019-03-07T18:23:44.746] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.746] [INFO ] [14300][Scheduler] next at 15000 in 700
+[2019-03-07T18:23:44.747] [DEBUG] #@# Current timestep 14350
+[2019-03-07T18:23:44.747] [INFO ] [Scheduler] Notify time: 14350. Current size: 2
+[2019-03-07T18:23:44.747] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.747] [INFO ] [14350][Scheduler] next at 15000 in 650
+[2019-03-07T18:23:44.748] [DEBUG] #@# Current timestep 14400
+[2019-03-07T18:23:44.748] [INFO ] [Scheduler] Notify time: 14400. Current size: 2
+[2019-03-07T18:23:44.748] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.748] [INFO ] [14400][Scheduler] next at 15000 in 600
+[2019-03-07T18:23:44.749] [DEBUG] #@# Current timestep 14450
+[2019-03-07T18:23:44.749] [INFO ] [Scheduler] Notify time: 14450. Current size: 2
+[2019-03-07T18:23:44.749] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.749] [INFO ] [14450][Scheduler] next at 15000 in 550
+[2019-03-07T18:23:44.750] [DEBUG] #@# Current timestep 14500
+[2019-03-07T18:23:44.750] [INFO ] [Scheduler] Notify time: 14500. Current size: 2
+[2019-03-07T18:23:44.750] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.750] [INFO ] [14500][Scheduler] next at 15000 in 500
+[2019-03-07T18:23:44.751] [DEBUG] #@# Current timestep 14550
+[2019-03-07T18:23:44.751] [INFO ] [Scheduler] Notify time: 14550. Current size: 2
+[2019-03-07T18:23:44.751] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.751] [INFO ] [14550][Scheduler] next at 15000 in 450
+[2019-03-07T18:23:44.752] [DEBUG] #@# Current timestep 14600
+[2019-03-07T18:23:44.752] [INFO ] [Scheduler] Notify time: 14600. Current size: 2
+[2019-03-07T18:23:44.752] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.752] [INFO ] [14600][Scheduler] next at 15000 in 400
+[2019-03-07T18:23:44.753] [DEBUG] #@# Current timestep 14650
+[2019-03-07T18:23:44.753] [INFO ] [Scheduler] Notify time: 14650. Current size: 2
+[2019-03-07T18:23:44.753] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.753] [INFO ] [14650][Scheduler] next at 15000 in 350
+[2019-03-07T18:23:44.754] [DEBUG] #@# Current timestep 14700
+[2019-03-07T18:23:44.755] [INFO ] [Scheduler] Notify time: 14700. Current size: 2
+[2019-03-07T18:23:44.755] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.755] [INFO ] [14700][Scheduler] next at 15000 in 300
+[2019-03-07T18:23:44.756] [DEBUG] #@# Current timestep 14750
+[2019-03-07T18:23:44.756] [INFO ] [Scheduler] Notify time: 14750. Current size: 2
+[2019-03-07T18:23:44.756] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.756] [INFO ] [14750][Scheduler] next at 15000 in 250
+[2019-03-07T18:23:44.757] [DEBUG] #@# Current timestep 14800
+[2019-03-07T18:23:44.757] [INFO ] [Scheduler] Notify time: 14800. Current size: 2
+[2019-03-07T18:23:44.757] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.757] [INFO ] [14800][Scheduler] next at 15000 in 200
+[2019-03-07T18:23:44.758] [DEBUG] #@# Current timestep 14850
+[2019-03-07T18:23:44.758] [INFO ] [Scheduler] Notify time: 14850. Current size: 2
+[2019-03-07T18:23:44.758] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.758] [INFO ] [14850][Scheduler] next at 15000 in 150
+[2019-03-07T18:23:44.759] [DEBUG] #@# Current timestep 14900
+[2019-03-07T18:23:44.759] [INFO ] [Scheduler] Notify time: 14900. Current size: 2
+[2019-03-07T18:23:44.759] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.759] [INFO ] [14900][Scheduler] next at 15000 in 100
+[2019-03-07T18:23:44.760] [DEBUG] #@# Current timestep 14950
+[2019-03-07T18:23:44.760] [INFO ] [Scheduler] Notify time: 14950. Current size: 2
+[2019-03-07T18:23:44.760] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.760] [INFO ] [14950][Scheduler] next at 15000 in 50
+[2019-03-07T18:23:44.761] [DEBUG] #@# Current timestep 15000
+[2019-03-07T18:23:44.761] [INFO ] [Scheduler] Notify time: 15000. Current size: 2
+[2019-03-07T18:23:44.761] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.761] [INFO ] Schedule at 16000
+[2019-03-07T18:23:44.761] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.761] [INFO ] Schedule at 16000
+[2019-03-07T18:23:44.761] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.761] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.761] [INFO ] (Node 2): pos=(139.726672166, 47.5191619379) spd=(13.5970287154, 0) avgDir=-0.183158 dir=-3.43272
+[2019-03-07T18:23:44.761] [DEBUG] (Node 2): real: dir= 0 pos=(141.017501831, 48.3499984741) dist= 13.5774993896
+[2019-03-07T18:23:44.761] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.761] [INFO ] [15000][Scheduler] next at 16000 in 1000
+[2019-03-07T18:23:44.762] [DEBUG] #@# Current timestep 15050
+[2019-03-07T18:23:44.762] [INFO ] [Scheduler] Notify time: 15050. Current size: 2
+[2019-03-07T18:23:44.762] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.762] [INFO ] [15050][Scheduler] next at 16000 in 950
+[2019-03-07T18:23:44.764] [DEBUG] #@# Current timestep 15100
+[2019-03-07T18:23:44.764] [INFO ] [Scheduler] Notify time: 15100. Current size: 2
+[2019-03-07T18:23:44.764] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.764] [INFO ] [15100][Scheduler] next at 16000 in 900
+[2019-03-07T18:23:44.766] [DEBUG] #@# Current timestep 15150
+[2019-03-07T18:23:44.766] [INFO ] [Scheduler] Notify time: 15150. Current size: 2
+[2019-03-07T18:23:44.766] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.766] [INFO ] [15150][Scheduler] next at 16000 in 850
+[2019-03-07T18:23:44.771] [DEBUG] #@# Current timestep 15200
+[2019-03-07T18:23:44.771] [INFO ] [Scheduler] Notify time: 15200. Current size: 2
+[2019-03-07T18:23:44.771] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.771] [INFO ] [15200][Scheduler] next at 16000 in 800
+[2019-03-07T18:23:44.772] [DEBUG] #@# Current timestep 15250
+[2019-03-07T18:23:44.772] [INFO ] [Scheduler] Notify time: 15250. Current size: 2
+[2019-03-07T18:23:44.772] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.772] [INFO ] [15250][Scheduler] next at 16000 in 750
+[2019-03-07T18:23:44.773] [DEBUG] #@# Current timestep 15300
+[2019-03-07T18:23:44.773] [INFO ] [Scheduler] Notify time: 15300. Current size: 2
+[2019-03-07T18:23:44.773] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.773] [INFO ] [15300][Scheduler] next at 16000 in 700
+[2019-03-07T18:23:44.775] [DEBUG] #@# Current timestep 15350
+[2019-03-07T18:23:44.775] [INFO ] [Scheduler] Notify time: 15350. Current size: 2
+[2019-03-07T18:23:44.775] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.775] [INFO ] [15350][Scheduler] next at 16000 in 650
+[2019-03-07T18:23:44.779] [DEBUG] #@# Current timestep 15400
+[2019-03-07T18:23:44.779] [INFO ] [Scheduler] Notify time: 15400. Current size: 2
+[2019-03-07T18:23:44.779] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.779] [INFO ] [15400][Scheduler] next at 16000 in 600
+[2019-03-07T18:23:44.781] [DEBUG] #@# Current timestep 15450
+[2019-03-07T18:23:44.781] [INFO ] [Scheduler] Notify time: 15450. Current size: 2
+[2019-03-07T18:23:44.781] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.781] [INFO ] [15450][Scheduler] next at 16000 in 550
+[2019-03-07T18:23:44.782] [DEBUG] #@# Current timestep 15500
+[2019-03-07T18:23:44.782] [INFO ] [Scheduler] Notify time: 15500. Current size: 2
+[2019-03-07T18:23:44.782] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.782] [INFO ] [15500][Scheduler] next at 16000 in 500
+[2019-03-07T18:23:44.783] [DEBUG] #@# Current timestep 15550
+[2019-03-07T18:23:44.783] [INFO ] [Scheduler] Notify time: 15550. Current size: 2
+[2019-03-07T18:23:44.783] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.783] [INFO ] [15550][Scheduler] next at 16000 in 450
+[2019-03-07T18:23:44.784] [DEBUG] #@# Current timestep 15600
+[2019-03-07T18:23:44.784] [INFO ] [Scheduler] Notify time: 15600. Current size: 2
+[2019-03-07T18:23:44.784] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.784] [INFO ] [15600][Scheduler] next at 16000 in 400
+[2019-03-07T18:23:44.785] [DEBUG] #@# Current timestep 15650
+[2019-03-07T18:23:44.785] [INFO ] [Scheduler] Notify time: 15650. Current size: 2
+[2019-03-07T18:23:44.785] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.785] [INFO ] [15650][Scheduler] next at 16000 in 350
+[2019-03-07T18:23:44.786] [DEBUG] #@# Current timestep 15700
+[2019-03-07T18:23:44.786] [INFO ] [Scheduler] Notify time: 15700. Current size: 2
+[2019-03-07T18:23:44.786] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.786] [INFO ] [15700][Scheduler] next at 16000 in 300
+[2019-03-07T18:23:44.787] [DEBUG] #@# Current timestep 15750
+[2019-03-07T18:23:44.787] [INFO ] [Scheduler] Notify time: 15750. Current size: 2
+[2019-03-07T18:23:44.787] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.787] [INFO ] [15750][Scheduler] next at 16000 in 250
+[2019-03-07T18:23:44.788] [DEBUG] #@# Current timestep 15800
+[2019-03-07T18:23:44.788] [INFO ] [Scheduler] Notify time: 15800. Current size: 2
+[2019-03-07T18:23:44.788] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.788] [INFO ] [15800][Scheduler] next at 16000 in 200
+[2019-03-07T18:23:44.789] [DEBUG] #@# Current timestep 15850
+[2019-03-07T18:23:44.789] [INFO ] [Scheduler] Notify time: 15850. Current size: 2
+[2019-03-07T18:23:44.789] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.789] [INFO ] [15850][Scheduler] next at 16000 in 150
+[2019-03-07T18:23:44.791] [DEBUG] #@# Current timestep 15900
+[2019-03-07T18:23:44.791] [INFO ] [Scheduler] Notify time: 15900. Current size: 2
+[2019-03-07T18:23:44.791] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.791] [INFO ] [15900][Scheduler] next at 16000 in 100
+[2019-03-07T18:23:44.792] [DEBUG] #@# Current timestep 15950
+[2019-03-07T18:23:44.792] [INFO ] [Scheduler] Notify time: 15950. Current size: 2
+[2019-03-07T18:23:44.792] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.792] [INFO ] [15950][Scheduler] next at 16000 in 50
+[2019-03-07T18:23:44.794] [DEBUG] #@# Current timestep 16000
+[2019-03-07T18:23:44.794] [INFO ] [Scheduler] Notify time: 16000. Current size: 2
+[2019-03-07T18:23:44.794] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.794] [INFO ] Schedule at 17000
+[2019-03-07T18:23:44.794] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.794] [INFO ] Schedule at 17000
+[2019-03-07T18:23:44.794] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.794] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.794] [INFO ] (Node 2): pos=(149.973183817, 48.1866225513) spd=(9.10300449979, 0) avgDir=1.06839 dir=2.78324
+[2019-03-07T18:23:44.794] [DEBUG] (Node 2): real: dir= 0 pos=(150.095001221, 48.3499984741) dist= 9.07749938965
+[2019-03-07T18:23:44.794] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.794] [INFO ] [16000][Scheduler] next at 17000 in 1000
+[2019-03-07T18:23:44.796] [DEBUG] #@# Current timestep 16050
+[2019-03-07T18:23:44.796] [INFO ] [Scheduler] Notify time: 16050. Current size: 2
+[2019-03-07T18:23:44.796] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.796] [INFO ] [16050][Scheduler] next at 17000 in 950
+[2019-03-07T18:23:44.797] [DEBUG] #@# Current timestep 16100
+[2019-03-07T18:23:44.797] [INFO ] [Scheduler] Notify time: 16100. Current size: 2
+[2019-03-07T18:23:44.797] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.797] [INFO ] [16100][Scheduler] next at 17000 in 900
+[2019-03-07T18:23:44.798] [DEBUG] #@# Current timestep 16150
+[2019-03-07T18:23:44.798] [INFO ] [Scheduler] Notify time: 16150. Current size: 2
+[2019-03-07T18:23:44.798] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.798] [INFO ] [16150][Scheduler] next at 17000 in 850
+[2019-03-07T18:23:44.799] [DEBUG] #@# Current timestep 16200
+[2019-03-07T18:23:44.799] [INFO ] [Scheduler] Notify time: 16200. Current size: 2
+[2019-03-07T18:23:44.799] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.799] [INFO ] [16200][Scheduler] next at 17000 in 800
+[2019-03-07T18:23:44.800] [DEBUG] #@# Current timestep 16250
+[2019-03-07T18:23:44.800] [INFO ] [Scheduler] Notify time: 16250. Current size: 2
+[2019-03-07T18:23:44.800] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.800] [INFO ] [16250][Scheduler] next at 17000 in 750
+[2019-03-07T18:23:44.801] [DEBUG] #@# Current timestep 16300
+[2019-03-07T18:23:44.801] [INFO ] [Scheduler] Notify time: 16300. Current size: 2
+[2019-03-07T18:23:44.801] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.801] [INFO ] [16300][Scheduler] next at 17000 in 700
+[2019-03-07T18:23:44.802] [DEBUG] #@# Current timestep 16350
+[2019-03-07T18:23:44.803] [INFO ] [Scheduler] Notify time: 16350. Current size: 2
+[2019-03-07T18:23:44.803] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.803] [INFO ] [16350][Scheduler] next at 17000 in 650
+[2019-03-07T18:23:44.804] [DEBUG] #@# Current timestep 16400
+[2019-03-07T18:23:44.804] [INFO ] [Scheduler] Notify time: 16400. Current size: 2
+[2019-03-07T18:23:44.804] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.804] [INFO ] [16400][Scheduler] next at 17000 in 600
+[2019-03-07T18:23:44.805] [DEBUG] #@# Current timestep 16450
+[2019-03-07T18:23:44.805] [INFO ] [Scheduler] Notify time: 16450. Current size: 2
+[2019-03-07T18:23:44.805] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.805] [INFO ] [16450][Scheduler] next at 17000 in 550
+[2019-03-07T18:23:44.806] [DEBUG] #@# Current timestep 16500
+[2019-03-07T18:23:44.806] [INFO ] [Scheduler] Notify time: 16500. Current size: 2
+[2019-03-07T18:23:44.806] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.806] [INFO ] [16500][Scheduler] next at 17000 in 500
+[2019-03-07T18:23:44.807] [DEBUG] #@# Current timestep 16550
+[2019-03-07T18:23:44.807] [INFO ] [Scheduler] Notify time: 16550. Current size: 2
+[2019-03-07T18:23:44.807] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.807] [INFO ] [16550][Scheduler] next at 17000 in 450
+[2019-03-07T18:23:44.808] [DEBUG] #@# Current timestep 16600
+[2019-03-07T18:23:44.808] [INFO ] [Scheduler] Notify time: 16600. Current size: 2
+[2019-03-07T18:23:44.808] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.808] [INFO ] [16600][Scheduler] next at 17000 in 400
+[2019-03-07T18:23:44.809] [DEBUG] #@# Current timestep 16650
+[2019-03-07T18:23:44.809] [INFO ] [Scheduler] Notify time: 16650. Current size: 2
+[2019-03-07T18:23:44.809] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.809] [INFO ] [16650][Scheduler] next at 17000 in 350
+[2019-03-07T18:23:44.810] [DEBUG] #@# Current timestep 16700
+[2019-03-07T18:23:44.810] [INFO ] [Scheduler] Notify time: 16700. Current size: 2
+[2019-03-07T18:23:44.810] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.810] [INFO ] [16700][Scheduler] next at 17000 in 300
+[2019-03-07T18:23:44.811] [DEBUG] #@# Current timestep 16750
+[2019-03-07T18:23:44.811] [INFO ] [Scheduler] Notify time: 16750. Current size: 2
+[2019-03-07T18:23:44.811] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.811] [INFO ] [16750][Scheduler] next at 17000 in 250
+[2019-03-07T18:23:44.812] [DEBUG] #@# Current timestep 16800
+[2019-03-07T18:23:44.812] [INFO ] [Scheduler] Notify time: 16800. Current size: 2
+[2019-03-07T18:23:44.812] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.812] [INFO ] [16800][Scheduler] next at 17000 in 200
+[2019-03-07T18:23:44.813] [DEBUG] #@# Current timestep 16850
+[2019-03-07T18:23:44.813] [INFO ] [Scheduler] Notify time: 16850. Current size: 2
+[2019-03-07T18:23:44.813] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.813] [INFO ] [16850][Scheduler] next at 17000 in 150
+[2019-03-07T18:23:44.814] [DEBUG] #@# Current timestep 16900
+[2019-03-07T18:23:44.814] [INFO ] [Scheduler] Notify time: 16900. Current size: 2
+[2019-03-07T18:23:44.814] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.814] [INFO ] [16900][Scheduler] next at 17000 in 100
+[2019-03-07T18:23:44.815] [DEBUG] #@# Current timestep 16950
+[2019-03-07T18:23:44.815] [INFO ] [Scheduler] Notify time: 16950. Current size: 2
+[2019-03-07T18:23:44.815] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.815] [INFO ] [16950][Scheduler] next at 17000 in 50
+[2019-03-07T18:23:44.817] [DEBUG] #@# Current timestep 17000
+[2019-03-07T18:23:44.817] [INFO ] [Scheduler] Notify time: 17000. Current size: 2
+[2019-03-07T18:23:44.817] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.817] [INFO ] Schedule at 18000
+[2019-03-07T18:23:44.817] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.817] [INFO ] Schedule at 18000
+[2019-03-07T18:23:44.817] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.817] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.817] [INFO ] (Node 2): pos=(154.140160084, 46.2189232387) spd=(4.52005554343, 0) avgDir=-0.85945 dir=-3.85196
+[2019-03-07T18:23:44.817] [DEBUG] (Node 2): real: dir= 0 pos=(154.67250061, 48.3499984741) dist= 4.57749938965
+[2019-03-07T18:23:44.817] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.817] [INFO ] [17000][Scheduler] next at 18000 in 1000
+[2019-03-07T18:23:44.819] [DEBUG] #@# Current timestep 17050
+[2019-03-07T18:23:44.819] [INFO ] [Scheduler] Notify time: 17050. Current size: 2
+[2019-03-07T18:23:44.819] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.819] [INFO ] [17050][Scheduler] next at 18000 in 950
+[2019-03-07T18:23:44.820] [DEBUG] #@# Current timestep 17100
+[2019-03-07T18:23:44.820] [INFO ] [Scheduler] Notify time: 17100. Current size: 2
+[2019-03-07T18:23:44.820] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.820] [INFO ] [17100][Scheduler] next at 18000 in 900
+[2019-03-07T18:23:44.821] [DEBUG] #@# Current timestep 17150
+[2019-03-07T18:23:44.821] [INFO ] [Scheduler] Notify time: 17150. Current size: 2
+[2019-03-07T18:23:44.821] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.821] [INFO ] [17150][Scheduler] next at 18000 in 850
+[2019-03-07T18:23:44.822] [DEBUG] #@# Current timestep 17200
+[2019-03-07T18:23:44.822] [INFO ] [Scheduler] Notify time: 17200. Current size: 2
+[2019-03-07T18:23:44.822] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.822] [INFO ] [17200][Scheduler] next at 18000 in 800
+[2019-03-07T18:23:44.823] [DEBUG] #@# Current timestep 17250
+[2019-03-07T18:23:44.823] [INFO ] [Scheduler] Notify time: 17250. Current size: 2
+[2019-03-07T18:23:44.823] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.823] [INFO ] [17250][Scheduler] next at 18000 in 750
+[2019-03-07T18:23:44.824] [DEBUG] #@# Current timestep 17300
+[2019-03-07T18:23:44.824] [INFO ] [Scheduler] Notify time: 17300. Current size: 2
+[2019-03-07T18:23:44.824] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.824] [INFO ] [17300][Scheduler] next at 18000 in 700
+[2019-03-07T18:23:44.825] [DEBUG] #@# Current timestep 17350
+[2019-03-07T18:23:44.825] [INFO ] [Scheduler] Notify time: 17350. Current size: 2
+[2019-03-07T18:23:44.825] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.825] [INFO ] [17350][Scheduler] next at 18000 in 650
+[2019-03-07T18:23:44.826] [DEBUG] #@# Current timestep 17400
+[2019-03-07T18:23:44.826] [INFO ] [Scheduler] Notify time: 17400. Current size: 2
+[2019-03-07T18:23:44.826] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.826] [INFO ] [17400][Scheduler] next at 18000 in 600
+[2019-03-07T18:23:44.827] [DEBUG] #@# Current timestep 17450
+[2019-03-07T18:23:44.827] [INFO ] [Scheduler] Notify time: 17450. Current size: 2
+[2019-03-07T18:23:44.827] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.827] [INFO ] [17450][Scheduler] next at 18000 in 550
+[2019-03-07T18:23:44.828] [DEBUG] #@# Current timestep 17500
+[2019-03-07T18:23:44.828] [INFO ] [Scheduler] Notify time: 17500. Current size: 2
+[2019-03-07T18:23:44.828] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.828] [INFO ] [17500][Scheduler] next at 18000 in 500
+[2019-03-07T18:23:44.830] [DEBUG] #@# Current timestep 17550
+[2019-03-07T18:23:44.830] [INFO ] [Scheduler] Notify time: 17550. Current size: 2
+[2019-03-07T18:23:44.830] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.830] [INFO ] [17550][Scheduler] next at 18000 in 450
+[2019-03-07T18:23:44.831] [DEBUG] #@# Current timestep 17600
+[2019-03-07T18:23:44.831] [INFO ] [Scheduler] Notify time: 17600. Current size: 2
+[2019-03-07T18:23:44.831] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.831] [INFO ] [17600][Scheduler] next at 18000 in 400
+[2019-03-07T18:23:44.832] [DEBUG] #@# Current timestep 17650
+[2019-03-07T18:23:44.832] [INFO ] [Scheduler] Notify time: 17650. Current size: 2
+[2019-03-07T18:23:44.832] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.832] [INFO ] [17650][Scheduler] next at 18000 in 350
+[2019-03-07T18:23:44.833] [DEBUG] #@# Current timestep 17700
+[2019-03-07T18:23:44.833] [INFO ] [Scheduler] Notify time: 17700. Current size: 2
+[2019-03-07T18:23:44.833] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.833] [INFO ] [17700][Scheduler] next at 18000 in 300
+[2019-03-07T18:23:44.834] [DEBUG] #@# Current timestep 17750
+[2019-03-07T18:23:44.834] [INFO ] [Scheduler] Notify time: 17750. Current size: 2
+[2019-03-07T18:23:44.834] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.834] [INFO ] [17750][Scheduler] next at 18000 in 250
+[2019-03-07T18:23:44.835] [DEBUG] #@# Current timestep 17800
+[2019-03-07T18:23:44.835] [INFO ] [Scheduler] Notify time: 17800. Current size: 2
+[2019-03-07T18:23:44.835] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.835] [INFO ] [17800][Scheduler] next at 18000 in 200
+[2019-03-07T18:23:44.836] [DEBUG] #@# Current timestep 17850
+[2019-03-07T18:23:44.836] [INFO ] [Scheduler] Notify time: 17850. Current size: 2
+[2019-03-07T18:23:44.836] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.836] [INFO ] [17850][Scheduler] next at 18000 in 150
+[2019-03-07T18:23:44.837] [DEBUG] #@# Current timestep 17900
+[2019-03-07T18:23:44.837] [INFO ] [Scheduler] Notify time: 17900. Current size: 2
+[2019-03-07T18:23:44.837] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.837] [INFO ] [17900][Scheduler] next at 18000 in 100
+[2019-03-07T18:23:44.838] [DEBUG] #@# Current timestep 17950
+[2019-03-07T18:23:44.838] [INFO ] [Scheduler] Notify time: 17950. Current size: 2
+[2019-03-07T18:23:44.838] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.838] [INFO ] [17950][Scheduler] next at 18000 in 50
+[2019-03-07T18:23:44.839] [DEBUG] #@# Current timestep 18000
+[2019-03-07T18:23:44.839] [INFO ] [Scheduler] Notify time: 18000. Current size: 2
+[2019-03-07T18:23:44.839] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.839] [INFO ] Schedule at 19000
+[2019-03-07T18:23:44.839] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.839] [INFO ] Schedule at 19000
+[2019-03-07T18:23:44.839] [DEBUG] (Node 2): sample dropped. The node didn't move enough: 0.0774993896484 . Min is: 2
+[2019-03-07T18:23:44.839] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.839] [INFO ] [18000][Scheduler] next at 19000 in 1000
+[2019-03-07T18:23:44.840] [DEBUG] #@# Current timestep 18050
+[2019-03-07T18:23:44.840] [INFO ] [Scheduler] Notify time: 18050. Current size: 2
+[2019-03-07T18:23:44.840] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.840] [INFO ] [18050][Scheduler] next at 19000 in 950
+[2019-03-07T18:23:44.841] [DEBUG] #@# Current timestep 18100
+[2019-03-07T18:23:44.841] [INFO ] [Scheduler] Notify time: 18100. Current size: 2
+[2019-03-07T18:23:44.841] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.841] [INFO ] [18100][Scheduler] next at 19000 in 900
+[2019-03-07T18:23:44.842] [DEBUG] #@# Current timestep 18150
+[2019-03-07T18:23:44.842] [INFO ] [Scheduler] Notify time: 18150. Current size: 2
+[2019-03-07T18:23:44.842] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.842] [INFO ] [18150][Scheduler] next at 19000 in 850
+[2019-03-07T18:23:44.845] [DEBUG] #@# Current timestep 18200
+[2019-03-07T18:23:44.845] [INFO ] [Scheduler] Notify time: 18200. Current size: 2
+[2019-03-07T18:23:44.845] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.845] [INFO ] [18200][Scheduler] next at 19000 in 800
+[2019-03-07T18:23:44.846] [DEBUG] #@# Current timestep 18250
+[2019-03-07T18:23:44.846] [INFO ] [Scheduler] Notify time: 18250. Current size: 2
+[2019-03-07T18:23:44.846] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.846] [INFO ] [18250][Scheduler] next at 19000 in 750
+[2019-03-07T18:23:44.847] [DEBUG] #@# Current timestep 18300
+[2019-03-07T18:23:44.847] [INFO ] [Scheduler] Notify time: 18300. Current size: 2
+[2019-03-07T18:23:44.847] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.847] [INFO ] [18300][Scheduler] next at 19000 in 700
+[2019-03-07T18:23:44.848] [DEBUG] #@# Current timestep 18350
+[2019-03-07T18:23:44.848] [INFO ] [Scheduler] Notify time: 18350. Current size: 2
+[2019-03-07T18:23:44.848] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.848] [INFO ] [18350][Scheduler] next at 19000 in 650
+[2019-03-07T18:23:44.849] [DEBUG] #@# Current timestep 18400
+[2019-03-07T18:23:44.849] [INFO ] [Scheduler] Notify time: 18400. Current size: 2
+[2019-03-07T18:23:44.849] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.849] [INFO ] [18400][Scheduler] next at 19000 in 600
+[2019-03-07T18:23:44.850] [DEBUG] #@# Current timestep 18450
+[2019-03-07T18:23:44.850] [INFO ] [Scheduler] Notify time: 18450. Current size: 2
+[2019-03-07T18:23:44.850] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.850] [INFO ] [18450][Scheduler] next at 19000 in 550
+[2019-03-07T18:23:44.851] [DEBUG] #@# Current timestep 18500
+[2019-03-07T18:23:44.851] [INFO ] [Scheduler] Notify time: 18500. Current size: 2
+[2019-03-07T18:23:44.851] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.851] [INFO ] [18500][Scheduler] next at 19000 in 500
+[2019-03-07T18:23:44.852] [DEBUG] #@# Current timestep 18550
+[2019-03-07T18:23:44.852] [INFO ] [Scheduler] Notify time: 18550. Current size: 2
+[2019-03-07T18:23:44.852] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.852] [INFO ] [18550][Scheduler] next at 19000 in 450
+[2019-03-07T18:23:44.853] [DEBUG] #@# Current timestep 18600
+[2019-03-07T18:23:44.853] [INFO ] [Scheduler] Notify time: 18600. Current size: 2
+[2019-03-07T18:23:44.853] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.853] [INFO ] [18600][Scheduler] next at 19000 in 400
+[2019-03-07T18:23:44.854] [DEBUG] #@# Current timestep 18650
+[2019-03-07T18:23:44.854] [INFO ] [Scheduler] Notify time: 18650. Current size: 2
+[2019-03-07T18:23:44.854] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.854] [INFO ] [18650][Scheduler] next at 19000 in 350
+[2019-03-07T18:23:44.855] [DEBUG] #@# Current timestep 18700
+[2019-03-07T18:23:44.855] [INFO ] [Scheduler] Notify time: 18700. Current size: 2
+[2019-03-07T18:23:44.855] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.855] [INFO ] [18700][Scheduler] next at 19000 in 300
+[2019-03-07T18:23:44.856] [DEBUG] #@# Current timestep 18750
+[2019-03-07T18:23:44.856] [INFO ] [Scheduler] Notify time: 18750. Current size: 2
+[2019-03-07T18:23:44.856] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.856] [INFO ] [18750][Scheduler] next at 19000 in 250
+[2019-03-07T18:23:44.857] [DEBUG] #@# Current timestep 18800
+[2019-03-07T18:23:44.857] [INFO ] [Scheduler] Notify time: 18800. Current size: 2
+[2019-03-07T18:23:44.857] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.857] [INFO ] [18800][Scheduler] next at 19000 in 200
+[2019-03-07T18:23:44.858] [DEBUG] #@# Current timestep 18850
+[2019-03-07T18:23:44.858] [INFO ] [Scheduler] Notify time: 18850. Current size: 2
+[2019-03-07T18:23:44.858] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.858] [INFO ] [18850][Scheduler] next at 19000 in 150
+[2019-03-07T18:23:44.859] [DEBUG] #@# Current timestep 18900
+[2019-03-07T18:23:44.859] [INFO ] [Scheduler] Notify time: 18900. Current size: 2
+[2019-03-07T18:23:44.859] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.859] [INFO ] [18900][Scheduler] next at 19000 in 100
+[2019-03-07T18:23:44.860] [DEBUG] #@# Current timestep 18950
+[2019-03-07T18:23:44.860] [INFO ] [Scheduler] Notify time: 18950. Current size: 2
+[2019-03-07T18:23:44.860] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.860] [INFO ] [18950][Scheduler] next at 19000 in 50
+[2019-03-07T18:23:44.862] [DEBUG] #@# Current timestep 19000
+[2019-03-07T18:23:44.862] [INFO ] [Scheduler] Notify time: 19000. Current size: 2
+[2019-03-07T18:23:44.862] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.862] [INFO ] Schedule at 20000
+[2019-03-07T18:23:44.862] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.862] [INFO ] Schedule at 20000
+[2019-03-07T18:23:44.862] [DEBUG] (Node 2): sample dropped. The node didn't move enough: 0.0774993896484 . Min is: 2
+[2019-03-07T18:23:44.862] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.862] [INFO ] [19000][Scheduler] next at 20000 in 1000
+[2019-03-07T18:23:44.864] [DEBUG] #@# Current timestep 19050
+[2019-03-07T18:23:44.864] [INFO ] [Scheduler] Notify time: 19050. Current size: 2
+[2019-03-07T18:23:44.864] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.864] [INFO ] [19050][Scheduler] next at 20000 in 950
+[2019-03-07T18:23:44.865] [DEBUG] #@# Current timestep 19100
+[2019-03-07T18:23:44.866] [INFO ] [Scheduler] Notify time: 19100. Current size: 2
+[2019-03-07T18:23:44.866] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.866] [INFO ] [19100][Scheduler] next at 20000 in 900
+[2019-03-07T18:23:44.867] [DEBUG] #@# Current timestep 19150
+[2019-03-07T18:23:44.867] [INFO ] [Scheduler] Notify time: 19150. Current size: 2
+[2019-03-07T18:23:44.867] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.867] [INFO ] [19150][Scheduler] next at 20000 in 850
+[2019-03-07T18:23:44.868] [DEBUG] #@# Current timestep 19200
+[2019-03-07T18:23:44.868] [INFO ] [Scheduler] Notify time: 19200. Current size: 2
+[2019-03-07T18:23:44.868] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.868] [INFO ] [19200][Scheduler] next at 20000 in 800
+[2019-03-07T18:23:44.869] [DEBUG] #@# Current timestep 19250
+[2019-03-07T18:23:44.869] [INFO ] [Scheduler] Notify time: 19250. Current size: 2
+[2019-03-07T18:23:44.869] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.869] [INFO ] [19250][Scheduler] next at 20000 in 750
+[2019-03-07T18:23:44.870] [DEBUG] #@# Current timestep 19300
+[2019-03-07T18:23:44.870] [INFO ] [Scheduler] Notify time: 19300. Current size: 2
+[2019-03-07T18:23:44.870] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.870] [INFO ] [19300][Scheduler] next at 20000 in 700
+[2019-03-07T18:23:44.871] [DEBUG] #@# Current timestep 19350
+[2019-03-07T18:23:44.871] [INFO ] [Scheduler] Notify time: 19350. Current size: 2
+[2019-03-07T18:23:44.871] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.871] [INFO ] [19350][Scheduler] next at 20000 in 650
+[2019-03-07T18:23:44.872] [DEBUG] #@# Current timestep 19400
+[2019-03-07T18:23:44.872] [INFO ] [Scheduler] Notify time: 19400. Current size: 2
+[2019-03-07T18:23:44.872] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.872] [INFO ] [19400][Scheduler] next at 20000 in 600
+[2019-03-07T18:23:44.873] [DEBUG] #@# Current timestep 19450
+[2019-03-07T18:23:44.873] [INFO ] [Scheduler] Notify time: 19450. Current size: 2
+[2019-03-07T18:23:44.873] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.873] [INFO ] [19450][Scheduler] next at 20000 in 550
+[2019-03-07T18:23:44.874] [DEBUG] #@# Current timestep 19500
+[2019-03-07T18:23:44.874] [INFO ] [Scheduler] Notify time: 19500. Current size: 2
+[2019-03-07T18:23:44.874] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.874] [INFO ] [19500][Scheduler] next at 20000 in 500
+[2019-03-07T18:23:44.875] [DEBUG] #@# Current timestep 19550
+[2019-03-07T18:23:44.875] [INFO ] [Scheduler] Notify time: 19550. Current size: 2
+[2019-03-07T18:23:44.875] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.875] [INFO ] [19550][Scheduler] next at 20000 in 450
+[2019-03-07T18:23:44.876] [DEBUG] #@# Current timestep 19600
+[2019-03-07T18:23:44.876] [INFO ] [Scheduler] Notify time: 19600. Current size: 2
+[2019-03-07T18:23:44.876] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.876] [INFO ] [19600][Scheduler] next at 20000 in 400
+[2019-03-07T18:23:44.877] [DEBUG] #@# Current timestep 19650
+[2019-03-07T18:23:44.877] [INFO ] [Scheduler] Notify time: 19650. Current size: 2
+[2019-03-07T18:23:44.877] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.877] [INFO ] [19650][Scheduler] next at 20000 in 350
+[2019-03-07T18:23:44.878] [DEBUG] #@# Current timestep 19700
+[2019-03-07T18:23:44.878] [INFO ] [Scheduler] Notify time: 19700. Current size: 2
+[2019-03-07T18:23:44.878] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.878] [INFO ] [19700][Scheduler] next at 20000 in 300
+[2019-03-07T18:23:44.879] [DEBUG] #@# Current timestep 19750
+[2019-03-07T18:23:44.879] [INFO ] [Scheduler] Notify time: 19750. Current size: 2
+[2019-03-07T18:23:44.879] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.879] [INFO ] [19750][Scheduler] next at 20000 in 250
+[2019-03-07T18:23:44.880] [DEBUG] #@# Current timestep 19800
+[2019-03-07T18:23:44.880] [INFO ] [Scheduler] Notify time: 19800. Current size: 2
+[2019-03-07T18:23:44.880] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.880] [INFO ] [19800][Scheduler] next at 20000 in 200
+[2019-03-07T18:23:44.881] [DEBUG] #@# Current timestep 19850
+[2019-03-07T18:23:44.881] [INFO ] [Scheduler] Notify time: 19850. Current size: 2
+[2019-03-07T18:23:44.881] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.881] [INFO ] [19850][Scheduler] next at 20000 in 150
+[2019-03-07T18:23:44.882] [DEBUG] #@# Current timestep 19900
+[2019-03-07T18:23:44.882] [INFO ] [Scheduler] Notify time: 19900. Current size: 2
+[2019-03-07T18:23:44.882] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.882] [INFO ] [19900][Scheduler] next at 20000 in 100
+[2019-03-07T18:23:44.883] [DEBUG] #@# Current timestep 19950
+[2019-03-07T18:23:44.883] [INFO ] [Scheduler] Notify time: 19950. Current size: 2
+[2019-03-07T18:23:44.883] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.883] [INFO ] [19950][Scheduler] next at 20000 in 50
+[2019-03-07T18:23:44.885] [DEBUG] #@# Current timestep 20000
+[2019-03-07T18:23:44.885] [INFO ] [Scheduler] Notify time: 20000. Current size: 2
+[2019-03-07T18:23:44.885] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.885] [INFO ] Schedule at 21000
+[2019-03-07T18:23:44.885] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.885] [INFO ] Schedule at 21000
+[2019-03-07T18:23:44.885] [DEBUG] (Node 2): sample dropped. The node didn't move enough: 0.0774993896484 . Min is: 2
+[2019-03-07T18:23:44.885] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.885] [INFO ] [20000][Scheduler] next at 21000 in 1000
+[2019-03-07T18:23:44.886] [DEBUG] #@# Current timestep 20050
+[2019-03-07T18:23:44.886] [INFO ] [Scheduler] Notify time: 20050. Current size: 2
+[2019-03-07T18:23:44.886] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.886] [INFO ] [20050][Scheduler] next at 21000 in 950
+[2019-03-07T18:23:44.887] [DEBUG] #@# Current timestep 20100
+[2019-03-07T18:23:44.887] [INFO ] [Scheduler] Notify time: 20100. Current size: 2
+[2019-03-07T18:23:44.887] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.887] [INFO ] [20100][Scheduler] next at 21000 in 900
+[2019-03-07T18:23:44.888] [DEBUG] #@# Current timestep 20150
+[2019-03-07T18:23:44.888] [INFO ] [Scheduler] Notify time: 20150. Current size: 2
+[2019-03-07T18:23:44.888] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.888] [INFO ] [20150][Scheduler] next at 21000 in 850
+[2019-03-07T18:23:44.889] [DEBUG] #@# Current timestep 20200
+[2019-03-07T18:23:44.889] [INFO ] [Scheduler] Notify time: 20200. Current size: 2
+[2019-03-07T18:23:44.889] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.889] [INFO ] [20200][Scheduler] next at 21000 in 800
+[2019-03-07T18:23:44.890] [DEBUG] #@# Current timestep 20250
+[2019-03-07T18:23:44.890] [INFO ] [Scheduler] Notify time: 20250. Current size: 2
+[2019-03-07T18:23:44.890] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.890] [INFO ] [20250][Scheduler] next at 21000 in 750
+[2019-03-07T18:23:44.891] [DEBUG] #@# Current timestep 20300
+[2019-03-07T18:23:44.891] [INFO ] [Scheduler] Notify time: 20300. Current size: 2
+[2019-03-07T18:23:44.891] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.891] [INFO ] [20300][Scheduler] next at 21000 in 700
+[2019-03-07T18:23:44.892] [DEBUG] #@# Current timestep 20350
+[2019-03-07T18:23:44.892] [INFO ] [Scheduler] Notify time: 20350. Current size: 2
+[2019-03-07T18:23:44.892] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.892] [INFO ] [20350][Scheduler] next at 21000 in 650
+[2019-03-07T18:23:44.893] [DEBUG] #@# Current timestep 20400
+[2019-03-07T18:23:44.893] [INFO ] [Scheduler] Notify time: 20400. Current size: 2
+[2019-03-07T18:23:44.893] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.893] [INFO ] [20400][Scheduler] next at 21000 in 600
+[2019-03-07T18:23:44.894] [DEBUG] #@# Current timestep 20450
+[2019-03-07T18:23:44.894] [INFO ] [Scheduler] Notify time: 20450. Current size: 2
+[2019-03-07T18:23:44.894] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.895] [INFO ] [20450][Scheduler] next at 21000 in 550
+[2019-03-07T18:23:44.896] [DEBUG] #@# Current timestep 20500
+[2019-03-07T18:23:44.896] [INFO ] [Scheduler] Notify time: 20500. Current size: 2
+[2019-03-07T18:23:44.896] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.896] [INFO ] [20500][Scheduler] next at 21000 in 500
+[2019-03-07T18:23:44.897] [DEBUG] #@# Current timestep 20550
+[2019-03-07T18:23:44.897] [INFO ] [Scheduler] Notify time: 20550. Current size: 2
+[2019-03-07T18:23:44.897] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.897] [INFO ] [20550][Scheduler] next at 21000 in 450
+[2019-03-07T18:23:44.898] [DEBUG] #@# Current timestep 20600
+[2019-03-07T18:23:44.898] [INFO ] [Scheduler] Notify time: 20600. Current size: 2
+[2019-03-07T18:23:44.898] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.898] [INFO ] [20600][Scheduler] next at 21000 in 400
+[2019-03-07T18:23:44.899] [DEBUG] #@# Current timestep 20650
+[2019-03-07T18:23:44.899] [INFO ] [Scheduler] Notify time: 20650. Current size: 2
+[2019-03-07T18:23:44.899] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.899] [INFO ] [20650][Scheduler] next at 21000 in 350
+[2019-03-07T18:23:44.900] [DEBUG] #@# Current timestep 20700
+[2019-03-07T18:23:44.900] [INFO ] [Scheduler] Notify time: 20700. Current size: 2
+[2019-03-07T18:23:44.900] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.900] [INFO ] [20700][Scheduler] next at 21000 in 300
+[2019-03-07T18:23:44.901] [DEBUG] #@# Current timestep 20750
+[2019-03-07T18:23:44.901] [INFO ] [Scheduler] Notify time: 20750. Current size: 2
+[2019-03-07T18:23:44.901] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.901] [INFO ] [20750][Scheduler] next at 21000 in 250
+[2019-03-07T18:23:44.902] [DEBUG] #@# Current timestep 20800
+[2019-03-07T18:23:44.902] [INFO ] [Scheduler] Notify time: 20800. Current size: 2
+[2019-03-07T18:23:44.902] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.902] [INFO ] [20800][Scheduler] next at 21000 in 200
+[2019-03-07T18:23:44.903] [DEBUG] #@# Current timestep 20850
+[2019-03-07T18:23:44.903] [INFO ] [Scheduler] Notify time: 20850. Current size: 2
+[2019-03-07T18:23:44.903] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.903] [INFO ] [20850][Scheduler] next at 21000 in 150
+[2019-03-07T18:23:44.904] [DEBUG] #@# Current timestep 20900
+[2019-03-07T18:23:44.904] [INFO ] [Scheduler] Notify time: 20900. Current size: 2
+[2019-03-07T18:23:44.904] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.904] [INFO ] [20900][Scheduler] next at 21000 in 100
+[2019-03-07T18:23:44.905] [DEBUG] #@# Current timestep 20950
+[2019-03-07T18:23:44.905] [INFO ] [Scheduler] Notify time: 20950. Current size: 2
+[2019-03-07T18:23:44.905] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.905] [INFO ] [20950][Scheduler] next at 21000 in 50
+[2019-03-07T18:23:44.906] [DEBUG] #@# Current timestep 21000
+[2019-03-07T18:23:44.906] [INFO ] [Scheduler] Notify time: 21000. Current size: 2
+[2019-03-07T18:23:44.906] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.906] [INFO ] Schedule at 22000
+[2019-03-07T18:23:44.906] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.906] [INFO ] Schedule at 22000
+[2019-03-07T18:23:44.906] [DEBUG] (Node 2): sample dropped. The node didn't move enough: 0.0774993896484 . Min is: 2
+[2019-03-07T18:23:44.906] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.906] [INFO ] [21000][Scheduler] next at 22000 in 1000
+[2019-03-07T18:23:44.907] [DEBUG] #@# Current timestep 21050
+[2019-03-07T18:23:44.907] [INFO ] [Scheduler] Notify time: 21050. Current size: 2
+[2019-03-07T18:23:44.907] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.907] [INFO ] [21050][Scheduler] next at 22000 in 950
+[2019-03-07T18:23:44.908] [DEBUG] #@# Current timestep 21100
+[2019-03-07T18:23:44.908] [INFO ] [Scheduler] Notify time: 21100. Current size: 2
+[2019-03-07T18:23:44.908] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.908] [INFO ] [21100][Scheduler] next at 22000 in 900
+[2019-03-07T18:23:44.909] [DEBUG] #@# Current timestep 21150
+[2019-03-07T18:23:44.909] [INFO ] [Scheduler] Notify time: 21150. Current size: 2
+[2019-03-07T18:23:44.909] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.909] [INFO ] [21150][Scheduler] next at 22000 in 850
+[2019-03-07T18:23:44.911] [DEBUG] #@# Current timestep 21200
+[2019-03-07T18:23:44.911] [INFO ] [Scheduler] Notify time: 21200. Current size: 2
+[2019-03-07T18:23:44.911] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.911] [INFO ] [21200][Scheduler] next at 22000 in 800
+[2019-03-07T18:23:44.912] [DEBUG] #@# Current timestep 21250
+[2019-03-07T18:23:44.912] [INFO ] [Scheduler] Notify time: 21250. Current size: 2
+[2019-03-07T18:23:44.912] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.912] [INFO ] [21250][Scheduler] next at 22000 in 750
+[2019-03-07T18:23:44.913] [DEBUG] #@# Current timestep 21300
+[2019-03-07T18:23:44.913] [INFO ] [Scheduler] Notify time: 21300. Current size: 2
+[2019-03-07T18:23:44.913] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.913] [INFO ] [21300][Scheduler] next at 22000 in 700
+[2019-03-07T18:23:44.914] [DEBUG] #@# Current timestep 21350
+[2019-03-07T18:23:44.914] [INFO ] [Scheduler] Notify time: 21350. Current size: 2
+[2019-03-07T18:23:44.914] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.914] [INFO ] [21350][Scheduler] next at 22000 in 650
+[2019-03-07T18:23:44.915] [DEBUG] #@# Current timestep 21400
+[2019-03-07T18:23:44.915] [INFO ] [Scheduler] Notify time: 21400. Current size: 2
+[2019-03-07T18:23:44.915] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.915] [INFO ] [21400][Scheduler] next at 22000 in 600
+[2019-03-07T18:23:44.916] [DEBUG] #@# Current timestep 21450
+[2019-03-07T18:23:44.916] [INFO ] [Scheduler] Notify time: 21450. Current size: 2
+[2019-03-07T18:23:44.916] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.916] [INFO ] [21450][Scheduler] next at 22000 in 550
+[2019-03-07T18:23:44.917] [DEBUG] #@# Current timestep 21500
+[2019-03-07T18:23:44.917] [INFO ] [Scheduler] Notify time: 21500. Current size: 2
+[2019-03-07T18:23:44.917] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.917] [INFO ] [21500][Scheduler] next at 22000 in 500
+[2019-03-07T18:23:44.918] [DEBUG] #@# Current timestep 21550
+[2019-03-07T18:23:44.918] [INFO ] [Scheduler] Notify time: 21550. Current size: 2
+[2019-03-07T18:23:44.918] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.918] [INFO ] [21550][Scheduler] next at 22000 in 450
+[2019-03-07T18:23:44.920] [DEBUG] #@# Current timestep 21600
+[2019-03-07T18:23:44.920] [INFO ] [Scheduler] Notify time: 21600. Current size: 2
+[2019-03-07T18:23:44.920] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.920] [INFO ] [21600][Scheduler] next at 22000 in 400
+[2019-03-07T18:23:44.925] [DEBUG] #@# Current timestep 21650
+[2019-03-07T18:23:44.925] [INFO ] [Scheduler] Notify time: 21650. Current size: 2
+[2019-03-07T18:23:44.925] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.925] [INFO ] [21650][Scheduler] next at 22000 in 350
+[2019-03-07T18:23:44.930] [DEBUG] #@# Current timestep 21700
+[2019-03-07T18:23:44.930] [INFO ] [Scheduler] Notify time: 21700. Current size: 2
+[2019-03-07T18:23:44.930] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.930] [INFO ] [21700][Scheduler] next at 22000 in 300
+[2019-03-07T18:23:44.932] [DEBUG] #@# Current timestep 21750
+[2019-03-07T18:23:44.932] [INFO ] [Scheduler] Notify time: 21750. Current size: 2
+[2019-03-07T18:23:44.932] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.932] [INFO ] [21750][Scheduler] next at 22000 in 250
+[2019-03-07T18:23:44.933] [DEBUG] #@# Current timestep 21800
+[2019-03-07T18:23:44.933] [INFO ] [Scheduler] Notify time: 21800. Current size: 2
+[2019-03-07T18:23:44.933] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.933] [INFO ] [21800][Scheduler] next at 22000 in 200
+[2019-03-07T18:23:44.934] [DEBUG] #@# Current timestep 21850
+[2019-03-07T18:23:44.934] [INFO ] [Scheduler] Notify time: 21850. Current size: 2
+[2019-03-07T18:23:44.934] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.934] [INFO ] [21850][Scheduler] next at 22000 in 150
+[2019-03-07T18:23:44.935] [DEBUG] #@# Current timestep 21900
+[2019-03-07T18:23:44.935] [INFO ] [Scheduler] Notify time: 21900. Current size: 2
+[2019-03-07T18:23:44.935] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.935] [INFO ] [21900][Scheduler] next at 22000 in 100
+[2019-03-07T18:23:44.936] [DEBUG] #@# Current timestep 21950
+[2019-03-07T18:23:44.936] [INFO ] [Scheduler] Notify time: 21950. Current size: 2
+[2019-03-07T18:23:44.936] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.936] [INFO ] [21950][Scheduler] next at 22000 in 50
+[2019-03-07T18:23:44.937] [DEBUG] #@# Current timestep 22000
+[2019-03-07T18:23:44.937] [INFO ] [Scheduler] Notify time: 22000. Current size: 2
+[2019-03-07T18:23:44.937] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.937] [INFO ] Schedule at 23000
+[2019-03-07T18:23:44.937] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.937] [INFO ] Schedule at 23000
+[2019-03-07T18:23:44.937] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.937] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.937] [INFO ] (Node 2): pos=(157.821376081, 49.466207891) spd=(2.65697249701, 0) avgDir=-0.643896 dir=-1.34952
+[2019-03-07T18:23:44.937] [DEBUG] (Node 2): real: dir= 0 pos=(157.350006104, 48.3499984741) dist= 2.67750549316
+[2019-03-07T18:23:44.937] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.937] [INFO ] [22000][Scheduler] next at 23000 in 1000
+[2019-03-07T18:23:44.938] [DEBUG] #@# Current timestep 22050
+[2019-03-07T18:23:44.938] [INFO ] [Scheduler] Notify time: 22050. Current size: 2
+[2019-03-07T18:23:44.938] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.938] [INFO ] [22050][Scheduler] next at 23000 in 950
+[2019-03-07T18:23:44.939] [DEBUG] #@# Current timestep 22100
+[2019-03-07T18:23:44.939] [INFO ] [Scheduler] Notify time: 22100. Current size: 2
+[2019-03-07T18:23:44.940] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.940] [INFO ] [22100][Scheduler] next at 23000 in 900
+[2019-03-07T18:23:44.940] [DEBUG] #@# Current timestep 22150
+[2019-03-07T18:23:44.941] [INFO ] [Scheduler] Notify time: 22150. Current size: 2
+[2019-03-07T18:23:44.941] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.941] [INFO ] [22150][Scheduler] next at 23000 in 850
+[2019-03-07T18:23:44.941] [DEBUG] #@# Current timestep 22200
+[2019-03-07T18:23:44.941] [INFO ] [Scheduler] Notify time: 22200. Current size: 2
+[2019-03-07T18:23:44.941] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.941] [INFO ] [22200][Scheduler] next at 23000 in 800
+[2019-03-07T18:23:44.942] [DEBUG] #@# Current timestep 22250
+[2019-03-07T18:23:44.942] [INFO ] [Scheduler] Notify time: 22250. Current size: 2
+[2019-03-07T18:23:44.942] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.942] [INFO ] [22250][Scheduler] next at 23000 in 750
+[2019-03-07T18:23:44.944] [DEBUG] #@# Current timestep 22300
+[2019-03-07T18:23:44.944] [INFO ] [Scheduler] Notify time: 22300. Current size: 2
+[2019-03-07T18:23:44.944] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.944] [INFO ] [22300][Scheduler] next at 23000 in 700
+[2019-03-07T18:23:44.946] [DEBUG] #@# Current timestep 22350
+[2019-03-07T18:23:44.946] [INFO ] [Scheduler] Notify time: 22350. Current size: 2
+[2019-03-07T18:23:44.946] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.946] [INFO ] [22350][Scheduler] next at 23000 in 650
+[2019-03-07T18:23:44.947] [DEBUG] #@# Current timestep 22400
+[2019-03-07T18:23:44.947] [INFO ] [Scheduler] Notify time: 22400. Current size: 2
+[2019-03-07T18:23:44.947] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.947] [INFO ] [22400][Scheduler] next at 23000 in 600
+[2019-03-07T18:23:44.948] [DEBUG] #@# Current timestep 22450
+[2019-03-07T18:23:44.948] [INFO ] [Scheduler] Notify time: 22450. Current size: 2
+[2019-03-07T18:23:44.948] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.948] [INFO ] [22450][Scheduler] next at 23000 in 550
+[2019-03-07T18:23:44.949] [DEBUG] #@# Current timestep 22500
+[2019-03-07T18:23:44.949] [INFO ] [Scheduler] Notify time: 22500. Current size: 2
+[2019-03-07T18:23:44.949] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.949] [INFO ] [22500][Scheduler] next at 23000 in 500
+[2019-03-07T18:23:44.950] [DEBUG] #@# Current timestep 22550
+[2019-03-07T18:23:44.950] [INFO ] [Scheduler] Notify time: 22550. Current size: 2
+[2019-03-07T18:23:44.950] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.950] [INFO ] [22550][Scheduler] next at 23000 in 450
+[2019-03-07T18:23:44.951] [DEBUG] #@# Current timestep 22600
+[2019-03-07T18:23:44.951] [INFO ] [Scheduler] Notify time: 22600. Current size: 2
+[2019-03-07T18:23:44.951] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.951] [INFO ] [22600][Scheduler] next at 23000 in 400
+[2019-03-07T18:23:44.952] [DEBUG] #@# Current timestep 22650
+[2019-03-07T18:23:44.952] [INFO ] [Scheduler] Notify time: 22650. Current size: 2
+[2019-03-07T18:23:44.952] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.952] [INFO ] [22650][Scheduler] next at 23000 in 350
+[2019-03-07T18:23:44.953] [DEBUG] #@# Current timestep 22700
+[2019-03-07T18:23:44.953] [INFO ] [Scheduler] Notify time: 22700. Current size: 2
+[2019-03-07T18:23:44.953] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.953] [INFO ] [22700][Scheduler] next at 23000 in 300
+[2019-03-07T18:23:44.954] [DEBUG] #@# Current timestep 22750
+[2019-03-07T18:23:44.954] [INFO ] [Scheduler] Notify time: 22750. Current size: 2
+[2019-03-07T18:23:44.954] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.954] [INFO ] [22750][Scheduler] next at 23000 in 250
+[2019-03-07T18:23:44.955] [DEBUG] #@# Current timestep 22800
+[2019-03-07T18:23:44.955] [INFO ] [Scheduler] Notify time: 22800. Current size: 2
+[2019-03-07T18:23:44.955] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.955] [INFO ] [22800][Scheduler] next at 23000 in 200
+[2019-03-07T18:23:44.956] [DEBUG] #@# Current timestep 22850
+[2019-03-07T18:23:44.956] [INFO ] [Scheduler] Notify time: 22850. Current size: 2
+[2019-03-07T18:23:44.956] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.956] [INFO ] [22850][Scheduler] next at 23000 in 150
+[2019-03-07T18:23:44.957] [DEBUG] #@# Current timestep 22900
+[2019-03-07T18:23:44.957] [INFO ] [Scheduler] Notify time: 22900. Current size: 2
+[2019-03-07T18:23:44.957] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.957] [INFO ] [22900][Scheduler] next at 23000 in 100
+[2019-03-07T18:23:44.959] [DEBUG] #@# Current timestep 22950
+[2019-03-07T18:23:44.959] [INFO ] [Scheduler] Notify time: 22950. Current size: 2
+[2019-03-07T18:23:44.959] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.959] [INFO ] [22950][Scheduler] next at 23000 in 50
+[2019-03-07T18:23:44.960] [DEBUG] #@# Current timestep 23000
+[2019-03-07T18:23:44.960] [INFO ] [Scheduler] Notify time: 23000. Current size: 2
+[2019-03-07T18:23:44.960] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.960] [INFO ] Schedule at 24000
+[2019-03-07T18:23:44.960] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.960] [INFO ] Schedule at 24000
+[2019-03-07T18:23:44.960] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.960] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.960] [INFO ] (Node 2): pos=(160.894241005, 48.941239278) spd=(5.20210551629, 0) avgDir=-1.64069 dir=-2.34895
+[2019-03-07T18:23:44.960] [DEBUG] (Node 2): real: dir= 0 pos=(162.550003052, 48.3499984741) dist= 5.19999694824
+[2019-03-07T18:23:44.960] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.960] [INFO ] [23000][Scheduler] next at 24000 in 1000
+[2019-03-07T18:23:44.961] [DEBUG] #@# Current timestep 23050
+[2019-03-07T18:23:44.961] [INFO ] [Scheduler] Notify time: 23050. Current size: 2
+[2019-03-07T18:23:44.961] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.961] [INFO ] [23050][Scheduler] next at 24000 in 950
+[2019-03-07T18:23:44.963] [DEBUG] #@# Current timestep 23100
+[2019-03-07T18:23:44.963] [INFO ] [Scheduler] Notify time: 23100. Current size: 2
+[2019-03-07T18:23:44.963] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.963] [INFO ] [23100][Scheduler] next at 24000 in 900
+[2019-03-07T18:23:44.964] [DEBUG] #@# Current timestep 23150
+[2019-03-07T18:23:44.964] [INFO ] [Scheduler] Notify time: 23150. Current size: 2
+[2019-03-07T18:23:44.964] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.964] [INFO ] [23150][Scheduler] next at 24000 in 850
+[2019-03-07T18:23:44.965] [DEBUG] #@# Current timestep 23200
+[2019-03-07T18:23:44.965] [INFO ] [Scheduler] Notify time: 23200. Current size: 2
+[2019-03-07T18:23:44.965] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.965] [INFO ] [23200][Scheduler] next at 24000 in 800
+[2019-03-07T18:23:44.966] [DEBUG] #@# Current timestep 23250
+[2019-03-07T18:23:44.966] [INFO ] [Scheduler] Notify time: 23250. Current size: 2
+[2019-03-07T18:23:44.966] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.966] [INFO ] [23250][Scheduler] next at 24000 in 750
+[2019-03-07T18:23:44.967] [DEBUG] #@# Current timestep 23300
+[2019-03-07T18:23:44.967] [INFO ] [Scheduler] Notify time: 23300. Current size: 2
+[2019-03-07T18:23:44.967] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.967] [INFO ] [23300][Scheduler] next at 24000 in 700
+[2019-03-07T18:23:44.968] [DEBUG] #@# Current timestep 23350
+[2019-03-07T18:23:44.968] [INFO ] [Scheduler] Notify time: 23350. Current size: 2
+[2019-03-07T18:23:44.968] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.968] [INFO ] [23350][Scheduler] next at 24000 in 650
+[2019-03-07T18:23:44.969] [DEBUG] #@# Current timestep 23400
+[2019-03-07T18:23:44.969] [INFO ] [Scheduler] Notify time: 23400. Current size: 2
+[2019-03-07T18:23:44.969] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.969] [INFO ] [23400][Scheduler] next at 24000 in 600
+[2019-03-07T18:23:44.970] [DEBUG] #@# Current timestep 23450
+[2019-03-07T18:23:44.970] [INFO ] [Scheduler] Notify time: 23450. Current size: 2
+[2019-03-07T18:23:44.970] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.970] [INFO ] [23450][Scheduler] next at 24000 in 550
+[2019-03-07T18:23:44.971] [DEBUG] #@# Current timestep 23500
+[2019-03-07T18:23:44.971] [INFO ] [Scheduler] Notify time: 23500. Current size: 2
+[2019-03-07T18:23:44.971] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.971] [INFO ] [23500][Scheduler] next at 24000 in 500
+[2019-03-07T18:23:44.972] [DEBUG] #@# Current timestep 23550
+[2019-03-07T18:23:44.972] [INFO ] [Scheduler] Notify time: 23550. Current size: 2
+[2019-03-07T18:23:44.972] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.972] [INFO ] [23550][Scheduler] next at 24000 in 450
+[2019-03-07T18:23:44.973] [DEBUG] #@# Current timestep 23600
+[2019-03-07T18:23:44.973] [INFO ] [Scheduler] Notify time: 23600. Current size: 2
+[2019-03-07T18:23:44.973] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.973] [INFO ] [23600][Scheduler] next at 24000 in 400
+[2019-03-07T18:23:44.974] [DEBUG] #@# Current timestep 23650
+[2019-03-07T18:23:44.974] [INFO ] [Scheduler] Notify time: 23650. Current size: 2
+[2019-03-07T18:23:44.974] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.974] [INFO ] [23650][Scheduler] next at 24000 in 350
+[2019-03-07T18:23:44.975] [DEBUG] #@# Current timestep 23700
+[2019-03-07T18:23:44.975] [INFO ] [Scheduler] Notify time: 23700. Current size: 2
+[2019-03-07T18:23:44.975] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.975] [INFO ] [23700][Scheduler] next at 24000 in 300
+[2019-03-07T18:23:44.976] [DEBUG] #@# Current timestep 23750
+[2019-03-07T18:23:44.976] [INFO ] [Scheduler] Notify time: 23750. Current size: 2
+[2019-03-07T18:23:44.976] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.976] [INFO ] [23750][Scheduler] next at 24000 in 250
+[2019-03-07T18:23:44.977] [DEBUG] #@# Current timestep 23800
+[2019-03-07T18:23:44.977] [INFO ] [Scheduler] Notify time: 23800. Current size: 2
+[2019-03-07T18:23:44.977] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.977] [INFO ] [23800][Scheduler] next at 24000 in 200
+[2019-03-07T18:23:44.978] [DEBUG] #@# Current timestep 23850
+[2019-03-07T18:23:44.978] [INFO ] [Scheduler] Notify time: 23850. Current size: 2
+[2019-03-07T18:23:44.978] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.978] [INFO ] [23850][Scheduler] next at 24000 in 150
+[2019-03-07T18:23:44.979] [DEBUG] #@# Current timestep 23900
+[2019-03-07T18:23:44.979] [INFO ] [Scheduler] Notify time: 23900. Current size: 2
+[2019-03-07T18:23:44.979] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.979] [INFO ] [23900][Scheduler] next at 24000 in 100
+[2019-03-07T18:23:44.980] [DEBUG] #@# Current timestep 23950
+[2019-03-07T18:23:44.980] [INFO ] [Scheduler] Notify time: 23950. Current size: 2
+[2019-03-07T18:23:44.980] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.980] [INFO ] [23950][Scheduler] next at 24000 in 50
+[2019-03-07T18:23:44.982] [DEBUG] #@# Current timestep 24000
+[2019-03-07T18:23:44.982] [INFO ] [Scheduler] Notify time: 24000. Current size: 2
+[2019-03-07T18:23:44.982] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:44.982] [INFO ] Schedule at 25000
+[2019-03-07T18:23:44.982] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:44.982] [INFO ] Schedule at 25000
+[2019-03-07T18:23:44.982] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:44.982] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:44.982] [INFO ] (Node 2): pos=(170.192100657, 47.920067501) spd=(7.85599326496, 0) avgDir=-0.622519 dir=1.65522
+[2019-03-07T18:23:44.982] [DEBUG] (Node 2): real: dir= 0 pos=(170.350006104, 48.3499984741) dist= 7.80000305176
+[2019-03-07T18:23:44.982] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:44.982] [INFO ] [24000][Scheduler] next at 25000 in 1000
+[2019-03-07T18:23:44.983] [DEBUG] #@# Current timestep 24050
+[2019-03-07T18:23:44.983] [INFO ] [Scheduler] Notify time: 24050. Current size: 2
+[2019-03-07T18:23:44.983] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.983] [INFO ] [24050][Scheduler] next at 25000 in 950
+[2019-03-07T18:23:44.984] [DEBUG] #@# Current timestep 24100
+[2019-03-07T18:23:44.984] [INFO ] [Scheduler] Notify time: 24100. Current size: 2
+[2019-03-07T18:23:44.984] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.984] [INFO ] [24100][Scheduler] next at 25000 in 900
+[2019-03-07T18:23:44.985] [DEBUG] #@# Current timestep 24150
+[2019-03-07T18:23:44.985] [INFO ] [Scheduler] Notify time: 24150. Current size: 2
+[2019-03-07T18:23:44.985] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.985] [INFO ] [24150][Scheduler] next at 25000 in 850
+[2019-03-07T18:23:44.986] [DEBUG] #@# Current timestep 24200
+[2019-03-07T18:23:44.986] [INFO ] [Scheduler] Notify time: 24200. Current size: 2
+[2019-03-07T18:23:44.986] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.986] [INFO ] [24200][Scheduler] next at 25000 in 800
+[2019-03-07T18:23:44.987] [DEBUG] #@# Current timestep 24250
+[2019-03-07T18:23:44.987] [INFO ] [Scheduler] Notify time: 24250. Current size: 2
+[2019-03-07T18:23:44.987] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.987] [INFO ] [24250][Scheduler] next at 25000 in 750
+[2019-03-07T18:23:44.988] [DEBUG] #@# Current timestep 24300
+[2019-03-07T18:23:44.988] [INFO ] [Scheduler] Notify time: 24300. Current size: 2
+[2019-03-07T18:23:44.988] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.988] [INFO ] [24300][Scheduler] next at 25000 in 700
+[2019-03-07T18:23:44.989] [DEBUG] #@# Current timestep 24350
+[2019-03-07T18:23:44.989] [INFO ] [Scheduler] Notify time: 24350. Current size: 2
+[2019-03-07T18:23:44.989] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.989] [INFO ] [24350][Scheduler] next at 25000 in 650
+[2019-03-07T18:23:44.990] [DEBUG] #@# Current timestep 24400
+[2019-03-07T18:23:44.990] [INFO ] [Scheduler] Notify time: 24400. Current size: 2
+[2019-03-07T18:23:44.990] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.990] [INFO ] [24400][Scheduler] next at 25000 in 600
+[2019-03-07T18:23:44.991] [DEBUG] #@# Current timestep 24450
+[2019-03-07T18:23:44.991] [INFO ] [Scheduler] Notify time: 24450. Current size: 2
+[2019-03-07T18:23:44.991] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.991] [INFO ] [24450][Scheduler] next at 25000 in 550
+[2019-03-07T18:23:44.992] [DEBUG] #@# Current timestep 24500
+[2019-03-07T18:23:44.992] [INFO ] [Scheduler] Notify time: 24500. Current size: 2
+[2019-03-07T18:23:44.992] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.992] [INFO ] [24500][Scheduler] next at 25000 in 500
+[2019-03-07T18:23:44.993] [DEBUG] #@# Current timestep 24550
+[2019-03-07T18:23:44.993] [INFO ] [Scheduler] Notify time: 24550. Current size: 2
+[2019-03-07T18:23:44.993] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.993] [INFO ] [24550][Scheduler] next at 25000 in 450
+[2019-03-07T18:23:44.994] [DEBUG] #@# Current timestep 24600
+[2019-03-07T18:23:44.994] [INFO ] [Scheduler] Notify time: 24600. Current size: 2
+[2019-03-07T18:23:44.994] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.994] [INFO ] [24600][Scheduler] next at 25000 in 400
+[2019-03-07T18:23:44.995] [DEBUG] #@# Current timestep 24650
+[2019-03-07T18:23:44.995] [INFO ] [Scheduler] Notify time: 24650. Current size: 2
+[2019-03-07T18:23:44.995] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.995] [INFO ] [24650][Scheduler] next at 25000 in 350
+[2019-03-07T18:23:44.996] [DEBUG] #@# Current timestep 24700
+[2019-03-07T18:23:44.996] [INFO ] [Scheduler] Notify time: 24700. Current size: 2
+[2019-03-07T18:23:44.996] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.996] [INFO ] [24700][Scheduler] next at 25000 in 300
+[2019-03-07T18:23:44.997] [DEBUG] #@# Current timestep 24750
+[2019-03-07T18:23:44.997] [INFO ] [Scheduler] Notify time: 24750. Current size: 2
+[2019-03-07T18:23:44.997] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.997] [INFO ] [24750][Scheduler] next at 25000 in 250
+[2019-03-07T18:23:44.998] [DEBUG] #@# Current timestep 24800
+[2019-03-07T18:23:44.998] [INFO ] [Scheduler] Notify time: 24800. Current size: 2
+[2019-03-07T18:23:44.998] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.998] [INFO ] [24800][Scheduler] next at 25000 in 200
+[2019-03-07T18:23:44.999] [DEBUG] #@# Current timestep 24850
+[2019-03-07T18:23:44.999] [INFO ] [Scheduler] Notify time: 24850. Current size: 2
+[2019-03-07T18:23:44.999] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:44.999] [INFO ] [24850][Scheduler] next at 25000 in 150
+[2019-03-07T18:23:45.000] [DEBUG] #@# Current timestep 24900
+[2019-03-07T18:23:45.000] [INFO ] [Scheduler] Notify time: 24900. Current size: 2
+[2019-03-07T18:23:45.000] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:45.000] [INFO ] [24900][Scheduler] next at 25000 in 100
+[2019-03-07T18:23:45.001] [DEBUG] #@# Current timestep 24950
+[2019-03-07T18:23:45.001] [INFO ] [Scheduler] Notify time: 24950. Current size: 2
+[2019-03-07T18:23:45.001] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-07T18:23:45.001] [INFO ] [24950][Scheduler] next at 25000 in 50
+[2019-03-07T18:23:45.002] [DEBUG] #@# Current timestep 25000
+[2019-03-07T18:23:45.002] [INFO ] [Scheduler] Notify time: 25000. Current size: 2
+[2019-03-07T18:23:45.002] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-03-07T18:23:45.002] [INFO ] Schedule at 26000
+[2019-03-07T18:23:45.002] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-03-07T18:23:45.002] [INFO ] Schedule at 26000
+[2019-03-07T18:23:45.002] [INFO ] TracedCallback Direction number of calls 0
+[2019-03-07T18:23:45.002] [INFO ] TracedCallback Position number of calls 0
+[2019-03-07T18:23:45.002] [INFO ] (Node 2): pos=(180.072792728, 48.6223689251) spd=(10.4468488447, 0) avgDir=-0.602731 dir=2.88227
+[2019-03-07T18:23:45.002] [DEBUG] (Node 2): real: dir= 0 pos=(180.75, 48.3499984741) dist= 10.3999938965
+[2019-03-07T18:23:45.002] [INFO ] [Scheduler] 2 have been executed.
+[2019-03-07T18:23:45.002] [INFO ] [25000][Scheduler] next at 26000 in 1000

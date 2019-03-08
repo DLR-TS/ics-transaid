@@ -60,6 +60,7 @@ public:
   Vector2D getVelocity();
   double getDirection();
 
+
   /// @brief helper function that adds SetCAMArea subscription
   void subscribeSendingCAMs();
 
