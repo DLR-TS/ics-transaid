@@ -187,7 +187,6 @@ namespace baseapp
             void Print(std::ostream &os) const;
             std::string Name() const;
             MessageType getMessageType() const;
-            std::string getMessage() const;
             uint16_t getMaxResponseTime() const;
             std::string getStopEdge() const;
             double getStopPosition() const;

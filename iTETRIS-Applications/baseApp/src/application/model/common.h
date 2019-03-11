@@ -164,6 +164,7 @@ double GetDistance(const Vector2D &pos1, const Vector2D &pos2);
 double NormalizeDirection(const double direction);
 std::string ToString(ProtocolId pid);
 std::string ToString(TypeBehaviour type);
+std::string ToString(MessageType type);
 std::string ToString(VehicleMovement direction);
 
 } /* namespace application */

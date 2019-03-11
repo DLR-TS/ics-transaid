@@ -139,6 +139,44 @@ std::string ToString(TypeBehaviour type)
   }
 }
 
+
+std::string ToString(MessageType type)
+{
+  switch (type)
+  {
+  case MT_RSU_BEACON:
+    return "MT_RSU_BEACON";
+  case MT_BEACON_RESPONSE:
+    return "MT_BEACON_RESPONSE";
+  case MT_NO_LONGHER_CONFORMANT:
+    return "MT_NO_LONGHER_CONFORMANT";
+  case MT_RSU_TEST:
+    return "MT_RSU_TEST";
+  case MT_TEST_RESPONSE:
+    return "MT_TEST_RESPONSE";
+  case TRANSAID_CAM:
+      return "TRANSAID_CAM";
+  case TRANSAID_CPM:
+    return "TRANSAID_CPM";
+  case TRANSAID_MCM_VEHICLE:
+      return "TRANSAID_MCM_VEHICLE";
+  case TRANSAID_MAP:
+      return "TRANSAID_MAP";
+  case TRANSAID_DENM:
+      return "TRANSAID_DENM";
+  case TRANSAID_IVI:
+      return "TRANSAID_IVI";
+  case TRANSAID_MCM_RSU:
+      return "TRANSAID_MCM_RSU";
+  default:
+  {
+      std::stringstream ss;
+      ss << "<behavior type without known string conversion (type code: " << type << ")>";
+      return ss.str();
+  }
+  }
+}
+
 std::string ToString(VehicleMovement direction)
 {
   switch (direction)
