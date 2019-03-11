@@ -83,7 +83,7 @@ typedef enum
 
 typedef enum
 {
-  ROAD_WORKS = 0x01, NO_AD_ZONE = 0x02
+  DENM_UNKNOWN = 0x00, ROAD_WORKS = 0x01, NO_AD_ZONE = 0x02
 } DenmType;
 
 typedef enum

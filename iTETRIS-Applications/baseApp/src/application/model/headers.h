@@ -70,6 +70,12 @@ namespace baseapp
         public:
             struct CamInfo
             {
+                CamInfo() : senderID(-1), generationTime(-1), position(-1,-1),
+                        speed(0), heading(0), acceleration(0) {};
+                CamInfo(int senderID, int generationTime, application::Vector2D position,
+                float speed, float heading, float acceleration) :
+                    senderID(senderID), generationTime(generationTime), position(position),
+                    speed(speed), heading(heading), acceleration(acceleration) {};
             	int senderID;
             	int generationTime;
 				application::Vector2D position;
@@ -80,6 +86,9 @@ namespace baseapp
 
             struct DenmInfo
             {
+                DenmInfo() : senderID(-1), generationTime(-1), denmType(DENM_UNKNOWN) {};
+                DenmInfo(int senderID, int generationTime, DenmType denmType) :
+                    senderID(senderID), generationTime(generationTime), denmType(denmType) {};
             	int senderID;
             	int generationTime;
             	DenmType denmType;
