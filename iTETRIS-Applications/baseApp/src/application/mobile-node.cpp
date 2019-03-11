@@ -90,19 +90,28 @@ namespace baseapp
 			m_position = info;
 		}
 
-		Vector2D MobileNode::getPosition()
+		Vector2D MobileNode::getPosition() const
 		{
 			return m_position->position;
 		}
 
-		Vector2D MobileNode::getVelocity()
+		Vector2D MobileNode::getVelocity() const
 		{
 			double speed_x = (double) m_position->speed * cos((double) m_position->direction * M_PI / 180.0);
 			double speed_y = (double) m_position->speed * sin((double) m_position->direction * M_PI / 180.0);
 			return Vector2D(speed_x, speed_y);
 		}
 
-		double MobileNode::getDirection()
+
+        float MobileNode::getSpeed() const {
+            return m_position->speed;
+        }
+
+        float MobileNode::getAcceleration() const {
+            return m_position->acceleration;
+        }
+
+		double MobileNode::getDirection() const
 		{
 			return m_position->direction;
 		}

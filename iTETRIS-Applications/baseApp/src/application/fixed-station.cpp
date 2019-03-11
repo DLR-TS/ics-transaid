@@ -77,22 +77,31 @@ namespace baseapp
 		{
 		}
 
-		Vector2D FixedStation::getPosition()
+		Vector2D FixedStation::getPosition() const
 		{
 			return m_rsuData.position;
 		}
 
-		Vector2D FixedStation::getVelocity()
+		Vector2D FixedStation::getVelocity() const
 		{
 			static Vector2D velocity;
 			return velocity;
 		}
 
 
-		double FixedStation::getDirection()
+		double FixedStation::getDirection() const
 		{
 			return DIR_INVALID;
 		}
+
+
+        float FixedStation::getSpeed() const {
+            return 0.0;
+        }
+
+        float FixedStation::getAcceleration() const {
+            return 0.0;
+        }
 
 		int stringToInt(std::string value)
 		{

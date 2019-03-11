@@ -56,9 +56,11 @@ public:
   virtual ~MobileNode();
 
   void updateMobilityInformation(MobilityInfo * info);
-  Vector2D getPosition();
-  Vector2D getVelocity();
-  double getDirection();
+  Vector2D getPosition() const;
+  Vector2D getVelocity() const;
+  float getSpeed() const;
+  float getAcceleration() const;
+  double getDirection() const;
 
 
   /// @brief helper function that adds SetCAMArea subscription

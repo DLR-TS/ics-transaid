@@ -57,9 +57,11 @@ namespace baseapp
 				virtual ~FixedStation();
 
 				//void applicationExecute();
-				Vector2D getPosition();
-				Vector2D getVelocity();
-				double getDirection();
+				Vector2D getPosition() const;
+				Vector2D getVelocity() const;
+                float getSpeed() const;
+                float getAcceleration() const;
+				double getDirection() const;
 				void updateMobilityInformation(MobilityInfo * info);
 				void mobilityInformationHasRun();
 
