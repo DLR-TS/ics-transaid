@@ -519,6 +519,10 @@ int main(int argc, char **argv)
         ns3Call += " --fileConfTechnologies=" + oc.getString("communication-config-technologies-file");
         if (!oc.getString("ns3-log-path").empty())
             ns3Call += " --logFile=" + oc.getString("ns3-log-path");
+
+//        // Debug hook
+//        ns3Call = "echo 'Bypassing ns3 launch. Type\n" + ns3Call + "\nto start manually.'";
+
         char* ns3Chain = strdup(ns3Call.c_str());
         pthread_create(&ns3Thread, NULL, launchSystemExecutable, (void *) ns3Chain);
         cout << "iCS --> ns-3 launched." << endl;
