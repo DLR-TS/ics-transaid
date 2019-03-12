@@ -55,35 +55,57 @@ namespace baseapp
 		}
 
 // TransaidHeader
-
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const CamInfo& message):
-				m_protocolId(pid), m_messageType(msgType), m_camInfo(message)
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, CamInfo * message):
+                m_camInfo(message), m_denmInfo(nullptr), m_cpmInfo(nullptr),
+                m_mapInfo(nullptr), m_mcmRsuInfo(nullptr), m_mcmVehicleInfo(nullptr), m_iviInfo(nullptr),
+				m_protocolId(pid), m_messageType(msgType)
 				{};
 
-
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const DenmInfo& message):
-				m_protocolId(pid), m_messageType(msgType), m_denmInfo(message)
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, DenmInfo * message):
+                m_camInfo(nullptr), m_denmInfo(message), m_cpmInfo(nullptr),
+                m_mapInfo(nullptr), m_mcmRsuInfo(nullptr), m_mcmVehicleInfo(nullptr), m_iviInfo(nullptr),
+				m_protocolId(pid), m_messageType(msgType)
 				{};
 
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const CpmInfo& message):
-				m_protocolId(pid), m_messageType(msgType), m_cpmInfo(message)
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, CpmInfo * message):
+                m_camInfo(nullptr), m_denmInfo(nullptr), m_cpmInfo(message),
+                m_mapInfo(nullptr), m_mcmRsuInfo(nullptr), m_mcmVehicleInfo(nullptr), m_iviInfo(nullptr),
+				m_protocolId(pid), m_messageType(msgType)
 				{};
 
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const MapInfo& message):
-				m_protocolId(pid), m_messageType(msgType), m_mapInfo(message)
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, MapInfo * message):
+                m_camInfo(nullptr), m_denmInfo(nullptr), m_cpmInfo(nullptr),
+                m_mapInfo(message), m_mcmRsuInfo(nullptr), m_mcmVehicleInfo(nullptr), m_iviInfo(nullptr),
+				m_protocolId(pid), m_messageType(msgType)
 				{};
 
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const McmVehicleInfo& message):
-				m_protocolId(pid), m_messageType(msgType), m_mcmVehicleInfo(message)
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, McmVehicleInfo * message):
+                m_camInfo(nullptr), m_denmInfo(nullptr), m_cpmInfo(nullptr),
+                m_mapInfo(nullptr), m_mcmRsuInfo(nullptr), m_mcmVehicleInfo(message), m_iviInfo(nullptr),
+				m_protocolId(pid), m_messageType(msgType)
 				{};
 
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const McmRsuInfo& message):
-				m_protocolId(pid), m_messageType(msgType), m_mcmRsuInfo(message)
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, McmRsuInfo * message):
+                m_camInfo(nullptr), m_denmInfo(nullptr), m_cpmInfo(nullptr),
+                m_mapInfo(nullptr), m_mcmRsuInfo(message), m_mcmVehicleInfo(nullptr), m_iviInfo(nullptr),
+				m_protocolId(pid), m_messageType(msgType)
 				{};
 
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, const IviInfo& message):
-				m_protocolId(pid), m_messageType(msgType), m_iviInfo(message)
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, IviInfo * message):
+                m_camInfo(nullptr), m_denmInfo(nullptr), m_cpmInfo(nullptr),
+                m_mapInfo(nullptr), m_mcmRsuInfo(nullptr), m_mcmVehicleInfo(nullptr), m_iviInfo(message),
+				m_protocolId(pid), m_messageType(msgType)
 				{};
+
+		TransaidHeader::~TransaidHeader() {
+            delete m_camInfo;
+            delete m_denmInfo;
+            delete m_cpmInfo;
+            delete m_mapInfo;
+            delete m_mcmRsuInfo;
+            delete m_mcmVehicleInfo;
+            delete m_iviInfo;
+        }
 
         uint32_t TransaidHeader::GetSerializedSize(void) const {
         	if (m_messageType == TRANSAID_CAM)  {
@@ -131,31 +153,31 @@ namespace baseapp
             return m_messageType;
         }
 
-        TransaidHeader::CamInfo TransaidHeader::getCamInfo() const {
+        const TransaidHeader::CamInfo * TransaidHeader::getCamInfo() const {
             return m_camInfo;
         }
 
-        TransaidHeader::DenmInfo TransaidHeader::getDenmInfo() const {
+        const TransaidHeader::DenmInfo * TransaidHeader::getDenmInfo() const {
             return m_denmInfo;
         }
 
-        TransaidHeader::CpmInfo TransaidHeader::getCpmInfo() const {
+        const TransaidHeader::CpmInfo * TransaidHeader::getCpmInfo() const {
             return m_cpmInfo;
         }
 
-        TransaidHeader::McmRsuInfo TransaidHeader::getMcmRsuInfo() const {
+        const TransaidHeader::McmRsuInfo * TransaidHeader::getMcmRsuInfo() const {
             return m_mcmRsuInfo;
         }
 
-        TransaidHeader::McmVehicleInfo TransaidHeader::getMcmVehicleInfo() const {
+        const TransaidHeader::McmVehicleInfo * TransaidHeader::getMcmVehicleInfo() const {
             return m_mcmVehicleInfo;
         }
 
-        TransaidHeader::MapInfo TransaidHeader::getMapInfo() const {
+        const TransaidHeader::MapInfo * TransaidHeader::getMapInfo() const {
              return m_mapInfo;
          }
 
-        TransaidHeader::IviInfo TransaidHeader::getIviInfo() const {
+        const TransaidHeader::IviInfo * TransaidHeader::getIviInfo() const {
              return m_iviInfo;
          }
 

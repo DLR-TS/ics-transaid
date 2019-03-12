@@ -174,13 +174,14 @@ namespace baseapp
 
 
         public:
-            TransaidHeader (ProtocolId pid, MessageType msgType, const CamInfo& message);
-            TransaidHeader (ProtocolId pid, MessageType msgType, const DenmInfo& message);
-            TransaidHeader (ProtocolId pid, MessageType msgType, const CpmInfo& message);
-            TransaidHeader (ProtocolId pid, MessageType msgType, const McmVehicleInfo& message);
-            TransaidHeader (ProtocolId pid, MessageType msgType, const McmRsuInfo& message);
-            TransaidHeader (ProtocolId pid, MessageType msgType, const MapInfo& message);
-            TransaidHeader (ProtocolId pid, MessageType msgType, const IviInfo& message);
+            TransaidHeader (ProtocolId pid, MessageType msgType, CamInfo * message);
+            TransaidHeader (ProtocolId pid, MessageType msgType, DenmInfo * message);
+            TransaidHeader (ProtocolId pid, MessageType msgType, CpmInfo * message);
+            TransaidHeader (ProtocolId pid, MessageType msgType, McmVehicleInfo * message);
+            TransaidHeader (ProtocolId pid, MessageType msgType, McmRsuInfo * message);
+            TransaidHeader (ProtocolId pid, MessageType msgType, MapInfo * message);
+            TransaidHeader (ProtocolId pid, MessageType msgType, IviInfo * message);
+            ~TransaidHeader();
 
 
             uint32_t GetSerializedSize(void) const;
@@ -190,24 +191,24 @@ namespace baseapp
             uint16_t getMaxResponseTime() const;
             std::string getStopEdge() const;
             double getStopPosition() const;
-            CamInfo getCamInfo() const;
-            DenmInfo getDenmInfo() const;
-            CpmInfo getCpmInfo() const    ;
-            McmRsuInfo getMcmRsuInfo() const ;
-            McmVehicleInfo getMcmVehicleInfo() const;
-            MapInfo getMapInfo() const ;
-            IviInfo getIviInfo() const;
+            const CamInfo * getCamInfo() const;
+            const DenmInfo * getDenmInfo() const;
+            const CpmInfo * getCpmInfo() const    ;
+            const McmRsuInfo * getMcmRsuInfo() const ;
+            const McmVehicleInfo * getMcmVehicleInfo() const;
+            const MapInfo * getMapInfo() const ;
+            const IviInfo * getIviInfo() const;
 
         private:
             ProtocolId m_protocolId;
             MessageType m_messageType;
-            CamInfo	m_camInfo;
-            DenmInfo m_denmInfo;
-            CpmInfo m_cpmInfo;
-            MapInfo m_mapInfo;
-            McmRsuInfo m_mcmRsuInfo;
-            McmVehicleInfo m_mcmVehicleInfo;
-            IviInfo m_iviInfo;
+            CamInfo*	m_camInfo;
+            DenmInfo* m_denmInfo;
+            CpmInfo* m_cpmInfo;
+            MapInfo* m_mapInfo;
+            McmRsuInfo* m_mcmRsuInfo;
+            McmVehicleInfo* m_mcmVehicleInfo;
+            IviInfo* m_iviInfo;
 		};
 
         /**
