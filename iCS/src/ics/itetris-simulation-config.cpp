@@ -21,6 +21,7 @@
 #include <stdlib.h>	// need for srand() function	
 #include <time.h>	// need for time() function	
 #include <iostream>
+#include <vector>
 
 #ifndef _WIN32
 #include <unistd.h>	// need for getpid() function
@@ -42,26 +43,35 @@ namespace ics
 // ===========================================================================
 float ITetrisSimulationConfig::m_simulatedVehiclesPenetrationRate;
 int ITetrisSimulationConfig::m_scheduleMessageCleanUp = -1;
+std::vector<std::string> ITetrisSimulationConfig::RATIdentifiersList;
 
 // ===========================================================================
 // member method definitions
 // ===========================================================================
 bool
-ITetrisSimulationConfig::HasRat()
+ITetrisSimulationConfig::HasRat(const std::string& vehID)
 {
     //initialize random seed
 #ifndef _WIN32
     srand(time(NULL) + getpid());
 #endif
 
-    //Generates random number
-    int randomNumber = rand() % 100;
-
-    if (randomNumber < m_simulatedVehiclesPenetrationRate) {
-        return true;
+    bool hasRAT = false;
+    if (RATIdentifiersList.empty()) {
+        hasRAT = true;
+    } else {
+        for (std::string& s : RATIdentifiersList) {
+            if (vehID.find(s) != std::string::npos) {
+                hasRAT = true;
+                break;
+            }
+        }
     }
 
-    return false;
+    // Superimpose penetration rate on ID-wise selected RAT vehicles
+    hasRAT = hasRAT && (rand() % 100 < m_simulatedVehiclesPenetrationRate);
+
+    return hasRAT;
 }
 
 }

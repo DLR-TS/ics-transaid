@@ -66,9 +66,10 @@ public:
     * @param[in] beginTime Timestep in which the simulation starts.
     * @param[in] endTime Timestep in which the simulation ends.
     * @param[in] ratPenetrationRate Value of the penetration rate.
+    * @param[in] ratIdentifiers List of strings which are used to test whether a vehicle is equipped with RAT.
     * @param[in] interactive Whether the simulation run in interactive mode.
     */
-    ICS(int ns3Port, int sumoPort, std::string sumoHost, std::string ns3Host, int beginTime, int endTime, int resolution, int ratPenetrationRate, bool interactive);
+    ICS(int ns3Port, int sumoPort, std::string sumoHost, std::string ns3Host, int beginTime, int endTime, int resolution, int ratPenetrationRate, const std::vector<std::string>& ratIdentifiers, bool interactive);
 
     /// @brief Destructor
     ~ICS();

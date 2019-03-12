@@ -134,12 +134,14 @@ vector<pthread_t> ICS::m_applicationsThreads;
 // member method definitions
 // ===========================================================================
 ICS::ICS(int ns3Port, int sumoPort, std::string sumoHost, std::string ns3Host,
-		int beginTime, int endTime, int resolution, int ratPenetrationRate, bool interactive)
+		int beginTime, int endTime, int resolution, int ratPenetrationRate,
+		const std::vector<std::string>& ratIdentifiers, bool interactive)
 {
 	m_Interactive = interactive;
 	m_syncManager = new SyncManager(ns3Port, sumoPort, sumoHost, ns3Host, beginTime, endTime, resolution);
 
-	ITetrisSimulationConfig::m_simulatedVehiclesPenetrationRate= ratPenetrationRate;
+    ITetrisSimulationConfig::m_simulatedVehiclesPenetrationRate = ratPenetrationRate;
+    ITetrisSimulationConfig::RATIdentifiersList = ratIdentifiers;
 }
 
 ICS::~ICS()

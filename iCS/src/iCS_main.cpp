@@ -137,7 +137,10 @@ void fillOptions()
   oc.addDescription("resolution", "Scenario", "Time resolution of every simulation step (ms)");
 
   oc.doRegister("penetration-rate", 'r', new Option_Integer(-1));
-  oc.addDescription("penetration-rate", "Scenario", "Defines the percentage of vehicles equiped with a RAT");
+  oc.addDescription("penetration-rate", "Scenario", "Defines the percentage of vehicles equipped with a RAT");
+
+  oc.doRegister("vehicleSelector", new Option_String(""));
+  oc.addDescription("vehicleSelector", "Scenario", "A list of substrings to determine whether vehicles are equipped with a RAT by their ID");
 
   oc.doRegister("facilities-config-file", 'f', new Option_FileName());
   oc.addDescription("facilities-config-file", "Scenario",
@@ -352,7 +355,7 @@ launchIcsThreadless(int commPort, int trafficPort)
   OptionsCont &oc = OptionsCont::getOptions();
   ICS *ics = new ICS(commPort, trafficPort, oc.getString("traffic-host"),
       oc.getString("communication-host"), oc.getInt("begin"), oc.getInt("end"), oc.getInt("resolution"),
-      oc.getInt("penetration-rate"), oc.getBool("interactive"));
+      oc.getInt("penetration-rate"), oc.getStringVector("vehicleSelector"), oc.getBool("interactive"));
 
   ics::ITetrisSimulationConfig::m_scheduleMessageCleanUp = oc.getInt("message-reception-window") * oc.getInt("resolution");
 

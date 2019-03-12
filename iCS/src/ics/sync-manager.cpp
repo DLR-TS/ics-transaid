@@ -560,7 +560,7 @@ int SyncManager::RunOneSumoTimeStep()
 
 	for (vector<string>::const_iterator i = departed.begin(); i != departed.end(); ++i)
 	{
-		if (ITetrisSimulationConfig::HasRat())
+		if (ITetrisSimulationConfig::HasRat(*i))
 		{
 			VehicleNode* vehicle = new VehicleNode(*i);
 
