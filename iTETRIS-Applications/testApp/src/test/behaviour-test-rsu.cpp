@@ -163,31 +163,27 @@ namespace testapp
 
 				if (commHeader->getMessageType() == TRANSAID_CAM)
 				{
-					TransaidHeader::CamInfo camInfo;
-					camInfo = transaidHeader->getCamInfo();
-
-					std::cout << "Received CAM at node " << GetController()->GetId() << "  sender " << camInfo.senderID << " time " << camInfo.generationTime <<  " position " << camInfo.position <<
-							 " speed " << camInfo.speed  <<  " acceleration " << camInfo.acceleration  << std::endl;
+				    const TransaidHeader::CamInfo * camInfo = transaidHeader->getCamInfo();
+					std::cout << "Received CAM at node " << GetController()->GetId() << "  sender " << camInfo->senderID << " time " << camInfo->generationTime <<  " position " << camInfo->position <<
+							 " speed " << camInfo->speed  <<  " acceleration " << camInfo->acceleration  << std::endl;
 
 					return;
 				}
 
 				if (commHeader->getMessageType() == TRANSAID_CPM)
 				{
-					TransaidHeader::CpmInfo cpmInfo;
-					cpmInfo = transaidHeader->getCpmInfo();
+				    const TransaidHeader::CpmInfo * cpmInfo = transaidHeader->getCpmInfo();
 
-					std::cout << "Received CPM at node " << GetController()->GetId() << "  sender " << cpmInfo.senderID << " time " << cpmInfo.generationTime  << std::endl;
+					std::cout << "Received CPM at node " << GetController()->GetId() << "  sender " << cpmInfo->senderID << " time " << cpmInfo->generationTime  << std::endl;
 
 					return;
 				}
 
 				if (commHeader->getMessageType() == TRANSAID_MCM_VEHICLE)
 				{
-					TransaidHeader::McmVehicleInfo mcmInfo;
-					mcmInfo = transaidHeader->getMcmVehicleInfo();
+				    const TransaidHeader::McmVehicleInfo * mcmInfo = transaidHeader->getMcmVehicleInfo();
 
-					std::cout << "Received MCM at node " << GetController()->GetId() << "  sender " << mcmInfo.senderID << " time " << mcmInfo.generationTime  << std::endl;
+					std::cout << "Received MCM at node " << GetController()->GetId() << "  sender " << mcmInfo->senderID << " time " << mcmInfo->generationTime  << std::endl;
 
 					return;
 				}
@@ -377,14 +373,14 @@ namespace testapp
         void BehaviourTestRSU::SendCAM()
         {
 
-            TransaidHeader::CamInfo message;
-            message.generationTime = CurrentTime::Now();
-            message.senderID = GetController()->GetId();
-            message.position = GetController()->GetPosition(); // TODO update correctly
-            message.speed = 0 ; // TODO update correctly
-            message.acceleration = 0 ; //TODO update correctly
+            TransaidHeader::CamInfo * message = new TransaidHeader::CamInfo();
+            message->generationTime = CurrentTime::Now();
+            message->senderID = GetController()->GetId();
+            message->position = GetController()->GetPosition(); // TODO update correctly
+            message->speed = 0 ; // TODO update correctly
+            message->acceleration = 0 ; //TODO update correctly
 
-            m_lastCAMsent = message;
+            m_lastCAMsent = *message;
 
             TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CAM, message);
             GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
@@ -394,12 +390,12 @@ namespace testapp
         void BehaviourTestRSU::SendDENM()
         {
 
-            TransaidHeader::DenmInfo message;
-            message.generationTime = CurrentTime::Now();
-            message.senderID = GetController()->GetId();
-            message.denmType = ROAD_WORKS; // TODO use the appropiate denmType for each use case
+            TransaidHeader::DenmInfo * message = new TransaidHeader::DenmInfo();
+            message->generationTime = CurrentTime::Now();
+            message->senderID = GetController()->GetId();
+            message->denmType = ROAD_WORKS; // TODO use the appropiate denmType for each use case
 
-            m_lastDENMsent = message;
+            m_lastDENMsent = *message;
 
             TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_DENM, message);
             GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
@@ -409,12 +405,12 @@ namespace testapp
         void BehaviourTestRSU::SendCPM()
         {
 
-        	TransaidHeader::CpmInfo message;
-			message.generationTime = CurrentTime::Now();
-			message.senderID = GetController()->GetId();
-			message.numObstacles = 1;
+            TransaidHeader::CpmInfo * message = new TransaidHeader::CpmInfo();
+			message->generationTime = CurrentTime::Now();
+			message->senderID = GetController()->GetId();
+			message->numObstacles = 1;
 
-			m_lastCPMsent = message;
+			m_lastCPMsent = *message;
 
 			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CPM, message);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
@@ -436,12 +432,12 @@ namespace testapp
         	adviceInfo.adviceType = TOC;
         	adviceInfo.tocAdvice = tocAdvice;
 
-        	TransaidHeader::McmRsuInfo message;
-			message.generationTime = CurrentTime::Now();
-			message.senderID = GetController()->GetId();
-			message.advices[1] = adviceInfo;
+        	TransaidHeader::McmRsuInfo * message = new TransaidHeader::McmRsuInfo();
+			message->generationTime = CurrentTime::Now();
+			message->senderID = GetController()->GetId();
+			message->advices[1] = adviceInfo;
 
-			m_lastMCMsent = message;
+			m_lastMCMsent = *message;
 
 			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN,   TRANSAID_MCM_RSU, message);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
@@ -452,12 +448,12 @@ namespace testapp
         void BehaviourTestRSU::SendMAP()
         {
 
-        	TransaidHeader::MapInfo message;
-			message.generationTime = CurrentTime::Now();
-			message.senderID = GetController()->GetId();
+            TransaidHeader::MapInfo * message = new TransaidHeader::MapInfo();
+			message->generationTime = CurrentTime::Now();
+			message->senderID = GetController()->GetId();
 
 
-			m_lastMAPsent = message;
+			m_lastMAPsent = *message;
 
 			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_MAP, message);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
@@ -468,13 +464,12 @@ namespace testapp
         void BehaviourTestRSU::SendIVI()
         {
 
-        	TransaidHeader::IviInfo message;
-			message.generationTime = CurrentTime::Now();
-			message.senderID = GetController()->GetId();
+        	TransaidHeader::IviInfo * message = new TransaidHeader::IviInfo();
+			message->generationTime = CurrentTime::Now();
+			message->senderID = GetController()->GetId();
 
 
-			m_lastIVIsent = message;
-
+			m_lastIVIsent = *message;
 			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_IVI, message);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
 
