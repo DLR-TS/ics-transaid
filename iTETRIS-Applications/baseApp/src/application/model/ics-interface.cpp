@@ -581,9 +581,9 @@ namespace baseapp
             AddTraciSubscription(libsumo::CMD_SET_VEHICLE_VARIABLE, libsumo::VAR_VEHICLECLASS, libsumo::TYPE_STRING, &vehicleClass);
         }
 
-        void iCSInterface::commandTraciChangeLane(const int laneIndex, const double duration)
+        void iCSInterface::commandTraciChangeLane(const std::string vehID, const int laneIndex, const double duration)
         {
-            if (m_node->getSumoId() != INVALID_STRING)
+            if (vehID != INVALID_STRING)
             {
                 int cmdID = libsumo::CMD_SET_VEHICLE_VARIABLE;
                 int varID = libsumo::CMD_CHANGELANE;
@@ -599,7 +599,7 @@ namespace baseapp
                 content.writeDouble(duration);
 
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
-                AddTraciSubscription(cmdID, varID, varTypeID, &content);
+                AddTraciSubscription(vehID, cmdID, varID, varTypeID, &content);
             }
         }
 

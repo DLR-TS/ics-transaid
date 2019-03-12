@@ -262,7 +262,7 @@ namespace baseapp
 
                 /// @brief Request a lane change
                 ///        see http://sumo.dlr.de/wiki/TraCI/Change_Vehicle_State
-                void commandTraciChangeLane(const int laneIndex, const double duration);
+                void commandTraciChangeLane(const std::string vehID, const int laneIndex, const double duration);
 
                 /// @brief Get the driving distance to given edge and position
                 ///        see http://sumo.dlr.de/wiki/TraCI/Vehicle_Value_Retrieval
