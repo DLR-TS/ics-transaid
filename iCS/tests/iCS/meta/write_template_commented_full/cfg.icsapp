@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- generated on Tue Mar 12 15:40:54 2019 by iTETRIS Control System Version 0.1.0
+-->
 
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/iCSConfiguration.xsd">
 
@@ -31,8 +33,11 @@
         <!-- Time resolution of every simulation step (ms) -->
         <resolution value="1000" type="INT"/>
 
-        <!-- Defines the percentage of vehicles equiped with a RAT -->
+        <!-- Defines the percentage of vehicles equipped with a RAT -->
         <penetration-rate value="-1" synonymes="r" type="INT"/>
+
+        <!-- A list of substrings to determine whether vehicles are equipped with a RAT by their ID -->
+        <vehicleSelector value="" type="STR"/>
 
         <!-- The entry point file for the facilities block configuration. -->
         <facilities-config-file value="" synonymes="f" type="FILE"/>

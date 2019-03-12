@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- generated on Tue Mar 12 15:40:54 2019 by iTETRIS Control System Version 0.1.0
+-->
 
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/iCSConfiguration.xsd">
 
@@ -15,7 +17,8 @@
         <begin value="0" synonymes="b" type="INT" help="Defines the begin time of the scenario simulation"/>
         <end value="-1" synonymes="e" type="INT" help="Defines the end time of the scenario simulation"/>
         <resolution value="1000" type="INT" help="Time resolution of every simulation step (ms)"/>
-        <penetration-rate value="-1" synonymes="r" type="INT" help="Defines the percentage of vehicles equiped with a RAT"/>
+        <penetration-rate value="-1" synonymes="r" type="INT" help="Defines the percentage of vehicles equipped with a RAT"/>
+        <vehicleSelector value="" type="STR" help="A list of substrings to determine whether vehicles are equipped with a RAT by their ID"/>
         <facilities-config-file value="" synonymes="f" type="FILE" help="The entry point file for the facilities block configuration."/>
         <message-reception-window value="0" synonymes="m" type="INT" help="Defines the time the iCS will keep schedule messages in the internal tables. That time window past, they are erased."/>
         <interactive value="false" type="BOOL" help="Whether iCS shall be run in interactive mode"/>

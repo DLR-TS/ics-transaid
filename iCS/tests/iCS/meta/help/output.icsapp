@@ -1,8 +1,10 @@
+iTETRIS Control System Version 0.1.0
  (c) iTETRIS consortium 2008-2010; http://www.ict-itetris.eu/
  (c) COLOMBO consortium 2012-2015; http://www.colombo-fp7.eu/
  (c) TransAID consortium 2018; http://www.trainsaid.eu/
  ... and others (see source files).
 The 'iTETRIS Control System'.
+
 Usage: iCS [OPTION]*
 Configuration Options:
   -c, --configuration-file FILE        Loads the named config on startup
@@ -12,6 +14,7 @@ Configuration Options:
   --save-schema FILE                   Saves the configuration schema into FILE
   --save-commented                     Adds comments to saved template,
                                          configuration, or schema
+
 Scenario Options:
   -b, --begin INT                      Defines the begin time of the scenario
                                          simulation
@@ -20,7 +23,10 @@ Scenario Options:
   --resolution INT                     Time resolution of every simulation step
                                          (ms)
   -r, --penetration-rate INT           Defines the percentage of vehicles
-                                         equiped with a RAT
+                                         equipped with a RAT
+  --vehicleSelector STR                A list of substrings to determine
+                                         whether vehicles are equipped with a
+                                         RAT by their ID
   -f, --facilities-config-file FILE    The entry point file for the facilities
                                          block configuration.
   -m, --message-reception-window INT   Defines the time the iCS will keep
@@ -29,6 +35,7 @@ Scenario Options:
                                          erased.
   --interactive                        Whether iCS shall be run in interactive
                                          mode
+
 TrafficSim Options:
   --traffic-executable STR             Defines the traffic simulation
                                          executable
@@ -38,6 +45,7 @@ TrafficSim Options:
                                          shall run on
   --traffic-port INT                   Defines the port the traffic simulation
                                          shall use
+
 CommunicationSim Options:
   --communication-executable STR       Defines the communication simulation
                                          executable
@@ -49,8 +57,10 @@ CommunicationSim Options:
                                          configuration.
   --communication-config-technologies-file STR  Defines the communication
                                          technologies configuration in ns-3
+
 Applications Options:
   -a, --app-config-file FILE           Defines the Application configurations
+
 Logs Options:
   --ics-log-path FILE                  Defines the place where the iCS log file
                                          will be stored
@@ -66,6 +76,7 @@ Logs Options:
                                          logging output
   --ns3-log-path FILE                  Defines the place where the ns-3 log
                                          file will be stored
+
 Output Options:
   --write-license                      Include license info into every output
                                          file
@@ -79,6 +90,7 @@ Output Options:
   -H, --human-readable-time            Write time values as hour:minute:second
                                          or day:hour:minute:second rathern than
                                          seconds
+
 Report Options:
   -v, --verbose                        Switches to verbose output
   --print-options                      Prints option values before processing
@@ -95,13 +107,17 @@ Report Options:
   --message-log FILE                   Writes all non-error messages to FILE
                                          (implies verbose)
   --error-log FILE                     Writes all warnings and errors to FILE
+
 Random Number Options:
   --random                             Initialises the random number generator
                                          with the current system time
   --seed INT                           Initialises the random number generator
                                          with the given value
+
+
 Examples:
   iCS -c <CONFIGURATION>
     
+
 Report bugs at <https://github.com/eclipse/sumo/issues>.
 Get in contact via <sumo@dlr.de>.
