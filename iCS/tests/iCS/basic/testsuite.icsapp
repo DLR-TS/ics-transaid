@@ -41,3 +41,6 @@ testApp_openGap
 
 # Tests iCSInterface::getDrivingDistance
 testApp_getDrivingDistance
+
+# Tests transaid headers
+test_V2XmsgSet
