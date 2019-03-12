@@ -1,0 +1,53 @@
+dirs 
+  @1000
+#5000 real totc=0 : 
+  @2000
+#5000 real totc=0 : 
+  @3000
+#5000 real totc=0 : 
+  @4000
+#5000 real totc=0 : 
+  @5000
+#5000 real totc=0 : 
+  @6000
+#5000 real totc=0 : 
+  @7000
+#5000 real totc=0 : 
+  @8000
+#5000 real totc=0 : 
+  @9000
+#5000 real totc=0 : 
+  @10000
+#5000 real totc=0 : 
+  @11000
+#5000 real totc=0 : 
+  @12000
+#5000 real totc=0 : 
+  @13000
+#5000 real totc=0 : 
+  @14000
+#5000 real totc=0 : 
+  @15000
+#5000 real totc=0 : 
+  @16000
+#5000 real totc=0 : 
+  @17000
+#5000 real totc=0 : 
+  @18000
+#5000 real totc=0 : 
+  @19000
+#5000 real totc=0 : 
+  @20000
+#5000 real totc=0 : 
+  @21000
+#5000 real totc=0 : 
+  @22000
+#5000 real totc=0 : 
+  @23000
+#5000 real totc=0 : 
+  @24000
+#5000 real totc=0 : 
+  @25000
+#5000 real totc=0 : 
+  @25000
+end tot_nodes_rsu=0 tot_nodes_rsu_shadow=0 tot_nodes_rsu_medium=0 tot_nodes_rsu_full=0 tot_packets_sent=0 tot_packets_recv=0 max_dens_rsu=0 avg_dens_rsu=0

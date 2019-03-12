@@ -10,6 +10,12 @@ testApp_test_case_unknown
 # Tests testApp execution with test case simpleExecute
 testApp_simpleExecute
 
+# Derived from simpleExecute. Tests effect of iCS option <vehicleSelector>.
+testApp_excludeByRATIdentifier
+
+# Derived from simpleExecute. Tests effect of iCS option <vehicleSelector>.
+testApp_includedByRATIdentifier
+
 # Tests iCSInterface::getSUMOStepLength()
 testApp_getSUMOStepLength
 
