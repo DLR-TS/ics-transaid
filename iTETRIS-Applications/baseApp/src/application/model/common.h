@@ -47,7 +47,9 @@ namespace baseapp
 namespace application
 {
 
-//TODO add other vehicle types
+
+/// @brief Node types for V2X message transmission filtering, @see iCSInterface::Send(), Receive()
+/// Share of different vehicle types can be configured in the app-config-file (see child element <node> of <setup>)
 typedef enum
 {
   NT_RSU = 0x01,
