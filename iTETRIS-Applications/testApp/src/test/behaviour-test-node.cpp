@@ -398,11 +398,14 @@ namespace testapp
 
 			// Check CAM Tx
 
-            double distanceBTcams = CalculateDistance(m_lastCAMsent.position, GetController()->GetPosition()); // TODO update correctly the position
-            double speedBTcams = fabs(m_lastCAMsent.speed - GetController()->GetSpeed() ); // TODO update correctly the speed
+            double distanceBTcams = CalculateDistance(m_lastCAMsent.position, GetController()->GetNode()->getPosition());
+            double speedBTcams = fabs(m_lastCAMsent.speed - GetController()->GetNode()->getSpeed() );
+            double headingBTcams = fabs(m_lastCAMsent.heading - GetController()->GetNode()->getDirection() );
 
+            std::cout << "Check the transmission of messages at node  " << GetController()->GetId()  << " at time diff " << (CurrentTime::Now() - m_lastCAMsent.generationTime) <<
+            		" with position difference " << distanceBTcams << " with speed difference  " << speedBTcams <<  " with heading difference " <<  headingBTcams << std::endl;
 
-			if ( (CurrentTime::Now() - m_lastCAMsent.generationTime)>1000 || (distanceBTcams > 4) || (speedBTcams > 0.5) )
+			if ( (CurrentTime::Now() - m_lastCAMsent.generationTime)>1000 || (distanceBTcams > 4) || (speedBTcams > 0.5) ) //TODO add heading condition once it is clear that direction is the heading
 			{
 
 				double nextTime = m_rnd.GetValue(0, 50); // introduce random value to avoid collisions
@@ -433,20 +436,17 @@ namespace testapp
         void BehaviourTestNode::SendCAM()
         {
 
-            TransaidHeader::CamInfo * message = new TransaidHeader::CamInfo();
-			message->generationTime = CurrentTime::Now();
-			message->senderID = GetController()->GetId();
-			message->position = GetController()->GetPosition(); // TODO update correctly the position
-			message->speed = GetController()->GetSpeed(); // TODO update correctly the position
-			message->acceleration = 1 ; //  TODO update correctly
-			message->heading = 0 ; // TODO update correctly
+            const Node * veh = GetController()->GetNode();
+            // TODO: Check if direction and heading equivalent!!
+            TransaidHeader::CamInfo * message = new TransaidHeader::CamInfo(GetController()->GetId(), CurrentTime::Now(), veh->getLaneIndex(),
+                    veh->getPosition(), veh->getSpeed(), veh->getAcceleration(), veh->getDirection());
 
 			m_lastCAMsent = *message;
 
 			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CAM, message);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
 
-            //std::cout << "Send CAM at node " << GetController()->GetId() <<  std::endl;
+            std::cout << "Send CAM at node " << GetController()->GetId() <<  std::endl;
         }
 
         void BehaviourTestNode::SendCPM()
