@@ -40,9 +40,9 @@
 	<setup>
 		<node probability-full="1" probability-medium="0" propagation-radius-rsu="170.0" propagation-radius-full="170.0" propagation-radius-medium="100.0"/>		
 		<controller direction-tolerance="12.0" average-speed-sample-small="5" average-speed-sample-high="15" use-sink="false" />		
-		<node-sampler quantity="5" movement-threshold="2.0" steer-filter-threshold="20.0" steer-filter-count="3" speed-bound="2.0" speed-variance="0.25" default-resolution="100" default-position-radius="20.0" default-position-variance="1.8" default-direction-variance="0.002" default-speed-error="0.15" > 
-			<node-class type="full" resolution="100" position-radius="20.0" position-variance="1.8" direction-variance="0.002" speed-error="0.15" />
-			<node-class type="medium" resolution="100" position-radius="20.0" position-variance="7.2" direction-variance="0.008" speed-error="1.5" /> 
+		<node-sampler quantity="5" movement-threshold="2.0" steer-filter-threshold="20.0" steer-filter-count="3" speed-bound="2.0" speed-variance="0.25" default-resolution="1000" default-position-radius="20.0" default-position-variance="1.8" default-direction-variance="0.002" default-speed-error="0.15" > 
+			<node-class type="full" resolution="1000" position-radius="20.0" position-variance="1.8" direction-variance="0.002" speed-error="0.15" />
+			<node-class type="medium" resolution="1000" position-radius="20.0" position-variance="7.2" direction-variance="0.008" speed-error="1.5" /> 
 			<!-- <node-class type="medium" resolution="1000" position-radius="20.0" position-variance="1.8" direction-variance="0.002" speed-error="0.5" /> -->
 		</node-sampler>
 		<behaviour-node enabled="true" response-time-spacing="1" sink-threshold="20.0" />

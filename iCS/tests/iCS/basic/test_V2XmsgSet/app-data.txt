@@ -2,7 +2,7 @@ dirs
   @1000
 #5000 real totc=0 : 
   @2000
-#5000 real totc=0 : 
+#5000 real totc=2 : 
   @3000
 #5000 real totc=2 : 
   @4000
@@ -34,11 +34,11 @@ dirs
   @17000
 #5000 real totc=2 : 
   @18000
-#5000 real totc=2 : 
-  @19000
-#5000 real totc=2 : 
-  @20000
 #5000 real totc=1 : 
+  @19000
+#5000 real totc=1 : 
+  @20000
+#5000 real totc=0 : 
   @21000
 #5000 real totc=0 : 
   @22000
@@ -50,4 +50,4 @@ dirs
   @25000
 #5000 real totc=0 : 
   @25000
-end tot_nodes_rsu=2 tot_nodes_rsu_shadow=0 tot_nodes_rsu_medium=0 tot_nodes_rsu_full=2 tot_packets_sent=196 tot_packets_recv=0 max_dens_rsu=2 avg_dens_rsu=1.4
+end tot_nodes_rsu=2 tot_nodes_rsu_shadow=0 tot_nodes_rsu_medium=0 tot_nodes_rsu_full=2 tot_packets_sent=434 tot_packets_recv=0 max_dens_rsu=2 avg_dens_rsu=1.36
