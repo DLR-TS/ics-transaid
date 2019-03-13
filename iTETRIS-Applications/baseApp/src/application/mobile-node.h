@@ -58,6 +58,7 @@ public:
   void updateMobilityInformation(MobilityInfo * info);
   Vector2D getPosition() const;
   Vector2D getVelocity() const;
+  int getLaneIndex() const;
   float getSpeed() const;
   float getAcceleration() const;
   double getDirection() const;

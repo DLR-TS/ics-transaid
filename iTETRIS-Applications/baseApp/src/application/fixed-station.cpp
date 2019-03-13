@@ -99,6 +99,10 @@ namespace baseapp
             return 0.0;
         }
 
+        int FixedStation::getLaneIndex() const {
+            return -1;
+        }
+
         float FixedStation::getAcceleration() const {
             return 0.0;
         }

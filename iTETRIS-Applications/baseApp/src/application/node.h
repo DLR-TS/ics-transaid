@@ -202,6 +202,7 @@ namespace baseapp
 				 */
 				virtual Vector2D getPosition() const = 0;
                 virtual Vector2D getVelocity() const = 0;
+                virtual int getLaneIndex() const = 0;
                 virtual float getSpeed() const = 0;
                 virtual float getAcceleration() const = 0;
 				virtual double getDirection() const = 0;

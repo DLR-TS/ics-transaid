@@ -90,10 +90,15 @@ namespace baseapp
 			m_position = info;
 		}
 
-		Vector2D MobileNode::getPosition() const
-		{
-			return m_position->position;
-		}
+        Vector2D MobileNode::getPosition() const
+        {
+            return m_position->position;
+        }
+
+        int MobileNode::getLaneIndex() const
+        {
+            return m_position->laneIndex;
+        }
 
 		Vector2D MobileNode::getVelocity() const
 		{

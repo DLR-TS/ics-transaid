@@ -59,6 +59,7 @@ namespace baseapp
 				//void applicationExecute();
 				Vector2D getPosition() const;
 				Vector2D getVelocity() const;
+                int getLaneIndex() const;
                 float getSpeed() const;
                 float getAcceleration() const;
 				double getDirection() const;
