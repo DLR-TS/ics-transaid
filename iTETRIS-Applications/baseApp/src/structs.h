@@ -117,6 +117,8 @@ namespace baseapp
 					id(id)
 			{
 				speed = acceleration = 0;
+				laneIndex = -1;
+				nsId = -1;
 				direction = INVALID_DIRECTION;
 				isMobile = false;
 			}
@@ -136,7 +138,14 @@ namespace baseapp
 					speed = storage.readFloat();
 					direction = ConvertDirection(storage.readFloat());
 					acceleration = storage.readFloat();
-					lane = storage.readString();
+                    lane = storage.readString();
+                    auto const pos = lane.find_last_of("_");
+                    try {
+                        laneIndex = (pos == std::string::npos) ? -1 : stoi(lane.substr(pos+1));
+                    } catch (std::invalid_argument& e) {
+                        std::cerr << "Error when parsing lane index from " << lane <<": " << e.what() << std::endl;
+                        laneIndex = -1;
+                    }
 				}
 			}
 
@@ -148,7 +157,8 @@ namespace baseapp
 			float speed;
 			float direction;
 			float acceleration;
-			std::string lane;
+            std::string lane;
+            int laneIndex;
 			static double ConvertDirection(const double direction)
 			{
 				double result = direction - 90.0;
