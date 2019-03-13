@@ -71,13 +71,14 @@ namespace baseapp
             struct CamInfo
             {
                 CamInfo() : senderID(-1), generationTime(-1), position(-1,-1),
-                        speed(0), heading(0), acceleration(0) {};
-                CamInfo(int senderID, int generationTime, application::Vector2D position,
+                        speed(0), heading(0), acceleration(0), laneIndex(-1) {};
+                CamInfo(int senderID, int generationTime, int laneIndex, application::Vector2D position,
                 float speed, float heading, float acceleration) :
                     senderID(senderID), generationTime(generationTime), position(position),
-                    speed(speed), heading(heading), acceleration(acceleration) {};
+                    speed(speed), heading(heading), acceleration(acceleration), laneIndex(laneIndex) {};
             	int senderID;
-            	int generationTime;
+                int generationTime;
+                int laneIndex;
 				application::Vector2D position;
 				float speed;
 				float heading;
