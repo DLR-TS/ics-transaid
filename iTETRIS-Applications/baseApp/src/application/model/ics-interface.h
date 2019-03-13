@@ -97,7 +97,9 @@ namespace baseapp
 				/**
 				 * @brief Get the id  of the node
 				 */
-				int GetId() const;
+                int GetId() const;
+                std::string GetSumoID(int icsID) const;
+
 				/**
 				 * @brief If the node is active
 				 */

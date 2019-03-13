@@ -150,6 +150,10 @@ namespace baseapp
 		    return SUMO_STEPLENGTH;
 		}
 
+        const std::string& Server::getSumoID(int icsID) {
+            return m_instance->GetNodeHandler()->getSumoID(icsID);
+        }
+
 		int Server::dispatchCommand()
 		{
 			int commandStart = m_inputStorage.position();

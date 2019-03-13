@@ -53,6 +53,8 @@ namespace baseapp
 		using namespace std;
 		using namespace application;
 
+		std::string NodeHandler::emptyString = "";
+
 		NodeHandler::NodeHandler(BehaviourFactory* factory) : m_factory(factory)
 		{
 			m_storage = new PayloadStorage();
@@ -293,6 +295,15 @@ namespace baseapp
                     node->processCAMmessagesReceived(nodeID ,receivedCAMmessages);
                 }
          }
+
+
+        const std::string& NodeHandler::getSumoID(int icsID) const {
+            auto nodeIt = m_nodes.find(icsID);
+            if (nodeIt == m_nodes.end()) {
+                return emptyString;
+            }
+            return nodeIt->second->getSumoId();
+        }
 
 	} /* namespace server */
 } /* namespace protocol */

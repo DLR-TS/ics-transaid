@@ -115,17 +115,14 @@ namespace baseapp
 
 				void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
 
-				//  Don't need it
-				//  bool commandTrafficSimulation();
-				//  bool resultTrafficSimulation();
-				//  bool xApplicationData();
-				//  bool notifyApplicationMessageStatus();
+				const std::string& getSumoID(int icsID) const;
 
 			private:
 				NodeMap m_nodes;
 				PayloadStorage * m_storage;
 				CircularBuffer<int> * m_timeStepBuffer;
 				application::BehaviourFactory* m_factory;
+				static std::string emptyString;
 		};
 
 	} /* namespace server */

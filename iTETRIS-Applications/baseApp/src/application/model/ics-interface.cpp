@@ -101,10 +101,10 @@ namespace baseapp
             return m_node;
         }
 
-		int iCSInterface::GetId() const
-		{
-			return m_node->getId();
-		}
+        int iCSInterface::GetId() const
+        {
+            return m_node->getId();
+        }
 
 		NodeSampler* iCSInterface::GetNodeSampler() const
 		{
@@ -725,6 +725,11 @@ namespace baseapp
 
         int iCSInterface::getSUMOStepLength() {
             return baseapp::server::Server::getSUMOStepLength();
+        }
+
+        std::string iCSInterface::GetSumoID(int icsID) const
+        {
+            return baseapp::server::Server::getSumoID(icsID);
         }
 
 	} /* namespace application */

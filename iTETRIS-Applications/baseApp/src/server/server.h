@@ -53,6 +53,9 @@ namespace baseapp
 				static NodeHandler* GetNodeHandler();
 				static int CurrentTimeStep();
 				static int getSUMOStepLength();
+                /// Returns the SUMO id for the given ics id
+                /// If the icsID is not known, an empty string is returned
+                static const std::string& getSumoID(int icsID);
 
 			private:
 				Server(application::BehaviourFactory* factory);
@@ -78,12 +81,6 @@ namespace baseapp
 				bool trafficLightInformation();
 				bool sumoTraciCommand();
                 bool getReceivedCAMinfo();
-
-				//Don't need it
-				//  bool commandTrafficSimulation();
-				//  bool resultTrafficSimulation();
-				//  bool xApplicationData();
-				//  bool notifyApplicationMessageStatus();
 
 			private:
 				static Server* m_instance;
