@@ -46,6 +46,7 @@
 #include "structs.h"
 #include "traci-helper.h"
 #include "behaviour.h"
+#include "node-handler.h"
 #include "foreign/tcpip/storage.h"
 
 namespace libsumo {
@@ -98,7 +99,13 @@ namespace baseapp
 				 * @brief Get the id  of the node
 				 */
                 int GetId() const;
-                std::string GetSumoID(int icsID) const;
+                std::string GetSumoID(int icsID = -1) const;
+
+
+                /** @brief get a reference to the map icsID -> Node*
+                 *         containing all nodes known to the application.
+                 */
+                const server::NodeMap& GetAllNodes() const;
 
 				/**
 				 * @brief If the node is active

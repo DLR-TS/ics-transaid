@@ -117,6 +117,10 @@ namespace baseapp
 
 				const std::string& getSumoID(int icsID) const;
 
+				const NodeMap& getNodes() const {
+				    return m_nodes;
+				}
+
 			private:
 				NodeMap m_nodes;
 				PayloadStorage * m_storage;

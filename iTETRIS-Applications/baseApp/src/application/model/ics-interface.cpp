@@ -729,7 +729,14 @@ namespace baseapp
 
         std::string iCSInterface::GetSumoID(int icsID) const
         {
+            if (icsID == -1) {
+                return GetNode()->getSumoId();
+            }
             return baseapp::server::Server::getSumoID(icsID);
+        }
+
+        const server::NodeMap& iCSInterface::GetAllNodes() const {
+            return server::Server::GetNodeHandler()->getNodes();
         }
 
 	} /* namespace application */
