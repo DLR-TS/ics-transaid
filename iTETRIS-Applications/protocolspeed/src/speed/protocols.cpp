@@ -159,7 +159,7 @@ namespace protocolspeedapp
 			else
 				speedTimeFilter = -1;
 			valueMap[NUMBER] = number;
-			valueMap[SPEED] = speed;
+			valueMap[baseapp::SPEED] = speed;
 			valueMap[TIME] = time;
 			valueMap[MAX_DISTANCE] = maxd;
 			valueMap[MIN_DISTANCE] = mind;
@@ -182,17 +182,17 @@ namespace protocolspeedapp
 				AggregateDataForDirection(dir->second, valueMap);
 				totNum += valueMap[NUMBER];
 				std::ostringstream out;
-				out << dir->first << "=" << valueMap[NUMBER] << ":" << valueMap[MAX_DISTANCE] << ":" << valueMap[SPEED] << ":"
+				out << dir->first << "=" << valueMap[NUMBER] << ":" << valueMap[MAX_DISTANCE] << ":" << valueMap[baseapp::SPEED] << ":"
 //						<< valueMap[TIME] << ":" << valueMap[MIN_DISTANCE] << ":" << valueMap[SPACE_MEAN_SPEED] << ":"
 						<< valueMap[TIME] << ":" << valueMap[MIN_DISTANCE] << ":" << valueMap[SPEED_TIME_SINGLE] << ":"
 						<< valueMap[SPEED_TIME] << ":" << valueMap[SPEED_TIME_FILTER];
 				flows.push_back(out.str());
-				if (valueMap[SPEED] == -1)
-					valueMap[SPEED] = 0;
+				if (valueMap[baseapp::SPEED] == -1)
+					valueMap[baseapp::SPEED] = 0;
 				if (valueMap[TIME] == -1)
 					valueMap[TIME] = 0;
 				data[dir->first] = valueMap;
-				str << "dir=" << dir->first << " num=" << valueMap[NUMBER] << " spd=" << valueMap[SPEED] << " sms="
+				str << "dir=" << dir->first << " num=" << valueMap[NUMBER] << " spd=" << valueMap[baseapp::SPEED] << " sms="
 //						<< valueMap[SPACE_MEAN_SPEED] << " st=" << valueMap[SPEED_TIME] << ":" << valueMap[SPEED_TIME_FILTER]
 						<< valueMap[SPEED_TIME_SINGLE] << " st=" << valueMap[SPEED_TIME] << ":" << valueMap[SPEED_TIME_FILTER]
 						<< " ";
