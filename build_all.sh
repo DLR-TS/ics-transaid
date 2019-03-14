@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# This builds or rebuilds sumo, ns-3, iCS, LightComm, demoApp, baseApp and testApp
+# This builds or rebuilds sumo, ns-3, iCS, LightComm and all apps
 # It understands the configurations "debug" and "profile" as parameter
 
 if test "$1" == "debug"; then
@@ -46,37 +46,22 @@ if ! make install -j8; then
 fi
 cd ..
 
-cd iTETRIS-Applications/traffic-monitor
-echo "## Building demoApp in $PWD..."
-autoreconf -i
-./configure $config_opt --prefix=$PWD/../..
-if ! make install -j8; then
-    echo "### Build failed!"
-    cd ../..
-    exit 1
-fi
-cd ../..
-
-cd iTETRIS-Applications/baseApp
-echo "## Building baseApp in $PWD..."
-autoreconf -i
-./configure $config_opt
-if ! make install -j8; then
-    echo "### Build failed!"
-    cd ../..
-    exit 1
-fi
-
-cd ../testApp
-echo "## Building testApp in $PWD..."
-autoreconf -i
-./configure $config_opt --prefix=$PWD/../..
-if ! make install -j8; then
-    echo "### Build failed!"
-    cd ../..
-    exit 1
-fi
-cd ../..
+cd iTETRIS-Applications
+for app in *; do
+    cd $app
+    if test -e configure.ac; then
+        echo "## Building app in $PWD..."
+        autoreconf -i
+        ./configure $config_opt --prefix=$PWD/../..
+        if ! make install -j8; then
+            echo "### Build failed!"
+            cd ../..
+            exit 1
+        fi
+    fi
+    cd ..
+done
+cd ..
 
 cd LightCommSimulator
 echo "## Building LightComm in $PWD..."
