@@ -300,6 +300,7 @@ namespace lightcomm
             NodeData nodeData;
             nodeData.posX=m_inputStorage.readFloat();
             nodeData.posY=m_inputStorage.readFloat();
+            nodeData.type = "RSU";
 
             m_inputStorage.readStringList(); // read list of Comm modules
 
@@ -320,6 +321,7 @@ namespace lightcomm
             NodeData nodeData;
             nodeData.posX=m_inputStorage.readFloat();
             nodeData.posY=m_inputStorage.readFloat();
+            nodeData.type = "Vehicle";
 
             m_inputStorage.readFloat(); // read speed
             m_inputStorage.readFloat(); // read heading
@@ -557,12 +559,6 @@ namespace lightcomm
         }
 
 
-
-
-
-
-
-
         void Server::ScheduleMessageTx(Message msg){
 
             msg.timeStep = CurrentTimeStep();
@@ -578,7 +574,7 @@ namespace lightcomm
 
             }
 
-            if (msg.frequency>0)
+            if (msg.frequency>0 && msg.messageType=="CAM") // Before was set to O for the CAM transmission
             {
                 double nextTime = 1/msg.frequency;
                 m_CAMeventIDMap.operator [](msg.senderId)  = Scheduler::Schedule(nextTime, &Server::ScheduleMessageTx, this, msg);
@@ -594,18 +590,26 @@ namespace lightcomm
             NodeData txData;
             txData = m_NodeMap[nodeId];
 
-            float range = 500; // Default value of the tranmission range
-            float distance;
+            float range;
+            if (txData.type == "RSU"){
+			            range = 50000; // increased to assure all message from RSU are received
+            } else{
+            	range = 50000; // increased to assure all messages are received
+            }
+
+			float distance;
 
             for (std::map<int, NodeData>::iterator nodeIt = m_NodeMap.begin(); nodeIt != m_NodeMap.end(); ++nodeIt)
             {
 
-                distance = sqrt( pow(txData.posX - nodeIt->second.posX,2) + pow(txData.posY - nodeIt->second.posY,2) );
+            	if (nodeIt->first != nodeId){
 
-                if (distance <= range){
-                    receivers.push_back(nodeIt->first);
-                }
+					distance = sqrt( pow(txData.posX - nodeIt->second.posX,2) + pow(txData.posY - nodeIt->second.posY,2) );
 
+					if (distance <= range){
+						receivers.push_back(nodeIt->first);
+					}
+            	}
             }
 
             return receivers;
@@ -657,7 +661,57 @@ namespace lightcomm
         bool Server::StartGeobroadcastTxon(void) // ToDo
         {
 
-            return true;
+        	std::vector<std::string> senderIdCollection = m_inputStorage.readStringList();
+        	std::string serviceId = m_inputStorage.readString();
+        	int commProfile  = m_inputStorage.readUnsignedByte();
+        	std::vector<std::string> technologies = m_inputStorage.readStringList();
+        	double time = m_inputStorage.readDouble();
+    		int lat = m_inputStorage.readInt();
+    		int lon = m_inputStorage.readInt();
+    		int areaSize = m_inputStorage.readInt();
+    		float frequency = m_inputStorage.readFloat();
+    		int payloadLength = m_inputStorage.readInt();
+    		float msgRegenerationTime = m_inputStorage.readFloat();
+    		int msgLifetime = m_inputStorage.readInt();
+    		int messageId = m_inputStorage.readInt();
+
+    		std::vector<unsigned char> packetTagContainer;
+
+
+    		short container_l = m_inputStorage.readShort();
+    		if (container_l > 0){
+    			for (int i = 0; i < container_l; i++)
+    			{
+    				packetTagContainer.push_back(m_inputStorage.readChar());
+    			}
+    		}
+            std::vector<std::string>::iterator senderIt;
+            for (senderIt = senderIdCollection.begin(); senderIt < senderIdCollection.end(); senderIt++)
+            {
+
+                std::string cadena = *senderIt;
+
+                std::cout << "Sender: " << cadena << " of " << senderIdCollection.size() << " with frequency " << frequency << std::endl;
+
+                stringstream temp;
+                int nodeId;
+                temp << cadena;
+                temp >> nodeId;
+
+                Server::Message msg;
+
+                msg.senderId = nodeId;
+                msg.messageId = messageId;
+                msg.messageType = "serviceIdGeobroadcast";
+                msg.frequency = frequency;
+                //msg.packetTagContainer->writePacket(packetTagContainer);
+                msg.sequenceNumber = 0; // Todo update this if frequency >1
+
+                ScheduleMessageTx(msg);
+            }
+
+    		writeStatusCmd(CMD_START_GEO_BROAD_TXON, RTYPE_OK, "StartGeobroadcastTxon ()");
+    		return true;
         }
 
         bool Server::StartGeoanycastTxon(void) // ToDo

@@ -206,6 +206,7 @@ namespace lightcomm
                 struct NodeData {
                     float posX;
                     float posY;
+                    std::string type;
                 };
 
                 // Table that stores all the received messages

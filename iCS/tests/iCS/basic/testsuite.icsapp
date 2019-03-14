@@ -50,3 +50,6 @@ testApp_getDrivingDistance
 
 # Tests transaid headers
 test_V2XmsgSet
+
+# Tests transaid headers
+test_V2XmsgSet_lightcomm

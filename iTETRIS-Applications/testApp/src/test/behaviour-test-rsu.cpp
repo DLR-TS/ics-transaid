@@ -384,7 +384,7 @@ namespace testapp
 
             TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CAM, message);
             GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
-            //std::cout << "Send CAM at node " << GetController()->GetId() <<  std::endl;
+            std::cout << "Send CAM at node " << GetController()->GetId() <<  std::endl;
         }
 
         void BehaviourTestRSU::SendDENM()
@@ -399,7 +399,7 @@ namespace testapp
 
             TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_DENM, message);
             GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
-            //std::cout << "Send DENM at node " << GetController()->GetId() <<  std::endl;
+            std::cout << "Send DENM at node " << GetController()->GetId() <<  std::endl;
         }
 
         void BehaviourTestRSU::SendCPM()
@@ -415,7 +415,7 @@ namespace testapp
 			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CPM, message);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
 
-            //std::cout << "Send CPM at node " << GetController()->GetId() <<  std::endl;
+            std::cout << "Send CPM at node " << GetController()->GetId() <<  std::endl;
         }
 
 
@@ -442,7 +442,7 @@ namespace testapp
 			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN,   TRANSAID_MCM_RSU, message);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
 
-            //std::cout << "Send MCM at node " << GetController()->GetId() <<  std::endl;
+            std::cout << "Send MCM at node " << GetController()->GetId() <<  std::endl;
         }
 
         void BehaviourTestRSU::SendMAP()
@@ -458,7 +458,7 @@ namespace testapp
 			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_MAP, message);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
 
-            //std::cout << "Send MAP at node " << GetController()->GetId() <<  std::endl;
+            std::cout << "Send MAP at node " << GetController()->GetId() <<  std::endl;
         }
 
         void BehaviourTestRSU::SendIVI()
@@ -473,7 +473,7 @@ namespace testapp
 			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_IVI, message);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
 
-            //std::cout << "Send IVI at node " << GetController()->GetId() <<  std::endl;
+            std::cout << "Send IVI at node " << GetController()->GetId() <<  std::endl;
         }
 
 
