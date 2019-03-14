@@ -520,7 +520,7 @@ int main(int argc, char **argv)
         if (!oc.getString("ns3-log-path").empty())
             ns3Call += " --logFile=" + oc.getString("ns3-log-path");
 
-//        // Debug hook
+////        // Debug hook
 //        ns3Call = "echo 'Bypassing ns3 launch. Type\n" + ns3Call + "\nto start manually.'";
 
         char* ns3Chain = strdup(ns3Call.c_str());
@@ -530,6 +530,9 @@ int main(int argc, char **argv)
     }else{
         //Launch Lightcomm simulator
         std::string lightcommCall= oc.getString("communication-executable");
+//        // Debug hook
+//        lightcommCall = "echo 'Bypassing lightcomm launch. Type\n" + lightcommCall + "\nto start manually. (Expected socket port: " + toString(commPort) + "";
+
         char* executable_lightcomm =strdup(lightcommCall.c_str());
         pthread_create(&ns3Thread, NULL, launchSystemExecutable, (void *) executable_lightcomm);
         cout << "iCS --> lightcomm launched." << endl;
