@@ -12,86 +12,38 @@ $ cd transaid
 $ git checkout transaid-dev
 $ git submodule update --init
 
+or if you already have a checkout
+
+$ cd transaid
+$ git pull
+$ git checkout transaid-dev
+$ git submodule update
+
 The "original" repository containing the master branch for iTetris is located at https://gitlab.eurecom.fr/iTETRIS/iTETRIS-release
 
-For steps 3-8 you can use the script install_all.sh (if something changes here, please update the script!)
+--------------------------------
+Step 3 - (Re-)Build everything
+$ ./build_all.sh
+
+alternatively
+
+$ ./build_all.sh debug
 
 --------------------------------
-Step 3 - Build SUMO
-$ export SUMO_HOME=$PWD/share/sumo
-$ mkdir sumo/build/cmake-build
-$ cd sumo/build/cmake-build
-$ cmake ../.. -DSUMO_UTILS=TRUE -DCMAKE_INSTALL_PREFIX=$PWD/../../..
-$ make -j8
-$ make install
-$ cd ../../..
+Step 4 - Set required environment variables
+$ . ./setenv.sh
 
 --------------------------------
-Step 4 - Build NS-3.20
-$ cd ns-3.20
-$ ./waf configure --prefix=$PWD/..
-$ ./waf -j8
-$ ./waf install
-$ cd ..
-
---------------------------------
-Step 5 - Build ICS
-$ cd iCS
-$ autoreconf -i
-$ ./configure --prefix=$PWD/..
-$ make -j
-$ make install
-$ cd ..
-
---------------------------------
-# Step 6 [optional, rather use testApp] - Build iTETRIS app
-# $ cd iTETRIS-Applications/traffic-monitor
-# $ autoreconf -i
-# $ ./configure --prefix=$PWD/../..
-# $ make -j
-# $ make install
-# $ cd ../..
-
---------------------------------
-Step 7 - Build testApp
-$ cd iTETRIS-Applications/baseApp
-$ autoreconf -i
-$ ./configure
-$ make -j
-$ cd ../testApp
-$ autoreconf -i
-$ ./configure --prefix=$PWD/../..
-$ make -j
-$ make install
-$ cd ../..
-
---------------------------------
-Step 8 - Build the light-weight communication simulator
-$ cd LightCommSimulator
-$ autoreconf -i
-$ ./configure --prefix=$PWD/..
-$ make -j
-$ make install
-$ cd ..
-
-When changing the baseApp remember to rebuild baseApp and afterwards every derived app (e.g. the testApp).
-
---------------------------------
-Step 9 - Set required environment variables
-$ export PATH=$PWD/bin:$PATH
-$ export LD_LIBRARY_PATH=$PWD/lib
-
---------------------------------
-# Step 10 [optional, rather use testApp] - Run the iTETRIS application
+# Step 5 [optional, rather use testApp] - Run the iTETRIS application
 # $ cd iTETRIS-Applications/traffic-monitor/acosta
 # $ iCS -c itetris-config-file-gui-ns3.20.xml
 
 --------------------------------
-Step 11 - Run the iTETRIS application
+Step 6 - Run the iTETRIS application
 $ cd iTETRIS-Applications/testApp/testScenario
 $ iCS -c itetris-config-file-gui-ns3.20.xml
 
 --------------------------------
-Step 12 - Run the tests
+Step 7 - Run the tests
 $ cd iCS/tests/
 $ ./runTests.sh

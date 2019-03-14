@@ -18,16 +18,4 @@ RUN apt-get -y install psmisc vim git cmake autoconf automake libtool libxerces-
 RUN pip install texttest
 
 RUN git clone --recursive https://$CREDS@gitlab.imet.gr/hit/transaid
-RUN cd transaid; git checkout transaid-dev; git submodule update --init
-
-RUN cd transaid/sumo; mkdir build/cmake-build; cd build/cmake-build; cmake ../.. -DSUMO_UTILS=TRUE -DCMAKE_INSTALL_PREFIX=$PWD/../../..; make -j; make install
-
-RUN cd transaid/ns-3.20; ./waf configure --prefix=$PWD/..; ./waf -j8; ./waf install
-
-RUN cd transaid/iCS; autoreconf -i; ./configure --prefix=$PWD/..; make -j; make install
-
-RUN cd transaid/iTETRIS-Applications/traffic-monitor; autoreconf -i; ./configure --prefix=$PWD/../..; make -j; make install
-
-RUN cd transaid/iTETRIS-Applications/baseApp; autoreconf -i; ./configure; make -j
-
-RUN cd transaid/iTETRIS-Applications/testApp; autoreconf -i; ./configure --prefix=$PWD/../..; make -j; make install
+RUN cd transaid; git checkout transaid-dev; git submodule update --init; ./build_all.sh
