@@ -51,11 +51,12 @@ namespace lightcomm
 
 	int ProgramConfiguration::m_socket;
 
-	int ProgramConfiguration::LoadConfiguration(const char * fileName)
+	int ProgramConfiguration::LoadConfiguration(const char * fileName, int port)
 	{
         std::cout << "Lightcomm: Loading Configuration" << endl;
 
-		XMLDocument * doc = new XMLDocument();
+
+        XMLDocument * doc = new XMLDocument();
 		XMLError result = doc->LoadFile(fileName);
 		if (result != XML_NO_ERROR)
 		{
@@ -68,7 +69,8 @@ namespace lightcomm
         {
             return EXIT_FAILURE;
         }
-        m_socket = xmlElem->IntAttribute("value");
+        // m_socket = xmlElem->IntAttribute("value"); Commented to obtain directly the port from the iCS
+        m_socket = port;
         std::cout << "The port employed is " << m_socket << endl;
 
 		delete doc;
@@ -81,6 +83,7 @@ namespace lightcomm
 
 		return EXIT_SUCCESS;
 	}
+
 
 
 } /* namespace lightcomm */

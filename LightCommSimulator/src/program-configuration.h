@@ -52,7 +52,7 @@ namespace lightcomm
 class ProgramConfiguration
 {
 public:
-    static int LoadConfiguration(const char* fileName);
+	static int LoadConfiguration(const char* fileName, int port);
 
 
     static int GetSocketPort()
@@ -60,11 +60,12 @@ public:
         return m_socket;
     }
 
-
 private:
     ProgramConfiguration();
     ~ProgramConfiguration();
+
     static int ParseGeneral(tinyxml2::XMLElement * general);
+
 
 private:
     static int m_socket;

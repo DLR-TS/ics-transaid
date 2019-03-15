@@ -529,7 +529,9 @@ int main(int argc, char **argv)
         Sleep(1);
     }else{
         //Launch Lightcomm simulator
-        std::string lightcommCall= oc.getString("communication-executable");
+        std::string lightcommCall;
+		lightcommCall = oc.getString("communication-executable")+ " ";
+        lightcommCall += " --remotePort "  + to_string(commPort);
 //        // Debug hook
 //        lightcommCall = "echo 'Bypassing lightcomm launch. Type\n" + lightcommCall + "\nto start manually. (Expected socket port: " + toString(commPort) + "";
 

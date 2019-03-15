@@ -93,27 +93,44 @@ int main(int argc, char **argv)
 {
     int ret = 0;
 
-    if (argc != 2 && argc != 3)
+    if (argc != 2 && argc != 3 && argc != 5)
     {
-      return -1;
+      //  Console::Error("Wrong number of command line arguments.");
+      //  Console::Error("Usage: lightcomm [-c] <config-file> [--remote-port <port>]");
+    	std::cout << "Lightcomm: Wrong number of command line arguments" << endl;
+        return -1;
     }
     char * configFile;
-    if (argc == 2)
-      configFile = argv[1];
-    else
-    {
-      std::string arg(argv[1]);
-      if (arg != "-c")
-      {
-        return -2;
-      }
-      configFile = argv[2];
+    int port = -1;
+    if (argc == 2) {
+        configFile = argv[1];
+    } else if (argc >= 3) {
+        std::string arg(argv[1]);
+        if (arg == "-c") {
+            configFile = argv[2];
+        } else {
+          //  Console::Error("Expected '-c' read " + arg + " Usage: lightcomm [-c] <config-file> [--remote-port <port>]");
+        	std::cout << "Expected '-c' read " + arg + " Usage: lightcomm [-c] <config-file> [--remote-port <port>]" << endl;
+            return -2;
+        }
+        if (argc == 5) {
+            arg = std::string(argv[3]);
+            if (arg == "--remotePort") {
+                port = atoi(argv[4]);
+            } else {
+                //Console::Error("Expected '--remote-port' read " + arg + " Usage: lightcomm [-c] <config-file> [--remote-port <port>]");
+            	std::cout << "Expected '--remote-port' read " + arg + " Usage: lightcomm [-c] <config-file> [--remote-port <port>]" << endl;
+                return -2;
+            }
+        }
     }
+
+
 
     try
     {
       // start-up
-     ProgramConfiguration::LoadConfiguration(configFile);
+     ProgramConfiguration::LoadConfiguration(configFile,port);
 
       // Start the server
       server::Server::RunServer();
