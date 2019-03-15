@@ -20,7 +20,7 @@
     <communicationsim>
 	<communication-executable value="lightcomm -c lightcomm-config-file.xml"/>
         <communication-host value="localhost"/>
-        <communication-port value="1982"/>	
+        <communication-port value="0"/>	
         <communication-general-params-file value="./ns3/configGeneral.ns3.20.txt"/>
         <communication-config-technologies-file value="./ns3/configTechnologies-ics.xml"/>
     </communicationsim>
