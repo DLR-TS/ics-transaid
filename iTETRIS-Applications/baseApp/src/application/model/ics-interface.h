@@ -273,6 +273,10 @@ namespace baseapp
                 ///        see http://sumo.dlr.de/wiki/TraCI/Change_Vehicle_State
                 void commandTraciChangeLane(const std::string vehID, const int laneIndex, const double duration);
 
+                /// @brief Sets the vehicle's lane change mode as a bitset.
+                ///        see https://sumo.dlr.de/wiki/TraCI/Change_Vehicle_State
+                void commandTraciLaneChangeMode(const std::string vehID, const int lcm);
+
                 /// @brief Get the driving distance to given edge and position
                 ///        see http://sumo.dlr.de/wiki/TraCI/Vehicle_Value_Retrieval
                 void commandTraciGetDrivingDistance(const std::string edgeID, const double pos, const int laneIndex = 0);

@@ -603,6 +603,22 @@ namespace baseapp
             }
         }
 
+				void iCSInterface::commandTraciLaneChangeMode(const std::string vehID, const int lcm)
+        {
+            if (vehID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_SET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_LANECHANGE_MODE;
+								int varTypeID = libsumo::TYPE_INTEGER;
+
+                tcpip::Storage content;
+                content.writeInt(lcm);
+
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(vehID, cmdID, varID, varTypeID, &content);
+            }
+        }
+
         void iCSInterface::commandTraciGetDrivingDistance(const std::string edgeID, const double pos, const int laneIndex)
         {
             if (m_node->getSumoId() != INVALID_STRING)
