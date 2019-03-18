@@ -9,7 +9,8 @@ if test "$1" == "debug"; then
     waf_opt="--build-profile=debug"
 fi
 if test "$1" == "profile"; then
-    config_opt="CXXFLAGS=-pg --enable-debug"
+    export CXXFLAGS=-pg
+    config_opt="--enable-debug"
     cmake_opt="-DCMAKE_BUILD_TYPE=Debug -DPROFILING=ON"
 fi
 
