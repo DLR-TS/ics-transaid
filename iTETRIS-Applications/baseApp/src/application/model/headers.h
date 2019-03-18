@@ -38,6 +38,7 @@
 
 #include "vector.h"
 #include "common.h"
+#include <memory>
 #include <stdint.h>
 
 namespace baseapp
@@ -104,8 +105,11 @@ namespace baseapp
 
 
 
+            struct Advice {
+                virtual ~Advice() {};
+            };
 
-            struct LaneChangeAdviceInfo
+            struct LaneChangeAdvice : Advice
             {
             	int laneChangeposition;
             	int laneChangeTime;
@@ -116,37 +120,71 @@ namespace baseapp
             	int TriggerPointToC;
             };
 
-            struct CarFollowingAdviceInfo
+            struct GapAdvice : Advice
             {
-            	int laneId;
-            	int carFollowingPosition;
-            	int targetGap;
-            	int targetSpeed;
+                int laneId;
+                int carFollowingPosition;
+                int targetGap;
+                int targetSpeed;
             };
 
-            struct ToCAdviceInfo
+            struct SpeedAdvice : Advice
             {
-                int tocStartPosition;
-            	int tocTime;
-            	int tocEndPosition;
+                int laneId;
+                int carFollowingPosition;
+                int targetGap;
+                int targetSpeed;
+            };
+
+            struct ToCAdvice : Advice
+            {
+                double tocStartPosition;
+            	double tocTime;
+            	double tocEndPosition;
             };
 
             struct AdviceInfo
             {
+                AdviceInfo(AdviceType adviceType, std::shared_ptr<Advice> advice) :
+                    adviceType(adviceType), advice(advice), adviceId(0), targetId(0) {};
             	AdviceType adviceType;
             	int adviceId;
             	int targetId;
-            	LaneChangeAdviceInfo laneChangeAdvice;
-            	CarFollowingAdviceInfo carFollowingAdvice;
-            	ToCAdviceInfo tocAdvice;
+            	std::shared_ptr<Advice> advice;
+            private:
+            	AdviceInfo();
             };
 
             struct McmRsuInfo
             {
+                McmRsuInfo(int senderID, int generationTime, AdviceType adviceType) :
+                senderID(senderID), generationTime(generationTime)
+                {
+                    std::shared_ptr<Advice> advice;
+                    switch (adviceType) {
+                    case (LANE_CHANGE): {
+                        advice = std::make_shared<LaneChangeAdvice>();
+                        break;
+                    }
+                    case(SPEED): {
+                        advice = std::make_shared<SpeedAdvice>();
+                        break;
+                    }
+                    case(GAP): {
+                        advice = std::make_shared<GapAdvice>();
+                        break;
+                    }
+                    case(TOC): {
+                        advice = std::make_shared<ToCAdvice>();
+                        break;
+                    }
+                    default: {}
+                    }
+                    adviceInfo = std::make_shared<AdviceInfo>(adviceType, advice);
+                };
             	int senderID;
             	int generationTime;
-            	int numberAdvices;
-            	AdviceInfo advices[5];
+            	std::shared_ptr<AdviceInfo> adviceInfo;
             };
 
 

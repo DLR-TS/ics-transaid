@@ -132,12 +132,12 @@ namespace testapp
                 /// @}
                 int m_broadcastCheckInterval;
 
-                TransaidHeader::CamInfo m_lastCAMsent;
-                TransaidHeader::DenmInfo m_lastDENMsent;
-                TransaidHeader::CpmInfo m_lastCPMsent;
-                TransaidHeader::McmRsuInfo m_lastMCMsent;
-                TransaidHeader::MapInfo m_lastMAPsent;
-                TransaidHeader::IviInfo m_lastIVIsent;
+                TransaidHeader::CamInfo * m_lastCAMsent;
+                TransaidHeader::DenmInfo * m_lastDENMsent;
+                TransaidHeader::CpmInfo * m_lastCPMsent;
+                TransaidHeader::McmRsuInfo * m_lastMCMsent;
+                TransaidHeader::MapInfo * m_lastMAPsent;
+                TransaidHeader::IviInfo * m_lastIVIsent;
 		};
 
 	} /* namespace application */

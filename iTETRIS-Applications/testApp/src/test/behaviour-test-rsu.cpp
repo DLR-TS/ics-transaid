@@ -60,6 +60,12 @@ namespace testapp
 				m_lastVType("NONE"),m_eventBroadcastCAM(0), m_eventBroadcastDENM(0),m_eventBroadcastCPM(0), m_eventBroadcastMCM(0), m_eventBroadcastIVI(0), m_eventBroadcastMAP(0)
 		{
             m_mobilitySubscription = m_trafficLightSubscription = m_setCAMareaSubscription = m_subReceiveMessage = false;
+            m_lastCAMsent = nullptr;
+            m_lastCPMsent = nullptr;
+            m_lastDENMsent = nullptr;
+            m_lastIVIsent = nullptr;
+            m_lastMAPsent = nullptr;
+            m_lastMCMsent = nullptr;
 		}
 
 		BehaviourTestRSU::~BehaviourTestRSU() {
@@ -310,7 +316,7 @@ namespace testapp
 
             // Check CAM Tx
 
-            if ((CurrentTime::Now() - m_lastCAMsent.generationTime)>1000)
+            if (m_lastCAMsent == nullptr || (CurrentTime::Now() - m_lastCAMsent->generationTime)>1000)
             {
 
             	double nextTime = m_rnd.GetValue(0, 50); // introduce random value to avoid collissions
@@ -319,7 +325,7 @@ namespace testapp
 
             // Check DENM Tx
 
-            if ((CurrentTime::Now() - m_lastDENMsent.generationTime)>2000)
+            if (m_lastDENMsent == nullptr || (CurrentTime::Now() - m_lastDENMsent->generationTime)>2000)
             {
 
             	double nextTime = m_rnd.GetValue(0, 50); // introduce random value to avoid collissions
@@ -328,7 +334,7 @@ namespace testapp
 
             // Check CPM Tx
 
-			if ( (CurrentTime::Now() - m_lastCPMsent.generationTime)>1000  )
+			if (m_lastCPMsent == nullptr || (CurrentTime::Now() - m_lastCPMsent->generationTime)>1000  )
 			{
 
 				double nextTime = m_rnd.GetValue(0, 50); // introduce random value to avoid collisions
@@ -337,7 +343,7 @@ namespace testapp
 
 			// Check MCM Tx
 
-			if ( (CurrentTime::Now() - m_lastMCMsent.generationTime)>3000 )
+			if (m_lastMCMsent == nullptr || (CurrentTime::Now() - m_lastMCMsent->generationTime)>3000 )
 			{
 
 				double nextTime = m_rnd.GetValue(0, 50); // introduce random value to avoid collisions
@@ -347,7 +353,7 @@ namespace testapp
 
 			// Check MAP Tx
 
-			if ( (CurrentTime::Now() - m_lastMAPsent.generationTime)>1500 )
+			if (m_lastMAPsent == nullptr || (CurrentTime::Now() - m_lastMAPsent->generationTime)>1500 )
 			{
 
 				double nextTime = m_rnd.GetValue(0, 50); // introduce random value to avoid collisions
@@ -357,7 +363,7 @@ namespace testapp
 
 			// Check IVI Tx
 
-			if ( (CurrentTime::Now() - m_lastIVIsent.generationTime)>2000 )
+			if (m_lastIVIsent == nullptr || (CurrentTime::Now() - m_lastIVIsent->generationTime)>2000 )
 			{
 
 				double nextTime = m_rnd.GetValue(0, 50); // introduce random value to avoid collisions
@@ -380,7 +386,7 @@ namespace testapp
             message->speed = 0 ; // TODO update correctly
             message->acceleration = 0 ; //TODO update correctly
 
-            m_lastCAMsent = *message;
+            m_lastCAMsent = message;
 
             TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CAM, message);
             GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
@@ -395,7 +401,7 @@ namespace testapp
             message->senderID = GetController()->GetId();
             message->denmType = ROAD_WORKS; // TODO use the appropiate denmType for each use case
 
-            m_lastDENMsent = *message;
+            m_lastDENMsent = message;
 
             TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_DENM, message);
             GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
@@ -410,7 +416,7 @@ namespace testapp
 			message->senderID = GetController()->GetId();
 			message->numObstacles = 1;
 
-			m_lastCPMsent = *message;
+			m_lastCPMsent = message;
 
 			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CPM, message);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
@@ -421,23 +427,14 @@ namespace testapp
 
         void BehaviourTestRSU::SendMCM()
         {
+        	TransaidHeader::McmRsuInfo * message = new TransaidHeader::McmRsuInfo(GetController()->GetId(), CurrentTime::Now(), TOC);
+			message->adviceInfo->adviceId = 1;
+			std::shared_ptr<TransaidHeader::ToCAdvice> tocAdvice = std::dynamic_pointer_cast<TransaidHeader::ToCAdvice>(message->adviceInfo->advice);
+			tocAdvice->tocEndPosition = 10;
+            tocAdvice->tocStartPosition = 1;
+            tocAdvice->tocTime = 2000;
 
-        	TransaidHeader::ToCAdviceInfo tocAdvice;
-        	tocAdvice.tocEndPosition = 10;
-        	tocAdvice.tocStartPosition = 1;
-        	tocAdvice.tocTime = 2000;
-
-			TransaidHeader::AdviceInfo adviceInfo;
-        	adviceInfo.adviceId = 1;
-        	adviceInfo.adviceType = TOC;
-        	adviceInfo.tocAdvice = tocAdvice;
-
-        	TransaidHeader::McmRsuInfo * message = new TransaidHeader::McmRsuInfo();
-			message->generationTime = CurrentTime::Now();
-			message->senderID = GetController()->GetId();
-			message->advices[1] = adviceInfo;
-
-			m_lastMCMsent = *message;
+			m_lastMCMsent = message;
 
 			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN,   TRANSAID_MCM_RSU, message);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
@@ -453,7 +450,7 @@ namespace testapp
 			message->senderID = GetController()->GetId();
 
 
-			m_lastMAPsent = *message;
+			m_lastMAPsent = message;
 
 			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_MAP, message);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
@@ -469,7 +466,7 @@ namespace testapp
 			message->senderID = GetController()->GetId();
 
 
-			m_lastIVIsent = *message;
+			m_lastIVIsent = message;
 			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_IVI, message);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
 

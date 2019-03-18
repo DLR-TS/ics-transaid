@@ -43,6 +43,7 @@
 #include "current-time.h"
 #include "libsumo/TraCIDefs.h"
 #include <cmath>
+#include <memory>
 
 using namespace baseapp;
 using namespace baseapp::application;
@@ -218,14 +219,11 @@ namespace testapp
 
 					std::cout << "Received MCM from a RSU at node " << GetController()->GetId() << "  sender " << mcmInfo->senderID << " time " << mcmInfo->generationTime  << std::endl;
 
-		        	TransaidHeader::ToCAdviceInfo tocAdvice;
-					TransaidHeader::AdviceInfo adviceInfo;
+					std::shared_ptr<TransaidHeader::AdviceInfo> adviceInfo = mcmInfo->adviceInfo;;
+					std::shared_ptr<TransaidHeader::ToCAdvice> tocAdvice = std::dynamic_pointer_cast<TransaidHeader::ToCAdvice>(adviceInfo->advice);
 
-					adviceInfo = mcmInfo->advices[1];
-					tocAdvice = adviceInfo.tocAdvice;
-
-					std::cout << "Received MCM from a RSU with a ToC advice at time " << tocAdvice.tocTime << " and start position " << tocAdvice.tocStartPosition <<
-							" and end position " << tocAdvice.tocEndPosition << std::endl;
+					std::cout << "Received MCM from a RSU with a ToC advice at time " << tocAdvice->tocTime << " and start position " << tocAdvice->tocStartPosition <<
+							" and end position " << tocAdvice->tocEndPosition << std::endl;
 
 
 					return;
