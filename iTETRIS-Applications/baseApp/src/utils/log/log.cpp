@@ -129,7 +129,7 @@ string Log::GetTime()
 
 bool Log::Write(const char* message, const LogLevel messageLogLevel)
 {
-	Write(0, message, messageLogLevel);
+	return Write(0, message, messageLogLevel);
 }
 
 bool Log::Write(const int index, const char* message, const LogLevel messageLogLevel)
