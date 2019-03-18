@@ -1,0 +1,12 @@
+[2018-09-19T13:49:26.341] [0,000] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2018-09-19T13:49:26.342] [0,000] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2018-09-19T13:49:26.342] [0,000] Tics=0 MsgQueue=0
+[2018-09-19T13:49:26.342] [0,000] [INFO] Reached CommandSimulationStep... = 
+[2018-09-19T13:49:26.342] [0,000] [INFO] Message Sent...
+[2018-09-19T13:49:26.346] [0,000] [INFO] Message Received.
+[2018-09-19T13:49:26.346] [0,000] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2018-09-19T13:49:26.346] [0,000] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2018-09-19T13:49:26.346] [0,000] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2018-09-19T13:49:33.713] [0,000] [INFO] RunOneSumoTimeStep() Error trying to command simulation step in traffic simulator.

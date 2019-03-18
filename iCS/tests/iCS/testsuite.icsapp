@@ -1,8 +1,11 @@
 # testing meta processing
 meta
 
-# initial tests
+# basic tests
 basic
+
+# basic tests employing lightcomm instead of ns3
+basic_lightcomm
 bugs
 
 # Tests for the demo app provided by the iTETRIS 2.0 release by EURECOM.

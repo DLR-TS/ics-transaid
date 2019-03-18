@@ -1,0 +1,2204 @@
+Test App NS-Log File
+===============================
+[2019-01-28T10:56:32.617] [INFO ] Schedule at 1000
+[2019-01-28T10:56:34.634] [DEBUG] #@# Current timestep -1000
+[2019-01-28T10:56:34.634] [INFO ] [Scheduler] Notify time: -1000. Current size: 1
+[2019-01-28T10:56:34.634] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.634] [INFO ] [-1000][Scheduler] next at 1000 in 2000
+[2019-01-28T10:56:34.634] [DEBUG] (RSU 5000): Added behaviour TestRSU
+[2019-01-28T10:56:34.634] [FUNCT] void baseapp::application::iCSInterface::Activate():~(RSU 5000): 
+[2019-01-28T10:56:34.634] [INFO ] (RSU 5000): : Activated
+[2019-01-28T10:56:34.634] [FUNCT] virtual void baseapp::application::Behaviour::Start():~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:34.634] [INFO ] TracedCallback StartToggle number of calls 0
+[2019-01-28T10:56:34.634] [INFO ] TracedCallback StateChange number of calls 0
+[2019-01-28T10:56:34.636] [DEBUG] #@# Current timestep 0
+[2019-01-28T10:56:34.636] [INFO ] [Scheduler] Notify time: 0. Current size: 1
+[2019-01-28T10:56:34.636] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.636] [INFO ] [0][Scheduler] next at 1000 in 1000
+[2019-01-28T10:56:34.637] [DEBUG] #@# Current timestep 50
+[2019-01-28T10:56:34.637] [INFO ] [Scheduler] Notify time: 50. Current size: 1
+[2019-01-28T10:56:34.637] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.637] [INFO ] [50][Scheduler] next at 1000 in 950
+[2019-01-28T10:56:34.638] [DEBUG] #@# Current timestep 100
+[2019-01-28T10:56:34.638] [INFO ] [Scheduler] Notify time: 100. Current size: 1
+[2019-01-28T10:56:34.638] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.638] [INFO ] [100][Scheduler] next at 1000 in 900
+[2019-01-28T10:56:34.639] [DEBUG] #@# Current timestep 150
+[2019-01-28T10:56:34.639] [INFO ] [Scheduler] Notify time: 150. Current size: 1
+[2019-01-28T10:56:34.639] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.639] [INFO ] [150][Scheduler] next at 1000 in 850
+[2019-01-28T10:56:34.640] [DEBUG] #@# Current timestep 200
+[2019-01-28T10:56:34.640] [INFO ] [Scheduler] Notify time: 200. Current size: 1
+[2019-01-28T10:56:34.640] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.640] [INFO ] [200][Scheduler] next at 1000 in 800
+[2019-01-28T10:56:34.641] [DEBUG] #@# Current timestep 250
+[2019-01-28T10:56:34.641] [INFO ] [Scheduler] Notify time: 250. Current size: 1
+[2019-01-28T10:56:34.641] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.641] [INFO ] [250][Scheduler] next at 1000 in 750
+[2019-01-28T10:56:34.642] [DEBUG] #@# Current timestep 300
+[2019-01-28T10:56:34.642] [INFO ] [Scheduler] Notify time: 300. Current size: 1
+[2019-01-28T10:56:34.642] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.642] [INFO ] [300][Scheduler] next at 1000 in 700
+[2019-01-28T10:56:34.642] [DEBUG] #@# Current timestep 350
+[2019-01-28T10:56:34.642] [INFO ] [Scheduler] Notify time: 350. Current size: 1
+[2019-01-28T10:56:34.642] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.642] [INFO ] [350][Scheduler] next at 1000 in 650
+[2019-01-28T10:56:34.643] [DEBUG] #@# Current timestep 400
+[2019-01-28T10:56:34.643] [INFO ] [Scheduler] Notify time: 400. Current size: 1
+[2019-01-28T10:56:34.643] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.643] [INFO ] [400][Scheduler] next at 1000 in 600
+[2019-01-28T10:56:34.644] [DEBUG] #@# Current timestep 450
+[2019-01-28T10:56:34.644] [INFO ] [Scheduler] Notify time: 450. Current size: 1
+[2019-01-28T10:56:34.644] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.644] [INFO ] [450][Scheduler] next at 1000 in 550
+[2019-01-28T10:56:34.645] [DEBUG] #@# Current timestep 500
+[2019-01-28T10:56:34.645] [INFO ] [Scheduler] Notify time: 500. Current size: 1
+[2019-01-28T10:56:34.645] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.645] [INFO ] [500][Scheduler] next at 1000 in 500
+[2019-01-28T10:56:34.646] [DEBUG] #@# Current timestep 550
+[2019-01-28T10:56:34.646] [INFO ] [Scheduler] Notify time: 550. Current size: 1
+[2019-01-28T10:56:34.646] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.646] [INFO ] [550][Scheduler] next at 1000 in 450
+[2019-01-28T10:56:34.647] [DEBUG] #@# Current timestep 600
+[2019-01-28T10:56:34.647] [INFO ] [Scheduler] Notify time: 600. Current size: 1
+[2019-01-28T10:56:34.647] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.647] [INFO ] [600][Scheduler] next at 1000 in 400
+[2019-01-28T10:56:34.648] [DEBUG] #@# Current timestep 650
+[2019-01-28T10:56:34.648] [INFO ] [Scheduler] Notify time: 650. Current size: 1
+[2019-01-28T10:56:34.648] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.648] [INFO ] [650][Scheduler] next at 1000 in 350
+[2019-01-28T10:56:34.649] [DEBUG] #@# Current timestep 700
+[2019-01-28T10:56:34.649] [INFO ] [Scheduler] Notify time: 700. Current size: 1
+[2019-01-28T10:56:34.649] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.649] [INFO ] [700][Scheduler] next at 1000 in 300
+[2019-01-28T10:56:34.650] [DEBUG] #@# Current timestep 750
+[2019-01-28T10:56:34.650] [INFO ] [Scheduler] Notify time: 750. Current size: 1
+[2019-01-28T10:56:34.650] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.650] [INFO ] [750][Scheduler] next at 1000 in 250
+[2019-01-28T10:56:34.651] [DEBUG] #@# Current timestep 800
+[2019-01-28T10:56:34.651] [INFO ] [Scheduler] Notify time: 800. Current size: 1
+[2019-01-28T10:56:34.651] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.651] [INFO ] [800][Scheduler] next at 1000 in 200
+[2019-01-28T10:56:34.652] [DEBUG] #@# Current timestep 850
+[2019-01-28T10:56:34.652] [INFO ] [Scheduler] Notify time: 850. Current size: 1
+[2019-01-28T10:56:34.652] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.652] [INFO ] [850][Scheduler] next at 1000 in 150
+[2019-01-28T10:56:34.652] [DEBUG] #@# Current timestep 900
+[2019-01-28T10:56:34.653] [INFO ] [Scheduler] Notify time: 900. Current size: 1
+[2019-01-28T10:56:34.653] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.653] [INFO ] [900][Scheduler] next at 1000 in 100
+[2019-01-28T10:56:34.653] [DEBUG] #@# Current timestep 950
+[2019-01-28T10:56:34.653] [INFO ] [Scheduler] Notify time: 950. Current size: 1
+[2019-01-28T10:56:34.653] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.653] [INFO ] [950][Scheduler] next at 1000 in 50
+[2019-01-28T10:56:34.655] [DEBUG] #@# Current timestep 1000
+[2019-01-28T10:56:34.655] [INFO ] [Scheduler] Notify time: 1000. Current size: 1
+[2019-01-28T10:56:34.655] [INFO ] Schedule at 2000
+[2019-01-28T10:56:34.655] [INFO ] [Scheduler] 1 have been executed.
+[2019-01-28T10:56:34.655] [INFO ] [1000][Scheduler] next at 2000 in 1000
+[2019-01-28T10:56:34.656] [DEBUG] #@# Current timestep 1050
+[2019-01-28T10:56:34.656] [INFO ] [Scheduler] Notify time: 1050. Current size: 1
+[2019-01-28T10:56:34.656] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.656] [INFO ] [1050][Scheduler] next at 2000 in 950
+[2019-01-28T10:56:34.657] [DEBUG] #@# Current timestep 1100
+[2019-01-28T10:56:34.657] [INFO ] [Scheduler] Notify time: 1100. Current size: 1
+[2019-01-28T10:56:34.657] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.657] [INFO ] [1100][Scheduler] next at 2000 in 900
+[2019-01-28T10:56:34.658] [DEBUG] #@# Current timestep 1150
+[2019-01-28T10:56:34.658] [INFO ] [Scheduler] Notify time: 1150. Current size: 1
+[2019-01-28T10:56:34.658] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.658] [INFO ] [1150][Scheduler] next at 2000 in 850
+[2019-01-28T10:56:34.659] [DEBUG] #@# Current timestep 1200
+[2019-01-28T10:56:34.659] [INFO ] [Scheduler] Notify time: 1200. Current size: 1
+[2019-01-28T10:56:34.659] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.659] [INFO ] [1200][Scheduler] next at 2000 in 800
+[2019-01-28T10:56:34.659] [DEBUG] #@# Current timestep 1250
+[2019-01-28T10:56:34.659] [INFO ] [Scheduler] Notify time: 1250. Current size: 1
+[2019-01-28T10:56:34.659] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.659] [INFO ] [1250][Scheduler] next at 2000 in 750
+[2019-01-28T10:56:34.660] [DEBUG] #@# Current timestep 1300
+[2019-01-28T10:56:34.660] [INFO ] [Scheduler] Notify time: 1300. Current size: 1
+[2019-01-28T10:56:34.660] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.660] [INFO ] [1300][Scheduler] next at 2000 in 700
+[2019-01-28T10:56:34.661] [DEBUG] #@# Current timestep 1350
+[2019-01-28T10:56:34.661] [INFO ] [Scheduler] Notify time: 1350. Current size: 1
+[2019-01-28T10:56:34.661] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.661] [INFO ] [1350][Scheduler] next at 2000 in 650
+[2019-01-28T10:56:34.662] [DEBUG] #@# Current timestep 1400
+[2019-01-28T10:56:34.662] [INFO ] [Scheduler] Notify time: 1400. Current size: 1
+[2019-01-28T10:56:34.662] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.662] [INFO ] [1400][Scheduler] next at 2000 in 600
+[2019-01-28T10:56:34.663] [DEBUG] #@# Current timestep 1450
+[2019-01-28T10:56:34.663] [INFO ] [Scheduler] Notify time: 1450. Current size: 1
+[2019-01-28T10:56:34.663] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.663] [INFO ] [1450][Scheduler] next at 2000 in 550
+[2019-01-28T10:56:34.664] [DEBUG] #@# Current timestep 1500
+[2019-01-28T10:56:34.664] [INFO ] [Scheduler] Notify time: 1500. Current size: 1
+[2019-01-28T10:56:34.664] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.664] [INFO ] [1500][Scheduler] next at 2000 in 500
+[2019-01-28T10:56:34.665] [DEBUG] #@# Current timestep 1550
+[2019-01-28T10:56:34.665] [INFO ] [Scheduler] Notify time: 1550. Current size: 1
+[2019-01-28T10:56:34.665] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.665] [INFO ] [1550][Scheduler] next at 2000 in 450
+[2019-01-28T10:56:34.666] [DEBUG] #@# Current timestep 1600
+[2019-01-28T10:56:34.666] [INFO ] [Scheduler] Notify time: 1600. Current size: 1
+[2019-01-28T10:56:34.666] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.666] [INFO ] [1600][Scheduler] next at 2000 in 400
+[2019-01-28T10:56:34.667] [DEBUG] #@# Current timestep 1650
+[2019-01-28T10:56:34.667] [INFO ] [Scheduler] Notify time: 1650. Current size: 1
+[2019-01-28T10:56:34.667] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.667] [INFO ] [1650][Scheduler] next at 2000 in 350
+[2019-01-28T10:56:34.668] [DEBUG] #@# Current timestep 1700
+[2019-01-28T10:56:34.668] [INFO ] [Scheduler] Notify time: 1700. Current size: 1
+[2019-01-28T10:56:34.668] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.668] [INFO ] [1700][Scheduler] next at 2000 in 300
+[2019-01-28T10:56:34.669] [DEBUG] #@# Current timestep 1750
+[2019-01-28T10:56:34.669] [INFO ] [Scheduler] Notify time: 1750. Current size: 1
+[2019-01-28T10:56:34.669] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.669] [INFO ] [1750][Scheduler] next at 2000 in 250
+[2019-01-28T10:56:34.670] [DEBUG] #@# Current timestep 1800
+[2019-01-28T10:56:34.670] [INFO ] [Scheduler] Notify time: 1800. Current size: 1
+[2019-01-28T10:56:34.670] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.670] [INFO ] [1800][Scheduler] next at 2000 in 200
+[2019-01-28T10:56:34.670] [DEBUG] #@# Current timestep 1850
+[2019-01-28T10:56:34.671] [INFO ] [Scheduler] Notify time: 1850. Current size: 1
+[2019-01-28T10:56:34.671] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.671] [INFO ] [1850][Scheduler] next at 2000 in 150
+[2019-01-28T10:56:34.671] [DEBUG] #@# Current timestep 1900
+[2019-01-28T10:56:34.671] [INFO ] [Scheduler] Notify time: 1900. Current size: 1
+[2019-01-28T10:56:34.671] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.671] [INFO ] [1900][Scheduler] next at 2000 in 100
+[2019-01-28T10:56:34.672] [DEBUG] #@# Current timestep 1950
+[2019-01-28T10:56:34.672] [INFO ] [Scheduler] Notify time: 1950. Current size: 1
+[2019-01-28T10:56:34.672] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.672] [INFO ] [1950][Scheduler] next at 2000 in 50
+[2019-01-28T10:56:34.678] [DEBUG] #@# Current timestep 2000
+[2019-01-28T10:56:34.678] [INFO ] [Scheduler] Notify time: 2000. Current size: 1
+[2019-01-28T10:56:34.678] [INFO ] Schedule at 3000
+[2019-01-28T10:56:34.678] [INFO ] [Scheduler] 1 have been executed.
+[2019-01-28T10:56:34.678] [INFO ] [2000][Scheduler] next at 3000 in 1000
+[2019-01-28T10:56:34.707] [DEBUG] (Node 2): Added behaviour TestNode
+[2019-01-28T10:56:34.707] [FUNCT] void baseapp::application::iCSInterface::Activate():~(Node 2): 
+[2019-01-28T10:56:34.707] [INFO ] (Node 2): : Activated
+[2019-01-28T10:56:34.707] [FUNCT] virtual void baseapp::application::Behaviour::Start():~(Node 2): TestNode: 
+[2019-01-28T10:56:34.707] [INFO ] TracedCallback StartToggle number of calls 0
+[2019-01-28T10:56:34.707] [INFO ] TracedCallback StateChange number of calls 1
+[2019-01-28T10:56:34.707] [INFO ] Schedule at 3000
+[2019-01-28T10:56:34.713] [DEBUG] #@# Current timestep 2050
+[2019-01-28T10:56:34.713] [INFO ] [Scheduler] Notify time: 2050. Current size: 2
+[2019-01-28T10:56:34.713] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.713] [INFO ] [2050][Scheduler] next at 3000 in 950
+[2019-01-28T10:56:34.715] [DEBUG] #@# Current timestep 2100
+[2019-01-28T10:56:34.715] [INFO ] [Scheduler] Notify time: 2100. Current size: 2
+[2019-01-28T10:56:34.715] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.715] [INFO ] [2100][Scheduler] next at 3000 in 900
+[2019-01-28T10:56:34.717] [DEBUG] #@# Current timestep 2150
+[2019-01-28T10:56:34.717] [INFO ] [Scheduler] Notify time: 2150. Current size: 2
+[2019-01-28T10:56:34.717] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.717] [INFO ] [2150][Scheduler] next at 3000 in 850
+[2019-01-28T10:56:34.718] [DEBUG] #@# Current timestep 2200
+[2019-01-28T10:56:34.718] [INFO ] [Scheduler] Notify time: 2200. Current size: 2
+[2019-01-28T10:56:34.718] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.718] [INFO ] [2200][Scheduler] next at 3000 in 800
+[2019-01-28T10:56:34.720] [DEBUG] #@# Current timestep 2250
+[2019-01-28T10:56:34.720] [INFO ] [Scheduler] Notify time: 2250. Current size: 2
+[2019-01-28T10:56:34.720] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.720] [INFO ] [2250][Scheduler] next at 3000 in 750
+[2019-01-28T10:56:34.721] [DEBUG] #@# Current timestep 2300
+[2019-01-28T10:56:34.721] [INFO ] [Scheduler] Notify time: 2300. Current size: 2
+[2019-01-28T10:56:34.721] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.721] [INFO ] [2300][Scheduler] next at 3000 in 700
+[2019-01-28T10:56:34.723] [DEBUG] #@# Current timestep 2350
+[2019-01-28T10:56:34.723] [INFO ] [Scheduler] Notify time: 2350. Current size: 2
+[2019-01-28T10:56:34.723] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.723] [INFO ] [2350][Scheduler] next at 3000 in 650
+[2019-01-28T10:56:34.724] [DEBUG] #@# Current timestep 2400
+[2019-01-28T10:56:34.724] [INFO ] [Scheduler] Notify time: 2400. Current size: 2
+[2019-01-28T10:56:34.724] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.724] [INFO ] [2400][Scheduler] next at 3000 in 600
+[2019-01-28T10:56:34.726] [DEBUG] #@# Current timestep 2450
+[2019-01-28T10:56:34.726] [INFO ] [Scheduler] Notify time: 2450. Current size: 2
+[2019-01-28T10:56:34.726] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.726] [INFO ] [2450][Scheduler] next at 3000 in 550
+[2019-01-28T10:56:34.728] [DEBUG] #@# Current timestep 2500
+[2019-01-28T10:56:34.728] [INFO ] [Scheduler] Notify time: 2500. Current size: 2
+[2019-01-28T10:56:34.728] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.728] [INFO ] [2500][Scheduler] next at 3000 in 500
+[2019-01-28T10:56:34.729] [DEBUG] #@# Current timestep 2550
+[2019-01-28T10:56:34.729] [INFO ] [Scheduler] Notify time: 2550. Current size: 2
+[2019-01-28T10:56:34.729] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.729] [INFO ] [2550][Scheduler] next at 3000 in 450
+[2019-01-28T10:56:34.731] [DEBUG] #@# Current timestep 2600
+[2019-01-28T10:56:34.731] [INFO ] [Scheduler] Notify time: 2600. Current size: 2
+[2019-01-28T10:56:34.731] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.731] [INFO ] [2600][Scheduler] next at 3000 in 400
+[2019-01-28T10:56:34.732] [DEBUG] #@# Current timestep 2650
+[2019-01-28T10:56:34.732] [INFO ] [Scheduler] Notify time: 2650. Current size: 2
+[2019-01-28T10:56:34.732] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.732] [INFO ] [2650][Scheduler] next at 3000 in 350
+[2019-01-28T10:56:34.734] [DEBUG] #@# Current timestep 2700
+[2019-01-28T10:56:34.734] [INFO ] [Scheduler] Notify time: 2700. Current size: 2
+[2019-01-28T10:56:34.734] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.734] [INFO ] [2700][Scheduler] next at 3000 in 300
+[2019-01-28T10:56:34.736] [DEBUG] #@# Current timestep 2750
+[2019-01-28T10:56:34.736] [INFO ] [Scheduler] Notify time: 2750. Current size: 2
+[2019-01-28T10:56:34.736] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.736] [INFO ] [2750][Scheduler] next at 3000 in 250
+[2019-01-28T10:56:34.737] [DEBUG] #@# Current timestep 2800
+[2019-01-28T10:56:34.737] [INFO ] [Scheduler] Notify time: 2800. Current size: 2
+[2019-01-28T10:56:34.737] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.737] [INFO ] [2800][Scheduler] next at 3000 in 200
+[2019-01-28T10:56:34.739] [DEBUG] #@# Current timestep 2850
+[2019-01-28T10:56:34.739] [INFO ] [Scheduler] Notify time: 2850. Current size: 2
+[2019-01-28T10:56:34.739] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.739] [INFO ] [2850][Scheduler] next at 3000 in 150
+[2019-01-28T10:56:34.740] [DEBUG] #@# Current timestep 2900
+[2019-01-28T10:56:34.740] [INFO ] [Scheduler] Notify time: 2900. Current size: 2
+[2019-01-28T10:56:34.740] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.740] [INFO ] [2900][Scheduler] next at 3000 in 100
+[2019-01-28T10:56:34.742] [DEBUG] #@# Current timestep 2950
+[2019-01-28T10:56:34.742] [INFO ] [Scheduler] Notify time: 2950. Current size: 2
+[2019-01-28T10:56:34.742] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.742] [INFO ] [2950][Scheduler] next at 3000 in 50
+[2019-01-28T10:56:34.744] [DEBUG] #@# Current timestep 3000
+[2019-01-28T10:56:34.744] [INFO ] [Scheduler] Notify time: 3000. Current size: 2
+[2019-01-28T10:56:34.745] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:34.745] [INFO ] Schedule at 4000
+[2019-01-28T10:56:34.745] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:34.745] [INFO ] Schedule at 4000
+[2019-01-28T10:56:34.745] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:34.745] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:34.745] [INFO ] [3000][Scheduler] next at 4000 in 1000
+[2019-01-28T10:56:34.748] [DEBUG] #@# Current timestep 3050
+[2019-01-28T10:56:34.748] [INFO ] [Scheduler] Notify time: 3050. Current size: 2
+[2019-01-28T10:56:34.748] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.748] [INFO ] [3050][Scheduler] next at 4000 in 950
+[2019-01-28T10:56:34.748] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:34.748] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:34.748] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 2950
+[2019-01-28T10:56:34.749] [FUNCT] virtual void testapp::application::BehaviourTestRSU::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:34.749] [DEBUG] (RSU 5000): TestRSU: Node 5000 received CAM messages
+[2019-01-28T10:56:34.749] [INFO ] (RSU 5000): TestRSU: CAM message received from node 2 at time 2950
+[2019-01-28T10:56:34.750] [DEBUG] #@# Current timestep 3100
+[2019-01-28T10:56:34.750] [INFO ] [Scheduler] Notify time: 3100. Current size: 2
+[2019-01-28T10:56:34.750] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.750] [INFO ] [3100][Scheduler] next at 4000 in 900
+[2019-01-28T10:56:34.751] [DEBUG] #@# Current timestep 3150
+[2019-01-28T10:56:34.751] [INFO ] [Scheduler] Notify time: 3150. Current size: 2
+[2019-01-28T10:56:34.751] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.751] [INFO ] [3150][Scheduler] next at 4000 in 850
+[2019-01-28T10:56:34.753] [DEBUG] #@# Current timestep 3200
+[2019-01-28T10:56:34.753] [INFO ] [Scheduler] Notify time: 3200. Current size: 2
+[2019-01-28T10:56:34.753] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.753] [INFO ] [3200][Scheduler] next at 4000 in 800
+[2019-01-28T10:56:34.755] [DEBUG] #@# Current timestep 3250
+[2019-01-28T10:56:34.755] [INFO ] [Scheduler] Notify time: 3250. Current size: 2
+[2019-01-28T10:56:34.755] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.755] [INFO ] [3250][Scheduler] next at 4000 in 750
+[2019-01-28T10:56:34.756] [DEBUG] #@# Current timestep 3300
+[2019-01-28T10:56:34.756] [INFO ] [Scheduler] Notify time: 3300. Current size: 2
+[2019-01-28T10:56:34.756] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.756] [INFO ] [3300][Scheduler] next at 4000 in 700
+[2019-01-28T10:56:34.762] [DEBUG] #@# Current timestep 3350
+[2019-01-28T10:56:34.762] [INFO ] [Scheduler] Notify time: 3350. Current size: 2
+[2019-01-28T10:56:34.762] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.762] [INFO ] [3350][Scheduler] next at 4000 in 650
+[2019-01-28T10:56:34.764] [DEBUG] #@# Current timestep 3400
+[2019-01-28T10:56:34.764] [INFO ] [Scheduler] Notify time: 3400. Current size: 2
+[2019-01-28T10:56:34.764] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.764] [INFO ] [3400][Scheduler] next at 4000 in 600
+[2019-01-28T10:56:34.767] [DEBUG] #@# Current timestep 3450
+[2019-01-28T10:56:34.767] [INFO ] [Scheduler] Notify time: 3450. Current size: 2
+[2019-01-28T10:56:34.767] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.767] [INFO ] [3450][Scheduler] next at 4000 in 550
+[2019-01-28T10:56:34.770] [DEBUG] #@# Current timestep 3500
+[2019-01-28T10:56:34.770] [INFO ] [Scheduler] Notify time: 3500. Current size: 2
+[2019-01-28T10:56:34.770] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.770] [INFO ] [3500][Scheduler] next at 4000 in 500
+[2019-01-28T10:56:34.772] [DEBUG] #@# Current timestep 3550
+[2019-01-28T10:56:34.772] [INFO ] [Scheduler] Notify time: 3550. Current size: 2
+[2019-01-28T10:56:34.772] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.772] [INFO ] [3550][Scheduler] next at 4000 in 450
+[2019-01-28T10:56:34.774] [DEBUG] #@# Current timestep 3600
+[2019-01-28T10:56:34.774] [INFO ] [Scheduler] Notify time: 3600. Current size: 2
+[2019-01-28T10:56:34.774] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.774] [INFO ] [3600][Scheduler] next at 4000 in 400
+[2019-01-28T10:56:34.775] [DEBUG] #@# Current timestep 3650
+[2019-01-28T10:56:34.775] [INFO ] [Scheduler] Notify time: 3650. Current size: 2
+[2019-01-28T10:56:34.775] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.775] [INFO ] [3650][Scheduler] next at 4000 in 350
+[2019-01-28T10:56:34.777] [DEBUG] #@# Current timestep 3700
+[2019-01-28T10:56:34.777] [INFO ] [Scheduler] Notify time: 3700. Current size: 2
+[2019-01-28T10:56:34.777] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.777] [INFO ] [3700][Scheduler] next at 4000 in 300
+[2019-01-28T10:56:34.778] [DEBUG] #@# Current timestep 3750
+[2019-01-28T10:56:34.778] [INFO ] [Scheduler] Notify time: 3750. Current size: 2
+[2019-01-28T10:56:34.778] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.778] [INFO ] [3750][Scheduler] next at 4000 in 250
+[2019-01-28T10:56:34.780] [DEBUG] #@# Current timestep 3800
+[2019-01-28T10:56:34.780] [INFO ] [Scheduler] Notify time: 3800. Current size: 2
+[2019-01-28T10:56:34.780] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.780] [INFO ] [3800][Scheduler] next at 4000 in 200
+[2019-01-28T10:56:34.781] [DEBUG] #@# Current timestep 3850
+[2019-01-28T10:56:34.781] [INFO ] [Scheduler] Notify time: 3850. Current size: 2
+[2019-01-28T10:56:34.781] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.781] [INFO ] [3850][Scheduler] next at 4000 in 150
+[2019-01-28T10:56:34.783] [DEBUG] #@# Current timestep 3900
+[2019-01-28T10:56:34.783] [INFO ] [Scheduler] Notify time: 3900. Current size: 2
+[2019-01-28T10:56:34.783] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.783] [INFO ] [3900][Scheduler] next at 4000 in 100
+[2019-01-28T10:56:34.784] [DEBUG] #@# Current timestep 3950
+[2019-01-28T10:56:34.784] [INFO ] [Scheduler] Notify time: 3950. Current size: 2
+[2019-01-28T10:56:34.784] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.784] [INFO ] [3950][Scheduler] next at 4000 in 50
+[2019-01-28T10:56:34.787] [DEBUG] #@# Current timestep 4000
+[2019-01-28T10:56:34.787] [INFO ] [Scheduler] Notify time: 4000. Current size: 2
+[2019-01-28T10:56:34.787] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:34.787] [INFO ] Schedule at 5000
+[2019-01-28T10:56:34.787] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:34.787] [INFO ] Schedule at 5000
+[2019-01-28T10:56:34.787] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:34.787] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:34.787] [INFO ] [4000][Scheduler] next at 5000 in 1000
+[2019-01-28T10:56:34.789] [DEBUG] #@# Current timestep 4050
+[2019-01-28T10:56:34.789] [INFO ] [Scheduler] Notify time: 4050. Current size: 2
+[2019-01-28T10:56:34.789] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.789] [INFO ] [4050][Scheduler] next at 5000 in 950
+[2019-01-28T10:56:34.790] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:34.790] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:34.790] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 3950
+[2019-01-28T10:56:34.790] [FUNCT] virtual void testapp::application::BehaviourTestRSU::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:34.790] [DEBUG] (RSU 5000): TestRSU: Node 5000 received CAM messages
+[2019-01-28T10:56:34.790] [INFO ] (RSU 5000): TestRSU: CAM message received from node 2 at time 3950
+[2019-01-28T10:56:34.791] [DEBUG] #@# Current timestep 4100
+[2019-01-28T10:56:34.791] [INFO ] [Scheduler] Notify time: 4100. Current size: 2
+[2019-01-28T10:56:34.791] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.791] [INFO ] [4100][Scheduler] next at 5000 in 900
+[2019-01-28T10:56:34.793] [DEBUG] #@# Current timestep 4150
+[2019-01-28T10:56:34.793] [INFO ] [Scheduler] Notify time: 4150. Current size: 2
+[2019-01-28T10:56:34.793] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.793] [INFO ] [4150][Scheduler] next at 5000 in 850
+[2019-01-28T10:56:34.794] [DEBUG] #@# Current timestep 4200
+[2019-01-28T10:56:34.794] [INFO ] [Scheduler] Notify time: 4200. Current size: 2
+[2019-01-28T10:56:34.794] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.794] [INFO ] [4200][Scheduler] next at 5000 in 800
+[2019-01-28T10:56:34.796] [DEBUG] #@# Current timestep 4250
+[2019-01-28T10:56:34.796] [INFO ] [Scheduler] Notify time: 4250. Current size: 2
+[2019-01-28T10:56:34.796] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.796] [INFO ] [4250][Scheduler] next at 5000 in 750
+[2019-01-28T10:56:34.797] [DEBUG] #@# Current timestep 4300
+[2019-01-28T10:56:34.797] [INFO ] [Scheduler] Notify time: 4300. Current size: 2
+[2019-01-28T10:56:34.797] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.797] [INFO ] [4300][Scheduler] next at 5000 in 700
+[2019-01-28T10:56:34.798] [DEBUG] #@# Current timestep 4350
+[2019-01-28T10:56:34.799] [INFO ] [Scheduler] Notify time: 4350. Current size: 2
+[2019-01-28T10:56:34.799] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.799] [INFO ] [4350][Scheduler] next at 5000 in 650
+[2019-01-28T10:56:34.800] [DEBUG] #@# Current timestep 4400
+[2019-01-28T10:56:34.800] [INFO ] [Scheduler] Notify time: 4400. Current size: 2
+[2019-01-28T10:56:34.800] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.800] [INFO ] [4400][Scheduler] next at 5000 in 600
+[2019-01-28T10:56:34.801] [DEBUG] #@# Current timestep 4450
+[2019-01-28T10:56:34.801] [INFO ] [Scheduler] Notify time: 4450. Current size: 2
+[2019-01-28T10:56:34.801] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.801] [INFO ] [4450][Scheduler] next at 5000 in 550
+[2019-01-28T10:56:34.803] [DEBUG] #@# Current timestep 4500
+[2019-01-28T10:56:34.803] [INFO ] [Scheduler] Notify time: 4500. Current size: 2
+[2019-01-28T10:56:34.803] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.803] [INFO ] [4500][Scheduler] next at 5000 in 500
+[2019-01-28T10:56:34.804] [DEBUG] #@# Current timestep 4550
+[2019-01-28T10:56:34.804] [INFO ] [Scheduler] Notify time: 4550. Current size: 2
+[2019-01-28T10:56:34.804] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.804] [INFO ] [4550][Scheduler] next at 5000 in 450
+[2019-01-28T10:56:34.806] [DEBUG] #@# Current timestep 4600
+[2019-01-28T10:56:34.806] [INFO ] [Scheduler] Notify time: 4600. Current size: 2
+[2019-01-28T10:56:34.806] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.806] [INFO ] [4600][Scheduler] next at 5000 in 400
+[2019-01-28T10:56:34.807] [DEBUG] #@# Current timestep 4650
+[2019-01-28T10:56:34.807] [INFO ] [Scheduler] Notify time: 4650. Current size: 2
+[2019-01-28T10:56:34.807] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.807] [INFO ] [4650][Scheduler] next at 5000 in 350
+[2019-01-28T10:56:34.808] [DEBUG] #@# Current timestep 4700
+[2019-01-28T10:56:34.808] [INFO ] [Scheduler] Notify time: 4700. Current size: 2
+[2019-01-28T10:56:34.808] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.808] [INFO ] [4700][Scheduler] next at 5000 in 300
+[2019-01-28T10:56:34.810] [DEBUG] #@# Current timestep 4750
+[2019-01-28T10:56:34.810] [INFO ] [Scheduler] Notify time: 4750. Current size: 2
+[2019-01-28T10:56:34.810] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.810] [INFO ] [4750][Scheduler] next at 5000 in 250
+[2019-01-28T10:56:34.811] [DEBUG] #@# Current timestep 4800
+[2019-01-28T10:56:34.811] [INFO ] [Scheduler] Notify time: 4800. Current size: 2
+[2019-01-28T10:56:34.811] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.811] [INFO ] [4800][Scheduler] next at 5000 in 200
+[2019-01-28T10:56:34.813] [DEBUG] #@# Current timestep 4850
+[2019-01-28T10:56:34.813] [INFO ] [Scheduler] Notify time: 4850. Current size: 2
+[2019-01-28T10:56:34.813] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.813] [INFO ] [4850][Scheduler] next at 5000 in 150
+[2019-01-28T10:56:34.814] [DEBUG] #@# Current timestep 4900
+[2019-01-28T10:56:34.814] [INFO ] [Scheduler] Notify time: 4900. Current size: 2
+[2019-01-28T10:56:34.814] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.814] [INFO ] [4900][Scheduler] next at 5000 in 100
+[2019-01-28T10:56:34.816] [DEBUG] #@# Current timestep 4950
+[2019-01-28T10:56:34.816] [INFO ] [Scheduler] Notify time: 4950. Current size: 2
+[2019-01-28T10:56:34.816] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.816] [INFO ] [4950][Scheduler] next at 5000 in 50
+[2019-01-28T10:56:34.819] [DEBUG] #@# Current timestep 5000
+[2019-01-28T10:56:34.819] [INFO ] [Scheduler] Notify time: 5000. Current size: 2
+[2019-01-28T10:56:34.819] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:34.819] [INFO ] Schedule at 6000
+[2019-01-28T10:56:34.819] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:34.819] [INFO ] Schedule at 6000
+[2019-01-28T10:56:34.819] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:34.819] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:34.819] [INFO ] [5000][Scheduler] next at 6000 in 1000
+[2019-01-28T10:56:34.821] [DEBUG] #@# Current timestep 5050
+[2019-01-28T10:56:34.821] [INFO ] [Scheduler] Notify time: 5050. Current size: 2
+[2019-01-28T10:56:34.821] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.821] [INFO ] [5050][Scheduler] next at 6000 in 950
+[2019-01-28T10:56:34.821] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:34.821] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:34.821] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 4950
+[2019-01-28T10:56:34.822] [FUNCT] virtual void testapp::application::BehaviourTestRSU::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:34.822] [DEBUG] (RSU 5000): TestRSU: Node 5000 received CAM messages
+[2019-01-28T10:56:34.822] [INFO ] (RSU 5000): TestRSU: CAM message received from node 2 at time 4950
+[2019-01-28T10:56:34.823] [DEBUG] #@# Current timestep 5100
+[2019-01-28T10:56:34.823] [INFO ] [Scheduler] Notify time: 5100. Current size: 2
+[2019-01-28T10:56:34.823] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.823] [INFO ] [5100][Scheduler] next at 6000 in 900
+[2019-01-28T10:56:34.824] [DEBUG] #@# Current timestep 5150
+[2019-01-28T10:56:34.824] [INFO ] [Scheduler] Notify time: 5150. Current size: 2
+[2019-01-28T10:56:34.824] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.824] [INFO ] [5150][Scheduler] next at 6000 in 850
+[2019-01-28T10:56:34.826] [DEBUG] #@# Current timestep 5200
+[2019-01-28T10:56:34.826] [INFO ] [Scheduler] Notify time: 5200. Current size: 2
+[2019-01-28T10:56:34.826] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.826] [INFO ] [5200][Scheduler] next at 6000 in 800
+[2019-01-28T10:56:34.827] [DEBUG] #@# Current timestep 5250
+[2019-01-28T10:56:34.827] [INFO ] [Scheduler] Notify time: 5250. Current size: 2
+[2019-01-28T10:56:34.827] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.827] [INFO ] [5250][Scheduler] next at 6000 in 750
+[2019-01-28T10:56:34.829] [DEBUG] #@# Current timestep 5300
+[2019-01-28T10:56:34.829] [INFO ] [Scheduler] Notify time: 5300. Current size: 2
+[2019-01-28T10:56:34.829] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.829] [INFO ] [5300][Scheduler] next at 6000 in 700
+[2019-01-28T10:56:34.830] [DEBUG] #@# Current timestep 5350
+[2019-01-28T10:56:34.830] [INFO ] [Scheduler] Notify time: 5350. Current size: 2
+[2019-01-28T10:56:34.830] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.830] [INFO ] [5350][Scheduler] next at 6000 in 650
+[2019-01-28T10:56:34.831] [DEBUG] #@# Current timestep 5400
+[2019-01-28T10:56:34.831] [INFO ] [Scheduler] Notify time: 5400. Current size: 2
+[2019-01-28T10:56:34.832] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.832] [INFO ] [5400][Scheduler] next at 6000 in 600
+[2019-01-28T10:56:34.833] [DEBUG] #@# Current timestep 5450
+[2019-01-28T10:56:34.833] [INFO ] [Scheduler] Notify time: 5450. Current size: 2
+[2019-01-28T10:56:34.833] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.833] [INFO ] [5450][Scheduler] next at 6000 in 550
+[2019-01-28T10:56:34.834] [DEBUG] #@# Current timestep 5500
+[2019-01-28T10:56:34.835] [INFO ] [Scheduler] Notify time: 5500. Current size: 2
+[2019-01-28T10:56:34.835] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.835] [INFO ] [5500][Scheduler] next at 6000 in 500
+[2019-01-28T10:56:34.836] [DEBUG] #@# Current timestep 5550
+[2019-01-28T10:56:34.836] [INFO ] [Scheduler] Notify time: 5550. Current size: 2
+[2019-01-28T10:56:34.836] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.836] [INFO ] [5550][Scheduler] next at 6000 in 450
+[2019-01-28T10:56:34.837] [DEBUG] #@# Current timestep 5600
+[2019-01-28T10:56:34.837] [INFO ] [Scheduler] Notify time: 5600. Current size: 2
+[2019-01-28T10:56:34.837] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.837] [INFO ] [5600][Scheduler] next at 6000 in 400
+[2019-01-28T10:56:34.839] [DEBUG] #@# Current timestep 5650
+[2019-01-28T10:56:34.839] [INFO ] [Scheduler] Notify time: 5650. Current size: 2
+[2019-01-28T10:56:34.839] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.839] [INFO ] [5650][Scheduler] next at 6000 in 350
+[2019-01-28T10:56:34.840] [DEBUG] #@# Current timestep 5700
+[2019-01-28T10:56:34.840] [INFO ] [Scheduler] Notify time: 5700. Current size: 2
+[2019-01-28T10:56:34.840] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.840] [INFO ] [5700][Scheduler] next at 6000 in 300
+[2019-01-28T10:56:34.842] [DEBUG] #@# Current timestep 5750
+[2019-01-28T10:56:34.842] [INFO ] [Scheduler] Notify time: 5750. Current size: 2
+[2019-01-28T10:56:34.842] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.842] [INFO ] [5750][Scheduler] next at 6000 in 250
+[2019-01-28T10:56:34.843] [DEBUG] #@# Current timestep 5800
+[2019-01-28T10:56:34.843] [INFO ] [Scheduler] Notify time: 5800. Current size: 2
+[2019-01-28T10:56:34.843] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.843] [INFO ] [5800][Scheduler] next at 6000 in 200
+[2019-01-28T10:56:34.845] [DEBUG] #@# Current timestep 5850
+[2019-01-28T10:56:34.845] [INFO ] [Scheduler] Notify time: 5850. Current size: 2
+[2019-01-28T10:56:34.845] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.845] [INFO ] [5850][Scheduler] next at 6000 in 150
+[2019-01-28T10:56:34.846] [DEBUG] #@# Current timestep 5900
+[2019-01-28T10:56:34.846] [INFO ] [Scheduler] Notify time: 5900. Current size: 2
+[2019-01-28T10:56:34.846] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.846] [INFO ] [5900][Scheduler] next at 6000 in 100
+[2019-01-28T10:56:34.848] [DEBUG] #@# Current timestep 5950
+[2019-01-28T10:56:34.848] [INFO ] [Scheduler] Notify time: 5950. Current size: 2
+[2019-01-28T10:56:34.848] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.848] [INFO ] [5950][Scheduler] next at 6000 in 50
+[2019-01-28T10:56:34.850] [DEBUG] #@# Current timestep 6000
+[2019-01-28T10:56:34.850] [INFO ] [Scheduler] Notify time: 6000. Current size: 2
+[2019-01-28T10:56:34.850] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:34.850] [INFO ] Schedule at 7000
+[2019-01-28T10:56:34.850] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:34.850] [INFO ] Schedule at 7000
+[2019-01-28T10:56:34.850] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:34.850] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:34.850] [INFO ] [6000][Scheduler] next at 7000 in 1000
+[2019-01-28T10:56:34.853] [DEBUG] #@# Current timestep 6050
+[2019-01-28T10:56:34.853] [INFO ] [Scheduler] Notify time: 6050. Current size: 2
+[2019-01-28T10:56:34.853] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.853] [INFO ] [6050][Scheduler] next at 7000 in 950
+[2019-01-28T10:56:34.853] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:34.853] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:34.853] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 5950
+[2019-01-28T10:56:34.854] [FUNCT] virtual void testapp::application::BehaviourTestRSU::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:34.854] [DEBUG] (RSU 5000): TestRSU: Node 5000 received CAM messages
+[2019-01-28T10:56:34.854] [INFO ] (RSU 5000): TestRSU: CAM message received from node 2 at time 5950
+[2019-01-28T10:56:34.855] [DEBUG] #@# Current timestep 6100
+[2019-01-28T10:56:34.855] [INFO ] [Scheduler] Notify time: 6100. Current size: 2
+[2019-01-28T10:56:34.855] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.855] [INFO ] [6100][Scheduler] next at 7000 in 900
+[2019-01-28T10:56:34.856] [DEBUG] #@# Current timestep 6150
+[2019-01-28T10:56:34.856] [INFO ] [Scheduler] Notify time: 6150. Current size: 2
+[2019-01-28T10:56:34.856] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.856] [INFO ] [6150][Scheduler] next at 7000 in 850
+[2019-01-28T10:56:34.858] [DEBUG] #@# Current timestep 6200
+[2019-01-28T10:56:34.858] [INFO ] [Scheduler] Notify time: 6200. Current size: 2
+[2019-01-28T10:56:34.858] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.858] [INFO ] [6200][Scheduler] next at 7000 in 800
+[2019-01-28T10:56:34.859] [DEBUG] #@# Current timestep 6250
+[2019-01-28T10:56:34.859] [INFO ] [Scheduler] Notify time: 6250. Current size: 2
+[2019-01-28T10:56:34.859] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.859] [INFO ] [6250][Scheduler] next at 7000 in 750
+[2019-01-28T10:56:34.861] [DEBUG] #@# Current timestep 6300
+[2019-01-28T10:56:34.861] [INFO ] [Scheduler] Notify time: 6300. Current size: 2
+[2019-01-28T10:56:34.861] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.861] [INFO ] [6300][Scheduler] next at 7000 in 700
+[2019-01-28T10:56:34.862] [DEBUG] #@# Current timestep 6350
+[2019-01-28T10:56:34.862] [INFO ] [Scheduler] Notify time: 6350. Current size: 2
+[2019-01-28T10:56:34.862] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.862] [INFO ] [6350][Scheduler] next at 7000 in 650
+[2019-01-28T10:56:34.864] [DEBUG] #@# Current timestep 6400
+[2019-01-28T10:56:34.864] [INFO ] [Scheduler] Notify time: 6400. Current size: 2
+[2019-01-28T10:56:34.864] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.864] [INFO ] [6400][Scheduler] next at 7000 in 600
+[2019-01-28T10:56:34.865] [DEBUG] #@# Current timestep 6450
+[2019-01-28T10:56:34.865] [INFO ] [Scheduler] Notify time: 6450. Current size: 2
+[2019-01-28T10:56:34.865] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.865] [INFO ] [6450][Scheduler] next at 7000 in 550
+[2019-01-28T10:56:34.866] [DEBUG] #@# Current timestep 6500
+[2019-01-28T10:56:34.866] [INFO ] [Scheduler] Notify time: 6500. Current size: 2
+[2019-01-28T10:56:34.867] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.867] [INFO ] [6500][Scheduler] next at 7000 in 500
+[2019-01-28T10:56:34.868] [DEBUG] #@# Current timestep 6550
+[2019-01-28T10:56:34.868] [INFO ] [Scheduler] Notify time: 6550. Current size: 2
+[2019-01-28T10:56:34.868] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.868] [INFO ] [6550][Scheduler] next at 7000 in 450
+[2019-01-28T10:56:34.870] [DEBUG] #@# Current timestep 6600
+[2019-01-28T10:56:34.870] [INFO ] [Scheduler] Notify time: 6600. Current size: 2
+[2019-01-28T10:56:34.870] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.870] [INFO ] [6600][Scheduler] next at 7000 in 400
+[2019-01-28T10:56:34.871] [DEBUG] #@# Current timestep 6650
+[2019-01-28T10:56:34.871] [INFO ] [Scheduler] Notify time: 6650. Current size: 2
+[2019-01-28T10:56:34.871] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.871] [INFO ] [6650][Scheduler] next at 7000 in 350
+[2019-01-28T10:56:34.872] [DEBUG] #@# Current timestep 6700
+[2019-01-28T10:56:34.872] [INFO ] [Scheduler] Notify time: 6700. Current size: 2
+[2019-01-28T10:56:34.872] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.872] [INFO ] [6700][Scheduler] next at 7000 in 300
+[2019-01-28T10:56:34.874] [DEBUG] #@# Current timestep 6750
+[2019-01-28T10:56:34.874] [INFO ] [Scheduler] Notify time: 6750. Current size: 2
+[2019-01-28T10:56:34.874] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.874] [INFO ] [6750][Scheduler] next at 7000 in 250
+[2019-01-28T10:56:34.875] [DEBUG] #@# Current timestep 6800
+[2019-01-28T10:56:34.875] [INFO ] [Scheduler] Notify time: 6800. Current size: 2
+[2019-01-28T10:56:34.875] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.875] [INFO ] [6800][Scheduler] next at 7000 in 200
+[2019-01-28T10:56:34.877] [DEBUG] #@# Current timestep 6850
+[2019-01-28T10:56:34.877] [INFO ] [Scheduler] Notify time: 6850. Current size: 2
+[2019-01-28T10:56:34.877] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.877] [INFO ] [6850][Scheduler] next at 7000 in 150
+[2019-01-28T10:56:34.878] [DEBUG] #@# Current timestep 6900
+[2019-01-28T10:56:34.878] [INFO ] [Scheduler] Notify time: 6900. Current size: 2
+[2019-01-28T10:56:34.878] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.878] [INFO ] [6900][Scheduler] next at 7000 in 100
+[2019-01-28T10:56:34.879] [DEBUG] #@# Current timestep 6950
+[2019-01-28T10:56:34.879] [INFO ] [Scheduler] Notify time: 6950. Current size: 2
+[2019-01-28T10:56:34.880] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.880] [INFO ] [6950][Scheduler] next at 7000 in 50
+[2019-01-28T10:56:34.882] [DEBUG] #@# Current timestep 7000
+[2019-01-28T10:56:34.882] [INFO ] [Scheduler] Notify time: 7000. Current size: 2
+[2019-01-28T10:56:34.882] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:34.882] [INFO ] Schedule at 8000
+[2019-01-28T10:56:34.882] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:34.882] [INFO ] Schedule at 8000
+[2019-01-28T10:56:34.882] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:34.882] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:34.882] [INFO ] [7000][Scheduler] next at 8000 in 1000
+[2019-01-28T10:56:34.884] [DEBUG] #@# Current timestep 7050
+[2019-01-28T10:56:34.884] [INFO ] [Scheduler] Notify time: 7050. Current size: 2
+[2019-01-28T10:56:34.884] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.884] [INFO ] [7050][Scheduler] next at 8000 in 950
+[2019-01-28T10:56:34.885] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:34.885] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:34.885] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 6950
+[2019-01-28T10:56:34.886] [FUNCT] virtual void testapp::application::BehaviourTestRSU::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:34.886] [DEBUG] (RSU 5000): TestRSU: Node 5000 received CAM messages
+[2019-01-28T10:56:34.886] [INFO ] (RSU 5000): TestRSU: CAM message received from node 2 at time 6950
+[2019-01-28T10:56:34.886] [DEBUG] #@# Current timestep 7100
+[2019-01-28T10:56:34.886] [INFO ] [Scheduler] Notify time: 7100. Current size: 2
+[2019-01-28T10:56:34.886] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.887] [INFO ] [7100][Scheduler] next at 8000 in 900
+[2019-01-28T10:56:34.888] [DEBUG] #@# Current timestep 7150
+[2019-01-28T10:56:34.888] [INFO ] [Scheduler] Notify time: 7150. Current size: 2
+[2019-01-28T10:56:34.888] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.888] [INFO ] [7150][Scheduler] next at 8000 in 850
+[2019-01-28T10:56:34.890] [DEBUG] #@# Current timestep 7200
+[2019-01-28T10:56:34.890] [INFO ] [Scheduler] Notify time: 7200. Current size: 2
+[2019-01-28T10:56:34.890] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.890] [INFO ] [7200][Scheduler] next at 8000 in 800
+[2019-01-28T10:56:34.892] [DEBUG] #@# Current timestep 7250
+[2019-01-28T10:56:34.892] [INFO ] [Scheduler] Notify time: 7250. Current size: 2
+[2019-01-28T10:56:34.892] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.892] [INFO ] [7250][Scheduler] next at 8000 in 750
+[2019-01-28T10:56:34.895] [DEBUG] #@# Current timestep 7300
+[2019-01-28T10:56:34.895] [INFO ] [Scheduler] Notify time: 7300. Current size: 2
+[2019-01-28T10:56:34.895] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.895] [INFO ] [7300][Scheduler] next at 8000 in 700
+[2019-01-28T10:56:34.897] [DEBUG] #@# Current timestep 7350
+[2019-01-28T10:56:34.897] [INFO ] [Scheduler] Notify time: 7350. Current size: 2
+[2019-01-28T10:56:34.897] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.897] [INFO ] [7350][Scheduler] next at 8000 in 650
+[2019-01-28T10:56:34.900] [DEBUG] #@# Current timestep 7400
+[2019-01-28T10:56:34.900] [INFO ] [Scheduler] Notify time: 7400. Current size: 2
+[2019-01-28T10:56:34.900] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.900] [INFO ] [7400][Scheduler] next at 8000 in 600
+[2019-01-28T10:56:34.902] [DEBUG] #@# Current timestep 7450
+[2019-01-28T10:56:34.902] [INFO ] [Scheduler] Notify time: 7450. Current size: 2
+[2019-01-28T10:56:34.902] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.902] [INFO ] [7450][Scheduler] next at 8000 in 550
+[2019-01-28T10:56:34.905] [DEBUG] #@# Current timestep 7500
+[2019-01-28T10:56:34.905] [INFO ] [Scheduler] Notify time: 7500. Current size: 2
+[2019-01-28T10:56:34.905] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.905] [INFO ] [7500][Scheduler] next at 8000 in 500
+[2019-01-28T10:56:34.908] [DEBUG] #@# Current timestep 7550
+[2019-01-28T10:56:34.908] [INFO ] [Scheduler] Notify time: 7550. Current size: 2
+[2019-01-28T10:56:34.908] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.908] [INFO ] [7550][Scheduler] next at 8000 in 450
+[2019-01-28T10:56:34.910] [DEBUG] #@# Current timestep 7600
+[2019-01-28T10:56:34.910] [INFO ] [Scheduler] Notify time: 7600. Current size: 2
+[2019-01-28T10:56:34.910] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.910] [INFO ] [7600][Scheduler] next at 8000 in 400
+[2019-01-28T10:56:34.913] [DEBUG] #@# Current timestep 7650
+[2019-01-28T10:56:34.913] [INFO ] [Scheduler] Notify time: 7650. Current size: 2
+[2019-01-28T10:56:34.913] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.913] [INFO ] [7650][Scheduler] next at 8000 in 350
+[2019-01-28T10:56:34.916] [DEBUG] #@# Current timestep 7700
+[2019-01-28T10:56:34.916] [INFO ] [Scheduler] Notify time: 7700. Current size: 2
+[2019-01-28T10:56:34.916] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.916] [INFO ] [7700][Scheduler] next at 8000 in 300
+[2019-01-28T10:56:34.918] [DEBUG] #@# Current timestep 7750
+[2019-01-28T10:56:34.918] [INFO ] [Scheduler] Notify time: 7750. Current size: 2
+[2019-01-28T10:56:34.918] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.918] [INFO ] [7750][Scheduler] next at 8000 in 250
+[2019-01-28T10:56:34.920] [DEBUG] #@# Current timestep 7800
+[2019-01-28T10:56:34.920] [INFO ] [Scheduler] Notify time: 7800. Current size: 2
+[2019-01-28T10:56:34.920] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.920] [INFO ] [7800][Scheduler] next at 8000 in 200
+[2019-01-28T10:56:34.922] [DEBUG] #@# Current timestep 7850
+[2019-01-28T10:56:34.922] [INFO ] [Scheduler] Notify time: 7850. Current size: 2
+[2019-01-28T10:56:34.922] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.922] [INFO ] [7850][Scheduler] next at 8000 in 150
+[2019-01-28T10:56:34.925] [DEBUG] #@# Current timestep 7900
+[2019-01-28T10:56:34.925] [INFO ] [Scheduler] Notify time: 7900. Current size: 2
+[2019-01-28T10:56:34.925] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.925] [INFO ] [7900][Scheduler] next at 8000 in 100
+[2019-01-28T10:56:34.928] [DEBUG] #@# Current timestep 7950
+[2019-01-28T10:56:34.928] [INFO ] [Scheduler] Notify time: 7950. Current size: 2
+[2019-01-28T10:56:34.928] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.928] [INFO ] [7950][Scheduler] next at 8000 in 50
+[2019-01-28T10:56:34.934] [DEBUG] #@# Current timestep 8000
+[2019-01-28T10:56:34.934] [INFO ] [Scheduler] Notify time: 8000. Current size: 2
+[2019-01-28T10:56:34.934] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:34.934] [INFO ] Schedule at 9000
+[2019-01-28T10:56:34.934] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:34.934] [INFO ] Schedule at 9000
+[2019-01-28T10:56:34.934] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:34.934] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:34.934] [INFO ] [8000][Scheduler] next at 9000 in 1000
+[2019-01-28T10:56:34.938] [DEBUG] #@# Current timestep 8050
+[2019-01-28T10:56:34.938] [INFO ] [Scheduler] Notify time: 8050. Current size: 2
+[2019-01-28T10:56:34.938] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.938] [INFO ] [8050][Scheduler] next at 9000 in 950
+[2019-01-28T10:56:34.939] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:34.939] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:34.939] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 7950
+[2019-01-28T10:56:34.940] [FUNCT] virtual void testapp::application::BehaviourTestRSU::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:34.940] [DEBUG] (RSU 5000): TestRSU: Node 5000 received CAM messages
+[2019-01-28T10:56:34.940] [INFO ] (RSU 5000): TestRSU: CAM message received from node 2 at time 7950
+[2019-01-28T10:56:34.941] [DEBUG] #@# Current timestep 8100
+[2019-01-28T10:56:34.941] [INFO ] [Scheduler] Notify time: 8100. Current size: 2
+[2019-01-28T10:56:34.941] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.941] [INFO ] [8100][Scheduler] next at 9000 in 900
+[2019-01-28T10:56:34.944] [DEBUG] #@# Current timestep 8150
+[2019-01-28T10:56:34.944] [INFO ] [Scheduler] Notify time: 8150. Current size: 2
+[2019-01-28T10:56:34.944] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.944] [INFO ] [8150][Scheduler] next at 9000 in 850
+[2019-01-28T10:56:34.946] [DEBUG] #@# Current timestep 8200
+[2019-01-28T10:56:34.946] [INFO ] [Scheduler] Notify time: 8200. Current size: 2
+[2019-01-28T10:56:34.946] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.946] [INFO ] [8200][Scheduler] next at 9000 in 800
+[2019-01-28T10:56:34.949] [DEBUG] #@# Current timestep 8250
+[2019-01-28T10:56:34.949] [INFO ] [Scheduler] Notify time: 8250. Current size: 2
+[2019-01-28T10:56:34.949] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.949] [INFO ] [8250][Scheduler] next at 9000 in 750
+[2019-01-28T10:56:34.952] [DEBUG] #@# Current timestep 8300
+[2019-01-28T10:56:34.952] [INFO ] [Scheduler] Notify time: 8300. Current size: 2
+[2019-01-28T10:56:34.952] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.952] [INFO ] [8300][Scheduler] next at 9000 in 700
+[2019-01-28T10:56:34.955] [DEBUG] #@# Current timestep 8350
+[2019-01-28T10:56:34.955] [INFO ] [Scheduler] Notify time: 8350. Current size: 2
+[2019-01-28T10:56:34.955] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.955] [INFO ] [8350][Scheduler] next at 9000 in 650
+[2019-01-28T10:56:34.957] [DEBUG] #@# Current timestep 8400
+[2019-01-28T10:56:34.957] [INFO ] [Scheduler] Notify time: 8400. Current size: 2
+[2019-01-28T10:56:34.957] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.957] [INFO ] [8400][Scheduler] next at 9000 in 600
+[2019-01-28T10:56:34.959] [DEBUG] #@# Current timestep 8450
+[2019-01-28T10:56:34.960] [INFO ] [Scheduler] Notify time: 8450. Current size: 2
+[2019-01-28T10:56:34.960] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.960] [INFO ] [8450][Scheduler] next at 9000 in 550
+[2019-01-28T10:56:34.962] [DEBUG] #@# Current timestep 8500
+[2019-01-28T10:56:34.962] [INFO ] [Scheduler] Notify time: 8500. Current size: 2
+[2019-01-28T10:56:34.962] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.962] [INFO ] [8500][Scheduler] next at 9000 in 500
+[2019-01-28T10:56:34.963] [DEBUG] #@# Current timestep 8550
+[2019-01-28T10:56:34.963] [INFO ] [Scheduler] Notify time: 8550. Current size: 2
+[2019-01-28T10:56:34.963] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.963] [INFO ] [8550][Scheduler] next at 9000 in 450
+[2019-01-28T10:56:34.964] [DEBUG] #@# Current timestep 8600
+[2019-01-28T10:56:34.964] [INFO ] [Scheduler] Notify time: 8600. Current size: 2
+[2019-01-28T10:56:34.964] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.964] [INFO ] [8600][Scheduler] next at 9000 in 400
+[2019-01-28T10:56:34.980] [DEBUG] #@# Current timestep 8650
+[2019-01-28T10:56:34.980] [INFO ] [Scheduler] Notify time: 8650. Current size: 2
+[2019-01-28T10:56:34.980] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.980] [INFO ] [8650][Scheduler] next at 9000 in 350
+[2019-01-28T10:56:34.994] [DEBUG] #@# Current timestep 8700
+[2019-01-28T10:56:34.994] [INFO ] [Scheduler] Notify time: 8700. Current size: 2
+[2019-01-28T10:56:34.994] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.994] [INFO ] [8700][Scheduler] next at 9000 in 300
+[2019-01-28T10:56:34.995] [DEBUG] #@# Current timestep 8750
+[2019-01-28T10:56:34.995] [INFO ] [Scheduler] Notify time: 8750. Current size: 2
+[2019-01-28T10:56:34.995] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.995] [INFO ] [8750][Scheduler] next at 9000 in 250
+[2019-01-28T10:56:34.997] [DEBUG] #@# Current timestep 8800
+[2019-01-28T10:56:34.997] [INFO ] [Scheduler] Notify time: 8800. Current size: 2
+[2019-01-28T10:56:34.997] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.997] [INFO ] [8800][Scheduler] next at 9000 in 200
+[2019-01-28T10:56:34.998] [DEBUG] #@# Current timestep 8850
+[2019-01-28T10:56:34.998] [INFO ] [Scheduler] Notify time: 8850. Current size: 2
+[2019-01-28T10:56:34.998] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.998] [INFO ] [8850][Scheduler] next at 9000 in 150
+[2019-01-28T10:56:34.999] [DEBUG] #@# Current timestep 8900
+[2019-01-28T10:56:34.999] [INFO ] [Scheduler] Notify time: 8900. Current size: 2
+[2019-01-28T10:56:34.999] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:34.999] [INFO ] [8900][Scheduler] next at 9000 in 100
+[2019-01-28T10:56:35.001] [DEBUG] #@# Current timestep 8950
+[2019-01-28T10:56:35.001] [INFO ] [Scheduler] Notify time: 8950. Current size: 2
+[2019-01-28T10:56:35.001] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.001] [INFO ] [8950][Scheduler] next at 9000 in 50
+[2019-01-28T10:56:35.003] [DEBUG] #@# Current timestep 9000
+[2019-01-28T10:56:35.003] [INFO ] [Scheduler] Notify time: 9000. Current size: 2
+[2019-01-28T10:56:35.004] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:35.004] [INFO ] Schedule at 10000
+[2019-01-28T10:56:35.004] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:35.004] [INFO ] Schedule at 10000
+[2019-01-28T10:56:35.004] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:35.004] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:35.004] [INFO ] [9000][Scheduler] next at 10000 in 1000
+[2019-01-28T10:56:35.006] [DEBUG] #@# Current timestep 9050
+[2019-01-28T10:56:35.006] [INFO ] [Scheduler] Notify time: 9050. Current size: 2
+[2019-01-28T10:56:35.006] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.006] [INFO ] [9050][Scheduler] next at 10000 in 950
+[2019-01-28T10:56:35.007] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:35.007] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:35.007] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 8950
+[2019-01-28T10:56:35.007] [FUNCT] virtual void testapp::application::BehaviourTestRSU::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:35.007] [DEBUG] (RSU 5000): TestRSU: Node 5000 received CAM messages
+[2019-01-28T10:56:35.007] [INFO ] (RSU 5000): TestRSU: CAM message received from node 2 at time 8950
+[2019-01-28T10:56:35.008] [DEBUG] #@# Current timestep 9100
+[2019-01-28T10:56:35.008] [INFO ] [Scheduler] Notify time: 9100. Current size: 2
+[2019-01-28T10:56:35.008] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.008] [INFO ] [9100][Scheduler] next at 10000 in 900
+[2019-01-28T10:56:35.010] [DEBUG] #@# Current timestep 9150
+[2019-01-28T10:56:35.010] [INFO ] [Scheduler] Notify time: 9150. Current size: 2
+[2019-01-28T10:56:35.010] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.010] [INFO ] [9150][Scheduler] next at 10000 in 850
+[2019-01-28T10:56:35.011] [DEBUG] #@# Current timestep 9200
+[2019-01-28T10:56:35.011] [INFO ] [Scheduler] Notify time: 9200. Current size: 2
+[2019-01-28T10:56:35.011] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.011] [INFO ] [9200][Scheduler] next at 10000 in 800
+[2019-01-28T10:56:35.013] [DEBUG] #@# Current timestep 9250
+[2019-01-28T10:56:35.013] [INFO ] [Scheduler] Notify time: 9250. Current size: 2
+[2019-01-28T10:56:35.013] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.013] [INFO ] [9250][Scheduler] next at 10000 in 750
+[2019-01-28T10:56:35.014] [DEBUG] #@# Current timestep 9300
+[2019-01-28T10:56:35.014] [INFO ] [Scheduler] Notify time: 9300. Current size: 2
+[2019-01-28T10:56:35.014] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.014] [INFO ] [9300][Scheduler] next at 10000 in 700
+[2019-01-28T10:56:35.015] [DEBUG] #@# Current timestep 9350
+[2019-01-28T10:56:35.015] [INFO ] [Scheduler] Notify time: 9350. Current size: 2
+[2019-01-28T10:56:35.015] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.015] [INFO ] [9350][Scheduler] next at 10000 in 650
+[2019-01-28T10:56:35.017] [DEBUG] #@# Current timestep 9400
+[2019-01-28T10:56:35.017] [INFO ] [Scheduler] Notify time: 9400. Current size: 2
+[2019-01-28T10:56:35.017] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.017] [INFO ] [9400][Scheduler] next at 10000 in 600
+[2019-01-28T10:56:35.018] [DEBUG] #@# Current timestep 9450
+[2019-01-28T10:56:35.018] [INFO ] [Scheduler] Notify time: 9450. Current size: 2
+[2019-01-28T10:56:35.018] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.018] [INFO ] [9450][Scheduler] next at 10000 in 550
+[2019-01-28T10:56:35.020] [DEBUG] #@# Current timestep 9500
+[2019-01-28T10:56:35.020] [INFO ] [Scheduler] Notify time: 9500. Current size: 2
+[2019-01-28T10:56:35.020] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.020] [INFO ] [9500][Scheduler] next at 10000 in 500
+[2019-01-28T10:56:35.021] [DEBUG] #@# Current timestep 9550
+[2019-01-28T10:56:35.021] [INFO ] [Scheduler] Notify time: 9550. Current size: 2
+[2019-01-28T10:56:35.021] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.021] [INFO ] [9550][Scheduler] next at 10000 in 450
+[2019-01-28T10:56:35.023] [DEBUG] #@# Current timestep 9600
+[2019-01-28T10:56:35.023] [INFO ] [Scheduler] Notify time: 9600. Current size: 2
+[2019-01-28T10:56:35.023] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.023] [INFO ] [9600][Scheduler] next at 10000 in 400
+[2019-01-28T10:56:35.024] [DEBUG] #@# Current timestep 9650
+[2019-01-28T10:56:35.024] [INFO ] [Scheduler] Notify time: 9650. Current size: 2
+[2019-01-28T10:56:35.024] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.024] [INFO ] [9650][Scheduler] next at 10000 in 350
+[2019-01-28T10:56:35.025] [DEBUG] #@# Current timestep 9700
+[2019-01-28T10:56:35.025] [INFO ] [Scheduler] Notify time: 9700. Current size: 2
+[2019-01-28T10:56:35.025] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.025] [INFO ] [9700][Scheduler] next at 10000 in 300
+[2019-01-28T10:56:35.027] [DEBUG] #@# Current timestep 9750
+[2019-01-28T10:56:35.027] [INFO ] [Scheduler] Notify time: 9750. Current size: 2
+[2019-01-28T10:56:35.027] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.027] [INFO ] [9750][Scheduler] next at 10000 in 250
+[2019-01-28T10:56:35.028] [DEBUG] #@# Current timestep 9800
+[2019-01-28T10:56:35.028] [INFO ] [Scheduler] Notify time: 9800. Current size: 2
+[2019-01-28T10:56:35.028] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.028] [INFO ] [9800][Scheduler] next at 10000 in 200
+[2019-01-28T10:56:35.030] [DEBUG] #@# Current timestep 9850
+[2019-01-28T10:56:35.030] [INFO ] [Scheduler] Notify time: 9850. Current size: 2
+[2019-01-28T10:56:35.030] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.030] [INFO ] [9850][Scheduler] next at 10000 in 150
+[2019-01-28T10:56:35.031] [DEBUG] #@# Current timestep 9900
+[2019-01-28T10:56:35.031] [INFO ] [Scheduler] Notify time: 9900. Current size: 2
+[2019-01-28T10:56:35.031] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.031] [INFO ] [9900][Scheduler] next at 10000 in 100
+[2019-01-28T10:56:35.033] [DEBUG] #@# Current timestep 9950
+[2019-01-28T10:56:35.033] [INFO ] [Scheduler] Notify time: 9950. Current size: 2
+[2019-01-28T10:56:35.033] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.033] [INFO ] [9950][Scheduler] next at 10000 in 50
+[2019-01-28T10:56:35.038] [DEBUG] #@# Current timestep 10000
+[2019-01-28T10:56:35.038] [INFO ] [Scheduler] Notify time: 10000. Current size: 2
+[2019-01-28T10:56:35.038] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:35.038] [INFO ] Schedule at 11000
+[2019-01-28T10:56:35.038] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:35.038] [INFO ] Schedule at 11000
+[2019-01-28T10:56:35.038] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:35.038] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:35.038] [INFO ] [10000][Scheduler] next at 11000 in 1000
+[2019-01-28T10:56:35.040] [DEBUG] #@# Current timestep 10050
+[2019-01-28T10:56:35.040] [INFO ] [Scheduler] Notify time: 10050. Current size: 2
+[2019-01-28T10:56:35.040] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.040] [INFO ] [10050][Scheduler] next at 11000 in 950
+[2019-01-28T10:56:35.041] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:35.041] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:35.041] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 9950
+[2019-01-28T10:56:35.042] [FUNCT] virtual void testapp::application::BehaviourTestRSU::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:35.042] [DEBUG] (RSU 5000): TestRSU: Node 5000 received CAM messages
+[2019-01-28T10:56:35.042] [INFO ] (RSU 5000): TestRSU: CAM message received from node 2 at time 9950
+[2019-01-28T10:56:35.042] [DEBUG] #@# Current timestep 10100
+[2019-01-28T10:56:35.042] [INFO ] [Scheduler] Notify time: 10100. Current size: 2
+[2019-01-28T10:56:35.042] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.042] [INFO ] [10100][Scheduler] next at 11000 in 900
+[2019-01-28T10:56:35.044] [DEBUG] #@# Current timestep 10150
+[2019-01-28T10:56:35.044] [INFO ] [Scheduler] Notify time: 10150. Current size: 2
+[2019-01-28T10:56:35.044] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.044] [INFO ] [10150][Scheduler] next at 11000 in 850
+[2019-01-28T10:56:35.045] [DEBUG] #@# Current timestep 10200
+[2019-01-28T10:56:35.045] [INFO ] [Scheduler] Notify time: 10200. Current size: 2
+[2019-01-28T10:56:35.045] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.045] [INFO ] [10200][Scheduler] next at 11000 in 800
+[2019-01-28T10:56:35.047] [DEBUG] #@# Current timestep 10250
+[2019-01-28T10:56:35.047] [INFO ] [Scheduler] Notify time: 10250. Current size: 2
+[2019-01-28T10:56:35.047] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.047] [INFO ] [10250][Scheduler] next at 11000 in 750
+[2019-01-28T10:56:35.048] [DEBUG] #@# Current timestep 10300
+[2019-01-28T10:56:35.048] [INFO ] [Scheduler] Notify time: 10300. Current size: 2
+[2019-01-28T10:56:35.048] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.048] [INFO ] [10300][Scheduler] next at 11000 in 700
+[2019-01-28T10:56:35.054] [DEBUG] #@# Current timestep 10350
+[2019-01-28T10:56:35.054] [INFO ] [Scheduler] Notify time: 10350. Current size: 2
+[2019-01-28T10:56:35.054] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.054] [INFO ] [10350][Scheduler] next at 11000 in 650
+[2019-01-28T10:56:35.056] [DEBUG] #@# Current timestep 10400
+[2019-01-28T10:56:35.056] [INFO ] [Scheduler] Notify time: 10400. Current size: 2
+[2019-01-28T10:56:35.056] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.056] [INFO ] [10400][Scheduler] next at 11000 in 600
+[2019-01-28T10:56:35.057] [DEBUG] #@# Current timestep 10450
+[2019-01-28T10:56:35.057] [INFO ] [Scheduler] Notify time: 10450. Current size: 2
+[2019-01-28T10:56:35.057] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.057] [INFO ] [10450][Scheduler] next at 11000 in 550
+[2019-01-28T10:56:35.059] [DEBUG] #@# Current timestep 10500
+[2019-01-28T10:56:35.059] [INFO ] [Scheduler] Notify time: 10500. Current size: 2
+[2019-01-28T10:56:35.059] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.059] [INFO ] [10500][Scheduler] next at 11000 in 500
+[2019-01-28T10:56:35.060] [DEBUG] #@# Current timestep 10550
+[2019-01-28T10:56:35.060] [INFO ] [Scheduler] Notify time: 10550. Current size: 2
+[2019-01-28T10:56:35.060] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.060] [INFO ] [10550][Scheduler] next at 11000 in 450
+[2019-01-28T10:56:35.062] [DEBUG] #@# Current timestep 10600
+[2019-01-28T10:56:35.062] [INFO ] [Scheduler] Notify time: 10600. Current size: 2
+[2019-01-28T10:56:35.062] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.062] [INFO ] [10600][Scheduler] next at 11000 in 400
+[2019-01-28T10:56:35.064] [DEBUG] #@# Current timestep 10650
+[2019-01-28T10:56:35.064] [INFO ] [Scheduler] Notify time: 10650. Current size: 2
+[2019-01-28T10:56:35.064] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.064] [INFO ] [10650][Scheduler] next at 11000 in 350
+[2019-01-28T10:56:35.065] [DEBUG] #@# Current timestep 10700
+[2019-01-28T10:56:35.065] [INFO ] [Scheduler] Notify time: 10700. Current size: 2
+[2019-01-28T10:56:35.065] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.065] [INFO ] [10700][Scheduler] next at 11000 in 300
+[2019-01-28T10:56:35.066] [DEBUG] #@# Current timestep 10750
+[2019-01-28T10:56:35.066] [INFO ] [Scheduler] Notify time: 10750. Current size: 2
+[2019-01-28T10:56:35.066] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.066] [INFO ] [10750][Scheduler] next at 11000 in 250
+[2019-01-28T10:56:35.068] [DEBUG] #@# Current timestep 10800
+[2019-01-28T10:56:35.068] [INFO ] [Scheduler] Notify time: 10800. Current size: 2
+[2019-01-28T10:56:35.068] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.068] [INFO ] [10800][Scheduler] next at 11000 in 200
+[2019-01-28T10:56:35.073] [DEBUG] #@# Current timestep 10850
+[2019-01-28T10:56:35.073] [INFO ] [Scheduler] Notify time: 10850. Current size: 2
+[2019-01-28T10:56:35.073] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.073] [INFO ] [10850][Scheduler] next at 11000 in 150
+[2019-01-28T10:56:35.075] [DEBUG] #@# Current timestep 10900
+[2019-01-28T10:56:35.075] [INFO ] [Scheduler] Notify time: 10900. Current size: 2
+[2019-01-28T10:56:35.075] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.075] [INFO ] [10900][Scheduler] next at 11000 in 100
+[2019-01-28T10:56:35.076] [DEBUG] #@# Current timestep 10950
+[2019-01-28T10:56:35.076] [INFO ] [Scheduler] Notify time: 10950. Current size: 2
+[2019-01-28T10:56:35.076] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.076] [INFO ] [10950][Scheduler] next at 11000 in 50
+[2019-01-28T10:56:35.078] [DEBUG] #@# Current timestep 11000
+[2019-01-28T10:56:35.078] [INFO ] [Scheduler] Notify time: 11000. Current size: 2
+[2019-01-28T10:56:35.078] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:35.078] [INFO ] Schedule at 12000
+[2019-01-28T10:56:35.078] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:35.078] [INFO ] Schedule at 12000
+[2019-01-28T10:56:35.078] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:35.078] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:35.078] [INFO ] [11000][Scheduler] next at 12000 in 1000
+[2019-01-28T10:56:35.081] [DEBUG] #@# Current timestep 11050
+[2019-01-28T10:56:35.081] [INFO ] [Scheduler] Notify time: 11050. Current size: 2
+[2019-01-28T10:56:35.081] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.081] [INFO ] [11050][Scheduler] next at 12000 in 950
+[2019-01-28T10:56:35.081] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:35.081] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:35.081] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 10950
+[2019-01-28T10:56:35.082] [FUNCT] virtual void testapp::application::BehaviourTestRSU::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:35.082] [DEBUG] (RSU 5000): TestRSU: Node 5000 received CAM messages
+[2019-01-28T10:56:35.082] [INFO ] (RSU 5000): TestRSU: CAM message received from node 2 at time 10950
+[2019-01-28T10:56:35.083] [DEBUG] #@# Current timestep 11100
+[2019-01-28T10:56:35.083] [INFO ] [Scheduler] Notify time: 11100. Current size: 2
+[2019-01-28T10:56:35.083] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.083] [INFO ] [11100][Scheduler] next at 12000 in 900
+[2019-01-28T10:56:35.084] [DEBUG] #@# Current timestep 11150
+[2019-01-28T10:56:35.084] [INFO ] [Scheduler] Notify time: 11150. Current size: 2
+[2019-01-28T10:56:35.084] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.084] [INFO ] [11150][Scheduler] next at 12000 in 850
+[2019-01-28T10:56:35.085] [DEBUG] #@# Current timestep 11200
+[2019-01-28T10:56:35.085] [INFO ] [Scheduler] Notify time: 11200. Current size: 2
+[2019-01-28T10:56:35.085] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.085] [INFO ] [11200][Scheduler] next at 12000 in 800
+[2019-01-28T10:56:35.087] [DEBUG] #@# Current timestep 11250
+[2019-01-28T10:56:35.087] [INFO ] [Scheduler] Notify time: 11250. Current size: 2
+[2019-01-28T10:56:35.087] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.087] [INFO ] [11250][Scheduler] next at 12000 in 750
+[2019-01-28T10:56:35.088] [DEBUG] #@# Current timestep 11300
+[2019-01-28T10:56:35.088] [INFO ] [Scheduler] Notify time: 11300. Current size: 2
+[2019-01-28T10:56:35.088] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.088] [INFO ] [11300][Scheduler] next at 12000 in 700
+[2019-01-28T10:56:35.094] [DEBUG] #@# Current timestep 11350
+[2019-01-28T10:56:35.094] [INFO ] [Scheduler] Notify time: 11350. Current size: 2
+[2019-01-28T10:56:35.094] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.094] [INFO ] [11350][Scheduler] next at 12000 in 650
+[2019-01-28T10:56:35.095] [DEBUG] #@# Current timestep 11400
+[2019-01-28T10:56:35.095] [INFO ] [Scheduler] Notify time: 11400. Current size: 2
+[2019-01-28T10:56:35.095] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.095] [INFO ] [11400][Scheduler] next at 12000 in 600
+[2019-01-28T10:56:35.096] [DEBUG] #@# Current timestep 11450
+[2019-01-28T10:56:35.096] [INFO ] [Scheduler] Notify time: 11450. Current size: 2
+[2019-01-28T10:56:35.096] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.096] [INFO ] [11450][Scheduler] next at 12000 in 550
+[2019-01-28T10:56:35.098] [DEBUG] #@# Current timestep 11500
+[2019-01-28T10:56:35.098] [INFO ] [Scheduler] Notify time: 11500. Current size: 2
+[2019-01-28T10:56:35.098] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.098] [INFO ] [11500][Scheduler] next at 12000 in 500
+[2019-01-28T10:56:35.099] [DEBUG] #@# Current timestep 11550
+[2019-01-28T10:56:35.099] [INFO ] [Scheduler] Notify time: 11550. Current size: 2
+[2019-01-28T10:56:35.099] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.099] [INFO ] [11550][Scheduler] next at 12000 in 450
+[2019-01-28T10:56:35.100] [DEBUG] #@# Current timestep 11600
+[2019-01-28T10:56:35.100] [INFO ] [Scheduler] Notify time: 11600. Current size: 2
+[2019-01-28T10:56:35.100] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.100] [INFO ] [11600][Scheduler] next at 12000 in 400
+[2019-01-28T10:56:35.101] [DEBUG] #@# Current timestep 11650
+[2019-01-28T10:56:35.101] [INFO ] [Scheduler] Notify time: 11650. Current size: 2
+[2019-01-28T10:56:35.101] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.101] [INFO ] [11650][Scheduler] next at 12000 in 350
+[2019-01-28T10:56:35.102] [DEBUG] #@# Current timestep 11700
+[2019-01-28T10:56:35.102] [INFO ] [Scheduler] Notify time: 11700. Current size: 2
+[2019-01-28T10:56:35.102] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.102] [INFO ] [11700][Scheduler] next at 12000 in 300
+[2019-01-28T10:56:35.104] [DEBUG] #@# Current timestep 11750
+[2019-01-28T10:56:35.104] [INFO ] [Scheduler] Notify time: 11750. Current size: 2
+[2019-01-28T10:56:35.104] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.104] [INFO ] [11750][Scheduler] next at 12000 in 250
+[2019-01-28T10:56:35.105] [DEBUG] #@# Current timestep 11800
+[2019-01-28T10:56:35.105] [INFO ] [Scheduler] Notify time: 11800. Current size: 2
+[2019-01-28T10:56:35.105] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.105] [INFO ] [11800][Scheduler] next at 12000 in 200
+[2019-01-28T10:56:35.106] [DEBUG] #@# Current timestep 11850
+[2019-01-28T10:56:35.106] [INFO ] [Scheduler] Notify time: 11850. Current size: 2
+[2019-01-28T10:56:35.106] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.106] [INFO ] [11850][Scheduler] next at 12000 in 150
+[2019-01-28T10:56:35.107] [DEBUG] #@# Current timestep 11900
+[2019-01-28T10:56:35.107] [INFO ] [Scheduler] Notify time: 11900. Current size: 2
+[2019-01-28T10:56:35.107] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.107] [INFO ] [11900][Scheduler] next at 12000 in 100
+[2019-01-28T10:56:35.108] [DEBUG] #@# Current timestep 11950
+[2019-01-28T10:56:35.109] [INFO ] [Scheduler] Notify time: 11950. Current size: 2
+[2019-01-28T10:56:35.109] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.109] [INFO ] [11950][Scheduler] next at 12000 in 50
+[2019-01-28T10:56:35.111] [DEBUG] #@# Current timestep 12000
+[2019-01-28T10:56:35.111] [INFO ] [Scheduler] Notify time: 12000. Current size: 2
+[2019-01-28T10:56:35.111] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:35.111] [INFO ] Schedule at 13000
+[2019-01-28T10:56:35.111] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:35.111] [INFO ] Schedule at 13000
+[2019-01-28T10:56:35.111] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:35.111] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:35.111] [INFO ] [12000][Scheduler] next at 13000 in 1000
+[2019-01-28T10:56:35.114] [DEBUG] #@# Current timestep 12050
+[2019-01-28T10:56:35.114] [INFO ] [Scheduler] Notify time: 12050. Current size: 2
+[2019-01-28T10:56:35.114] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.114] [INFO ] [12050][Scheduler] next at 13000 in 950
+[2019-01-28T10:56:35.115] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:35.115] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:35.115] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 11950
+[2019-01-28T10:56:35.116] [FUNCT] virtual void testapp::application::BehaviourTestRSU::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:35.116] [DEBUG] (RSU 5000): TestRSU: Node 5000 received CAM messages
+[2019-01-28T10:56:35.116] [INFO ] (RSU 5000): TestRSU: CAM message received from node 2 at time 11950
+[2019-01-28T10:56:35.116] [DEBUG] #@# Current timestep 12100
+[2019-01-28T10:56:35.116] [INFO ] [Scheduler] Notify time: 12100. Current size: 2
+[2019-01-28T10:56:35.116] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.117] [INFO ] [12100][Scheduler] next at 13000 in 900
+[2019-01-28T10:56:35.118] [DEBUG] #@# Current timestep 12150
+[2019-01-28T10:56:35.118] [INFO ] [Scheduler] Notify time: 12150. Current size: 2
+[2019-01-28T10:56:35.118] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.118] [INFO ] [12150][Scheduler] next at 13000 in 850
+[2019-01-28T10:56:35.119] [DEBUG] #@# Current timestep 12200
+[2019-01-28T10:56:35.119] [INFO ] [Scheduler] Notify time: 12200. Current size: 2
+[2019-01-28T10:56:35.119] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.119] [INFO ] [12200][Scheduler] next at 13000 in 800
+[2019-01-28T10:56:35.120] [DEBUG] #@# Current timestep 12250
+[2019-01-28T10:56:35.120] [INFO ] [Scheduler] Notify time: 12250. Current size: 2
+[2019-01-28T10:56:35.120] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.120] [INFO ] [12250][Scheduler] next at 13000 in 750
+[2019-01-28T10:56:35.124] [DEBUG] #@# Current timestep 12300
+[2019-01-28T10:56:35.124] [INFO ] [Scheduler] Notify time: 12300. Current size: 2
+[2019-01-28T10:56:35.124] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.124] [INFO ] [12300][Scheduler] next at 13000 in 700
+[2019-01-28T10:56:35.125] [DEBUG] #@# Current timestep 12350
+[2019-01-28T10:56:35.125] [INFO ] [Scheduler] Notify time: 12350. Current size: 2
+[2019-01-28T10:56:35.125] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.125] [INFO ] [12350][Scheduler] next at 13000 in 650
+[2019-01-28T10:56:35.126] [DEBUG] #@# Current timestep 12400
+[2019-01-28T10:56:35.126] [INFO ] [Scheduler] Notify time: 12400. Current size: 2
+[2019-01-28T10:56:35.126] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.127] [INFO ] [12400][Scheduler] next at 13000 in 600
+[2019-01-28T10:56:35.128] [DEBUG] #@# Current timestep 12450
+[2019-01-28T10:56:35.128] [INFO ] [Scheduler] Notify time: 12450. Current size: 2
+[2019-01-28T10:56:35.128] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.128] [INFO ] [12450][Scheduler] next at 13000 in 550
+[2019-01-28T10:56:35.129] [DEBUG] #@# Current timestep 12500
+[2019-01-28T10:56:35.129] [INFO ] [Scheduler] Notify time: 12500. Current size: 2
+[2019-01-28T10:56:35.129] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.129] [INFO ] [12500][Scheduler] next at 13000 in 500
+[2019-01-28T10:56:35.130] [DEBUG] #@# Current timestep 12550
+[2019-01-28T10:56:35.130] [INFO ] [Scheduler] Notify time: 12550. Current size: 2
+[2019-01-28T10:56:35.130] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.130] [INFO ] [12550][Scheduler] next at 13000 in 450
+[2019-01-28T10:56:35.131] [DEBUG] #@# Current timestep 12600
+[2019-01-28T10:56:35.131] [INFO ] [Scheduler] Notify time: 12600. Current size: 2
+[2019-01-28T10:56:35.131] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.131] [INFO ] [12600][Scheduler] next at 13000 in 400
+[2019-01-28T10:56:35.132] [DEBUG] #@# Current timestep 12650
+[2019-01-28T10:56:35.132] [INFO ] [Scheduler] Notify time: 12650. Current size: 2
+[2019-01-28T10:56:35.132] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.132] [INFO ] [12650][Scheduler] next at 13000 in 350
+[2019-01-28T10:56:35.133] [DEBUG] #@# Current timestep 12700
+[2019-01-28T10:56:35.133] [INFO ] [Scheduler] Notify time: 12700. Current size: 2
+[2019-01-28T10:56:35.133] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.133] [INFO ] [12700][Scheduler] next at 13000 in 300
+[2019-01-28T10:56:35.135] [DEBUG] #@# Current timestep 12750
+[2019-01-28T10:56:35.135] [INFO ] [Scheduler] Notify time: 12750. Current size: 2
+[2019-01-28T10:56:35.135] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.135] [INFO ] [12750][Scheduler] next at 13000 in 250
+[2019-01-28T10:56:35.136] [DEBUG] #@# Current timestep 12800
+[2019-01-28T10:56:35.136] [INFO ] [Scheduler] Notify time: 12800. Current size: 2
+[2019-01-28T10:56:35.136] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.136] [INFO ] [12800][Scheduler] next at 13000 in 200
+[2019-01-28T10:56:35.137] [DEBUG] #@# Current timestep 12850
+[2019-01-28T10:56:35.137] [INFO ] [Scheduler] Notify time: 12850. Current size: 2
+[2019-01-28T10:56:35.137] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.137] [INFO ] [12850][Scheduler] next at 13000 in 150
+[2019-01-28T10:56:35.138] [DEBUG] #@# Current timestep 12900
+[2019-01-28T10:56:35.138] [INFO ] [Scheduler] Notify time: 12900. Current size: 2
+[2019-01-28T10:56:35.138] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.138] [INFO ] [12900][Scheduler] next at 13000 in 100
+[2019-01-28T10:56:35.139] [DEBUG] #@# Current timestep 12950
+[2019-01-28T10:56:35.139] [INFO ] [Scheduler] Notify time: 12950. Current size: 2
+[2019-01-28T10:56:35.139] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.139] [INFO ] [12950][Scheduler] next at 13000 in 50
+[2019-01-28T10:56:35.141] [DEBUG] #@# Current timestep 13000
+[2019-01-28T10:56:35.141] [INFO ] [Scheduler] Notify time: 13000. Current size: 2
+[2019-01-28T10:56:35.141] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:35.141] [INFO ] Schedule at 14000
+[2019-01-28T10:56:35.141] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:35.141] [INFO ] Schedule at 14000
+[2019-01-28T10:56:35.141] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:35.141] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:35.142] [INFO ] [13000][Scheduler] next at 14000 in 1000
+[2019-01-28T10:56:35.144] [DEBUG] #@# Current timestep 13050
+[2019-01-28T10:56:35.144] [INFO ] [Scheduler] Notify time: 13050. Current size: 2
+[2019-01-28T10:56:35.144] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.144] [INFO ] [13050][Scheduler] next at 14000 in 950
+[2019-01-28T10:56:35.144] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:35.144] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:35.144] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 12950
+[2019-01-28T10:56:35.144] [FUNCT] virtual void testapp::application::BehaviourTestRSU::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:35.144] [DEBUG] (RSU 5000): TestRSU: Node 5000 received CAM messages
+[2019-01-28T10:56:35.144] [INFO ] (RSU 5000): TestRSU: CAM message received from node 2 at time 12950
+[2019-01-28T10:56:35.145] [DEBUG] #@# Current timestep 13100
+[2019-01-28T10:56:35.145] [INFO ] [Scheduler] Notify time: 13100. Current size: 2
+[2019-01-28T10:56:35.145] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.145] [INFO ] [13100][Scheduler] next at 14000 in 900
+[2019-01-28T10:56:35.147] [DEBUG] #@# Current timestep 13150
+[2019-01-28T10:56:35.147] [INFO ] [Scheduler] Notify time: 13150. Current size: 2
+[2019-01-28T10:56:35.147] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.147] [INFO ] [13150][Scheduler] next at 14000 in 850
+[2019-01-28T10:56:35.148] [DEBUG] #@# Current timestep 13200
+[2019-01-28T10:56:35.148] [INFO ] [Scheduler] Notify time: 13200. Current size: 2
+[2019-01-28T10:56:35.148] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.148] [INFO ] [13200][Scheduler] next at 14000 in 800
+[2019-01-28T10:56:35.149] [DEBUG] #@# Current timestep 13250
+[2019-01-28T10:56:35.149] [INFO ] [Scheduler] Notify time: 13250. Current size: 2
+[2019-01-28T10:56:35.149] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.149] [INFO ] [13250][Scheduler] next at 14000 in 750
+[2019-01-28T10:56:35.151] [DEBUG] #@# Current timestep 13300
+[2019-01-28T10:56:35.151] [INFO ] [Scheduler] Notify time: 13300. Current size: 2
+[2019-01-28T10:56:35.151] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.151] [INFO ] [13300][Scheduler] next at 14000 in 700
+[2019-01-28T10:56:35.152] [DEBUG] #@# Current timestep 13350
+[2019-01-28T10:56:35.152] [INFO ] [Scheduler] Notify time: 13350. Current size: 2
+[2019-01-28T10:56:35.152] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.152] [INFO ] [13350][Scheduler] next at 14000 in 650
+[2019-01-28T10:56:35.153] [DEBUG] #@# Current timestep 13400
+[2019-01-28T10:56:35.153] [INFO ] [Scheduler] Notify time: 13400. Current size: 2
+[2019-01-28T10:56:35.153] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.153] [INFO ] [13400][Scheduler] next at 14000 in 600
+[2019-01-28T10:56:35.154] [DEBUG] #@# Current timestep 13450
+[2019-01-28T10:56:35.154] [INFO ] [Scheduler] Notify time: 13450. Current size: 2
+[2019-01-28T10:56:35.154] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.154] [INFO ] [13450][Scheduler] next at 14000 in 550
+[2019-01-28T10:56:35.155] [DEBUG] #@# Current timestep 13500
+[2019-01-28T10:56:35.155] [INFO ] [Scheduler] Notify time: 13500. Current size: 2
+[2019-01-28T10:56:35.155] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.155] [INFO ] [13500][Scheduler] next at 14000 in 500
+[2019-01-28T10:56:35.156] [DEBUG] #@# Current timestep 13550
+[2019-01-28T10:56:35.156] [INFO ] [Scheduler] Notify time: 13550. Current size: 2
+[2019-01-28T10:56:35.156] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.156] [INFO ] [13550][Scheduler] next at 14000 in 450
+[2019-01-28T10:56:35.158] [DEBUG] #@# Current timestep 13600
+[2019-01-28T10:56:35.158] [INFO ] [Scheduler] Notify time: 13600. Current size: 2
+[2019-01-28T10:56:35.158] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.158] [INFO ] [13600][Scheduler] next at 14000 in 400
+[2019-01-28T10:56:35.159] [DEBUG] #@# Current timestep 13650
+[2019-01-28T10:56:35.159] [INFO ] [Scheduler] Notify time: 13650. Current size: 2
+[2019-01-28T10:56:35.159] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.159] [INFO ] [13650][Scheduler] next at 14000 in 350
+[2019-01-28T10:56:35.160] [DEBUG] #@# Current timestep 13700
+[2019-01-28T10:56:35.160] [INFO ] [Scheduler] Notify time: 13700. Current size: 2
+[2019-01-28T10:56:35.160] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.160] [INFO ] [13700][Scheduler] next at 14000 in 300
+[2019-01-28T10:56:35.161] [DEBUG] #@# Current timestep 13750
+[2019-01-28T10:56:35.161] [INFO ] [Scheduler] Notify time: 13750. Current size: 2
+[2019-01-28T10:56:35.161] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.161] [INFO ] [13750][Scheduler] next at 14000 in 250
+[2019-01-28T10:56:35.162] [DEBUG] #@# Current timestep 13800
+[2019-01-28T10:56:35.163] [INFO ] [Scheduler] Notify time: 13800. Current size: 2
+[2019-01-28T10:56:35.163] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.163] [INFO ] [13800][Scheduler] next at 14000 in 200
+[2019-01-28T10:56:35.164] [DEBUG] #@# Current timestep 13850
+[2019-01-28T10:56:35.164] [INFO ] [Scheduler] Notify time: 13850. Current size: 2
+[2019-01-28T10:56:35.164] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.164] [INFO ] [13850][Scheduler] next at 14000 in 150
+[2019-01-28T10:56:35.165] [DEBUG] #@# Current timestep 13900
+[2019-01-28T10:56:35.165] [INFO ] [Scheduler] Notify time: 13900. Current size: 2
+[2019-01-28T10:56:35.165] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.165] [INFO ] [13900][Scheduler] next at 14000 in 100
+[2019-01-28T10:56:35.166] [DEBUG] #@# Current timestep 13950
+[2019-01-28T10:56:35.166] [INFO ] [Scheduler] Notify time: 13950. Current size: 2
+[2019-01-28T10:56:35.166] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.166] [INFO ] [13950][Scheduler] next at 14000 in 50
+[2019-01-28T10:56:35.168] [DEBUG] #@# Current timestep 14000
+[2019-01-28T10:56:35.168] [INFO ] [Scheduler] Notify time: 14000. Current size: 2
+[2019-01-28T10:56:35.168] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:35.168] [INFO ] Schedule at 15000
+[2019-01-28T10:56:35.168] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:35.168] [INFO ] Schedule at 15000
+[2019-01-28T10:56:35.168] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:35.168] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:35.168] [INFO ] [14000][Scheduler] next at 15000 in 1000
+[2019-01-28T10:56:35.170] [DEBUG] #@# Current timestep 14050
+[2019-01-28T10:56:35.170] [INFO ] [Scheduler] Notify time: 14050. Current size: 2
+[2019-01-28T10:56:35.170] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.170] [INFO ] [14050][Scheduler] next at 15000 in 950
+[2019-01-28T10:56:35.171] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:35.171] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:35.171] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 13950
+[2019-01-28T10:56:35.171] [FUNCT] virtual void testapp::application::BehaviourTestRSU::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:35.171] [DEBUG] (RSU 5000): TestRSU: Node 5000 received CAM messages
+[2019-01-28T10:56:35.171] [INFO ] (RSU 5000): TestRSU: CAM message received from node 2 at time 13950
+[2019-01-28T10:56:35.172] [DEBUG] #@# Current timestep 14100
+[2019-01-28T10:56:35.172] [INFO ] [Scheduler] Notify time: 14100. Current size: 2
+[2019-01-28T10:56:35.172] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.172] [INFO ] [14100][Scheduler] next at 15000 in 900
+[2019-01-28T10:56:35.173] [DEBUG] #@# Current timestep 14150
+[2019-01-28T10:56:35.173] [INFO ] [Scheduler] Notify time: 14150. Current size: 2
+[2019-01-28T10:56:35.173] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.173] [INFO ] [14150][Scheduler] next at 15000 in 850
+[2019-01-28T10:56:35.174] [DEBUG] #@# Current timestep 14200
+[2019-01-28T10:56:35.174] [INFO ] [Scheduler] Notify time: 14200. Current size: 2
+[2019-01-28T10:56:35.174] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.174] [INFO ] [14200][Scheduler] next at 15000 in 800
+[2019-01-28T10:56:35.175] [DEBUG] #@# Current timestep 14250
+[2019-01-28T10:56:35.175] [INFO ] [Scheduler] Notify time: 14250. Current size: 2
+[2019-01-28T10:56:35.175] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.175] [INFO ] [14250][Scheduler] next at 15000 in 750
+[2019-01-28T10:56:35.176] [DEBUG] #@# Current timestep 14300
+[2019-01-28T10:56:35.176] [INFO ] [Scheduler] Notify time: 14300. Current size: 2
+[2019-01-28T10:56:35.176] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.176] [INFO ] [14300][Scheduler] next at 15000 in 700
+[2019-01-28T10:56:35.178] [DEBUG] #@# Current timestep 14350
+[2019-01-28T10:56:35.178] [INFO ] [Scheduler] Notify time: 14350. Current size: 2
+[2019-01-28T10:56:35.178] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.178] [INFO ] [14350][Scheduler] next at 15000 in 650
+[2019-01-28T10:56:35.179] [DEBUG] #@# Current timestep 14400
+[2019-01-28T10:56:35.179] [INFO ] [Scheduler] Notify time: 14400. Current size: 2
+[2019-01-28T10:56:35.179] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.179] [INFO ] [14400][Scheduler] next at 15000 in 600
+[2019-01-28T10:56:35.180] [DEBUG] #@# Current timestep 14450
+[2019-01-28T10:56:35.180] [INFO ] [Scheduler] Notify time: 14450. Current size: 2
+[2019-01-28T10:56:35.180] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.180] [INFO ] [14450][Scheduler] next at 15000 in 550
+[2019-01-28T10:56:35.181] [DEBUG] #@# Current timestep 14500
+[2019-01-28T10:56:35.181] [INFO ] [Scheduler] Notify time: 14500. Current size: 2
+[2019-01-28T10:56:35.181] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.181] [INFO ] [14500][Scheduler] next at 15000 in 500
+[2019-01-28T10:56:35.182] [DEBUG] #@# Current timestep 14550
+[2019-01-28T10:56:35.182] [INFO ] [Scheduler] Notify time: 14550. Current size: 2
+[2019-01-28T10:56:35.182] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.182] [INFO ] [14550][Scheduler] next at 15000 in 450
+[2019-01-28T10:56:35.183] [DEBUG] #@# Current timestep 14600
+[2019-01-28T10:56:35.183] [INFO ] [Scheduler] Notify time: 14600. Current size: 2
+[2019-01-28T10:56:35.183] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.183] [INFO ] [14600][Scheduler] next at 15000 in 400
+[2019-01-28T10:56:35.185] [DEBUG] #@# Current timestep 14650
+[2019-01-28T10:56:35.185] [INFO ] [Scheduler] Notify time: 14650. Current size: 2
+[2019-01-28T10:56:35.185] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.185] [INFO ] [14650][Scheduler] next at 15000 in 350
+[2019-01-28T10:56:35.186] [DEBUG] #@# Current timestep 14700
+[2019-01-28T10:56:35.186] [INFO ] [Scheduler] Notify time: 14700. Current size: 2
+[2019-01-28T10:56:35.186] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.186] [INFO ] [14700][Scheduler] next at 15000 in 300
+[2019-01-28T10:56:35.187] [DEBUG] #@# Current timestep 14750
+[2019-01-28T10:56:35.187] [INFO ] [Scheduler] Notify time: 14750. Current size: 2
+[2019-01-28T10:56:35.187] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.187] [INFO ] [14750][Scheduler] next at 15000 in 250
+[2019-01-28T10:56:35.189] [DEBUG] #@# Current timestep 14800
+[2019-01-28T10:56:35.189] [INFO ] [Scheduler] Notify time: 14800. Current size: 2
+[2019-01-28T10:56:35.189] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.189] [INFO ] [14800][Scheduler] next at 15000 in 200
+[2019-01-28T10:56:35.190] [DEBUG] #@# Current timestep 14850
+[2019-01-28T10:56:35.190] [INFO ] [Scheduler] Notify time: 14850. Current size: 2
+[2019-01-28T10:56:35.190] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.190] [INFO ] [14850][Scheduler] next at 15000 in 150
+[2019-01-28T10:56:35.191] [DEBUG] #@# Current timestep 14900
+[2019-01-28T10:56:35.191] [INFO ] [Scheduler] Notify time: 14900. Current size: 2
+[2019-01-28T10:56:35.191] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.191] [INFO ] [14900][Scheduler] next at 15000 in 100
+[2019-01-28T10:56:35.192] [DEBUG] #@# Current timestep 14950
+[2019-01-28T10:56:35.192] [INFO ] [Scheduler] Notify time: 14950. Current size: 2
+[2019-01-28T10:56:35.192] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.192] [INFO ] [14950][Scheduler] next at 15000 in 50
+[2019-01-28T10:56:35.194] [DEBUG] #@# Current timestep 15000
+[2019-01-28T10:56:35.194] [INFO ] [Scheduler] Notify time: 15000. Current size: 2
+[2019-01-28T10:56:35.194] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:35.194] [INFO ] Schedule at 16000
+[2019-01-28T10:56:35.194] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:35.194] [INFO ] Schedule at 16000
+[2019-01-28T10:56:35.194] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:35.194] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:35.194] [INFO ] [15000][Scheduler] next at 16000 in 1000
+[2019-01-28T10:56:35.196] [DEBUG] #@# Current timestep 15050
+[2019-01-28T10:56:35.196] [INFO ] [Scheduler] Notify time: 15050. Current size: 2
+[2019-01-28T10:56:35.196] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.196] [INFO ] [15050][Scheduler] next at 16000 in 950
+[2019-01-28T10:56:35.197] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:35.197] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:35.197] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 14950
+[2019-01-28T10:56:35.197] [FUNCT] virtual void testapp::application::BehaviourTestRSU::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(RSU 5000): TestRSU: 
+[2019-01-28T10:56:35.197] [DEBUG] (RSU 5000): TestRSU: Node 5000 received CAM messages
+[2019-01-28T10:56:35.197] [INFO ] (RSU 5000): TestRSU: CAM message received from node 2 at time 14950
+[2019-01-28T10:56:35.198] [DEBUG] #@# Current timestep 15100
+[2019-01-28T10:56:35.198] [INFO ] [Scheduler] Notify time: 15100. Current size: 2
+[2019-01-28T10:56:35.198] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.198] [INFO ] [15100][Scheduler] next at 16000 in 900
+[2019-01-28T10:56:35.199] [DEBUG] #@# Current timestep 15150
+[2019-01-28T10:56:35.199] [INFO ] [Scheduler] Notify time: 15150. Current size: 2
+[2019-01-28T10:56:35.199] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.199] [INFO ] [15150][Scheduler] next at 16000 in 850
+[2019-01-28T10:56:35.200] [DEBUG] #@# Current timestep 15200
+[2019-01-28T10:56:35.200] [INFO ] [Scheduler] Notify time: 15200. Current size: 2
+[2019-01-28T10:56:35.200] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.200] [INFO ] [15200][Scheduler] next at 16000 in 800
+[2019-01-28T10:56:35.201] [DEBUG] #@# Current timestep 15250
+[2019-01-28T10:56:35.201] [INFO ] [Scheduler] Notify time: 15250. Current size: 2
+[2019-01-28T10:56:35.201] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.201] [INFO ] [15250][Scheduler] next at 16000 in 750
+[2019-01-28T10:56:35.202] [DEBUG] #@# Current timestep 15300
+[2019-01-28T10:56:35.203] [INFO ] [Scheduler] Notify time: 15300. Current size: 2
+[2019-01-28T10:56:35.203] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.203] [INFO ] [15300][Scheduler] next at 16000 in 700
+[2019-01-28T10:56:35.204] [DEBUG] #@# Current timestep 15350
+[2019-01-28T10:56:35.204] [INFO ] [Scheduler] Notify time: 15350. Current size: 2
+[2019-01-28T10:56:35.204] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.204] [INFO ] [15350][Scheduler] next at 16000 in 650
+[2019-01-28T10:56:35.205] [DEBUG] #@# Current timestep 15400
+[2019-01-28T10:56:35.205] [INFO ] [Scheduler] Notify time: 15400. Current size: 2
+[2019-01-28T10:56:35.205] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.205] [INFO ] [15400][Scheduler] next at 16000 in 600
+[2019-01-28T10:56:35.206] [DEBUG] #@# Current timestep 15450
+[2019-01-28T10:56:35.206] [INFO ] [Scheduler] Notify time: 15450. Current size: 2
+[2019-01-28T10:56:35.206] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.206] [INFO ] [15450][Scheduler] next at 16000 in 550
+[2019-01-28T10:56:35.207] [DEBUG] #@# Current timestep 15500
+[2019-01-28T10:56:35.207] [INFO ] [Scheduler] Notify time: 15500. Current size: 2
+[2019-01-28T10:56:35.207] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.207] [INFO ] [15500][Scheduler] next at 16000 in 500
+[2019-01-28T10:56:35.208] [DEBUG] #@# Current timestep 15550
+[2019-01-28T10:56:35.208] [INFO ] [Scheduler] Notify time: 15550. Current size: 2
+[2019-01-28T10:56:35.208] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.208] [INFO ] [15550][Scheduler] next at 16000 in 450
+[2019-01-28T10:56:35.209] [DEBUG] #@# Current timestep 15600
+[2019-01-28T10:56:35.209] [INFO ] [Scheduler] Notify time: 15600. Current size: 2
+[2019-01-28T10:56:35.209] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.209] [INFO ] [15600][Scheduler] next at 16000 in 400
+[2019-01-28T10:56:35.210] [DEBUG] #@# Current timestep 15650
+[2019-01-28T10:56:35.210] [INFO ] [Scheduler] Notify time: 15650. Current size: 2
+[2019-01-28T10:56:35.210] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.210] [INFO ] [15650][Scheduler] next at 16000 in 350
+[2019-01-28T10:56:35.211] [DEBUG] #@# Current timestep 15700
+[2019-01-28T10:56:35.212] [INFO ] [Scheduler] Notify time: 15700. Current size: 2
+[2019-01-28T10:56:35.212] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.212] [INFO ] [15700][Scheduler] next at 16000 in 300
+[2019-01-28T10:56:35.213] [DEBUG] #@# Current timestep 15750
+[2019-01-28T10:56:35.213] [INFO ] [Scheduler] Notify time: 15750. Current size: 2
+[2019-01-28T10:56:35.213] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.213] [INFO ] [15750][Scheduler] next at 16000 in 250
+[2019-01-28T10:56:35.214] [DEBUG] #@# Current timestep 15800
+[2019-01-28T10:56:35.214] [INFO ] [Scheduler] Notify time: 15800. Current size: 2
+[2019-01-28T10:56:35.214] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.214] [INFO ] [15800][Scheduler] next at 16000 in 200
+[2019-01-28T10:56:35.215] [DEBUG] #@# Current timestep 15850
+[2019-01-28T10:56:35.215] [INFO ] [Scheduler] Notify time: 15850. Current size: 2
+[2019-01-28T10:56:35.215] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.215] [INFO ] [15850][Scheduler] next at 16000 in 150
+[2019-01-28T10:56:35.216] [DEBUG] #@# Current timestep 15900
+[2019-01-28T10:56:35.216] [INFO ] [Scheduler] Notify time: 15900. Current size: 2
+[2019-01-28T10:56:35.216] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.216] [INFO ] [15900][Scheduler] next at 16000 in 100
+[2019-01-28T10:56:35.218] [DEBUG] #@# Current timestep 15950
+[2019-01-28T10:56:35.218] [INFO ] [Scheduler] Notify time: 15950. Current size: 2
+[2019-01-28T10:56:35.218] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.218] [INFO ] [15950][Scheduler] next at 16000 in 50
+[2019-01-28T10:56:35.220] [DEBUG] #@# Current timestep 16000
+[2019-01-28T10:56:35.220] [INFO ] [Scheduler] Notify time: 16000. Current size: 2
+[2019-01-28T10:56:35.220] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:35.220] [INFO ] Schedule at 17000
+[2019-01-28T10:56:35.220] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:35.220] [INFO ] Schedule at 17000
+[2019-01-28T10:56:35.220] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:35.220] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:35.220] [INFO ] [16000][Scheduler] next at 17000 in 1000
+[2019-01-28T10:56:35.222] [DEBUG] #@# Current timestep 16050
+[2019-01-28T10:56:35.222] [INFO ] [Scheduler] Notify time: 16050. Current size: 2
+[2019-01-28T10:56:35.222] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.222] [INFO ] [16050][Scheduler] next at 17000 in 950
+[2019-01-28T10:56:35.223] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:35.223] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:35.223] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 15950
+[2019-01-28T10:56:35.224] [DEBUG] #@# Current timestep 16100
+[2019-01-28T10:56:35.224] [INFO ] [Scheduler] Notify time: 16100. Current size: 2
+[2019-01-28T10:56:35.224] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.224] [INFO ] [16100][Scheduler] next at 17000 in 900
+[2019-01-28T10:56:35.225] [DEBUG] #@# Current timestep 16150
+[2019-01-28T10:56:35.225] [INFO ] [Scheduler] Notify time: 16150. Current size: 2
+[2019-01-28T10:56:35.225] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.225] [INFO ] [16150][Scheduler] next at 17000 in 850
+[2019-01-28T10:56:35.230] [DEBUG] #@# Current timestep 16200
+[2019-01-28T10:56:35.230] [INFO ] [Scheduler] Notify time: 16200. Current size: 2
+[2019-01-28T10:56:35.230] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.230] [INFO ] [16200][Scheduler] next at 17000 in 800
+[2019-01-28T10:56:35.231] [DEBUG] #@# Current timestep 16250
+[2019-01-28T10:56:35.231] [INFO ] [Scheduler] Notify time: 16250. Current size: 2
+[2019-01-28T10:56:35.231] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.231] [INFO ] [16250][Scheduler] next at 17000 in 750
+[2019-01-28T10:56:35.233] [DEBUG] #@# Current timestep 16300
+[2019-01-28T10:56:35.233] [INFO ] [Scheduler] Notify time: 16300. Current size: 2
+[2019-01-28T10:56:35.233] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.233] [INFO ] [16300][Scheduler] next at 17000 in 700
+[2019-01-28T10:56:35.237] [DEBUG] #@# Current timestep 16350
+[2019-01-28T10:56:35.237] [INFO ] [Scheduler] Notify time: 16350. Current size: 2
+[2019-01-28T10:56:35.237] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.237] [INFO ] [16350][Scheduler] next at 17000 in 650
+[2019-01-28T10:56:35.238] [DEBUG] #@# Current timestep 16400
+[2019-01-28T10:56:35.238] [INFO ] [Scheduler] Notify time: 16400. Current size: 2
+[2019-01-28T10:56:35.238] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.238] [INFO ] [16400][Scheduler] next at 17000 in 600
+[2019-01-28T10:56:35.239] [DEBUG] #@# Current timestep 16450
+[2019-01-28T10:56:35.239] [INFO ] [Scheduler] Notify time: 16450. Current size: 2
+[2019-01-28T10:56:35.239] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.239] [INFO ] [16450][Scheduler] next at 17000 in 550
+[2019-01-28T10:56:35.241] [DEBUG] #@# Current timestep 16500
+[2019-01-28T10:56:35.241] [INFO ] [Scheduler] Notify time: 16500. Current size: 2
+[2019-01-28T10:56:35.241] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.241] [INFO ] [16500][Scheduler] next at 17000 in 500
+[2019-01-28T10:56:35.242] [DEBUG] #@# Current timestep 16550
+[2019-01-28T10:56:35.242] [INFO ] [Scheduler] Notify time: 16550. Current size: 2
+[2019-01-28T10:56:35.242] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.242] [INFO ] [16550][Scheduler] next at 17000 in 450
+[2019-01-28T10:56:35.244] [DEBUG] #@# Current timestep 16600
+[2019-01-28T10:56:35.244] [INFO ] [Scheduler] Notify time: 16600. Current size: 2
+[2019-01-28T10:56:35.244] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.244] [INFO ] [16600][Scheduler] next at 17000 in 400
+[2019-01-28T10:56:35.245] [DEBUG] #@# Current timestep 16650
+[2019-01-28T10:56:35.245] [INFO ] [Scheduler] Notify time: 16650. Current size: 2
+[2019-01-28T10:56:35.245] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.245] [INFO ] [16650][Scheduler] next at 17000 in 350
+[2019-01-28T10:56:35.248] [DEBUG] #@# Current timestep 16700
+[2019-01-28T10:56:35.248] [INFO ] [Scheduler] Notify time: 16700. Current size: 2
+[2019-01-28T10:56:35.248] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.248] [INFO ] [16700][Scheduler] next at 17000 in 300
+[2019-01-28T10:56:35.249] [DEBUG] #@# Current timestep 16750
+[2019-01-28T10:56:35.249] [INFO ] [Scheduler] Notify time: 16750. Current size: 2
+[2019-01-28T10:56:35.249] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.249] [INFO ] [16750][Scheduler] next at 17000 in 250
+[2019-01-28T10:56:35.251] [DEBUG] #@# Current timestep 16800
+[2019-01-28T10:56:35.251] [INFO ] [Scheduler] Notify time: 16800. Current size: 2
+[2019-01-28T10:56:35.251] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.251] [INFO ] [16800][Scheduler] next at 17000 in 200
+[2019-01-28T10:56:35.252] [DEBUG] #@# Current timestep 16850
+[2019-01-28T10:56:35.252] [INFO ] [Scheduler] Notify time: 16850. Current size: 2
+[2019-01-28T10:56:35.252] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.252] [INFO ] [16850][Scheduler] next at 17000 in 150
+[2019-01-28T10:56:35.254] [DEBUG] #@# Current timestep 16900
+[2019-01-28T10:56:35.254] [INFO ] [Scheduler] Notify time: 16900. Current size: 2
+[2019-01-28T10:56:35.254] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.254] [INFO ] [16900][Scheduler] next at 17000 in 100
+[2019-01-28T10:56:35.256] [DEBUG] #@# Current timestep 16950
+[2019-01-28T10:56:35.256] [INFO ] [Scheduler] Notify time: 16950. Current size: 2
+[2019-01-28T10:56:35.256] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.256] [INFO ] [16950][Scheduler] next at 17000 in 50
+[2019-01-28T10:56:35.258] [DEBUG] #@# Current timestep 17000
+[2019-01-28T10:56:35.258] [INFO ] [Scheduler] Notify time: 17000. Current size: 2
+[2019-01-28T10:56:35.258] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:35.258] [INFO ] Schedule at 18000
+[2019-01-28T10:56:35.258] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:35.258] [INFO ] Schedule at 18000
+[2019-01-28T10:56:35.258] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:35.258] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:35.258] [INFO ] [17000][Scheduler] next at 18000 in 1000
+[2019-01-28T10:56:35.260] [DEBUG] #@# Current timestep 17050
+[2019-01-28T10:56:35.260] [INFO ] [Scheduler] Notify time: 17050. Current size: 2
+[2019-01-28T10:56:35.260] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.260] [INFO ] [17050][Scheduler] next at 18000 in 950
+[2019-01-28T10:56:35.260] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:35.260] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:35.260] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 16950
+[2019-01-28T10:56:35.262] [DEBUG] #@# Current timestep 17100
+[2019-01-28T10:56:35.262] [INFO ] [Scheduler] Notify time: 17100. Current size: 2
+[2019-01-28T10:56:35.262] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.262] [INFO ] [17100][Scheduler] next at 18000 in 900
+[2019-01-28T10:56:35.263] [DEBUG] #@# Current timestep 17150
+[2019-01-28T10:56:35.263] [INFO ] [Scheduler] Notify time: 17150. Current size: 2
+[2019-01-28T10:56:35.263] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.263] [INFO ] [17150][Scheduler] next at 18000 in 850
+[2019-01-28T10:56:35.264] [DEBUG] #@# Current timestep 17200
+[2019-01-28T10:56:35.264] [INFO ] [Scheduler] Notify time: 17200. Current size: 2
+[2019-01-28T10:56:35.264] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.264] [INFO ] [17200][Scheduler] next at 18000 in 800
+[2019-01-28T10:56:35.266] [DEBUG] #@# Current timestep 17250
+[2019-01-28T10:56:35.266] [INFO ] [Scheduler] Notify time: 17250. Current size: 2
+[2019-01-28T10:56:35.266] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.266] [INFO ] [17250][Scheduler] next at 18000 in 750
+[2019-01-28T10:56:35.267] [DEBUG] #@# Current timestep 17300
+[2019-01-28T10:56:35.267] [INFO ] [Scheduler] Notify time: 17300. Current size: 2
+[2019-01-28T10:56:35.267] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.267] [INFO ] [17300][Scheduler] next at 18000 in 700
+[2019-01-28T10:56:35.269] [DEBUG] #@# Current timestep 17350
+[2019-01-28T10:56:35.269] [INFO ] [Scheduler] Notify time: 17350. Current size: 2
+[2019-01-28T10:56:35.269] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.269] [INFO ] [17350][Scheduler] next at 18000 in 650
+[2019-01-28T10:56:35.270] [DEBUG] #@# Current timestep 17400
+[2019-01-28T10:56:35.270] [INFO ] [Scheduler] Notify time: 17400. Current size: 2
+[2019-01-28T10:56:35.270] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.270] [INFO ] [17400][Scheduler] next at 18000 in 600
+[2019-01-28T10:56:35.271] [DEBUG] #@# Current timestep 17450
+[2019-01-28T10:56:35.271] [INFO ] [Scheduler] Notify time: 17450. Current size: 2
+[2019-01-28T10:56:35.271] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.271] [INFO ] [17450][Scheduler] next at 18000 in 550
+[2019-01-28T10:56:35.273] [DEBUG] #@# Current timestep 17500
+[2019-01-28T10:56:35.273] [INFO ] [Scheduler] Notify time: 17500. Current size: 2
+[2019-01-28T10:56:35.273] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.273] [INFO ] [17500][Scheduler] next at 18000 in 500
+[2019-01-28T10:56:35.274] [DEBUG] #@# Current timestep 17550
+[2019-01-28T10:56:35.274] [INFO ] [Scheduler] Notify time: 17550. Current size: 2
+[2019-01-28T10:56:35.274] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.274] [INFO ] [17550][Scheduler] next at 18000 in 450
+[2019-01-28T10:56:35.275] [DEBUG] #@# Current timestep 17600
+[2019-01-28T10:56:35.275] [INFO ] [Scheduler] Notify time: 17600. Current size: 2
+[2019-01-28T10:56:35.275] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.275] [INFO ] [17600][Scheduler] next at 18000 in 400
+[2019-01-28T10:56:35.277] [DEBUG] #@# Current timestep 17650
+[2019-01-28T10:56:35.277] [INFO ] [Scheduler] Notify time: 17650. Current size: 2
+[2019-01-28T10:56:35.277] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.277] [INFO ] [17650][Scheduler] next at 18000 in 350
+[2019-01-28T10:56:35.283] [DEBUG] #@# Current timestep 17700
+[2019-01-28T10:56:35.283] [INFO ] [Scheduler] Notify time: 17700. Current size: 2
+[2019-01-28T10:56:35.283] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.283] [INFO ] [17700][Scheduler] next at 18000 in 300
+[2019-01-28T10:56:35.284] [DEBUG] #@# Current timestep 17750
+[2019-01-28T10:56:35.284] [INFO ] [Scheduler] Notify time: 17750. Current size: 2
+[2019-01-28T10:56:35.284] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.284] [INFO ] [17750][Scheduler] next at 18000 in 250
+[2019-01-28T10:56:35.285] [DEBUG] #@# Current timestep 17800
+[2019-01-28T10:56:35.285] [INFO ] [Scheduler] Notify time: 17800. Current size: 2
+[2019-01-28T10:56:35.285] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.285] [INFO ] [17800][Scheduler] next at 18000 in 200
+[2019-01-28T10:56:35.286] [DEBUG] #@# Current timestep 17850
+[2019-01-28T10:56:35.286] [INFO ] [Scheduler] Notify time: 17850. Current size: 2
+[2019-01-28T10:56:35.286] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.286] [INFO ] [17850][Scheduler] next at 18000 in 150
+[2019-01-28T10:56:35.287] [DEBUG] #@# Current timestep 17900
+[2019-01-28T10:56:35.287] [INFO ] [Scheduler] Notify time: 17900. Current size: 2
+[2019-01-28T10:56:35.287] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.287] [INFO ] [17900][Scheduler] next at 18000 in 100
+[2019-01-28T10:56:35.288] [DEBUG] #@# Current timestep 17950
+[2019-01-28T10:56:35.288] [INFO ] [Scheduler] Notify time: 17950. Current size: 2
+[2019-01-28T10:56:35.288] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.288] [INFO ] [17950][Scheduler] next at 18000 in 50
+[2019-01-28T10:56:35.291] [DEBUG] #@# Current timestep 18000
+[2019-01-28T10:56:35.291] [INFO ] [Scheduler] Notify time: 18000. Current size: 2
+[2019-01-28T10:56:35.291] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:35.291] [INFO ] Schedule at 19000
+[2019-01-28T10:56:35.291] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:35.291] [INFO ] Schedule at 19000
+[2019-01-28T10:56:35.291] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:35.291] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:35.291] [INFO ] [18000][Scheduler] next at 19000 in 1000
+[2019-01-28T10:56:35.293] [DEBUG] #@# Current timestep 18050
+[2019-01-28T10:56:35.293] [INFO ] [Scheduler] Notify time: 18050. Current size: 2
+[2019-01-28T10:56:35.293] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.293] [INFO ] [18050][Scheduler] next at 19000 in 950
+[2019-01-28T10:56:35.293] [FUNCT] virtual void testapp::application::BehaviourTestNode::processCAMmessagesReceived(int, const std::vector<baseapp::CAMdata>&):~(Node 2): TestNode: 
+[2019-01-28T10:56:35.293] [DEBUG] (Node 2): TestNode: Node 2 received CAM messages
+[2019-01-28T10:56:35.293] [INFO ] (Node 2): TestNode: CAM message received from node 5000 at time 17950
+[2019-01-28T10:56:35.294] [DEBUG] #@# Current timestep 18100
+[2019-01-28T10:56:35.294] [INFO ] [Scheduler] Notify time: 18100. Current size: 2
+[2019-01-28T10:56:35.294] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.294] [INFO ] [18100][Scheduler] next at 19000 in 900
+[2019-01-28T10:56:35.295] [DEBUG] #@# Current timestep 18150
+[2019-01-28T10:56:35.295] [INFO ] [Scheduler] Notify time: 18150. Current size: 2
+[2019-01-28T10:56:35.295] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.295] [INFO ] [18150][Scheduler] next at 19000 in 850
+[2019-01-28T10:56:35.296] [DEBUG] #@# Current timestep 18200
+[2019-01-28T10:56:35.296] [INFO ] [Scheduler] Notify time: 18200. Current size: 2
+[2019-01-28T10:56:35.296] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.296] [INFO ] [18200][Scheduler] next at 19000 in 800
+[2019-01-28T10:56:35.297] [DEBUG] #@# Current timestep 18250
+[2019-01-28T10:56:35.297] [INFO ] [Scheduler] Notify time: 18250. Current size: 2
+[2019-01-28T10:56:35.297] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.297] [INFO ] [18250][Scheduler] next at 19000 in 750
+[2019-01-28T10:56:35.299] [DEBUG] #@# Current timestep 18300
+[2019-01-28T10:56:35.299] [INFO ] [Scheduler] Notify time: 18300. Current size: 2
+[2019-01-28T10:56:35.299] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.299] [INFO ] [18300][Scheduler] next at 19000 in 700
+[2019-01-28T10:56:35.300] [DEBUG] #@# Current timestep 18350
+[2019-01-28T10:56:35.300] [INFO ] [Scheduler] Notify time: 18350. Current size: 2
+[2019-01-28T10:56:35.300] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.300] [INFO ] [18350][Scheduler] next at 19000 in 650
+[2019-01-28T10:56:35.301] [DEBUG] #@# Current timestep 18400
+[2019-01-28T10:56:35.301] [INFO ] [Scheduler] Notify time: 18400. Current size: 2
+[2019-01-28T10:56:35.301] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.301] [INFO ] [18400][Scheduler] next at 19000 in 600
+[2019-01-28T10:56:35.302] [DEBUG] #@# Current timestep 18450
+[2019-01-28T10:56:35.302] [INFO ] [Scheduler] Notify time: 18450. Current size: 2
+[2019-01-28T10:56:35.302] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.302] [INFO ] [18450][Scheduler] next at 19000 in 550
+[2019-01-28T10:56:35.303] [DEBUG] #@# Current timestep 18500
+[2019-01-28T10:56:35.303] [INFO ] [Scheduler] Notify time: 18500. Current size: 2
+[2019-01-28T10:56:35.303] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.303] [INFO ] [18500][Scheduler] next at 19000 in 500
+[2019-01-28T10:56:35.305] [DEBUG] #@# Current timestep 18550
+[2019-01-28T10:56:35.305] [INFO ] [Scheduler] Notify time: 18550. Current size: 2
+[2019-01-28T10:56:35.305] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.305] [INFO ] [18550][Scheduler] next at 19000 in 450
+[2019-01-28T10:56:35.306] [DEBUG] #@# Current timestep 18600
+[2019-01-28T10:56:35.306] [INFO ] [Scheduler] Notify time: 18600. Current size: 2
+[2019-01-28T10:56:35.306] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.306] [INFO ] [18600][Scheduler] next at 19000 in 400
+[2019-01-28T10:56:35.307] [DEBUG] #@# Current timestep 18650
+[2019-01-28T10:56:35.307] [INFO ] [Scheduler] Notify time: 18650. Current size: 2
+[2019-01-28T10:56:35.307] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.307] [INFO ] [18650][Scheduler] next at 19000 in 350
+[2019-01-28T10:56:35.308] [DEBUG] #@# Current timestep 18700
+[2019-01-28T10:56:35.308] [INFO ] [Scheduler] Notify time: 18700. Current size: 2
+[2019-01-28T10:56:35.308] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.308] [INFO ] [18700][Scheduler] next at 19000 in 300
+[2019-01-28T10:56:35.309] [DEBUG] #@# Current timestep 18750
+[2019-01-28T10:56:35.309] [INFO ] [Scheduler] Notify time: 18750. Current size: 2
+[2019-01-28T10:56:35.309] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.309] [INFO ] [18750][Scheduler] next at 19000 in 250
+[2019-01-28T10:56:35.311] [DEBUG] #@# Current timestep 18800
+[2019-01-28T10:56:35.311] [INFO ] [Scheduler] Notify time: 18800. Current size: 2
+[2019-01-28T10:56:35.311] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.311] [INFO ] [18800][Scheduler] next at 19000 in 200
+[2019-01-28T10:56:35.312] [DEBUG] #@# Current timestep 18850
+[2019-01-28T10:56:35.312] [INFO ] [Scheduler] Notify time: 18850. Current size: 2
+[2019-01-28T10:56:35.312] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.312] [INFO ] [18850][Scheduler] next at 19000 in 150
+[2019-01-28T10:56:35.313] [DEBUG] #@# Current timestep 18900
+[2019-01-28T10:56:35.313] [INFO ] [Scheduler] Notify time: 18900. Current size: 2
+[2019-01-28T10:56:35.313] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.313] [INFO ] [18900][Scheduler] next at 19000 in 100
+[2019-01-28T10:56:35.314] [DEBUG] #@# Current timestep 18950
+[2019-01-28T10:56:35.314] [INFO ] [Scheduler] Notify time: 18950. Current size: 2
+[2019-01-28T10:56:35.314] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.314] [INFO ] [18950][Scheduler] next at 19000 in 50
+[2019-01-28T10:56:35.315] [DEBUG] #@# Current timestep 19000
+[2019-01-28T10:56:35.315] [INFO ] [Scheduler] Notify time: 19000. Current size: 2
+[2019-01-28T10:56:35.315] [DEBUG] [GMSample][2] dir=1000 not found.
+[2019-01-28T10:56:35.315] [INFO ] Schedule at 20000
+[2019-01-28T10:56:35.315] [FUNCT] virtual void baseapp::application::NodeSampler::Sample():~(Node 2): NodeSampler: 
+[2019-01-28T10:56:35.315] [INFO ] Schedule at 20000
+[2019-01-28T10:56:35.315] [WARN ] (Node 2): Current vehicle is NULL
+[2019-01-28T10:56:35.315] [INFO ] [Scheduler] 2 have been executed.
+[2019-01-28T10:56:35.315] [INFO ] [19000][Scheduler] next at 20000 in 1000
+[2019-01-28T10:56:35.317] [DEBUG] #@# Current timestep 19050
+[2019-01-28T10:56:35.317] [INFO ] [Scheduler] Notify time: 19050. Current size: 1
+[2019-01-28T10:56:35.317] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.317] [INFO ] [19050][Scheduler] next at 20000 in 950
+[2019-01-28T10:56:35.318] [DEBUG] #@# Current timestep 19100
+[2019-01-28T10:56:35.318] [INFO ] [Scheduler] Notify time: 19100. Current size: 1
+[2019-01-28T10:56:35.318] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.318] [INFO ] [19100][Scheduler] next at 20000 in 900
+[2019-01-28T10:56:35.319] [DEBUG] #@# Current timestep 19150
+[2019-01-28T10:56:35.319] [INFO ] [Scheduler] Notify time: 19150. Current size: 1
+[2019-01-28T10:56:35.319] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.319] [INFO ] [19150][Scheduler] next at 20000 in 850
+[2019-01-28T10:56:35.319] [DEBUG] #@# Current timestep 19200
+[2019-01-28T10:56:35.319] [INFO ] [Scheduler] Notify time: 19200. Current size: 1
+[2019-01-28T10:56:35.319] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.319] [INFO ] [19200][Scheduler] next at 20000 in 800
+[2019-01-28T10:56:35.320] [DEBUG] #@# Current timestep 19250
+[2019-01-28T10:56:35.320] [INFO ] [Scheduler] Notify time: 19250. Current size: 1
+[2019-01-28T10:56:35.320] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.320] [INFO ] [19250][Scheduler] next at 20000 in 750
+[2019-01-28T10:56:35.321] [DEBUG] #@# Current timestep 19300
+[2019-01-28T10:56:35.321] [INFO ] [Scheduler] Notify time: 19300. Current size: 1
+[2019-01-28T10:56:35.321] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.321] [INFO ] [19300][Scheduler] next at 20000 in 700
+[2019-01-28T10:56:35.322] [DEBUG] #@# Current timestep 19350
+[2019-01-28T10:56:35.322] [INFO ] [Scheduler] Notify time: 19350. Current size: 1
+[2019-01-28T10:56:35.322] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.322] [INFO ] [19350][Scheduler] next at 20000 in 650
+[2019-01-28T10:56:35.322] [DEBUG] #@# Current timestep 19400
+[2019-01-28T10:56:35.322] [INFO ] [Scheduler] Notify time: 19400. Current size: 1
+[2019-01-28T10:56:35.322] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.322] [INFO ] [19400][Scheduler] next at 20000 in 600
+[2019-01-28T10:56:35.323] [DEBUG] #@# Current timestep 19450
+[2019-01-28T10:56:35.323] [INFO ] [Scheduler] Notify time: 19450. Current size: 1
+[2019-01-28T10:56:35.323] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.323] [INFO ] [19450][Scheduler] next at 20000 in 550
+[2019-01-28T10:56:35.324] [DEBUG] #@# Current timestep 19500
+[2019-01-28T10:56:35.324] [INFO ] [Scheduler] Notify time: 19500. Current size: 1
+[2019-01-28T10:56:35.324] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.324] [INFO ] [19500][Scheduler] next at 20000 in 500
+[2019-01-28T10:56:35.325] [DEBUG] #@# Current timestep 19550
+[2019-01-28T10:56:35.325] [INFO ] [Scheduler] Notify time: 19550. Current size: 1
+[2019-01-28T10:56:35.325] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.325] [INFO ] [19550][Scheduler] next at 20000 in 450
+[2019-01-28T10:56:35.325] [DEBUG] #@# Current timestep 19600
+[2019-01-28T10:56:35.325] [INFO ] [Scheduler] Notify time: 19600. Current size: 1
+[2019-01-28T10:56:35.325] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.325] [INFO ] [19600][Scheduler] next at 20000 in 400
+[2019-01-28T10:56:35.326] [DEBUG] #@# Current timestep 19650
+[2019-01-28T10:56:35.326] [INFO ] [Scheduler] Notify time: 19650. Current size: 1
+[2019-01-28T10:56:35.326] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.326] [INFO ] [19650][Scheduler] next at 20000 in 350
+[2019-01-28T10:56:35.327] [DEBUG] #@# Current timestep 19700
+[2019-01-28T10:56:35.327] [INFO ] [Scheduler] Notify time: 19700. Current size: 1
+[2019-01-28T10:56:35.327] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.327] [INFO ] [19700][Scheduler] next at 20000 in 300
+[2019-01-28T10:56:35.328] [DEBUG] #@# Current timestep 19750
+[2019-01-28T10:56:35.328] [INFO ] [Scheduler] Notify time: 19750. Current size: 1
+[2019-01-28T10:56:35.328] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.328] [INFO ] [19750][Scheduler] next at 20000 in 250
+[2019-01-28T10:56:35.328] [DEBUG] #@# Current timestep 19800
+[2019-01-28T10:56:35.328] [INFO ] [Scheduler] Notify time: 19800. Current size: 1
+[2019-01-28T10:56:35.328] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.328] [INFO ] [19800][Scheduler] next at 20000 in 200
+[2019-01-28T10:56:35.333] [DEBUG] #@# Current timestep 19850
+[2019-01-28T10:56:35.333] [INFO ] [Scheduler] Notify time: 19850. Current size: 1
+[2019-01-28T10:56:35.333] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.334] [INFO ] [19850][Scheduler] next at 20000 in 150
+[2019-01-28T10:56:35.334] [DEBUG] #@# Current timestep 19900
+[2019-01-28T10:56:35.334] [INFO ] [Scheduler] Notify time: 19900. Current size: 1
+[2019-01-28T10:56:35.334] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.334] [INFO ] [19900][Scheduler] next at 20000 in 100
+[2019-01-28T10:56:35.335] [DEBUG] #@# Current timestep 19950
+[2019-01-28T10:56:35.335] [INFO ] [Scheduler] Notify time: 19950. Current size: 1
+[2019-01-28T10:56:35.335] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.335] [INFO ] [19950][Scheduler] next at 20000 in 50
+[2019-01-28T10:56:35.336] [DEBUG] #@# Current timestep 20000
+[2019-01-28T10:56:35.336] [INFO ] [Scheduler] Notify time: 20000. Current size: 1
+[2019-01-28T10:56:35.336] [INFO ] Schedule at 21000
+[2019-01-28T10:56:35.336] [INFO ] [Scheduler] 1 have been executed.
+[2019-01-28T10:56:35.336] [INFO ] [20000][Scheduler] next at 21000 in 1000
+[2019-01-28T10:56:35.337] [DEBUG] #@# Current timestep 20050
+[2019-01-28T10:56:35.337] [INFO ] [Scheduler] Notify time: 20050. Current size: 1
+[2019-01-28T10:56:35.337] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.337] [INFO ] [20050][Scheduler] next at 21000 in 950
+[2019-01-28T10:56:35.338] [DEBUG] #@# Current timestep 20100
+[2019-01-28T10:56:35.338] [INFO ] [Scheduler] Notify time: 20100. Current size: 1
+[2019-01-28T10:56:35.338] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.338] [INFO ] [20100][Scheduler] next at 21000 in 900
+[2019-01-28T10:56:35.339] [DEBUG] #@# Current timestep 20150
+[2019-01-28T10:56:35.339] [INFO ] [Scheduler] Notify time: 20150. Current size: 1
+[2019-01-28T10:56:35.339] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.339] [INFO ] [20150][Scheduler] next at 21000 in 850
+[2019-01-28T10:56:35.340] [DEBUG] #@# Current timestep 20200
+[2019-01-28T10:56:35.340] [INFO ] [Scheduler] Notify time: 20200. Current size: 1
+[2019-01-28T10:56:35.340] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.340] [INFO ] [20200][Scheduler] next at 21000 in 800
+[2019-01-28T10:56:35.341] [DEBUG] #@# Current timestep 20250
+[2019-01-28T10:56:35.341] [INFO ] [Scheduler] Notify time: 20250. Current size: 1
+[2019-01-28T10:56:35.341] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.341] [INFO ] [20250][Scheduler] next at 21000 in 750
+[2019-01-28T10:56:35.342] [DEBUG] #@# Current timestep 20300
+[2019-01-28T10:56:35.342] [INFO ] [Scheduler] Notify time: 20300. Current size: 1
+[2019-01-28T10:56:35.342] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.342] [INFO ] [20300][Scheduler] next at 21000 in 700
+[2019-01-28T10:56:35.342] [DEBUG] #@# Current timestep 20350
+[2019-01-28T10:56:35.342] [INFO ] [Scheduler] Notify time: 20350. Current size: 1
+[2019-01-28T10:56:35.342] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.342] [INFO ] [20350][Scheduler] next at 21000 in 650
+[2019-01-28T10:56:35.343] [DEBUG] #@# Current timestep 20400
+[2019-01-28T10:56:35.343] [INFO ] [Scheduler] Notify time: 20400. Current size: 1
+[2019-01-28T10:56:35.343] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.343] [INFO ] [20400][Scheduler] next at 21000 in 600
+[2019-01-28T10:56:35.344] [DEBUG] #@# Current timestep 20450
+[2019-01-28T10:56:35.344] [INFO ] [Scheduler] Notify time: 20450. Current size: 1
+[2019-01-28T10:56:35.344] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.344] [INFO ] [20450][Scheduler] next at 21000 in 550
+[2019-01-28T10:56:35.345] [DEBUG] #@# Current timestep 20500
+[2019-01-28T10:56:35.345] [INFO ] [Scheduler] Notify time: 20500. Current size: 1
+[2019-01-28T10:56:35.345] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.345] [INFO ] [20500][Scheduler] next at 21000 in 500
+[2019-01-28T10:56:35.346] [DEBUG] #@# Current timestep 20550
+[2019-01-28T10:56:35.346] [INFO ] [Scheduler] Notify time: 20550. Current size: 1
+[2019-01-28T10:56:35.346] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.346] [INFO ] [20550][Scheduler] next at 21000 in 450
+[2019-01-28T10:56:35.347] [DEBUG] #@# Current timestep 20600
+[2019-01-28T10:56:35.347] [INFO ] [Scheduler] Notify time: 20600. Current size: 1
+[2019-01-28T10:56:35.347] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.347] [INFO ] [20600][Scheduler] next at 21000 in 400
+[2019-01-28T10:56:35.347] [DEBUG] #@# Current timestep 20650
+[2019-01-28T10:56:35.347] [INFO ] [Scheduler] Notify time: 20650. Current size: 1
+[2019-01-28T10:56:35.347] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.347] [INFO ] [20650][Scheduler] next at 21000 in 350
+[2019-01-28T10:56:35.348] [DEBUG] #@# Current timestep 20700
+[2019-01-28T10:56:35.348] [INFO ] [Scheduler] Notify time: 20700. Current size: 1
+[2019-01-28T10:56:35.348] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.348] [INFO ] [20700][Scheduler] next at 21000 in 300
+[2019-01-28T10:56:35.349] [DEBUG] #@# Current timestep 20750
+[2019-01-28T10:56:35.349] [INFO ] [Scheduler] Notify time: 20750. Current size: 1
+[2019-01-28T10:56:35.349] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.349] [INFO ] [20750][Scheduler] next at 21000 in 250
+[2019-01-28T10:56:35.350] [DEBUG] #@# Current timestep 20800
+[2019-01-28T10:56:35.350] [INFO ] [Scheduler] Notify time: 20800. Current size: 1
+[2019-01-28T10:56:35.350] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.350] [INFO ] [20800][Scheduler] next at 21000 in 200
+[2019-01-28T10:56:35.351] [DEBUG] #@# Current timestep 20850
+[2019-01-28T10:56:35.351] [INFO ] [Scheduler] Notify time: 20850. Current size: 1
+[2019-01-28T10:56:35.351] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.351] [INFO ] [20850][Scheduler] next at 21000 in 150
+[2019-01-28T10:56:35.352] [DEBUG] #@# Current timestep 20900
+[2019-01-28T10:56:35.352] [INFO ] [Scheduler] Notify time: 20900. Current size: 1
+[2019-01-28T10:56:35.352] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.352] [INFO ] [20900][Scheduler] next at 21000 in 100
+[2019-01-28T10:56:35.353] [DEBUG] #@# Current timestep 20950
+[2019-01-28T10:56:35.353] [INFO ] [Scheduler] Notify time: 20950. Current size: 1
+[2019-01-28T10:56:35.353] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.353] [INFO ] [20950][Scheduler] next at 21000 in 50
+[2019-01-28T10:56:35.354] [DEBUG] #@# Current timestep 21000
+[2019-01-28T10:56:35.354] [INFO ] [Scheduler] Notify time: 21000. Current size: 1
+[2019-01-28T10:56:35.354] [INFO ] Schedule at 22000
+[2019-01-28T10:56:35.354] [INFO ] [Scheduler] 1 have been executed.
+[2019-01-28T10:56:35.354] [INFO ] [21000][Scheduler] next at 22000 in 1000
+[2019-01-28T10:56:35.355] [DEBUG] #@# Current timestep 21050
+[2019-01-28T10:56:35.355] [INFO ] [Scheduler] Notify time: 21050. Current size: 1
+[2019-01-28T10:56:35.355] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.355] [INFO ] [21050][Scheduler] next at 22000 in 950
+[2019-01-28T10:56:35.356] [DEBUG] #@# Current timestep 21100
+[2019-01-28T10:56:35.356] [INFO ] [Scheduler] Notify time: 21100. Current size: 1
+[2019-01-28T10:56:35.356] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.356] [INFO ] [21100][Scheduler] next at 22000 in 900
+[2019-01-28T10:56:35.356] [DEBUG] #@# Current timestep 21150
+[2019-01-28T10:56:35.356] [INFO ] [Scheduler] Notify time: 21150. Current size: 1
+[2019-01-28T10:56:35.356] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.356] [INFO ] [21150][Scheduler] next at 22000 in 850
+[2019-01-28T10:56:35.357] [DEBUG] #@# Current timestep 21200
+[2019-01-28T10:56:35.357] [INFO ] [Scheduler] Notify time: 21200. Current size: 1
+[2019-01-28T10:56:35.357] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.357] [INFO ] [21200][Scheduler] next at 22000 in 800
+[2019-01-28T10:56:35.358] [DEBUG] #@# Current timestep 21250
+[2019-01-28T10:56:35.358] [INFO ] [Scheduler] Notify time: 21250. Current size: 1
+[2019-01-28T10:56:35.358] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.358] [INFO ] [21250][Scheduler] next at 22000 in 750
+[2019-01-28T10:56:35.359] [DEBUG] #@# Current timestep 21300
+[2019-01-28T10:56:35.359] [INFO ] [Scheduler] Notify time: 21300. Current size: 1
+[2019-01-28T10:56:35.359] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.359] [INFO ] [21300][Scheduler] next at 22000 in 700
+[2019-01-28T10:56:35.360] [DEBUG] #@# Current timestep 21350
+[2019-01-28T10:56:35.360] [INFO ] [Scheduler] Notify time: 21350. Current size: 1
+[2019-01-28T10:56:35.360] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.360] [INFO ] [21350][Scheduler] next at 22000 in 650
+[2019-01-28T10:56:35.361] [DEBUG] #@# Current timestep 21400
+[2019-01-28T10:56:35.361] [INFO ] [Scheduler] Notify time: 21400. Current size: 1
+[2019-01-28T10:56:35.361] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.361] [INFO ] [21400][Scheduler] next at 22000 in 600
+[2019-01-28T10:56:35.366] [DEBUG] #@# Current timestep 21450
+[2019-01-28T10:56:35.366] [INFO ] [Scheduler] Notify time: 21450. Current size: 1
+[2019-01-28T10:56:35.366] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.366] [INFO ] [21450][Scheduler] next at 22000 in 550
+[2019-01-28T10:56:35.367] [DEBUG] #@# Current timestep 21500
+[2019-01-28T10:56:35.367] [INFO ] [Scheduler] Notify time: 21500. Current size: 1
+[2019-01-28T10:56:35.367] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.367] [INFO ] [21500][Scheduler] next at 22000 in 500
+[2019-01-28T10:56:35.368] [DEBUG] #@# Current timestep 21550
+[2019-01-28T10:56:35.368] [INFO ] [Scheduler] Notify time: 21550. Current size: 1
+[2019-01-28T10:56:35.368] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.368] [INFO ] [21550][Scheduler] next at 22000 in 450
+[2019-01-28T10:56:35.368] [DEBUG] #@# Current timestep 21600
+[2019-01-28T10:56:35.368] [INFO ] [Scheduler] Notify time: 21600. Current size: 1
+[2019-01-28T10:56:35.368] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.368] [INFO ] [21600][Scheduler] next at 22000 in 400
+[2019-01-28T10:56:35.369] [DEBUG] #@# Current timestep 21650
+[2019-01-28T10:56:35.369] [INFO ] [Scheduler] Notify time: 21650. Current size: 1
+[2019-01-28T10:56:35.369] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.369] [INFO ] [21650][Scheduler] next at 22000 in 350
+[2019-01-28T10:56:35.370] [DEBUG] #@# Current timestep 21700
+[2019-01-28T10:56:35.370] [INFO ] [Scheduler] Notify time: 21700. Current size: 1
+[2019-01-28T10:56:35.370] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.370] [INFO ] [21700][Scheduler] next at 22000 in 300
+[2019-01-28T10:56:35.371] [DEBUG] #@# Current timestep 21750
+[2019-01-28T10:56:35.371] [INFO ] [Scheduler] Notify time: 21750. Current size: 1
+[2019-01-28T10:56:35.371] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.371] [INFO ] [21750][Scheduler] next at 22000 in 250
+[2019-01-28T10:56:35.371] [DEBUG] #@# Current timestep 21800
+[2019-01-28T10:56:35.371] [INFO ] [Scheduler] Notify time: 21800. Current size: 1
+[2019-01-28T10:56:35.371] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.371] [INFO ] [21800][Scheduler] next at 22000 in 200
+[2019-01-28T10:56:35.372] [DEBUG] #@# Current timestep 21850
+[2019-01-28T10:56:35.372] [INFO ] [Scheduler] Notify time: 21850. Current size: 1
+[2019-01-28T10:56:35.372] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.372] [INFO ] [21850][Scheduler] next at 22000 in 150
+[2019-01-28T10:56:35.373] [DEBUG] #@# Current timestep 21900
+[2019-01-28T10:56:35.373] [INFO ] [Scheduler] Notify time: 21900. Current size: 1
+[2019-01-28T10:56:35.373] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.373] [INFO ] [21900][Scheduler] next at 22000 in 100
+[2019-01-28T10:56:35.374] [DEBUG] #@# Current timestep 21950
+[2019-01-28T10:56:35.374] [INFO ] [Scheduler] Notify time: 21950. Current size: 1
+[2019-01-28T10:56:35.374] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.374] [INFO ] [21950][Scheduler] next at 22000 in 50
+[2019-01-28T10:56:35.375] [DEBUG] #@# Current timestep 22000
+[2019-01-28T10:56:35.375] [INFO ] [Scheduler] Notify time: 22000. Current size: 1
+[2019-01-28T10:56:35.375] [INFO ] Schedule at 23000
+[2019-01-28T10:56:35.375] [INFO ] [Scheduler] 1 have been executed.
+[2019-01-28T10:56:35.375] [INFO ] [22000][Scheduler] next at 23000 in 1000
+[2019-01-28T10:56:35.376] [DEBUG] #@# Current timestep 22050
+[2019-01-28T10:56:35.376] [INFO ] [Scheduler] Notify time: 22050. Current size: 1
+[2019-01-28T10:56:35.376] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.376] [INFO ] [22050][Scheduler] next at 23000 in 950
+[2019-01-28T10:56:35.377] [DEBUG] #@# Current timestep 22100
+[2019-01-28T10:56:35.377] [INFO ] [Scheduler] Notify time: 22100. Current size: 1
+[2019-01-28T10:56:35.377] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.377] [INFO ] [22100][Scheduler] next at 23000 in 900
+[2019-01-28T10:56:35.378] [DEBUG] #@# Current timestep 22150
+[2019-01-28T10:56:35.378] [INFO ] [Scheduler] Notify time: 22150. Current size: 1
+[2019-01-28T10:56:35.378] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.378] [INFO ] [22150][Scheduler] next at 23000 in 850
+[2019-01-28T10:56:35.379] [DEBUG] #@# Current timestep 22200
+[2019-01-28T10:56:35.379] [INFO ] [Scheduler] Notify time: 22200. Current size: 1
+[2019-01-28T10:56:35.379] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.379] [INFO ] [22200][Scheduler] next at 23000 in 800
+[2019-01-28T10:56:35.379] [DEBUG] #@# Current timestep 22250
+[2019-01-28T10:56:35.379] [INFO ] [Scheduler] Notify time: 22250. Current size: 1
+[2019-01-28T10:56:35.379] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.379] [INFO ] [22250][Scheduler] next at 23000 in 750
+[2019-01-28T10:56:35.380] [DEBUG] #@# Current timestep 22300
+[2019-01-28T10:56:35.380] [INFO ] [Scheduler] Notify time: 22300. Current size: 1
+[2019-01-28T10:56:35.380] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.380] [INFO ] [22300][Scheduler] next at 23000 in 700
+[2019-01-28T10:56:35.385] [DEBUG] #@# Current timestep 22350
+[2019-01-28T10:56:35.385] [INFO ] [Scheduler] Notify time: 22350. Current size: 1
+[2019-01-28T10:56:35.385] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.385] [INFO ] [22350][Scheduler] next at 23000 in 650
+[2019-01-28T10:56:35.386] [DEBUG] #@# Current timestep 22400
+[2019-01-28T10:56:35.386] [INFO ] [Scheduler] Notify time: 22400. Current size: 1
+[2019-01-28T10:56:35.386] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.386] [INFO ] [22400][Scheduler] next at 23000 in 600
+[2019-01-28T10:56:35.387] [DEBUG] #@# Current timestep 22450
+[2019-01-28T10:56:35.387] [INFO ] [Scheduler] Notify time: 22450. Current size: 1
+[2019-01-28T10:56:35.387] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.387] [INFO ] [22450][Scheduler] next at 23000 in 550
+[2019-01-28T10:56:35.388] [DEBUG] #@# Current timestep 22500
+[2019-01-28T10:56:35.388] [INFO ] [Scheduler] Notify time: 22500. Current size: 1
+[2019-01-28T10:56:35.388] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.388] [INFO ] [22500][Scheduler] next at 23000 in 500
+[2019-01-28T10:56:35.389] [DEBUG] #@# Current timestep 22550
+[2019-01-28T10:56:35.389] [INFO ] [Scheduler] Notify time: 22550. Current size: 1
+[2019-01-28T10:56:35.389] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.389] [INFO ] [22550][Scheduler] next at 23000 in 450
+[2019-01-28T10:56:35.394] [DEBUG] #@# Current timestep 22600
+[2019-01-28T10:56:35.394] [INFO ] [Scheduler] Notify time: 22600. Current size: 1
+[2019-01-28T10:56:35.394] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.394] [INFO ] [22600][Scheduler] next at 23000 in 400
+[2019-01-28T10:56:35.395] [DEBUG] #@# Current timestep 22650
+[2019-01-28T10:56:35.395] [INFO ] [Scheduler] Notify time: 22650. Current size: 1
+[2019-01-28T10:56:35.395] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.395] [INFO ] [22650][Scheduler] next at 23000 in 350
+[2019-01-28T10:56:35.396] [DEBUG] #@# Current timestep 22700
+[2019-01-28T10:56:35.396] [INFO ] [Scheduler] Notify time: 22700. Current size: 1
+[2019-01-28T10:56:35.396] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.396] [INFO ] [22700][Scheduler] next at 23000 in 300
+[2019-01-28T10:56:35.397] [DEBUG] #@# Current timestep 22750
+[2019-01-28T10:56:35.397] [INFO ] [Scheduler] Notify time: 22750. Current size: 1
+[2019-01-28T10:56:35.397] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.397] [INFO ] [22750][Scheduler] next at 23000 in 250
+[2019-01-28T10:56:35.398] [DEBUG] #@# Current timestep 22800
+[2019-01-28T10:56:35.398] [INFO ] [Scheduler] Notify time: 22800. Current size: 1
+[2019-01-28T10:56:35.398] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.398] [INFO ] [22800][Scheduler] next at 23000 in 200
+[2019-01-28T10:56:35.399] [DEBUG] #@# Current timestep 22850
+[2019-01-28T10:56:35.399] [INFO ] [Scheduler] Notify time: 22850. Current size: 1
+[2019-01-28T10:56:35.399] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.399] [INFO ] [22850][Scheduler] next at 23000 in 150
+[2019-01-28T10:56:35.399] [DEBUG] #@# Current timestep 22900
+[2019-01-28T10:56:35.399] [INFO ] [Scheduler] Notify time: 22900. Current size: 1
+[2019-01-28T10:56:35.399] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.399] [INFO ] [22900][Scheduler] next at 23000 in 100
+[2019-01-28T10:56:35.400] [DEBUG] #@# Current timestep 22950
+[2019-01-28T10:56:35.400] [INFO ] [Scheduler] Notify time: 22950. Current size: 1
+[2019-01-28T10:56:35.400] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.400] [INFO ] [22950][Scheduler] next at 23000 in 50
+[2019-01-28T10:56:35.401] [DEBUG] #@# Current timestep 23000
+[2019-01-28T10:56:35.401] [INFO ] [Scheduler] Notify time: 23000. Current size: 1
+[2019-01-28T10:56:35.401] [INFO ] Schedule at 24000
+[2019-01-28T10:56:35.401] [INFO ] [Scheduler] 1 have been executed.
+[2019-01-28T10:56:35.401] [INFO ] [23000][Scheduler] next at 24000 in 1000
+[2019-01-28T10:56:35.403] [DEBUG] #@# Current timestep 23050
+[2019-01-28T10:56:35.403] [INFO ] [Scheduler] Notify time: 23050. Current size: 1
+[2019-01-28T10:56:35.403] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.403] [INFO ] [23050][Scheduler] next at 24000 in 950
+[2019-01-28T10:56:35.403] [DEBUG] #@# Current timestep 23100
+[2019-01-28T10:56:35.403] [INFO ] [Scheduler] Notify time: 23100. Current size: 1
+[2019-01-28T10:56:35.403] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.403] [INFO ] [23100][Scheduler] next at 24000 in 900
+[2019-01-28T10:56:35.404] [DEBUG] #@# Current timestep 23150
+[2019-01-28T10:56:35.404] [INFO ] [Scheduler] Notify time: 23150. Current size: 1
+[2019-01-28T10:56:35.404] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.404] [INFO ] [23150][Scheduler] next at 24000 in 850
+[2019-01-28T10:56:35.405] [DEBUG] #@# Current timestep 23200
+[2019-01-28T10:56:35.405] [INFO ] [Scheduler] Notify time: 23200. Current size: 1
+[2019-01-28T10:56:35.405] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.405] [INFO ] [23200][Scheduler] next at 24000 in 800
+[2019-01-28T10:56:35.406] [DEBUG] #@# Current timestep 23250
+[2019-01-28T10:56:35.406] [INFO ] [Scheduler] Notify time: 23250. Current size: 1
+[2019-01-28T10:56:35.406] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.406] [INFO ] [23250][Scheduler] next at 24000 in 750
+[2019-01-28T10:56:35.407] [DEBUG] #@# Current timestep 23300
+[2019-01-28T10:56:35.407] [INFO ] [Scheduler] Notify time: 23300. Current size: 1
+[2019-01-28T10:56:35.407] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.407] [INFO ] [23300][Scheduler] next at 24000 in 700
+[2019-01-28T10:56:35.408] [DEBUG] #@# Current timestep 23350
+[2019-01-28T10:56:35.408] [INFO ] [Scheduler] Notify time: 23350. Current size: 1
+[2019-01-28T10:56:35.408] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.408] [INFO ] [23350][Scheduler] next at 24000 in 650
+[2019-01-28T10:56:35.409] [DEBUG] #@# Current timestep 23400
+[2019-01-28T10:56:35.409] [INFO ] [Scheduler] Notify time: 23400. Current size: 1
+[2019-01-28T10:56:35.409] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.409] [INFO ] [23400][Scheduler] next at 24000 in 600
+[2019-01-28T10:56:35.409] [DEBUG] #@# Current timestep 23450
+[2019-01-28T10:56:35.409] [INFO ] [Scheduler] Notify time: 23450. Current size: 1
+[2019-01-28T10:56:35.409] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.409] [INFO ] [23450][Scheduler] next at 24000 in 550
+[2019-01-28T10:56:35.410] [DEBUG] #@# Current timestep 23500
+[2019-01-28T10:56:35.410] [INFO ] [Scheduler] Notify time: 23500. Current size: 1
+[2019-01-28T10:56:35.410] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.410] [INFO ] [23500][Scheduler] next at 24000 in 500
+[2019-01-28T10:56:35.411] [DEBUG] #@# Current timestep 23550
+[2019-01-28T10:56:35.411] [INFO ] [Scheduler] Notify time: 23550. Current size: 1
+[2019-01-28T10:56:35.411] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.411] [INFO ] [23550][Scheduler] next at 24000 in 450
+[2019-01-28T10:56:35.412] [DEBUG] #@# Current timestep 23600
+[2019-01-28T10:56:35.412] [INFO ] [Scheduler] Notify time: 23600. Current size: 1
+[2019-01-28T10:56:35.412] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.412] [INFO ] [23600][Scheduler] next at 24000 in 400
+[2019-01-28T10:56:35.413] [DEBUG] #@# Current timestep 23650
+[2019-01-28T10:56:35.413] [INFO ] [Scheduler] Notify time: 23650. Current size: 1
+[2019-01-28T10:56:35.413] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.413] [INFO ] [23650][Scheduler] next at 24000 in 350
+[2019-01-28T10:56:35.415] [DEBUG] #@# Current timestep 23700
+[2019-01-28T10:56:35.415] [INFO ] [Scheduler] Notify time: 23700. Current size: 1
+[2019-01-28T10:56:35.415] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.415] [INFO ] [23700][Scheduler] next at 24000 in 300
+[2019-01-28T10:56:35.417] [DEBUG] #@# Current timestep 23750
+[2019-01-28T10:56:35.417] [INFO ] [Scheduler] Notify time: 23750. Current size: 1
+[2019-01-28T10:56:35.417] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.417] [INFO ] [23750][Scheduler] next at 24000 in 250
+[2019-01-28T10:56:35.419] [DEBUG] #@# Current timestep 23800
+[2019-01-28T10:56:35.419] [INFO ] [Scheduler] Notify time: 23800. Current size: 1
+[2019-01-28T10:56:35.419] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.419] [INFO ] [23800][Scheduler] next at 24000 in 200
+[2019-01-28T10:56:35.424] [DEBUG] #@# Current timestep 23850
+[2019-01-28T10:56:35.424] [INFO ] [Scheduler] Notify time: 23850. Current size: 1
+[2019-01-28T10:56:35.424] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.424] [INFO ] [23850][Scheduler] next at 24000 in 150
+[2019-01-28T10:56:35.430] [DEBUG] #@# Current timestep 23900
+[2019-01-28T10:56:35.430] [INFO ] [Scheduler] Notify time: 23900. Current size: 1
+[2019-01-28T10:56:35.430] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.430] [INFO ] [23900][Scheduler] next at 24000 in 100
+[2019-01-28T10:56:35.431] [DEBUG] #@# Current timestep 23950
+[2019-01-28T10:56:35.431] [INFO ] [Scheduler] Notify time: 23950. Current size: 1
+[2019-01-28T10:56:35.431] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.431] [INFO ] [23950][Scheduler] next at 24000 in 50
+[2019-01-28T10:56:35.432] [DEBUG] #@# Current timestep 24000
+[2019-01-28T10:56:35.432] [INFO ] [Scheduler] Notify time: 24000. Current size: 1
+[2019-01-28T10:56:35.432] [INFO ] Schedule at 25000
+[2019-01-28T10:56:35.432] [INFO ] [Scheduler] 1 have been executed.
+[2019-01-28T10:56:35.432] [INFO ] [24000][Scheduler] next at 25000 in 1000
+[2019-01-28T10:56:35.434] [DEBUG] #@# Current timestep 24050
+[2019-01-28T10:56:35.434] [INFO ] [Scheduler] Notify time: 24050. Current size: 1
+[2019-01-28T10:56:35.434] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.434] [INFO ] [24050][Scheduler] next at 25000 in 950
+[2019-01-28T10:56:35.435] [DEBUG] #@# Current timestep 24100
+[2019-01-28T10:56:35.435] [INFO ] [Scheduler] Notify time: 24100. Current size: 1
+[2019-01-28T10:56:35.435] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.435] [INFO ] [24100][Scheduler] next at 25000 in 900
+[2019-01-28T10:56:35.436] [DEBUG] #@# Current timestep 24150
+[2019-01-28T10:56:35.436] [INFO ] [Scheduler] Notify time: 24150. Current size: 1
+[2019-01-28T10:56:35.436] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.436] [INFO ] [24150][Scheduler] next at 25000 in 850
+[2019-01-28T10:56:35.437] [DEBUG] #@# Current timestep 24200
+[2019-01-28T10:56:35.437] [INFO ] [Scheduler] Notify time: 24200. Current size: 1
+[2019-01-28T10:56:35.437] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.437] [INFO ] [24200][Scheduler] next at 25000 in 800
+[2019-01-28T10:56:35.438] [DEBUG] #@# Current timestep 24250
+[2019-01-28T10:56:35.438] [INFO ] [Scheduler] Notify time: 24250. Current size: 1
+[2019-01-28T10:56:35.438] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.438] [INFO ] [24250][Scheduler] next at 25000 in 750
+[2019-01-28T10:56:35.438] [DEBUG] #@# Current timestep 24300
+[2019-01-28T10:56:35.438] [INFO ] [Scheduler] Notify time: 24300. Current size: 1
+[2019-01-28T10:56:35.438] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.438] [INFO ] [24300][Scheduler] next at 25000 in 700
+[2019-01-28T10:56:35.439] [DEBUG] #@# Current timestep 24350
+[2019-01-28T10:56:35.439] [INFO ] [Scheduler] Notify time: 24350. Current size: 1
+[2019-01-28T10:56:35.439] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.439] [INFO ] [24350][Scheduler] next at 25000 in 650
+[2019-01-28T10:56:35.440] [DEBUG] #@# Current timestep 24400
+[2019-01-28T10:56:35.440] [INFO ] [Scheduler] Notify time: 24400. Current size: 1
+[2019-01-28T10:56:35.440] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.440] [INFO ] [24400][Scheduler] next at 25000 in 600
+[2019-01-28T10:56:35.441] [DEBUG] #@# Current timestep 24450
+[2019-01-28T10:56:35.441] [INFO ] [Scheduler] Notify time: 24450. Current size: 1
+[2019-01-28T10:56:35.441] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.441] [INFO ] [24450][Scheduler] next at 25000 in 550
+[2019-01-28T10:56:35.442] [DEBUG] #@# Current timestep 24500
+[2019-01-28T10:56:35.442] [INFO ] [Scheduler] Notify time: 24500. Current size: 1
+[2019-01-28T10:56:35.442] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.442] [INFO ] [24500][Scheduler] next at 25000 in 500
+[2019-01-28T10:56:35.443] [DEBUG] #@# Current timestep 24550
+[2019-01-28T10:56:35.443] [INFO ] [Scheduler] Notify time: 24550. Current size: 1
+[2019-01-28T10:56:35.443] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.443] [INFO ] [24550][Scheduler] next at 25000 in 450
+[2019-01-28T10:56:35.444] [DEBUG] #@# Current timestep 24600
+[2019-01-28T10:56:35.444] [INFO ] [Scheduler] Notify time: 24600. Current size: 1
+[2019-01-28T10:56:35.444] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.444] [INFO ] [24600][Scheduler] next at 25000 in 400
+[2019-01-28T10:56:35.444] [DEBUG] #@# Current timestep 24650
+[2019-01-28T10:56:35.444] [INFO ] [Scheduler] Notify time: 24650. Current size: 1
+[2019-01-28T10:56:35.444] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.444] [INFO ] [24650][Scheduler] next at 25000 in 350
+[2019-01-28T10:56:35.445] [DEBUG] #@# Current timestep 24700
+[2019-01-28T10:56:35.445] [INFO ] [Scheduler] Notify time: 24700. Current size: 1
+[2019-01-28T10:56:35.445] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.445] [INFO ] [24700][Scheduler] next at 25000 in 300
+[2019-01-28T10:56:35.446] [DEBUG] #@# Current timestep 24750
+[2019-01-28T10:56:35.446] [INFO ] [Scheduler] Notify time: 24750. Current size: 1
+[2019-01-28T10:56:35.446] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.446] [INFO ] [24750][Scheduler] next at 25000 in 250
+[2019-01-28T10:56:35.447] [DEBUG] #@# Current timestep 24800
+[2019-01-28T10:56:35.447] [INFO ] [Scheduler] Notify time: 24800. Current size: 1
+[2019-01-28T10:56:35.447] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.447] [INFO ] [24800][Scheduler] next at 25000 in 200
+[2019-01-28T10:56:35.448] [DEBUG] #@# Current timestep 24850
+[2019-01-28T10:56:35.448] [INFO ] [Scheduler] Notify time: 24850. Current size: 1
+[2019-01-28T10:56:35.448] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.448] [INFO ] [24850][Scheduler] next at 25000 in 150
+[2019-01-28T10:56:35.448] [DEBUG] #@# Current timestep 24900
+[2019-01-28T10:56:35.448] [INFO ] [Scheduler] Notify time: 24900. Current size: 1
+[2019-01-28T10:56:35.449] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.449] [INFO ] [24900][Scheduler] next at 25000 in 100
+[2019-01-28T10:56:35.449] [DEBUG] #@# Current timestep 24950
+[2019-01-28T10:56:35.449] [INFO ] [Scheduler] Notify time: 24950. Current size: 1
+[2019-01-28T10:56:35.449] [INFO ] [Scheduler] 0 have been executed.
+[2019-01-28T10:56:35.449] [INFO ] [24950][Scheduler] next at 25000 in 50
+[2019-01-28T10:56:35.451] [DEBUG] #@# Current timestep 25000
+[2019-01-28T10:56:35.451] [INFO ] [Scheduler] Notify time: 25000. Current size: 1
+[2019-01-28T10:56:35.451] [INFO ] Schedule at 26000
+[2019-01-28T10:56:35.451] [INFO ] [Scheduler] 1 have been executed.
+[2019-01-28T10:56:35.451] [INFO ] [25000][Scheduler] next at 26000 in 1000

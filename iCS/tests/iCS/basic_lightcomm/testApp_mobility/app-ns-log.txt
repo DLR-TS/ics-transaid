@@ -1,0 +1,13 @@
+Test App NS-Log File
+===============================
+[2018-09-19T13:49:23.382] [INFO ] Schedule at 1000
+[2018-09-19T13:49:26.340] [DEBUG] #@# Current timestep -1000
+[2018-09-19T13:49:26.340] [INFO ] [Scheduler] Notify time: -1000. Current size: 1
+[2018-09-19T13:49:26.340] [INFO ] [Scheduler] 0 have been executed.
+[2018-09-19T13:49:26.340] [INFO ] [-1000][Scheduler] next at 1000 in 2000
+[2018-09-19T13:49:26.340] [DEBUG] (RSU 5000): Added behaviour TestRSU
+[2018-09-19T13:49:26.340] [FUNCT] void testapp::application::iCSInterface::Activate():~(RSU 5000): 
+[2018-09-19T13:49:26.340] [INFO ] (RSU 5000): : Activated
+[2018-09-19T13:49:26.340] [FUNCT] virtual void testapp::application::Behaviour::Start():~(RSU 5000): TestRSU: 
+[2018-09-19T13:49:26.340] [INFO ] TracedCallback StartToggle number of calls 0
+[2018-09-19T13:49:26.340] [INFO ] TracedCallback StateChange number of calls 0

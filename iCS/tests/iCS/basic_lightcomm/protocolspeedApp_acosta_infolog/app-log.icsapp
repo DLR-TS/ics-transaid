@@ -1,0 +1,1542 @@
+Test App Log File
+===============================
+[2019-01-23T09:42:14.287] [INFO ] #@# Current timestep -1000
+[2019-01-23T09:42:14.288] [INFO ] Added new fixed station with id 5000
+[2019-01-23T09:42:14.288] [INFO ] [Node 5000] added subscription 1 type 0x3a
+[2019-01-23T09:42:14.288] [INFO ] [Node 5000] added subscription 2 type 0x3a
+[2019-01-23T09:42:14.288] [INFO ] [Node 5000] added subscription 3 type 0x42
+[2019-01-23T09:42:14.288] [INFO ] [Node 5000] added subscription 4 type 0x44
+[2019-01-23T09:42:14.291] [INFO ] Mobility info on nodes: 5000 
+[2019-01-23T09:42:14.291] [INFO ] Rsu 5000 position update: 582.66:1062.7
+[2019-01-23T09:42:14.293] [INFO ] #@# Current timestep 0
+[2019-01-23T09:42:14.294] [INFO ] [Node 5000] send to all. Key=m1. Time=0
+[2019-01-23T09:42:14.294] [INFO ] [Node 5000] added subscription 5 type 0x1e
+[2019-01-23T09:42:14.295] [INFO ] Mobility info on nodes: 5000 
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] New traffic light with id 219
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: -112.00. Friendly name: right
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: -112.00. Friendly name: straight
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: -112.00. Friendly name: straight
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: 170.00. Friendly name: right
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: 170.00. Friendly name: straight
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: 170.00. Friendly name: straight
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: 170.00. Friendly name: left
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: 68.00. Friendly name: right
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: 68.00. Friendly name: straight
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: 68.00. Friendly name: left
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: 68.00. Friendly name: left
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: -8.00. Friendly name: right
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: -8.00. Friendly name: straight
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: -8.00. Friendly name: straight
+[2019-01-23T09:42:14.295] [INFO ] [CreateTrafficLight] Added new lane to the traffic light. Direction: -8.00. Friendly name: left
+[2019-01-23T09:42:14.295] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.295] [INFO ] [Node 5000] Confirmed subscription 5. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.298] [INFO ] #@# Current timestep 250
+[2019-01-23T09:42:14.298] [INFO ] [Node 5000] send to all. Key=m2. Time=150
+[2019-01-23T09:42:14.298] [INFO ] [Node 5000] added subscription 6 type 0x1e
+[2019-01-23T09:42:14.299] [INFO ] [Node 5000] removed subscription 5
+[2019-01-23T09:42:14.299] [INFO ] Mobility info on nodes: 5000 
+[2019-01-23T09:42:14.299] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.299] [INFO ] [Node 5000] Confirmed subscription 6. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.300] [INFO ] #@# Current timestep 500
+[2019-01-23T09:42:14.300] [INFO ] [Node 5000] send to all. Key=m3. Time=400
+[2019-01-23T09:42:14.301] [INFO ] [Node 5000] added subscription 7 type 0x1e
+[2019-01-23T09:42:14.302] [INFO ] [Node 5000] removed subscription 6
+[2019-01-23T09:42:14.302] [INFO ] Mobility info on nodes: 5000 
+[2019-01-23T09:42:14.302] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.302] [INFO ] [Node 5000] Confirmed subscription 7. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.303] [INFO ] #@# Current timestep 750
+[2019-01-23T09:42:14.303] [INFO ] [Node 5000] send to all. Key=m4. Time=700
+[2019-01-23T09:42:14.303] [INFO ] [Node 5000] added subscription 8 type 0x1e
+[2019-01-23T09:42:14.304] [INFO ] [Node 5000] removed subscription 7
+[2019-01-23T09:42:14.304] [INFO ] Mobility info on nodes: 5000 
+[2019-01-23T09:42:14.304] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.304] [INFO ] [Node 5000] Confirmed subscription 8. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.310] [INFO ] #@# Current timestep 1000
+[2019-01-23T09:42:14.310] [INFO ] [Node 5000] send to all. Key=m5. Time=850
+[2019-01-23T09:42:14.341] [INFO ] Selected class for node 2 is 6
+[2019-01-23T09:42:14.341] [INFO ] Added new mobile node with id 2 ns3id 1 sumoId Audinot_7_0 sumoType passenger4 sumoClass passenger
+[2019-01-23T09:42:14.346] [INFO ] Selected class for node 3 is 6
+[2019-01-23T09:42:14.346] [INFO ] Added new mobile node with id 3 ns3id 2 sumoId Costa_12_0 sumoType passenger3 sumoClass passenger
+[2019-01-23T09:42:14.350] [INFO ] Selected class for node 4 is 6
+[2019-01-23T09:42:14.350] [INFO ] Added new mobile node with id 4 ns3id 3 sumoId Pepoli_3_0 sumoType ignoring1 sumoClass ignoring
+[2019-01-23T09:42:14.363] [INFO ] Selected class for node 5 is 6
+[2019-01-23T09:42:14.363] [INFO ] Added new mobile node with id 5 ns3id 4 sumoId Silvani_11_0 sumoType passenger2a sumoClass passenger
+[2019-01-23T09:42:14.367] [INFO ] Selected class for node 6 is 6
+[2019-01-23T09:42:14.367] [INFO ] Added new mobile node with id 6 ns3id 5 sumoId Togliatti_71_0 sumoType passenger2b sumoClass passenger
+[2019-01-23T09:42:14.371] [INFO ] Selected class for node 7 is 6
+[2019-01-23T09:42:14.371] [INFO ] Added new mobile node with id 7 ns3id 6 sumoId Turati_10_0 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:14.378] [INFO ] Selected class for node 8 is 6
+[2019-01-23T09:42:14.378] [INFO ] Added new mobile node with id 8 ns3id 7 sumoId Vittorio_Veneto_8_0 sumoType passenger3 sumoClass passenger
+[2019-01-23T09:42:14.390] [INFO ] Selected class for node 9 is 6
+[2019-01-23T09:42:14.391] [INFO ] Added new mobile node with id 9 ns3id 8 sumoId XXI_Aprile_7_0 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:14.395] [INFO ] Selected class for node 10 is 6
+[2019-01-23T09:42:14.395] [INFO ] Added new mobile node with id 10 ns3id 9 sumoId bus_130_0 sumoType bus sumoClass bus
+[2019-01-23T09:42:14.400] [INFO ] Selected class for node 11 is 6
+[2019-01-23T09:42:14.400] [INFO ] Added new mobile node with id 11 ns3id 10 sumoId bus_13_0 sumoType bus sumoClass bus
+[2019-01-23T09:42:14.404] [INFO ] [Node 2] added subscription 9 type 0x3a
+[2019-01-23T09:42:14.404] [INFO ] [Node 2] added subscription 10 type 0x3a
+[2019-01-23T09:42:14.405] [INFO ] [Node 3] added subscription 11 type 0x3a
+[2019-01-23T09:42:14.405] [INFO ] [Node 3] added subscription 12 type 0x3a
+[2019-01-23T09:42:14.406] [INFO ] [Node 4] added subscription 13 type 0x3a
+[2019-01-23T09:42:14.406] [INFO ] [Node 4] added subscription 14 type 0x3a
+[2019-01-23T09:42:14.407] [INFO ] [Node 5] added subscription 15 type 0x3a
+[2019-01-23T09:42:14.407] [INFO ] [Node 5] added subscription 16 type 0x3a
+[2019-01-23T09:42:14.408] [INFO ] [Node 6] added subscription 17 type 0x3a
+[2019-01-23T09:42:14.408] [INFO ] [Node 6] added subscription 18 type 0x3a
+[2019-01-23T09:42:14.408] [INFO ] [Node 7] added subscription 19 type 0x3a
+[2019-01-23T09:42:14.408] [INFO ] [Node 7] added subscription 20 type 0x3a
+[2019-01-23T09:42:14.409] [INFO ] [Node 8] added subscription 21 type 0x3a
+[2019-01-23T09:42:14.409] [INFO ] [Node 8] added subscription 22 type 0x3a
+[2019-01-23T09:42:14.411] [INFO ] [Node 9] added subscription 23 type 0x3a
+[2019-01-23T09:42:14.411] [INFO ] [Node 9] added subscription 24 type 0x3a
+[2019-01-23T09:42:14.411] [INFO ] [Node 10] added subscription 25 type 0x3a
+[2019-01-23T09:42:14.412] [INFO ] [Node 10] added subscription 26 type 0x3a
+[2019-01-23T09:42:14.412] [INFO ] [Node 11] added subscription 27 type 0x3a
+[2019-01-23T09:42:14.412] [INFO ] [Node 11] added subscription 28 type 0x3a
+[2019-01-23T09:42:14.413] [INFO ] [Node 5000] added subscription 29 type 0x1e
+[2019-01-23T09:42:14.420] [INFO ] [Node 5000] removed subscription 8
+[2019-01-23T09:42:14.420] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 5000 
+[2019-01-23T09:42:14.420] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.420] [INFO ] [Node 5000] Confirmed subscription 29. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.429] [INFO ] #@# Current timestep 1250
+[2019-01-23T09:42:14.434] [INFO ] [Node 5000] removed subscription 29
+[2019-01-23T09:42:14.435] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 5000 
+[2019-01-23T09:42:14.435] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.440] [INFO ] #@# Current timestep 1500
+[2019-01-23T09:42:14.440] [INFO ] [Node 5000] send to all. Key=m6. Time=1300
+[2019-01-23T09:42:14.447] [INFO ] [Node 5000] added subscription 30 type 0x1e
+[2019-01-23T09:42:14.448] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 5000 
+[2019-01-23T09:42:14.448] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.448] [INFO ] [Node 5000] Confirmed subscription 30. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.451] [INFO ] #@# Current timestep 1750
+[2019-01-23T09:42:14.451] [INFO ] [Node 5000] send to all. Key=m7. Time=1650
+[2019-01-23T09:42:14.455] [INFO ] [Node 5000] added subscription 31 type 0x1e
+[2019-01-23T09:42:14.456] [INFO ] [Node 5000] removed subscription 30
+[2019-01-23T09:42:14.456] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 5000 
+[2019-01-23T09:42:14.457] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.457] [INFO ] [Node 5000] Confirmed subscription 31. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.469] [INFO ] #@# Current timestep 2000
+[2019-01-23T09:42:14.469] [INFO ] [Node 5000] send to all. Key=m8. Time=1900
+[2019-01-23T09:42:14.475] [INFO ] [Node 5000] added subscription 32 type 0x1e
+[2019-01-23T09:42:14.476] [INFO ] [Node 5000] removed subscription 31
+[2019-01-23T09:42:14.476] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 5000 
+[2019-01-23T09:42:14.476] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.477] [INFO ] [Node 5000] Confirmed subscription 32. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.479] [INFO ] #@# Current timestep 2250
+[2019-01-23T09:42:14.479] [INFO ] ExpiredPayloadCleanUp for time: -1000. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:14.479] [INFO ] [Node 5000] send to all. Key=m9. Time=2150
+[2019-01-23T09:42:14.485] [INFO ] [Node 5000] added subscription 33 type 0x1e
+[2019-01-23T09:42:14.486] [INFO ] [Node 5000] removed subscription 32
+[2019-01-23T09:42:14.486] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 5000 
+[2019-01-23T09:42:14.486] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.486] [INFO ] [Node 5000] Confirmed subscription 33. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.488] [INFO ] #@# Current timestep 2500
+[2019-01-23T09:42:14.488] [INFO ] ExpiredPayloadCleanUp for time: 0. Removing keys: 1 Current size: 8
+[2019-01-23T09:42:14.488] [INFO ] [Node 5000] send to all. Key=m10. Time=2400
+[2019-01-23T09:42:14.492] [INFO ] [Node 5000] added subscription 34 type 0x1e
+[2019-01-23T09:42:14.492] [INFO ] [Node 5000] removed subscription 33
+[2019-01-23T09:42:14.493] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 5000 
+[2019-01-23T09:42:14.493] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.493] [INFO ] [Node 5000] Confirmed subscription 34. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.494] [INFO ] #@# Current timestep 2750
+[2019-01-23T09:42:14.494] [INFO ] ExpiredPayloadCleanUp for time: 250. Removing keys: 2 Current size: 8
+[2019-01-23T09:42:14.494] [INFO ] [Node 5000] send to all. Key=m11. Time=2700
+[2019-01-23T09:42:14.497] [INFO ] [Node 5000] added subscription 35 type 0x1e
+[2019-01-23T09:42:14.497] [INFO ] [Node 5000] removed subscription 34
+[2019-01-23T09:42:14.498] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 5000 
+[2019-01-23T09:42:14.498] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.498] [INFO ] [Node 5000] Confirmed subscription 35. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.581] [INFO ] #@# Current timestep 3000
+[2019-01-23T09:42:14.581] [INFO ] ExpiredPayloadCleanUp for time: 500. Removing keys: 3 Current size: 8
+[2019-01-23T09:42:14.581] [INFO ] [Node 5000] send to all. Key=m12. Time=2850
+[2019-01-23T09:42:14.582] [INFO ] Selected class for node 12 is 6
+[2019-01-23T09:42:14.582] [INFO ] Added new mobile node with id 12 ns3id 11 sumoId Silvani_11_1 sumoType passenger3 sumoClass passenger
+[2019-01-23T09:42:14.587] [INFO ] Selected class for node 13 is 6
+[2019-01-23T09:42:14.587] [INFO ] Added new mobile node with id 13 ns3id 12 sumoId Togliatti_71_2 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:14.600] [INFO ] [Node 12] added subscription 36 type 0x3a
+[2019-01-23T09:42:14.600] [INFO ] [Node 12] added subscription 37 type 0x3a
+[2019-01-23T09:42:14.600] [INFO ] [Node 13] added subscription 38 type 0x3a
+[2019-01-23T09:42:14.600] [INFO ] [Node 13] added subscription 39 type 0x3a
+[2019-01-23T09:42:14.601] [INFO ] [Node 5000] added subscription 40 type 0x1e
+[2019-01-23T09:42:14.601] [INFO ] [Node 5000] removed subscription 35
+[2019-01-23T09:42:14.602] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 5000 
+[2019-01-23T09:42:14.602] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.602] [INFO ] [Node 5000] Confirmed subscription 40. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.606] [INFO ] #@# Current timestep 3250
+[2019-01-23T09:42:14.606] [INFO ] ExpiredPayloadCleanUp for time: 750. Removing keys: 4 Current size: 8
+[2019-01-23T09:42:14.609] [INFO ] [Node 5000] removed subscription 40
+[2019-01-23T09:42:14.610] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 5000 
+[2019-01-23T09:42:14.610] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.611] [INFO ] #@# Current timestep 3500
+[2019-01-23T09:42:14.611] [INFO ] ExpiredPayloadCleanUp for time: 1000. Removing keys: 5 Current size: 7
+[2019-01-23T09:42:14.612] [INFO ] [Node 5000] send to all. Key=m13. Time=3300
+[2019-01-23T09:42:14.615] [INFO ] [Node 5000] added subscription 41 type 0x1e
+[2019-01-23T09:42:14.616] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 5000 
+[2019-01-23T09:42:14.616] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.616] [INFO ] [Node 5000] Confirmed subscription 41. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.618] [INFO ] #@# Current timestep 3750
+[2019-01-23T09:42:14.618] [INFO ] ExpiredPayloadCleanUp for time: 1250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:14.618] [INFO ] [Node 5000] send to all. Key=m14. Time=3650
+[2019-01-23T09:42:14.621] [INFO ] [Node 5000] added subscription 42 type 0x1e
+[2019-01-23T09:42:14.621] [INFO ] [Node 5000] removed subscription 41
+[2019-01-23T09:42:14.622] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 5000 
+[2019-01-23T09:42:14.622] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.622] [INFO ] [Node 5000] Confirmed subscription 42. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.629] [INFO ] #@# Current timestep 4000
+[2019-01-23T09:42:14.629] [INFO ] ExpiredPayloadCleanUp for time: 1500. Removing keys: 6 Current size: 8
+[2019-01-23T09:42:14.629] [INFO ] [Node 5000] send to all. Key=m15. Time=3900
+[2019-01-23T09:42:14.630] [INFO ] Selected class for node 14 is 6
+[2019-01-23T09:42:14.630] [INFO ] Added new mobile node with id 14 ns3id 13 sumoId bus_14_0 sumoType bus sumoClass bus
+[2019-01-23T09:42:14.634] [INFO ] Selected class for node 15 is 6
+[2019-01-23T09:42:14.634] [INFO ] Added new mobile node with id 15 ns3id 14 sumoId Pepoli_3_2 sumoType ignoring2b sumoClass ignoring
+[2019-01-23T09:42:14.639] [INFO ] Selected class for node 16 is 6
+[2019-01-23T09:42:14.639] [INFO ] Added new mobile node with id 16 ns3id 15 sumoId XXI_Aprile_7_1 sumoType passenger2a sumoClass passenger
+[2019-01-23T09:42:14.653] [INFO ] [Node 14] added subscription 43 type 0x3a
+[2019-01-23T09:42:14.653] [INFO ] [Node 14] added subscription 44 type 0x3a
+[2019-01-23T09:42:14.653] [INFO ] [Node 15] added subscription 45 type 0x3a
+[2019-01-23T09:42:14.653] [INFO ] [Node 15] added subscription 46 type 0x3a
+[2019-01-23T09:42:14.654] [INFO ] [Node 16] added subscription 47 type 0x3a
+[2019-01-23T09:42:14.654] [INFO ] [Node 16] added subscription 48 type 0x3a
+[2019-01-23T09:42:14.654] [INFO ] [Node 5000] added subscription 49 type 0x1e
+[2019-01-23T09:42:14.655] [INFO ] [Node 5000] removed subscription 42
+[2019-01-23T09:42:14.655] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 5000 
+[2019-01-23T09:42:14.655] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.655] [INFO ] [Node 5000] Confirmed subscription 49. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.660] [INFO ] #@# Current timestep 4250
+[2019-01-23T09:42:14.660] [INFO ] ExpiredPayloadCleanUp for time: 1750. Removing keys: 7 Current size: 8
+[2019-01-23T09:42:14.660] [INFO ] [Node 5000] send to all. Key=m16. Time=4150
+[2019-01-23T09:42:14.665] [INFO ] [Node 5000] added subscription 50 type 0x1e
+[2019-01-23T09:42:14.666] [INFO ] [Node 5000] removed subscription 49
+[2019-01-23T09:42:14.666] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 5000 
+[2019-01-23T09:42:14.667] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.667] [INFO ] [Node 5000] Confirmed subscription 50. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.670] [INFO ] #@# Current timestep 4500
+[2019-01-23T09:42:14.670] [INFO ] ExpiredPayloadCleanUp for time: 2000. Removing keys: 8 Current size: 8
+[2019-01-23T09:42:14.670] [INFO ] [Node 5000] send to all. Key=m17. Time=4400
+[2019-01-23T09:42:14.675] [INFO ] [Node 5000] added subscription 51 type 0x1e
+[2019-01-23T09:42:14.675] [INFO ] [Node 5000] removed subscription 50
+[2019-01-23T09:42:14.676] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 5000 
+[2019-01-23T09:42:14.676] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.676] [INFO ] [Node 5000] Confirmed subscription 51. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.679] [INFO ] #@# Current timestep 4750
+[2019-01-23T09:42:14.679] [INFO ] ExpiredPayloadCleanUp for time: 2250. Removing keys: 9 Current size: 8
+[2019-01-23T09:42:14.679] [INFO ] [Node 5000] send to all. Key=m18. Time=4700
+[2019-01-23T09:42:14.684] [INFO ] [Node 5000] added subscription 52 type 0x1e
+[2019-01-23T09:42:14.684] [INFO ] [Node 5000] removed subscription 51
+[2019-01-23T09:42:14.685] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 5000 
+[2019-01-23T09:42:14.685] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.685] [INFO ] [Node 5000] Confirmed subscription 52. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.692] [INFO ] #@# Current timestep 5000
+[2019-01-23T09:42:14.692] [INFO ] ExpiredPayloadCleanUp for time: 2500. Removing keys: 10 Current size: 8
+[2019-01-23T09:42:14.692] [INFO ] [Node 5000] send to all. Key=m19. Time=4850
+[2019-01-23T09:42:14.693] [INFO ] Selected class for node 17 is 6
+[2019-01-23T09:42:14.693] [INFO ] Added new mobile node with id 17 ns3id 16 sumoId bus_810_0 sumoType bus sumoClass bus
+[2019-01-23T09:42:14.696] [INFO ] Selected class for node 18 is 6
+[2019-01-23T09:42:14.697] [INFO ] Added new mobile node with id 18 ns3id 17 sumoId bus_81_0 sumoType bus sumoClass bus
+[2019-01-23T09:42:14.700] [INFO ] Selected class for node 19 is 6
+[2019-01-23T09:42:14.701] [INFO ] Added new mobile node with id 19 ns3id 18 sumoId Silvani_7_2 sumoType passenger2a sumoClass passenger
+[2019-01-23T09:42:14.704] [INFO ] Selected class for node 20 is 6
+[2019-01-23T09:42:14.705] [INFO ] Added new mobile node with id 20 ns3id 19 sumoId Togliatti_71_3 sumoType passenger2b sumoClass passenger
+[2019-01-23T09:42:14.708] [INFO ] Selected class for node 21 is 6
+[2019-01-23T09:42:14.708] [INFO ] Added new mobile node with id 21 ns3id 20 sumoId Vittorio_Veneto_2_1 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:14.726] [INFO ] [Node 17] added subscription 53 type 0x3a
+[2019-01-23T09:42:14.726] [INFO ] [Node 17] added subscription 54 type 0x3a
+[2019-01-23T09:42:14.726] [INFO ] [Node 18] added subscription 55 type 0x3a
+[2019-01-23T09:42:14.726] [INFO ] [Node 18] added subscription 56 type 0x3a
+[2019-01-23T09:42:14.727] [INFO ] [Node 19] added subscription 57 type 0x3a
+[2019-01-23T09:42:14.727] [INFO ] [Node 19] added subscription 58 type 0x3a
+[2019-01-23T09:42:14.727] [INFO ] [Node 20] added subscription 59 type 0x3a
+[2019-01-23T09:42:14.727] [INFO ] [Node 20] added subscription 60 type 0x3a
+[2019-01-23T09:42:14.727] [INFO ] [Node 21] added subscription 61 type 0x3a
+[2019-01-23T09:42:14.727] [INFO ] [Node 21] added subscription 62 type 0x3a
+[2019-01-23T09:42:14.728] [INFO ] [Node 5000] added subscription 63 type 0x1e
+[2019-01-23T09:42:14.729] [INFO ] [Node 5000] removed subscription 52
+[2019-01-23T09:42:14.729] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 5000 
+[2019-01-23T09:42:14.729] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.729] [INFO ] [Node 5000] Confirmed subscription 63. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.733] [INFO ] #@# Current timestep 5250
+[2019-01-23T09:42:14.733] [INFO ] ExpiredPayloadCleanUp for time: 2750. Removing keys: 11 Current size: 8
+[2019-01-23T09:42:14.739] [INFO ] [Node 5000] removed subscription 63
+[2019-01-23T09:42:14.739] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 5000 
+[2019-01-23T09:42:14.739] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.742] [INFO ] #@# Current timestep 5500
+[2019-01-23T09:42:14.742] [INFO ] ExpiredPayloadCleanUp for time: 3000. Removing keys: 12 Current size: 7
+[2019-01-23T09:42:14.742] [INFO ] [Node 5000] send to all. Key=m20. Time=5300
+[2019-01-23T09:42:14.749] [INFO ] [Node 5000] added subscription 64 type 0x1e
+[2019-01-23T09:42:14.750] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 5000 
+[2019-01-23T09:42:14.750] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.751] [INFO ] [Node 5000] Confirmed subscription 64. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.753] [INFO ] #@# Current timestep 5750
+[2019-01-23T09:42:14.753] [INFO ] ExpiredPayloadCleanUp for time: 3250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:14.753] [INFO ] [Node 5000] send to all. Key=m21. Time=5650
+[2019-01-23T09:42:14.757] [INFO ] [Node 5000] added subscription 65 type 0x1e
+[2019-01-23T09:42:14.758] [INFO ] [Node 5000] removed subscription 64
+[2019-01-23T09:42:14.758] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 5000 
+[2019-01-23T09:42:14.758] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.758] [INFO ] [Node 5000] Confirmed subscription 65. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.766] [INFO ] #@# Current timestep 6000
+[2019-01-23T09:42:14.766] [INFO ] ExpiredPayloadCleanUp for time: 3500. Removing keys: 13 Current size: 8
+[2019-01-23T09:42:14.766] [INFO ] [Node 5000] send to all. Key=m22. Time=5900
+[2019-01-23T09:42:14.767] [INFO ] Selected class for node 22 is 6
+[2019-01-23T09:42:14.767] [INFO ] Added new mobile node with id 22 ns3id 21 sumoId Pepoli_11_3 sumoType passenger4 sumoClass passenger
+[2019-01-23T09:42:14.781] [INFO ] [Node 22] added subscription 66 type 0x3a
+[2019-01-23T09:42:14.782] [INFO ] [Node 22] added subscription 67 type 0x3a
+[2019-01-23T09:42:14.782] [INFO ] [Node 5000] added subscription 68 type 0x1e
+[2019-01-23T09:42:14.783] [INFO ] [Node 5000] removed subscription 65
+[2019-01-23T09:42:14.783] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 5000 
+[2019-01-23T09:42:14.784] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.784] [INFO ] [Node 5000] Confirmed subscription 68. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.790] [INFO ] #@# Current timestep 6250
+[2019-01-23T09:42:14.790] [INFO ] ExpiredPayloadCleanUp for time: 3750. Removing keys: 14 Current size: 8
+[2019-01-23T09:42:14.790] [INFO ] [Node 5000] send to all. Key=m23. Time=6150
+[2019-01-23T09:42:14.800] [INFO ] [Node 5000] added subscription 69 type 0x1e
+[2019-01-23T09:42:14.801] [INFO ] [Node 5000] removed subscription 68
+[2019-01-23T09:42:14.801] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 5000 
+[2019-01-23T09:42:14.801] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.801] [INFO ] [Node 5000] Confirmed subscription 69. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.805] [INFO ] #@# Current timestep 6500
+[2019-01-23T09:42:14.805] [INFO ] ExpiredPayloadCleanUp for time: 4000. Removing keys: 15 Current size: 8
+[2019-01-23T09:42:14.805] [INFO ] [Node 5000] send to all. Key=m24. Time=6400
+[2019-01-23T09:42:14.815] [INFO ] [Node 5000] added subscription 70 type 0x1e
+[2019-01-23T09:42:14.816] [INFO ] [Node 5000] removed subscription 69
+[2019-01-23T09:42:14.816] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 5000 
+[2019-01-23T09:42:14.816] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.816] [INFO ] [Node 5000] Confirmed subscription 70. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.819] [INFO ] #@# Current timestep 6750
+[2019-01-23T09:42:14.819] [INFO ] ExpiredPayloadCleanUp for time: 4250. Removing keys: 16 Current size: 8
+[2019-01-23T09:42:14.819] [INFO ] [Node 5000] send to all. Key=m25. Time=6700
+[2019-01-23T09:42:14.829] [INFO ] [Node 5000] added subscription 71 type 0x1e
+[2019-01-23T09:42:14.829] [INFO ] [Node 5000] removed subscription 70
+[2019-01-23T09:42:14.830] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 5000 
+[2019-01-23T09:42:14.830] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.830] [INFO ] [Node 5000] Confirmed subscription 71. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.838] [INFO ] #@# Current timestep 7000
+[2019-01-23T09:42:14.839] [INFO ] ExpiredPayloadCleanUp for time: 4500. Removing keys: 17 Current size: 8
+[2019-01-23T09:42:14.839] [INFO ] [Node 5000] send to all. Key=m26. Time=6850
+[2019-01-23T09:42:14.840] [INFO ] Selected class for node 23 is 6
+[2019-01-23T09:42:14.840] [INFO ] Added new mobile node with id 23 ns3id 22 sumoId Pepoli_10_4 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:14.858] [INFO ] [Node 23] added subscription 72 type 0x3a
+[2019-01-23T09:42:14.858] [INFO ] [Node 23] added subscription 73 type 0x3a
+[2019-01-23T09:42:14.858] [INFO ] [Node 5000] added subscription 74 type 0x1e
+[2019-01-23T09:42:14.859] [INFO ] [Node 5000] removed subscription 71
+[2019-01-23T09:42:14.860] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 5000 
+[2019-01-23T09:42:14.860] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.860] [INFO ] [Node 5000] Confirmed subscription 74. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.867] [INFO ] #@# Current timestep 7250
+[2019-01-23T09:42:14.867] [INFO ] ExpiredPayloadCleanUp for time: 4750. Removing keys: 18 Current size: 8
+[2019-01-23T09:42:14.880] [INFO ] [Node 5000] removed subscription 74
+[2019-01-23T09:42:14.880] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 5000 
+[2019-01-23T09:42:14.881] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.884] [INFO ] #@# Current timestep 7500
+[2019-01-23T09:42:14.884] [INFO ] ExpiredPayloadCleanUp for time: 5000. Removing keys: 19 Current size: 7
+[2019-01-23T09:42:14.884] [INFO ] [Node 5000] send to all. Key=m27. Time=7300
+[2019-01-23T09:42:14.893] [INFO ] [Node 5000] added subscription 75 type 0x1e
+[2019-01-23T09:42:14.894] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 5000 
+[2019-01-23T09:42:14.894] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.895] [INFO ] [Node 5000] Confirmed subscription 75. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.899] [INFO ] #@# Current timestep 7750
+[2019-01-23T09:42:14.900] [INFO ] ExpiredPayloadCleanUp for time: 5250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:14.900] [INFO ] [Node 5000] send to all. Key=m28. Time=7650
+[2019-01-23T09:42:14.915] [INFO ] [Node 5000] added subscription 76 type 0x1e
+[2019-01-23T09:42:14.917] [INFO ] [Node 5000] removed subscription 75
+[2019-01-23T09:42:14.918] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 5000 
+[2019-01-23T09:42:14.918] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.918] [INFO ] [Node 5000] Confirmed subscription 76. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.932] [INFO ] #@# Current timestep 8000
+[2019-01-23T09:42:14.932] [INFO ] ExpiredPayloadCleanUp for time: 5500. Removing keys: 20 Current size: 8
+[2019-01-23T09:42:14.932] [INFO ] [Node 5000] send to all. Key=m29. Time=7900
+[2019-01-23T09:42:14.934] [INFO ] Selected class for node 24 is 6
+[2019-01-23T09:42:14.934] [INFO ] Added new mobile node with id 24 ns3id 23 sumoId Costa_12_1 sumoType passenger2b sumoClass passenger
+[2019-01-23T09:42:14.941] [INFO ] Selected class for node 25 is 6
+[2019-01-23T09:42:14.941] [INFO ] Added new mobile node with id 25 ns3id 24 sumoId Silvani_7_3 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:14.947] [INFO ] Selected class for node 26 is 6
+[2019-01-23T09:42:14.947] [INFO ] Added new mobile node with id 26 ns3id 25 sumoId Togliatti_72_5 sumoType passenger2a sumoClass passenger
+[2019-01-23T09:42:14.971] [INFO ] [Node 24] added subscription 77 type 0x3a
+[2019-01-23T09:42:14.971] [INFO ] [Node 24] added subscription 78 type 0x3a
+[2019-01-23T09:42:14.972] [INFO ] [Node 25] added subscription 79 type 0x3a
+[2019-01-23T09:42:14.972] [INFO ] [Node 25] added subscription 80 type 0x3a
+[2019-01-23T09:42:14.973] [INFO ] [Node 26] added subscription 81 type 0x3a
+[2019-01-23T09:42:14.973] [INFO ] [Node 26] added subscription 82 type 0x3a
+[2019-01-23T09:42:14.973] [INFO ] [Node 5000] added subscription 83 type 0x1e
+[2019-01-23T09:42:14.974] [INFO ] [Node 5000] removed subscription 76
+[2019-01-23T09:42:14.975] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 5000 
+[2019-01-23T09:42:14.975] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.975] [INFO ] [Node 5000] Confirmed subscription 83. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:14.982] [INFO ] #@# Current timestep 8250
+[2019-01-23T09:42:14.982] [INFO ] ExpiredPayloadCleanUp for time: 5750. Removing keys: 21 Current size: 8
+[2019-01-23T09:42:14.982] [INFO ] [Node 5000] send to all. Key=m30. Time=8150
+[2019-01-23T09:42:14.994] [INFO ] [Node 5000] added subscription 84 type 0x1e
+[2019-01-23T09:42:14.995] [INFO ] [Node 5000] removed subscription 83
+[2019-01-23T09:42:14.996] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 5000 
+[2019-01-23T09:42:14.996] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:14.996] [INFO ] [Node 5000] Confirmed subscription 84. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.001] [INFO ] #@# Current timestep 8500
+[2019-01-23T09:42:15.001] [INFO ] ExpiredPayloadCleanUp for time: 6000. Removing keys: 22 Current size: 8
+[2019-01-23T09:42:15.001] [INFO ] [Node 5000] send to all. Key=m31. Time=8400
+[2019-01-23T09:42:15.014] [INFO ] [Node 5000] added subscription 85 type 0x1e
+[2019-01-23T09:42:15.015] [INFO ] [Node 5000] removed subscription 84
+[2019-01-23T09:42:15.016] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 5000 
+[2019-01-23T09:42:15.016] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.016] [INFO ] [Node 5000] Confirmed subscription 85. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.021] [INFO ] #@# Current timestep 8750
+[2019-01-23T09:42:15.021] [INFO ] ExpiredPayloadCleanUp for time: 6250. Removing keys: 23 Current size: 8
+[2019-01-23T09:42:15.021] [INFO ] [Node 5000] send to all. Key=m32. Time=8700
+[2019-01-23T09:42:15.039] [INFO ] [Node 5000] added subscription 86 type 0x1e
+[2019-01-23T09:42:15.041] [INFO ] [Node 5000] removed subscription 85
+[2019-01-23T09:42:15.041] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 5000 
+[2019-01-23T09:42:15.041] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.042] [INFO ] [Node 5000] Confirmed subscription 86. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.059] [INFO ] #@# Current timestep 9000
+[2019-01-23T09:42:15.059] [INFO ] ExpiredPayloadCleanUp for time: 6500. Removing keys: 24 Current size: 8
+[2019-01-23T09:42:15.060] [INFO ] [Node 5000] send to all. Key=m33. Time=8850
+[2019-01-23T09:42:15.061] [INFO ] Selected class for node 27 is 6
+[2019-01-23T09:42:15.061] [INFO ] Added new mobile node with id 27 ns3id 26 sumoId bus_860_0 sumoType bus sumoClass bus
+[2019-01-23T09:42:15.066] [INFO ] Selected class for node 28 is 6
+[2019-01-23T09:42:15.066] [INFO ] Added new mobile node with id 28 ns3id 27 sumoId bus_91_0 sumoType bus sumoClass bus
+[2019-01-23T09:42:15.076] [INFO ] Selected class for node 29 is 6
+[2019-01-23T09:42:15.076] [INFO ] Added new mobile node with id 29 ns3id 28 sumoId Pepoli_11_5 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:15.085] [INFO ] Selected class for node 30 is 6
+[2019-01-23T09:42:15.086] [INFO ] Added new mobile node with id 30 ns3id 29 sumoId Togliatti_71_6 sumoType passenger2b sumoClass passenger
+[2019-01-23T09:42:15.129] [INFO ] [Node 27] added subscription 87 type 0x3a
+[2019-01-23T09:42:15.129] [INFO ] [Node 27] added subscription 88 type 0x3a
+[2019-01-23T09:42:15.130] [INFO ] [Node 28] added subscription 89 type 0x3a
+[2019-01-23T09:42:15.130] [INFO ] [Node 28] added subscription 90 type 0x3a
+[2019-01-23T09:42:15.131] [INFO ] [Node 29] added subscription 91 type 0x3a
+[2019-01-23T09:42:15.131] [INFO ] [Node 29] added subscription 92 type 0x3a
+[2019-01-23T09:42:15.131] [INFO ] [Node 30] added subscription 93 type 0x3a
+[2019-01-23T09:42:15.132] [INFO ] [Node 30] added subscription 94 type 0x3a
+[2019-01-23T09:42:15.133] [INFO ] [Node 5000] added subscription 95 type 0x1e
+[2019-01-23T09:42:15.134] [INFO ] [Node 5000] removed subscription 86
+[2019-01-23T09:42:15.135] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 5000 
+[2019-01-23T09:42:15.135] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.135] [INFO ] [Node 5000] Confirmed subscription 95. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.145] [INFO ] #@# Current timestep 9250
+[2019-01-23T09:42:15.145] [INFO ] ExpiredPayloadCleanUp for time: 6750. Removing keys: 25 Current size: 8
+[2019-01-23T09:42:15.152] [INFO ] [Node 5000] removed subscription 95
+[2019-01-23T09:42:15.153] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 5000 
+[2019-01-23T09:42:15.153] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.160] [INFO ] #@# Current timestep 9500
+[2019-01-23T09:42:15.160] [INFO ] ExpiredPayloadCleanUp for time: 7000. Removing keys: 26 Current size: 7
+[2019-01-23T09:42:15.160] [INFO ] [Node 5000] send to all. Key=m34. Time=9300
+[2019-01-23T09:42:15.169] [INFO ] [Node 5000] added subscription 96 type 0x1e
+[2019-01-23T09:42:15.170] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 5000 
+[2019-01-23T09:42:15.170] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.170] [INFO ] [Node 5000] Confirmed subscription 96. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.179] [INFO ] #@# Current timestep 9750
+[2019-01-23T09:42:15.179] [INFO ] ExpiredPayloadCleanUp for time: 7250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:15.180] [INFO ] [Node 5000] send to all. Key=m35. Time=9650
+[2019-01-23T09:42:15.186] [INFO ] [Node 5000] added subscription 97 type 0x1e
+[2019-01-23T09:42:15.187] [INFO ] [Node 5000] removed subscription 96
+[2019-01-23T09:42:15.192] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 5000 
+[2019-01-23T09:42:15.192] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.192] [INFO ] [Node 5000] Confirmed subscription 97. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.203] [INFO ] #@# Current timestep 10000
+[2019-01-23T09:42:15.204] [INFO ] ExpiredPayloadCleanUp for time: 7500. Removing keys: 27 Current size: 8
+[2019-01-23T09:42:15.204] [INFO ] [Node 5000] send to all. Key=m36. Time=9900
+[2019-01-23T09:42:15.206] [INFO ] Selected class for node 31 is 6
+[2019-01-23T09:42:15.206] [INFO ] Added new mobile node with id 31 ns3id 30 sumoId Costa_1_2 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:15.214] [INFO ] Selected class for node 32 is 6
+[2019-01-23T09:42:15.214] [INFO ] Added new mobile node with id 32 ns3id 31 sumoId Silvani_7_4 sumoType passenger4 sumoClass passenger
+[2019-01-23T09:42:15.225] [INFO ] Selected class for node 33 is 6
+[2019-01-23T09:42:15.226] [INFO ] Added new mobile node with id 33 ns3id 32 sumoId Vittorio_Veneto_8_2 sumoType passenger4 sumoClass passenger
+[2019-01-23T09:42:15.262] [INFO ] [Node 31] added subscription 98 type 0x3a
+[2019-01-23T09:42:15.262] [INFO ] [Node 31] added subscription 99 type 0x3a
+[2019-01-23T09:42:15.263] [INFO ] [Node 32] added subscription 100 type 0x3a
+[2019-01-23T09:42:15.263] [INFO ] [Node 32] added subscription 101 type 0x3a
+[2019-01-23T09:42:15.263] [INFO ] [Node 33] added subscription 102 type 0x3a
+[2019-01-23T09:42:15.263] [INFO ] [Node 33] added subscription 103 type 0x3a
+[2019-01-23T09:42:15.264] [INFO ] [Node 5000] added subscription 104 type 0x1e
+[2019-01-23T09:42:15.264] [INFO ] [Node 5000] removed subscription 97
+[2019-01-23T09:42:15.265] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 5000 
+[2019-01-23T09:42:15.265] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.265] [INFO ] [Node 5000] Confirmed subscription 104. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.278] [INFO ] #@# Current timestep 10250
+[2019-01-23T09:42:15.278] [INFO ] ExpiredPayloadCleanUp for time: 7750. Removing keys: 28 Current size: 8
+[2019-01-23T09:42:15.278] [INFO ] [Node 5000] send to all. Key=m37. Time=10150
+[2019-01-23T09:42:15.295] [INFO ] [Node 5000] added subscription 105 type 0x1e
+[2019-01-23T09:42:15.296] [INFO ] [Node 5000] removed subscription 104
+[2019-01-23T09:42:15.297] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 5000 
+[2019-01-23T09:42:15.298] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.298] [INFO ] [Node 5000] Confirmed subscription 105. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.307] [INFO ] #@# Current timestep 10500
+[2019-01-23T09:42:15.307] [INFO ] ExpiredPayloadCleanUp for time: 8000. Removing keys: 29 Current size: 8
+[2019-01-23T09:42:15.307] [INFO ] [Node 5000] send to all. Key=m38. Time=10400
+[2019-01-23T09:42:15.326] [INFO ] [Node 5000] added subscription 106 type 0x1e
+[2019-01-23T09:42:15.327] [INFO ] [Node 5000] removed subscription 105
+[2019-01-23T09:42:15.328] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 5000 
+[2019-01-23T09:42:15.328] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.328] [INFO ] [Node 5000] Confirmed subscription 106. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.331] [INFO ] #@# Current timestep 10750
+[2019-01-23T09:42:15.331] [INFO ] ExpiredPayloadCleanUp for time: 8250. Removing keys: 30 Current size: 8
+[2019-01-23T09:42:15.331] [INFO ] [Node 5000] send to all. Key=m39. Time=10700
+[2019-01-23T09:42:15.351] [INFO ] [Node 5000] added subscription 107 type 0x1e
+[2019-01-23T09:42:15.352] [INFO ] [Node 5000] removed subscription 106
+[2019-01-23T09:42:15.352] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 5000 
+[2019-01-23T09:42:15.352] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.352] [INFO ] [Node 5000] Confirmed subscription 107. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.363] [INFO ] #@# Current timestep 11000
+[2019-01-23T09:42:15.364] [INFO ] ExpiredPayloadCleanUp for time: 8500. Removing keys: 31 Current size: 8
+[2019-01-23T09:42:15.364] [INFO ] [Node 5000] send to all. Key=m40. Time=10850
+[2019-01-23T09:42:15.365] [INFO ] Selected class for node 34 is 6
+[2019-01-23T09:42:15.365] [INFO ] Added new mobile node with id 34 ns3id 33 sumoId Pepoli_11_6 sumoType passenger2b sumoClass passenger
+[2019-01-23T09:42:15.370] [INFO ] Selected class for node 35 is 6
+[2019-01-23T09:42:15.370] [INFO ] Added new mobile node with id 35 ns3id 34 sumoId XXI_Aprile_94_3 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:15.420] [INFO ] [Node 34] added subscription 108 type 0x3a
+[2019-01-23T09:42:15.420] [INFO ] [Node 34] added subscription 109 type 0x3a
+[2019-01-23T09:42:15.420] [INFO ] [Node 35] added subscription 110 type 0x3a
+[2019-01-23T09:42:15.420] [INFO ] [Node 35] added subscription 111 type 0x3a
+[2019-01-23T09:42:15.421] [INFO ] [Node 5000] added subscription 112 type 0x1e
+[2019-01-23T09:42:15.422] [INFO ] [Node 5000] removed subscription 107
+[2019-01-23T09:42:15.423] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 5000 
+[2019-01-23T09:42:15.423] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.423] [INFO ] [Node 5000] Confirmed subscription 112. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.432] [INFO ] #@# Current timestep 11250
+[2019-01-23T09:42:15.432] [INFO ] ExpiredPayloadCleanUp for time: 8750. Removing keys: 32 Current size: 8
+[2019-01-23T09:42:15.445] [INFO ] [Node 5000] removed subscription 112
+[2019-01-23T09:42:15.446] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 5000 
+[2019-01-23T09:42:15.446] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.450] [INFO ] #@# Current timestep 11500
+[2019-01-23T09:42:15.450] [INFO ] ExpiredPayloadCleanUp for time: 9000. Removing keys: 33 Current size: 7
+[2019-01-23T09:42:15.450] [INFO ] [Node 5000] send to all. Key=m41. Time=11300
+[2019-01-23T09:42:15.468] [INFO ] [Node 5000] added subscription 113 type 0x1e
+[2019-01-23T09:42:15.470] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 5000 
+[2019-01-23T09:42:15.470] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.470] [INFO ] [Node 5000] Confirmed subscription 113. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.474] [INFO ] #@# Current timestep 11750
+[2019-01-23T09:42:15.474] [INFO ] ExpiredPayloadCleanUp for time: 9250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:15.474] [INFO ] [Node 5000] send to all. Key=m42. Time=11650
+[2019-01-23T09:42:15.497] [INFO ] [Node 5000] added subscription 114 type 0x1e
+[2019-01-23T09:42:15.498] [INFO ] [Node 5000] removed subscription 113
+[2019-01-23T09:42:15.499] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 5000 
+[2019-01-23T09:42:15.499] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.500] [INFO ] [Node 5000] Confirmed subscription 114. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.509] [INFO ] #@# Current timestep 12000
+[2019-01-23T09:42:15.509] [INFO ] ExpiredPayloadCleanUp for time: 9500. Removing keys: 34 Current size: 8
+[2019-01-23T09:42:15.509] [INFO ] [Node 5000] send to all. Key=m43. Time=11900
+[2019-01-23T09:42:15.511] [INFO ] Selected class for node 36 is 6
+[2019-01-23T09:42:15.511] [INFO ] Added new mobile node with id 36 ns3id 35 sumoId Togliatti_10_7 sumoType passenger3 sumoClass passenger
+[2019-01-23T09:42:15.515] [INFO ] Selected class for node 37 is 6
+[2019-01-23T09:42:15.515] [INFO ] Added new mobile node with id 37 ns3id 36 sumoId Silvani_7_5 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:15.519] [INFO ] Selected class for node 38 is 6
+[2019-01-23T09:42:15.519] [INFO ] Added new mobile node with id 38 ns3id 37 sumoId Togliatti_2_8 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:15.563] [INFO ] [Node 36] added subscription 115 type 0x3a
+[2019-01-23T09:42:15.563] [INFO ] [Node 36] added subscription 116 type 0x3a
+[2019-01-23T09:42:15.563] [INFO ] [Node 37] added subscription 117 type 0x3a
+[2019-01-23T09:42:15.563] [INFO ] [Node 37] added subscription 118 type 0x3a
+[2019-01-23T09:42:15.564] [INFO ] [Node 38] added subscription 119 type 0x3a
+[2019-01-23T09:42:15.564] [INFO ] [Node 38] added subscription 120 type 0x3a
+[2019-01-23T09:42:15.566] [INFO ] [Node 5000] added subscription 121 type 0x1e
+[2019-01-23T09:42:15.567] [INFO ] [Node 5000] removed subscription 114
+[2019-01-23T09:42:15.568] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 5000 
+[2019-01-23T09:42:15.568] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.568] [INFO ] [Node 5000] Confirmed subscription 121. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.578] [INFO ] #@# Current timestep 12250
+[2019-01-23T09:42:15.578] [INFO ] ExpiredPayloadCleanUp for time: 9750. Removing keys: 35 Current size: 8
+[2019-01-23T09:42:15.578] [INFO ] [Node 5000] send to all. Key=m44. Time=12150
+[2019-01-23T09:42:15.593] [INFO ] [Node 5000] added subscription 122 type 0x1e
+[2019-01-23T09:42:15.594] [INFO ] [Node 5000] removed subscription 121
+[2019-01-23T09:42:15.595] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 5000 
+[2019-01-23T09:42:15.595] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.595] [INFO ] [Node 5000] Confirmed subscription 122. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.601] [INFO ] #@# Current timestep 12500
+[2019-01-23T09:42:15.601] [INFO ] ExpiredPayloadCleanUp for time: 10000. Removing keys: 36 Current size: 8
+[2019-01-23T09:42:15.601] [INFO ] [Node 5000] send to all. Key=m45. Time=12400
+[2019-01-23T09:42:15.618] [INFO ] [Node 5000] added subscription 123 type 0x1e
+[2019-01-23T09:42:15.619] [INFO ] [Node 5000] removed subscription 122
+[2019-01-23T09:42:15.620] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 5000 
+[2019-01-23T09:42:15.621] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.621] [INFO ] [Node 5000] Confirmed subscription 123. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.625] [INFO ] #@# Current timestep 12750
+[2019-01-23T09:42:15.625] [INFO ] ExpiredPayloadCleanUp for time: 10250. Removing keys: 37 Current size: 8
+[2019-01-23T09:42:15.625] [INFO ] [Node 5000] send to all. Key=m46. Time=12700
+[2019-01-23T09:42:15.659] [INFO ] [Node 5000] added subscription 124 type 0x1e
+[2019-01-23T09:42:15.660] [INFO ] [Node 5000] removed subscription 123
+[2019-01-23T09:42:15.661] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 5000 
+[2019-01-23T09:42:15.662] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.662] [INFO ] [Node 5000] Confirmed subscription 124. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.672] [INFO ] #@# Current timestep 13000
+[2019-01-23T09:42:15.672] [INFO ] ExpiredPayloadCleanUp for time: 10500. Removing keys: 38 Current size: 8
+[2019-01-23T09:42:15.672] [INFO ] [Node 5000] send to all. Key=m47. Time=12850
+[2019-01-23T09:42:15.675] [INFO ] Selected class for node 39 is 6
+[2019-01-23T09:42:15.675] [INFO ] Added new mobile node with id 39 ns3id 38 sumoId bus_910_0 sumoType bus sumoClass bus
+[2019-01-23T09:42:15.684] [INFO ] Selected class for node 40 is 6
+[2019-01-23T09:42:15.684] [INFO ] Added new mobile node with id 40 ns3id 39 sumoId Pepoli_11_7 sumoType passenger3 sumoClass passenger
+[2019-01-23T09:42:15.742] [INFO ] [Node 39] added subscription 125 type 0x3a
+[2019-01-23T09:42:15.742] [INFO ] [Node 39] added subscription 126 type 0x3a
+[2019-01-23T09:42:15.743] [INFO ] [Node 40] added subscription 127 type 0x3a
+[2019-01-23T09:42:15.743] [INFO ] [Node 40] added subscription 128 type 0x3a
+[2019-01-23T09:42:15.743] [INFO ] [Node 5000] added subscription 129 type 0x1e
+[2019-01-23T09:42:15.744] [INFO ] [Node 5000] removed subscription 124
+[2019-01-23T09:42:15.745] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 5000 
+[2019-01-23T09:42:15.745] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.745] [INFO ] [Node 5000] Confirmed subscription 129. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.755] [INFO ] #@# Current timestep 13250
+[2019-01-23T09:42:15.755] [INFO ] ExpiredPayloadCleanUp for time: 10750. Removing keys: 39 Current size: 8
+[2019-01-23T09:42:15.783] [INFO ] [Node 5000] removed subscription 129
+[2019-01-23T09:42:15.784] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 5000 
+[2019-01-23T09:42:15.784] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.788] [INFO ] #@# Current timestep 13500
+[2019-01-23T09:42:15.789] [INFO ] ExpiredPayloadCleanUp for time: 11000. Removing keys: 40 Current size: 7
+[2019-01-23T09:42:15.789] [INFO ] [Node 5000] send to all. Key=m48. Time=13300
+[2019-01-23T09:42:15.809] [INFO ] [Node 5000] added subscription 130 type 0x1e
+[2019-01-23T09:42:15.810] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 5000 
+[2019-01-23T09:42:15.811] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.811] [INFO ] [Node 5000] Confirmed subscription 130. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.817] [INFO ] #@# Current timestep 13750
+[2019-01-23T09:42:15.817] [INFO ] ExpiredPayloadCleanUp for time: 11250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:15.817] [INFO ] [Node 5000] send to all. Key=m49. Time=13650
+[2019-01-23T09:42:15.839] [INFO ] [Node 5000] added subscription 131 type 0x1e
+[2019-01-23T09:42:15.841] [INFO ] [Node 5000] removed subscription 130
+[2019-01-23T09:42:15.842] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 5000 
+[2019-01-23T09:42:15.842] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.842] [INFO ] [Node 5000] Confirmed subscription 131. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.853] [INFO ] #@# Current timestep 14000
+[2019-01-23T09:42:15.853] [INFO ] ExpiredPayloadCleanUp for time: 11500. Removing keys: 41 Current size: 8
+[2019-01-23T09:42:15.853] [INFO ] [Node 5000] send to all. Key=m50. Time=13900
+[2019-01-23T09:42:15.855] [INFO ] Selected class for node 41 is 6
+[2019-01-23T09:42:15.855] [INFO ] Added new mobile node with id 41 ns3id 40 sumoId Costa_12_3 sumoType passenger2b sumoClass passenger
+[2019-01-23T09:42:15.859] [INFO ] Selected class for node 42 is 6
+[2019-01-23T09:42:15.859] [INFO ] Added new mobile node with id 42 ns3id 41 sumoId Pepoli_11_8 sumoType passenger5 sumoClass passenger
+[2019-01-23T09:42:15.863] [INFO ] Selected class for node 43 is 6
+[2019-01-23T09:42:15.864] [INFO ] Added new mobile node with id 43 ns3id 42 sumoId Vittorio_Veneto_8_3 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:15.910] [INFO ] [Node 41] added subscription 132 type 0x3a
+[2019-01-23T09:42:15.910] [INFO ] [Node 41] added subscription 133 type 0x3a
+[2019-01-23T09:42:15.911] [INFO ] [Node 42] added subscription 134 type 0x3a
+[2019-01-23T09:42:15.911] [INFO ] [Node 42] added subscription 135 type 0x3a
+[2019-01-23T09:42:15.912] [INFO ] [Node 43] added subscription 136 type 0x3a
+[2019-01-23T09:42:15.912] [INFO ] [Node 43] added subscription 137 type 0x3a
+[2019-01-23T09:42:15.913] [INFO ] [Node 5000] added subscription 138 type 0x1e
+[2019-01-23T09:42:15.914] [INFO ] [Node 5000] removed subscription 131
+[2019-01-23T09:42:15.915] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 5000 
+[2019-01-23T09:42:15.915] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.915] [INFO ] [Node 5000] Confirmed subscription 138. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.926] [INFO ] #@# Current timestep 14250
+[2019-01-23T09:42:15.926] [INFO ] ExpiredPayloadCleanUp for time: 11750. Removing keys: 42 Current size: 8
+[2019-01-23T09:42:15.926] [INFO ] [Node 5000] send to all. Key=m51. Time=14150
+[2019-01-23T09:42:15.950] [INFO ] [Node 5000] added subscription 139 type 0x1e
+[2019-01-23T09:42:15.952] [INFO ] [Node 5000] removed subscription 138
+[2019-01-23T09:42:15.953] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 5000 
+[2019-01-23T09:42:15.953] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.954] [INFO ] [Node 5000] Confirmed subscription 139. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:15.958] [INFO ] #@# Current timestep 14500
+[2019-01-23T09:42:15.958] [INFO ] ExpiredPayloadCleanUp for time: 12000. Removing keys: 43 Current size: 8
+[2019-01-23T09:42:15.958] [INFO ] [Node 5000] send to all. Key=m52. Time=14400
+[2019-01-23T09:42:15.989] [INFO ] [Node 5000] added subscription 140 type 0x1e
+[2019-01-23T09:42:15.990] [INFO ] [Node 5000] removed subscription 139
+[2019-01-23T09:42:15.991] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 5000 
+[2019-01-23T09:42:15.991] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:15.991] [INFO ] [Node 5000] Confirmed subscription 140. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.000] [INFO ] #@# Current timestep 14750
+[2019-01-23T09:42:16.000] [INFO ] ExpiredPayloadCleanUp for time: 12250. Removing keys: 44 Current size: 8
+[2019-01-23T09:42:16.000] [INFO ] [Node 5000] send to all. Key=m53. Time=14700
+[2019-01-23T09:42:16.031] [INFO ] [Node 5000] added subscription 141 type 0x1e
+[2019-01-23T09:42:16.036] [INFO ] [Node 5000] removed subscription 140
+[2019-01-23T09:42:16.043] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 5000 
+[2019-01-23T09:42:16.044] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.044] [INFO ] [Node 5000] Confirmed subscription 141. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.054] [INFO ] #@# Current timestep 15000
+[2019-01-23T09:42:16.054] [INFO ] ExpiredPayloadCleanUp for time: 12500. Removing keys: 45 Current size: 8
+[2019-01-23T09:42:16.055] [INFO ] [Node 5000] send to all. Key=m54. Time=14850
+[2019-01-23T09:42:16.059] [INFO ] Selected class for node 44 is 6
+[2019-01-23T09:42:16.059] [INFO ] Added new mobile node with id 44 ns3id 43 sumoId Togliatti_10_9 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:16.063] [INFO ] Selected class for node 45 is 6
+[2019-01-23T09:42:16.063] [INFO ] Added new mobile node with id 45 ns3id 44 sumoId Silvani_3_6 sumoType ignoring2b sumoClass ignoring
+[2019-01-23T09:42:16.067] [INFO ] Selected class for node 46 is 6
+[2019-01-23T09:42:16.067] [INFO ] Added new mobile node with id 46 ns3id 45 sumoId XXI_Aprile_113_4 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:16.129] [INFO ] [Node 44] added subscription 142 type 0x3a
+[2019-01-23T09:42:16.129] [INFO ] [Node 44] added subscription 143 type 0x3a
+[2019-01-23T09:42:16.129] [INFO ] [Node 45] added subscription 144 type 0x3a
+[2019-01-23T09:42:16.130] [INFO ] [Node 45] added subscription 145 type 0x3a
+[2019-01-23T09:42:16.130] [INFO ] [Node 46] added subscription 146 type 0x3a
+[2019-01-23T09:42:16.130] [INFO ] [Node 46] added subscription 147 type 0x3a
+[2019-01-23T09:42:16.131] [INFO ] [Node 5000] added subscription 148 type 0x1e
+[2019-01-23T09:42:16.132] [INFO ] [Node 5000] removed subscription 141
+[2019-01-23T09:42:16.133] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 5000 
+[2019-01-23T09:42:16.133] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.133] [INFO ] [Node 5000] Confirmed subscription 148. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.149] [INFO ] #@# Current timestep 15250
+[2019-01-23T09:42:16.149] [INFO ] ExpiredPayloadCleanUp for time: 12750. Removing keys: 46 Current size: 8
+[2019-01-23T09:42:16.180] [INFO ] [Node 5000] removed subscription 148
+[2019-01-23T09:42:16.181] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 5000 
+[2019-01-23T09:42:16.182] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.186] [INFO ] #@# Current timestep 15500
+[2019-01-23T09:42:16.186] [INFO ] ExpiredPayloadCleanUp for time: 13000. Removing keys: 47 Current size: 7
+[2019-01-23T09:42:16.186] [INFO ] [Node 5000] send to all. Key=m55. Time=15300
+[2019-01-23T09:42:16.223] [INFO ] [Node 5000] added subscription 149 type 0x1e
+[2019-01-23T09:42:16.225] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 5000 
+[2019-01-23T09:42:16.225] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.226] [INFO ] [Node 5000] Confirmed subscription 149. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.230] [INFO ] #@# Current timestep 15750
+[2019-01-23T09:42:16.230] [INFO ] ExpiredPayloadCleanUp for time: 13250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:16.230] [INFO ] [Node 5000] send to all. Key=m56. Time=15650
+[2019-01-23T09:42:16.254] [INFO ] [Node 5000] added subscription 150 type 0x1e
+[2019-01-23T09:42:16.258] [INFO ] [Node 5000] removed subscription 149
+[2019-01-23T09:42:16.260] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 5000 
+[2019-01-23T09:42:16.260] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.260] [INFO ] [Node 5000] Confirmed subscription 150. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.270] [INFO ] #@# Current timestep 16000
+[2019-01-23T09:42:16.270] [INFO ] ExpiredPayloadCleanUp for time: 13500. Removing keys: 48 Current size: 8
+[2019-01-23T09:42:16.270] [INFO ] [Node 5000] send to all. Key=m57. Time=15900
+[2019-01-23T09:42:16.273] [INFO ] Selected class for node 47 is 6
+[2019-01-23T09:42:16.273] [INFO ] Added new mobile node with id 47 ns3id 46 sumoId Pepoli_11_9 sumoType passenger2a sumoClass passenger
+[2019-01-23T09:42:16.331] [INFO ] [Node 47] added subscription 151 type 0x3a
+[2019-01-23T09:42:16.331] [INFO ] [Node 47] added subscription 152 type 0x3a
+[2019-01-23T09:42:16.340] [INFO ] [Node 5000] added subscription 153 type 0x1e
+[2019-01-23T09:42:16.341] [INFO ] [Node 5000] removed subscription 150
+[2019-01-23T09:42:16.342] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 5000 
+[2019-01-23T09:42:16.342] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.342] [INFO ] [Node 5000] Confirmed subscription 153. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.353] [INFO ] #@# Current timestep 16250
+[2019-01-23T09:42:16.353] [INFO ] ExpiredPayloadCleanUp for time: 13750. Removing keys: 49 Current size: 8
+[2019-01-23T09:42:16.353] [INFO ] [Node 5000] send to all. Key=m58. Time=16150
+[2019-01-23T09:42:16.392] [INFO ] [Node 5000] added subscription 154 type 0x1e
+[2019-01-23T09:42:16.393] [INFO ] [Node 5000] removed subscription 153
+[2019-01-23T09:42:16.394] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 5000 
+[2019-01-23T09:42:16.394] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.394] [INFO ] [Node 5000] Confirmed subscription 154. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.401] [INFO ] #@# Current timestep 16500
+[2019-01-23T09:42:16.401] [INFO ] ExpiredPayloadCleanUp for time: 14000. Removing keys: 50 Current size: 8
+[2019-01-23T09:42:16.402] [INFO ] [Node 5000] send to all. Key=m59. Time=16400
+[2019-01-23T09:42:16.424] [INFO ] [Node 5000] added subscription 155 type 0x1e
+[2019-01-23T09:42:16.426] [INFO ] [Node 5000] removed subscription 154
+[2019-01-23T09:42:16.426] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 5000 
+[2019-01-23T09:42:16.427] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.427] [INFO ] [Node 5000] Confirmed subscription 155. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.431] [INFO ] #@# Current timestep 16750
+[2019-01-23T09:42:16.431] [INFO ] ExpiredPayloadCleanUp for time: 14250. Removing keys: 51 Current size: 8
+[2019-01-23T09:42:16.432] [INFO ] [Node 5000] send to all. Key=m60. Time=16700
+[2019-01-23T09:42:16.482] [INFO ] [Node 5000] added subscription 156 type 0x1e
+[2019-01-23T09:42:16.484] [INFO ] [Node 5000] removed subscription 155
+[2019-01-23T09:42:16.485] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 5000 
+[2019-01-23T09:42:16.486] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.486] [INFO ] [Node 5000] Confirmed subscription 156. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.498] [INFO ] #@# Current timestep 17000
+[2019-01-23T09:42:16.498] [INFO ] ExpiredPayloadCleanUp for time: 14500. Removing keys: 52 Current size: 8
+[2019-01-23T09:42:16.498] [INFO ] [Node 5000] send to all. Key=m61. Time=16850
+[2019-01-23T09:42:16.500] [INFO ] Selected class for node 48 is 6
+[2019-01-23T09:42:16.500] [INFO ] Added new mobile node with id 48 ns3id 47 sumoId Costa_1_4 sumoType passenger2a sumoClass passenger
+[2019-01-23T09:42:16.505] [INFO ] Selected class for node 49 is 6
+[2019-01-23T09:42:16.505] [INFO ] Added new mobile node with id 49 ns3id 48 sumoId Silvani_7_7 sumoType passenger5 sumoClass passenger
+[2019-01-23T09:42:16.581] [INFO ] [Node 48] added subscription 157 type 0x3a
+[2019-01-23T09:42:16.581] [INFO ] [Node 48] added subscription 158 type 0x3a
+[2019-01-23T09:42:16.584] [INFO ] [Node 49] added subscription 159 type 0x3a
+[2019-01-23T09:42:16.584] [INFO ] [Node 49] added subscription 160 type 0x3a
+[2019-01-23T09:42:16.585] [INFO ] [Node 5000] added subscription 161 type 0x1e
+[2019-01-23T09:42:16.587] [INFO ] [Node 5000] removed subscription 156
+[2019-01-23T09:42:16.589] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 5000 
+[2019-01-23T09:42:16.589] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.591] [INFO ] [Node 5000] Confirmed subscription 161. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.610] [INFO ] #@# Current timestep 17250
+[2019-01-23T09:42:16.610] [INFO ] ExpiredPayloadCleanUp for time: 14750. Removing keys: 53 Current size: 8
+[2019-01-23T09:42:16.648] [INFO ] [Node 5000] removed subscription 161
+[2019-01-23T09:42:16.651] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 5000 
+[2019-01-23T09:42:16.651] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.656] [INFO ] #@# Current timestep 17500
+[2019-01-23T09:42:16.656] [INFO ] ExpiredPayloadCleanUp for time: 15000. Removing keys: 54 Current size: 7
+[2019-01-23T09:42:16.656] [INFO ] [Node 5000] send to all. Key=m62. Time=17300
+[2019-01-23T09:42:16.689] [INFO ] [Node 5000] added subscription 162 type 0x1e
+[2019-01-23T09:42:16.691] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 5000 
+[2019-01-23T09:42:16.691] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.692] [INFO ] [Node 5000] Confirmed subscription 162. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.701] [INFO ] #@# Current timestep 17750
+[2019-01-23T09:42:16.701] [INFO ] ExpiredPayloadCleanUp for time: 15250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:16.701] [INFO ] [Node 5000] send to all. Key=m63. Time=17650
+[2019-01-23T09:42:16.734] [INFO ] [Node 5000] added subscription 163 type 0x1e
+[2019-01-23T09:42:16.735] [INFO ] [Node 5000] removed subscription 162
+[2019-01-23T09:42:16.737] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 5000 
+[2019-01-23T09:42:16.738] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.738] [INFO ] [Node 5000] Confirmed subscription 163. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.754] [INFO ] #@# Current timestep 18000
+[2019-01-23T09:42:16.754] [INFO ] ExpiredPayloadCleanUp for time: 15500. Removing keys: 55 Current size: 8
+[2019-01-23T09:42:16.754] [INFO ] [Node 5000] send to all. Key=m64. Time=17900
+[2019-01-23T09:42:16.759] [INFO ] Selected class for node 50 is 6
+[2019-01-23T09:42:16.760] [INFO ] Added new mobile node with id 50 ns3id 49 sumoId Togliatti_10_10 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:16.764] [INFO ] Selected class for node 51 is 6
+[2019-01-23T09:42:16.764] [INFO ] Added new mobile node with id 51 ns3id 50 sumoId Pepoli_10_10 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:16.775] [INFO ] Selected class for node 52 is 6
+[2019-01-23T09:42:16.775] [INFO ] Added new mobile node with id 52 ns3id 51 sumoId XXI_Aprile_104_5 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:16.876] [INFO ] [Node 50] added subscription 164 type 0x3a
+[2019-01-23T09:42:16.876] [INFO ] [Node 50] added subscription 165 type 0x3a
+[2019-01-23T09:42:16.876] [INFO ] [Node 51] added subscription 166 type 0x3a
+[2019-01-23T09:42:16.876] [INFO ] [Node 51] added subscription 167 type 0x3a
+[2019-01-23T09:42:16.877] [INFO ] [Node 52] added subscription 168 type 0x3a
+[2019-01-23T09:42:16.877] [INFO ] [Node 52] added subscription 169 type 0x3a
+[2019-01-23T09:42:16.878] [INFO ] [Node 5000] added subscription 170 type 0x1e
+[2019-01-23T09:42:16.878] [INFO ] [Node 5000] removed subscription 163
+[2019-01-23T09:42:16.879] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 5000 
+[2019-01-23T09:42:16.879] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.879] [INFO ] [Node 5000] Confirmed subscription 170. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.908] [INFO ] #@# Current timestep 18250
+[2019-01-23T09:42:16.908] [INFO ] ExpiredPayloadCleanUp for time: 15750. Removing keys: 56 Current size: 8
+[2019-01-23T09:42:16.908] [INFO ] [Node 5000] send to all. Key=m65. Time=18150
+[2019-01-23T09:42:16.911] [INFO ] [6|11|m64] RSSI= -1 SNR= 11.069 POWER= 0 MSGID=64 []
+[2019-01-23T09:42:16.911] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 64 timestep 18000
+[2019-01-23T09:42:16.933] [INFO ] [Node 5000] added subscription 171 type 0x1e
+[2019-01-23T09:42:16.939] [INFO ] [Node 5000] removed subscription 170
+[2019-01-23T09:42:16.939] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 5000 
+[2019-01-23T09:42:16.940] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.940] [INFO ] [Node 5000] Confirmed subscription 171. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.946] [INFO ] #@# Current timestep 18500
+[2019-01-23T09:42:16.946] [INFO ] ExpiredPayloadCleanUp for time: 16000. Removing keys: 57 Current size: 8
+[2019-01-23T09:42:16.946] [INFO ] [Node 5000] send to all. Key=m66. Time=18400
+[2019-01-23T09:42:16.949] [INFO ] [6|11|m65] RSSI= -1 SNR= 11.069 POWER= 0 MSGID=65 []
+[2019-01-23T09:42:16.949] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 65 timestep 18250
+[2019-01-23T09:42:16.974] [INFO ] [Node 5000] added subscription 172 type 0x1e
+[2019-01-23T09:42:16.976] [INFO ] [Node 5000] removed subscription 171
+[2019-01-23T09:42:16.978] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 5000 
+[2019-01-23T09:42:16.978] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:16.978] [INFO ] [Node 5000] Confirmed subscription 172. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:16.988] [INFO ] #@# Current timestep 18750
+[2019-01-23T09:42:16.988] [INFO ] ExpiredPayloadCleanUp for time: 16250. Removing keys: 58 Current size: 8
+[2019-01-23T09:42:16.988] [INFO ] [Node 5000] send to all. Key=m67. Time=18700
+[2019-01-23T09:42:16.991] [INFO ] [6|11|m66] RSSI= -1 SNR= 11.069 POWER= 0 MSGID=66 []
+[2019-01-23T09:42:16.991] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 66 timestep 18500
+[2019-01-23T09:42:17.017] [INFO ] [Node 5000] added subscription 173 type 0x1e
+[2019-01-23T09:42:17.018] [INFO ] [Node 5000] removed subscription 172
+[2019-01-23T09:42:17.020] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 5000 
+[2019-01-23T09:42:17.020] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.020] [INFO ] [Node 5000] Confirmed subscription 173. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.038] [INFO ] #@# Current timestep 19000
+[2019-01-23T09:42:17.038] [INFO ] ExpiredPayloadCleanUp for time: 16500. Removing keys: 59 Current size: 8
+[2019-01-23T09:42:17.038] [INFO ] [Node 5000] send to all. Key=m68. Time=18850
+[2019-01-23T09:42:17.041] [INFO ] Selected class for node 53 is 6
+[2019-01-23T09:42:17.042] [INFO ] Added new mobile node with id 53 ns3id 52 sumoId Costa_50_6 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:17.051] [INFO ] Selected class for node 54 is 6
+[2019-01-23T09:42:17.051] [INFO ] Added new mobile node with id 54 ns3id 53 sumoId Pepoli_10_11 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:17.058] [INFO ] Selected class for node 55 is 6
+[2019-01-23T09:42:17.059] [INFO ] Added new mobile node with id 55 ns3id 54 sumoId Silvani_11_8 sumoType passenger3 sumoClass passenger
+[2019-01-23T09:42:17.065] [INFO ] Selected class for node 56 is 6
+[2019-01-23T09:42:17.065] [INFO ] Added new mobile node with id 56 ns3id 55 sumoId Vittorio_Veneto_1_4 sumoType passenger2b sumoClass passenger
+[2019-01-23T09:42:17.113] [INFO ] [6|11|m67] RSSI= -1 SNR= 11.069 POWER= 0 MSGID=67 []
+[2019-01-23T09:42:17.113] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 67 timestep 18750
+[2019-01-23T09:42:17.135] [INFO ] [Node 53] added subscription 174 type 0x3a
+[2019-01-23T09:42:17.135] [INFO ] [Node 53] added subscription 175 type 0x3a
+[2019-01-23T09:42:17.135] [INFO ] [Node 54] added subscription 176 type 0x3a
+[2019-01-23T09:42:17.136] [INFO ] [Node 54] added subscription 177 type 0x3a
+[2019-01-23T09:42:17.136] [INFO ] [Node 55] added subscription 178 type 0x3a
+[2019-01-23T09:42:17.136] [INFO ] [Node 55] added subscription 179 type 0x3a
+[2019-01-23T09:42:17.137] [INFO ] [Node 56] added subscription 180 type 0x3a
+[2019-01-23T09:42:17.137] [INFO ] [Node 56] added subscription 181 type 0x3a
+[2019-01-23T09:42:17.138] [INFO ] [Node 5000] added subscription 182 type 0x1e
+[2019-01-23T09:42:17.139] [INFO ] [Node 5000] removed subscription 173
+[2019-01-23T09:42:17.139] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 5000 
+[2019-01-23T09:42:17.140] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.140] [INFO ] [Node 5000] Confirmed subscription 182. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.158] [INFO ] #@# Current timestep 19250
+[2019-01-23T09:42:17.158] [INFO ] ExpiredPayloadCleanUp for time: 16750. Removing keys: 60 Current size: 8
+[2019-01-23T09:42:17.161] [INFO ] [6|11|m68] RSSI= -1 SNR= 12.223 POWER= 0 MSGID=68 []
+[2019-01-23T09:42:17.161] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 68 timestep 19000
+[2019-01-23T09:42:17.192] [INFO ] [Node 5000] removed subscription 182
+[2019-01-23T09:42:17.192] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 5000 
+[2019-01-23T09:42:17.193] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.197] [INFO ] #@# Current timestep 19500
+[2019-01-23T09:42:17.198] [INFO ] ExpiredPayloadCleanUp for time: 17000. Removing keys: 61 Current size: 7
+[2019-01-23T09:42:17.198] [INFO ] [Node 5000] send to all. Key=m69. Time=19300
+[2019-01-23T09:42:17.216] [INFO ] [Node 5000] added subscription 183 type 0x1e
+[2019-01-23T09:42:17.218] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 5000 
+[2019-01-23T09:42:17.218] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.218] [INFO ] [Node 5000] Confirmed subscription 183. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.225] [INFO ] #@# Current timestep 19750
+[2019-01-23T09:42:17.225] [INFO ] ExpiredPayloadCleanUp for time: 17250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:17.225] [INFO ] [Node 5000] send to all. Key=m70. Time=19650
+[2019-01-23T09:42:17.227] [INFO ] [6|11|m69] RSSI= -1 SNR= 12.223 POWER= 0 MSGID=69 []
+[2019-01-23T09:42:17.227] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 69 timestep 19500
+[2019-01-23T09:42:17.253] [INFO ] [Node 5000] added subscription 184 type 0x1e
+[2019-01-23T09:42:17.254] [INFO ] [Node 5000] removed subscription 183
+[2019-01-23T09:42:17.256] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 5000 
+[2019-01-23T09:42:17.256] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.256] [INFO ] [Node 5000] Confirmed subscription 184. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.290] [INFO ] #@# Current timestep 20000
+[2019-01-23T09:42:17.290] [INFO ] ExpiredPayloadCleanUp for time: 17500. Removing keys: 62 Current size: 8
+[2019-01-23T09:42:17.290] [INFO ] [Node 5000] send to all. Key=m71. Time=19900
+[2019-01-23T09:42:17.294] [INFO ] [6|11|m70] RSSI= -1 SNR= 12.223 POWER= 0 MSGID=70 []
+[2019-01-23T09:42:17.294] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 70 timestep 19750
+[2019-01-23T09:42:17.316] [INFO ] [Node 5000] added subscription 185 type 0x1e
+[2019-01-23T09:42:17.317] [INFO ] [Node 5000] removed subscription 184
+[2019-01-23T09:42:17.318] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 5000 
+[2019-01-23T09:42:17.318] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.318] [INFO ] [Node 5000] Confirmed subscription 185. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.332] [INFO ] #@# Current timestep 20250
+[2019-01-23T09:42:17.332] [INFO ] ExpiredPayloadCleanUp for time: 17750. Removing keys: 63 Current size: 8
+[2019-01-23T09:42:17.332] [INFO ] [Node 5000] send to all. Key=m72. Time=20150
+[2019-01-23T09:42:17.335] [INFO ] [6|11|m71] RSSI= -1 SNR= 13.4657 POWER= 0 MSGID=71 []
+[2019-01-23T09:42:17.335] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 71 timestep 20000
+[2019-01-23T09:42:17.338] [INFO ] [13|11|m71] RSSI= -1 SNR= 10.8603 POWER= 0 MSGID=71 []
+[2019-01-23T09:42:17.338] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 71 timestep 20000
+[2019-01-23T09:42:17.362] [INFO ] [Node 5000] added subscription 186 type 0x1e
+[2019-01-23T09:42:17.363] [INFO ] [Node 5000] removed subscription 185
+[2019-01-23T09:42:17.364] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 5000 
+[2019-01-23T09:42:17.364] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.364] [INFO ] [Node 5000] Confirmed subscription 186. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.371] [INFO ] #@# Current timestep 20500
+[2019-01-23T09:42:17.372] [INFO ] ExpiredPayloadCleanUp for time: 18000. Removing keys: 64 Current size: 8
+[2019-01-23T09:42:17.372] [INFO ] [Node 5000] send to all. Key=m73. Time=20400
+[2019-01-23T09:42:17.375] [INFO ] [6|11|m72] RSSI= -1 SNR= 13.4657 POWER= 0 MSGID=72 []
+[2019-01-23T09:42:17.375] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 72 timestep 20250
+[2019-01-23T09:42:17.378] [INFO ] [13|11|m72] RSSI= -1 SNR= 10.8603 POWER= 0 MSGID=72 []
+[2019-01-23T09:42:17.378] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 72 timestep 20250
+[2019-01-23T09:42:17.398] [INFO ] [Node 5000] added subscription 187 type 0x1e
+[2019-01-23T09:42:17.399] [INFO ] [Node 5000] removed subscription 186
+[2019-01-23T09:42:17.401] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 5000 
+[2019-01-23T09:42:17.401] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.401] [INFO ] [Node 5000] Confirmed subscription 187. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.408] [INFO ] #@# Current timestep 20750
+[2019-01-23T09:42:17.408] [INFO ] ExpiredPayloadCleanUp for time: 18250. Removing keys: 65 Current size: 8
+[2019-01-23T09:42:17.408] [INFO ] [Node 5000] send to all. Key=m74. Time=20700
+[2019-01-23T09:42:17.410] [INFO ] [6|11|m73] RSSI= -1 SNR= 13.4657 POWER= 0 MSGID=73 []
+[2019-01-23T09:42:17.410] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 73 timestep 20500
+[2019-01-23T09:42:17.414] [INFO ] [13|11|m73] RSSI= -1 SNR= 10.8603 POWER= 0 MSGID=73 []
+[2019-01-23T09:42:17.414] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 73 timestep 20500
+[2019-01-23T09:42:17.435] [INFO ] [Node 5000] added subscription 188 type 0x1e
+[2019-01-23T09:42:17.436] [INFO ] [Node 5000] removed subscription 187
+[2019-01-23T09:42:17.437] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 5000 
+[2019-01-23T09:42:17.437] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.437] [INFO ] [Node 5000] Confirmed subscription 188. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.451] [INFO ] #@# Current timestep 21000
+[2019-01-23T09:42:17.451] [INFO ] ExpiredPayloadCleanUp for time: 18500. Removing keys: 66 Current size: 8
+[2019-01-23T09:42:17.451] [INFO ] [Node 5000] send to all. Key=m75. Time=20850
+[2019-01-23T09:42:17.456] [INFO ] Selected class for node 57 is 6
+[2019-01-23T09:42:17.456] [INFO ] Added new mobile node with id 57 ns3id 56 sumoId Togliatti_10_12 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:17.462] [INFO ] Selected class for node 58 is 6
+[2019-01-23T09:42:17.463] [INFO ] Added new mobile node with id 58 ns3id 57 sumoId Pepoli_3_12 sumoType ignoring2b sumoClass ignoring
+[2019-01-23T09:42:17.493] [INFO ] [6|11|m74] RSSI= -1 SNR= 13.4657 POWER= 0 MSGID=74 []
+[2019-01-23T09:42:17.493] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 74 timestep 20750
+[2019-01-23T09:42:17.497] [INFO ] [13|11|m74] RSSI= -1 SNR= 10.8603 POWER= 0 MSGID=74 []
+[2019-01-23T09:42:17.497] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 74 timestep 20750
+[2019-01-23T09:42:17.518] [INFO ] [Node 57] added subscription 189 type 0x3a
+[2019-01-23T09:42:17.518] [INFO ] [Node 57] added subscription 190 type 0x3a
+[2019-01-23T09:42:17.519] [INFO ] [Node 58] added subscription 191 type 0x3a
+[2019-01-23T09:42:17.519] [INFO ] [Node 58] added subscription 192 type 0x3a
+[2019-01-23T09:42:17.519] [INFO ] [Node 5000] added subscription 193 type 0x1e
+[2019-01-23T09:42:17.520] [INFO ] [Node 5000] removed subscription 188
+[2019-01-23T09:42:17.521] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 5000 
+[2019-01-23T09:42:17.521] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.521] [INFO ] [Node 5000] Confirmed subscription 193. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.535] [INFO ] #@# Current timestep 21250
+[2019-01-23T09:42:17.535] [INFO ] ExpiredPayloadCleanUp for time: 18750. Removing keys: 67 Current size: 8
+[2019-01-23T09:42:17.538] [INFO ] [6|11|m75] RSSI= -1 SNR= 14.8063 POWER= 0 MSGID=75 []
+[2019-01-23T09:42:17.538] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 75 timestep 21000
+[2019-01-23T09:42:17.541] [INFO ] [13|11|m75] RSSI= -1 SNR= 11.9737 POWER= 0 MSGID=75 []
+[2019-01-23T09:42:17.541] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 75 timestep 21000
+[2019-01-23T09:42:17.545] [INFO ] [20|11|m75] RSSI= -1 SNR= 10.596 POWER= 0 MSGID=75 []
+[2019-01-23T09:42:17.545] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 75 timestep 21000
+[2019-01-23T09:42:17.570] [INFO ] [Node 5000] removed subscription 193
+[2019-01-23T09:42:17.571] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 5000 
+[2019-01-23T09:42:17.571] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.576] [INFO ] #@# Current timestep 21500
+[2019-01-23T09:42:17.576] [INFO ] ExpiredPayloadCleanUp for time: 19000. Removing keys: 68 Current size: 7
+[2019-01-23T09:42:17.576] [INFO ] [Node 5000] send to all. Key=m76. Time=21300
+[2019-01-23T09:42:17.620] [INFO ] [Node 5000] added subscription 194 type 0x1e
+[2019-01-23T09:42:17.622] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 5000 
+[2019-01-23T09:42:17.623] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.623] [INFO ] [Node 5000] Confirmed subscription 194. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.630] [INFO ] #@# Current timestep 21750
+[2019-01-23T09:42:17.630] [INFO ] ExpiredPayloadCleanUp for time: 19250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:17.630] [INFO ] [Node 5000] send to all. Key=m77. Time=21650
+[2019-01-23T09:42:17.632] [INFO ] [6|11|m76] RSSI= -1 SNR= 14.8063 POWER= 0 MSGID=76 []
+[2019-01-23T09:42:17.632] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 76 timestep 21500
+[2019-01-23T09:42:17.636] [INFO ] [13|11|m76] RSSI= -1 SNR= 11.9737 POWER= 0 MSGID=76 []
+[2019-01-23T09:42:17.636] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 76 timestep 21500
+[2019-01-23T09:42:17.641] [INFO ] [20|11|m76] RSSI= -1 SNR= 10.596 POWER= 0 MSGID=76 []
+[2019-01-23T09:42:17.641] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 76 timestep 21500
+[2019-01-23T09:42:17.659] [INFO ] [Node 5000] added subscription 195 type 0x1e
+[2019-01-23T09:42:17.660] [INFO ] [Node 5000] removed subscription 194
+[2019-01-23T09:42:17.661] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 5000 
+[2019-01-23T09:42:17.661] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.661] [INFO ] [Node 5000] Confirmed subscription 195. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.675] [INFO ] #@# Current timestep 22000
+[2019-01-23T09:42:17.675] [INFO ] ExpiredPayloadCleanUp for time: 19500. Removing keys: 69 Current size: 8
+[2019-01-23T09:42:17.675] [INFO ] [Node 5000] send to all. Key=m78. Time=21900
+[2019-01-23T09:42:17.678] [INFO ] Selected class for node 59 is 6
+[2019-01-23T09:42:17.678] [INFO ] Added new mobile node with id 59 ns3id 58 sumoId Costa_12_7 sumoType passenger2b sumoClass passenger
+[2019-01-23T09:42:17.682] [INFO ] Selected class for node 60 is 6
+[2019-01-23T09:42:17.682] [INFO ] Added new mobile node with id 60 ns3id 59 sumoId Audinot_12_1 sumoType ignoring2b sumoClass ignoring
+[2019-01-23T09:42:17.686] [INFO ] Selected class for node 61 is 6
+[2019-01-23T09:42:17.686] [INFO ] Added new mobile node with id 61 ns3id 60 sumoId Silvani_11_9 sumoType passenger4 sumoClass passenger
+[2019-01-23T09:42:17.690] [INFO ] Selected class for node 62 is 6
+[2019-01-23T09:42:17.691] [INFO ] Added new mobile node with id 62 ns3id 61 sumoId Togliatti_12_15 sumoType passenger5 sumoClass passenger
+[2019-01-23T09:42:17.712] [INFO ] Selected class for node 63 is 6
+[2019-01-23T09:42:17.712] [INFO ] Added new mobile node with id 63 ns3id 62 sumoId XXI_Aprile_12_6 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:17.771] [INFO ] [6|11|m77] RSSI= -1 SNR= 14.8063 POWER= 0 MSGID=77 []
+[2019-01-23T09:42:17.771] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 77 timestep 21750
+[2019-01-23T09:42:17.780] [INFO ] [13|11|m77] RSSI= -1 SNR= 11.9737 POWER= 0 MSGID=77 []
+[2019-01-23T09:42:17.780] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 77 timestep 21750
+[2019-01-23T09:42:17.783] [INFO ] [20|11|m77] RSSI= -1 SNR= 10.596 POWER= 0 MSGID=77 []
+[2019-01-23T09:42:17.783] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 77 timestep 21750
+[2019-01-23T09:42:17.798] [INFO ] [Node 59] added subscription 196 type 0x3a
+[2019-01-23T09:42:17.798] [INFO ] [Node 59] added subscription 197 type 0x3a
+[2019-01-23T09:42:17.799] [INFO ] [Node 60] added subscription 198 type 0x3a
+[2019-01-23T09:42:17.799] [INFO ] [Node 60] added subscription 199 type 0x3a
+[2019-01-23T09:42:17.799] [INFO ] [Node 61] added subscription 200 type 0x3a
+[2019-01-23T09:42:17.799] [INFO ] [Node 61] added subscription 201 type 0x3a
+[2019-01-23T09:42:17.800] [INFO ] [Node 62] added subscription 202 type 0x3a
+[2019-01-23T09:42:17.800] [INFO ] [Node 62] added subscription 203 type 0x3a
+[2019-01-23T09:42:17.800] [INFO ] [Node 63] added subscription 204 type 0x3a
+[2019-01-23T09:42:17.801] [INFO ] [Node 63] added subscription 205 type 0x3a
+[2019-01-23T09:42:17.801] [INFO ] [Node 5000] added subscription 206 type 0x1e
+[2019-01-23T09:42:17.802] [INFO ] [Node 5000] removed subscription 195
+[2019-01-23T09:42:17.803] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 5000 
+[2019-01-23T09:42:17.803] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.803] [INFO ] [Node 5000] Confirmed subscription 206. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.821] [INFO ] #@# Current timestep 22250
+[2019-01-23T09:42:17.821] [INFO ] ExpiredPayloadCleanUp for time: 19750. Removing keys: 70 Current size: 8
+[2019-01-23T09:42:17.821] [INFO ] [Node 5000] send to all. Key=m79. Time=22150
+[2019-01-23T09:42:17.824] [INFO ] [6|11|m78] RSSI= -1 SNR= 16.3509 POWER= 0 MSGID=78 []
+[2019-01-23T09:42:17.824] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 78 timestep 22000
+[2019-01-23T09:42:17.828] [INFO ] [13|11|m78] RSSI= -1 SNR= 13.1808 POWER= 0 MSGID=78 []
+[2019-01-23T09:42:17.828] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 78 timestep 22000
+[2019-01-23T09:42:17.841] [INFO ] [20|11|m78] RSSI= -1 SNR= 11.7061 POWER= 0 MSGID=78 []
+[2019-01-23T09:42:17.841] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 78 timestep 22000
+[2019-01-23T09:42:17.879] [INFO ] [Node 5000] added subscription 207 type 0x1e
+[2019-01-23T09:42:17.880] [INFO ] [Node 5000] removed subscription 206
+[2019-01-23T09:42:17.882] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 5000 
+[2019-01-23T09:42:17.882] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.882] [INFO ] [Node 5000] Confirmed subscription 207. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.890] [INFO ] #@# Current timestep 22500
+[2019-01-23T09:42:17.890] [INFO ] ExpiredPayloadCleanUp for time: 20000. Removing keys: 71 Current size: 8
+[2019-01-23T09:42:17.890] [INFO ] [Node 5000] send to all. Key=m80. Time=22400
+[2019-01-23T09:42:17.892] [INFO ] [6|11|m79] RSSI= -1 SNR= 16.3509 POWER= 0 MSGID=79 []
+[2019-01-23T09:42:17.892] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 79 timestep 22250
+[2019-01-23T09:42:17.895] [INFO ] [13|11|m79] RSSI= -1 SNR= 13.1808 POWER= 0 MSGID=79 []
+[2019-01-23T09:42:17.896] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 79 timestep 22250
+[2019-01-23T09:42:17.899] [INFO ] [20|11|m79] RSSI= -1 SNR= 11.7061 POWER= 0 MSGID=79 []
+[2019-01-23T09:42:17.899] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 79 timestep 22250
+[2019-01-23T09:42:17.919] [INFO ] [Node 5000] added subscription 208 type 0x1e
+[2019-01-23T09:42:17.921] [INFO ] [Node 5000] removed subscription 207
+[2019-01-23T09:42:17.922] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 5000 
+[2019-01-23T09:42:17.922] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.922] [INFO ] [Node 5000] Confirmed subscription 208. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.933] [INFO ] #@# Current timestep 22750
+[2019-01-23T09:42:17.933] [INFO ] ExpiredPayloadCleanUp for time: 20250. Removing keys: 72 Current size: 8
+[2019-01-23T09:42:17.933] [INFO ] [Node 5000] send to all. Key=m81. Time=22700
+[2019-01-23T09:42:17.936] [INFO ] [6|11|m80] RSSI= -1 SNR= 16.3509 POWER= 0 MSGID=80 []
+[2019-01-23T09:42:17.936] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 80 timestep 22500
+[2019-01-23T09:42:17.940] [INFO ] [13|11|m80] RSSI= -1 SNR= 13.1808 POWER= 0 MSGID=80 []
+[2019-01-23T09:42:17.940] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 80 timestep 22500
+[2019-01-23T09:42:17.944] [INFO ] [20|11|m80] RSSI= -1 SNR= 11.7061 POWER= 0 MSGID=80 []
+[2019-01-23T09:42:17.944] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 80 timestep 22500
+[2019-01-23T09:42:17.971] [INFO ] [Node 5000] added subscription 209 type 0x1e
+[2019-01-23T09:42:17.972] [INFO ] [Node 5000] removed subscription 208
+[2019-01-23T09:42:17.974] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 5000 
+[2019-01-23T09:42:17.974] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:17.974] [INFO ] [Node 5000] Confirmed subscription 209. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:17.988] [INFO ] #@# Current timestep 23000
+[2019-01-23T09:42:17.988] [INFO ] ExpiredPayloadCleanUp for time: 20500. Removing keys: 73 Current size: 8
+[2019-01-23T09:42:17.988] [INFO ] [Node 5000] send to all. Key=m82. Time=22850
+[2019-01-23T09:42:17.991] [INFO ] Selected class for node 64 is 6
+[2019-01-23T09:42:17.991] [INFO ] Added new mobile node with id 64 ns3id 63 sumoId Togliatti_9_13 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:17.995] [INFO ] Selected class for node 65 is 6
+[2019-01-23T09:42:17.996] [INFO ] Added new mobile node with id 65 ns3id 64 sumoId Vittorio_Veneto_8_5 sumoType passenger2a sumoClass passenger
+[2019-01-23T09:42:18.055] [INFO ] [6|11|m81] RSSI= -1 SNR= 16.3509 POWER= 0 MSGID=81 []
+[2019-01-23T09:42:18.055] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 81 timestep 22750
+[2019-01-23T09:42:18.059] [INFO ] [13|11|m81] RSSI= -1 SNR= 13.1808 POWER= 0 MSGID=81 []
+[2019-01-23T09:42:18.059] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 81 timestep 22750
+[2019-01-23T09:42:18.062] [INFO ] [20|11|m81] RSSI= -1 SNR= 11.7061 POWER= 0 MSGID=81 []
+[2019-01-23T09:42:18.062] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 81 timestep 22750
+[2019-01-23T09:42:18.086] [INFO ] [Node 64] added subscription 210 type 0x3a
+[2019-01-23T09:42:18.086] [INFO ] [Node 64] added subscription 211 type 0x3a
+[2019-01-23T09:42:18.086] [INFO ] [Node 65] added subscription 212 type 0x3a
+[2019-01-23T09:42:18.087] [INFO ] [Node 65] added subscription 213 type 0x3a
+[2019-01-23T09:42:18.087] [INFO ] [Node 5000] added subscription 214 type 0x1e
+[2019-01-23T09:42:18.088] [INFO ] [Node 5000] removed subscription 209
+[2019-01-23T09:42:18.089] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 5000 
+[2019-01-23T09:42:18.089] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.089] [INFO ] [Node 5000] Confirmed subscription 214. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:18.106] [INFO ] #@# Current timestep 23250
+[2019-01-23T09:42:18.107] [INFO ] ExpiredPayloadCleanUp for time: 20750. Removing keys: 74 Current size: 8
+[2019-01-23T09:42:18.109] [INFO ] [6|11|m82] RSSI= -1 SNR= 18.0328 POWER= 0 MSGID=82 []
+[2019-01-23T09:42:18.109] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 82 timestep 23000
+[2019-01-23T09:42:18.112] [INFO ] [13|11|m82] RSSI= -1 SNR= 14.4515 POWER= 0 MSGID=82 []
+[2019-01-23T09:42:18.112] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 82 timestep 23000
+[2019-01-23T09:42:18.115] [INFO ] [20|11|m82] RSSI= -1 SNR= 12.8938 POWER= 0 MSGID=82 []
+[2019-01-23T09:42:18.115] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 82 timestep 23000
+[2019-01-23T09:42:18.151] [INFO ] [Node 5000] removed subscription 214
+[2019-01-23T09:42:18.153] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 5000 
+[2019-01-23T09:42:18.153] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.159] [INFO ] #@# Current timestep 23500
+[2019-01-23T09:42:18.159] [INFO ] ExpiredPayloadCleanUp for time: 21000. Removing keys: 75 Current size: 7
+[2019-01-23T09:42:18.159] [INFO ] [Node 5000] send to all. Key=m83. Time=23300
+[2019-01-23T09:42:18.201] [INFO ] [Node 5000] added subscription 215 type 0x1e
+[2019-01-23T09:42:18.203] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 5000 
+[2019-01-23T09:42:18.203] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.203] [INFO ] [Node 5000] Confirmed subscription 215. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:18.211] [INFO ] #@# Current timestep 23750
+[2019-01-23T09:42:18.211] [INFO ] ExpiredPayloadCleanUp for time: 21250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:18.211] [INFO ] [Node 5000] send to all. Key=m84. Time=23650
+[2019-01-23T09:42:18.213] [INFO ] [6|11|m83] RSSI= -1 SNR= 18.0328 POWER= 0 MSGID=83 []
+[2019-01-23T09:42:18.213] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 83 timestep 23500
+[2019-01-23T09:42:18.217] [INFO ] [13|11|m83] RSSI= -1 SNR= 14.4515 POWER= 0 MSGID=83 []
+[2019-01-23T09:42:18.217] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 83 timestep 23500
+[2019-01-23T09:42:18.221] [INFO ] [20|11|m83] RSSI= -1 SNR= 12.8938 POWER= 0 MSGID=83 []
+[2019-01-23T09:42:18.221] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 83 timestep 23500
+[2019-01-23T09:42:18.245] [INFO ] [Node 5000] added subscription 216 type 0x1e
+[2019-01-23T09:42:18.246] [INFO ] [Node 5000] removed subscription 215
+[2019-01-23T09:42:18.249] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 5000 
+[2019-01-23T09:42:18.249] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.249] [INFO ] [Node 5000] Confirmed subscription 216. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:18.267] [INFO ] #@# Current timestep 24000
+[2019-01-23T09:42:18.267] [INFO ] ExpiredPayloadCleanUp for time: 21500. Removing keys: 76 Current size: 8
+[2019-01-23T09:42:18.267] [INFO ] [Node 5000] send to all. Key=m85. Time=23900
+[2019-01-23T09:42:18.270] [INFO ] Selected class for node 66 is 6
+[2019-01-23T09:42:18.270] [INFO ] Added new mobile node with id 66 ns3id 65 sumoId Silvani_7_10 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:18.331] [INFO ] [6|11|m84] RSSI= -1 SNR= 18.0328 POWER= 0 MSGID=84 []
+[2019-01-23T09:42:18.332] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 84 timestep 23750
+[2019-01-23T09:42:18.335] [INFO ] [13|11|m84] RSSI= -1 SNR= 14.4515 POWER= 0 MSGID=84 []
+[2019-01-23T09:42:18.335] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 84 timestep 23750
+[2019-01-23T09:42:18.338] [INFO ] [20|11|m84] RSSI= -1 SNR= 12.8938 POWER= 0 MSGID=84 []
+[2019-01-23T09:42:18.338] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 84 timestep 23750
+[2019-01-23T09:42:18.362] [INFO ] [Node 66] added subscription 217 type 0x3a
+[2019-01-23T09:42:18.362] [INFO ] [Node 66] added subscription 218 type 0x3a
+[2019-01-23T09:42:18.363] [INFO ] [Node 5000] added subscription 219 type 0x1e
+[2019-01-23T09:42:18.364] [INFO ] [Node 5000] removed subscription 216
+[2019-01-23T09:42:18.365] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 5000 
+[2019-01-23T09:42:18.365] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.365] [INFO ] [Node 5000] Confirmed subscription 219. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:18.380] [INFO ] #@# Current timestep 24250
+[2019-01-23T09:42:18.380] [INFO ] ExpiredPayloadCleanUp for time: 21750. Removing keys: 77 Current size: 8
+[2019-01-23T09:42:18.380] [INFO ] [Node 5000] send to all. Key=m86. Time=24150
+[2019-01-23T09:42:18.382] [INFO ] [6|11|m85] RSSI= -1 SNR= 19.8877 POWER= 0 MSGID=85 []
+[2019-01-23T09:42:18.382] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 85 timestep 24000
+[2019-01-23T09:42:18.386] [INFO ] [13|11|m85] RSSI= -1 SNR= 15.9737 POWER= 0 MSGID=85 []
+[2019-01-23T09:42:18.386] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 85 timestep 24000
+[2019-01-23T09:42:18.389] [INFO ] [20|11|m85] RSSI= -1 SNR= 14.1159 POWER= 0 MSGID=85 []
+[2019-01-23T09:42:18.389] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 85 timestep 24000
+[2019-01-23T09:42:18.392] [INFO ] [26|11|m85] RSSI= -1 SNR= 11.0534 POWER= 0 MSGID=85 []
+[2019-01-23T09:42:18.392] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 85 timestep 24000
+[2019-01-23T09:42:18.420] [INFO ] [Node 5000] added subscription 220 type 0x1e
+[2019-01-23T09:42:18.421] [INFO ] [Node 5000] removed subscription 219
+[2019-01-23T09:42:18.422] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 5000 
+[2019-01-23T09:42:18.422] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.422] [INFO ] [Node 5000] Confirmed subscription 220. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:18.430] [INFO ] #@# Current timestep 24500
+[2019-01-23T09:42:18.430] [INFO ] ExpiredPayloadCleanUp for time: 22000. Removing keys: 78 Current size: 8
+[2019-01-23T09:42:18.430] [INFO ] [Node 5000] send to all. Key=m87. Time=24400
+[2019-01-23T09:42:18.432] [INFO ] [6|11|m86] RSSI= -1 SNR= 19.8877 POWER= 0 MSGID=86 []
+[2019-01-23T09:42:18.432] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 86 timestep 24250
+[2019-01-23T09:42:18.435] [INFO ] [13|11|m86] RSSI= -1 SNR= 15.9737 POWER= 0 MSGID=86 []
+[2019-01-23T09:42:18.435] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 86 timestep 24250
+[2019-01-23T09:42:18.439] [INFO ] [20|11|m86] RSSI= -1 SNR= 14.1159 POWER= 0 MSGID=86 []
+[2019-01-23T09:42:18.439] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 86 timestep 24250
+[2019-01-23T09:42:18.442] [INFO ] [26|11|m86] RSSI= -1 SNR= 11.0534 POWER= 0 MSGID=86 []
+[2019-01-23T09:42:18.442] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 86 timestep 24250
+[2019-01-23T09:42:18.461] [INFO ] [Node 5000] added subscription 221 type 0x1e
+[2019-01-23T09:42:18.462] [INFO ] [Node 5000] removed subscription 220
+[2019-01-23T09:42:18.464] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 5000 
+[2019-01-23T09:42:18.464] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.464] [INFO ] [Node 5000] Confirmed subscription 221. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:18.472] [INFO ] #@# Current timestep 24750
+[2019-01-23T09:42:18.472] [INFO ] ExpiredPayloadCleanUp for time: 22250. Removing keys: 79 Current size: 8
+[2019-01-23T09:42:18.472] [INFO ] [Node 5000] send to all. Key=m88. Time=24700
+[2019-01-23T09:42:18.474] [INFO ] [6|11|m87] RSSI= -1 SNR= 19.8877 POWER= 0 MSGID=87 []
+[2019-01-23T09:42:18.474] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 87 timestep 24500
+[2019-01-23T09:42:18.479] [INFO ] [13|11|m87] RSSI= -1 SNR= 15.9737 POWER= 0 MSGID=87 []
+[2019-01-23T09:42:18.479] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 87 timestep 24500
+[2019-01-23T09:42:18.483] [INFO ] [20|11|m87] RSSI= -1 SNR= 14.1159 POWER= 0 MSGID=87 []
+[2019-01-23T09:42:18.483] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 87 timestep 24500
+[2019-01-23T09:42:18.486] [INFO ] [26|11|m87] RSSI= -1 SNR= 11.0534 POWER= 0 MSGID=87 []
+[2019-01-23T09:42:18.486] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 87 timestep 24500
+[2019-01-23T09:42:18.506] [INFO ] [Node 5000] added subscription 222 type 0x1e
+[2019-01-23T09:42:18.507] [INFO ] [Node 5000] removed subscription 221
+[2019-01-23T09:42:18.508] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 5000 
+[2019-01-23T09:42:18.509] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.509] [INFO ] [Node 5000] Confirmed subscription 222. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:18.523] [INFO ] #@# Current timestep 25000
+[2019-01-23T09:42:18.523] [INFO ] ExpiredPayloadCleanUp for time: 22500. Removing keys: 80 Current size: 8
+[2019-01-23T09:42:18.523] [INFO ] [Node 5000] send to all. Key=m89. Time=24850
+[2019-01-23T09:42:18.527] [INFO ] Selected class for node 67 is 6
+[2019-01-23T09:42:18.527] [INFO ] Added new mobile node with id 67 ns3id 66 sumoId Costa_50_8 sumoType passenger3 sumoClass passenger
+[2019-01-23T09:42:18.533] [INFO ] Selected class for node 68 is 6
+[2019-01-23T09:42:18.534] [INFO ] Added new mobile node with id 68 ns3id 67 sumoId Pepoli_3_14 sumoType ignoring4 sumoClass ignoring
+[2019-01-23T09:42:18.538] [INFO ] Selected class for node 69 is 6
+[2019-01-23T09:42:18.538] [INFO ] Added new mobile node with id 69 ns3id 68 sumoId Togliatti_71_17 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:18.560] [INFO ] Selected class for node 70 is 6
+[2019-01-23T09:42:18.560] [INFO ] Added new mobile node with id 70 ns3id 69 sumoId XXI_Aprile_7_7 sumoType passenger2b sumoClass passenger
+[2019-01-23T09:42:18.615] [INFO ] [6|11|m88] RSSI= -1 SNR= 19.8877 POWER= 0 MSGID=88 []
+[2019-01-23T09:42:18.615] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 88 timestep 24750
+[2019-01-23T09:42:18.625] [INFO ] [13|11|m88] RSSI= -1 SNR= 15.9737 POWER= 0 MSGID=88 []
+[2019-01-23T09:42:18.625] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 88 timestep 24750
+[2019-01-23T09:42:18.628] [INFO ] [20|11|m88] RSSI= -1 SNR= 14.1159 POWER= 0 MSGID=88 []
+[2019-01-23T09:42:18.628] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 88 timestep 24750
+[2019-01-23T09:42:18.631] [INFO ] [26|11|m88] RSSI= -1 SNR= 11.0534 POWER= 0 MSGID=88 []
+[2019-01-23T09:42:18.631] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 88 timestep 24750
+[2019-01-23T09:42:18.650] [INFO ] [Node 67] added subscription 223 type 0x3a
+[2019-01-23T09:42:18.651] [INFO ] [Node 67] added subscription 224 type 0x3a
+[2019-01-23T09:42:18.651] [INFO ] [Node 68] added subscription 225 type 0x3a
+[2019-01-23T09:42:18.651] [INFO ] [Node 68] added subscription 226 type 0x3a
+[2019-01-23T09:42:18.652] [INFO ] [Node 69] added subscription 227 type 0x3a
+[2019-01-23T09:42:18.652] [INFO ] [Node 69] added subscription 228 type 0x3a
+[2019-01-23T09:42:18.653] [INFO ] [Node 70] added subscription 229 type 0x3a
+[2019-01-23T09:42:18.653] [INFO ] [Node 70] added subscription 230 type 0x3a
+[2019-01-23T09:42:18.653] [INFO ] [Node 5000] added subscription 231 type 0x1e
+[2019-01-23T09:42:18.654] [INFO ] [Node 5000] removed subscription 222
+[2019-01-23T09:42:18.655] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 5000 
+[2019-01-23T09:42:18.656] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.656] [INFO ] [Node 5000] Confirmed subscription 231. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:18.685] [INFO ] #@# Current timestep 25250
+[2019-01-23T09:42:18.685] [INFO ] ExpiredPayloadCleanUp for time: 22750. Removing keys: 81 Current size: 8
+[2019-01-23T09:42:18.694] [INFO ] [6|11|m89] RSSI= -1 SNR= 22.1007 POWER= 0 MSGID=89 []
+[2019-01-23T09:42:18.694] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 89 timestep 25000
+[2019-01-23T09:42:18.699] [INFO ] [13|11|m89] RSSI= -1 SNR= 17.694 POWER= 0 MSGID=89 []
+[2019-01-23T09:42:18.699] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 89 timestep 25000
+[2019-01-23T09:42:18.702] [INFO ] [20|11|m89] RSSI= -1 SNR= 15.4605 POWER= 0 MSGID=89 []
+[2019-01-23T09:42:18.702] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 89 timestep 25000
+[2019-01-23T09:42:18.705] [INFO ] [26|11|m89] RSSI= -1 SNR= 12.1745 POWER= 0 MSGID=89 []
+[2019-01-23T09:42:18.705] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 89 timestep 25000
+[2019-01-23T09:42:18.728] [INFO ] [Node 5000] removed subscription 231
+[2019-01-23T09:42:18.729] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 5000 
+[2019-01-23T09:42:18.730] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.740] [INFO ] #@# Current timestep 25500
+[2019-01-23T09:42:18.740] [INFO ] ExpiredPayloadCleanUp for time: 23000. Removing keys: 82 Current size: 7
+[2019-01-23T09:42:18.740] [INFO ] [Node 5000] send to all. Key=m90. Time=25300
+[2019-01-23T09:42:18.765] [INFO ] [Node 5000] added subscription 232 type 0x1e
+[2019-01-23T09:42:18.768] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 5000 
+[2019-01-23T09:42:18.768] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.768] [INFO ] [Node 5000] Confirmed subscription 232. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:18.776] [INFO ] #@# Current timestep 25750
+[2019-01-23T09:42:18.776] [INFO ] ExpiredPayloadCleanUp for time: 23250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:18.776] [INFO ] [Node 5000] send to all. Key=m91. Time=25650
+[2019-01-23T09:42:18.778] [INFO ] [6|11|m90] RSSI= -1 SNR= 22.1007 POWER= 0 MSGID=90 []
+[2019-01-23T09:42:18.778] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 90 timestep 25500
+[2019-01-23T09:42:18.781] [INFO ] [13|11|m90] RSSI= -1 SNR= 17.694 POWER= 0 MSGID=90 []
+[2019-01-23T09:42:18.781] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 90 timestep 25500
+[2019-01-23T09:42:18.785] [INFO ] [20|11|m90] RSSI= -1 SNR= 15.4605 POWER= 0 MSGID=90 []
+[2019-01-23T09:42:18.785] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 90 timestep 25500
+[2019-01-23T09:42:18.788] [INFO ] [26|11|m90] RSSI= -1 SNR= 12.1745 POWER= 0 MSGID=90 []
+[2019-01-23T09:42:18.788] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 90 timestep 25500
+[2019-01-23T09:42:18.801] [INFO ] [Node 5000] added subscription 233 type 0x1e
+[2019-01-23T09:42:18.802] [INFO ] [Node 5000] removed subscription 232
+[2019-01-23T09:42:18.802] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 5000 
+[2019-01-23T09:42:18.802] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.803] [INFO ] [Node 5000] Confirmed subscription 233. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:18.816] [INFO ] #@# Current timestep 26000
+[2019-01-23T09:42:18.816] [INFO ] ExpiredPayloadCleanUp for time: 23500. Removing keys: 83 Current size: 8
+[2019-01-23T09:42:18.816] [INFO ] [Node 5000] send to all. Key=m92. Time=25900
+[2019-01-23T09:42:18.820] [INFO ] Selected class for node 71 is 6
+[2019-01-23T09:42:18.820] [INFO ] Added new mobile node with id 71 ns3id 70 sumoId Pepoli_11_15 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:18.824] [INFO ] Selected class for node 72 is 6
+[2019-01-23T09:42:18.825] [INFO ] Added new mobile node with id 72 ns3id 71 sumoId Silvani_7_11 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:18.889] [INFO ] [6|11|m91] RSSI= -1 SNR= 22.1007 POWER= 0 MSGID=91 []
+[2019-01-23T09:42:18.889] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 91 timestep 25750
+[2019-01-23T09:42:18.894] [INFO ] [13|11|m91] RSSI= -1 SNR= 17.694 POWER= 0 MSGID=91 []
+[2019-01-23T09:42:18.894] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 91 timestep 25750
+[2019-01-23T09:42:18.897] [INFO ] [20|11|m91] RSSI= -1 SNR= 15.4605 POWER= 0 MSGID=91 []
+[2019-01-23T09:42:18.897] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 91 timestep 25750
+[2019-01-23T09:42:18.901] [INFO ] [26|11|m91] RSSI= -1 SNR= 12.1745 POWER= 0 MSGID=91 []
+[2019-01-23T09:42:18.901] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 91 timestep 25750
+[2019-01-23T09:42:18.932] [INFO ] [Node 71] added subscription 234 type 0x3a
+[2019-01-23T09:42:18.932] [INFO ] [Node 71] added subscription 235 type 0x3a
+[2019-01-23T09:42:18.939] [INFO ] [Node 72] added subscription 236 type 0x3a
+[2019-01-23T09:42:18.939] [INFO ] [Node 72] added subscription 237 type 0x3a
+[2019-01-23T09:42:18.940] [INFO ] [Node 5000] added subscription 238 type 0x1e
+[2019-01-23T09:42:18.941] [INFO ] [Node 5000] removed subscription 233
+[2019-01-23T09:42:18.942] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 5000 
+[2019-01-23T09:42:18.943] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.943] [INFO ] [Node 5000] Confirmed subscription 238. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:18.964] [INFO ] #@# Current timestep 26250
+[2019-01-23T09:42:18.964] [INFO ] ExpiredPayloadCleanUp for time: 23750. Removing keys: 84 Current size: 8
+[2019-01-23T09:42:18.964] [INFO ] [Node 5000] send to all. Key=m93. Time=26150
+[2019-01-23T09:42:18.966] [INFO ] [6|11|m92] RSSI= -1 SNR= 24.9321 POWER= 0 MSGID=92 []
+[2019-01-23T09:42:18.966] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 92 timestep 26000
+[2019-01-23T09:42:18.967] [INFO ] [13|11|m92] RSSI= -1 SNR= 19.5266 POWER= 0 MSGID=92 []
+[2019-01-23T09:42:18.967] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 92 timestep 26000
+[2019-01-23T09:42:18.969] [INFO ] [20|11|m92] RSSI= -1 SNR= 17.0503 POWER= 0 MSGID=92 []
+[2019-01-23T09:42:18.969] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 92 timestep 26000
+[2019-01-23T09:42:18.970] [INFO ] [26|11|m92] RSSI= -1 SNR= 13.3901 POWER= 0 MSGID=92 []
+[2019-01-23T09:42:18.970] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 92 timestep 26000
+[2019-01-23T09:42:18.971] [INFO ] [30|11|m92] RSSI= -1 SNR= 11.4216 POWER= 0 MSGID=92 []
+[2019-01-23T09:42:18.971] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 92 timestep 26000
+[2019-01-23T09:42:18.979] [INFO ] [Node 5000] added subscription 239 type 0x1e
+[2019-01-23T09:42:18.980] [INFO ] [Node 5000] removed subscription 238
+[2019-01-23T09:42:18.980] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 5000 
+[2019-01-23T09:42:18.981] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:18.981] [INFO ] [Node 5000] Confirmed subscription 239. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:18.994] [INFO ] #@# Current timestep 26500
+[2019-01-23T09:42:18.994] [INFO ] ExpiredPayloadCleanUp for time: 24000. Removing keys: 85 Current size: 8
+[2019-01-23T09:42:18.994] [INFO ] [Node 5000] send to all. Key=m94. Time=26400
+[2019-01-23T09:42:18.995] [INFO ] [6|11|m93] RSSI= -1 SNR= 24.9321 POWER= 0 MSGID=93 []
+[2019-01-23T09:42:18.995] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 93 timestep 26250
+[2019-01-23T09:42:19.007] [INFO ] [13|11|m93] RSSI= -1 SNR= 19.5266 POWER= 0 MSGID=93 []
+[2019-01-23T09:42:19.007] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 93 timestep 26250
+[2019-01-23T09:42:19.012] [INFO ] [20|11|m93] RSSI= -1 SNR= 17.0503 POWER= 0 MSGID=93 []
+[2019-01-23T09:42:19.012] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 93 timestep 26250
+[2019-01-23T09:42:19.018] [INFO ] [26|11|m93] RSSI= -1 SNR= 13.3901 POWER= 0 MSGID=93 []
+[2019-01-23T09:42:19.018] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 93 timestep 26250
+[2019-01-23T09:42:19.020] [INFO ] [30|11|m93] RSSI= -1 SNR= 11.4216 POWER= 0 MSGID=93 []
+[2019-01-23T09:42:19.021] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 93 timestep 26250
+[2019-01-23T09:42:19.045] [INFO ] [Node 5000] added subscription 240 type 0x1e
+[2019-01-23T09:42:19.047] [INFO ] [Node 5000] removed subscription 239
+[2019-01-23T09:42:19.051] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 5000 
+[2019-01-23T09:42:19.052] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.052] [INFO ] [Node 5000] Confirmed subscription 240. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:19.060] [INFO ] #@# Current timestep 26750
+[2019-01-23T09:42:19.060] [INFO ] ExpiredPayloadCleanUp for time: 24250. Removing keys: 86 Current size: 8
+[2019-01-23T09:42:19.060] [INFO ] [Node 5000] send to all. Key=m95. Time=26700
+[2019-01-23T09:42:19.063] [INFO ] [6|11|m94] RSSI= -1 SNR= 24.9321 POWER= 0 MSGID=94 []
+[2019-01-23T09:42:19.063] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 94 timestep 26500
+[2019-01-23T09:42:19.066] [INFO ] [13|11|m94] RSSI= -1 SNR= 19.5266 POWER= 0 MSGID=94 []
+[2019-01-23T09:42:19.066] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 94 timestep 26500
+[2019-01-23T09:42:19.070] [INFO ] [20|11|m94] RSSI= -1 SNR= 17.0503 POWER= 0 MSGID=94 []
+[2019-01-23T09:42:19.070] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 94 timestep 26500
+[2019-01-23T09:42:19.072] [INFO ] [26|11|m94] RSSI= -1 SNR= 13.3901 POWER= 0 MSGID=94 []
+[2019-01-23T09:42:19.072] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 94 timestep 26500
+[2019-01-23T09:42:19.074] [INFO ] [30|11|m94] RSSI= -1 SNR= 11.4216 POWER= 0 MSGID=94 []
+[2019-01-23T09:42:19.074] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 94 timestep 26500
+[2019-01-23T09:42:19.095] [INFO ] [Node 5000] added subscription 241 type 0x1e
+[2019-01-23T09:42:19.096] [INFO ] [Node 5000] removed subscription 240
+[2019-01-23T09:42:19.097] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 5000 
+[2019-01-23T09:42:19.097] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.097] [INFO ] [Node 5000] Confirmed subscription 241. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:19.118] [INFO ] #@# Current timestep 27000
+[2019-01-23T09:42:19.118] [INFO ] ExpiredPayloadCleanUp for time: 24500. Removing keys: 87 Current size: 8
+[2019-01-23T09:42:19.118] [INFO ] [Node 5000] send to all. Key=m96. Time=26850
+[2019-01-23T09:42:19.123] [INFO ] Selected class for node 73 is 6
+[2019-01-23T09:42:19.123] [INFO ] Added new mobile node with id 73 ns3id 72 sumoId Costa_12_9 sumoType passenger2b sumoClass passenger
+[2019-01-23T09:42:19.190] [INFO ] [6|11|m95] RSSI= -1 SNR= 24.9321 POWER= 0 MSGID=95 []
+[2019-01-23T09:42:19.190] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 95 timestep 26750
+[2019-01-23T09:42:19.201] [INFO ] [13|11|m95] RSSI= -1 SNR= 19.5266 POWER= 0 MSGID=95 []
+[2019-01-23T09:42:19.201] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 95 timestep 26750
+[2019-01-23T09:42:19.205] [INFO ] [20|11|m95] RSSI= -1 SNR= 17.0503 POWER= 0 MSGID=95 []
+[2019-01-23T09:42:19.205] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 95 timestep 26750
+[2019-01-23T09:42:19.209] [INFO ] [26|11|m95] RSSI= -1 SNR= 13.3901 POWER= 0 MSGID=95 []
+[2019-01-23T09:42:19.209] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 95 timestep 26750
+[2019-01-23T09:42:19.211] [INFO ] [30|11|m95] RSSI= -1 SNR= 11.4216 POWER= 0 MSGID=95 []
+[2019-01-23T09:42:19.211] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 95 timestep 26750
+[2019-01-23T09:42:19.232] [INFO ] [Node 73] added subscription 242 type 0x3a
+[2019-01-23T09:42:19.232] [INFO ] [Node 73] added subscription 243 type 0x3a
+[2019-01-23T09:42:19.233] [INFO ] [Node 5000] added subscription 244 type 0x1e
+[2019-01-23T09:42:19.234] [INFO ] [Node 5000] removed subscription 241
+[2019-01-23T09:42:19.234] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 5000 
+[2019-01-23T09:42:19.235] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.235] [INFO ] [Node 5000] Confirmed subscription 244. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:19.274] [INFO ] #@# Current timestep 27250
+[2019-01-23T09:42:19.274] [INFO ] ExpiredPayloadCleanUp for time: 24750. Removing keys: 88 Current size: 8
+[2019-01-23T09:42:19.276] [INFO ] [6|11|m96] RSSI= -1 SNR= 28.4851 POWER= 0 MSGID=96 []
+[2019-01-23T09:42:19.276] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 96 timestep 27000
+[2019-01-23T09:42:19.277] [INFO ] [13|11|m96] RSSI= -1 SNR= 21.6589 POWER= 0 MSGID=96 []
+[2019-01-23T09:42:19.277] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 96 timestep 27000
+[2019-01-23T09:42:19.279] [INFO ] [20|11|m96] RSSI= -1 SNR= 18.786 POWER= 0 MSGID=96 []
+[2019-01-23T09:42:19.279] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 96 timestep 27000
+[2019-01-23T09:42:19.280] [INFO ] [26|11|m96] RSSI= -1 SNR= 14.6856 POWER= 0 MSGID=96 []
+[2019-01-23T09:42:19.280] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 96 timestep 27000
+[2019-01-23T09:42:19.281] [INFO ] [30|11|m96] RSSI= -1 SNR= 12.5389 POWER= 0 MSGID=96 []
+[2019-01-23T09:42:19.281] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 96 timestep 27000
+[2019-01-23T09:42:19.290] [INFO ] [Node 5000] removed subscription 244
+[2019-01-23T09:42:19.290] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 5000 
+[2019-01-23T09:42:19.291] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.303] [INFO ] #@# Current timestep 27500
+[2019-01-23T09:42:19.303] [INFO ] ExpiredPayloadCleanUp for time: 25000. Removing keys: 89 Current size: 7
+[2019-01-23T09:42:19.303] [INFO ] [Node 5000] send to all. Key=m97. Time=27300
+[2019-01-23T09:42:19.330] [INFO ] [Node 5000] added subscription 245 type 0x1e
+[2019-01-23T09:42:19.333] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 5000 
+[2019-01-23T09:42:19.334] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.334] [INFO ] [Node 5000] Confirmed subscription 245. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:19.341] [INFO ] #@# Current timestep 27750
+[2019-01-23T09:42:19.341] [INFO ] ExpiredPayloadCleanUp for time: 25250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:19.341] [INFO ] [Node 5000] send to all. Key=m98. Time=27650
+[2019-01-23T09:42:19.343] [INFO ] [6|11|m97] RSSI= -1 SNR= 28.4851 POWER= 0 MSGID=97 []
+[2019-01-23T09:42:19.343] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 97 timestep 27500
+[2019-01-23T09:42:19.346] [INFO ] [13|11|m97] RSSI= -1 SNR= 21.6589 POWER= 0 MSGID=97 []
+[2019-01-23T09:42:19.346] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 97 timestep 27500
+[2019-01-23T09:42:19.349] [INFO ] [20|11|m97] RSSI= -1 SNR= 18.786 POWER= 0 MSGID=97 []
+[2019-01-23T09:42:19.349] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 97 timestep 27500
+[2019-01-23T09:42:19.351] [INFO ] [26|11|m97] RSSI= -1 SNR= 14.6856 POWER= 0 MSGID=97 []
+[2019-01-23T09:42:19.351] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 97 timestep 27500
+[2019-01-23T09:42:19.352] [INFO ] [30|11|m97] RSSI= -1 SNR= 12.5389 POWER= 0 MSGID=97 []
+[2019-01-23T09:42:19.352] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 97 timestep 27500
+[2019-01-23T09:42:19.370] [INFO ] [Node 5000] added subscription 246 type 0x1e
+[2019-01-23T09:42:19.371] [INFO ] [Node 5000] removed subscription 245
+[2019-01-23T09:42:19.372] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 5000 
+[2019-01-23T09:42:19.372] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.372] [INFO ] [Node 5000] Confirmed subscription 246. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:19.392] [INFO ] #@# Current timestep 28000
+[2019-01-23T09:42:19.392] [INFO ] ExpiredPayloadCleanUp for time: 25500. Removing keys: 90 Current size: 8
+[2019-01-23T09:42:19.392] [INFO ] [Node 5000] send to all. Key=m99. Time=27900
+[2019-01-23T09:42:19.395] [INFO ] Selected class for node 74 is 6
+[2019-01-23T09:42:19.395] [INFO ] Added new mobile node with id 74 ns3id 73 sumoId Togliatti_3_18 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:19.399] [INFO ] Selected class for node 75 is 6
+[2019-01-23T09:42:19.399] [INFO ] Added new mobile node with id 75 ns3id 74 sumoId Pepoli_8_16 sumoType passenger2b sumoClass passenger
+[2019-01-23T09:42:19.403] [INFO ] Selected class for node 76 is 6
+[2019-01-23T09:42:19.403] [INFO ] Added new mobile node with id 76 ns3id 75 sumoId Togliatti_71_19 sumoType passenger4 sumoClass passenger
+[2019-01-23T09:42:19.407] [INFO ] Selected class for node 77 is 6
+[2019-01-23T09:42:19.407] [INFO ] Added new mobile node with id 77 ns3id 76 sumoId Vittorio_Veneto_2_6 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:19.431] [INFO ] [6|11|m98] RSSI= -1 SNR= 28.4851 POWER= 0 MSGID=98 []
+[2019-01-23T09:42:19.431] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 98 timestep 27750
+[2019-01-23T09:42:19.433] [INFO ] [13|11|m98] RSSI= -1 SNR= 21.6589 POWER= 0 MSGID=98 []
+[2019-01-23T09:42:19.433] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 98 timestep 27750
+[2019-01-23T09:42:19.434] [INFO ] [20|11|m98] RSSI= -1 SNR= 18.786 POWER= 0 MSGID=98 []
+[2019-01-23T09:42:19.434] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 98 timestep 27750
+[2019-01-23T09:42:19.436] [INFO ] [26|11|m98] RSSI= -1 SNR= 14.6856 POWER= 0 MSGID=98 []
+[2019-01-23T09:42:19.436] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 98 timestep 27750
+[2019-01-23T09:42:19.437] [INFO ] [30|11|m98] RSSI= -1 SNR= 12.5389 POWER= 0 MSGID=98 []
+[2019-01-23T09:42:19.437] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 98 timestep 27750
+[2019-01-23T09:42:19.445] [INFO ] [Node 74] added subscription 247 type 0x3a
+[2019-01-23T09:42:19.445] [INFO ] [Node 74] added subscription 248 type 0x3a
+[2019-01-23T09:42:19.446] [INFO ] [Node 75] added subscription 249 type 0x3a
+[2019-01-23T09:42:19.446] [INFO ] [Node 75] added subscription 250 type 0x3a
+[2019-01-23T09:42:19.446] [INFO ] [Node 76] added subscription 251 type 0x3a
+[2019-01-23T09:42:19.446] [INFO ] [Node 76] added subscription 252 type 0x3a
+[2019-01-23T09:42:19.446] [INFO ] [Node 77] added subscription 253 type 0x3a
+[2019-01-23T09:42:19.446] [INFO ] [Node 77] added subscription 254 type 0x3a
+[2019-01-23T09:42:19.447] [INFO ] [Node 5000] added subscription 255 type 0x1e
+[2019-01-23T09:42:19.447] [INFO ] [Node 5000] removed subscription 246
+[2019-01-23T09:42:19.448] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 5000 
+[2019-01-23T09:42:19.448] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.448] [INFO ] [Node 5000] Confirmed subscription 255. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:19.465] [INFO ] #@# Current timestep 28250
+[2019-01-23T09:42:19.466] [INFO ] ExpiredPayloadCleanUp for time: 25750. Removing keys: 91 Current size: 8
+[2019-01-23T09:42:19.466] [INFO ] [Node 5000] send to all. Key=m100. Time=28150
+[2019-01-23T09:42:19.467] [INFO ] [6|11|m99] RSSI= -1 SNR= 33.0694 POWER= 0 MSGID=99 []
+[2019-01-23T09:42:19.467] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 99 timestep 28000
+[2019-01-23T09:42:19.469] [INFO ] [13|11|m99] RSSI= -1 SNR= 24.3145 POWER= 0 MSGID=99 []
+[2019-01-23T09:42:19.469] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 99 timestep 28000
+[2019-01-23T09:42:19.471] [INFO ] [20|11|m99] RSSI= -1 SNR= 20.883 POWER= 0 MSGID=99 []
+[2019-01-23T09:42:19.471] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 99 timestep 28000
+[2019-01-23T09:42:19.473] [INFO ] [26|11|m99] RSSI= -1 SNR= 16.1789 POWER= 0 MSGID=99 []
+[2019-01-23T09:42:19.473] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 99 timestep 28000
+[2019-01-23T09:42:19.474] [INFO ] [30|11|m99] RSSI= -1 SNR= 13.705 POWER= 0 MSGID=99 []
+[2019-01-23T09:42:19.474] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 99 timestep 28000
+[2019-01-23T09:42:19.487] [INFO ] [Node 5000] added subscription 256 type 0x1e
+[2019-01-23T09:42:19.488] [INFO ] [Node 5000] removed subscription 255
+[2019-01-23T09:42:19.489] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 5000 
+[2019-01-23T09:42:19.489] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.489] [INFO ] [Node 5000] Confirmed subscription 256. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:19.498] [INFO ] #@# Current timestep 28500
+[2019-01-23T09:42:19.498] [INFO ] ExpiredPayloadCleanUp for time: 26000. Removing keys: 92 Current size: 8
+[2019-01-23T09:42:19.498] [INFO ] [Node 5000] send to all. Key=m101. Time=28400
+[2019-01-23T09:42:19.500] [INFO ] [6|11|m100] RSSI= -1 SNR= 33.0694 POWER= 0 MSGID=100 []
+[2019-01-23T09:42:19.500] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 100 timestep 28250
+[2019-01-23T09:42:19.502] [INFO ] [13|11|m100] RSSI= -1 SNR= 24.3145 POWER= 0 MSGID=100 []
+[2019-01-23T09:42:19.502] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 100 timestep 28250
+[2019-01-23T09:42:19.504] [INFO ] [20|11|m100] RSSI= -1 SNR= 20.883 POWER= 0 MSGID=100 []
+[2019-01-23T09:42:19.504] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 100 timestep 28250
+[2019-01-23T09:42:19.506] [INFO ] [26|11|m100] RSSI= -1 SNR= 16.1789 POWER= 0 MSGID=100 []
+[2019-01-23T09:42:19.506] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 100 timestep 28250
+[2019-01-23T09:42:19.507] [INFO ] [30|11|m100] RSSI= -1 SNR= 13.705 POWER= 0 MSGID=100 []
+[2019-01-23T09:42:19.507] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 100 timestep 28250
+[2019-01-23T09:42:19.529] [INFO ] [Node 5000] added subscription 257 type 0x1e
+[2019-01-23T09:42:19.531] [INFO ] [Node 5000] removed subscription 256
+[2019-01-23T09:42:19.533] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 5000 
+[2019-01-23T09:42:19.533] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.533] [INFO ] [Node 5000] Confirmed subscription 257. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:19.541] [INFO ] #@# Current timestep 28750
+[2019-01-23T09:42:19.541] [INFO ] ExpiredPayloadCleanUp for time: 26250. Removing keys: 93 Current size: 8
+[2019-01-23T09:42:19.541] [INFO ] [Node 5000] send to all. Key=m102. Time=28700
+[2019-01-23T09:42:19.544] [INFO ] [6|11|m101] RSSI= -1 SNR= 33.0694 POWER= 0 MSGID=101 []
+[2019-01-23T09:42:19.544] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 101 timestep 28500
+[2019-01-23T09:42:19.548] [INFO ] [13|11|m101] RSSI= -1 SNR= 24.3145 POWER= 0 MSGID=101 []
+[2019-01-23T09:42:19.548] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 101 timestep 28500
+[2019-01-23T09:42:19.551] [INFO ] [20|11|m101] RSSI= -1 SNR= 20.883 POWER= 0 MSGID=101 []
+[2019-01-23T09:42:19.551] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 101 timestep 28500
+[2019-01-23T09:42:19.554] [INFO ] [26|11|m101] RSSI= -1 SNR= 16.1789 POWER= 0 MSGID=101 []
+[2019-01-23T09:42:19.554] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 101 timestep 28500
+[2019-01-23T09:42:19.557] [INFO ] [30|11|m101] RSSI= -1 SNR= 13.705 POWER= 0 MSGID=101 []
+[2019-01-23T09:42:19.557] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 101 timestep 28500
+[2019-01-23T09:42:19.581] [INFO ] [Node 5000] added subscription 258 type 0x1e
+[2019-01-23T09:42:19.582] [INFO ] [Node 5000] removed subscription 257
+[2019-01-23T09:42:19.583] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 5000 
+[2019-01-23T09:42:19.584] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.584] [INFO ] [Node 5000] Confirmed subscription 258. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:19.606] [INFO ] #@# Current timestep 29000
+[2019-01-23T09:42:19.606] [INFO ] ExpiredPayloadCleanUp for time: 26500. Removing keys: 94 Current size: 8
+[2019-01-23T09:42:19.606] [INFO ] [Node 5000] send to all. Key=m103. Time=28850
+[2019-01-23T09:42:19.614] [INFO ] Selected class for node 78 is 6
+[2019-01-23T09:42:19.614] [INFO ] Added new mobile node with id 78 ns3id 77 sumoId Silvani_11_12 sumoType passenger5 sumoClass passenger
+[2019-01-23T09:42:19.618] [INFO ] Selected class for node 79 is 6
+[2019-01-23T09:42:19.618] [INFO ] Added new mobile node with id 79 ns3id 78 sumoId XXI_Aprile_7_8 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:19.680] [INFO ] [6|11|m102] RSSI= -1 SNR= 33.0694 POWER= 0 MSGID=102 []
+[2019-01-23T09:42:19.680] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 102 timestep 28750
+[2019-01-23T09:42:19.684] [INFO ] [13|11|m102] RSSI= -1 SNR= 24.3145 POWER= 0 MSGID=102 []
+[2019-01-23T09:42:19.684] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 102 timestep 28750
+[2019-01-23T09:42:19.688] [INFO ] [20|11|m102] RSSI= -1 SNR= 20.883 POWER= 0 MSGID=102 []
+[2019-01-23T09:42:19.688] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 102 timestep 28750
+[2019-01-23T09:42:19.691] [INFO ] [26|11|m102] RSSI= -1 SNR= 16.1789 POWER= 0 MSGID=102 []
+[2019-01-23T09:42:19.691] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 102 timestep 28750
+[2019-01-23T09:42:19.693] [INFO ] [30|11|m102] RSSI= -1 SNR= 13.705 POWER= 0 MSGID=102 []
+[2019-01-23T09:42:19.693] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 102 timestep 28750
+[2019-01-23T09:42:19.721] [INFO ] [Node 78] added subscription 259 type 0x3a
+[2019-01-23T09:42:19.721] [INFO ] [Node 78] added subscription 260 type 0x3a
+[2019-01-23T09:42:19.722] [INFO ] [Node 79] added subscription 261 type 0x3a
+[2019-01-23T09:42:19.722] [INFO ] [Node 79] added subscription 262 type 0x3a
+[2019-01-23T09:42:19.723] [INFO ] [Node 5000] added subscription 263 type 0x1e
+[2019-01-23T09:42:19.724] [INFO ] [Node 5000] removed subscription 258
+[2019-01-23T09:42:19.725] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 5000 
+[2019-01-23T09:42:19.725] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.725] [INFO ] [Node 5000] Confirmed subscription 263. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:19.746] [INFO ] #@# Current timestep 29250
+[2019-01-23T09:42:19.746] [INFO ] ExpiredPayloadCleanUp for time: 26750. Removing keys: 95 Current size: 8
+[2019-01-23T09:42:19.748] [INFO ] [6|11|m103] RSSI= -1 SNR= 39.6186 POWER= 0 MSGID=103 []
+[2019-01-23T09:42:19.748] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 103 timestep 29000
+[2019-01-23T09:42:19.750] [INFO ] [13|11|m103] RSSI= -1 SNR= 27.6379 POWER= 0 MSGID=103 []
+[2019-01-23T09:42:19.750] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 103 timestep 29000
+[2019-01-23T09:42:19.753] [INFO ] [20|11|m103] RSSI= -1 SNR= 23.3381 POWER= 0 MSGID=103 []
+[2019-01-23T09:42:19.753] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 103 timestep 29000
+[2019-01-23T09:42:19.754] [INFO ] [26|11|m103] RSSI= -1 SNR= 17.9251 POWER= 0 MSGID=103 []
+[2019-01-23T09:42:19.754] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 103 timestep 29000
+[2019-01-23T09:42:19.761] [INFO ] [30|11|m103] RSSI= -1 SNR= 15.1311 POWER= 0 MSGID=103 []
+[2019-01-23T09:42:19.761] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 103 timestep 29000
+[2019-01-23T09:42:19.764] [INFO ] [36|11|m103] RSSI= -1 SNR= 10.4992 POWER= 0 MSGID=103 []
+[2019-01-23T09:42:19.764] [INFO ] Node 36 (sumoID: 'Togliatti_10_7') received message 11 payload 103 timestep 29000
+[2019-01-23T09:42:19.765] [INFO ] [38|11|m103] RSSI= -1 SNR= 11.0067 POWER= 0 MSGID=103 []
+[2019-01-23T09:42:19.765] [INFO ] Node 38 (sumoID: 'Togliatti_2_8') received message 11 payload 103 timestep 29000
+[2019-01-23T09:42:19.788] [INFO ] [Node 5000] removed subscription 263
+[2019-01-23T09:42:19.789] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 5000 
+[2019-01-23T09:42:19.789] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.796] [INFO ] #@# Current timestep 29500
+[2019-01-23T09:42:19.796] [INFO ] ExpiredPayloadCleanUp for time: 27000. Removing keys: 96 Current size: 7
+[2019-01-23T09:42:19.796] [INFO ] [Node 5000] send to all. Key=m104. Time=29300
+[2019-01-23T09:42:19.834] [INFO ] [Node 5000] added subscription 264 type 0x1e
+[2019-01-23T09:42:19.838] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 5000 
+[2019-01-23T09:42:19.838] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.838] [INFO ] [Node 5000] Confirmed subscription 264. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:19.848] [INFO ] #@# Current timestep 29750
+[2019-01-23T09:42:19.848] [INFO ] ExpiredPayloadCleanUp for time: 27250. Removing keys: noting to remove Current size: 8
+[2019-01-23T09:42:19.848] [INFO ] [Node 5000] send to all. Key=m105. Time=29650
+[2019-01-23T09:42:19.850] [INFO ] [6|11|m104] RSSI= -1 SNR= 39.6186 POWER= 0 MSGID=104 []
+[2019-01-23T09:42:19.850] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 104 timestep 29500
+[2019-01-23T09:42:19.854] [INFO ] [13|11|m104] RSSI= -1 SNR= 27.6379 POWER= 0 MSGID=104 []
+[2019-01-23T09:42:19.854] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 104 timestep 29500
+[2019-01-23T09:42:19.858] [INFO ] [20|11|m104] RSSI= -1 SNR= 23.3381 POWER= 0 MSGID=104 []
+[2019-01-23T09:42:19.858] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 104 timestep 29500
+[2019-01-23T09:42:19.862] [INFO ] [26|11|m104] RSSI= -1 SNR= 17.9251 POWER= 0 MSGID=104 []
+[2019-01-23T09:42:19.862] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 104 timestep 29500
+[2019-01-23T09:42:19.865] [INFO ] [30|11|m104] RSSI= -1 SNR= 15.1311 POWER= 0 MSGID=104 []
+[2019-01-23T09:42:19.865] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 104 timestep 29500
+[2019-01-23T09:42:19.873] [INFO ] [36|11|m104] RSSI= -1 SNR= 10.4992 POWER= 0 MSGID=104 []
+[2019-01-23T09:42:19.873] [INFO ] Node 36 (sumoID: 'Togliatti_10_7') received message 11 payload 104 timestep 29500
+[2019-01-23T09:42:19.874] [INFO ] [38|11|m104] RSSI= -1 SNR= 11.0067 POWER= 0 MSGID=104 []
+[2019-01-23T09:42:19.874] [INFO ] Node 38 (sumoID: 'Togliatti_2_8') received message 11 payload 104 timestep 29500
+[2019-01-23T09:42:19.895] [INFO ] [Node 5000] added subscription 265 type 0x1e
+[2019-01-23T09:42:19.896] [INFO ] [Node 5000] removed subscription 264
+[2019-01-23T09:42:19.898] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 5000 
+[2019-01-23T09:42:19.898] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.898] [INFO ] [Node 5000] Confirmed subscription 265. Will be unsuscribed on the next timestep
+[2019-01-23T09:42:19.913] [INFO ] #@# Current timestep 30000
+[2019-01-23T09:42:19.913] [INFO ] ExpiredPayloadCleanUp for time: 27500. Removing keys: 97 Current size: 8
+[2019-01-23T09:42:19.913] [INFO ] [Node 5000] send to all. Key=m106. Time=29900
+[2019-01-23T09:42:19.916] [INFO ] Selected class for node 80 is 6
+[2019-01-23T09:42:19.916] [INFO ] Added new mobile node with id 80 ns3id 79 sumoId Costa_12_11 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:19.920] [INFO ] Selected class for node 81 is 6
+[2019-01-23T09:42:19.920] [INFO ] Added new mobile node with id 81 ns3id 80 sumoId Pepoli_11_17 sumoType passenger1 sumoClass passenger
+[2019-01-23T09:42:19.965] [INFO ] [6|11|m105] RSSI= -1 SNR= 39.6186 POWER= 0 MSGID=105 []
+[2019-01-23T09:42:19.965] [INFO ] Node 6 (sumoID: 'Togliatti_71_0') received message 11 payload 105 timestep 29750
+[2019-01-23T09:42:19.968] [INFO ] [13|11|m105] RSSI= -1 SNR= 27.6379 POWER= 0 MSGID=105 []
+[2019-01-23T09:42:19.968] [INFO ] Node 13 (sumoID: 'Togliatti_71_2') received message 11 payload 105 timestep 29750
+[2019-01-23T09:42:19.971] [INFO ] [20|11|m105] RSSI= -1 SNR= 23.3381 POWER= 0 MSGID=105 []
+[2019-01-23T09:42:19.971] [INFO ] Node 20 (sumoID: 'Togliatti_71_3') received message 11 payload 105 timestep 29750
+[2019-01-23T09:42:19.973] [INFO ] [26|11|m105] RSSI= -1 SNR= 17.9251 POWER= 0 MSGID=105 []
+[2019-01-23T09:42:19.973] [INFO ] Node 26 (sumoID: 'Togliatti_72_5') received message 11 payload 105 timestep 29750
+[2019-01-23T09:42:19.975] [INFO ] [30|11|m105] RSSI= -1 SNR= 15.1311 POWER= 0 MSGID=105 []
+[2019-01-23T09:42:19.975] [INFO ] Node 30 (sumoID: 'Togliatti_71_6') received message 11 payload 105 timestep 29750
+[2019-01-23T09:42:19.977] [INFO ] [36|11|m105] RSSI= -1 SNR= 10.4992 POWER= 0 MSGID=105 []
+[2019-01-23T09:42:19.977] [INFO ] Node 36 (sumoID: 'Togliatti_10_7') received message 11 payload 105 timestep 29750
+[2019-01-23T09:42:19.978] [INFO ] [38|11|m105] RSSI= -1 SNR= 11.0067 POWER= 0 MSGID=105 []
+[2019-01-23T09:42:19.978] [INFO ] Node 38 (sumoID: 'Togliatti_2_8') received message 11 payload 105 timestep 29750
+[2019-01-23T09:42:19.994] [INFO ] [Node 80] added subscription 266 type 0x3a
+[2019-01-23T09:42:19.994] [INFO ] [Node 80] added subscription 267 type 0x3a
+[2019-01-23T09:42:19.994] [INFO ] [Node 81] added subscription 268 type 0x3a
+[2019-01-23T09:42:19.995] [INFO ] [Node 81] added subscription 269 type 0x3a
+[2019-01-23T09:42:19.995] [INFO ] [Node 5000] added subscription 270 type 0x1e
+[2019-01-23T09:42:19.996] [INFO ] [Node 5000] removed subscription 265
+[2019-01-23T09:42:19.997] [INFO ] Mobility info on nodes: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 5000 
+[2019-01-23T09:42:19.997] [INFO ] [TrafficLightInformation] Traffic light status update: GrrrrrrrrrrGGGG
+[2019-01-23T09:42:19.997] [INFO ] [Node 5000] Confirmed subscription 270. Will be unsuscribed on the next timestep

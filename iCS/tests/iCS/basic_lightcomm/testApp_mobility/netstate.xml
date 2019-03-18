@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Τετ 19 Σεπ 2018 01:49:24 μμ EEST by Eclipse SUMO GUI Version v1_0_1+0022-2ae680e0e0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="./sumo/net.net.xml"/>
+        <route-files value="./sumo/routes.rou.xml"/>
+    </input>
+
+    <output>
+        <netstate-dump value="./sumo/../../netstate.xml"/>
+        <netstate-dump.empty-edges value="false"/>
+    </output>
+
+    <processing>
+        <default.speeddev value="0"/>
+    </processing>
+
+    <report>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="5500"/>
+    </traci_server>
+
+</configuration>
+-->
+
+<netstate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netstate_file.xsd">
+</netstate>

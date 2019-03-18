@@ -1,0 +1,2377 @@
+Test App Log File
+===============================
+[2019-01-28T10:58:02.968] [INFO ] #@# Current timestep -1000
+[2019-01-28T10:58:02.968] [INFO ] Added new fixed station with id 5000
+[2019-01-28T10:58:02.970] [INFO ] #@# Current timestep 0
+[2019-01-28T10:58:02.972] [INFO ] #@# Current timestep 50
+[2019-01-28T10:58:02.973] [INFO ] #@# Current timestep 100
+[2019-01-28T10:58:02.974] [INFO ] #@# Current timestep 150
+[2019-01-28T10:58:02.975] [INFO ] #@# Current timestep 200
+[2019-01-28T10:58:02.976] [INFO ] #@# Current timestep 250
+[2019-01-28T10:58:02.977] [INFO ] #@# Current timestep 300
+[2019-01-28T10:58:02.979] [INFO ] #@# Current timestep 350
+[2019-01-28T10:58:02.980] [INFO ] #@# Current timestep 400
+[2019-01-28T10:58:02.981] [INFO ] #@# Current timestep 450
+[2019-01-28T10:58:02.981] [INFO ] ExpiredPayloadCleanUp for time: -1000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.982] [INFO ] #@# Current timestep 500
+[2019-01-28T10:58:02.982] [INFO ] ExpiredPayloadCleanUp for time: 0. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.983] [INFO ] #@# Current timestep 550
+[2019-01-28T10:58:02.983] [INFO ] ExpiredPayloadCleanUp for time: 50. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.984] [INFO ] #@# Current timestep 600
+[2019-01-28T10:58:02.984] [INFO ] ExpiredPayloadCleanUp for time: 100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.985] [INFO ] #@# Current timestep 650
+[2019-01-28T10:58:02.985] [INFO ] ExpiredPayloadCleanUp for time: 150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.986] [INFO ] #@# Current timestep 700
+[2019-01-28T10:58:02.986] [INFO ] ExpiredPayloadCleanUp for time: 200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.987] [INFO ] #@# Current timestep 750
+[2019-01-28T10:58:02.987] [INFO ] ExpiredPayloadCleanUp for time: 250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.988] [INFO ] #@# Current timestep 800
+[2019-01-28T10:58:02.989] [INFO ] ExpiredPayloadCleanUp for time: 300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.990] [INFO ] #@# Current timestep 850
+[2019-01-28T10:58:02.990] [INFO ] ExpiredPayloadCleanUp for time: 350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.991] [INFO ] #@# Current timestep 900
+[2019-01-28T10:58:02.991] [INFO ] ExpiredPayloadCleanUp for time: 400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.992] [INFO ] #@# Current timestep 950
+[2019-01-28T10:58:02.992] [INFO ] ExpiredPayloadCleanUp for time: 450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.994] [INFO ] #@# Current timestep 1000
+[2019-01-28T10:58:02.994] [INFO ] ExpiredPayloadCleanUp for time: 500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.995] [INFO ] #@# Current timestep 1050
+[2019-01-28T10:58:02.995] [INFO ] ExpiredPayloadCleanUp for time: 550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.996] [INFO ] #@# Current timestep 1100
+[2019-01-28T10:58:02.996] [INFO ] ExpiredPayloadCleanUp for time: 600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.997] [INFO ] #@# Current timestep 1150
+[2019-01-28T10:58:02.997] [INFO ] ExpiredPayloadCleanUp for time: 650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.998] [INFO ] #@# Current timestep 1200
+[2019-01-28T10:58:02.998] [INFO ] ExpiredPayloadCleanUp for time: 700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.999] [INFO ] #@# Current timestep 1250
+[2019-01-28T10:58:02.999] [INFO ] ExpiredPayloadCleanUp for time: 750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:02.999] [INFO ] #@# Current timestep 1300
+[2019-01-28T10:58:02.999] [INFO ] ExpiredPayloadCleanUp for time: 800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.000] [INFO ] #@# Current timestep 1350
+[2019-01-28T10:58:03.000] [INFO ] ExpiredPayloadCleanUp for time: 850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.001] [INFO ] #@# Current timestep 1400
+[2019-01-28T10:58:03.001] [INFO ] ExpiredPayloadCleanUp for time: 900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.001] [INFO ] #@# Current timestep 1450
+[2019-01-28T10:58:03.001] [INFO ] ExpiredPayloadCleanUp for time: 950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.002] [INFO ] #@# Current timestep 1500
+[2019-01-28T10:58:03.002] [INFO ] ExpiredPayloadCleanUp for time: 1000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.003] [INFO ] #@# Current timestep 1550
+[2019-01-28T10:58:03.003] [INFO ] ExpiredPayloadCleanUp for time: 1050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.003] [INFO ] #@# Current timestep 1600
+[2019-01-28T10:58:03.003] [INFO ] ExpiredPayloadCleanUp for time: 1100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.004] [INFO ] #@# Current timestep 1650
+[2019-01-28T10:58:03.004] [INFO ] ExpiredPayloadCleanUp for time: 1150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.005] [INFO ] #@# Current timestep 1700
+[2019-01-28T10:58:03.005] [INFO ] ExpiredPayloadCleanUp for time: 1200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.005] [INFO ] #@# Current timestep 1750
+[2019-01-28T10:58:03.005] [INFO ] ExpiredPayloadCleanUp for time: 1250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.006] [INFO ] #@# Current timestep 1800
+[2019-01-28T10:58:03.006] [INFO ] ExpiredPayloadCleanUp for time: 1300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.007] [INFO ] #@# Current timestep 1850
+[2019-01-28T10:58:03.007] [INFO ] ExpiredPayloadCleanUp for time: 1350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.007] [INFO ] #@# Current timestep 1900
+[2019-01-28T10:58:03.007] [INFO ] ExpiredPayloadCleanUp for time: 1400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.008] [INFO ] #@# Current timestep 1950
+[2019-01-28T10:58:03.008] [INFO ] ExpiredPayloadCleanUp for time: 1450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.013] [INFO ] #@# Current timestep 2000
+[2019-01-28T10:58:03.013] [INFO ] ExpiredPayloadCleanUp for time: 1500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.041] [INFO ] Selected class for node 2 is 6
+[2019-01-28T10:58:03.041] [INFO ] Added new mobile node with id 2 ns3id 1 sumoId veh0 sumoType t1 sumoClass passenger
+[2019-01-28T10:58:03.044] [INFO ] #@# Current timestep 2050
+[2019-01-28T10:58:03.044] [INFO ] ExpiredPayloadCleanUp for time: 1550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.045] [INFO ] #@# Current timestep 2100
+[2019-01-28T10:58:03.045] [INFO ] ExpiredPayloadCleanUp for time: 1600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.046] [INFO ] #@# Current timestep 2150
+[2019-01-28T10:58:03.046] [INFO ] ExpiredPayloadCleanUp for time: 1650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.047] [INFO ] #@# Current timestep 2200
+[2019-01-28T10:58:03.047] [INFO ] ExpiredPayloadCleanUp for time: 1700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.048] [INFO ] #@# Current timestep 2250
+[2019-01-28T10:58:03.048] [INFO ] ExpiredPayloadCleanUp for time: 1750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.049] [INFO ] #@# Current timestep 2300
+[2019-01-28T10:58:03.049] [INFO ] ExpiredPayloadCleanUp for time: 1800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.050] [INFO ] #@# Current timestep 2350
+[2019-01-28T10:58:03.050] [INFO ] ExpiredPayloadCleanUp for time: 1850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.051] [INFO ] #@# Current timestep 2400
+[2019-01-28T10:58:03.051] [INFO ] ExpiredPayloadCleanUp for time: 1900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.052] [INFO ] #@# Current timestep 2450
+[2019-01-28T10:58:03.052] [INFO ] ExpiredPayloadCleanUp for time: 1950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.053] [INFO ] #@# Current timestep 2500
+[2019-01-28T10:58:03.053] [INFO ] ExpiredPayloadCleanUp for time: 2000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.054] [INFO ] #@# Current timestep 2550
+[2019-01-28T10:58:03.054] [INFO ] ExpiredPayloadCleanUp for time: 2050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.055] [INFO ] #@# Current timestep 2600
+[2019-01-28T10:58:03.055] [INFO ] ExpiredPayloadCleanUp for time: 2100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.056] [INFO ] #@# Current timestep 2650
+[2019-01-28T10:58:03.056] [INFO ] ExpiredPayloadCleanUp for time: 2150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.056] [INFO ] #@# Current timestep 2700
+[2019-01-28T10:58:03.056] [INFO ] ExpiredPayloadCleanUp for time: 2200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.057] [INFO ] #@# Current timestep 2750
+[2019-01-28T10:58:03.057] [INFO ] ExpiredPayloadCleanUp for time: 2250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.058] [INFO ] #@# Current timestep 2800
+[2019-01-28T10:58:03.058] [INFO ] ExpiredPayloadCleanUp for time: 2300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.059] [INFO ] #@# Current timestep 2850
+[2019-01-28T10:58:03.059] [INFO ] ExpiredPayloadCleanUp for time: 2350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.060] [INFO ] #@# Current timestep 2900
+[2019-01-28T10:58:03.060] [INFO ] ExpiredPayloadCleanUp for time: 2400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.060] [INFO ] #@# Current timestep 2950
+[2019-01-28T10:58:03.060] [INFO ] ExpiredPayloadCleanUp for time: 2450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.063] [INFO ] #@# Current timestep 3000
+[2019-01-28T10:58:03.063] [INFO ] ExpiredPayloadCleanUp for time: 2500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.064] [INFO ] #@# Current timestep 3050
+[2019-01-28T10:58:03.064] [INFO ] ExpiredPayloadCleanUp for time: 2550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.065] [INFO ] #@# Current timestep 3100
+[2019-01-28T10:58:03.065] [INFO ] ExpiredPayloadCleanUp for time: 2600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.066] [INFO ] #@# Current timestep 3150
+[2019-01-28T10:58:03.066] [INFO ] ExpiredPayloadCleanUp for time: 2650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.067] [INFO ] #@# Current timestep 3200
+[2019-01-28T10:58:03.067] [INFO ] ExpiredPayloadCleanUp for time: 2700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.067] [INFO ] #@# Current timestep 3250
+[2019-01-28T10:58:03.067] [INFO ] ExpiredPayloadCleanUp for time: 2750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.068] [INFO ] #@# Current timestep 3300
+[2019-01-28T10:58:03.068] [INFO ] ExpiredPayloadCleanUp for time: 2800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.069] [INFO ] #@# Current timestep 3350
+[2019-01-28T10:58:03.069] [INFO ] ExpiredPayloadCleanUp for time: 2850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.070] [INFO ] #@# Current timestep 3400
+[2019-01-28T10:58:03.070] [INFO ] ExpiredPayloadCleanUp for time: 2900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.071] [INFO ] #@# Current timestep 3450
+[2019-01-28T10:58:03.071] [INFO ] ExpiredPayloadCleanUp for time: 2950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.072] [INFO ] #@# Current timestep 3500
+[2019-01-28T10:58:03.072] [INFO ] ExpiredPayloadCleanUp for time: 3000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.073] [INFO ] #@# Current timestep 3550
+[2019-01-28T10:58:03.073] [INFO ] ExpiredPayloadCleanUp for time: 3050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.074] [INFO ] #@# Current timestep 3600
+[2019-01-28T10:58:03.074] [INFO ] ExpiredPayloadCleanUp for time: 3100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.074] [INFO ] #@# Current timestep 3650
+[2019-01-28T10:58:03.074] [INFO ] ExpiredPayloadCleanUp for time: 3150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.075] [INFO ] #@# Current timestep 3700
+[2019-01-28T10:58:03.075] [INFO ] ExpiredPayloadCleanUp for time: 3200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.076] [INFO ] #@# Current timestep 3750
+[2019-01-28T10:58:03.076] [INFO ] ExpiredPayloadCleanUp for time: 3250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.077] [INFO ] #@# Current timestep 3800
+[2019-01-28T10:58:03.077] [INFO ] ExpiredPayloadCleanUp for time: 3300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.078] [INFO ] #@# Current timestep 3850
+[2019-01-28T10:58:03.078] [INFO ] ExpiredPayloadCleanUp for time: 3350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.078] [INFO ] #@# Current timestep 3900
+[2019-01-28T10:58:03.078] [INFO ] ExpiredPayloadCleanUp for time: 3400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.079] [INFO ] #@# Current timestep 3950
+[2019-01-28T10:58:03.079] [INFO ] ExpiredPayloadCleanUp for time: 3450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.081] [INFO ] #@# Current timestep 4000
+[2019-01-28T10:58:03.081] [INFO ] ExpiredPayloadCleanUp for time: 3500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.082] [INFO ] #@# Current timestep 4050
+[2019-01-28T10:58:03.082] [INFO ] ExpiredPayloadCleanUp for time: 3550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.083] [INFO ] #@# Current timestep 4100
+[2019-01-28T10:58:03.083] [INFO ] ExpiredPayloadCleanUp for time: 3600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.084] [INFO ] #@# Current timestep 4150
+[2019-01-28T10:58:03.084] [INFO ] ExpiredPayloadCleanUp for time: 3650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.085] [INFO ] #@# Current timestep 4200
+[2019-01-28T10:58:03.085] [INFO ] ExpiredPayloadCleanUp for time: 3700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.086] [INFO ] #@# Current timestep 4250
+[2019-01-28T10:58:03.086] [INFO ] ExpiredPayloadCleanUp for time: 3750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.087] [INFO ] #@# Current timestep 4300
+[2019-01-28T10:58:03.087] [INFO ] ExpiredPayloadCleanUp for time: 3800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.087] [INFO ] #@# Current timestep 4350
+[2019-01-28T10:58:03.087] [INFO ] ExpiredPayloadCleanUp for time: 3850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.088] [INFO ] #@# Current timestep 4400
+[2019-01-28T10:58:03.088] [INFO ] ExpiredPayloadCleanUp for time: 3900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.089] [INFO ] #@# Current timestep 4450
+[2019-01-28T10:58:03.089] [INFO ] ExpiredPayloadCleanUp for time: 3950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.090] [INFO ] #@# Current timestep 4500
+[2019-01-28T10:58:03.090] [INFO ] ExpiredPayloadCleanUp for time: 4000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.091] [INFO ] #@# Current timestep 4550
+[2019-01-28T10:58:03.091] [INFO ] ExpiredPayloadCleanUp for time: 4050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.091] [INFO ] #@# Current timestep 4600
+[2019-01-28T10:58:03.091] [INFO ] ExpiredPayloadCleanUp for time: 4100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.092] [INFO ] #@# Current timestep 4650
+[2019-01-28T10:58:03.092] [INFO ] ExpiredPayloadCleanUp for time: 4150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.093] [INFO ] #@# Current timestep 4700
+[2019-01-28T10:58:03.093] [INFO ] ExpiredPayloadCleanUp for time: 4200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.094] [INFO ] #@# Current timestep 4750
+[2019-01-28T10:58:03.094] [INFO ] ExpiredPayloadCleanUp for time: 4250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.095] [INFO ] #@# Current timestep 4800
+[2019-01-28T10:58:03.095] [INFO ] ExpiredPayloadCleanUp for time: 4300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.096] [INFO ] #@# Current timestep 4850
+[2019-01-28T10:58:03.096] [INFO ] ExpiredPayloadCleanUp for time: 4350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.096] [INFO ] #@# Current timestep 4900
+[2019-01-28T10:58:03.096] [INFO ] ExpiredPayloadCleanUp for time: 4400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.097] [INFO ] #@# Current timestep 4950
+[2019-01-28T10:58:03.097] [INFO ] ExpiredPayloadCleanUp for time: 4450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.099] [INFO ] #@# Current timestep 5000
+[2019-01-28T10:58:03.099] [INFO ] ExpiredPayloadCleanUp for time: 4500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.101] [INFO ] #@# Current timestep 5050
+[2019-01-28T10:58:03.101] [INFO ] ExpiredPayloadCleanUp for time: 4550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.102] [INFO ] #@# Current timestep 5100
+[2019-01-28T10:58:03.102] [INFO ] ExpiredPayloadCleanUp for time: 4600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.102] [INFO ] [Node 5000] added subscription 1 type 0x46
+[2019-01-28T10:58:03.103] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.103] [INFO ] #@# Current timestep 5150
+[2019-01-28T10:58:03.103] [INFO ] ExpiredPayloadCleanUp for time: 4650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.104] [INFO ] [Node 5000] added subscription 2 type 0x46
+[2019-01-28T10:58:03.104] [INFO ] [Node 5000] removed subscription 1
+[2019-01-28T10:58:03.105] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.105] [INFO ] #@# Current timestep 5200
+[2019-01-28T10:58:03.105] [INFO ] ExpiredPayloadCleanUp for time: 4700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.106] [INFO ] [Node 5000] added subscription 3 type 0x46
+[2019-01-28T10:58:03.106] [INFO ] [Node 5000] removed subscription 2
+[2019-01-28T10:58:03.106] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.111] [INFO ] #@# Current timestep 5250
+[2019-01-28T10:58:03.111] [INFO ] ExpiredPayloadCleanUp for time: 4750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.111] [INFO ] [Node 5000] added subscription 4 type 0x46
+[2019-01-28T10:58:03.112] [INFO ] [Node 5000] removed subscription 3
+[2019-01-28T10:58:03.112] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.113] [INFO ] #@# Current timestep 5300
+[2019-01-28T10:58:03.113] [INFO ] ExpiredPayloadCleanUp for time: 4800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.113] [INFO ] [Node 5000] added subscription 5 type 0x46
+[2019-01-28T10:58:03.114] [INFO ] [Node 5000] removed subscription 4
+[2019-01-28T10:58:03.114] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.115] [INFO ] #@# Current timestep 5350
+[2019-01-28T10:58:03.115] [INFO ] ExpiredPayloadCleanUp for time: 4850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.115] [INFO ] [Node 5000] added subscription 6 type 0x46
+[2019-01-28T10:58:03.116] [INFO ] [Node 5000] removed subscription 5
+[2019-01-28T10:58:03.116] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.117] [INFO ] #@# Current timestep 5400
+[2019-01-28T10:58:03.117] [INFO ] ExpiredPayloadCleanUp for time: 4900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.117] [INFO ] [Node 5000] added subscription 7 type 0x46
+[2019-01-28T10:58:03.117] [INFO ] [Node 5000] removed subscription 6
+[2019-01-28T10:58:03.118] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.118] [INFO ] #@# Current timestep 5450
+[2019-01-28T10:58:03.118] [INFO ] ExpiredPayloadCleanUp for time: 4950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.119] [INFO ] [Node 5000] added subscription 8 type 0x46
+[2019-01-28T10:58:03.119] [INFO ] [Node 5000] removed subscription 7
+[2019-01-28T10:58:03.119] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.120] [INFO ] #@# Current timestep 5500
+[2019-01-28T10:58:03.120] [INFO ] ExpiredPayloadCleanUp for time: 5000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.121] [INFO ] [Node 5000] added subscription 9 type 0x46
+[2019-01-28T10:58:03.121] [INFO ] [Node 5000] removed subscription 8
+[2019-01-28T10:58:03.121] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.122] [INFO ] #@# Current timestep 5550
+[2019-01-28T10:58:03.122] [INFO ] ExpiredPayloadCleanUp for time: 5050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.122] [INFO ] [Node 5000] added subscription 10 type 0x46
+[2019-01-28T10:58:03.123] [INFO ] [Node 5000] removed subscription 9
+[2019-01-28T10:58:03.123] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.123] [INFO ] #@# Current timestep 5600
+[2019-01-28T10:58:03.123] [INFO ] ExpiredPayloadCleanUp for time: 5100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.124] [INFO ] [Node 5000] added subscription 11 type 0x46
+[2019-01-28T10:58:03.124] [INFO ] [Node 5000] removed subscription 10
+[2019-01-28T10:58:03.125] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.125] [INFO ] #@# Current timestep 5650
+[2019-01-28T10:58:03.125] [INFO ] ExpiredPayloadCleanUp for time: 5150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.125] [INFO ] [Node 5000] added subscription 12 type 0x46
+[2019-01-28T10:58:03.126] [INFO ] [Node 5000] removed subscription 11
+[2019-01-28T10:58:03.126] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.127] [INFO ] #@# Current timestep 5700
+[2019-01-28T10:58:03.127] [INFO ] ExpiredPayloadCleanUp for time: 5200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.127] [INFO ] [Node 5000] added subscription 13 type 0x46
+[2019-01-28T10:58:03.128] [INFO ] [Node 5000] removed subscription 12
+[2019-01-28T10:58:03.128] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.129] [INFO ] #@# Current timestep 5750
+[2019-01-28T10:58:03.129] [INFO ] ExpiredPayloadCleanUp for time: 5250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.129] [INFO ] [Node 5000] added subscription 14 type 0x46
+[2019-01-28T10:58:03.129] [INFO ] [Node 5000] removed subscription 13
+[2019-01-28T10:58:03.130] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.130] [INFO ] #@# Current timestep 5800
+[2019-01-28T10:58:03.131] [INFO ] ExpiredPayloadCleanUp for time: 5300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.131] [INFO ] [Node 5000] added subscription 15 type 0x46
+[2019-01-28T10:58:03.131] [INFO ] [Node 5000] removed subscription 14
+[2019-01-28T10:58:03.132] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.132] [INFO ] #@# Current timestep 5850
+[2019-01-28T10:58:03.132] [INFO ] ExpiredPayloadCleanUp for time: 5350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.133] [INFO ] [Node 5000] added subscription 16 type 0x46
+[2019-01-28T10:58:03.133] [INFO ] [Node 5000] removed subscription 15
+[2019-01-28T10:58:03.134] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.134] [INFO ] #@# Current timestep 5900
+[2019-01-28T10:58:03.134] [INFO ] ExpiredPayloadCleanUp for time: 5400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.135] [INFO ] [Node 5000] added subscription 17 type 0x46
+[2019-01-28T10:58:03.135] [INFO ] [Node 5000] removed subscription 16
+[2019-01-28T10:58:03.135] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.136] [INFO ] #@# Current timestep 5950
+[2019-01-28T10:58:03.136] [INFO ] ExpiredPayloadCleanUp for time: 5450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.137] [INFO ] [Node 5000] added subscription 18 type 0x46
+[2019-01-28T10:58:03.137] [INFO ] [Node 5000] removed subscription 17
+[2019-01-28T10:58:03.138] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.140] [INFO ] #@# Current timestep 6000
+[2019-01-28T10:58:03.140] [INFO ] ExpiredPayloadCleanUp for time: 5500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.140] [INFO ] [Node 5000] added subscription 19 type 0x46
+[2019-01-28T10:58:03.141] [INFO ] [Node 5000] removed subscription 18
+[2019-01-28T10:58:03.141] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.142] [INFO ] #@# Current timestep 6050
+[2019-01-28T10:58:03.142] [INFO ] ExpiredPayloadCleanUp for time: 5550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.142] [INFO ] [Node 5000] added subscription 20 type 0x46
+[2019-01-28T10:58:03.143] [INFO ] [Node 5000] removed subscription 19
+[2019-01-28T10:58:03.143] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.144] [INFO ] #@# Current timestep 6100
+[2019-01-28T10:58:03.144] [INFO ] ExpiredPayloadCleanUp for time: 5600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.144] [INFO ] [Node 5000] added subscription 21 type 0x46
+[2019-01-28T10:58:03.145] [INFO ] [Node 5000] removed subscription 20
+[2019-01-28T10:58:03.145] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.146] [INFO ] #@# Current timestep 6150
+[2019-01-28T10:58:03.146] [INFO ] ExpiredPayloadCleanUp for time: 5650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.146] [INFO ] [Node 5000] added subscription 22 type 0x46
+[2019-01-28T10:58:03.146] [INFO ] [Node 5000] removed subscription 21
+[2019-01-28T10:58:03.147] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.147] [INFO ] #@# Current timestep 6200
+[2019-01-28T10:58:03.147] [INFO ] ExpiredPayloadCleanUp for time: 5700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.148] [INFO ] [Node 5000] added subscription 23 type 0x46
+[2019-01-28T10:58:03.148] [INFO ] [Node 5000] removed subscription 22
+[2019-01-28T10:58:03.148] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.149] [INFO ] #@# Current timestep 6250
+[2019-01-28T10:58:03.149] [INFO ] ExpiredPayloadCleanUp for time: 5750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.149] [INFO ] [Node 5000] added subscription 24 type 0x46
+[2019-01-28T10:58:03.150] [INFO ] [Node 5000] removed subscription 23
+[2019-01-28T10:58:03.150] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.151] [INFO ] #@# Current timestep 6300
+[2019-01-28T10:58:03.151] [INFO ] ExpiredPayloadCleanUp for time: 5800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.151] [INFO ] [Node 5000] added subscription 25 type 0x46
+[2019-01-28T10:58:03.151] [INFO ] [Node 5000] removed subscription 24
+[2019-01-28T10:58:03.152] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.152] [INFO ] #@# Current timestep 6350
+[2019-01-28T10:58:03.152] [INFO ] ExpiredPayloadCleanUp for time: 5850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.153] [INFO ] [Node 5000] added subscription 26 type 0x46
+[2019-01-28T10:58:03.153] [INFO ] [Node 5000] removed subscription 25
+[2019-01-28T10:58:03.154] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.154] [INFO ] #@# Current timestep 6400
+[2019-01-28T10:58:03.154] [INFO ] ExpiredPayloadCleanUp for time: 5900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.155] [INFO ] [Node 5000] added subscription 27 type 0x46
+[2019-01-28T10:58:03.155] [INFO ] [Node 5000] removed subscription 26
+[2019-01-28T10:58:03.156] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.156] [INFO ] #@# Current timestep 6450
+[2019-01-28T10:58:03.156] [INFO ] ExpiredPayloadCleanUp for time: 5950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.157] [INFO ] [Node 5000] added subscription 28 type 0x46
+[2019-01-28T10:58:03.157] [INFO ] [Node 5000] removed subscription 27
+[2019-01-28T10:58:03.157] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.158] [INFO ] #@# Current timestep 6500
+[2019-01-28T10:58:03.158] [INFO ] ExpiredPayloadCleanUp for time: 6000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.159] [INFO ] [Node 5000] added subscription 29 type 0x46
+[2019-01-28T10:58:03.159] [INFO ] [Node 5000] removed subscription 28
+[2019-01-28T10:58:03.159] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.160] [INFO ] #@# Current timestep 6550
+[2019-01-28T10:58:03.160] [INFO ] ExpiredPayloadCleanUp for time: 6050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.160] [INFO ] [Node 5000] added subscription 30 type 0x46
+[2019-01-28T10:58:03.161] [INFO ] [Node 5000] removed subscription 29
+[2019-01-28T10:58:03.161] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.162] [INFO ] #@# Current timestep 6600
+[2019-01-28T10:58:03.162] [INFO ] ExpiredPayloadCleanUp for time: 6100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.162] [INFO ] [Node 5000] added subscription 31 type 0x46
+[2019-01-28T10:58:03.163] [INFO ] [Node 5000] removed subscription 30
+[2019-01-28T10:58:03.163] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.164] [INFO ] #@# Current timestep 6650
+[2019-01-28T10:58:03.164] [INFO ] ExpiredPayloadCleanUp for time: 6150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.164] [INFO ] [Node 5000] added subscription 32 type 0x46
+[2019-01-28T10:58:03.165] [INFO ] [Node 5000] removed subscription 31
+[2019-01-28T10:58:03.165] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.166] [INFO ] #@# Current timestep 6700
+[2019-01-28T10:58:03.166] [INFO ] ExpiredPayloadCleanUp for time: 6200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.166] [INFO ] [Node 5000] added subscription 33 type 0x46
+[2019-01-28T10:58:03.167] [INFO ] [Node 5000] removed subscription 32
+[2019-01-28T10:58:03.167] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.168] [INFO ] #@# Current timestep 6750
+[2019-01-28T10:58:03.168] [INFO ] ExpiredPayloadCleanUp for time: 6250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.168] [INFO ] [Node 5000] added subscription 34 type 0x46
+[2019-01-28T10:58:03.169] [INFO ] [Node 5000] removed subscription 33
+[2019-01-28T10:58:03.169] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.170] [INFO ] #@# Current timestep 6800
+[2019-01-28T10:58:03.170] [INFO ] ExpiredPayloadCleanUp for time: 6300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.170] [INFO ] [Node 5000] added subscription 35 type 0x46
+[2019-01-28T10:58:03.170] [INFO ] [Node 5000] removed subscription 34
+[2019-01-28T10:58:03.171] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.171] [INFO ] #@# Current timestep 6850
+[2019-01-28T10:58:03.171] [INFO ] ExpiredPayloadCleanUp for time: 6350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.172] [INFO ] [Node 5000] added subscription 36 type 0x46
+[2019-01-28T10:58:03.172] [INFO ] [Node 5000] removed subscription 35
+[2019-01-28T10:58:03.173] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.173] [INFO ] #@# Current timestep 6900
+[2019-01-28T10:58:03.173] [INFO ] ExpiredPayloadCleanUp for time: 6400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.174] [INFO ] [Node 5000] added subscription 37 type 0x46
+[2019-01-28T10:58:03.174] [INFO ] [Node 5000] removed subscription 36
+[2019-01-28T10:58:03.174] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.175] [INFO ] #@# Current timestep 6950
+[2019-01-28T10:58:03.175] [INFO ] ExpiredPayloadCleanUp for time: 6450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.176] [INFO ] [Node 5000] added subscription 38 type 0x46
+[2019-01-28T10:58:03.176] [INFO ] [Node 5000] removed subscription 37
+[2019-01-28T10:58:03.176] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.179] [INFO ] #@# Current timestep 7000
+[2019-01-28T10:58:03.179] [INFO ] ExpiredPayloadCleanUp for time: 6500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.179] [INFO ] [Node 5000] added subscription 39 type 0x46
+[2019-01-28T10:58:03.179] [INFO ] [Node 5000] removed subscription 38
+[2019-01-28T10:58:03.180] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.181] [INFO ] #@# Current timestep 7050
+[2019-01-28T10:58:03.181] [INFO ] ExpiredPayloadCleanUp for time: 6550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.181] [INFO ] [Node 5000] added subscription 40 type 0x46
+[2019-01-28T10:58:03.182] [INFO ] [Node 5000] removed subscription 39
+[2019-01-28T10:58:03.182] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.183] [INFO ] #@# Current timestep 7100
+[2019-01-28T10:58:03.183] [INFO ] ExpiredPayloadCleanUp for time: 6600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.183] [INFO ] [Node 5000] added subscription 41 type 0x46
+[2019-01-28T10:58:03.183] [INFO ] [Node 5000] removed subscription 40
+[2019-01-28T10:58:03.184] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.184] [INFO ] #@# Current timestep 7150
+[2019-01-28T10:58:03.184] [INFO ] ExpiredPayloadCleanUp for time: 6650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.185] [INFO ] [Node 5000] added subscription 42 type 0x46
+[2019-01-28T10:58:03.185] [INFO ] [Node 5000] removed subscription 41
+[2019-01-28T10:58:03.186] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.187] [INFO ] #@# Current timestep 7200
+[2019-01-28T10:58:03.187] [INFO ] ExpiredPayloadCleanUp for time: 6700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.187] [INFO ] [Node 5000] added subscription 43 type 0x46
+[2019-01-28T10:58:03.188] [INFO ] [Node 5000] removed subscription 42
+[2019-01-28T10:58:03.188] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.189] [INFO ] #@# Current timestep 7250
+[2019-01-28T10:58:03.189] [INFO ] ExpiredPayloadCleanUp for time: 6750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.189] [INFO ] [Node 5000] added subscription 44 type 0x46
+[2019-01-28T10:58:03.190] [INFO ] [Node 5000] removed subscription 43
+[2019-01-28T10:58:03.190] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.191] [INFO ] #@# Current timestep 7300
+[2019-01-28T10:58:03.191] [INFO ] ExpiredPayloadCleanUp for time: 6800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.191] [INFO ] [Node 5000] added subscription 45 type 0x46
+[2019-01-28T10:58:03.191] [INFO ] [Node 5000] removed subscription 44
+[2019-01-28T10:58:03.192] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.192] [INFO ] #@# Current timestep 7350
+[2019-01-28T10:58:03.192] [INFO ] ExpiredPayloadCleanUp for time: 6850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.193] [INFO ] [Node 5000] added subscription 46 type 0x46
+[2019-01-28T10:58:03.193] [INFO ] [Node 5000] removed subscription 45
+[2019-01-28T10:58:03.194] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.194] [INFO ] #@# Current timestep 7400
+[2019-01-28T10:58:03.194] [INFO ] ExpiredPayloadCleanUp for time: 6900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.195] [INFO ] [Node 5000] added subscription 47 type 0x46
+[2019-01-28T10:58:03.195] [INFO ] [Node 5000] removed subscription 46
+[2019-01-28T10:58:03.195] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.196] [INFO ] #@# Current timestep 7450
+[2019-01-28T10:58:03.196] [INFO ] ExpiredPayloadCleanUp for time: 6950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.197] [INFO ] [Node 5000] added subscription 48 type 0x46
+[2019-01-28T10:58:03.197] [INFO ] [Node 5000] removed subscription 47
+[2019-01-28T10:58:03.197] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.198] [INFO ] #@# Current timestep 7500
+[2019-01-28T10:58:03.198] [INFO ] ExpiredPayloadCleanUp for time: 7000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.199] [INFO ] [Node 5000] added subscription 49 type 0x46
+[2019-01-28T10:58:03.199] [INFO ] [Node 5000] removed subscription 48
+[2019-01-28T10:58:03.200] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.200] [INFO ] #@# Current timestep 7550
+[2019-01-28T10:58:03.200] [INFO ] ExpiredPayloadCleanUp for time: 7050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.201] [INFO ] [Node 5000] added subscription 50 type 0x46
+[2019-01-28T10:58:03.201] [INFO ] [Node 5000] removed subscription 49
+[2019-01-28T10:58:03.201] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.202] [INFO ] #@# Current timestep 7600
+[2019-01-28T10:58:03.202] [INFO ] ExpiredPayloadCleanUp for time: 7100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.202] [INFO ] [Node 5000] added subscription 51 type 0x46
+[2019-01-28T10:58:03.203] [INFO ] [Node 5000] removed subscription 50
+[2019-01-28T10:58:03.203] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.204] [INFO ] #@# Current timestep 7650
+[2019-01-28T10:58:03.204] [INFO ] ExpiredPayloadCleanUp for time: 7150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.204] [INFO ] [Node 5000] added subscription 52 type 0x46
+[2019-01-28T10:58:03.205] [INFO ] [Node 5000] removed subscription 51
+[2019-01-28T10:58:03.205] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.206] [INFO ] #@# Current timestep 7700
+[2019-01-28T10:58:03.206] [INFO ] ExpiredPayloadCleanUp for time: 7200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.206] [INFO ] [Node 5000] added subscription 53 type 0x46
+[2019-01-28T10:58:03.207] [INFO ] [Node 5000] removed subscription 52
+[2019-01-28T10:58:03.207] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.208] [INFO ] #@# Current timestep 7750
+[2019-01-28T10:58:03.208] [INFO ] ExpiredPayloadCleanUp for time: 7250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.208] [INFO ] [Node 5000] added subscription 54 type 0x46
+[2019-01-28T10:58:03.209] [INFO ] [Node 5000] removed subscription 53
+[2019-01-28T10:58:03.209] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.210] [INFO ] #@# Current timestep 7800
+[2019-01-28T10:58:03.210] [INFO ] ExpiredPayloadCleanUp for time: 7300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.210] [INFO ] [Node 5000] added subscription 55 type 0x46
+[2019-01-28T10:58:03.211] [INFO ] [Node 5000] removed subscription 54
+[2019-01-28T10:58:03.211] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.212] [INFO ] #@# Current timestep 7850
+[2019-01-28T10:58:03.212] [INFO ] ExpiredPayloadCleanUp for time: 7350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.212] [INFO ] [Node 5000] added subscription 56 type 0x46
+[2019-01-28T10:58:03.213] [INFO ] [Node 5000] removed subscription 55
+[2019-01-28T10:58:03.213] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.214] [INFO ] #@# Current timestep 7900
+[2019-01-28T10:58:03.214] [INFO ] ExpiredPayloadCleanUp for time: 7400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.214] [INFO ] [Node 5000] added subscription 57 type 0x46
+[2019-01-28T10:58:03.214] [INFO ] [Node 5000] removed subscription 56
+[2019-01-28T10:58:03.215] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.215] [INFO ] #@# Current timestep 7950
+[2019-01-28T10:58:03.215] [INFO ] ExpiredPayloadCleanUp for time: 7450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.216] [INFO ] [Node 5000] added subscription 58 type 0x46
+[2019-01-28T10:58:03.216] [INFO ] [Node 5000] removed subscription 57
+[2019-01-28T10:58:03.217] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.219] [INFO ] #@# Current timestep 8000
+[2019-01-28T10:58:03.219] [INFO ] ExpiredPayloadCleanUp for time: 7500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.219] [INFO ] [Node 5000] added subscription 59 type 0x46
+[2019-01-28T10:58:03.220] [INFO ] [Node 5000] removed subscription 58
+[2019-01-28T10:58:03.220] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.221] [INFO ] #@# Current timestep 8050
+[2019-01-28T10:58:03.221] [INFO ] ExpiredPayloadCleanUp for time: 7550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.221] [INFO ] [Node 5000] added subscription 60 type 0x46
+[2019-01-28T10:58:03.222] [INFO ] [Node 5000] added subscription 61 type 0x46
+[2019-01-28T10:58:03.222] [INFO ] [Node 5000] added subscription 62 type 0x46
+[2019-01-28T10:58:03.222] [INFO ] [Node 5000] added subscription 63 type 0x46
+[2019-01-28T10:58:03.223] [INFO ] [Node 5000] removed subscription 59
+[2019-01-28T10:58:03.224] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.224] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.224] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.224] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.225] [INFO ] #@# Current timestep 8100
+[2019-01-28T10:58:03.225] [INFO ] ExpiredPayloadCleanUp for time: 7600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.225] [INFO ] [Node 5000] added subscription 64 type 0x46
+[2019-01-28T10:58:03.226] [INFO ] [Node 5000] added subscription 65 type 0x46
+[2019-01-28T10:58:03.226] [INFO ] [Node 5000] added subscription 66 type 0x46
+[2019-01-28T10:58:03.226] [INFO ] [Node 5000] added subscription 67 type 0x46
+[2019-01-28T10:58:03.227] [INFO ] [Node 5000] removed subscription 60
+[2019-01-28T10:58:03.227] [INFO ] [Node 5000] removed subscription 61
+[2019-01-28T10:58:03.227] [INFO ] [Node 5000] removed subscription 62
+[2019-01-28T10:58:03.227] [INFO ] [Node 5000] removed subscription 63
+[2019-01-28T10:58:03.228] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.228] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.229] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.229] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.229] [INFO ] #@# Current timestep 8150
+[2019-01-28T10:58:03.229] [INFO ] ExpiredPayloadCleanUp for time: 7650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.230] [INFO ] [Node 5000] added subscription 68 type 0x46
+[2019-01-28T10:58:03.230] [INFO ] [Node 5000] added subscription 69 type 0x46
+[2019-01-28T10:58:03.231] [INFO ] [Node 5000] added subscription 70 type 0x46
+[2019-01-28T10:58:03.231] [INFO ] [Node 5000] added subscription 71 type 0x46
+[2019-01-28T10:58:03.231] [INFO ] [Node 5000] removed subscription 64
+[2019-01-28T10:58:03.232] [INFO ] [Node 5000] removed subscription 65
+[2019-01-28T10:58:03.232] [INFO ] [Node 5000] removed subscription 66
+[2019-01-28T10:58:03.232] [INFO ] [Node 5000] removed subscription 67
+[2019-01-28T10:58:03.233] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.233] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.233] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.233] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.234] [INFO ] #@# Current timestep 8200
+[2019-01-28T10:58:03.234] [INFO ] ExpiredPayloadCleanUp for time: 7700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.234] [INFO ] [Node 5000] added subscription 72 type 0x46
+[2019-01-28T10:58:03.235] [INFO ] [Node 5000] added subscription 73 type 0x46
+[2019-01-28T10:58:03.235] [INFO ] [Node 5000] added subscription 74 type 0x46
+[2019-01-28T10:58:03.235] [INFO ] [Node 5000] added subscription 75 type 0x46
+[2019-01-28T10:58:03.236] [INFO ] [Node 5000] removed subscription 68
+[2019-01-28T10:58:03.236] [INFO ] [Node 5000] removed subscription 69
+[2019-01-28T10:58:03.236] [INFO ] [Node 5000] removed subscription 70
+[2019-01-28T10:58:03.236] [INFO ] [Node 5000] removed subscription 71
+[2019-01-28T10:58:03.237] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.237] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.238] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.238] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.238] [INFO ] #@# Current timestep 8250
+[2019-01-28T10:58:03.238] [INFO ] ExpiredPayloadCleanUp for time: 7750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.239] [INFO ] [Node 5000] added subscription 76 type 0x46
+[2019-01-28T10:58:03.239] [INFO ] [Node 5000] added subscription 77 type 0x46
+[2019-01-28T10:58:03.240] [INFO ] [Node 5000] added subscription 78 type 0x46
+[2019-01-28T10:58:03.240] [INFO ] [Node 5000] added subscription 79 type 0x46
+[2019-01-28T10:58:03.240] [INFO ] [Node 5000] removed subscription 72
+[2019-01-28T10:58:03.241] [INFO ] [Node 5000] removed subscription 73
+[2019-01-28T10:58:03.241] [INFO ] [Node 5000] removed subscription 74
+[2019-01-28T10:58:03.241] [INFO ] [Node 5000] removed subscription 75
+[2019-01-28T10:58:03.242] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.242] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.242] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.242] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.243] [INFO ] #@# Current timestep 8300
+[2019-01-28T10:58:03.243] [INFO ] ExpiredPayloadCleanUp for time: 7800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.243] [INFO ] [Node 5000] added subscription 80 type 0x46
+[2019-01-28T10:58:03.244] [INFO ] [Node 5000] added subscription 81 type 0x46
+[2019-01-28T10:58:03.244] [INFO ] [Node 5000] added subscription 82 type 0x46
+[2019-01-28T10:58:03.244] [INFO ] [Node 5000] added subscription 83 type 0x46
+[2019-01-28T10:58:03.245] [INFO ] [Node 5000] removed subscription 76
+[2019-01-28T10:58:03.245] [INFO ] [Node 5000] removed subscription 77
+[2019-01-28T10:58:03.245] [INFO ] [Node 5000] removed subscription 78
+[2019-01-28T10:58:03.245] [INFO ] [Node 5000] removed subscription 79
+[2019-01-28T10:58:03.246] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.246] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.247] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.247] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.248] [INFO ] #@# Current timestep 8350
+[2019-01-28T10:58:03.248] [INFO ] ExpiredPayloadCleanUp for time: 7850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.248] [INFO ] [Node 5000] added subscription 84 type 0x46
+[2019-01-28T10:58:03.248] [INFO ] [Node 5000] added subscription 85 type 0x46
+[2019-01-28T10:58:03.249] [INFO ] [Node 5000] added subscription 86 type 0x46
+[2019-01-28T10:58:03.249] [INFO ] [Node 5000] added subscription 87 type 0x46
+[2019-01-28T10:58:03.249] [INFO ] [Node 5000] removed subscription 80
+[2019-01-28T10:58:03.250] [INFO ] [Node 5000] removed subscription 81
+[2019-01-28T10:58:03.250] [INFO ] [Node 5000] removed subscription 82
+[2019-01-28T10:58:03.250] [INFO ] [Node 5000] removed subscription 83
+[2019-01-28T10:58:03.251] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.251] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.251] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.251] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.252] [INFO ] #@# Current timestep 8400
+[2019-01-28T10:58:03.252] [INFO ] ExpiredPayloadCleanUp for time: 7900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.253] [INFO ] [Node 5000] added subscription 88 type 0x46
+[2019-01-28T10:58:03.253] [INFO ] [Node 5000] added subscription 89 type 0x46
+[2019-01-28T10:58:03.253] [INFO ] [Node 5000] added subscription 90 type 0x46
+[2019-01-28T10:58:03.254] [INFO ] [Node 5000] added subscription 91 type 0x46
+[2019-01-28T10:58:03.254] [INFO ] [Node 5000] removed subscription 84
+[2019-01-28T10:58:03.254] [INFO ] [Node 5000] removed subscription 85
+[2019-01-28T10:58:03.254] [INFO ] [Node 5000] removed subscription 86
+[2019-01-28T10:58:03.255] [INFO ] [Node 5000] removed subscription 87
+[2019-01-28T10:58:03.255] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.256] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.256] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.256] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.257] [INFO ] #@# Current timestep 8450
+[2019-01-28T10:58:03.257] [INFO ] ExpiredPayloadCleanUp for time: 7950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.257] [INFO ] [Node 5000] added subscription 92 type 0x46
+[2019-01-28T10:58:03.257] [INFO ] [Node 5000] added subscription 93 type 0x46
+[2019-01-28T10:58:03.258] [INFO ] [Node 5000] added subscription 94 type 0x46
+[2019-01-28T10:58:03.258] [INFO ] [Node 5000] added subscription 95 type 0x46
+[2019-01-28T10:58:03.259] [INFO ] [Node 5000] removed subscription 88
+[2019-01-28T10:58:03.259] [INFO ] [Node 5000] removed subscription 89
+[2019-01-28T10:58:03.259] [INFO ] [Node 5000] removed subscription 90
+[2019-01-28T10:58:03.259] [INFO ] [Node 5000] removed subscription 91
+[2019-01-28T10:58:03.260] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.260] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.260] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.260] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.261] [INFO ] #@# Current timestep 8500
+[2019-01-28T10:58:03.261] [INFO ] ExpiredPayloadCleanUp for time: 8000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.262] [INFO ] [Node 5000] added subscription 96 type 0x46
+[2019-01-28T10:58:03.262] [INFO ] [Node 5000] added subscription 97 type 0x46
+[2019-01-28T10:58:03.262] [INFO ] [Node 5000] added subscription 98 type 0x46
+[2019-01-28T10:58:03.263] [INFO ] [Node 5000] added subscription 99 type 0x46
+[2019-01-28T10:58:03.263] [INFO ] [Node 5000] removed subscription 92
+[2019-01-28T10:58:03.263] [INFO ] [Node 5000] removed subscription 93
+[2019-01-28T10:58:03.263] [INFO ] [Node 5000] removed subscription 94
+[2019-01-28T10:58:03.264] [INFO ] [Node 5000] removed subscription 95
+[2019-01-28T10:58:03.264] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.265] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.265] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.265] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.266] [INFO ] #@# Current timestep 8550
+[2019-01-28T10:58:03.266] [INFO ] ExpiredPayloadCleanUp for time: 8050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.266] [INFO ] [Node 5000] added subscription 100 type 0x46
+[2019-01-28T10:58:03.266] [INFO ] [Node 5000] added subscription 101 type 0x46
+[2019-01-28T10:58:03.267] [INFO ] [Node 5000] added subscription 102 type 0x46
+[2019-01-28T10:58:03.267] [INFO ] [Node 5000] added subscription 103 type 0x46
+[2019-01-28T10:58:03.268] [INFO ] [Node 5000] removed subscription 96
+[2019-01-28T10:58:03.268] [INFO ] [Node 5000] removed subscription 97
+[2019-01-28T10:58:03.268] [INFO ] [Node 5000] removed subscription 98
+[2019-01-28T10:58:03.268] [INFO ] [Node 5000] removed subscription 99
+[2019-01-28T10:58:03.269] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.269] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.269] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.269] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.270] [INFO ] #@# Current timestep 8600
+[2019-01-28T10:58:03.270] [INFO ] ExpiredPayloadCleanUp for time: 8100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.270] [INFO ] [Node 5000] added subscription 104 type 0x46
+[2019-01-28T10:58:03.271] [INFO ] [Node 5000] added subscription 105 type 0x46
+[2019-01-28T10:58:03.271] [INFO ] [Node 5000] added subscription 106 type 0x46
+[2019-01-28T10:58:03.271] [INFO ] [Node 5000] added subscription 107 type 0x46
+[2019-01-28T10:58:03.272] [INFO ] [Node 5000] removed subscription 100
+[2019-01-28T10:58:03.272] [INFO ] [Node 5000] removed subscription 101
+[2019-01-28T10:58:03.272] [INFO ] [Node 5000] removed subscription 102
+[2019-01-28T10:58:03.272] [INFO ] [Node 5000] removed subscription 103
+[2019-01-28T10:58:03.273] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.273] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.274] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.274] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.275] [INFO ] #@# Current timestep 8650
+[2019-01-28T10:58:03.275] [INFO ] ExpiredPayloadCleanUp for time: 8150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.275] [INFO ] [Node 5000] added subscription 108 type 0x46
+[2019-01-28T10:58:03.275] [INFO ] [Node 5000] added subscription 109 type 0x46
+[2019-01-28T10:58:03.276] [INFO ] [Node 5000] added subscription 110 type 0x46
+[2019-01-28T10:58:03.276] [INFO ] [Node 5000] added subscription 111 type 0x46
+[2019-01-28T10:58:03.276] [INFO ] [Node 5000] removed subscription 104
+[2019-01-28T10:58:03.277] [INFO ] [Node 5000] removed subscription 105
+[2019-01-28T10:58:03.277] [INFO ] [Node 5000] removed subscription 106
+[2019-01-28T10:58:03.277] [INFO ] [Node 5000] removed subscription 107
+[2019-01-28T10:58:03.278] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.278] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.278] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.278] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.279] [INFO ] #@# Current timestep 8700
+[2019-01-28T10:58:03.279] [INFO ] ExpiredPayloadCleanUp for time: 8200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.279] [INFO ] [Node 5000] added subscription 112 type 0x46
+[2019-01-28T10:58:03.280] [INFO ] [Node 5000] added subscription 113 type 0x46
+[2019-01-28T10:58:03.280] [INFO ] [Node 5000] added subscription 114 type 0x46
+[2019-01-28T10:58:03.280] [INFO ] [Node 5000] added subscription 115 type 0x46
+[2019-01-28T10:58:03.281] [INFO ] [Node 5000] removed subscription 108
+[2019-01-28T10:58:03.281] [INFO ] [Node 5000] removed subscription 109
+[2019-01-28T10:58:03.281] [INFO ] [Node 5000] removed subscription 110
+[2019-01-28T10:58:03.281] [INFO ] [Node 5000] removed subscription 111
+[2019-01-28T10:58:03.282] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.282] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.283] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.283] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.283] [INFO ] #@# Current timestep 8750
+[2019-01-28T10:58:03.283] [INFO ] ExpiredPayloadCleanUp for time: 8250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.284] [INFO ] [Node 5000] added subscription 116 type 0x46
+[2019-01-28T10:58:03.284] [INFO ] [Node 5000] added subscription 117 type 0x46
+[2019-01-28T10:58:03.285] [INFO ] [Node 5000] added subscription 118 type 0x46
+[2019-01-28T10:58:03.285] [INFO ] [Node 5000] added subscription 119 type 0x46
+[2019-01-28T10:58:03.285] [INFO ] [Node 5000] removed subscription 112
+[2019-01-28T10:58:03.286] [INFO ] [Node 5000] removed subscription 113
+[2019-01-28T10:58:03.286] [INFO ] [Node 5000] removed subscription 114
+[2019-01-28T10:58:03.286] [INFO ] [Node 5000] removed subscription 115
+[2019-01-28T10:58:03.287] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.287] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.287] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.287] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.288] [INFO ] #@# Current timestep 8800
+[2019-01-28T10:58:03.288] [INFO ] ExpiredPayloadCleanUp for time: 8300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.288] [INFO ] [Node 5000] added subscription 120 type 0x46
+[2019-01-28T10:58:03.289] [INFO ] [Node 5000] added subscription 121 type 0x46
+[2019-01-28T10:58:03.289] [INFO ] [Node 5000] added subscription 122 type 0x46
+[2019-01-28T10:58:03.289] [INFO ] [Node 5000] added subscription 123 type 0x46
+[2019-01-28T10:58:03.290] [INFO ] [Node 5000] removed subscription 116
+[2019-01-28T10:58:03.290] [INFO ] [Node 5000] removed subscription 117
+[2019-01-28T10:58:03.290] [INFO ] [Node 5000] removed subscription 118
+[2019-01-28T10:58:03.290] [INFO ] [Node 5000] removed subscription 119
+[2019-01-28T10:58:03.291] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.291] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.291] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.292] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.292] [INFO ] #@# Current timestep 8850
+[2019-01-28T10:58:03.292] [INFO ] ExpiredPayloadCleanUp for time: 8350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.293] [INFO ] [Node 5000] added subscription 124 type 0x46
+[2019-01-28T10:58:03.293] [INFO ] [Node 5000] added subscription 125 type 0x46
+[2019-01-28T10:58:03.293] [INFO ] [Node 5000] added subscription 126 type 0x46
+[2019-01-28T10:58:03.294] [INFO ] [Node 5000] added subscription 127 type 0x46
+[2019-01-28T10:58:03.294] [INFO ] [Node 5000] removed subscription 120
+[2019-01-28T10:58:03.294] [INFO ] [Node 5000] removed subscription 121
+[2019-01-28T10:58:03.294] [INFO ] [Node 5000] removed subscription 122
+[2019-01-28T10:58:03.295] [INFO ] [Node 5000] removed subscription 123
+[2019-01-28T10:58:03.295] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.296] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.296] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.296] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.297] [INFO ] #@# Current timestep 8900
+[2019-01-28T10:58:03.297] [INFO ] ExpiredPayloadCleanUp for time: 8400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.297] [INFO ] [Node 5000] added subscription 128 type 0x46
+[2019-01-28T10:58:03.297] [INFO ] [Node 5000] added subscription 129 type 0x46
+[2019-01-28T10:58:03.298] [INFO ] [Node 5000] added subscription 130 type 0x46
+[2019-01-28T10:58:03.298] [INFO ] [Node 5000] added subscription 131 type 0x46
+[2019-01-28T10:58:03.299] [INFO ] [Node 5000] removed subscription 124
+[2019-01-28T10:58:03.299] [INFO ] [Node 5000] removed subscription 125
+[2019-01-28T10:58:03.299] [INFO ] [Node 5000] removed subscription 126
+[2019-01-28T10:58:03.299] [INFO ] [Node 5000] removed subscription 127
+[2019-01-28T10:58:03.300] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.300] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.300] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.300] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.301] [INFO ] #@# Current timestep 8950
+[2019-01-28T10:58:03.301] [INFO ] ExpiredPayloadCleanUp for time: 8450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.302] [INFO ] [Node 5000] added subscription 132 type 0x46
+[2019-01-28T10:58:03.302] [INFO ] [Node 5000] added subscription 133 type 0x46
+[2019-01-28T10:58:03.302] [INFO ] [Node 5000] added subscription 134 type 0x46
+[2019-01-28T10:58:03.303] [INFO ] [Node 5000] added subscription 135 type 0x46
+[2019-01-28T10:58:03.303] [INFO ] [Node 5000] removed subscription 128
+[2019-01-28T10:58:03.303] [INFO ] [Node 5000] removed subscription 129
+[2019-01-28T10:58:03.303] [INFO ] [Node 5000] removed subscription 130
+[2019-01-28T10:58:03.304] [INFO ] [Node 5000] removed subscription 131
+[2019-01-28T10:58:03.304] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.305] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.305] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.305] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.307] [INFO ] #@# Current timestep 9000
+[2019-01-28T10:58:03.307] [INFO ] ExpiredPayloadCleanUp for time: 8500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.308] [INFO ] [Node 5000] added subscription 136 type 0x46
+[2019-01-28T10:58:03.308] [INFO ] [Node 5000] added subscription 137 type 0x46
+[2019-01-28T10:58:03.308] [INFO ] [Node 5000] added subscription 138 type 0x46
+[2019-01-28T10:58:03.308] [INFO ] [Node 5000] added subscription 139 type 0x46
+[2019-01-28T10:58:03.309] [INFO ] [Node 5000] removed subscription 132
+[2019-01-28T10:58:03.309] [INFO ] [Node 5000] removed subscription 133
+[2019-01-28T10:58:03.309] [INFO ] [Node 5000] removed subscription 134
+[2019-01-28T10:58:03.309] [INFO ] [Node 5000] removed subscription 135
+[2019-01-28T10:58:03.310] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.310] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.311] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.311] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.312] [INFO ] #@# Current timestep 9050
+[2019-01-28T10:58:03.312] [INFO ] ExpiredPayloadCleanUp for time: 8550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.312] [INFO ] [Node 5000] added subscription 140 type 0x46
+[2019-01-28T10:58:03.313] [INFO ] [Node 5000] removed subscription 136
+[2019-01-28T10:58:03.313] [INFO ] [Node 5000] removed subscription 137
+[2019-01-28T10:58:03.313] [INFO ] [Node 5000] removed subscription 138
+[2019-01-28T10:58:03.313] [INFO ] [Node 5000] removed subscription 139
+[2019-01-28T10:58:03.313] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.314] [INFO ] #@# Current timestep 9100
+[2019-01-28T10:58:03.314] [INFO ] ExpiredPayloadCleanUp for time: 8600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.314] [INFO ] [Node 5000] added subscription 141 type 0x46
+[2019-01-28T10:58:03.315] [INFO ] [Node 5000] removed subscription 140
+[2019-01-28T10:58:03.315] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.316] [INFO ] #@# Current timestep 9150
+[2019-01-28T10:58:03.316] [INFO ] ExpiredPayloadCleanUp for time: 8650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.316] [INFO ] [Node 5000] added subscription 142 type 0x46
+[2019-01-28T10:58:03.317] [INFO ] [Node 5000] removed subscription 141
+[2019-01-28T10:58:03.317] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.318] [INFO ] #@# Current timestep 9200
+[2019-01-28T10:58:03.318] [INFO ] ExpiredPayloadCleanUp for time: 8700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.318] [INFO ] [Node 5000] added subscription 143 type 0x46
+[2019-01-28T10:58:03.319] [INFO ] [Node 5000] removed subscription 142
+[2019-01-28T10:58:03.319] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.320] [INFO ] #@# Current timestep 9250
+[2019-01-28T10:58:03.320] [INFO ] ExpiredPayloadCleanUp for time: 8750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.320] [INFO ] [Node 5000] added subscription 144 type 0x46
+[2019-01-28T10:58:03.320] [INFO ] [Node 5000] removed subscription 143
+[2019-01-28T10:58:03.321] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.321] [INFO ] #@# Current timestep 9300
+[2019-01-28T10:58:03.322] [INFO ] ExpiredPayloadCleanUp for time: 8800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.322] [INFO ] [Node 5000] added subscription 145 type 0x46
+[2019-01-28T10:58:03.322] [INFO ] [Node 5000] removed subscription 144
+[2019-01-28T10:58:03.323] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.323] [INFO ] #@# Current timestep 9350
+[2019-01-28T10:58:03.323] [INFO ] ExpiredPayloadCleanUp for time: 8850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.324] [INFO ] [Node 5000] added subscription 146 type 0x46
+[2019-01-28T10:58:03.324] [INFO ] [Node 5000] removed subscription 145
+[2019-01-28T10:58:03.325] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.325] [INFO ] #@# Current timestep 9400
+[2019-01-28T10:58:03.325] [INFO ] ExpiredPayloadCleanUp for time: 8900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.326] [INFO ] [Node 5000] added subscription 147 type 0x46
+[2019-01-28T10:58:03.326] [INFO ] [Node 5000] removed subscription 146
+[2019-01-28T10:58:03.326] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.327] [INFO ] #@# Current timestep 9450
+[2019-01-28T10:58:03.327] [INFO ] ExpiredPayloadCleanUp for time: 8950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.327] [INFO ] [Node 5000] added subscription 148 type 0x46
+[2019-01-28T10:58:03.328] [INFO ] [Node 5000] removed subscription 147
+[2019-01-28T10:58:03.328] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.329] [INFO ] #@# Current timestep 9500
+[2019-01-28T10:58:03.329] [INFO ] ExpiredPayloadCleanUp for time: 9000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.329] [INFO ] [Node 5000] added subscription 149 type 0x46
+[2019-01-28T10:58:03.330] [INFO ] [Node 5000] removed subscription 148
+[2019-01-28T10:58:03.330] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.331] [INFO ] #@# Current timestep 9550
+[2019-01-28T10:58:03.331] [INFO ] ExpiredPayloadCleanUp for time: 9050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.331] [INFO ] [Node 5000] added subscription 150 type 0x46
+[2019-01-28T10:58:03.332] [INFO ] [Node 5000] removed subscription 149
+[2019-01-28T10:58:03.332] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.333] [INFO ] #@# Current timestep 9600
+[2019-01-28T10:58:03.333] [INFO ] ExpiredPayloadCleanUp for time: 9100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.333] [INFO ] [Node 5000] added subscription 151 type 0x46
+[2019-01-28T10:58:03.334] [INFO ] [Node 5000] removed subscription 150
+[2019-01-28T10:58:03.334] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.334] [INFO ] #@# Current timestep 9650
+[2019-01-28T10:58:03.335] [INFO ] ExpiredPayloadCleanUp for time: 9150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.335] [INFO ] [Node 5000] added subscription 152 type 0x46
+[2019-01-28T10:58:03.335] [INFO ] [Node 5000] removed subscription 151
+[2019-01-28T10:58:03.336] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.336] [INFO ] #@# Current timestep 9700
+[2019-01-28T10:58:03.336] [INFO ] ExpiredPayloadCleanUp for time: 9200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.337] [INFO ] [Node 5000] added subscription 153 type 0x46
+[2019-01-28T10:58:03.337] [INFO ] [Node 5000] removed subscription 152
+[2019-01-28T10:58:03.338] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.338] [INFO ] #@# Current timestep 9750
+[2019-01-28T10:58:03.338] [INFO ] ExpiredPayloadCleanUp for time: 9250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.339] [INFO ] [Node 5000] added subscription 154 type 0x46
+[2019-01-28T10:58:03.339] [INFO ] [Node 5000] removed subscription 153
+[2019-01-28T10:58:03.339] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.340] [INFO ] #@# Current timestep 9800
+[2019-01-28T10:58:03.340] [INFO ] ExpiredPayloadCleanUp for time: 9300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.341] [INFO ] [Node 5000] added subscription 155 type 0x46
+[2019-01-28T10:58:03.341] [INFO ] [Node 5000] removed subscription 154
+[2019-01-28T10:58:03.341] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.342] [INFO ] #@# Current timestep 9850
+[2019-01-28T10:58:03.342] [INFO ] ExpiredPayloadCleanUp for time: 9350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.342] [INFO ] [Node 5000] added subscription 156 type 0x46
+[2019-01-28T10:58:03.343] [INFO ] [Node 5000] removed subscription 155
+[2019-01-28T10:58:03.343] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.344] [INFO ] #@# Current timestep 9900
+[2019-01-28T10:58:03.344] [INFO ] ExpiredPayloadCleanUp for time: 9400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.344] [INFO ] [Node 5000] added subscription 157 type 0x46
+[2019-01-28T10:58:03.345] [INFO ] [Node 5000] removed subscription 156
+[2019-01-28T10:58:03.345] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.346] [INFO ] #@# Current timestep 9950
+[2019-01-28T10:58:03.346] [INFO ] ExpiredPayloadCleanUp for time: 9450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.346] [INFO ] [Node 5000] added subscription 158 type 0x46
+[2019-01-28T10:58:03.347] [INFO ] [Node 5000] removed subscription 157
+[2019-01-28T10:58:03.347] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.349] [INFO ] #@# Current timestep 10000
+[2019-01-28T10:58:03.349] [INFO ] ExpiredPayloadCleanUp for time: 9500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.349] [INFO ] [Node 5000] added subscription 159 type 0x46
+[2019-01-28T10:58:03.350] [INFO ] [Node 5000] removed subscription 158
+[2019-01-28T10:58:03.350] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.351] [INFO ] #@# Current timestep 10050
+[2019-01-28T10:58:03.351] [INFO ] ExpiredPayloadCleanUp for time: 9550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.351] [INFO ] [Node 5000] added subscription 160 type 0x46
+[2019-01-28T10:58:03.352] [INFO ] [Node 5000] removed subscription 159
+[2019-01-28T10:58:03.352] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.353] [INFO ] #@# Current timestep 10100
+[2019-01-28T10:58:03.353] [INFO ] ExpiredPayloadCleanUp for time: 9600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.353] [INFO ] [Node 5000] added subscription 161 type 0x46
+[2019-01-28T10:58:03.354] [INFO ] [Node 5000] removed subscription 160
+[2019-01-28T10:58:03.354] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.355] [INFO ] #@# Current timestep 10150
+[2019-01-28T10:58:03.355] [INFO ] ExpiredPayloadCleanUp for time: 9650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.355] [INFO ] [Node 5000] added subscription 162 type 0x46
+[2019-01-28T10:58:03.356] [INFO ] [Node 5000] removed subscription 161
+[2019-01-28T10:58:03.356] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.357] [INFO ] #@# Current timestep 10200
+[2019-01-28T10:58:03.357] [INFO ] ExpiredPayloadCleanUp for time: 9700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.357] [INFO ] [Node 5000] added subscription 163 type 0x46
+[2019-01-28T10:58:03.357] [INFO ] [Node 5000] removed subscription 162
+[2019-01-28T10:58:03.358] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.358] [INFO ] #@# Current timestep 10250
+[2019-01-28T10:58:03.358] [INFO ] ExpiredPayloadCleanUp for time: 9750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.359] [INFO ] [Node 5000] added subscription 164 type 0x46
+[2019-01-28T10:58:03.359] [INFO ] [Node 5000] removed subscription 163
+[2019-01-28T10:58:03.360] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.360] [INFO ] #@# Current timestep 10300
+[2019-01-28T10:58:03.360] [INFO ] ExpiredPayloadCleanUp for time: 9800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.361] [INFO ] [Node 5000] added subscription 165 type 0x46
+[2019-01-28T10:58:03.361] [INFO ] [Node 5000] removed subscription 164
+[2019-01-28T10:58:03.361] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.362] [INFO ] #@# Current timestep 10350
+[2019-01-28T10:58:03.362] [INFO ] ExpiredPayloadCleanUp for time: 9850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.362] [INFO ] [Node 5000] added subscription 166 type 0x46
+[2019-01-28T10:58:03.363] [INFO ] [Node 5000] removed subscription 165
+[2019-01-28T10:58:03.363] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.364] [INFO ] #@# Current timestep 10400
+[2019-01-28T10:58:03.364] [INFO ] ExpiredPayloadCleanUp for time: 9900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.364] [INFO ] [Node 5000] added subscription 167 type 0x46
+[2019-01-28T10:58:03.365] [INFO ] [Node 5000] removed subscription 166
+[2019-01-28T10:58:03.365] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.366] [INFO ] #@# Current timestep 10450
+[2019-01-28T10:58:03.366] [INFO ] ExpiredPayloadCleanUp for time: 9950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.366] [INFO ] [Node 5000] added subscription 168 type 0x46
+[2019-01-28T10:58:03.367] [INFO ] [Node 5000] removed subscription 167
+[2019-01-28T10:58:03.367] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.368] [INFO ] #@# Current timestep 10500
+[2019-01-28T10:58:03.368] [INFO ] ExpiredPayloadCleanUp for time: 10000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.368] [INFO ] [Node 5000] added subscription 169 type 0x46
+[2019-01-28T10:58:03.369] [INFO ] [Node 5000] removed subscription 168
+[2019-01-28T10:58:03.369] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.370] [INFO ] #@# Current timestep 10550
+[2019-01-28T10:58:03.370] [INFO ] ExpiredPayloadCleanUp for time: 10050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.370] [INFO ] [Node 5000] added subscription 170 type 0x46
+[2019-01-28T10:58:03.370] [INFO ] [Node 5000] removed subscription 169
+[2019-01-28T10:58:03.371] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.371] [INFO ] #@# Current timestep 10600
+[2019-01-28T10:58:03.371] [INFO ] ExpiredPayloadCleanUp for time: 10100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.372] [INFO ] [Node 5000] added subscription 171 type 0x46
+[2019-01-28T10:58:03.372] [INFO ] [Node 5000] removed subscription 170
+[2019-01-28T10:58:03.373] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.373] [INFO ] #@# Current timestep 10650
+[2019-01-28T10:58:03.373] [INFO ] ExpiredPayloadCleanUp for time: 10150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.374] [INFO ] [Node 5000] added subscription 172 type 0x46
+[2019-01-28T10:58:03.374] [INFO ] [Node 5000] removed subscription 171
+[2019-01-28T10:58:03.375] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.375] [INFO ] #@# Current timestep 10700
+[2019-01-28T10:58:03.375] [INFO ] ExpiredPayloadCleanUp for time: 10200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.376] [INFO ] [Node 5000] added subscription 173 type 0x46
+[2019-01-28T10:58:03.376] [INFO ] [Node 5000] removed subscription 172
+[2019-01-28T10:58:03.376] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.377] [INFO ] #@# Current timestep 10750
+[2019-01-28T10:58:03.377] [INFO ] ExpiredPayloadCleanUp for time: 10250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.378] [INFO ] [Node 5000] added subscription 174 type 0x46
+[2019-01-28T10:58:03.378] [INFO ] [Node 5000] removed subscription 173
+[2019-01-28T10:58:03.378] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.379] [INFO ] #@# Current timestep 10800
+[2019-01-28T10:58:03.379] [INFO ] ExpiredPayloadCleanUp for time: 10300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.379] [INFO ] [Node 5000] added subscription 175 type 0x46
+[2019-01-28T10:58:03.380] [INFO ] [Node 5000] removed subscription 174
+[2019-01-28T10:58:03.380] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.381] [INFO ] #@# Current timestep 10850
+[2019-01-28T10:58:03.381] [INFO ] ExpiredPayloadCleanUp for time: 10350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.381] [INFO ] [Node 5000] added subscription 176 type 0x46
+[2019-01-28T10:58:03.382] [INFO ] [Node 5000] removed subscription 175
+[2019-01-28T10:58:03.382] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.383] [INFO ] #@# Current timestep 10900
+[2019-01-28T10:58:03.383] [INFO ] ExpiredPayloadCleanUp for time: 10400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.383] [INFO ] [Node 5000] added subscription 177 type 0x46
+[2019-01-28T10:58:03.384] [INFO ] [Node 5000] removed subscription 176
+[2019-01-28T10:58:03.384] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.385] [INFO ] #@# Current timestep 10950
+[2019-01-28T10:58:03.385] [INFO ] ExpiredPayloadCleanUp for time: 10450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.385] [INFO ] [Node 5000] added subscription 178 type 0x46
+[2019-01-28T10:58:03.385] [INFO ] [Node 5000] removed subscription 177
+[2019-01-28T10:58:03.386] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.388] [INFO ] #@# Current timestep 11000
+[2019-01-28T10:58:03.388] [INFO ] ExpiredPayloadCleanUp for time: 10500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.388] [INFO ] [Node 5000] added subscription 179 type 0x46
+[2019-01-28T10:58:03.389] [INFO ] [Node 5000] removed subscription 178
+[2019-01-28T10:58:03.389] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.390] [INFO ] #@# Current timestep 11050
+[2019-01-28T10:58:03.390] [INFO ] ExpiredPayloadCleanUp for time: 10550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.390] [INFO ] [Node 5000] added subscription 180 type 0x46
+[2019-01-28T10:58:03.391] [INFO ] [Node 5000] removed subscription 179
+[2019-01-28T10:58:03.391] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.392] [INFO ] #@# Current timestep 11100
+[2019-01-28T10:58:03.392] [INFO ] ExpiredPayloadCleanUp for time: 10600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.392] [INFO ] [Node 5000] added subscription 181 type 0x46
+[2019-01-28T10:58:03.393] [INFO ] [Node 5000] removed subscription 180
+[2019-01-28T10:58:03.393] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.394] [INFO ] #@# Current timestep 11150
+[2019-01-28T10:58:03.394] [INFO ] ExpiredPayloadCleanUp for time: 10650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.394] [INFO ] [Node 5000] added subscription 182 type 0x46
+[2019-01-28T10:58:03.395] [INFO ] [Node 5000] removed subscription 181
+[2019-01-28T10:58:03.395] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.396] [INFO ] #@# Current timestep 11200
+[2019-01-28T10:58:03.396] [INFO ] ExpiredPayloadCleanUp for time: 10700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.396] [INFO ] [Node 5000] added subscription 183 type 0x46
+[2019-01-28T10:58:03.396] [INFO ] [Node 5000] removed subscription 182
+[2019-01-28T10:58:03.397] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.397] [INFO ] #@# Current timestep 11250
+[2019-01-28T10:58:03.397] [INFO ] ExpiredPayloadCleanUp for time: 10750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.398] [INFO ] [Node 5000] added subscription 184 type 0x46
+[2019-01-28T10:58:03.398] [INFO ] [Node 5000] removed subscription 183
+[2019-01-28T10:58:03.399] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.399] [INFO ] #@# Current timestep 11300
+[2019-01-28T10:58:03.399] [INFO ] ExpiredPayloadCleanUp for time: 10800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.400] [INFO ] [Node 5000] added subscription 185 type 0x46
+[2019-01-28T10:58:03.400] [INFO ] [Node 5000] removed subscription 184
+[2019-01-28T10:58:03.400] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.401] [INFO ] #@# Current timestep 11350
+[2019-01-28T10:58:03.401] [INFO ] ExpiredPayloadCleanUp for time: 10850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.402] [INFO ] [Node 5000] added subscription 186 type 0x46
+[2019-01-28T10:58:03.402] [INFO ] [Node 5000] removed subscription 185
+[2019-01-28T10:58:03.402] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.403] [INFO ] #@# Current timestep 11400
+[2019-01-28T10:58:03.403] [INFO ] ExpiredPayloadCleanUp for time: 10900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.403] [INFO ] [Node 5000] added subscription 187 type 0x46
+[2019-01-28T10:58:03.404] [INFO ] [Node 5000] removed subscription 186
+[2019-01-28T10:58:03.404] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.405] [INFO ] #@# Current timestep 11450
+[2019-01-28T10:58:03.405] [INFO ] ExpiredPayloadCleanUp for time: 10950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.405] [INFO ] [Node 5000] added subscription 188 type 0x46
+[2019-01-28T10:58:03.406] [INFO ] [Node 5000] removed subscription 187
+[2019-01-28T10:58:03.406] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.407] [INFO ] #@# Current timestep 11500
+[2019-01-28T10:58:03.407] [INFO ] ExpiredPayloadCleanUp for time: 11000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.407] [INFO ] [Node 5000] added subscription 189 type 0x46
+[2019-01-28T10:58:03.408] [INFO ] [Node 5000] removed subscription 188
+[2019-01-28T10:58:03.408] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.409] [INFO ] #@# Current timestep 11550
+[2019-01-28T10:58:03.409] [INFO ] ExpiredPayloadCleanUp for time: 11050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.409] [INFO ] [Node 5000] added subscription 190 type 0x46
+[2019-01-28T10:58:03.410] [INFO ] [Node 5000] removed subscription 189
+[2019-01-28T10:58:03.410] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.411] [INFO ] #@# Current timestep 11600
+[2019-01-28T10:58:03.411] [INFO ] ExpiredPayloadCleanUp for time: 11100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.411] [INFO ] [Node 5000] added subscription 191 type 0x46
+[2019-01-28T10:58:03.412] [INFO ] [Node 5000] removed subscription 190
+[2019-01-28T10:58:03.412] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.413] [INFO ] #@# Current timestep 11650
+[2019-01-28T10:58:03.413] [INFO ] ExpiredPayloadCleanUp for time: 11150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.413] [INFO ] [Node 5000] added subscription 192 type 0x46
+[2019-01-28T10:58:03.413] [INFO ] [Node 5000] removed subscription 191
+[2019-01-28T10:58:03.414] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.414] [INFO ] #@# Current timestep 11700
+[2019-01-28T10:58:03.414] [INFO ] ExpiredPayloadCleanUp for time: 11200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.415] [INFO ] [Node 5000] added subscription 193 type 0x46
+[2019-01-28T10:58:03.415] [INFO ] [Node 5000] removed subscription 192
+[2019-01-28T10:58:03.416] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.416] [INFO ] #@# Current timestep 11750
+[2019-01-28T10:58:03.416] [INFO ] ExpiredPayloadCleanUp for time: 11250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.417] [INFO ] [Node 5000] added subscription 194 type 0x46
+[2019-01-28T10:58:03.417] [INFO ] [Node 5000] removed subscription 193
+[2019-01-28T10:58:03.417] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.418] [INFO ] #@# Current timestep 11800
+[2019-01-28T10:58:03.418] [INFO ] ExpiredPayloadCleanUp for time: 11300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.419] [INFO ] [Node 5000] added subscription 195 type 0x46
+[2019-01-28T10:58:03.419] [INFO ] [Node 5000] removed subscription 194
+[2019-01-28T10:58:03.419] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.420] [INFO ] #@# Current timestep 11850
+[2019-01-28T10:58:03.420] [INFO ] ExpiredPayloadCleanUp for time: 11350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.420] [INFO ] [Node 5000] added subscription 196 type 0x46
+[2019-01-28T10:58:03.421] [INFO ] [Node 5000] removed subscription 195
+[2019-01-28T10:58:03.421] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.422] [INFO ] #@# Current timestep 11900
+[2019-01-28T10:58:03.422] [INFO ] ExpiredPayloadCleanUp for time: 11400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.422] [INFO ] [Node 5000] added subscription 197 type 0x46
+[2019-01-28T10:58:03.423] [INFO ] [Node 5000] removed subscription 196
+[2019-01-28T10:58:03.423] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.424] [INFO ] #@# Current timestep 11950
+[2019-01-28T10:58:03.424] [INFO ] ExpiredPayloadCleanUp for time: 11450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.424] [INFO ] [Node 5000] added subscription 198 type 0x46
+[2019-01-28T10:58:03.425] [INFO ] [Node 5000] removed subscription 197
+[2019-01-28T10:58:03.425] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.427] [INFO ] #@# Current timestep 12000
+[2019-01-28T10:58:03.427] [INFO ] ExpiredPayloadCleanUp for time: 11500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.428] [INFO ] [Node 5000] added subscription 199 type 0x46
+[2019-01-28T10:58:03.428] [INFO ] [Node 5000] removed subscription 198
+[2019-01-28T10:58:03.429] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.429] [INFO ] #@# Current timestep 12050
+[2019-01-28T10:58:03.429] [INFO ] ExpiredPayloadCleanUp for time: 11550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.430] [INFO ] [Node 5000] added subscription 200 type 0x46
+[2019-01-28T10:58:03.430] [INFO ] [Node 5000] removed subscription 199
+[2019-01-28T10:58:03.431] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.431] [INFO ] #@# Current timestep 12100
+[2019-01-28T10:58:03.431] [INFO ] ExpiredPayloadCleanUp for time: 11600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.432] [INFO ] [Node 5000] added subscription 201 type 0x46
+[2019-01-28T10:58:03.432] [INFO ] [Node 5000] removed subscription 200
+[2019-01-28T10:58:03.433] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.433] [INFO ] #@# Current timestep 12150
+[2019-01-28T10:58:03.433] [INFO ] ExpiredPayloadCleanUp for time: 11650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.434] [INFO ] [Node 5000] added subscription 202 type 0x46
+[2019-01-28T10:58:03.434] [INFO ] [Node 5000] removed subscription 201
+[2019-01-28T10:58:03.434] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.435] [INFO ] #@# Current timestep 12200
+[2019-01-28T10:58:03.435] [INFO ] ExpiredPayloadCleanUp for time: 11700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.436] [INFO ] [Node 5000] added subscription 203 type 0x46
+[2019-01-28T10:58:03.436] [INFO ] [Node 5000] removed subscription 202
+[2019-01-28T10:58:03.437] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.437] [INFO ] #@# Current timestep 12250
+[2019-01-28T10:58:03.437] [INFO ] ExpiredPayloadCleanUp for time: 11750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.438] [INFO ] [Node 5000] added subscription 204 type 0x46
+[2019-01-28T10:58:03.438] [INFO ] [Node 5000] removed subscription 203
+[2019-01-28T10:58:03.438] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.439] [INFO ] #@# Current timestep 12300
+[2019-01-28T10:58:03.439] [INFO ] ExpiredPayloadCleanUp for time: 11800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.439] [INFO ] [Node 5000] added subscription 205 type 0x46
+[2019-01-28T10:58:03.440] [INFO ] [Node 5000] removed subscription 204
+[2019-01-28T10:58:03.440] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.440] [INFO ] #@# Current timestep 12350
+[2019-01-28T10:58:03.440] [INFO ] ExpiredPayloadCleanUp for time: 11850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.441] [INFO ] [Node 5000] added subscription 206 type 0x46
+[2019-01-28T10:58:03.441] [INFO ] [Node 5000] removed subscription 205
+[2019-01-28T10:58:03.441] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.442] [INFO ] #@# Current timestep 12400
+[2019-01-28T10:58:03.442] [INFO ] ExpiredPayloadCleanUp for time: 11900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.442] [INFO ] [Node 5000] added subscription 207 type 0x46
+[2019-01-28T10:58:03.443] [INFO ] [Node 5000] removed subscription 206
+[2019-01-28T10:58:03.443] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.444] [INFO ] #@# Current timestep 12450
+[2019-01-28T10:58:03.444] [INFO ] ExpiredPayloadCleanUp for time: 11950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.444] [INFO ] [Node 5000] added subscription 208 type 0x46
+[2019-01-28T10:58:03.445] [INFO ] [Node 5000] removed subscription 207
+[2019-01-28T10:58:03.445] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.446] [INFO ] #@# Current timestep 12500
+[2019-01-28T10:58:03.446] [INFO ] ExpiredPayloadCleanUp for time: 12000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.446] [INFO ] [Node 5000] added subscription 209 type 0x46
+[2019-01-28T10:58:03.447] [INFO ] [Node 5000] removed subscription 208
+[2019-01-28T10:58:03.447] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.448] [INFO ] #@# Current timestep 12550
+[2019-01-28T10:58:03.448] [INFO ] ExpiredPayloadCleanUp for time: 12050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.448] [INFO ] [Node 5000] added subscription 210 type 0x46
+[2019-01-28T10:58:03.449] [INFO ] [Node 5000] removed subscription 209
+[2019-01-28T10:58:03.449] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.450] [INFO ] #@# Current timestep 12600
+[2019-01-28T10:58:03.450] [INFO ] ExpiredPayloadCleanUp for time: 12100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.450] [INFO ] [Node 5000] added subscription 211 type 0x46
+[2019-01-28T10:58:03.451] [INFO ] [Node 5000] removed subscription 210
+[2019-01-28T10:58:03.451] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.451] [INFO ] #@# Current timestep 12650
+[2019-01-28T10:58:03.452] [INFO ] ExpiredPayloadCleanUp for time: 12150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.452] [INFO ] [Node 5000] added subscription 212 type 0x46
+[2019-01-28T10:58:03.452] [INFO ] [Node 5000] removed subscription 211
+[2019-01-28T10:58:03.453] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.453] [INFO ] #@# Current timestep 12700
+[2019-01-28T10:58:03.453] [INFO ] ExpiredPayloadCleanUp for time: 12200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.454] [INFO ] [Node 5000] added subscription 213 type 0x46
+[2019-01-28T10:58:03.454] [INFO ] [Node 5000] removed subscription 212
+[2019-01-28T10:58:03.455] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.455] [INFO ] #@# Current timestep 12750
+[2019-01-28T10:58:03.455] [INFO ] ExpiredPayloadCleanUp for time: 12250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.456] [INFO ] [Node 5000] added subscription 214 type 0x46
+[2019-01-28T10:58:03.456] [INFO ] [Node 5000] removed subscription 213
+[2019-01-28T10:58:03.456] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.457] [INFO ] #@# Current timestep 12800
+[2019-01-28T10:58:03.457] [INFO ] ExpiredPayloadCleanUp for time: 12300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.458] [INFO ] [Node 5000] added subscription 215 type 0x46
+[2019-01-28T10:58:03.458] [INFO ] [Node 5000] removed subscription 214
+[2019-01-28T10:58:03.458] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.459] [INFO ] #@# Current timestep 12850
+[2019-01-28T10:58:03.459] [INFO ] ExpiredPayloadCleanUp for time: 12350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.459] [INFO ] [Node 5000] added subscription 216 type 0x46
+[2019-01-28T10:58:03.460] [INFO ] [Node 5000] removed subscription 215
+[2019-01-28T10:58:03.460] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.461] [INFO ] #@# Current timestep 12900
+[2019-01-28T10:58:03.461] [INFO ] ExpiredPayloadCleanUp for time: 12400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.461] [INFO ] [Node 5000] added subscription 217 type 0x46
+[2019-01-28T10:58:03.462] [INFO ] [Node 5000] removed subscription 216
+[2019-01-28T10:58:03.462] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.463] [INFO ] #@# Current timestep 12950
+[2019-01-28T10:58:03.463] [INFO ] ExpiredPayloadCleanUp for time: 12450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.463] [INFO ] [Node 5000] added subscription 218 type 0x46
+[2019-01-28T10:58:03.464] [INFO ] [Node 5000] removed subscription 217
+[2019-01-28T10:58:03.464] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.466] [INFO ] #@# Current timestep 13000
+[2019-01-28T10:58:03.466] [INFO ] ExpiredPayloadCleanUp for time: 12500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.466] [INFO ] [Node 5000] added subscription 219 type 0x46
+[2019-01-28T10:58:03.467] [INFO ] [Node 5000] removed subscription 218
+[2019-01-28T10:58:03.467] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.468] [INFO ] #@# Current timestep 13050
+[2019-01-28T10:58:03.468] [INFO ] ExpiredPayloadCleanUp for time: 12550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.468] [INFO ] [Node 5000] added subscription 220 type 0x46
+[2019-01-28T10:58:03.469] [INFO ] [Node 5000] removed subscription 219
+[2019-01-28T10:58:03.469] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.470] [INFO ] #@# Current timestep 13100
+[2019-01-28T10:58:03.470] [INFO ] ExpiredPayloadCleanUp for time: 12600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.470] [INFO ] [Node 5000] added subscription 221 type 0x46
+[2019-01-28T10:58:03.471] [INFO ] [Node 5000] removed subscription 220
+[2019-01-28T10:58:03.471] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.472] [INFO ] #@# Current timestep 13150
+[2019-01-28T10:58:03.472] [INFO ] ExpiredPayloadCleanUp for time: 12650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.472] [INFO ] [Node 5000] added subscription 222 type 0x46
+[2019-01-28T10:58:03.473] [INFO ] [Node 5000] removed subscription 221
+[2019-01-28T10:58:03.473] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.474] [INFO ] #@# Current timestep 13200
+[2019-01-28T10:58:03.474] [INFO ] ExpiredPayloadCleanUp for time: 12700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.474] [INFO ] [Node 5000] added subscription 223 type 0x46
+[2019-01-28T10:58:03.474] [INFO ] [Node 5000] removed subscription 222
+[2019-01-28T10:58:03.475] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.475] [INFO ] #@# Current timestep 13250
+[2019-01-28T10:58:03.475] [INFO ] ExpiredPayloadCleanUp for time: 12750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.476] [INFO ] [Node 5000] added subscription 224 type 0x46
+[2019-01-28T10:58:03.476] [INFO ] [Node 5000] removed subscription 223
+[2019-01-28T10:58:03.477] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.477] [INFO ] #@# Current timestep 13300
+[2019-01-28T10:58:03.477] [INFO ] ExpiredPayloadCleanUp for time: 12800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.478] [INFO ] [Node 5000] added subscription 225 type 0x46
+[2019-01-28T10:58:03.478] [INFO ] [Node 5000] removed subscription 224
+[2019-01-28T10:58:03.478] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.479] [INFO ] #@# Current timestep 13350
+[2019-01-28T10:58:03.479] [INFO ] ExpiredPayloadCleanUp for time: 12850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.479] [INFO ] [Node 5000] added subscription 226 type 0x46
+[2019-01-28T10:58:03.480] [INFO ] [Node 5000] removed subscription 225
+[2019-01-28T10:58:03.480] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.481] [INFO ] #@# Current timestep 13400
+[2019-01-28T10:58:03.481] [INFO ] ExpiredPayloadCleanUp for time: 12900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.481] [INFO ] [Node 5000] added subscription 227 type 0x46
+[2019-01-28T10:58:03.482] [INFO ] [Node 5000] removed subscription 226
+[2019-01-28T10:58:03.482] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.483] [INFO ] #@# Current timestep 13450
+[2019-01-28T10:58:03.483] [INFO ] ExpiredPayloadCleanUp for time: 12950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.483] [INFO ] [Node 5000] added subscription 228 type 0x46
+[2019-01-28T10:58:03.484] [INFO ] [Node 5000] removed subscription 227
+[2019-01-28T10:58:03.484] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.485] [INFO ] #@# Current timestep 13500
+[2019-01-28T10:58:03.485] [INFO ] ExpiredPayloadCleanUp for time: 13000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.485] [INFO ] [Node 5000] added subscription 229 type 0x46
+[2019-01-28T10:58:03.486] [INFO ] [Node 5000] removed subscription 228
+[2019-01-28T10:58:03.486] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.487] [INFO ] #@# Current timestep 13550
+[2019-01-28T10:58:03.487] [INFO ] ExpiredPayloadCleanUp for time: 13050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.487] [INFO ] [Node 5000] added subscription 230 type 0x46
+[2019-01-28T10:58:03.487] [INFO ] [Node 5000] removed subscription 229
+[2019-01-28T10:58:03.488] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.488] [INFO ] #@# Current timestep 13600
+[2019-01-28T10:58:03.488] [INFO ] ExpiredPayloadCleanUp for time: 13100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.489] [INFO ] [Node 5000] added subscription 231 type 0x46
+[2019-01-28T10:58:03.489] [INFO ] [Node 5000] removed subscription 230
+[2019-01-28T10:58:03.490] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.490] [INFO ] #@# Current timestep 13650
+[2019-01-28T10:58:03.490] [INFO ] ExpiredPayloadCleanUp for time: 13150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.491] [INFO ] [Node 5000] added subscription 232 type 0x46
+[2019-01-28T10:58:03.491] [INFO ] [Node 5000] removed subscription 231
+[2019-01-28T10:58:03.491] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.492] [INFO ] #@# Current timestep 13700
+[2019-01-28T10:58:03.492] [INFO ] ExpiredPayloadCleanUp for time: 13200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.492] [INFO ] [Node 5000] added subscription 233 type 0x46
+[2019-01-28T10:58:03.493] [INFO ] [Node 5000] removed subscription 232
+[2019-01-28T10:58:03.493] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.494] [INFO ] #@# Current timestep 13750
+[2019-01-28T10:58:03.494] [INFO ] ExpiredPayloadCleanUp for time: 13250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.494] [INFO ] [Node 5000] added subscription 234 type 0x46
+[2019-01-28T10:58:03.495] [INFO ] [Node 5000] removed subscription 233
+[2019-01-28T10:58:03.495] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.496] [INFO ] #@# Current timestep 13800
+[2019-01-28T10:58:03.496] [INFO ] ExpiredPayloadCleanUp for time: 13300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.496] [INFO ] [Node 5000] added subscription 235 type 0x46
+[2019-01-28T10:58:03.497] [INFO ] [Node 5000] removed subscription 234
+[2019-01-28T10:58:03.497] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.498] [INFO ] #@# Current timestep 13850
+[2019-01-28T10:58:03.498] [INFO ] ExpiredPayloadCleanUp for time: 13350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.498] [INFO ] [Node 5000] added subscription 236 type 0x46
+[2019-01-28T10:58:03.499] [INFO ] [Node 5000] removed subscription 235
+[2019-01-28T10:58:03.499] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.500] [INFO ] #@# Current timestep 13900
+[2019-01-28T10:58:03.500] [INFO ] ExpiredPayloadCleanUp for time: 13400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.500] [INFO ] [Node 5000] added subscription 237 type 0x46
+[2019-01-28T10:58:03.501] [INFO ] [Node 5000] removed subscription 236
+[2019-01-28T10:58:03.501] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.502] [INFO ] #@# Current timestep 13950
+[2019-01-28T10:58:03.502] [INFO ] ExpiredPayloadCleanUp for time: 13450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.502] [INFO ] [Node 5000] added subscription 238 type 0x46
+[2019-01-28T10:58:03.502] [INFO ] [Node 5000] removed subscription 237
+[2019-01-28T10:58:03.503] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.505] [INFO ] #@# Current timestep 14000
+[2019-01-28T10:58:03.505] [INFO ] ExpiredPayloadCleanUp for time: 13500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.505] [INFO ] [Node 5000] added subscription 239 type 0x46
+[2019-01-28T10:58:03.506] [INFO ] [Node 5000] removed subscription 238
+[2019-01-28T10:58:03.506] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.507] [INFO ] #@# Current timestep 14050
+[2019-01-28T10:58:03.507] [INFO ] ExpiredPayloadCleanUp for time: 13550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.507] [INFO ] [Node 5000] added subscription 240 type 0x46
+[2019-01-28T10:58:03.508] [INFO ] [Node 5000] removed subscription 239
+[2019-01-28T10:58:03.508] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.509] [INFO ] #@# Current timestep 14100
+[2019-01-28T10:58:03.509] [INFO ] ExpiredPayloadCleanUp for time: 13600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.509] [INFO ] [Node 5000] added subscription 241 type 0x46
+[2019-01-28T10:58:03.510] [INFO ] [Node 5000] removed subscription 240
+[2019-01-28T10:58:03.510] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.511] [INFO ] #@# Current timestep 14150
+[2019-01-28T10:58:03.511] [INFO ] ExpiredPayloadCleanUp for time: 13650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.511] [INFO ] [Node 5000] added subscription 242 type 0x46
+[2019-01-28T10:58:03.512] [INFO ] [Node 5000] removed subscription 241
+[2019-01-28T10:58:03.512] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.513] [INFO ] #@# Current timestep 14200
+[2019-01-28T10:58:03.513] [INFO ] ExpiredPayloadCleanUp for time: 13700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.513] [INFO ] [Node 5000] added subscription 243 type 0x46
+[2019-01-28T10:58:03.514] [INFO ] [Node 5000] removed subscription 242
+[2019-01-28T10:58:03.514] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.515] [INFO ] #@# Current timestep 14250
+[2019-01-28T10:58:03.515] [INFO ] ExpiredPayloadCleanUp for time: 13750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.515] [INFO ] [Node 5000] added subscription 244 type 0x46
+[2019-01-28T10:58:03.515] [INFO ] [Node 5000] removed subscription 243
+[2019-01-28T10:58:03.516] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.517] [INFO ] #@# Current timestep 14300
+[2019-01-28T10:58:03.517] [INFO ] ExpiredPayloadCleanUp for time: 13800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.517] [INFO ] [Node 5000] added subscription 245 type 0x46
+[2019-01-28T10:58:03.517] [INFO ] [Node 5000] removed subscription 244
+[2019-01-28T10:58:03.518] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.518] [INFO ] #@# Current timestep 14350
+[2019-01-28T10:58:03.518] [INFO ] ExpiredPayloadCleanUp for time: 13850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.519] [INFO ] [Node 5000] added subscription 246 type 0x46
+[2019-01-28T10:58:03.519] [INFO ] [Node 5000] removed subscription 245
+[2019-01-28T10:58:03.520] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.520] [INFO ] #@# Current timestep 14400
+[2019-01-28T10:58:03.520] [INFO ] ExpiredPayloadCleanUp for time: 13900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.521] [INFO ] [Node 5000] added subscription 247 type 0x46
+[2019-01-28T10:58:03.521] [INFO ] [Node 5000] removed subscription 246
+[2019-01-28T10:58:03.522] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.522] [INFO ] #@# Current timestep 14450
+[2019-01-28T10:58:03.522] [INFO ] ExpiredPayloadCleanUp for time: 13950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.523] [INFO ] [Node 5000] added subscription 248 type 0x46
+[2019-01-28T10:58:03.523] [INFO ] [Node 5000] removed subscription 247
+[2019-01-28T10:58:03.523] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.524] [INFO ] #@# Current timestep 14500
+[2019-01-28T10:58:03.524] [INFO ] ExpiredPayloadCleanUp for time: 14000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.524] [INFO ] [Node 5000] added subscription 249 type 0x46
+[2019-01-28T10:58:03.525] [INFO ] [Node 5000] removed subscription 248
+[2019-01-28T10:58:03.525] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.526] [INFO ] #@# Current timestep 14550
+[2019-01-28T10:58:03.526] [INFO ] ExpiredPayloadCleanUp for time: 14050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.526] [INFO ] [Node 5000] added subscription 250 type 0x46
+[2019-01-28T10:58:03.527] [INFO ] [Node 5000] removed subscription 249
+[2019-01-28T10:58:03.527] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.528] [INFO ] #@# Current timestep 14600
+[2019-01-28T10:58:03.528] [INFO ] ExpiredPayloadCleanUp for time: 14100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.528] [INFO ] [Node 5000] added subscription 251 type 0x46
+[2019-01-28T10:58:03.529] [INFO ] [Node 5000] removed subscription 250
+[2019-01-28T10:58:03.529] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.530] [INFO ] #@# Current timestep 14650
+[2019-01-28T10:58:03.530] [INFO ] ExpiredPayloadCleanUp for time: 14150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.530] [INFO ] [Node 5000] added subscription 252 type 0x46
+[2019-01-28T10:58:03.531] [INFO ] [Node 5000] removed subscription 251
+[2019-01-28T10:58:03.531] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.532] [INFO ] #@# Current timestep 14700
+[2019-01-28T10:58:03.532] [INFO ] ExpiredPayloadCleanUp for time: 14200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.532] [INFO ] [Node 5000] added subscription 253 type 0x46
+[2019-01-28T10:58:03.533] [INFO ] [Node 5000] removed subscription 252
+[2019-01-28T10:58:03.533] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.534] [INFO ] #@# Current timestep 14750
+[2019-01-28T10:58:03.534] [INFO ] ExpiredPayloadCleanUp for time: 14250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.534] [INFO ] [Node 5000] added subscription 254 type 0x46
+[2019-01-28T10:58:03.535] [INFO ] [Node 5000] removed subscription 253
+[2019-01-28T10:58:03.535] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.536] [INFO ] #@# Current timestep 14800
+[2019-01-28T10:58:03.536] [INFO ] ExpiredPayloadCleanUp for time: 14300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.536] [INFO ] [Node 5000] added subscription 255 type 0x46
+[2019-01-28T10:58:03.536] [INFO ] [Node 5000] removed subscription 254
+[2019-01-28T10:58:03.537] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.537] [INFO ] #@# Current timestep 14850
+[2019-01-28T10:58:03.537] [INFO ] ExpiredPayloadCleanUp for time: 14350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.538] [INFO ] [Node 5000] added subscription 256 type 0x46
+[2019-01-28T10:58:03.538] [INFO ] [Node 5000] removed subscription 255
+[2019-01-28T10:58:03.539] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.539] [INFO ] #@# Current timestep 14900
+[2019-01-28T10:58:03.539] [INFO ] ExpiredPayloadCleanUp for time: 14400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.540] [INFO ] [Node 5000] added subscription 257 type 0x46
+[2019-01-28T10:58:03.540] [INFO ] [Node 5000] removed subscription 256
+[2019-01-28T10:58:03.541] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.541] [INFO ] #@# Current timestep 14950
+[2019-01-28T10:58:03.541] [INFO ] ExpiredPayloadCleanUp for time: 14450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.542] [INFO ] [Node 5000] added subscription 258 type 0x46
+[2019-01-28T10:58:03.542] [INFO ] [Node 5000] removed subscription 257
+[2019-01-28T10:58:03.543] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.545] [INFO ] #@# Current timestep 15000
+[2019-01-28T10:58:03.545] [INFO ] ExpiredPayloadCleanUp for time: 14500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.545] [INFO ] [Node 5000] added subscription 259 type 0x46
+[2019-01-28T10:58:03.546] [INFO ] [Node 5000] removed subscription 258
+[2019-01-28T10:58:03.546] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.547] [INFO ] #@# Current timestep 15050
+[2019-01-28T10:58:03.547] [INFO ] ExpiredPayloadCleanUp for time: 14550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.547] [INFO ] [Node 5000] added subscription 260 type 0x46
+[2019-01-28T10:58:03.548] [INFO ] [Node 5000] removed subscription 259
+[2019-01-28T10:58:03.548] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.549] [INFO ] #@# Current timestep 15100
+[2019-01-28T10:58:03.549] [INFO ] ExpiredPayloadCleanUp for time: 14600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.549] [INFO ] [Node 5000] added subscription 261 type 0x46
+[2019-01-28T10:58:03.549] [INFO ] [Node 5000] removed subscription 260
+[2019-01-28T10:58:03.550] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.550] [INFO ] #@# Current timestep 15150
+[2019-01-28T10:58:03.551] [INFO ] ExpiredPayloadCleanUp for time: 14650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.551] [INFO ] [Node 5000] added subscription 262 type 0x46
+[2019-01-28T10:58:03.551] [INFO ] [Node 5000] removed subscription 261
+[2019-01-28T10:58:03.552] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.552] [INFO ] #@# Current timestep 15200
+[2019-01-28T10:58:03.552] [INFO ] ExpiredPayloadCleanUp for time: 14700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.553] [INFO ] [Node 5000] added subscription 263 type 0x46
+[2019-01-28T10:58:03.553] [INFO ] [Node 5000] removed subscription 262
+[2019-01-28T10:58:03.554] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.554] [INFO ] #@# Current timestep 15250
+[2019-01-28T10:58:03.554] [INFO ] ExpiredPayloadCleanUp for time: 14750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.555] [INFO ] [Node 5000] added subscription 264 type 0x46
+[2019-01-28T10:58:03.555] [INFO ] [Node 5000] removed subscription 263
+[2019-01-28T10:58:03.555] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.556] [INFO ] #@# Current timestep 15300
+[2019-01-28T10:58:03.556] [INFO ] ExpiredPayloadCleanUp for time: 14800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.556] [INFO ] [Node 5000] added subscription 265 type 0x46
+[2019-01-28T10:58:03.557] [INFO ] [Node 5000] removed subscription 264
+[2019-01-28T10:58:03.557] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.558] [INFO ] #@# Current timestep 15350
+[2019-01-28T10:58:03.558] [INFO ] ExpiredPayloadCleanUp for time: 14850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.558] [INFO ] [Node 5000] added subscription 266 type 0x46
+[2019-01-28T10:58:03.559] [INFO ] [Node 5000] removed subscription 265
+[2019-01-28T10:58:03.559] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.560] [INFO ] #@# Current timestep 15400
+[2019-01-28T10:58:03.560] [INFO ] ExpiredPayloadCleanUp for time: 14900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.560] [INFO ] [Node 5000] added subscription 267 type 0x46
+[2019-01-28T10:58:03.561] [INFO ] [Node 5000] removed subscription 266
+[2019-01-28T10:58:03.561] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.562] [INFO ] #@# Current timestep 15450
+[2019-01-28T10:58:03.562] [INFO ] ExpiredPayloadCleanUp for time: 14950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.562] [INFO ] [Node 5000] added subscription 268 type 0x46
+[2019-01-28T10:58:03.563] [INFO ] [Node 5000] removed subscription 267
+[2019-01-28T10:58:03.563] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.564] [INFO ] #@# Current timestep 15500
+[2019-01-28T10:58:03.564] [INFO ] ExpiredPayloadCleanUp for time: 15000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.564] [INFO ] [Node 5000] added subscription 269 type 0x46
+[2019-01-28T10:58:03.565] [INFO ] [Node 5000] removed subscription 268
+[2019-01-28T10:58:03.565] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.566] [INFO ] #@# Current timestep 15550
+[2019-01-28T10:58:03.566] [INFO ] ExpiredPayloadCleanUp for time: 15050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.566] [INFO ] [Node 5000] added subscription 270 type 0x46
+[2019-01-28T10:58:03.566] [INFO ] [Node 5000] removed subscription 269
+[2019-01-28T10:58:03.567] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.567] [INFO ] #@# Current timestep 15600
+[2019-01-28T10:58:03.567] [INFO ] ExpiredPayloadCleanUp for time: 15100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.568] [INFO ] [Node 5000] added subscription 271 type 0x46
+[2019-01-28T10:58:03.568] [INFO ] [Node 5000] removed subscription 270
+[2019-01-28T10:58:03.569] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.569] [INFO ] #@# Current timestep 15650
+[2019-01-28T10:58:03.569] [INFO ] ExpiredPayloadCleanUp for time: 15150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.570] [INFO ] [Node 5000] added subscription 272 type 0x46
+[2019-01-28T10:58:03.570] [INFO ] [Node 5000] removed subscription 271
+[2019-01-28T10:58:03.571] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.571] [INFO ] #@# Current timestep 15700
+[2019-01-28T10:58:03.571] [INFO ] ExpiredPayloadCleanUp for time: 15200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.572] [INFO ] [Node 5000] added subscription 273 type 0x46
+[2019-01-28T10:58:03.572] [INFO ] [Node 5000] removed subscription 272
+[2019-01-28T10:58:03.572] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.573] [INFO ] #@# Current timestep 15750
+[2019-01-28T10:58:03.573] [INFO ] ExpiredPayloadCleanUp for time: 15250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.573] [INFO ] [Node 5000] added subscription 274 type 0x46
+[2019-01-28T10:58:03.574] [INFO ] [Node 5000] removed subscription 273
+[2019-01-28T10:58:03.574] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.575] [INFO ] #@# Current timestep 15800
+[2019-01-28T10:58:03.575] [INFO ] ExpiredPayloadCleanUp for time: 15300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.575] [INFO ] [Node 5000] added subscription 275 type 0x46
+[2019-01-28T10:58:03.576] [INFO ] [Node 5000] removed subscription 274
+[2019-01-28T10:58:03.576] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.577] [INFO ] #@# Current timestep 15850
+[2019-01-28T10:58:03.577] [INFO ] ExpiredPayloadCleanUp for time: 15350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.577] [INFO ] [Node 5000] added subscription 276 type 0x46
+[2019-01-28T10:58:03.578] [INFO ] [Node 5000] removed subscription 275
+[2019-01-28T10:58:03.578] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.579] [INFO ] #@# Current timestep 15900
+[2019-01-28T10:58:03.579] [INFO ] ExpiredPayloadCleanUp for time: 15400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.579] [INFO ] [Node 5000] added subscription 277 type 0x46
+[2019-01-28T10:58:03.580] [INFO ] [Node 5000] removed subscription 276
+[2019-01-28T10:58:03.580] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.581] [INFO ] #@# Current timestep 15950
+[2019-01-28T10:58:03.581] [INFO ] ExpiredPayloadCleanUp for time: 15450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.581] [INFO ] [Node 5000] added subscription 278 type 0x46
+[2019-01-28T10:58:03.581] [INFO ] [Node 5000] removed subscription 277
+[2019-01-28T10:58:03.582] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.584] [INFO ] #@# Current timestep 16000
+[2019-01-28T10:58:03.584] [INFO ] ExpiredPayloadCleanUp for time: 15500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.584] [INFO ] [Node 5000] added subscription 279 type 0x46
+[2019-01-28T10:58:03.585] [INFO ] [Node 5000] removed subscription 278
+[2019-01-28T10:58:03.585] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.586] [INFO ] #@# Current timestep 16050
+[2019-01-28T10:58:03.586] [INFO ] ExpiredPayloadCleanUp for time: 15550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.586] [INFO ] [Node 5000] added subscription 280 type 0x46
+[2019-01-28T10:58:03.587] [INFO ] [Node 5000] removed subscription 279
+[2019-01-28T10:58:03.587] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.588] [INFO ] #@# Current timestep 16100
+[2019-01-28T10:58:03.588] [INFO ] ExpiredPayloadCleanUp for time: 15600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.588] [INFO ] [Node 5000] added subscription 281 type 0x46
+[2019-01-28T10:58:03.589] [INFO ] [Node 5000] removed subscription 280
+[2019-01-28T10:58:03.589] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.590] [INFO ] #@# Current timestep 16150
+[2019-01-28T10:58:03.590] [INFO ] ExpiredPayloadCleanUp for time: 15650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.590] [INFO ] [Node 5000] added subscription 282 type 0x46
+[2019-01-28T10:58:03.591] [INFO ] [Node 5000] removed subscription 281
+[2019-01-28T10:58:03.591] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.592] [INFO ] #@# Current timestep 16200
+[2019-01-28T10:58:03.592] [INFO ] ExpiredPayloadCleanUp for time: 15700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.592] [INFO ] [Node 5000] added subscription 283 type 0x46
+[2019-01-28T10:58:03.593] [INFO ] [Node 5000] removed subscription 282
+[2019-01-28T10:58:03.593] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.594] [INFO ] #@# Current timestep 16250
+[2019-01-28T10:58:03.594] [INFO ] ExpiredPayloadCleanUp for time: 15750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.594] [INFO ] [Node 5000] added subscription 284 type 0x46
+[2019-01-28T10:58:03.594] [INFO ] [Node 5000] removed subscription 283
+[2019-01-28T10:58:03.595] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.595] [INFO ] #@# Current timestep 16300
+[2019-01-28T10:58:03.595] [INFO ] ExpiredPayloadCleanUp for time: 15800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.596] [INFO ] [Node 5000] added subscription 285 type 0x46
+[2019-01-28T10:58:03.596] [INFO ] [Node 5000] removed subscription 284
+[2019-01-28T10:58:03.597] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.597] [INFO ] #@# Current timestep 16350
+[2019-01-28T10:58:03.597] [INFO ] ExpiredPayloadCleanUp for time: 15850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.598] [INFO ] [Node 5000] added subscription 286 type 0x46
+[2019-01-28T10:58:03.598] [INFO ] [Node 5000] removed subscription 285
+[2019-01-28T10:58:03.598] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.599] [INFO ] #@# Current timestep 16400
+[2019-01-28T10:58:03.599] [INFO ] ExpiredPayloadCleanUp for time: 15900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.600] [INFO ] [Node 5000] added subscription 287 type 0x46
+[2019-01-28T10:58:03.600] [INFO ] [Node 5000] removed subscription 286
+[2019-01-28T10:58:03.600] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.601] [INFO ] #@# Current timestep 16450
+[2019-01-28T10:58:03.601] [INFO ] ExpiredPayloadCleanUp for time: 15950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.601] [INFO ] [Node 5000] added subscription 288 type 0x46
+[2019-01-28T10:58:03.602] [INFO ] [Node 5000] removed subscription 287
+[2019-01-28T10:58:03.602] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.603] [INFO ] #@# Current timestep 16500
+[2019-01-28T10:58:03.603] [INFO ] ExpiredPayloadCleanUp for time: 16000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.603] [INFO ] [Node 5000] added subscription 289 type 0x46
+[2019-01-28T10:58:03.604] [INFO ] [Node 5000] removed subscription 288
+[2019-01-28T10:58:03.604] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.605] [INFO ] #@# Current timestep 16550
+[2019-01-28T10:58:03.605] [INFO ] ExpiredPayloadCleanUp for time: 16050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.605] [INFO ] [Node 5000] added subscription 290 type 0x46
+[2019-01-28T10:58:03.606] [INFO ] [Node 5000] removed subscription 289
+[2019-01-28T10:58:03.606] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.607] [INFO ] #@# Current timestep 16600
+[2019-01-28T10:58:03.607] [INFO ] ExpiredPayloadCleanUp for time: 16100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.607] [INFO ] [Node 5000] added subscription 291 type 0x46
+[2019-01-28T10:58:03.608] [INFO ] [Node 5000] removed subscription 290
+[2019-01-28T10:58:03.608] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.609] [INFO ] #@# Current timestep 16650
+[2019-01-28T10:58:03.609] [INFO ] ExpiredPayloadCleanUp for time: 16150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.609] [INFO ] [Node 5000] added subscription 292 type 0x46
+[2019-01-28T10:58:03.610] [INFO ] [Node 5000] removed subscription 291
+[2019-01-28T10:58:03.610] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.610] [INFO ] #@# Current timestep 16700
+[2019-01-28T10:58:03.610] [INFO ] ExpiredPayloadCleanUp for time: 16200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.611] [INFO ] [Node 5000] added subscription 293 type 0x46
+[2019-01-28T10:58:03.611] [INFO ] [Node 5000] removed subscription 292
+[2019-01-28T10:58:03.612] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.612] [INFO ] #@# Current timestep 16750
+[2019-01-28T10:58:03.612] [INFO ] ExpiredPayloadCleanUp for time: 16250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.613] [INFO ] [Node 5000] added subscription 294 type 0x46
+[2019-01-28T10:58:03.613] [INFO ] [Node 5000] removed subscription 293
+[2019-01-28T10:58:03.614] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.614] [INFO ] #@# Current timestep 16800
+[2019-01-28T10:58:03.614] [INFO ] ExpiredPayloadCleanUp for time: 16300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.615] [INFO ] [Node 5000] added subscription 295 type 0x46
+[2019-01-28T10:58:03.615] [INFO ] [Node 5000] removed subscription 294
+[2019-01-28T10:58:03.616] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.616] [INFO ] #@# Current timestep 16850
+[2019-01-28T10:58:03.616] [INFO ] ExpiredPayloadCleanUp for time: 16350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.617] [INFO ] [Node 5000] added subscription 296 type 0x46
+[2019-01-28T10:58:03.617] [INFO ] [Node 5000] removed subscription 295
+[2019-01-28T10:58:03.617] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.618] [INFO ] #@# Current timestep 16900
+[2019-01-28T10:58:03.618] [INFO ] ExpiredPayloadCleanUp for time: 16400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.618] [INFO ] [Node 5000] added subscription 297 type 0x46
+[2019-01-28T10:58:03.619] [INFO ] [Node 5000] removed subscription 296
+[2019-01-28T10:58:03.619] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.620] [INFO ] #@# Current timestep 16950
+[2019-01-28T10:58:03.620] [INFO ] ExpiredPayloadCleanUp for time: 16450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.620] [INFO ] [Node 5000] added subscription 298 type 0x46
+[2019-01-28T10:58:03.621] [INFO ] [Node 5000] removed subscription 297
+[2019-01-28T10:58:03.621] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.623] [INFO ] #@# Current timestep 17000
+[2019-01-28T10:58:03.624] [INFO ] ExpiredPayloadCleanUp for time: 16500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.624] [INFO ] [Node 5000] added subscription 299 type 0x46
+[2019-01-28T10:58:03.624] [INFO ] [Node 5000] removed subscription 298
+[2019-01-28T10:58:03.625] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.625] [INFO ] #@# Current timestep 17050
+[2019-01-28T10:58:03.626] [INFO ] ExpiredPayloadCleanUp for time: 16550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.626] [INFO ] [Node 5000] added subscription 300 type 0x46
+[2019-01-28T10:58:03.626] [INFO ] [Node 5000] removed subscription 299
+[2019-01-28T10:58:03.627] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.627] [INFO ] #@# Current timestep 17100
+[2019-01-28T10:58:03.627] [INFO ] ExpiredPayloadCleanUp for time: 16600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.628] [INFO ] [Node 5000] added subscription 301 type 0x46
+[2019-01-28T10:58:03.628] [INFO ] [Node 5000] removed subscription 300
+[2019-01-28T10:58:03.629] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.629] [INFO ] #@# Current timestep 17150
+[2019-01-28T10:58:03.629] [INFO ] ExpiredPayloadCleanUp for time: 16650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.630] [INFO ] [Node 5000] added subscription 302 type 0x46
+[2019-01-28T10:58:03.630] [INFO ] [Node 5000] removed subscription 301
+[2019-01-28T10:58:03.631] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.631] [INFO ] #@# Current timestep 17200
+[2019-01-28T10:58:03.631] [INFO ] ExpiredPayloadCleanUp for time: 16700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.632] [INFO ] [Node 5000] added subscription 303 type 0x46
+[2019-01-28T10:58:03.632] [INFO ] [Node 5000] removed subscription 302
+[2019-01-28T10:58:03.632] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.633] [INFO ] #@# Current timestep 17250
+[2019-01-28T10:58:03.633] [INFO ] ExpiredPayloadCleanUp for time: 16750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.633] [INFO ] [Node 5000] added subscription 304 type 0x46
+[2019-01-28T10:58:03.634] [INFO ] [Node 5000] removed subscription 303
+[2019-01-28T10:58:03.634] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.635] [INFO ] #@# Current timestep 17300
+[2019-01-28T10:58:03.635] [INFO ] ExpiredPayloadCleanUp for time: 16800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.635] [INFO ] [Node 5000] added subscription 305 type 0x46
+[2019-01-28T10:58:03.636] [INFO ] [Node 5000] removed subscription 304
+[2019-01-28T10:58:03.636] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.637] [INFO ] #@# Current timestep 17350
+[2019-01-28T10:58:03.637] [INFO ] ExpiredPayloadCleanUp for time: 16850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.637] [INFO ] [Node 5000] added subscription 306 type 0x46
+[2019-01-28T10:58:03.638] [INFO ] [Node 5000] removed subscription 305
+[2019-01-28T10:58:03.638] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.639] [INFO ] #@# Current timestep 17400
+[2019-01-28T10:58:03.639] [INFO ] ExpiredPayloadCleanUp for time: 16900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.639] [INFO ] [Node 5000] added subscription 307 type 0x46
+[2019-01-28T10:58:03.640] [INFO ] [Node 5000] removed subscription 306
+[2019-01-28T10:58:03.640] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.641] [INFO ] #@# Current timestep 17450
+[2019-01-28T10:58:03.641] [INFO ] ExpiredPayloadCleanUp for time: 16950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.641] [INFO ] [Node 5000] added subscription 308 type 0x46
+[2019-01-28T10:58:03.642] [INFO ] [Node 5000] removed subscription 307
+[2019-01-28T10:58:03.642] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.643] [INFO ] #@# Current timestep 17500
+[2019-01-28T10:58:03.643] [INFO ] ExpiredPayloadCleanUp for time: 17000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.643] [INFO ] [Node 5000] added subscription 309 type 0x46
+[2019-01-28T10:58:03.644] [INFO ] [Node 5000] removed subscription 308
+[2019-01-28T10:58:03.644] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.645] [INFO ] #@# Current timestep 17550
+[2019-01-28T10:58:03.645] [INFO ] ExpiredPayloadCleanUp for time: 17050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.645] [INFO ] [Node 5000] added subscription 310 type 0x46
+[2019-01-28T10:58:03.645] [INFO ] [Node 5000] removed subscription 309
+[2019-01-28T10:58:03.646] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.646] [INFO ] #@# Current timestep 17600
+[2019-01-28T10:58:03.646] [INFO ] ExpiredPayloadCleanUp for time: 17100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.647] [INFO ] [Node 5000] added subscription 311 type 0x46
+[2019-01-28T10:58:03.647] [INFO ] [Node 5000] removed subscription 310
+[2019-01-28T10:58:03.648] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.648] [INFO ] #@# Current timestep 17650
+[2019-01-28T10:58:03.648] [INFO ] ExpiredPayloadCleanUp for time: 17150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.649] [INFO ] [Node 5000] added subscription 312 type 0x46
+[2019-01-28T10:58:03.649] [INFO ] [Node 5000] removed subscription 311
+[2019-01-28T10:58:03.650] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.650] [INFO ] #@# Current timestep 17700
+[2019-01-28T10:58:03.650] [INFO ] ExpiredPayloadCleanUp for time: 17200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.651] [INFO ] [Node 5000] added subscription 313 type 0x46
+[2019-01-28T10:58:03.651] [INFO ] [Node 5000] removed subscription 312
+[2019-01-28T10:58:03.651] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.652] [INFO ] #@# Current timestep 17750
+[2019-01-28T10:58:03.652] [INFO ] ExpiredPayloadCleanUp for time: 17250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.653] [INFO ] [Node 5000] added subscription 314 type 0x46
+[2019-01-28T10:58:03.653] [INFO ] [Node 5000] removed subscription 313
+[2019-01-28T10:58:03.653] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.654] [INFO ] #@# Current timestep 17800
+[2019-01-28T10:58:03.654] [INFO ] ExpiredPayloadCleanUp for time: 17300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.654] [INFO ] [Node 5000] added subscription 315 type 0x46
+[2019-01-28T10:58:03.655] [INFO ] [Node 5000] removed subscription 314
+[2019-01-28T10:58:03.655] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.656] [INFO ] #@# Current timestep 17850
+[2019-01-28T10:58:03.656] [INFO ] ExpiredPayloadCleanUp for time: 17350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.656] [INFO ] [Node 5000] added subscription 316 type 0x46
+[2019-01-28T10:58:03.657] [INFO ] [Node 5000] removed subscription 315
+[2019-01-28T10:58:03.657] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.658] [INFO ] #@# Current timestep 17900
+[2019-01-28T10:58:03.658] [INFO ] ExpiredPayloadCleanUp for time: 17400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.658] [INFO ] [Node 5000] added subscription 317 type 0x46
+[2019-01-28T10:58:03.659] [INFO ] [Node 5000] removed subscription 316
+[2019-01-28T10:58:03.659] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.660] [INFO ] #@# Current timestep 17950
+[2019-01-28T10:58:03.660] [INFO ] ExpiredPayloadCleanUp for time: 17450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.660] [INFO ] [Node 5000] added subscription 318 type 0x46
+[2019-01-28T10:58:03.660] [INFO ] [Node 5000] removed subscription 317
+[2019-01-28T10:58:03.661] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.663] [INFO ] #@# Current timestep 18000
+[2019-01-28T10:58:03.663] [INFO ] ExpiredPayloadCleanUp for time: 17500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.663] [INFO ] [Node 5000] added subscription 319 type 0x46
+[2019-01-28T10:58:03.664] [INFO ] [Node 5000] removed subscription 318
+[2019-01-28T10:58:03.664] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.665] [INFO ] #@# Current timestep 18050
+[2019-01-28T10:58:03.665] [INFO ] ExpiredPayloadCleanUp for time: 17550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.665] [INFO ] [Node 5000] added subscription 320 type 0x46
+[2019-01-28T10:58:03.666] [INFO ] [Node 5000] removed subscription 319
+[2019-01-28T10:58:03.666] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.667] [INFO ] #@# Current timestep 18100
+[2019-01-28T10:58:03.667] [INFO ] ExpiredPayloadCleanUp for time: 17600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.667] [INFO ] [Node 5000] added subscription 321 type 0x46
+[2019-01-28T10:58:03.668] [INFO ] [Node 5000] removed subscription 320
+[2019-01-28T10:58:03.668] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.669] [INFO ] #@# Current timestep 18150
+[2019-01-28T10:58:03.669] [INFO ] ExpiredPayloadCleanUp for time: 17650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.669] [INFO ] [Node 5000] added subscription 322 type 0x46
+[2019-01-28T10:58:03.670] [INFO ] [Node 5000] removed subscription 321
+[2019-01-28T10:58:03.670] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.671] [INFO ] #@# Current timestep 18200
+[2019-01-28T10:58:03.671] [INFO ] ExpiredPayloadCleanUp for time: 17700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.671] [INFO ] [Node 5000] added subscription 323 type 0x46
+[2019-01-28T10:58:03.671] [INFO ] [Node 5000] removed subscription 322
+[2019-01-28T10:58:03.672] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.672] [INFO ] #@# Current timestep 18250
+[2019-01-28T10:58:03.672] [INFO ] ExpiredPayloadCleanUp for time: 17750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.673] [INFO ] [Node 5000] added subscription 324 type 0x46
+[2019-01-28T10:58:03.673] [INFO ] [Node 5000] removed subscription 323
+[2019-01-28T10:58:03.674] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.674] [INFO ] #@# Current timestep 18300
+[2019-01-28T10:58:03.674] [INFO ] ExpiredPayloadCleanUp for time: 17800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.675] [INFO ] [Node 5000] added subscription 325 type 0x46
+[2019-01-28T10:58:03.675] [INFO ] [Node 5000] removed subscription 324
+[2019-01-28T10:58:03.676] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.676] [INFO ] #@# Current timestep 18350
+[2019-01-28T10:58:03.676] [INFO ] ExpiredPayloadCleanUp for time: 17850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.677] [INFO ] [Node 5000] added subscription 326 type 0x46
+[2019-01-28T10:58:03.677] [INFO ] [Node 5000] removed subscription 325
+[2019-01-28T10:58:03.677] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.678] [INFO ] #@# Current timestep 18400
+[2019-01-28T10:58:03.678] [INFO ] ExpiredPayloadCleanUp for time: 17900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.678] [INFO ] [Node 5000] added subscription 327 type 0x46
+[2019-01-28T10:58:03.679] [INFO ] [Node 5000] removed subscription 326
+[2019-01-28T10:58:03.679] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.680] [INFO ] #@# Current timestep 18450
+[2019-01-28T10:58:03.680] [INFO ] ExpiredPayloadCleanUp for time: 17950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.680] [INFO ] [Node 5000] added subscription 328 type 0x46
+[2019-01-28T10:58:03.681] [INFO ] [Node 5000] removed subscription 327
+[2019-01-28T10:58:03.681] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.682] [INFO ] #@# Current timestep 18500
+[2019-01-28T10:58:03.682] [INFO ] ExpiredPayloadCleanUp for time: 18000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.682] [INFO ] [Node 5000] added subscription 329 type 0x46
+[2019-01-28T10:58:03.683] [INFO ] [Node 5000] removed subscription 328
+[2019-01-28T10:58:03.683] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.684] [INFO ] #@# Current timestep 18550
+[2019-01-28T10:58:03.684] [INFO ] ExpiredPayloadCleanUp for time: 18050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.684] [INFO ] [Node 5000] added subscription 330 type 0x46
+[2019-01-28T10:58:03.685] [INFO ] [Node 5000] removed subscription 329
+[2019-01-28T10:58:03.685] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.686] [INFO ] #@# Current timestep 18600
+[2019-01-28T10:58:03.686] [INFO ] ExpiredPayloadCleanUp for time: 18100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.686] [INFO ] [Node 5000] added subscription 331 type 0x46
+[2019-01-28T10:58:03.686] [INFO ] [Node 5000] removed subscription 330
+[2019-01-28T10:58:03.687] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.688] [INFO ] #@# Current timestep 18650
+[2019-01-28T10:58:03.688] [INFO ] ExpiredPayloadCleanUp for time: 18150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.688] [INFO ] [Node 5000] added subscription 332 type 0x46
+[2019-01-28T10:58:03.688] [INFO ] [Node 5000] removed subscription 331
+[2019-01-28T10:58:03.689] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.689] [INFO ] #@# Current timestep 18700
+[2019-01-28T10:58:03.689] [INFO ] ExpiredPayloadCleanUp for time: 18200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.690] [INFO ] [Node 5000] added subscription 333 type 0x46
+[2019-01-28T10:58:03.690] [INFO ] [Node 5000] removed subscription 332
+[2019-01-28T10:58:03.691] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.691] [INFO ] #@# Current timestep 18750
+[2019-01-28T10:58:03.691] [INFO ] ExpiredPayloadCleanUp for time: 18250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.692] [INFO ] [Node 5000] added subscription 334 type 0x46
+[2019-01-28T10:58:03.692] [INFO ] [Node 5000] removed subscription 333
+[2019-01-28T10:58:03.693] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.694] [INFO ] #@# Current timestep 18800
+[2019-01-28T10:58:03.694] [INFO ] ExpiredPayloadCleanUp for time: 18300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.694] [INFO ] [Node 5000] added subscription 335 type 0x46
+[2019-01-28T10:58:03.695] [INFO ] [Node 5000] removed subscription 334
+[2019-01-28T10:58:03.695] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.696] [INFO ] #@# Current timestep 18850
+[2019-01-28T10:58:03.696] [INFO ] ExpiredPayloadCleanUp for time: 18350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.696] [INFO ] [Node 5000] added subscription 336 type 0x46
+[2019-01-28T10:58:03.696] [INFO ] [Node 5000] removed subscription 335
+[2019-01-28T10:58:03.697] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.698] [INFO ] #@# Current timestep 18900
+[2019-01-28T10:58:03.698] [INFO ] ExpiredPayloadCleanUp for time: 18400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.698] [INFO ] [Node 5000] added subscription 337 type 0x46
+[2019-01-28T10:58:03.699] [INFO ] [Node 5000] removed subscription 336
+[2019-01-28T10:58:03.699] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.700] [INFO ] #@# Current timestep 18950
+[2019-01-28T10:58:03.700] [INFO ] ExpiredPayloadCleanUp for time: 18450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.700] [INFO ] [Node 5000] added subscription 338 type 0x46
+[2019-01-28T10:58:03.701] [INFO ] [Node 5000] removed subscription 337
+[2019-01-28T10:58:03.701] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.702] [INFO ] #@# Current timestep 19000
+[2019-01-28T10:58:03.702] [INFO ] ExpiredPayloadCleanUp for time: 18500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.702] [INFO ] Removed mobile node with id 2 ns3id 1 sumoId veh0
+[2019-01-28T10:58:03.703] [INFO ] [Node 5000] added subscription 339 type 0x46
+[2019-01-28T10:58:03.703] [INFO ] [Node 5000] removed subscription 338
+[2019-01-28T10:58:03.704] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.704] [INFO ] #@# Current timestep 19050
+[2019-01-28T10:58:03.704] [INFO ] ExpiredPayloadCleanUp for time: 18550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.704] [INFO ] [Node 5000] added subscription 340 type 0x46
+[2019-01-28T10:58:03.705] [INFO ] [Node 5000] removed subscription 339
+[2019-01-28T10:58:03.705] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.706] [INFO ] #@# Current timestep 19100
+[2019-01-28T10:58:03.706] [INFO ] ExpiredPayloadCleanUp for time: 18600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.706] [INFO ] [Node 5000] added subscription 341 type 0x46
+[2019-01-28T10:58:03.706] [INFO ] [Node 5000] removed subscription 340
+[2019-01-28T10:58:03.707] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.707] [INFO ] #@# Current timestep 19150
+[2019-01-28T10:58:03.707] [INFO ] ExpiredPayloadCleanUp for time: 18650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.707] [INFO ] [Node 5000] added subscription 342 type 0x46
+[2019-01-28T10:58:03.708] [INFO ] [Node 5000] removed subscription 341
+[2019-01-28T10:58:03.708] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.709] [INFO ] #@# Current timestep 19200
+[2019-01-28T10:58:03.709] [INFO ] ExpiredPayloadCleanUp for time: 18700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.709] [INFO ] [Node 5000] added subscription 343 type 0x46
+[2019-01-28T10:58:03.711] [INFO ] [Node 5000] removed subscription 342
+[2019-01-28T10:58:03.712] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.712] [INFO ] #@# Current timestep 19250
+[2019-01-28T10:58:03.712] [INFO ] Deleted node 2
+[2019-01-28T10:58:03.712] [INFO ] ExpiredPayloadCleanUp for time: 18750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.712] [INFO ] [Node 5000] added subscription 344 type 0x46
+[2019-01-28T10:58:03.713] [INFO ] [Node 5000] removed subscription 343
+[2019-01-28T10:58:03.713] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.714] [INFO ] #@# Current timestep 19300
+[2019-01-28T10:58:03.714] [INFO ] ExpiredPayloadCleanUp for time: 18800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.714] [INFO ] [Node 5000] added subscription 345 type 0x46
+[2019-01-28T10:58:03.714] [INFO ] [Node 5000] removed subscription 344
+[2019-01-28T10:58:03.714] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.715] [INFO ] #@# Current timestep 19350
+[2019-01-28T10:58:03.715] [INFO ] ExpiredPayloadCleanUp for time: 18850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.715] [INFO ] [Node 5000] added subscription 346 type 0x46
+[2019-01-28T10:58:03.715] [INFO ] [Node 5000] removed subscription 345
+[2019-01-28T10:58:03.716] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.716] [INFO ] #@# Current timestep 19400
+[2019-01-28T10:58:03.716] [INFO ] ExpiredPayloadCleanUp for time: 18900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.717] [INFO ] [Node 5000] added subscription 347 type 0x46
+[2019-01-28T10:58:03.717] [INFO ] [Node 5000] removed subscription 346
+[2019-01-28T10:58:03.717] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.718] [INFO ] #@# Current timestep 19450
+[2019-01-28T10:58:03.718] [INFO ] ExpiredPayloadCleanUp for time: 18950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.718] [INFO ] [Node 5000] added subscription 348 type 0x46
+[2019-01-28T10:58:03.719] [INFO ] [Node 5000] removed subscription 347
+[2019-01-28T10:58:03.719] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.719] [INFO ] #@# Current timestep 19500
+[2019-01-28T10:58:03.720] [INFO ] ExpiredPayloadCleanUp for time: 19000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.720] [INFO ] [Node 5000] added subscription 349 type 0x46
+[2019-01-28T10:58:03.720] [INFO ] [Node 5000] removed subscription 348
+[2019-01-28T10:58:03.720] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.721] [INFO ] #@# Current timestep 19550
+[2019-01-28T10:58:03.721] [INFO ] ExpiredPayloadCleanUp for time: 19050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.721] [INFO ] [Node 5000] added subscription 350 type 0x46
+[2019-01-28T10:58:03.722] [INFO ] [Node 5000] removed subscription 349
+[2019-01-28T10:58:03.722] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.723] [INFO ] #@# Current timestep 19600
+[2019-01-28T10:58:03.723] [INFO ] ExpiredPayloadCleanUp for time: 19100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.723] [INFO ] [Node 5000] added subscription 351 type 0x46
+[2019-01-28T10:58:03.723] [INFO ] [Node 5000] removed subscription 350
+[2019-01-28T10:58:03.723] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.724] [INFO ] #@# Current timestep 19650
+[2019-01-28T10:58:03.724] [INFO ] ExpiredPayloadCleanUp for time: 19150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.724] [INFO ] [Node 5000] added subscription 352 type 0x46
+[2019-01-28T10:58:03.725] [INFO ] [Node 5000] removed subscription 351
+[2019-01-28T10:58:03.725] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.726] [INFO ] #@# Current timestep 19700
+[2019-01-28T10:58:03.726] [INFO ] ExpiredPayloadCleanUp for time: 19200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.726] [INFO ] [Node 5000] added subscription 353 type 0x46
+[2019-01-28T10:58:03.726] [INFO ] [Node 5000] removed subscription 352
+[2019-01-28T10:58:03.726] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.727] [INFO ] #@# Current timestep 19750
+[2019-01-28T10:58:03.727] [INFO ] ExpiredPayloadCleanUp for time: 19250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.727] [INFO ] [Node 5000] added subscription 354 type 0x46
+[2019-01-28T10:58:03.728] [INFO ] [Node 5000] removed subscription 353
+[2019-01-28T10:58:03.728] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.729] [INFO ] #@# Current timestep 19800
+[2019-01-28T10:58:03.729] [INFO ] ExpiredPayloadCleanUp for time: 19300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.729] [INFO ] [Node 5000] added subscription 355 type 0x46
+[2019-01-28T10:58:03.729] [INFO ] [Node 5000] removed subscription 354
+[2019-01-28T10:58:03.730] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.730] [INFO ] #@# Current timestep 19850
+[2019-01-28T10:58:03.730] [INFO ] ExpiredPayloadCleanUp for time: 19350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.730] [INFO ] [Node 5000] added subscription 356 type 0x46
+[2019-01-28T10:58:03.731] [INFO ] [Node 5000] removed subscription 355
+[2019-01-28T10:58:03.731] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.732] [INFO ] #@# Current timestep 19900
+[2019-01-28T10:58:03.732] [INFO ] ExpiredPayloadCleanUp for time: 19400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.732] [INFO ] [Node 5000] added subscription 357 type 0x46
+[2019-01-28T10:58:03.732] [INFO ] [Node 5000] removed subscription 356
+[2019-01-28T10:58:03.733] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.733] [INFO ] #@# Current timestep 19950
+[2019-01-28T10:58:03.733] [INFO ] ExpiredPayloadCleanUp for time: 19450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.733] [INFO ] [Node 5000] added subscription 358 type 0x46
+[2019-01-28T10:58:03.734] [INFO ] [Node 5000] removed subscription 357
+[2019-01-28T10:58:03.734] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.735] [INFO ] #@# Current timestep 20000
+[2019-01-28T10:58:03.735] [INFO ] ExpiredPayloadCleanUp for time: 19500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.735] [INFO ] [Node 5000] added subscription 359 type 0x46
+[2019-01-28T10:58:03.736] [INFO ] [Node 5000] removed subscription 358
+[2019-01-28T10:58:03.736] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.737] [INFO ] #@# Current timestep 20050
+[2019-01-28T10:58:03.737] [INFO ] ExpiredPayloadCleanUp for time: 19550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.737] [INFO ] [Node 5000] added subscription 360 type 0x46
+[2019-01-28T10:58:03.737] [INFO ] [Node 5000] removed subscription 359
+[2019-01-28T10:58:03.738] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.738] [INFO ] #@# Current timestep 20100
+[2019-01-28T10:58:03.738] [INFO ] ExpiredPayloadCleanUp for time: 19600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.739] [INFO ] [Node 5000] added subscription 361 type 0x46
+[2019-01-28T10:58:03.739] [INFO ] [Node 5000] removed subscription 360
+[2019-01-28T10:58:03.739] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.740] [INFO ] #@# Current timestep 20150
+[2019-01-28T10:58:03.740] [INFO ] ExpiredPayloadCleanUp for time: 19650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.740] [INFO ] [Node 5000] added subscription 362 type 0x46
+[2019-01-28T10:58:03.741] [INFO ] [Node 5000] removed subscription 361
+[2019-01-28T10:58:03.741] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.742] [INFO ] #@# Current timestep 20200
+[2019-01-28T10:58:03.742] [INFO ] ExpiredPayloadCleanUp for time: 19700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.742] [INFO ] [Node 5000] added subscription 363 type 0x46
+[2019-01-28T10:58:03.742] [INFO ] [Node 5000] removed subscription 362
+[2019-01-28T10:58:03.742] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.743] [INFO ] #@# Current timestep 20250
+[2019-01-28T10:58:03.743] [INFO ] ExpiredPayloadCleanUp for time: 19750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.743] [INFO ] [Node 5000] added subscription 364 type 0x46
+[2019-01-28T10:58:03.744] [INFO ] [Node 5000] removed subscription 363
+[2019-01-28T10:58:03.744] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.745] [INFO ] #@# Current timestep 20300
+[2019-01-28T10:58:03.745] [INFO ] ExpiredPayloadCleanUp for time: 19800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.745] [INFO ] [Node 5000] added subscription 365 type 0x46
+[2019-01-28T10:58:03.745] [INFO ] [Node 5000] removed subscription 364
+[2019-01-28T10:58:03.746] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.747] [INFO ] #@# Current timestep 20350
+[2019-01-28T10:58:03.747] [INFO ] ExpiredPayloadCleanUp for time: 19850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.747] [INFO ] [Node 5000] added subscription 366 type 0x46
+[2019-01-28T10:58:03.747] [INFO ] [Node 5000] removed subscription 365
+[2019-01-28T10:58:03.747] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.748] [INFO ] #@# Current timestep 20400
+[2019-01-28T10:58:03.748] [INFO ] ExpiredPayloadCleanUp for time: 19900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.748] [INFO ] [Node 5000] added subscription 367 type 0x46
+[2019-01-28T10:58:03.748] [INFO ] [Node 5000] removed subscription 366
+[2019-01-28T10:58:03.749] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.749] [INFO ] #@# Current timestep 20450
+[2019-01-28T10:58:03.749] [INFO ] ExpiredPayloadCleanUp for time: 19950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.749] [INFO ] [Node 5000] added subscription 368 type 0x46
+[2019-01-28T10:58:03.750] [INFO ] [Node 5000] removed subscription 367
+[2019-01-28T10:58:03.750] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.751] [INFO ] #@# Current timestep 20500
+[2019-01-28T10:58:03.751] [INFO ] ExpiredPayloadCleanUp for time: 20000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.751] [INFO ] [Node 5000] added subscription 369 type 0x46
+[2019-01-28T10:58:03.751] [INFO ] [Node 5000] removed subscription 368
+[2019-01-28T10:58:03.752] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.752] [INFO ] #@# Current timestep 20550
+[2019-01-28T10:58:03.752] [INFO ] ExpiredPayloadCleanUp for time: 20050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.752] [INFO ] [Node 5000] added subscription 370 type 0x46
+[2019-01-28T10:58:03.753] [INFO ] [Node 5000] removed subscription 369
+[2019-01-28T10:58:03.753] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.754] [INFO ] #@# Current timestep 20600
+[2019-01-28T10:58:03.754] [INFO ] ExpiredPayloadCleanUp for time: 20100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.754] [INFO ] [Node 5000] added subscription 371 type 0x46
+[2019-01-28T10:58:03.754] [INFO ] [Node 5000] removed subscription 370
+[2019-01-28T10:58:03.755] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.755] [INFO ] #@# Current timestep 20650
+[2019-01-28T10:58:03.755] [INFO ] ExpiredPayloadCleanUp for time: 20150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.755] [INFO ] [Node 5000] added subscription 372 type 0x46
+[2019-01-28T10:58:03.756] [INFO ] [Node 5000] removed subscription 371
+[2019-01-28T10:58:03.756] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.757] [INFO ] #@# Current timestep 20700
+[2019-01-28T10:58:03.757] [INFO ] ExpiredPayloadCleanUp for time: 20200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.757] [INFO ] [Node 5000] added subscription 373 type 0x46
+[2019-01-28T10:58:03.757] [INFO ] [Node 5000] removed subscription 372
+[2019-01-28T10:58:03.758] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.758] [INFO ] #@# Current timestep 20750
+[2019-01-28T10:58:03.758] [INFO ] ExpiredPayloadCleanUp for time: 20250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.758] [INFO ] [Node 5000] added subscription 374 type 0x46
+[2019-01-28T10:58:03.759] [INFO ] [Node 5000] removed subscription 373
+[2019-01-28T10:58:03.759] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.760] [INFO ] #@# Current timestep 20800
+[2019-01-28T10:58:03.760] [INFO ] ExpiredPayloadCleanUp for time: 20300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.760] [INFO ] [Node 5000] added subscription 375 type 0x46
+[2019-01-28T10:58:03.760] [INFO ] [Node 5000] removed subscription 374
+[2019-01-28T10:58:03.761] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.761] [INFO ] #@# Current timestep 20850
+[2019-01-28T10:58:03.761] [INFO ] ExpiredPayloadCleanUp for time: 20350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.761] [INFO ] [Node 5000] added subscription 376 type 0x46
+[2019-01-28T10:58:03.762] [INFO ] [Node 5000] removed subscription 375
+[2019-01-28T10:58:03.762] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.763] [INFO ] #@# Current timestep 20900
+[2019-01-28T10:58:03.763] [INFO ] ExpiredPayloadCleanUp for time: 20400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.763] [INFO ] [Node 5000] added subscription 377 type 0x46
+[2019-01-28T10:58:03.764] [INFO ] [Node 5000] removed subscription 376
+[2019-01-28T10:58:03.764] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.765] [INFO ] #@# Current timestep 20950
+[2019-01-28T10:58:03.765] [INFO ] ExpiredPayloadCleanUp for time: 20450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.765] [INFO ] [Node 5000] added subscription 378 type 0x46
+[2019-01-28T10:58:03.765] [INFO ] [Node 5000] removed subscription 377
+[2019-01-28T10:58:03.765] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.767] [INFO ] #@# Current timestep 21000
+[2019-01-28T10:58:03.767] [INFO ] ExpiredPayloadCleanUp for time: 20500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.767] [INFO ] [Node 5000] added subscription 379 type 0x46
+[2019-01-28T10:58:03.767] [INFO ] [Node 5000] removed subscription 378
+[2019-01-28T10:58:03.767] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.768] [INFO ] #@# Current timestep 21050
+[2019-01-28T10:58:03.768] [INFO ] ExpiredPayloadCleanUp for time: 20550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.768] [INFO ] [Node 5000] added subscription 380 type 0x46
+[2019-01-28T10:58:03.769] [INFO ] [Node 5000] removed subscription 379
+[2019-01-28T10:58:03.769] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.770] [INFO ] #@# Current timestep 21100
+[2019-01-28T10:58:03.770] [INFO ] ExpiredPayloadCleanUp for time: 20600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.770] [INFO ] [Node 5000] added subscription 381 type 0x46
+[2019-01-28T10:58:03.770] [INFO ] [Node 5000] removed subscription 380
+[2019-01-28T10:58:03.771] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.771] [INFO ] #@# Current timestep 21150
+[2019-01-28T10:58:03.771] [INFO ] ExpiredPayloadCleanUp for time: 20650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.771] [INFO ] [Node 5000] added subscription 382 type 0x46
+[2019-01-28T10:58:03.772] [INFO ] [Node 5000] removed subscription 381
+[2019-01-28T10:58:03.772] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.773] [INFO ] #@# Current timestep 21200
+[2019-01-28T10:58:03.773] [INFO ] ExpiredPayloadCleanUp for time: 20700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.773] [INFO ] [Node 5000] added subscription 383 type 0x46
+[2019-01-28T10:58:03.773] [INFO ] [Node 5000] removed subscription 382
+[2019-01-28T10:58:03.774] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.774] [INFO ] #@# Current timestep 21250
+[2019-01-28T10:58:03.774] [INFO ] ExpiredPayloadCleanUp for time: 20750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.774] [INFO ] [Node 5000] added subscription 384 type 0x46
+[2019-01-28T10:58:03.775] [INFO ] [Node 5000] removed subscription 383
+[2019-01-28T10:58:03.775] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.776] [INFO ] #@# Current timestep 21300
+[2019-01-28T10:58:03.776] [INFO ] ExpiredPayloadCleanUp for time: 20800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.776] [INFO ] [Node 5000] added subscription 385 type 0x46
+[2019-01-28T10:58:03.776] [INFO ] [Node 5000] removed subscription 384
+[2019-01-28T10:58:03.777] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.777] [INFO ] #@# Current timestep 21350
+[2019-01-28T10:58:03.777] [INFO ] ExpiredPayloadCleanUp for time: 20850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.778] [INFO ] [Node 5000] added subscription 386 type 0x46
+[2019-01-28T10:58:03.778] [INFO ] [Node 5000] removed subscription 385
+[2019-01-28T10:58:03.778] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.779] [INFO ] #@# Current timestep 21400
+[2019-01-28T10:58:03.779] [INFO ] ExpiredPayloadCleanUp for time: 20900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.779] [INFO ] [Node 5000] added subscription 387 type 0x46
+[2019-01-28T10:58:03.780] [INFO ] [Node 5000] removed subscription 386
+[2019-01-28T10:58:03.780] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.781] [INFO ] #@# Current timestep 21450
+[2019-01-28T10:58:03.781] [INFO ] ExpiredPayloadCleanUp for time: 20950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.781] [INFO ] [Node 5000] added subscription 388 type 0x46
+[2019-01-28T10:58:03.781] [INFO ] [Node 5000] removed subscription 387
+[2019-01-28T10:58:03.782] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.782] [INFO ] #@# Current timestep 21500
+[2019-01-28T10:58:03.782] [INFO ] ExpiredPayloadCleanUp for time: 21000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.782] [INFO ] [Node 5000] added subscription 389 type 0x46
+[2019-01-28T10:58:03.783] [INFO ] [Node 5000] removed subscription 388
+[2019-01-28T10:58:03.783] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.784] [INFO ] #@# Current timestep 21550
+[2019-01-28T10:58:03.784] [INFO ] ExpiredPayloadCleanUp for time: 21050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.784] [INFO ] [Node 5000] added subscription 390 type 0x46
+[2019-01-28T10:58:03.784] [INFO ] [Node 5000] removed subscription 389
+[2019-01-28T10:58:03.785] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.785] [INFO ] #@# Current timestep 21600
+[2019-01-28T10:58:03.785] [INFO ] ExpiredPayloadCleanUp for time: 21100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.785] [INFO ] [Node 5000] added subscription 391 type 0x46
+[2019-01-28T10:58:03.786] [INFO ] [Node 5000] removed subscription 390
+[2019-01-28T10:58:03.786] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.787] [INFO ] #@# Current timestep 21650
+[2019-01-28T10:58:03.787] [INFO ] ExpiredPayloadCleanUp for time: 21150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.787] [INFO ] [Node 5000] added subscription 392 type 0x46
+[2019-01-28T10:58:03.788] [INFO ] [Node 5000] removed subscription 391
+[2019-01-28T10:58:03.788] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.788] [INFO ] #@# Current timestep 21700
+[2019-01-28T10:58:03.788] [INFO ] ExpiredPayloadCleanUp for time: 21200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.789] [INFO ] [Node 5000] added subscription 393 type 0x46
+[2019-01-28T10:58:03.789] [INFO ] [Node 5000] removed subscription 392
+[2019-01-28T10:58:03.789] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.790] [INFO ] #@# Current timestep 21750
+[2019-01-28T10:58:03.790] [INFO ] ExpiredPayloadCleanUp for time: 21250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.790] [INFO ] [Node 5000] added subscription 394 type 0x46
+[2019-01-28T10:58:03.790] [INFO ] [Node 5000] removed subscription 393
+[2019-01-28T10:58:03.790] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.791] [INFO ] #@# Current timestep 21800
+[2019-01-28T10:58:03.791] [INFO ] ExpiredPayloadCleanUp for time: 21300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.791] [INFO ] [Node 5000] added subscription 395 type 0x46
+[2019-01-28T10:58:03.791] [INFO ] [Node 5000] removed subscription 394
+[2019-01-28T10:58:03.792] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.792] [INFO ] #@# Current timestep 21850
+[2019-01-28T10:58:03.792] [INFO ] ExpiredPayloadCleanUp for time: 21350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.792] [INFO ] [Node 5000] added subscription 396 type 0x46
+[2019-01-28T10:58:03.793] [INFO ] [Node 5000] removed subscription 395
+[2019-01-28T10:58:03.793] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.794] [INFO ] #@# Current timestep 21900
+[2019-01-28T10:58:03.794] [INFO ] ExpiredPayloadCleanUp for time: 21400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.794] [INFO ] [Node 5000] added subscription 397 type 0x46
+[2019-01-28T10:58:03.794] [INFO ] [Node 5000] removed subscription 396
+[2019-01-28T10:58:03.795] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.795] [INFO ] #@# Current timestep 21950
+[2019-01-28T10:58:03.796] [INFO ] ExpiredPayloadCleanUp for time: 21450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.796] [INFO ] [Node 5000] added subscription 398 type 0x46
+[2019-01-28T10:58:03.796] [INFO ] [Node 5000] removed subscription 397
+[2019-01-28T10:58:03.796] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.798] [INFO ] #@# Current timestep 22000
+[2019-01-28T10:58:03.798] [INFO ] ExpiredPayloadCleanUp for time: 21500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.798] [INFO ] [Node 5000] added subscription 399 type 0x46
+[2019-01-28T10:58:03.798] [INFO ] [Node 5000] removed subscription 398
+[2019-01-28T10:58:03.798] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.799] [INFO ] #@# Current timestep 22050
+[2019-01-28T10:58:03.799] [INFO ] ExpiredPayloadCleanUp for time: 21550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.799] [INFO ] [Node 5000] added subscription 400 type 0x46
+[2019-01-28T10:58:03.800] [INFO ] [Node 5000] removed subscription 399
+[2019-01-28T10:58:03.800] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.801] [INFO ] #@# Current timestep 22100
+[2019-01-28T10:58:03.801] [INFO ] ExpiredPayloadCleanUp for time: 21600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.801] [INFO ] [Node 5000] added subscription 401 type 0x46
+[2019-01-28T10:58:03.801] [INFO ] [Node 5000] removed subscription 400
+[2019-01-28T10:58:03.802] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.802] [INFO ] #@# Current timestep 22150
+[2019-01-28T10:58:03.802] [INFO ] ExpiredPayloadCleanUp for time: 21650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.802] [INFO ] [Node 5000] added subscription 402 type 0x46
+[2019-01-28T10:58:03.803] [INFO ] [Node 5000] removed subscription 401
+[2019-01-28T10:58:03.803] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.804] [INFO ] #@# Current timestep 22200
+[2019-01-28T10:58:03.804] [INFO ] ExpiredPayloadCleanUp for time: 21700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.804] [INFO ] [Node 5000] added subscription 403 type 0x46
+[2019-01-28T10:58:03.804] [INFO ] [Node 5000] removed subscription 402
+[2019-01-28T10:58:03.805] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.805] [INFO ] #@# Current timestep 22250
+[2019-01-28T10:58:03.805] [INFO ] ExpiredPayloadCleanUp for time: 21750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.805] [INFO ] [Node 5000] added subscription 404 type 0x46
+[2019-01-28T10:58:03.806] [INFO ] [Node 5000] removed subscription 403
+[2019-01-28T10:58:03.806] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.807] [INFO ] #@# Current timestep 22300
+[2019-01-28T10:58:03.807] [INFO ] ExpiredPayloadCleanUp for time: 21800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.807] [INFO ] [Node 5000] added subscription 405 type 0x46
+[2019-01-28T10:58:03.807] [INFO ] [Node 5000] removed subscription 404
+[2019-01-28T10:58:03.808] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.808] [INFO ] #@# Current timestep 22350
+[2019-01-28T10:58:03.808] [INFO ] ExpiredPayloadCleanUp for time: 21850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.808] [INFO ] [Node 5000] added subscription 406 type 0x46
+[2019-01-28T10:58:03.809] [INFO ] [Node 5000] removed subscription 405
+[2019-01-28T10:58:03.809] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.810] [INFO ] #@# Current timestep 22400
+[2019-01-28T10:58:03.810] [INFO ] ExpiredPayloadCleanUp for time: 21900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.810] [INFO ] [Node 5000] added subscription 407 type 0x46
+[2019-01-28T10:58:03.810] [INFO ] [Node 5000] removed subscription 406
+[2019-01-28T10:58:03.811] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.811] [INFO ] #@# Current timestep 22450
+[2019-01-28T10:58:03.811] [INFO ] ExpiredPayloadCleanUp for time: 21950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.811] [INFO ] [Node 5000] added subscription 408 type 0x46
+[2019-01-28T10:58:03.812] [INFO ] [Node 5000] removed subscription 407
+[2019-01-28T10:58:03.812] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.813] [INFO ] #@# Current timestep 22500
+[2019-01-28T10:58:03.813] [INFO ] ExpiredPayloadCleanUp for time: 22000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.813] [INFO ] [Node 5000] added subscription 409 type 0x46
+[2019-01-28T10:58:03.813] [INFO ] [Node 5000] removed subscription 408
+[2019-01-28T10:58:03.814] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.814] [INFO ] #@# Current timestep 22550
+[2019-01-28T10:58:03.814] [INFO ] ExpiredPayloadCleanUp for time: 22050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.815] [INFO ] [Node 5000] added subscription 410 type 0x46
+[2019-01-28T10:58:03.815] [INFO ] [Node 5000] removed subscription 409
+[2019-01-28T10:58:03.815] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.816] [INFO ] #@# Current timestep 22600
+[2019-01-28T10:58:03.816] [INFO ] ExpiredPayloadCleanUp for time: 22100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.816] [INFO ] [Node 5000] added subscription 411 type 0x46
+[2019-01-28T10:58:03.816] [INFO ] [Node 5000] removed subscription 410
+[2019-01-28T10:58:03.817] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.817] [INFO ] #@# Current timestep 22650
+[2019-01-28T10:58:03.817] [INFO ] ExpiredPayloadCleanUp for time: 22150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.817] [INFO ] [Node 5000] added subscription 412 type 0x46
+[2019-01-28T10:58:03.818] [INFO ] [Node 5000] removed subscription 411
+[2019-01-28T10:58:03.818] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.819] [INFO ] #@# Current timestep 22700
+[2019-01-28T10:58:03.819] [INFO ] ExpiredPayloadCleanUp for time: 22200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.819] [INFO ] [Node 5000] added subscription 413 type 0x46
+[2019-01-28T10:58:03.819] [INFO ] [Node 5000] removed subscription 412
+[2019-01-28T10:58:03.820] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.820] [INFO ] #@# Current timestep 22750
+[2019-01-28T10:58:03.820] [INFO ] ExpiredPayloadCleanUp for time: 22250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.821] [INFO ] [Node 5000] added subscription 414 type 0x46
+[2019-01-28T10:58:03.821] [INFO ] [Node 5000] removed subscription 413
+[2019-01-28T10:58:03.821] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.822] [INFO ] #@# Current timestep 22800
+[2019-01-28T10:58:03.822] [INFO ] ExpiredPayloadCleanUp for time: 22300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.822] [INFO ] [Node 5000] added subscription 415 type 0x46
+[2019-01-28T10:58:03.822] [INFO ] [Node 5000] removed subscription 414
+[2019-01-28T10:58:03.823] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.823] [INFO ] #@# Current timestep 22850
+[2019-01-28T10:58:03.823] [INFO ] ExpiredPayloadCleanUp for time: 22350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.823] [INFO ] [Node 5000] added subscription 416 type 0x46
+[2019-01-28T10:58:03.824] [INFO ] [Node 5000] removed subscription 415
+[2019-01-28T10:58:03.824] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.825] [INFO ] #@# Current timestep 22900
+[2019-01-28T10:58:03.825] [INFO ] ExpiredPayloadCleanUp for time: 22400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.825] [INFO ] [Node 5000] added subscription 417 type 0x46
+[2019-01-28T10:58:03.825] [INFO ] [Node 5000] removed subscription 416
+[2019-01-28T10:58:03.826] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.826] [INFO ] #@# Current timestep 22950
+[2019-01-28T10:58:03.826] [INFO ] ExpiredPayloadCleanUp for time: 22450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.826] [INFO ] [Node 5000] added subscription 418 type 0x46
+[2019-01-28T10:58:03.827] [INFO ] [Node 5000] removed subscription 417
+[2019-01-28T10:58:03.827] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.828] [INFO ] #@# Current timestep 23000
+[2019-01-28T10:58:03.828] [INFO ] ExpiredPayloadCleanUp for time: 22500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.828] [INFO ] [Node 5000] added subscription 419 type 0x46
+[2019-01-28T10:58:03.829] [INFO ] [Node 5000] removed subscription 418
+[2019-01-28T10:58:03.829] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.830] [INFO ] #@# Current timestep 23050
+[2019-01-28T10:58:03.830] [INFO ] ExpiredPayloadCleanUp for time: 22550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.830] [INFO ] [Node 5000] added subscription 420 type 0x46
+[2019-01-28T10:58:03.830] [INFO ] [Node 5000] removed subscription 419
+[2019-01-28T10:58:03.831] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.831] [INFO ] #@# Current timestep 23100
+[2019-01-28T10:58:03.831] [INFO ] ExpiredPayloadCleanUp for time: 22600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.831] [INFO ] [Node 5000] added subscription 421 type 0x46
+[2019-01-28T10:58:03.832] [INFO ] [Node 5000] removed subscription 420
+[2019-01-28T10:58:03.832] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.833] [INFO ] #@# Current timestep 23150
+[2019-01-28T10:58:03.833] [INFO ] ExpiredPayloadCleanUp for time: 22650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.833] [INFO ] [Node 5000] added subscription 422 type 0x46
+[2019-01-28T10:58:03.833] [INFO ] [Node 5000] removed subscription 421
+[2019-01-28T10:58:03.834] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.834] [INFO ] #@# Current timestep 23200
+[2019-01-28T10:58:03.834] [INFO ] ExpiredPayloadCleanUp for time: 22700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.834] [INFO ] [Node 5000] added subscription 423 type 0x46
+[2019-01-28T10:58:03.835] [INFO ] [Node 5000] removed subscription 422
+[2019-01-28T10:58:03.835] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.836] [INFO ] #@# Current timestep 23250
+[2019-01-28T10:58:03.836] [INFO ] ExpiredPayloadCleanUp for time: 22750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.836] [INFO ] [Node 5000] added subscription 424 type 0x46
+[2019-01-28T10:58:03.836] [INFO ] [Node 5000] removed subscription 423
+[2019-01-28T10:58:03.837] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.837] [INFO ] #@# Current timestep 23300
+[2019-01-28T10:58:03.837] [INFO ] ExpiredPayloadCleanUp for time: 22800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.837] [INFO ] [Node 5000] added subscription 425 type 0x46
+[2019-01-28T10:58:03.838] [INFO ] [Node 5000] removed subscription 424
+[2019-01-28T10:58:03.838] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.839] [INFO ] #@# Current timestep 23350
+[2019-01-28T10:58:03.839] [INFO ] ExpiredPayloadCleanUp for time: 22850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.839] [INFO ] [Node 5000] added subscription 426 type 0x46
+[2019-01-28T10:58:03.839] [INFO ] [Node 5000] removed subscription 425
+[2019-01-28T10:58:03.840] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.840] [INFO ] #@# Current timestep 23400
+[2019-01-28T10:58:03.840] [INFO ] ExpiredPayloadCleanUp for time: 22900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.840] [INFO ] [Node 5000] added subscription 427 type 0x46
+[2019-01-28T10:58:03.841] [INFO ] [Node 5000] removed subscription 426
+[2019-01-28T10:58:03.841] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.842] [INFO ] #@# Current timestep 23450
+[2019-01-28T10:58:03.842] [INFO ] ExpiredPayloadCleanUp for time: 22950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.842] [INFO ] [Node 5000] added subscription 428 type 0x46
+[2019-01-28T10:58:03.842] [INFO ] [Node 5000] removed subscription 427
+[2019-01-28T10:58:03.843] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.843] [INFO ] #@# Current timestep 23500
+[2019-01-28T10:58:03.843] [INFO ] ExpiredPayloadCleanUp for time: 23000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.844] [INFO ] [Node 5000] added subscription 429 type 0x46
+[2019-01-28T10:58:03.844] [INFO ] [Node 5000] removed subscription 428
+[2019-01-28T10:58:03.844] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.845] [INFO ] #@# Current timestep 23550
+[2019-01-28T10:58:03.845] [INFO ] ExpiredPayloadCleanUp for time: 23050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.845] [INFO ] [Node 5000] added subscription 430 type 0x46
+[2019-01-28T10:58:03.846] [INFO ] [Node 5000] removed subscription 429
+[2019-01-28T10:58:03.846] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.847] [INFO ] #@# Current timestep 23600
+[2019-01-28T10:58:03.847] [INFO ] ExpiredPayloadCleanUp for time: 23100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.847] [INFO ] [Node 5000] added subscription 431 type 0x46
+[2019-01-28T10:58:03.847] [INFO ] [Node 5000] removed subscription 430
+[2019-01-28T10:58:03.847] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.848] [INFO ] #@# Current timestep 23650
+[2019-01-28T10:58:03.848] [INFO ] ExpiredPayloadCleanUp for time: 23150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.848] [INFO ] [Node 5000] added subscription 432 type 0x46
+[2019-01-28T10:58:03.849] [INFO ] [Node 5000] removed subscription 431
+[2019-01-28T10:58:03.849] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.850] [INFO ] #@# Current timestep 23700
+[2019-01-28T10:58:03.850] [INFO ] ExpiredPayloadCleanUp for time: 23200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.850] [INFO ] [Node 5000] added subscription 433 type 0x46
+[2019-01-28T10:58:03.850] [INFO ] [Node 5000] removed subscription 432
+[2019-01-28T10:58:03.851] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.851] [INFO ] #@# Current timestep 23750
+[2019-01-28T10:58:03.851] [INFO ] ExpiredPayloadCleanUp for time: 23250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.851] [INFO ] [Node 5000] added subscription 434 type 0x46
+[2019-01-28T10:58:03.852] [INFO ] [Node 5000] removed subscription 433
+[2019-01-28T10:58:03.852] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.853] [INFO ] #@# Current timestep 23800
+[2019-01-28T10:58:03.853] [INFO ] ExpiredPayloadCleanUp for time: 23300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.853] [INFO ] [Node 5000] added subscription 435 type 0x46
+[2019-01-28T10:58:03.853] [INFO ] [Node 5000] removed subscription 434
+[2019-01-28T10:58:03.854] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.854] [INFO ] #@# Current timestep 23850
+[2019-01-28T10:58:03.854] [INFO ] ExpiredPayloadCleanUp for time: 23350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.854] [INFO ] [Node 5000] added subscription 436 type 0x46
+[2019-01-28T10:58:03.855] [INFO ] [Node 5000] removed subscription 435
+[2019-01-28T10:58:03.855] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.856] [INFO ] #@# Current timestep 23900
+[2019-01-28T10:58:03.856] [INFO ] ExpiredPayloadCleanUp for time: 23400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.856] [INFO ] [Node 5000] added subscription 437 type 0x46
+[2019-01-28T10:58:03.856] [INFO ] [Node 5000] removed subscription 436
+[2019-01-28T10:58:03.857] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.857] [INFO ] #@# Current timestep 23950
+[2019-01-28T10:58:03.857] [INFO ] ExpiredPayloadCleanUp for time: 23450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.857] [INFO ] [Node 5000] added subscription 438 type 0x46
+[2019-01-28T10:58:03.858] [INFO ] [Node 5000] removed subscription 437
+[2019-01-28T10:58:03.858] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.859] [INFO ] #@# Current timestep 24000
+[2019-01-28T10:58:03.859] [INFO ] ExpiredPayloadCleanUp for time: 23500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.859] [INFO ] [Node 5000] added subscription 439 type 0x46
+[2019-01-28T10:58:03.860] [INFO ] [Node 5000] removed subscription 438
+[2019-01-28T10:58:03.860] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.861] [INFO ] #@# Current timestep 24050
+[2019-01-28T10:58:03.861] [INFO ] ExpiredPayloadCleanUp for time: 23550. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.861] [INFO ] [Node 5000] added subscription 440 type 0x46
+[2019-01-28T10:58:03.861] [INFO ] [Node 5000] removed subscription 439
+[2019-01-28T10:58:03.862] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.862] [INFO ] #@# Current timestep 24100
+[2019-01-28T10:58:03.862] [INFO ] ExpiredPayloadCleanUp for time: 23600. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.862] [INFO ] [Node 5000] added subscription 441 type 0x46
+[2019-01-28T10:58:03.863] [INFO ] [Node 5000] removed subscription 440
+[2019-01-28T10:58:03.863] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.864] [INFO ] #@# Current timestep 24150
+[2019-01-28T10:58:03.864] [INFO ] ExpiredPayloadCleanUp for time: 23650. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.864] [INFO ] [Node 5000] added subscription 442 type 0x46
+[2019-01-28T10:58:03.864] [INFO ] [Node 5000] removed subscription 441
+[2019-01-28T10:58:03.865] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.865] [INFO ] #@# Current timestep 24200
+[2019-01-28T10:58:03.865] [INFO ] ExpiredPayloadCleanUp for time: 23700. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.865] [INFO ] [Node 5000] added subscription 443 type 0x46
+[2019-01-28T10:58:03.866] [INFO ] [Node 5000] removed subscription 442
+[2019-01-28T10:58:03.866] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.867] [INFO ] #@# Current timestep 24250
+[2019-01-28T10:58:03.867] [INFO ] ExpiredPayloadCleanUp for time: 23750. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.867] [INFO ] [Node 5000] added subscription 444 type 0x46
+[2019-01-28T10:58:03.867] [INFO ] [Node 5000] removed subscription 443
+[2019-01-28T10:58:03.868] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.868] [INFO ] #@# Current timestep 24300
+[2019-01-28T10:58:03.868] [INFO ] ExpiredPayloadCleanUp for time: 23800. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.868] [INFO ] [Node 5000] added subscription 445 type 0x46
+[2019-01-28T10:58:03.869] [INFO ] [Node 5000] removed subscription 444
+[2019-01-28T10:58:03.869] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.870] [INFO ] #@# Current timestep 24350
+[2019-01-28T10:58:03.870] [INFO ] ExpiredPayloadCleanUp for time: 23850. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.870] [INFO ] [Node 5000] added subscription 446 type 0x46
+[2019-01-28T10:58:03.870] [INFO ] [Node 5000] removed subscription 445
+[2019-01-28T10:58:03.871] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.871] [INFO ] #@# Current timestep 24400
+[2019-01-28T10:58:03.871] [INFO ] ExpiredPayloadCleanUp for time: 23900. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.871] [INFO ] [Node 5000] added subscription 447 type 0x46
+[2019-01-28T10:58:03.872] [INFO ] [Node 5000] removed subscription 446
+[2019-01-28T10:58:03.872] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.873] [INFO ] #@# Current timestep 24450
+[2019-01-28T10:58:03.873] [INFO ] ExpiredPayloadCleanUp for time: 23950. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.873] [INFO ] [Node 5000] added subscription 448 type 0x46
+[2019-01-28T10:58:03.873] [INFO ] [Node 5000] removed subscription 447
+[2019-01-28T10:58:03.874] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.874] [INFO ] #@# Current timestep 24500
+[2019-01-28T10:58:03.875] [INFO ] ExpiredPayloadCleanUp for time: 24000. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.875] [INFO ] [Node 5000] added subscription 449 type 0x46
+[2019-01-28T10:58:03.875] [INFO ] [Node 5000] removed subscription 448
+[2019-01-28T10:58:03.875] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.876] [INFO ] #@# Current timestep 24550
+[2019-01-28T10:58:03.876] [INFO ] ExpiredPayloadCleanUp for time: 24050. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.876] [INFO ] [Node 5000] added subscription 450 type 0x46
+[2019-01-28T10:58:03.876] [INFO ] [Node 5000] removed subscription 449
+[2019-01-28T10:58:03.877] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.877] [INFO ] #@# Current timestep 24600
+[2019-01-28T10:58:03.878] [INFO ] ExpiredPayloadCleanUp for time: 24100. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.878] [INFO ] [Node 5000] added subscription 451 type 0x46
+[2019-01-28T10:58:03.878] [INFO ] [Node 5000] removed subscription 450
+[2019-01-28T10:58:03.878] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.879] [INFO ] #@# Current timestep 24650
+[2019-01-28T10:58:03.879] [INFO ] ExpiredPayloadCleanUp for time: 24150. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.879] [INFO ] [Node 5000] added subscription 452 type 0x46
+[2019-01-28T10:58:03.879] [INFO ] [Node 5000] removed subscription 451
+[2019-01-28T10:58:03.880] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.880] [INFO ] #@# Current timestep 24700
+[2019-01-28T10:58:03.880] [INFO ] ExpiredPayloadCleanUp for time: 24200. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.881] [INFO ] [Node 5000] added subscription 453 type 0x46
+[2019-01-28T10:58:03.881] [INFO ] [Node 5000] removed subscription 452
+[2019-01-28T10:58:03.881] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.882] [INFO ] #@# Current timestep 24750
+[2019-01-28T10:58:03.882] [INFO ] ExpiredPayloadCleanUp for time: 24250. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.882] [INFO ] [Node 5000] added subscription 454 type 0x46
+[2019-01-28T10:58:03.882] [INFO ] [Node 5000] removed subscription 453
+[2019-01-28T10:58:03.883] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.883] [INFO ] #@# Current timestep 24800
+[2019-01-28T10:58:03.883] [INFO ] ExpiredPayloadCleanUp for time: 24300. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.884] [INFO ] [Node 5000] added subscription 455 type 0x46
+[2019-01-28T10:58:03.884] [INFO ] [Node 5000] removed subscription 454
+[2019-01-28T10:58:03.884] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.885] [INFO ] #@# Current timestep 24850
+[2019-01-28T10:58:03.885] [INFO ] ExpiredPayloadCleanUp for time: 24350. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.885] [INFO ] [Node 5000] added subscription 456 type 0x46
+[2019-01-28T10:58:03.885] [INFO ] [Node 5000] removed subscription 455
+[2019-01-28T10:58:03.886] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.886] [INFO ] #@# Current timestep 24900
+[2019-01-28T10:58:03.886] [INFO ] ExpiredPayloadCleanUp for time: 24400. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.887] [INFO ] [Node 5000] added subscription 457 type 0x46
+[2019-01-28T10:58:03.887] [INFO ] [Node 5000] removed subscription 456
+[2019-01-28T10:58:03.887] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.888] [INFO ] #@# Current timestep 24950
+[2019-01-28T10:58:03.888] [INFO ] ExpiredPayloadCleanUp for time: 24450. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.888] [INFO ] [Node 5000] added subscription 458 type 0x46
+[2019-01-28T10:58:03.888] [INFO ] [Node 5000] removed subscription 457
+[2019-01-28T10:58:03.889] [INFO ] SUMO Command acknowledged (0xa0), [description: ]
+[2019-01-28T10:58:03.890] [INFO ] #@# Current timestep 25000
+[2019-01-28T10:58:03.890] [INFO ] ExpiredPayloadCleanUp for time: 24500. Removing keys: noting to remove Current size: 0
+[2019-01-28T10:58:03.890] [INFO ] [Node 5000] added subscription 459 type 0x46
+[2019-01-28T10:58:03.890] [INFO ] [Node 5000] removed subscription 458
+[2019-01-28T10:58:03.891] [INFO ] SUMO Command acknowledged (0xa0), [description: ]

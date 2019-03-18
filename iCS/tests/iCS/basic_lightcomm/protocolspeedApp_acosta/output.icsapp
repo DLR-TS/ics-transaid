@@ -1,0 +1,1022 @@
+Loading configuration... done.
+
+WELCOME TO iTETRIS
+==================
+STEP 1 - SETUP PHASE
+iCS --> SUMO launched.
+iCS --> ns-3 launched.
+
+STEP 2 - SETUP PHASE
+Loading configuration... done.
+protocolspeedApp -> Starting iTetris protocol speed app
+protocolspeedApp -> [WARNING]Ignoring socket port specified in configuration. (Overridden by command line argument.)
+protocolspeedApp -> Test case set to 
+protocolspeedApp -> ParseGeneral done
+protocolspeedApp -> ParseInfrastructure done
+protocolspeedApp -> ParseSetup done
+protocolspeedApp -> ParseOutput done
+protocolspeedApp -> Load Configuration done
+main-inci v 3.20
+ns3 -> No option file found. Must be named option.txt
+
+STEP 3 - SETUP PHASE
+iCS --> Trying 0 to connect SUMO on port 37593...
+iCS --> Connected to SUMO
+
+iCS --> Trying 0 to connect ns-3 on port 40345 and Host localhost...
+iCS --> Connected to ns-3
+
+iCS --> Trying 0 to connect Application on port 37617...
+iCS --> Application protocolspeedApp connected.
+
+
+STEP 4 - SETUP PHASE
+jin <iCS/ns3-client.cc> CMD_CREATENODE=8
+protocolspeedApp -> Server listening on port: 37617
+WaveRsuInstaller::AllocateIpv6Prefix()3001:0:0:1::
+
+iCS --> Starting scheduling V2X messages in setup phase
+
+**********************
+SETUP PHASE ENDS HERE.
+
+		iCS --> Global simulation timestep is: 0; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 0
+STEP 6 - SIMULATION PHASE - Tics = 0
+[CreateTrafficLight] Created new traffic light with id 209 and 6 lanes.
+[CreateTrafficLight] Created new traffic light with id 210 and 22 lanes.
+[CreateTrafficLight] Created new traffic light with id 219 and 15 lanes.
+[CreateTrafficLight] Created new traffic light with id 220 and 15 lanes.
+[CreateTrafficLight] Created new traffic light with id 221 and 16 lanes.
+[CreateTrafficLight] Created new traffic light with id 235 and 19 lanes.
+[CreateTrafficLight] Created new traffic light with id 273 and 9 lanes.
+STEP 7 - SIMULATION PHASE - Tics = 0
+
+STEP 8 - SIMULATION PHASE - Tics = 0
+STEP 9 - SIMULATION PHASE - Tics = 0
+		iCS --> Global simulation timestep is: 250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 250
+STEP 6 - SIMULATION PHASE - Tics = 250
+STEP 7 - SIMULATION PHASE - Tics = 250
+
+STEP 8 - SIMULATION PHASE - Tics = 250
+STEP 9 - SIMULATION PHASE - Tics = 250
+		iCS --> Global simulation timestep is: 500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 500
+STEP 6 - SIMULATION PHASE - Tics = 500
+STEP 7 - SIMULATION PHASE - Tics = 500
+
+STEP 8 - SIMULATION PHASE - Tics = 500
+STEP 9 - SIMULATION PHASE - Tics = 500
+		iCS --> Global simulation timestep is: 750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 750
+STEP 6 - SIMULATION PHASE - Tics = 750
+STEP 7 - SIMULATION PHASE - Tics = 750
+
+STEP 8 - SIMULATION PHASE - Tics = 750
+STEP 9 - SIMULATION PHASE - Tics = 750
+		iCS --> Global simulation timestep is: 1000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 1000
+STEP 6 - SIMULATION PHASE - Tics = 1000
+STEP 7 - SIMULATION PHASE - Tics = 1000
+
+STEP 8 - SIMULATION PHASE - Tics = 1000
+STEP 9 - SIMULATION PHASE - Tics = 1000
+		iCS --> Global simulation timestep is: 1250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 1250
+STEP 6 - SIMULATION PHASE - Tics = 1250
+STEP 7 - SIMULATION PHASE - Tics = 1250
+
+STEP 8 - SIMULATION PHASE - Tics = 1250
+STEP 9 - SIMULATION PHASE - Tics = 1250
+		iCS --> Global simulation timestep is: 1500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 1500
+STEP 6 - SIMULATION PHASE - Tics = 1500
+STEP 7 - SIMULATION PHASE - Tics = 1500
+
+STEP 8 - SIMULATION PHASE - Tics = 1500
+STEP 9 - SIMULATION PHASE - Tics = 1500
+		iCS --> Global simulation timestep is: 1750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 1750
+STEP 6 - SIMULATION PHASE - Tics = 1750
+STEP 7 - SIMULATION PHASE - Tics = 1750
+
+STEP 8 - SIMULATION PHASE - Tics = 1750
+STEP 9 - SIMULATION PHASE - Tics = 1750
+		iCS --> Global simulation timestep is: 2000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 2000
+STEP 6 - SIMULATION PHASE - Tics = 2000
+STEP 7 - SIMULATION PHASE - Tics = 2000
+
+STEP 8 - SIMULATION PHASE - Tics = 2000
+STEP 9 - SIMULATION PHASE - Tics = 2000
+		iCS --> Global simulation timestep is: 2250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 2250
+STEP 6 - SIMULATION PHASE - Tics = 2250
+STEP 7 - SIMULATION PHASE - Tics = 2250
+
+STEP 8 - SIMULATION PHASE - Tics = 2250
+STEP 9 - SIMULATION PHASE - Tics = 2250
+		iCS --> Global simulation timestep is: 2500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 2500
+STEP 6 - SIMULATION PHASE - Tics = 2500
+STEP 7 - SIMULATION PHASE - Tics = 2500
+
+STEP 8 - SIMULATION PHASE - Tics = 2500
+STEP 9 - SIMULATION PHASE - Tics = 2500
+		iCS --> Global simulation timestep is: 2750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 2750
+STEP 6 - SIMULATION PHASE - Tics = 2750
+STEP 7 - SIMULATION PHASE - Tics = 2750
+
+STEP 8 - SIMULATION PHASE - Tics = 2750
+STEP 9 - SIMULATION PHASE - Tics = 2750
+		iCS --> Global simulation timestep is: 3000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 3000
+STEP 6 - SIMULATION PHASE - Tics = 3000
+STEP 7 - SIMULATION PHASE - Tics = 3000
+
+STEP 8 - SIMULATION PHASE - Tics = 3000
+STEP 9 - SIMULATION PHASE - Tics = 3000
+		iCS --> Global simulation timestep is: 3250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 3250
+STEP 6 - SIMULATION PHASE - Tics = 3250
+STEP 7 - SIMULATION PHASE - Tics = 3250
+
+STEP 8 - SIMULATION PHASE - Tics = 3250
+STEP 9 - SIMULATION PHASE - Tics = 3250
+		iCS --> Global simulation timestep is: 3500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 3500
+STEP 6 - SIMULATION PHASE - Tics = 3500
+STEP 7 - SIMULATION PHASE - Tics = 3500
+
+STEP 8 - SIMULATION PHASE - Tics = 3500
+STEP 9 - SIMULATION PHASE - Tics = 3500
+		iCS --> Global simulation timestep is: 3750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 3750
+STEP 6 - SIMULATION PHASE - Tics = 3750
+STEP 7 - SIMULATION PHASE - Tics = 3750
+
+STEP 8 - SIMULATION PHASE - Tics = 3750
+STEP 9 - SIMULATION PHASE - Tics = 3750
+		iCS --> Global simulation timestep is: 4000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 4000
+STEP 6 - SIMULATION PHASE - Tics = 4000
+STEP 7 - SIMULATION PHASE - Tics = 4000
+
+STEP 8 - SIMULATION PHASE - Tics = 4000
+STEP 9 - SIMULATION PHASE - Tics = 4000
+		iCS --> Global simulation timestep is: 4250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 4250
+STEP 6 - SIMULATION PHASE - Tics = 4250
+STEP 7 - SIMULATION PHASE - Tics = 4250
+
+STEP 8 - SIMULATION PHASE - Tics = 4250
+STEP 9 - SIMULATION PHASE - Tics = 4250
+		iCS --> Global simulation timestep is: 4500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 4500
+STEP 6 - SIMULATION PHASE - Tics = 4500
+STEP 7 - SIMULATION PHASE - Tics = 4500
+
+STEP 8 - SIMULATION PHASE - Tics = 4500
+STEP 9 - SIMULATION PHASE - Tics = 4500
+		iCS --> Global simulation timestep is: 4750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 4750
+STEP 6 - SIMULATION PHASE - Tics = 4750
+STEP 7 - SIMULATION PHASE - Tics = 4750
+
+STEP 8 - SIMULATION PHASE - Tics = 4750
+STEP 9 - SIMULATION PHASE - Tics = 4750
+		iCS --> Global simulation timestep is: 5000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 5000
+STEP 6 - SIMULATION PHASE - Tics = 5000
+STEP 7 - SIMULATION PHASE - Tics = 5000
+
+STEP 8 - SIMULATION PHASE - Tics = 5000
+STEP 9 - SIMULATION PHASE - Tics = 5000
+		iCS --> Global simulation timestep is: 5250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 5250
+STEP 6 - SIMULATION PHASE - Tics = 5250
+STEP 7 - SIMULATION PHASE - Tics = 5250
+
+STEP 8 - SIMULATION PHASE - Tics = 5250
+STEP 9 - SIMULATION PHASE - Tics = 5250
+		iCS --> Global simulation timestep is: 5500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 5500
+STEP 6 - SIMULATION PHASE - Tics = 5500
+STEP 7 - SIMULATION PHASE - Tics = 5500
+
+STEP 8 - SIMULATION PHASE - Tics = 5500
+STEP 9 - SIMULATION PHASE - Tics = 5500
+		iCS --> Global simulation timestep is: 5750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 5750
+STEP 6 - SIMULATION PHASE - Tics = 5750
+STEP 7 - SIMULATION PHASE - Tics = 5750
+
+STEP 8 - SIMULATION PHASE - Tics = 5750
+STEP 9 - SIMULATION PHASE - Tics = 5750
+		iCS --> Global simulation timestep is: 6000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 6000
+STEP 6 - SIMULATION PHASE - Tics = 6000
+STEP 7 - SIMULATION PHASE - Tics = 6000
+
+STEP 8 - SIMULATION PHASE - Tics = 6000
+STEP 9 - SIMULATION PHASE - Tics = 6000
+		iCS --> Global simulation timestep is: 6250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 6250
+STEP 6 - SIMULATION PHASE - Tics = 6250
+STEP 7 - SIMULATION PHASE - Tics = 6250
+
+STEP 8 - SIMULATION PHASE - Tics = 6250
+STEP 9 - SIMULATION PHASE - Tics = 6250
+		iCS --> Global simulation timestep is: 6500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 6500
+STEP 6 - SIMULATION PHASE - Tics = 6500
+STEP 7 - SIMULATION PHASE - Tics = 6500
+
+STEP 8 - SIMULATION PHASE - Tics = 6500
+STEP 9 - SIMULATION PHASE - Tics = 6500
+		iCS --> Global simulation timestep is: 6750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 6750
+STEP 6 - SIMULATION PHASE - Tics = 6750
+STEP 7 - SIMULATION PHASE - Tics = 6750
+
+STEP 8 - SIMULATION PHASE - Tics = 6750
+STEP 9 - SIMULATION PHASE - Tics = 6750
+		iCS --> Global simulation timestep is: 7000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 7000
+STEP 6 - SIMULATION PHASE - Tics = 7000
+STEP 7 - SIMULATION PHASE - Tics = 7000
+
+STEP 8 - SIMULATION PHASE - Tics = 7000
+STEP 9 - SIMULATION PHASE - Tics = 7000
+		iCS --> Global simulation timestep is: 7250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 7250
+STEP 6 - SIMULATION PHASE - Tics = 7250
+STEP 7 - SIMULATION PHASE - Tics = 7250
+
+STEP 8 - SIMULATION PHASE - Tics = 7250
+STEP 9 - SIMULATION PHASE - Tics = 7250
+		iCS --> Global simulation timestep is: 7500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 7500
+STEP 6 - SIMULATION PHASE - Tics = 7500
+STEP 7 - SIMULATION PHASE - Tics = 7500
+
+STEP 8 - SIMULATION PHASE - Tics = 7500
+STEP 9 - SIMULATION PHASE - Tics = 7500
+		iCS --> Global simulation timestep is: 7750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 7750
+STEP 6 - SIMULATION PHASE - Tics = 7750
+STEP 7 - SIMULATION PHASE - Tics = 7750
+
+STEP 8 - SIMULATION PHASE - Tics = 7750
+STEP 9 - SIMULATION PHASE - Tics = 7750
+		iCS --> Global simulation timestep is: 8000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 8000
+STEP 6 - SIMULATION PHASE - Tics = 8000
+STEP 7 - SIMULATION PHASE - Tics = 8000
+
+STEP 8 - SIMULATION PHASE - Tics = 8000
+STEP 9 - SIMULATION PHASE - Tics = 8000
+		iCS --> Global simulation timestep is: 8250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 8250
+STEP 6 - SIMULATION PHASE - Tics = 8250
+STEP 7 - SIMULATION PHASE - Tics = 8250
+
+STEP 8 - SIMULATION PHASE - Tics = 8250
+STEP 9 - SIMULATION PHASE - Tics = 8250
+		iCS --> Global simulation timestep is: 8500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 8500
+STEP 6 - SIMULATION PHASE - Tics = 8500
+STEP 7 - SIMULATION PHASE - Tics = 8500
+
+STEP 8 - SIMULATION PHASE - Tics = 8500
+STEP 9 - SIMULATION PHASE - Tics = 8500
+		iCS --> Global simulation timestep is: 8750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 8750
+STEP 6 - SIMULATION PHASE - Tics = 8750
+STEP 7 - SIMULATION PHASE - Tics = 8750
+
+STEP 8 - SIMULATION PHASE - Tics = 8750
+STEP 9 - SIMULATION PHASE - Tics = 8750
+		iCS --> Global simulation timestep is: 9000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 9000
+STEP 6 - SIMULATION PHASE - Tics = 9000
+STEP 7 - SIMULATION PHASE - Tics = 9000
+
+STEP 8 - SIMULATION PHASE - Tics = 9000
+STEP 9 - SIMULATION PHASE - Tics = 9000
+		iCS --> Global simulation timestep is: 9250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 9250
+STEP 6 - SIMULATION PHASE - Tics = 9250
+STEP 7 - SIMULATION PHASE - Tics = 9250
+
+STEP 8 - SIMULATION PHASE - Tics = 9250
+STEP 9 - SIMULATION PHASE - Tics = 9250
+		iCS --> Global simulation timestep is: 9500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 9500
+STEP 6 - SIMULATION PHASE - Tics = 9500
+STEP 7 - SIMULATION PHASE - Tics = 9500
+
+STEP 8 - SIMULATION PHASE - Tics = 9500
+STEP 9 - SIMULATION PHASE - Tics = 9500
+		iCS --> Global simulation timestep is: 9750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 9750
+STEP 6 - SIMULATION PHASE - Tics = 9750
+STEP 7 - SIMULATION PHASE - Tics = 9750
+
+STEP 8 - SIMULATION PHASE - Tics = 9750
+STEP 9 - SIMULATION PHASE - Tics = 9750
+		iCS --> Global simulation timestep is: 10000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 10000
+STEP 6 - SIMULATION PHASE - Tics = 10000
+STEP 7 - SIMULATION PHASE - Tics = 10000
+
+STEP 8 - SIMULATION PHASE - Tics = 10000
+STEP 9 - SIMULATION PHASE - Tics = 10000
+		iCS --> Global simulation timestep is: 10250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 10250
+STEP 6 - SIMULATION PHASE - Tics = 10250
+STEP 7 - SIMULATION PHASE - Tics = 10250
+
+STEP 8 - SIMULATION PHASE - Tics = 10250
+STEP 9 - SIMULATION PHASE - Tics = 10250
+		iCS --> Global simulation timestep is: 10500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 10500
+STEP 6 - SIMULATION PHASE - Tics = 10500
+STEP 7 - SIMULATION PHASE - Tics = 10500
+
+STEP 8 - SIMULATION PHASE - Tics = 10500
+STEP 9 - SIMULATION PHASE - Tics = 10500
+		iCS --> Global simulation timestep is: 10750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 10750
+STEP 6 - SIMULATION PHASE - Tics = 10750
+STEP 7 - SIMULATION PHASE - Tics = 10750
+
+STEP 8 - SIMULATION PHASE - Tics = 10750
+STEP 9 - SIMULATION PHASE - Tics = 10750
+		iCS --> Global simulation timestep is: 11000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 11000
+STEP 6 - SIMULATION PHASE - Tics = 11000
+STEP 7 - SIMULATION PHASE - Tics = 11000
+
+STEP 8 - SIMULATION PHASE - Tics = 11000
+STEP 9 - SIMULATION PHASE - Tics = 11000
+		iCS --> Global simulation timestep is: 11250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 11250
+STEP 6 - SIMULATION PHASE - Tics = 11250
+STEP 7 - SIMULATION PHASE - Tics = 11250
+
+STEP 8 - SIMULATION PHASE - Tics = 11250
+STEP 9 - SIMULATION PHASE - Tics = 11250
+		iCS --> Global simulation timestep is: 11500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 11500
+STEP 6 - SIMULATION PHASE - Tics = 11500
+STEP 7 - SIMULATION PHASE - Tics = 11500
+
+STEP 8 - SIMULATION PHASE - Tics = 11500
+STEP 9 - SIMULATION PHASE - Tics = 11500
+		iCS --> Global simulation timestep is: 11750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 11750
+STEP 6 - SIMULATION PHASE - Tics = 11750
+STEP 7 - SIMULATION PHASE - Tics = 11750
+
+STEP 8 - SIMULATION PHASE - Tics = 11750
+STEP 9 - SIMULATION PHASE - Tics = 11750
+		iCS --> Global simulation timestep is: 12000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 12000
+STEP 6 - SIMULATION PHASE - Tics = 12000
+STEP 7 - SIMULATION PHASE - Tics = 12000
+
+STEP 8 - SIMULATION PHASE - Tics = 12000
+STEP 9 - SIMULATION PHASE - Tics = 12000
+		iCS --> Global simulation timestep is: 12250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 12250
+STEP 6 - SIMULATION PHASE - Tics = 12250
+STEP 7 - SIMULATION PHASE - Tics = 12250
+
+STEP 8 - SIMULATION PHASE - Tics = 12250
+STEP 9 - SIMULATION PHASE - Tics = 12250
+		iCS --> Global simulation timestep is: 12500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 12500
+STEP 6 - SIMULATION PHASE - Tics = 12500
+STEP 7 - SIMULATION PHASE - Tics = 12500
+
+STEP 8 - SIMULATION PHASE - Tics = 12500
+STEP 9 - SIMULATION PHASE - Tics = 12500
+		iCS --> Global simulation timestep is: 12750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 12750
+STEP 6 - SIMULATION PHASE - Tics = 12750
+STEP 7 - SIMULATION PHASE - Tics = 12750
+
+STEP 8 - SIMULATION PHASE - Tics = 12750
+STEP 9 - SIMULATION PHASE - Tics = 12750
+		iCS --> Global simulation timestep is: 13000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 13000
+STEP 6 - SIMULATION PHASE - Tics = 13000
+STEP 7 - SIMULATION PHASE - Tics = 13000
+
+STEP 8 - SIMULATION PHASE - Tics = 13000
+STEP 9 - SIMULATION PHASE - Tics = 13000
+		iCS --> Global simulation timestep is: 13250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 13250
+STEP 6 - SIMULATION PHASE - Tics = 13250
+STEP 7 - SIMULATION PHASE - Tics = 13250
+
+STEP 8 - SIMULATION PHASE - Tics = 13250
+STEP 9 - SIMULATION PHASE - Tics = 13250
+		iCS --> Global simulation timestep is: 13500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 13500
+STEP 6 - SIMULATION PHASE - Tics = 13500
+STEP 7 - SIMULATION PHASE - Tics = 13500
+
+STEP 8 - SIMULATION PHASE - Tics = 13500
+STEP 9 - SIMULATION PHASE - Tics = 13500
+		iCS --> Global simulation timestep is: 13750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 13750
+STEP 6 - SIMULATION PHASE - Tics = 13750
+STEP 7 - SIMULATION PHASE - Tics = 13750
+
+STEP 8 - SIMULATION PHASE - Tics = 13750
+STEP 9 - SIMULATION PHASE - Tics = 13750
+		iCS --> Global simulation timestep is: 14000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 14000
+STEP 6 - SIMULATION PHASE - Tics = 14000
+STEP 7 - SIMULATION PHASE - Tics = 14000
+
+STEP 8 - SIMULATION PHASE - Tics = 14000
+STEP 9 - SIMULATION PHASE - Tics = 14000
+		iCS --> Global simulation timestep is: 14250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 14250
+STEP 6 - SIMULATION PHASE - Tics = 14250
+STEP 7 - SIMULATION PHASE - Tics = 14250
+
+STEP 8 - SIMULATION PHASE - Tics = 14250
+STEP 9 - SIMULATION PHASE - Tics = 14250
+		iCS --> Global simulation timestep is: 14500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 14500
+STEP 6 - SIMULATION PHASE - Tics = 14500
+STEP 7 - SIMULATION PHASE - Tics = 14500
+
+STEP 8 - SIMULATION PHASE - Tics = 14500
+STEP 9 - SIMULATION PHASE - Tics = 14500
+		iCS --> Global simulation timestep is: 14750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 14750
+STEP 6 - SIMULATION PHASE - Tics = 14750
+STEP 7 - SIMULATION PHASE - Tics = 14750
+
+STEP 8 - SIMULATION PHASE - Tics = 14750
+STEP 9 - SIMULATION PHASE - Tics = 14750
+		iCS --> Global simulation timestep is: 15000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 15000
+STEP 6 - SIMULATION PHASE - Tics = 15000
+STEP 7 - SIMULATION PHASE - Tics = 15000
+
+STEP 8 - SIMULATION PHASE - Tics = 15000
+STEP 9 - SIMULATION PHASE - Tics = 15000
+		iCS --> Global simulation timestep is: 15250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 15250
+STEP 6 - SIMULATION PHASE - Tics = 15250
+STEP 7 - SIMULATION PHASE - Tics = 15250
+
+STEP 8 - SIMULATION PHASE - Tics = 15250
+STEP 9 - SIMULATION PHASE - Tics = 15250
+		iCS --> Global simulation timestep is: 15500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 15500
+STEP 6 - SIMULATION PHASE - Tics = 15500
+STEP 7 - SIMULATION PHASE - Tics = 15500
+
+STEP 8 - SIMULATION PHASE - Tics = 15500
+STEP 9 - SIMULATION PHASE - Tics = 15500
+		iCS --> Global simulation timestep is: 15750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 15750
+STEP 6 - SIMULATION PHASE - Tics = 15750
+STEP 7 - SIMULATION PHASE - Tics = 15750
+
+STEP 8 - SIMULATION PHASE - Tics = 15750
+STEP 9 - SIMULATION PHASE - Tics = 15750
+		iCS --> Global simulation timestep is: 16000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 16000
+STEP 6 - SIMULATION PHASE - Tics = 16000
+STEP 7 - SIMULATION PHASE - Tics = 16000
+
+STEP 8 - SIMULATION PHASE - Tics = 16000
+STEP 9 - SIMULATION PHASE - Tics = 16000
+		iCS --> Global simulation timestep is: 16250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 16250
+STEP 6 - SIMULATION PHASE - Tics = 16250
+STEP 7 - SIMULATION PHASE - Tics = 16250
+
+STEP 8 - SIMULATION PHASE - Tics = 16250
+STEP 9 - SIMULATION PHASE - Tics = 16250
+		iCS --> Global simulation timestep is: 16500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 16500
+STEP 6 - SIMULATION PHASE - Tics = 16500
+STEP 7 - SIMULATION PHASE - Tics = 16500
+
+STEP 8 - SIMULATION PHASE - Tics = 16500
+STEP 9 - SIMULATION PHASE - Tics = 16500
+		iCS --> Global simulation timestep is: 16750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 16750
+STEP 6 - SIMULATION PHASE - Tics = 16750
+STEP 7 - SIMULATION PHASE - Tics = 16750
+
+STEP 8 - SIMULATION PHASE - Tics = 16750
+STEP 9 - SIMULATION PHASE - Tics = 16750
+		iCS --> Global simulation timestep is: 17000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 17000
+STEP 6 - SIMULATION PHASE - Tics = 17000
+STEP 7 - SIMULATION PHASE - Tics = 17000
+
+STEP 8 - SIMULATION PHASE - Tics = 17000
+STEP 9 - SIMULATION PHASE - Tics = 17000
+		iCS --> Global simulation timestep is: 17250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 17250
+STEP 6 - SIMULATION PHASE - Tics = 17250
+STEP 7 - SIMULATION PHASE - Tics = 17250
+
+STEP 8 - SIMULATION PHASE - Tics = 17250
+STEP 9 - SIMULATION PHASE - Tics = 17250
+		iCS --> Global simulation timestep is: 17500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 17500
+STEP 6 - SIMULATION PHASE - Tics = 17500
+STEP 7 - SIMULATION PHASE - Tics = 17500
+
+STEP 8 - SIMULATION PHASE - Tics = 17500
+STEP 9 - SIMULATION PHASE - Tics = 17500
+		iCS --> Global simulation timestep is: 17750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 17750
+STEP 6 - SIMULATION PHASE - Tics = 17750
+STEP 7 - SIMULATION PHASE - Tics = 17750
+
+STEP 8 - SIMULATION PHASE - Tics = 17750
+STEP 9 - SIMULATION PHASE - Tics = 17750
+		iCS --> Global simulation timestep is: 18000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 18000
+STEP 6 - SIMULATION PHASE - Tics = 18000
+STEP 7 - SIMULATION PHASE - Tics = 18000
+
+STEP 8 - SIMULATION PHASE - Tics = 18000
+STEP 9 - SIMULATION PHASE - Tics = 18000
+		iCS --> Global simulation timestep is: 18250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 18250
+STEP 6 - SIMULATION PHASE - Tics = 18250
+STEP 7 - SIMULATION PHASE - Tics = 18250
+
+STEP 8 - SIMULATION PHASE - Tics = 18250
+STEP 9 - SIMULATION PHASE - Tics = 18250
+		iCS --> Global simulation timestep is: 18500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 18500
+STEP 6 - SIMULATION PHASE - Tics = 18500
+STEP 7 - SIMULATION PHASE - Tics = 18500
+
+STEP 8 - SIMULATION PHASE - Tics = 18500
+STEP 9 - SIMULATION PHASE - Tics = 18500
+		iCS --> Global simulation timestep is: 18750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 18750
+STEP 6 - SIMULATION PHASE - Tics = 18750
+STEP 7 - SIMULATION PHASE - Tics = 18750
+
+STEP 8 - SIMULATION PHASE - Tics = 18750
+STEP 9 - SIMULATION PHASE - Tics = 18750
+		iCS --> Global simulation timestep is: 19000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 19000
+STEP 6 - SIMULATION PHASE - Tics = 19000
+STEP 7 - SIMULATION PHASE - Tics = 19000
+
+STEP 8 - SIMULATION PHASE - Tics = 19000
+STEP 9 - SIMULATION PHASE - Tics = 19000
+		iCS --> Global simulation timestep is: 19250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 19250
+STEP 6 - SIMULATION PHASE - Tics = 19250
+STEP 7 - SIMULATION PHASE - Tics = 19250
+
+STEP 8 - SIMULATION PHASE - Tics = 19250
+STEP 9 - SIMULATION PHASE - Tics = 19250
+		iCS --> Global simulation timestep is: 19500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 19500
+STEP 6 - SIMULATION PHASE - Tics = 19500
+STEP 7 - SIMULATION PHASE - Tics = 19500
+
+STEP 8 - SIMULATION PHASE - Tics = 19500
+STEP 9 - SIMULATION PHASE - Tics = 19500
+		iCS --> Global simulation timestep is: 19750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 19750
+STEP 6 - SIMULATION PHASE - Tics = 19750
+STEP 7 - SIMULATION PHASE - Tics = 19750
+
+STEP 8 - SIMULATION PHASE - Tics = 19750
+STEP 9 - SIMULATION PHASE - Tics = 19750
+		iCS --> Global simulation timestep is: 20000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 20000
+STEP 6 - SIMULATION PHASE - Tics = 20000
+STEP 7 - SIMULATION PHASE - Tics = 20000
+
+STEP 8 - SIMULATION PHASE - Tics = 20000
+STEP 9 - SIMULATION PHASE - Tics = 20000
+		iCS --> Global simulation timestep is: 20250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 20250
+STEP 6 - SIMULATION PHASE - Tics = 20250
+STEP 7 - SIMULATION PHASE - Tics = 20250
+
+STEP 8 - SIMULATION PHASE - Tics = 20250
+STEP 9 - SIMULATION PHASE - Tics = 20250
+		iCS --> Global simulation timestep is: 20500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 20500
+STEP 6 - SIMULATION PHASE - Tics = 20500
+STEP 7 - SIMULATION PHASE - Tics = 20500
+
+STEP 8 - SIMULATION PHASE - Tics = 20500
+STEP 9 - SIMULATION PHASE - Tics = 20500
+		iCS --> Global simulation timestep is: 20750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 20750
+STEP 6 - SIMULATION PHASE - Tics = 20750
+STEP 7 - SIMULATION PHASE - Tics = 20750
+
+STEP 8 - SIMULATION PHASE - Tics = 20750
+STEP 9 - SIMULATION PHASE - Tics = 20750
+		iCS --> Global simulation timestep is: 21000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 21000
+STEP 6 - SIMULATION PHASE - Tics = 21000
+STEP 7 - SIMULATION PHASE - Tics = 21000
+
+STEP 8 - SIMULATION PHASE - Tics = 21000
+STEP 9 - SIMULATION PHASE - Tics = 21000
+		iCS --> Global simulation timestep is: 21250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 21250
+STEP 6 - SIMULATION PHASE - Tics = 21250
+STEP 7 - SIMULATION PHASE - Tics = 21250
+
+STEP 8 - SIMULATION PHASE - Tics = 21250
+STEP 9 - SIMULATION PHASE - Tics = 21250
+		iCS --> Global simulation timestep is: 21500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 21500
+STEP 6 - SIMULATION PHASE - Tics = 21500
+STEP 7 - SIMULATION PHASE - Tics = 21500
+
+STEP 8 - SIMULATION PHASE - Tics = 21500
+STEP 9 - SIMULATION PHASE - Tics = 21500
+		iCS --> Global simulation timestep is: 21750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 21750
+STEP 6 - SIMULATION PHASE - Tics = 21750
+STEP 7 - SIMULATION PHASE - Tics = 21750
+
+STEP 8 - SIMULATION PHASE - Tics = 21750
+STEP 9 - SIMULATION PHASE - Tics = 21750
+		iCS --> Global simulation timestep is: 22000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 22000
+STEP 6 - SIMULATION PHASE - Tics = 22000
+STEP 7 - SIMULATION PHASE - Tics = 22000
+
+STEP 8 - SIMULATION PHASE - Tics = 22000
+STEP 9 - SIMULATION PHASE - Tics = 22000
+		iCS --> Global simulation timestep is: 22250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 22250
+STEP 6 - SIMULATION PHASE - Tics = 22250
+STEP 7 - SIMULATION PHASE - Tics = 22250
+
+STEP 8 - SIMULATION PHASE - Tics = 22250
+STEP 9 - SIMULATION PHASE - Tics = 22250
+		iCS --> Global simulation timestep is: 22500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 22500
+STEP 6 - SIMULATION PHASE - Tics = 22500
+STEP 7 - SIMULATION PHASE - Tics = 22500
+
+STEP 8 - SIMULATION PHASE - Tics = 22500
+STEP 9 - SIMULATION PHASE - Tics = 22500
+		iCS --> Global simulation timestep is: 22750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 22750
+STEP 6 - SIMULATION PHASE - Tics = 22750
+STEP 7 - SIMULATION PHASE - Tics = 22750
+
+STEP 8 - SIMULATION PHASE - Tics = 22750
+STEP 9 - SIMULATION PHASE - Tics = 22750
+		iCS --> Global simulation timestep is: 23000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 23000
+STEP 6 - SIMULATION PHASE - Tics = 23000
+STEP 7 - SIMULATION PHASE - Tics = 23000
+
+STEP 8 - SIMULATION PHASE - Tics = 23000
+STEP 9 - SIMULATION PHASE - Tics = 23000
+		iCS --> Global simulation timestep is: 23250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 23250
+STEP 6 - SIMULATION PHASE - Tics = 23250
+STEP 7 - SIMULATION PHASE - Tics = 23250
+
+STEP 8 - SIMULATION PHASE - Tics = 23250
+STEP 9 - SIMULATION PHASE - Tics = 23250
+		iCS --> Global simulation timestep is: 23500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 23500
+STEP 6 - SIMULATION PHASE - Tics = 23500
+STEP 7 - SIMULATION PHASE - Tics = 23500
+
+STEP 8 - SIMULATION PHASE - Tics = 23500
+STEP 9 - SIMULATION PHASE - Tics = 23500
+		iCS --> Global simulation timestep is: 23750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 23750
+STEP 6 - SIMULATION PHASE - Tics = 23750
+STEP 7 - SIMULATION PHASE - Tics = 23750
+
+STEP 8 - SIMULATION PHASE - Tics = 23750
+STEP 9 - SIMULATION PHASE - Tics = 23750
+		iCS --> Global simulation timestep is: 24000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 24000
+STEP 6 - SIMULATION PHASE - Tics = 24000
+STEP 7 - SIMULATION PHASE - Tics = 24000
+
+STEP 8 - SIMULATION PHASE - Tics = 24000
+STEP 9 - SIMULATION PHASE - Tics = 24000
+		iCS --> Global simulation timestep is: 24250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 24250
+STEP 6 - SIMULATION PHASE - Tics = 24250
+STEP 7 - SIMULATION PHASE - Tics = 24250
+
+STEP 8 - SIMULATION PHASE - Tics = 24250
+STEP 9 - SIMULATION PHASE - Tics = 24250
+		iCS --> Global simulation timestep is: 24500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 24500
+STEP 6 - SIMULATION PHASE - Tics = 24500
+STEP 7 - SIMULATION PHASE - Tics = 24500
+
+STEP 8 - SIMULATION PHASE - Tics = 24500
+STEP 9 - SIMULATION PHASE - Tics = 24500
+		iCS --> Global simulation timestep is: 24750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 24750
+STEP 6 - SIMULATION PHASE - Tics = 24750
+STEP 7 - SIMULATION PHASE - Tics = 24750
+
+STEP 8 - SIMULATION PHASE - Tics = 24750
+STEP 9 - SIMULATION PHASE - Tics = 24750
+		iCS --> Global simulation timestep is: 25000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 25000
+STEP 6 - SIMULATION PHASE - Tics = 25000
+STEP 7 - SIMULATION PHASE - Tics = 25000
+
+STEP 8 - SIMULATION PHASE - Tics = 25000
+STEP 9 - SIMULATION PHASE - Tics = 25000
+		iCS --> Global simulation timestep is: 25250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 25250
+STEP 6 - SIMULATION PHASE - Tics = 25250
+STEP 7 - SIMULATION PHASE - Tics = 25250
+
+STEP 8 - SIMULATION PHASE - Tics = 25250
+STEP 9 - SIMULATION PHASE - Tics = 25250
+		iCS --> Global simulation timestep is: 25500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 25500
+STEP 6 - SIMULATION PHASE - Tics = 25500
+STEP 7 - SIMULATION PHASE - Tics = 25500
+
+STEP 8 - SIMULATION PHASE - Tics = 25500
+STEP 9 - SIMULATION PHASE - Tics = 25500
+		iCS --> Global simulation timestep is: 25750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 25750
+STEP 6 - SIMULATION PHASE - Tics = 25750
+STEP 7 - SIMULATION PHASE - Tics = 25750
+
+STEP 8 - SIMULATION PHASE - Tics = 25750
+STEP 9 - SIMULATION PHASE - Tics = 25750
+		iCS --> Global simulation timestep is: 26000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 26000
+STEP 6 - SIMULATION PHASE - Tics = 26000
+STEP 7 - SIMULATION PHASE - Tics = 26000
+
+STEP 8 - SIMULATION PHASE - Tics = 26000
+STEP 9 - SIMULATION PHASE - Tics = 26000
+		iCS --> Global simulation timestep is: 26250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 26250
+STEP 6 - SIMULATION PHASE - Tics = 26250
+STEP 7 - SIMULATION PHASE - Tics = 26250
+
+STEP 8 - SIMULATION PHASE - Tics = 26250
+STEP 9 - SIMULATION PHASE - Tics = 26250
+		iCS --> Global simulation timestep is: 26500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 26500
+STEP 6 - SIMULATION PHASE - Tics = 26500
+STEP 7 - SIMULATION PHASE - Tics = 26500
+
+STEP 8 - SIMULATION PHASE - Tics = 26500
+STEP 9 - SIMULATION PHASE - Tics = 26500
+		iCS --> Global simulation timestep is: 26750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 26750
+STEP 6 - SIMULATION PHASE - Tics = 26750
+STEP 7 - SIMULATION PHASE - Tics = 26750
+
+STEP 8 - SIMULATION PHASE - Tics = 26750
+STEP 9 - SIMULATION PHASE - Tics = 26750
+		iCS --> Global simulation timestep is: 27000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 27000
+STEP 6 - SIMULATION PHASE - Tics = 27000
+STEP 7 - SIMULATION PHASE - Tics = 27000
+
+STEP 8 - SIMULATION PHASE - Tics = 27000
+STEP 9 - SIMULATION PHASE - Tics = 27000
+		iCS --> Global simulation timestep is: 27250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 27250
+STEP 6 - SIMULATION PHASE - Tics = 27250
+STEP 7 - SIMULATION PHASE - Tics = 27250
+
+STEP 8 - SIMULATION PHASE - Tics = 27250
+STEP 9 - SIMULATION PHASE - Tics = 27250
+		iCS --> Global simulation timestep is: 27500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 27500
+STEP 6 - SIMULATION PHASE - Tics = 27500
+STEP 7 - SIMULATION PHASE - Tics = 27500
+
+STEP 8 - SIMULATION PHASE - Tics = 27500
+STEP 9 - SIMULATION PHASE - Tics = 27500
+		iCS --> Global simulation timestep is: 27750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 27750
+STEP 6 - SIMULATION PHASE - Tics = 27750
+STEP 7 - SIMULATION PHASE - Tics = 27750
+
+STEP 8 - SIMULATION PHASE - Tics = 27750
+STEP 9 - SIMULATION PHASE - Tics = 27750
+		iCS --> Global simulation timestep is: 28000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 28000
+STEP 6 - SIMULATION PHASE - Tics = 28000
+STEP 7 - SIMULATION PHASE - Tics = 28000
+
+STEP 8 - SIMULATION PHASE - Tics = 28000
+STEP 9 - SIMULATION PHASE - Tics = 28000
+		iCS --> Global simulation timestep is: 28250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 28250
+STEP 6 - SIMULATION PHASE - Tics = 28250
+STEP 7 - SIMULATION PHASE - Tics = 28250
+
+STEP 8 - SIMULATION PHASE - Tics = 28250
+STEP 9 - SIMULATION PHASE - Tics = 28250
+		iCS --> Global simulation timestep is: 28500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 28500
+STEP 6 - SIMULATION PHASE - Tics = 28500
+STEP 7 - SIMULATION PHASE - Tics = 28500
+
+STEP 8 - SIMULATION PHASE - Tics = 28500
+STEP 9 - SIMULATION PHASE - Tics = 28500
+		iCS --> Global simulation timestep is: 28750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 28750
+STEP 6 - SIMULATION PHASE - Tics = 28750
+STEP 7 - SIMULATION PHASE - Tics = 28750
+
+STEP 8 - SIMULATION PHASE - Tics = 28750
+STEP 9 - SIMULATION PHASE - Tics = 28750
+		iCS --> Global simulation timestep is: 29000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 29000
+STEP 6 - SIMULATION PHASE - Tics = 29000
+STEP 7 - SIMULATION PHASE - Tics = 29000
+
+STEP 8 - SIMULATION PHASE - Tics = 29000
+STEP 9 - SIMULATION PHASE - Tics = 29000
+		iCS --> Global simulation timestep is: 29250; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 29250
+STEP 6 - SIMULATION PHASE - Tics = 29250
+STEP 7 - SIMULATION PHASE - Tics = 29250
+
+STEP 8 - SIMULATION PHASE - Tics = 29250
+STEP 9 - SIMULATION PHASE - Tics = 29250
+		iCS --> Global simulation timestep is: 29500; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 29500
+STEP 6 - SIMULATION PHASE - Tics = 29500
+STEP 7 - SIMULATION PHASE - Tics = 29500
+
+STEP 8 - SIMULATION PHASE - Tics = 29500
+STEP 9 - SIMULATION PHASE - Tics = 29500
+		iCS --> Global simulation timestep is: 29750; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 29750
+STEP 6 - SIMULATION PHASE - Tics = 29750
+STEP 7 - SIMULATION PHASE - Tics = 29750
+
+STEP 8 - SIMULATION PHASE - Tics = 29750
+STEP 9 - SIMULATION PHASE - Tics = 29750
+		iCS --> Global simulation timestep is: 30000; last step is: 30000
+		============================================================
+STEP 5 - SIMULATION PHASE - Tics = 30000
+STEP 6 - SIMULATION PHASE - Tics = 30000
+STEP 7 - SIMULATION PHASE - Tics = 30000
+
+STEP 8 - SIMULATION PHASE - Tics = 30000
+STEP 9 - SIMULATION PHASE - Tics = 30000
+ns-3 server --> Finishing server.... 
+
+Success.
+Elapsed time (in seconds): 7.00
+Step #0.00 (0ms ?*RT. ?UPS, TraCI: 1026ms, vehicles TOT 10 ACT 10 BUF 6)      Step #1.00 (0ms ?*RT. ?UPS, TraCI: 89ms, vehicles TOT 10 ACT 10 BUF 6)        Step #2.00 (34ms ~= 29.41*RT, ~352.94UPS, TraCI: 19ms, vehicles TOT 12 ACT 12 Step #3.00 (1ms ~= 1000.00*RT, ~15000.00UPS, TraCI: 37ms, vehicles TOT 15 ACT Step #4.00 (0ms ?*RT. ?UPS, TraCI: 44ms, vehicles TOT 20 ACT 20 BUF 4)        Step #5.00 (0ms ?*RT. ?UPS, TraCI: 69ms, vehicles TOT 21 ACT 21 BUF 5)        Step #6.00 (0ms ?*RT. ?UPS, TraCI: 45ms, vehicles TOT 22 ACT 22 BUF 5)        Step #7.00 (0ms ?*RT. ?UPS, TraCI: 54ms, vehicles TOT 25 ACT 25 BUF 5)        Step #8.00 (0ms ?*RT. ?UPS, TraCI: 92ms, vehicles TOT 29 ACT 29 BUF 3)        Step #9.00 (0ms ?*RT. ?UPS, TraCI: 115ms, vehicles TOT 31 ACT 31 BUF 4)       Step #10.00 (0ms ?*RT. ?UPS, TraCI: 102ms, vehicles TOT 34 ACT 34 BUF 4)      Step #11.00 (0ms ?*RT. ?UPS, TraCI: 107ms, vehicles TOT 37 ACT 37 BUF 3)      Step #12.00 (0ms ?*RT. ?UPS, TraCI: 130ms, vehicles TOT 39 ACT 39 BUF 3)      Step #13.00 (0ms ?*RT. ?UPS, TraCI: 139ms, vehicles TOT 42 ACT 42 BUF 2)      Step #14.00 (1ms ~= 1000.00*RT, ~45000.00UPS, TraCI: 161ms, vehicles TOT 45 ACStep #15.00 (0ms ?*RT. ?UPS, TraCI: 147ms, vehicles TOT 47 ACT 47 BUF 2)      Step #16.00 (0ms ?*RT. ?UPS, TraCI: 138ms, vehicles TOT 48 ACT 48 BUF 2)      Step #17.00 (1ms ~= 1000.00*RT, ~52000.00UPS, TraCI: 139ms, vehicles TOT 52 ACStep #18.00 (0ms ?*RT. ?UPS, TraCI: 256ms, vehicles TOT 55 ACT 55 BUF 3)      Step #19.00 (1ms ~= 1000.00*RT, ~55000.00UPS, TraCI: 187ms, vehicles TOT 55 ACStep #20.00 (1ms ~= 1000.00*RT, ~57000.00UPS, TraCI: 180ms, vehicles TOT 57 ACStep #21.00 (1ms ~= 1000.00*RT, ~62000.00UPS, TraCI: 172ms, vehicles TOT 62 ACStep #22.00 (1ms ~= 1000.00*RT, ~63000.00UPS, TraCI: 215ms, vehicles TOT 63 ACStep #23.00 (0ms ?*RT. ?UPS, TraCI: 199ms, vehicles TOT 66 ACT 66 BUF 1)      Step #24.00 (1ms ~= 1000.00*RT, ~69000.00UPS, TraCI: 201ms, vehicles TOT 69 ACStep #25.00 (1ms ~= 1000.00*RT, ~71000.00UPS, TraCI: 179ms, vehicles TOT 71 ACStep #26.00 (1ms ~= 1000.00*RT, ~73000.00UPS, TraCI: 213ms, vehicles TOT 73 ACStep #27.00 (1ms ~= 1000.00*RT, ~76000.00UPS, TraCI: 230ms, vehicles TOT 76 ACStep #28.00 (1ms ~= 1000.00*RT, ~78000.00UPS, TraCI: 206ms, vehicles TOT 78 ACStep #29.00 (0ms ?*RT. ?UPS, TraCI: 195ms, vehicles TOT 81 ACT 81 BUF 1)      Step #30.00 (1ms ~= 1000.00*RT, ~83000.00UPS, TraCI: 51ms, vehicles TOT 83 ACT
