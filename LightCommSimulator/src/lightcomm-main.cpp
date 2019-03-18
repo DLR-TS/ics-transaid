@@ -100,7 +100,7 @@ int main(int argc, char **argv)
     	std::cout << "Lightcomm: Wrong number of command line arguments" << endl;
         return -1;
     }
-    char * configFile;
+    char * configFile = nullptr;
     int port = -1;
     if (argc == 2) {
         configFile = argv[1];
@@ -108,14 +108,16 @@ int main(int argc, char **argv)
         std::string arg(argv[1]);
         if (arg == "-c") {
             configFile = argv[2];
+        } else if (arg == "--remote-port") {
+            port = atoi(argv[2]);
         } else {
-          //  Console::Error("Expected '-c' read " + arg + " Usage: lightcomm [-c] <config-file> [--remote-port <port>]");
-        	std::cout << "Expected '-c' read " + arg + " Usage: lightcomm [-c] <config-file> [--remote-port <port>]" << endl;
-            return -2;
+              //  Console::Error("Expected '-c' read " + arg + " Usage: lightcomm [-c] <config-file> [--remote-port <port>]");
+                std::cout << "Expected '-c' or '--remote-port' but read " + arg + " Usage: lightcomm [[-c] <config-file> | --remote-port <port>]" << endl;
+                return -2;
         }
         if (argc == 5) {
             arg = std::string(argv[3]);
-            if (arg == "--remotePort") {
+            if (arg == "--remote-port") {
                 port = atoi(argv[4]);
             } else {
                 //Console::Error("Expected '--remote-port' read " + arg + " Usage: lightcomm [-c] <config-file> [--remote-port <port>]");

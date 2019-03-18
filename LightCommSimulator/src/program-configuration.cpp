@@ -56,24 +56,30 @@ namespace lightcomm
         std::cout << "Lightcomm: Loading Configuration" << endl;
 
 
-        XMLDocument * doc = new XMLDocument();
-		XMLError result = doc->LoadFile(fileName);
-		if (result != XML_NO_ERROR)
-		{
-            std::cout << "Lightcomm: XML ERROR" << endl;
-            return EXIT_FAILURE;
-		}
+        if (port == -1) {
+            XMLDocument * doc = new XMLDocument();
+            XMLError result = doc->LoadFile(fileName);
+            if (result != XML_NO_ERROR)
+            {
+                std::cout << "Lightcomm: XML ERROR loading file '" << string(fileName) << endl;
+                return EXIT_FAILURE;
+            }
 
-        XMLElement *xmlElem =  doc->RootElement()->FirstChildElement("port");
-        if (!xmlElem)
-        {
-            return EXIT_FAILURE;
+            XMLElement *xmlElem =  doc->RootElement()->FirstChildElement("port");
+            if (!xmlElem)
+            {
+                return EXIT_FAILURE;
+            }
+            delete doc;
+            m_socket = xmlElem->IntAttribute("value");
+        } else {
+            // a port was given via command line -> overrides config file
+            if (fileName != nullptr) {
+                std::cout << "LightComm -> Note: port given via command line overrides port specified in config file!" << std::endl;
+            }
+            m_socket = port;
         }
-        // m_socket = xmlElem->IntAttribute("value"); Commented to obtain directly the port from the iCS
-        m_socket = port;
-        std::cout << "The port employed is " << m_socket << endl;
-
-		delete doc;
+	    std::cout << "LightComm listening on port " << m_socket << endl;
 		return EXIT_SUCCESS;
 	}
 
