@@ -44,6 +44,7 @@
 #include "structs.h"
 #include "application/model/headers.h"
 
+
 using namespace baseapp;
 using namespace baseapp::application;
 
@@ -138,6 +139,10 @@ namespace testapp
                 TransaidHeader::McmRsuInfo * m_lastMCMsent;
                 TransaidHeader::MapInfo * m_lastMAPsent;
                 TransaidHeader::IviInfo * m_lastIVIsent;
+
+                //CPM object detection
+				typedef std::map<int, baseapp::application::Node*> NodeMap;
+				NodeMap m_NodeMap;
 		};
 
 	} /* namespace application */

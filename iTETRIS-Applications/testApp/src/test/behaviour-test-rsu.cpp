@@ -334,6 +334,12 @@ namespace testapp
 
             // Check CPM Tx
 
+            m_NodeMap  = GetController()->GetAllNodes() ;
+
+            for (NodeMap::const_iterator it = m_NodeMap.begin(); it != m_NodeMap.end(); ++it)
+                std::cout <<  "Obtained information about node " << it->second->getId()  << " of type " <<   it->second->getNodeType() << std::endl;
+
+
 			if (m_lastCPMsent == nullptr || (CurrentTime::Now() - m_lastCPMsent->generationTime)>1000  )
 			{
 
