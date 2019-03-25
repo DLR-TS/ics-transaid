@@ -41,15 +41,18 @@
 #include "log/log.h"
 #include "log/ToString.h"
 
+#include "node.h"
 #include "fixed-station.h"
+#include "behaviour-factory.h"
+#include "TMCBehaviour.h"
 #include <sstream>
 #include <climits>
+#include <vector>
 
 namespace baseapp
 {
 	namespace server
 	{
-
 		using namespace std;
 		using namespace application;
 
@@ -59,6 +62,7 @@ namespace baseapp
 		{
 			m_storage = new PayloadStorage();
 			m_timeStepBuffer = new CircularBuffer<int>(ProgramConfiguration::GetMessageLifetime());
+			m_TMCBehaviour = factory->createTMCBehaviour();
 		}
 
 		NodeHandler::~NodeHandler()
@@ -71,6 +75,7 @@ namespace baseapp
 			}
 			delete m_storage;
 			delete m_timeStepBuffer;
+			delete m_TMCBehaviour;
 		}
 
 		void NodeHandler::updateTimeStep(const int timeStep)
@@ -100,13 +105,26 @@ namespace baseapp
 			return false;
 		}
 
+		void NodeHandler::addNode(application::Node * node) {
+            m_nodes.insert(std::make_pair(node->getId(), node));
+            if (node->isFixed()) {
+                // Memorize RSUs in separate container
+                m_RSUs.insert(std::make_pair(node->getId(), node));
+                if (m_TMCBehaviour != nullptr) {
+                    // Provide the TMC access to the RSU's sending facilities.
+                    m_TMCBehaviour->addRSU(node->getController());
+                }
+            }
+		}
+
+
         bool NodeHandler::createMobileNode(const int nodeId, const int ns3NodeId, const std::string & sumoNodeId,
                 const std::string & sumoType, const std::string & sumoClass)
         {
             if (m_nodes.find(nodeId) != m_nodes.end())
                 return false;
             Node * node = new MobileNode(nodeId, ns3NodeId, sumoNodeId, sumoType, sumoClass, m_factory);
-            ostringstream oss;
+            std::ostringstream oss;
             oss << "Added new mobile node with id " << nodeId << " ns3id " << ns3NodeId << " sumoId " << sumoNodeId
                     << " sumoType " << sumoType << " sumoClass " << sumoClass;
             Log::WriteLog(oss);
@@ -124,7 +142,7 @@ namespace baseapp
                 delete nodeIt->second;
                 m_nodes.erase(nodeIt);
             }
-            ostringstream oss;
+            std::ostringstream oss;
             oss << "Removed mobile node with id " << nodeId << " ns3id " << ns3NodeId << " sumoId " << sumoNodeId;
             Log::WriteLog(oss);
             return true;
@@ -138,11 +156,11 @@ namespace baseapp
 				if (ProgramConfiguration::IsRsu(nodeId))
 				{
 					node = new FixedStation(nodeId, m_factory);
-					Log::WriteLog(ostringstream("Added new fixed station with id " + toString(nodeId)));
+					Log::WriteLog(std::ostringstream("Added new fixed station with id " + toString(nodeId)));
 				} else
 				{
 					node = new MobileNode(nodeId, m_factory);
-					Log::WriteLog(ostringstream("Added new mobile node with id " + toString(nodeId)));
+					Log::WriteLog(std::ostringstream("Added new mobile node with id " + toString(nodeId)));
 				}
 				addNode(node);
 			}
@@ -162,10 +180,10 @@ namespace baseapp
 			return true;
 		}
 
-		int NodeHandler::mobilityInformation(const int nodeId, const vector<MobilityInfo*> & info)
+		int NodeHandler::mobilityInformation(const int nodeId, const std::vector<MobilityInfo*> & info)
 		{
 			int count = 0;
-			for (vector<MobilityInfo*>::const_iterator it = info.begin(); it != info.end(); ++it)
+			for (std::vector<MobilityInfo*>::const_iterator it = info.begin(); it != info.end(); ++it)
 			{
 				Node * node;
 				if (getNode((*it)->id, node))
@@ -180,7 +198,7 @@ namespace baseapp
 						node = new FixedStation((*it)->id, m_factory);
 						node->updateMobilityInformation(*it);
 					}
-					Log::WriteLog(ostringstream("Added new node with id " + toString((*it)->id)));
+					Log::WriteLog(std::ostringstream("Added new node with id " + toString((*it)->id)));
 					++count;
 					addNode(node);
 				}
@@ -193,15 +211,15 @@ namespace baseapp
 			return count;
 		}
 
-		string NodeHandler::insertPayload(const Payload* payload, bool deleteOnRead)
+		std::string NodeHandler::insertPayload(const Payload* payload, bool deleteOnRead)
 		{
 			StoragePolicy policy = deleteOnRead ? kDeleteOnRead : kMultipleRead;
 			return m_storage->insert(payload, policy);
 		}
 
-		void NodeHandler::applicationMessageReceive(const vector<Message> & messages)
+		void NodeHandler::applicationMessageReceive(const std::vector<Message> & messages)
 		{
-			for (vector<Message>::const_iterator it = messages.begin(); it != messages.end(); ++it)
+			for (std::vector<Message>::const_iterator it = messages.begin(); it != messages.end(); ++it)
 			{
 				Node * node;
 				if (getNode(it->m_destinationId, node))
@@ -210,6 +228,11 @@ namespace baseapp
 					if (m_storage->find(it->m_extra, payload))
 						payload->snr = it->m_snr;
 					node->applicationMessageReceive(it->m_messageId, payload);
+					if (node->isFixed() && m_TMCBehaviour != nullptr) {
+					    // send a copy of the received message to the TMC
+					    m_TMCBehaviour->ReceiveMessage(node->getId(), payload, it->m_messageId);
+					}
+
 					//The payload is deleted if necessary
 					if (m_storage->asPolicy(it->m_extra) == kDeleteOnRead)
 						delete payload;
@@ -224,9 +247,27 @@ namespace baseapp
 			Node * node;
 			if (getNode(nodeId, node))
 			{
-				return node->applicationExecute(data);
+				const bool res = node->applicationExecute(data);
+                if (node->isFixed()) {
+                    // Trigger TMC execution after RSU execution
+                    checkTMCExecution(node);
+                }
+                return res;
 			}
 			return false;
+		}
+
+		void NodeHandler::checkTMCExecution(const Node* node) {
+		    if (m_TMCBehaviour != nullptr) {
+		        m_remainingRSUs.erase(node->getId());
+		        if (m_remainingRSUs.empty()) {
+		            // The last RSU has been executed => Execute the TMC and reset the execution list
+		            m_TMCBehaviour->Execute();
+		            for (auto& p : m_RSUs) {
+		                m_remainingRSUs.insert(p.first);
+		            }
+		        }
+		    }
 		}
 
 		void NodeHandler::ConfirmSubscription(const int nodeId, const int subscriptionId, const bool status)
@@ -237,14 +278,14 @@ namespace baseapp
 				if (getNode(nodeId, node))
 				{
 					node->setToUnsubscribe(subscriptionId);
-					ostringstream log;
+					std::ostringstream log;
 					log << "[Node " << nodeId << "] Confirmed subscription " << subscriptionId
 							<< ". Will be unsuscribed on the next timestep";
 					Log::WriteLog(log);
 				}
 			} else
 			{
-				ostringstream log;
+			    std::ostringstream log;
 				log << "[Node " << nodeId << "] Error scheduling subscription " << subscriptionId;
 				Log::Write(log, kLogLevelWarning);
 			}

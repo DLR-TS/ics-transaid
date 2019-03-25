@@ -38,6 +38,7 @@
 #define NODEHANDLER_H_
 
 #include <map>
+#include <set>
 #include "payload-storage.h"
 #include "circular-buffer.h"
 #include "structs.h"
@@ -50,6 +51,7 @@ namespace baseapp
 	{
 		class BehaviourFactory;
 		class FixedStation;
+		class TMCBehaviour;
 	}
 	namespace server
 	{
@@ -69,10 +71,7 @@ namespace baseapp
 					return m_nodes.count(id);
 				}
 
-				inline void addNode(application::Node * node)
-				{
-					m_nodes.insert(std::make_pair(node->getId(), node));
-				}
+				void addNode(application::Node * node);
 
 				inline bool asMobileNode(application::Node * node, application::MobileNode *& mobileNode) const
 				{
@@ -122,9 +121,26 @@ namespace baseapp
 				}
 
 			private:
-				NodeMap m_nodes;
+				/// @brief This method monitores the execution of RSU Behaviours and if all have been executed,
+				///        executes the TMC Behaviour, if existent.
+				void checkTMCExecution(const application::Node * node);
+
+                NodeMap m_nodes;
+
+                /// @brief IDs of all rsu known to the application
+                /// @note This knowledge is used to monitor the execution of all RSU-residing logic
+                ///       and to trigger the execution of the TMC Behaviour, if such exists (@see BehaviourFactory)
+                std::map<int, application::Node*> m_RSUs;
+                /// @brief If a TMC Behaviour exists, this ID-list is used to keep track of which RSUs did not yet complete their logic
+                ///        If the last RSU executed, the TMC Behaviour is executed as well.
+                std::set<int> m_remainingRSUs;
+
 				PayloadStorage * m_storage;
 				CircularBuffer<int> * m_timeStepBuffer;
+
+				/// @brief Logic for the traffic management control, @see BehaviourFactory
+				///        The TMC Behaviour receives a copy of all received messages for the RSUs
+				application::TMCBehaviour * m_TMCBehaviour;
 				application::BehaviourFactory* m_factory;
 				static std::string emptyString;
 		};

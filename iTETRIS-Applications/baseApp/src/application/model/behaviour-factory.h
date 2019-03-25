@@ -45,6 +45,7 @@ namespace baseapp
 
 		class iCSInterface;
 		class Node;
+		class TMCBehaviour;
 
 		/**
 		 * Default factory for the behaviour instances
@@ -56,10 +57,16 @@ namespace baseapp
 			 * @brief Create one or several new RSU behaviour(s) and add them to the interface
 			 */
 			virtual void createRSUBehaviour(iCSInterface* interface, Node* node) = 0;
-			/**
-			 * @brief Create one or several new node behaviour(s) and add them to the interface
-			 */
-			virtual void createNodeBehaviour(iCSInterface* interface, Node* node) = 0;
+            /**
+             * @brief Create one or several new node behaviour(s) and add them to the interface
+             */
+            virtual void createNodeBehaviour(iCSInterface* interface, Node* node) = 0;
+            /**
+             * @brief Create a new TMC behaviour, the caller is responsible for deletion
+             */
+            virtual TMCBehaviour * createTMCBehaviour() {
+                return nullptr;
+            }
 		};
 
 	} /* namespace application */
