@@ -51,8 +51,13 @@ testApp_getDrivingDistance
 # Tests transaid headers
 test_V2XmsgSet
 
+
 # Tests TMCBehaviour for single RSU
 test_TMCBehaviour
 
 # Tests TMCBehaviour for three RSUs
 test_TMCBehaviour_multiRSU
+
+# Tests transmission of messages using the MessageScheduler class
+test_MessageScheduler
+

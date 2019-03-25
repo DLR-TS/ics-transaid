@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <net-file value="net.net.xml"/>
+    <route-files value="routes.rou.xml"/>
+    <step-length value="0.1" />
+    <output>
+        <!-- tripinfo-output value="tripinfo_output.xml" / -->
+        <no-step-log value="true" />
+        <netstate-dump value="../../netstate.xml" />
+        <netstate-dump.empty-edges value="false" />
+    </output>
+    <processing>
+        <default.speeddev value="0" />
+    </processing>
+</configuration>

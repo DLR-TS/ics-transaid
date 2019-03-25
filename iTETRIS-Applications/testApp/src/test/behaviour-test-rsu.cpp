@@ -44,6 +44,7 @@
 #include "current-time.h"
 #include "log/console.h"
 #include "libsumo/TraCIDefs.h"
+#include "message-scheduler-helper.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
@@ -141,19 +142,39 @@ namespace testapp
 
                 m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &BehaviourTestRSU::RSUBroadcastTestV2XmsgSet, this);
 
+
             } else if (ProgramConfiguration::GetTestCase() == "TMCBehaviour" || ProgramConfiguration::GetTestCase() == "TMCBehaviour_multiRSU"){
                 if (GetController()->GetId() == 5000){
                     GetController()->requestMobilityInfo();
                 }
                 GetController()->startReceivingGeobroadcast(MSGCAT_TESTAPP);
                 m_subReceiveMessage = true;
+
+
+		    } else if (ProgramConfiguration::GetTestCase() == "testMessageScheduler"){
+
+                GetController()->startReceivingGeobroadcast(MSGCAT_TRANSAID);
+                m_subReceiveMessage = true;
+                GetController()->requestMobilityInfo();
+
+                std::cout << "Starting test Message Scheduler at RSU"  << std::endl;
+
+                //new MessageScheduler( GetController()->GetNode() );
+                new MessageScheduler( GetController()->GetId());
+
+
+
             }
 
 		}
 
 		bool BehaviourTestRSU::IsSubscribedTo(ProtocolId pid) const
 		{
-			return pid == PID_UNKNOWN;
+            if (ProgramConfiguration::GetTestCase() == "testMessageScheduler"){
+			    return pid == PID_TRANSAID;
+            } else {
+                return pid == PID_UNKNOWN;
+            }
 		}
 
 		void BehaviourTestRSU::Receive(server::Payload *payload, double snr)
@@ -164,7 +185,7 @@ namespace testapp
             CommHeader* commHeader;
             GetController()->GetHeader(payload, server::PAYLOAD_FRONT, commHeader);
 
-            if (ProgramConfiguration::GetTestCase() == "testV2XmsgSet"){
+            if (ProgramConfiguration::GetTestCase() == "testV2XmsgSet" || ProgramConfiguration::GetTestCase() == "testMessageScheduler"){
 
             	TransaidHeader* transaidHeader;
 				GetController()->GetHeader(payload, server::PAYLOAD_END, transaidHeader);
@@ -403,6 +424,7 @@ namespace testapp
             TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CAM, message);
             GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
             std::cout << "Send CAM at node " << GetController()->GetId() <<  std::endl;
+            GetController();
         }
 
         void BehaviourTestRSU::SendDENM()

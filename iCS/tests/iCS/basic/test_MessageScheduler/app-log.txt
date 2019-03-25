@@ -1,0 +1,13 @@
+Test App Log File
+===============================
+[2019-03-25T11:15:04.783] [INFO ] #@# Current timestep -1000
+[2019-03-25T11:15:04.783] [INFO ] Added new fixed station with id 5000
+[2019-03-25T11:15:04.783] [INFO ] [Node 5000] added subscription 1 type 0x3a
+[2019-03-25T11:15:04.783] [INFO ] [Node 5000] added subscription 2 type 0x42
+[2019-03-25T11:15:04.784] [INFO ] Mobility info on nodes: 5000 
+[2019-03-25T11:15:04.784] [INFO ] Rsu 5000 position update: 0:0
+[2019-03-25T11:15:04.785] [INFO ] #@# Current timestep 0
+[2019-03-25T11:15:04.785] [INFO ] Mobility info on nodes: 5000 
+[2019-03-25T11:15:04.790] [INFO ] #@# Current timestep 50
+[2019-03-25T11:15:04.790] [INFO ] Mobility info on nodes: 5000 
+[2019-03-25T11:15:04.792] [INFO ] #@# Current timestep 100
