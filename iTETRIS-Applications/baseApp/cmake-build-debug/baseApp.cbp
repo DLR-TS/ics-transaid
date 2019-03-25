@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="baseApp"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="baseApp">
+				<Option output="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/baseApp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/server"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/exception"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/log"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/xml"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 baseApp"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="baseApp/fast">
+				<Option output="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/baseApp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/server"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/exception"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/log"/>
+					<Add directory="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/xml"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 baseApp/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/Makefile">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/Makefile.am">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/Makefile.in">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/Makefile">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/Makefile.am">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/Makefile.in">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/app-commands-subscriptions-constants.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/fixed-station.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/fixed-station.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/callback.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/empty.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/fatal-error.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/output-helper.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/output-helper.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/random-variable.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/random-variable.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/rng-seed-manager.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/rng-seed-manager.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/rng-stream.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/rng-stream.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/scheduler.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/scheduler.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/trace-manager.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/trace-manager.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/traced-callback.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/vector.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/helper/vector.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/mobile-node.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/mobile-node.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/behaviour-factory.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/behaviour-node.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/behaviour-node.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/behaviour-rsu.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/behaviour-rsu.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/behaviour.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/behaviour.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/common.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/common.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/headers.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/headers.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/ics-interface.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/ics-interface.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/node-sampler.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/model/node-sampler.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/node.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/node.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/split.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/subscription-helper.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/subscription-helper.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/traci-helper.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/traci-helper.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/traffic-light.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/application/traffic-light.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/current-time.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/current-time.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/program-configuration.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/program-configuration.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/server/circular-buffer.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/server/node-handler.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/server/node-handler.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/server/payload-storage.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/server/payload-storage.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/server/payload.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/server/payload.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/server/server.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/server/server.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/structs.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/exception/UtilExceptions.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/log/ToString.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/log/console.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/log/console.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/log/log.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/log/log.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/xml/tinyxml2.cpp">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/src/utils/xml/tinyxml2.h">
+			<Option target="baseApp"/>
+		</Unit>
+		<Unit filename="/home/alex/iTetris/transaid-dev/transaid/iTETRIS-Applications/baseApp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

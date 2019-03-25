@@ -1,0 +1,24 @@
+Test App NS-Log File
+===============================
+[2019-03-25T11:14:49.178] [INFO ] Schedule at 1000
+[2019-03-25T11:15:04.783] [DEBUG] #@# Current timestep -1000
+[2019-03-25T11:15:04.783] [INFO ] [Scheduler] Notify time: -1000. Current size: 1
+[2019-03-25T11:15:04.783] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-25T11:15:04.783] [INFO ] [-1000][Scheduler] next at 1000 in 2000
+[2019-03-25T11:15:04.783] [DEBUG] (RSU 5000): Added behaviour TestRSU
+[2019-03-25T11:15:04.783] [FUNCT] void baseapp::application::iCSInterface::Activate():~(RSU 5000): 
+[2019-03-25T11:15:04.783] [INFO ] (RSU 5000): : Activated
+[2019-03-25T11:15:04.783] [FUNCT] virtual void baseapp::application::Behaviour::Start():~(RSU 5000): TestRSU: 
+[2019-03-25T11:15:04.783] [INFO ] TracedCallback StartToggle number of calls 0
+[2019-03-25T11:15:04.783] [INFO ] Schedule at 100
+[2019-03-25T11:15:04.783] [INFO ] TracedCallback StateChange number of calls 0
+[2019-03-25T11:15:04.785] [DEBUG] #@# Current timestep 0
+[2019-03-25T11:15:04.785] [INFO ] [Scheduler] Notify time: 0. Current size: 2
+[2019-03-25T11:15:04.785] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-25T11:15:04.785] [INFO ] [0][Scheduler] next at 100 in 100
+[2019-03-25T11:15:04.790] [DEBUG] #@# Current timestep 50
+[2019-03-25T11:15:04.790] [INFO ] [Scheduler] Notify time: 50. Current size: 2
+[2019-03-25T11:15:04.790] [INFO ] [Scheduler] 0 have been executed.
+[2019-03-25T11:15:04.790] [INFO ] [50][Scheduler] next at 100 in 50
+[2019-03-25T11:15:04.792] [DEBUG] #@# Current timestep 100
+[2019-03-25T11:15:04.792] [INFO ] [Scheduler] Notify time: 100. Current size: 2

@@ -1,0 +1,91 @@
+[2019-03-25T11:15:04.784] [0,000] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-03-25T11:15:04.784] [0,000] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-03-25T11:15:04.784] [0,000] Tics=0 MsgQueue=0
+[2019-03-25T11:15:04.784] [0,000] [INFO] Reached CommandSimulationStep... = 
+[2019-03-25T11:15:04.784] [0,000] [INFO] Message Sent...
+[2019-03-25T11:15:04.784] [0,000] [INFO] Message Received.
+[2019-03-25T11:15:04.784] [0,000] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-03-25T11:15:04.785] [0,000] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-03-25T11:15:04.785] [0,000] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-03-25T11:15:04.785] [0,000] [INFO] RunOneSumoTimeStep() Skipping SUMO simulation step since the current iCS time is less than the next traffic simulator time.
+[2019-03-25T11:15:04.785] [0,000] [INFO] .. Command acknowledged (162), [description: ]
+
+[2019-03-25T11:15:04.785] [0,000] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 0 
+[2019-03-25T11:15:04.785] [0,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-03-25T11:15:04.785] [0,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-03-25T11:15:04.785] [0,000] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-03-25T11:15:04.785] [0,000] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-03-25T11:15:04.785] [0,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-03-25T11:15:04.785] [0,000] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-03-25T11:15:04.785] [0,000] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-03-25T11:15:04.785] [0,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-03-25T11:15:04.785] [0,000] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-03-25T11:15:04.785] [0,000] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-03-25T11:15:04.785] [0,000] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-03-25T11:15:04.785] [0,000] [INFO] SendSubscribedData() Subscription SubsAppMessageReceive processing.
+[2019-03-25T11:15:04.785] [0,000] [INFO] SubsAppMessageReceive() Node 5000 will Pull the Communication Simulator for received data.
+[2019-03-25T11:15:04.785] [0,000] [INFO] InformApp() No information about SubsAppMessageReceive will be sent to app.
+[2019-03-25T11:15:04.785] [0,000] [INFO] SendSubscribedData() Subscription SubsGetMobilityInfo processing.
+[2019-03-25T11:15:04.785] [0,000] [INFO] [GetAllID] get position from SUMO
+[2019-03-25T11:15:04.785] [0,000] [INFO] [CommandSendSubscriptionMobilityInfo] time step0nodeID: position x0:y:0
+[2019-03-25T11:15:04.785] [0,000] [INFO] .. Command acknowledged (65), [description: CMD_MOBILITY_INFORMATION: Added 0 stations]
+[2019-03-25T11:15:04.786] [0,000] [INFO] SendMessageStatus() The application does not send message status.
+[2019-03-25T11:15:04.786] [0,000] [INFO] iCS --> executing application (node 5000)
+[2019-03-25T11:15:04.786] [0,000] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-03-25T11:15:04.786] [0,000] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-03-25T11:15:04.786] [0,000] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-03-25T11:15:04.786] [0,050] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-03-25T11:15:04.786] [0,050] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-03-25T11:15:04.786] [0,050] Tics=50 StepT=2 ns3T=1 %ns3=50 DispMsgs=0 MsgQueue=0
+[2019-03-25T11:15:04.786] [0,050] [INFO] Reached CommandSimulationStep... = 
+[2019-03-25T11:15:04.786] [0,050] [INFO] Message Sent...
+[2019-03-25T11:15:04.789] [0,050] [INFO] Message Received.
+[2019-03-25T11:15:04.789] [0,050] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-03-25T11:15:04.789] [0,050] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-03-25T11:15:04.789] [0,050] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-03-25T11:15:04.790] [0,050] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 50 
+[2019-03-25T11:15:04.790] [0,050] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-03-25T11:15:04.790] [0,050] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-03-25T11:15:04.790] [0,050] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-03-25T11:15:04.790] [0,050] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-03-25T11:15:04.790] [0,050] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-03-25T11:15:04.790] [0,050] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-03-25T11:15:04.790] [0,050] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-03-25T11:15:04.790] [0,050] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-03-25T11:15:04.790] [0,050] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-03-25T11:15:04.790] [0,050] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-03-25T11:15:04.790] [0,050] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-03-25T11:15:04.790] [0,050] [INFO] SendSubscribedData() Subscription SubsAppMessageReceive processing.
+[2019-03-25T11:15:04.790] [0,050] [INFO] SubsAppMessageReceive() Node 5000 will Pull the Communication Simulator for received data.
+[2019-03-25T11:15:04.790] [0,050] [INFO] InformApp() No information about SubsAppMessageReceive will be sent to app.
+[2019-03-25T11:15:04.790] [0,050] [INFO] SendSubscribedData() Subscription SubsGetMobilityInfo processing.
+[2019-03-25T11:15:04.790] [0,050] [INFO] [GetAllID] get position from SUMO
+[2019-03-25T11:15:04.790] [0,050] [INFO] [CommandSendSubscriptionMobilityInfo] time step50nodeID: position x0:y:0
+[2019-03-25T11:15:04.790] [0,050] [INFO] .. Command acknowledged (65), [description: CMD_MOBILITY_INFORMATION: Added 0 stations]
+[2019-03-25T11:15:04.790] [0,050] [INFO] SendMessageStatus() The application does not send message status.
+[2019-03-25T11:15:04.790] [0,050] [INFO] iCS --> executing application (node 5000)
+[2019-03-25T11:15:04.790] [0,050] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-03-25T11:15:04.790] [0,050] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-03-25T11:15:04.791] [0,050] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-03-25T11:15:04.791] [0,100] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-03-25T11:15:04.791] [0,100] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-03-25T11:15:04.791] [0,100] Tics=100 StepT=5 ns3T=4 %ns3=80 DispMsgs=0 MsgQueue=0
+[2019-03-25T11:15:04.791] [0,100] [INFO] Reached CommandSimulationStep... = 
+[2019-03-25T11:15:04.791] [0,100] [INFO] Message Sent...
+[2019-03-25T11:15:04.791] [0,100] [INFO] Message Received.
+[2019-03-25T11:15:04.791] [0,100] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-03-25T11:15:04.791] [0,100] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-03-25T11:15:04.791] [0,100] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-03-25T11:15:04.791] [0,100] [INFO] .. Command acknowledged (2), [description: ]
+
+[2019-03-25T11:15:04.791] [0,100] [INFO] RunOneSumoTimeStep() Number of vehicles that left the simulation: 0
+[2019-03-25T11:15:04.791] [0,100] [INFO] RunOneSumoTimeStep() Number of vehicles that entered the simulation: 0
+[2019-03-25T11:15:04.791] [0,100] [INFO] .. Command acknowledged (17), [description: ActivateNode()]
+
+[2019-03-25T11:15:04.792] [0,100] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 100 
