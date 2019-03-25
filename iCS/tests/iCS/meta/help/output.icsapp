@@ -94,7 +94,7 @@ Output Options:
 Report Options:
   -v, --verbose                        Switches to verbose output
   --print-options                      Prints option values before processing
-  -?, --help                           Prints this screen
+  -?, --help                           Prints this screen or selected topics
   -V, --version                        Prints the current version
   -X, --xml-validation STR             Set schema validation scheme of XML
                                          inputs ("never", "auto" or "always")
