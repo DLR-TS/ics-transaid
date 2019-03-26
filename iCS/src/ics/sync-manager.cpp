@@ -378,7 +378,7 @@ int SyncManager::Run(bool interactive)
 		{
 			if (RunApplicationLogic() == EXIT_FAILURE)
 			{
-				utils::Conversion::Wait("iCS --> [ERROR] RunApplicationLogic()");
+				utils::Conversion::Wait("iCS --> [ERROR] RunApplicationLogic() ");
 				return EXIT_FAILURE;
 			}
 		}

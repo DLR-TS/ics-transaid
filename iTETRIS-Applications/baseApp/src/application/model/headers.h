@@ -101,6 +101,8 @@ namespace baseapp
             	int senderID;
             	int generationTime;
             	int numObstacles;
+				int CPM_message_size;
+				int CPM_detected_objectID[50]; // TODO chech how to dynamically initilize or define the appropiate value (i.e. max number of objecst that can be tranmitted in a CPM)
             };
 
 
@@ -220,6 +222,10 @@ namespace baseapp
             TransaidHeader (ProtocolId pid, MessageType msgType, McmRsuInfo * message);
             TransaidHeader (ProtocolId pid, MessageType msgType, MapInfo * message);
             TransaidHeader (ProtocolId pid, MessageType msgType, IviInfo * message);
+
+
+
+
             ~TransaidHeader();
 
 
