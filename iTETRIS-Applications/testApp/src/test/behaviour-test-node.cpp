@@ -218,8 +218,11 @@ namespace testapp
 				{
 				    const TransaidHeader::CpmInfo * cpmInfo = transaidHeader->getCpmInfo();
 
-					std::cout << "Received CPM at node " << GetController()->GetId() << "  sender " << cpmInfo->senderID << " time " << cpmInfo->generationTime  << std::endl;
-
+					std::cout << "Received CPM at node " << GetController()->GetId() << "  sender " << cpmInfo->senderID << " time " << cpmInfo->generationTime << " Number OF Received Obstacles in the CPM " << cpmInfo->numObstacles << " CPM Message Size " << cpmInfo->CPM_message_size << std::endl;
+					for(int i=0; i < cpmInfo->numObstacles ; ++i )
+					{
+						std::cout << "Received Object ID : " << cpmInfo->CPM_detected_objectID[i] <<std::endl;
+					}
 					return;
 				}
 
