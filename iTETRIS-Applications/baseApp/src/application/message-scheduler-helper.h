@@ -45,6 +45,8 @@ namespace baseapp {
             void SendMCMvehicle();
             void SendMCMvehicle(TransaidHeader::McmVehicleInfo *);
 
+            void SendMCMrsu(TransaidHeader::McmRsuInfo *);
+
             // Check the objects to be included in the CPM
             void CPM_Sensing();
             void ForwardSensing(int sendernode, int sensorno);

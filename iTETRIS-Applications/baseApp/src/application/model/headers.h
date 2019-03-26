@@ -159,6 +159,7 @@ namespace baseapp
 
             struct McmRsuInfo
             {
+
                 McmRsuInfo(int senderID, int generationTime, AdviceType adviceType) :
                 senderID(senderID), generationTime(generationTime)
                 {

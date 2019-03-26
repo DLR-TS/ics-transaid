@@ -148,7 +148,15 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_VEHICLE, message);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-            std::cout << "Send MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
+            std::cout << "Send Vehicle-MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
+        }
+
+        void MessageScheduler::SendMCMrsu(TransaidHeader::McmRsuInfo  * message)
+        {
+
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_RSU, message);
+            m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
+            std::cout << "Send RSU-MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
         }
 
         void MessageScheduler::ForwardSensing(int sendernode, int sensorno){
