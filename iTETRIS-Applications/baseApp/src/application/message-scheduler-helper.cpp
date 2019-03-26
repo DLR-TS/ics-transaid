@@ -168,6 +168,24 @@ namespace baseapp {
             std::cout << "Send MAP ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
         }
 
+        void MessageScheduler::SendIVI(TransaidHeader::IviInfo  * message)
+        {
+
+
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_IVI, message);
+            m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
+            std::cout << "Send IVI ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
+        }
+
+        void MessageScheduler::SendDENM(TransaidHeader::DenmInfo  * message)
+        {
+
+
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_DENM, message);
+            m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
+            std::cout << "Send DENM ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
+        }
+
 
         void MessageScheduler::ForwardSensing(int sendernode, int sensorno){
             // std::cout << "FORWARD SENSING START :  "<< std::endl;
