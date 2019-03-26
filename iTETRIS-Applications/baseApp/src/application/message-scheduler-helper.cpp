@@ -61,6 +61,7 @@ namespace baseapp {
             }
 
             // Check CPM tx
+            m_NodeMap  = m_node_interface->GetAllNodes() ;
             CPM_Sensing();
 
             // Check MCM tx
@@ -188,7 +189,7 @@ namespace baseapp {
 
 
         void MessageScheduler::ForwardSensing(int sendernode, int sensorno){
-            // std::cout << "FORWARD SENSING START :  "<< std::endl;
+           //  std::cout << "FORWARD SENSING START :  "<< std::endl;
 
             uint32_t ticket = 0;
             uint32_t ticket1 = 0;
@@ -225,8 +226,8 @@ namespace baseapp {
 
                     if (sendernodeId!= checknodeId)
                     {
-                        //				  if (sendernodeId == 0){
-                        //  std::cout << "DETECTED Vehicle ID : " << checknodeId <<" Distance X :" << detectedposition.x << " Y :"  << detectedposition.y << " Vehicle Type " << it->second->getNodeType()<< std::endl;}
+                        				//  if (sendernodeId == 0){
+                         // std::cout << "DETECTED Vehicle ID : " << checknodeId <<" Distance X :" << detectedposition.x << " Y :"  << detectedposition.y << " Vehicle Type " << it->second->getNodeType()<< std::endl;//}
 
                         double X = detectedposition.x - senderposition.x ;
                         double Y = detectedposition.y - senderposition.y ;
@@ -238,12 +239,12 @@ namespace baseapp {
                         // compute node distance
                         double distance = GetDistance(senderposition, detectedposition);
                         //				  if (sendernodeId == 0){
-                        //std::cout << "Distance from sender node : " << sendernodeId << " to detected node "  << checknodeId << " is : " << distance << std::endl;
+                       // std::cout << "Distance from sender node : " << sendernodeId << " to detected node "  << checknodeId << " is : " << distance << std::endl;
                         //				  }
 
                         double angle = atan2 (Y,X)*180 / PI;
                         // if ((sendernodeId == 11) ){
-                        //  std::cout << "DETECTED Node :  "<< checknodeId << "Distance" << distance << "   DETECTED ANGLE :  "<< angle << "   negative ANGLE :  "<< Fsensornegativeangle[sensorno]<< std::endl;//}
+                         // std::cout << "DETECTED Node :  "<< checknodeId << "Distance" << distance << "   DETECTED ANGLE :  "<< angle << std::endl;//}
 
                         if (angle >= 90)
                         {
@@ -267,7 +268,7 @@ namespace baseapp {
 
 
                             //if(sendernodeId == 6){
-                            //	std::cout << "DETECTED nodes at FORWARD SENSING :  "<< checknodeId << std::endl;//}
+                            	//std::cout << "DETECTED nodes at FORWARD SENSING :  "<< checknodeId << std::endl;//}
 
                         }
 
@@ -275,7 +276,7 @@ namespace baseapp {
                 }
 
             }
-            // std::cout << "TOTAL VEHICLES DETECTED before MASKING SENSOR : "<<sensorno << "  Detected-Vehicles: " << detectedvehicles  << std::endl;
+             //std::cout << "TOTAL VEHICLES DETECTED before MASKING SENSOR : "<<sensorno << "  Detected-Vehicles: " << detectedvehicles  << std::endl;
 
             if ( detectedvehicles > 1){
                 for (uint32_t i = 0; i < ticket; ++i)
@@ -474,7 +475,7 @@ namespace baseapp {
                                  (    ( ((targetleftback <= maxangle) && (targetleftfront <= maxangle) ) && ( (targetleftback  >= minangle) && (targetleftfront  >= minangle) ) ) ||
                                       ( ((targetrightback <= maxangle) && (targetrightfront <= maxangle)) && ((targetrightback  >= minangle) && (targetrightfront >=minangle) ) )     )  || ( targetmedianangle == maskanglemedian)  )
                             {//|| (mask_counter >= 2)
-                                // std::cout << "MASKED VEHICLE : " << checkj  <<  "MASKED BY GREAT : " << checki << std::endl;
+
                                 maskvehiclesID [ticket1] = checkj;
                                 ticket1++;
                             }
@@ -511,7 +512,7 @@ namespace baseapp {
 
             Globalflag =  Globalflag + k;
 
-            //  std::cout << "TOTAL VEHICLES DETECTED *AFTER* SENSOR MASKING : " << detectedvehicles << std::endl;
+              //std::cout << "TOTAL VEHICLES DETECTED *AFTER* SENSOR MASKING : " << detectedvehicles << std::endl;
 
 
             for(uint32_t i = 0; tvcount < Globalflag ; ++tvcount , ++i  )
@@ -519,7 +520,7 @@ namespace baseapp {
                 // std::cout << "FORWARD Non MASKING Vehicle ID : " << nonmaskvehiclesID[i] << std::endl;
             }
 
-            // std::cout << "FORWARD SENSING ENDS :  "<< std::endl;
+           //  std::cout << "FORWARD SENSING ENDS :  "<< std::endl;
             //-------------- SENSOR ENDS---------------
 
         }
@@ -907,7 +908,7 @@ namespace baseapp {
             int sendernodeId = m_node_interface->GetId() ;
             const Vector2D senderposition = m_node_interface->GetNode()->getPosition();
 
-            std::cout << "----------------------******* SENDER vehicle ID :  "<< sendernodeId  <<"  Direction  "  << m_node_interface->GetNode()->getDirection() <<"  POSITION_X  "<< senderposition.x << "  POSITION_Y  "<< senderposition.y <<"  TIME  " << t << std::endl;
+            std::cout << "----------------------******* SENDER vehicle ID :  "<< sendernodeId  <<"  Direction  "  << m_node_interface->GetNode()->getDirection()<< " Vehicle Type " << m_node_interface->GetNode()->getNodeType() <<"  POSITION_X  "<< senderposition.x << "  POSITION_Y  "<< senderposition.y <<"  TIME  " << t << std::endl;
 
             for (uint32_t sensorno = 0; sensorno < totalsensors; ++sensorno)
             {
@@ -938,7 +939,7 @@ namespace baseapp {
                 const Vector2D ETposition = m_NodeMap.operator [](Totaldetectedvehicles [i])->getPosition();
                 double ETvelocity = m_NodeMap.operator [](Totaldetectedvehicles [i])->getSpeed();
 
-                // std::cout << "DETECTED OBJECT ID after fusion :  "<< ETvehid1  << "  TIME  " << t << std::endl;
+                 //std::cout << "DETECTED OBJECT ID after fusion :  "<< ETvehid1  << "  TIME  " << t << std::endl;
                 std::map<int, data1> ::iterator ETSIit;
                 data1 current;
 
@@ -955,15 +956,15 @@ namespace baseapp {
                 {
 
                     double vehiclemoved = sqrt(pow (ETposition.x - ETSIit->second.posX, 2 ) + pow(ETposition.y - ETSIit->second.posY, 2 ));
-                    std::cout << "Vehicle moved :  "<< vehiclemoved  << "  TIME  " << t << std::endl;
+                   // std::cout << "Vehicle moved :  "<< vehiclemoved  << "  TIME  " << t << std::endl;
 
                     double previousspeed = ETSIit->second.node_velocity;
                     double currentspeed = ETvelocity;
                     double vehiclespeeddifference = currentspeed - previousspeed;
-                    //	std::cout << "Vehicle Speed difference :  "<< vehiclespeeddifference  << "  TIME  " << t << std::endl;
+                    	//std::cout << "Vehicle Speed difference :  "<< vehiclespeeddifference  << "  TIME  " << t << std::endl;
 
                     double timedifer = t - ETSIit->second.genT;
-                    //std::cout << "Vehicle TIME difference :  "<< timedifer  <<  std::endl;
+                   // std::cout << "Vehicle TIME difference :  "<< timedifer  <<  std::endl;
 
                     if( ( (vehiclemoved > 4) || (vehiclespeeddifference >  0.5) ) || (timedifer >= 1000))
                     {
