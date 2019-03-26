@@ -42,6 +42,8 @@ namespace baseapp {
             void SendCAM();
             void SendCPM();
 
+            void SendMCMvehicle();
+
             // Check the objects to be included in the CPM
             void CPM_Sensing();
             void ForwardSensing(int sendernode, int sensorno);
@@ -117,7 +119,7 @@ namespace baseapp {
             // @brief used for checking the dynamic transmission of messages
             TransaidHeader::CamInfo   m_lastCAMsent ;
             //TransaidHeader::DenmInfo * m_lastDENMsent;
-            //TransaidHeader::McmRsuInfo * m_lastMCMsent;
+            TransaidHeader::McmVehicleInfo  m_lastMCMsentVehicle;
             //TransaidHeader::MapInfo * m_lastMAPsent;
             //TransaidHeader::IviInfo * m_lastIVIsent;
 
