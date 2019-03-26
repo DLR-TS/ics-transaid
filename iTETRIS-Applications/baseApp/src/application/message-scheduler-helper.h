@@ -117,7 +117,6 @@ namespace baseapp {
             // @brief used for checking the dynamic transmission of messages
             TransaidHeader::CamInfo   m_lastCAMsent ;
             //TransaidHeader::DenmInfo * m_lastDENMsent;
-            TransaidHeader::CpmInfo  m_lastCPMsent;
             //TransaidHeader::McmRsuInfo * m_lastMCMsent;
             //TransaidHeader::MapInfo * m_lastMAPsent;
             //TransaidHeader::IviInfo * m_lastIVIsent;

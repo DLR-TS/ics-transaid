@@ -59,10 +59,9 @@ namespace baseapp {
                 SendCAM();
             }
 
-            if (  (CurrentTime::Now() - m_lastCPMsent.generationTime)>1000)
-            {
-                SendCPM();
-            }
+            // Check CPM tx
+            CPM_Sensing();
+
 
             m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &MessageScheduler::V2XmessageScheduler, this);
         }
