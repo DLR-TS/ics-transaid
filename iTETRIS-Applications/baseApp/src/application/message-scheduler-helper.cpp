@@ -38,6 +38,8 @@ namespace baseapp {
             TransaidHeader::CamInfo  * messageCAM = new TransaidHeader::CamInfo() ;
             m_lastCAMsent = *messageCAM;
 
+            TransaidHeader::McmVehicleInfo  * messageMCMvehicle = new TransaidHeader::McmVehicleInfo() ;
+            m_lastMCMsentVehicle = *messageMCMvehicle;
 
             m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &MessageScheduler::V2XmessageScheduler, this);
 
@@ -61,6 +63,11 @@ namespace baseapp {
             // Check CPM tx
             CPM_Sensing();
 
+            // Check MCM tx
+            if (  (CurrentTime::Now() - m_lastMCMsentVehicle.generationTime)>1000)
+            {
+                SendMCMvehicle();
+            }
 
             m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &MessageScheduler::V2XmessageScheduler, this);
         }
@@ -118,6 +125,21 @@ namespace baseapp {
 
         }
 
+
+        void MessageScheduler::SendMCMvehicle()
+        {
+            std::cout << "Message Scheduler sendCAM function"  << std::endl;
+
+            TransaidHeader::McmVehicleInfo  * message = new TransaidHeader::McmVehicleInfo() ;
+            message->generationTime = CurrentTime::Now();
+            message->senderID = m_node_interface->GetId();
+
+            m_lastMCMsentVehicle = *message;
+
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_VEHICLE, message);
+            m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
+            std::cout << "Send MCM at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
+        }
 
 
         void MessageScheduler::ForwardSensing(int sendernode, int sensorno){
