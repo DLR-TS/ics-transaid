@@ -128,7 +128,7 @@ namespace baseapp {
 
         void MessageScheduler::SendMCMvehicle()
         {
-            std::cout << "Message Scheduler sendCAM function"  << std::endl;
+
 
             TransaidHeader::McmVehicleInfo  * message = new TransaidHeader::McmVehicleInfo() ;
             message->generationTime = CurrentTime::Now();
@@ -141,6 +141,15 @@ namespace baseapp {
             std::cout << "Send MCM at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
         }
 
+        void MessageScheduler::SendMCMvehicle(TransaidHeader::McmVehicleInfo  * message)
+        {
+
+            m_lastMCMsentVehicle = *message;
+
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_VEHICLE, message);
+            m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
+            std::cout << "Send MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
+        }
 
         void MessageScheduler::ForwardSensing(int sendernode, int sensorno){
             // std::cout << "FORWARD SENSING START :  "<< std::endl;

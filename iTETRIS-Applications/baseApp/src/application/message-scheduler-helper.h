@@ -43,6 +43,7 @@ namespace baseapp {
             void SendCPM();
 
             void SendMCMvehicle();
+            void SendMCMvehicle(TransaidHeader::McmVehicleInfo *);
 
             // Check the objects to be included in the CPM
             void CPM_Sensing();
