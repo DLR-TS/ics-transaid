@@ -48,7 +48,9 @@ namespace baseapp {
             void SendMCMrsu(TransaidHeader::McmRsuInfo *);
 
 
-            void SendMAP(TransaidHeader::MapInfo  * message);
+            void SendMAP(TransaidHeader::MapInfo *);
+            void SendIVI(TransaidHeader::IviInfo *);
+            void SendDENM(TransaidHeader::DenmInfo *);
 
             // Check the objects to be included in the CPM
             void CPM_Sensing();
