@@ -294,6 +294,15 @@ namespace testapp
                 }
             } else if (ProgramConfiguration::GetTestCase() == "commSimple2") {
                 // do nothing
+            } else if (ProgramConfiguration::GetTestCase() == "testMessageScheduler") {
+                if (CurrentTime::Now() == 6550){
+                    TransaidHeader::DenmInfo * message = new TransaidHeader::DenmInfo() ;
+                    message->generationTime = CurrentTime::Now();
+                    message->senderID = GetController()->GetId();
+
+                    m_MessageScheduler->SendDENM(message);
+
+                }
             }
 			return false;
 		}
