@@ -43,6 +43,8 @@
 #include <map>
 #include "structs.h"
 #include "application/model/headers.h"
+#include "message-scheduler-helper.h"
+
 
 using namespace baseapp;
 using namespace baseapp::application;
@@ -120,6 +122,8 @@ namespace testapp
             event_id m_eventBroadcastMCM;
             event_id m_eventBroadcastCPM;
             /// @}
+
+			MessageScheduler* m_MessageScheduler;
 
             int m_broadcastCheckInterval;
             TransaidHeader::CamInfo m_lastCAMsent;

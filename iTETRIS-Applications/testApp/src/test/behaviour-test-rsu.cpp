@@ -78,6 +78,9 @@ namespace testapp
             Scheduler::Cancel(m_eventBroadcastMCM);
             Scheduler::Cancel(m_eventBroadcastMAP);
             Scheduler::Cancel(m_eventBroadcastIVI);
+            if (ProgramConfiguration::GetTestCase() == "testMessageScheduler"){
+                delete m_MessageScheduler;
+            }
         }
 
 		void BehaviourTestRSU::Start()
@@ -151,8 +154,8 @@ namespace testapp
 
                 std::cout << "Starting test Message Scheduler at RSU"  << std::endl;
 
-                //new MessageScheduler( GetController()->GetNode() );
-                new MessageScheduler( GetController()->GetId());
+
+                m_MessageScheduler = new MessageScheduler( GetController());
 
 
             }

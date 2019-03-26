@@ -1,0 +1,174 @@
+cmake_minimum_required(VERSION 3.13)
+project(iCS)
+
+set(CMAKE_CXX_STANDARD 14)
+
+
+include_directories(src)
+include_directories(src/ics)
+include_directories(src/ics/applications_manager)
+include_directories(src/ics/configfile_parsers)
+include_directories(src/ics/configfile_parsers/sumoMapParser)
+include_directories(src/ics/facilities)
+include_directories(src/ics/facilities/mapFacilities)
+include_directories(src/ics/facilities/mapFacilities/road)
+include_directories(src/ics/facilities/messageFacilities)
+include_directories(src/ics/facilities/stationFacilities)
+include_directories(src/ics/traffic_sim_communicator)
+include_directories(src/ics/wirelesscom_sim_communicator)
+include_directories(src/ics/wirelesscom_sim_message_tracker)
+include_directories(src/utils/ics)
+include_directories(src/utils/ics/geometric)
+include_directories(src/utils/ics/log)
+include_directories(../sumo/src/)
+include_directories(../sumo/src/utils)
+include_directories(../sumo/src/utils/common)
+
+
+
+add_executable(iCS
+        src/ics/applications_manager/app-commands-subscriptions-constants.h
+        src/ics/applications_manager/app-message-manager.cpp
+        src/ics/applications_manager/app-message-manager.h
+        src/ics/applications_manager/app-result-container.cpp
+        src/ics/applications_manager/app-result-container.h
+        src/ics/applications_manager/app-result-generic.cpp
+        src/ics/applications_manager/app-result-generic.h
+        src/ics/applications_manager/app-result-maximum-speed.cpp
+        src/ics/applications_manager/app-result-maximum-speed.h
+        src/ics/applications_manager/app-result-open-buslanes.cpp
+        src/ics/applications_manager/app-result-open-buslanes.h
+        src/ics/applications_manager/app-result-traffic-jam-detection.cpp
+        src/ics/applications_manager/app-result-traffic-jam-detection.h
+        src/ics/applications_manager/app-result-travel-time.cpp
+        src/ics/applications_manager/app-result-travel-time.h
+        src/ics/applications_manager/app-result-void.cpp
+        src/ics/applications_manager/app-result-void.h
+        src/ics/applications_manager/application-handler.cpp
+        src/ics/applications_manager/application-handler.h
+        src/ics/applications_manager/subs-app-cmd-traff-sim.cpp
+        src/ics/applications_manager/subs-app-cmd-traff-sim.h
+        src/ics/applications_manager/subs-app-control-traci.cpp
+        src/ics/applications_manager/subs-app-control-traci.h
+        src/ics/applications_manager/subs-app-message-receive.cpp
+        src/ics/applications_manager/subs-app-message-receive.h
+        src/ics/applications_manager/subs-app-message-send.cpp
+        src/ics/applications_manager/subs-app-message-send.h
+        src/ics/applications_manager/subs-app-result-traff-sim.cpp
+        src/ics/applications_manager/subs-app-result-traff-sim.h
+        src/ics/applications_manager/subs-calculate-travel-time.cpp
+        src/ics/applications_manager/subs-calculate-travel-time.h
+        src/ics/applications_manager/subs-get-facilities-info.cpp
+        src/ics/applications_manager/subs-get-facilities-info.h
+        src/ics/applications_manager/subs-get-mobility-info.cpp
+        src/ics/applications_manager/subs-get-mobility-info.h
+        src/ics/applications_manager/subs-get-received-cam-info.cpp
+        src/ics/applications_manager/subs-get-received-cam-info.h
+        src/ics/applications_manager/subs-get-traffic-light-info.cpp
+        src/ics/applications_manager/subs-get-traffic-light-info.h
+        src/ics/applications_manager/subs-return-cars-zone.cpp
+        src/ics/applications_manager/subs-return-cars-zone.h
+        src/ics/applications_manager/subs-set-cam-area.cpp
+        src/ics/applications_manager/subs-set-cam-area.h
+        src/ics/applications_manager/subs-start-travel-time-calculation.cpp
+        src/ics/applications_manager/subs-start-travel-time-calculation.h
+        src/ics/applications_manager/subs-stop-travel-time-calculation.cpp
+        src/ics/applications_manager/subs-stop-travel-time-calculation.h
+        src/ics/applications_manager/subs-sumo-traci-command.cpp
+        src/ics/applications_manager/subs-sumo-traci-command.h
+        src/ics/applications_manager/subs-x-application-data.cpp
+        src/ics/applications_manager/subs-x-application-data.h
+        src/ics/applications_manager/subscription.cpp
+        src/ics/applications_manager/subscription.h
+        src/ics/applications_manager/subscriptions-helper.cpp
+        src/ics/applications_manager/subscriptions-helper.h
+        src/ics/applications_manager/subscriptions-type-constants.h
+        src/ics/configfile_parsers/sumoMapParser/SUMOdigital-map.cpp
+        src/ics/configfile_parsers/sumoMapParser/SUMOdigital-map.h
+        src/ics/configfile_parsers/apps-configfile-parser.cpp
+        src/ics/configfile_parsers/apps-configfile-parser.h
+        src/ics/configfile_parsers/facilities-configfile-parser.cpp
+        src/ics/configfile_parsers/facilities-configfile-parser.h
+        src/ics/configfile_parsers/LDMrules-configfile-parser.cpp
+        src/ics/configfile_parsers/LDMrules-configfile-parser.h
+        src/ics/configfile_parsers/stations-configfile-parser.cpp
+        src/ics/configfile_parsers/stations-configfile-parser.h
+        src/ics/facilities/mapFacilities/road/Edge.cpp
+        src/ics/facilities/mapFacilities/road/Edge.h
+        src/ics/facilities/mapFacilities/road/Junction.cpp
+        src/ics/facilities/mapFacilities/road/Junction.h
+        src/ics/facilities/mapFacilities/road/Lane.cpp
+        src/ics/facilities/mapFacilities/road/Lane.h
+        src/ics/facilities/mapFacilities/road/RoadElement.h
+        src/ics/facilities/mapFacilities/road/TrafficLight.cpp
+        src/ics/facilities/mapFacilities/road/TrafficLight.h
+        src/ics/facilities/mapFacilities/MapFacilities.cpp
+        src/ics/facilities/mapFacilities/MapFacilities.h
+        src/ics/facilities/messageFacilities/FacilityMessages.cpp
+        src/ics/facilities/messageFacilities/FacilityMessages.h
+        src/ics/facilities/messageFacilities/LDMLogic.cpp
+        src/ics/facilities/messageFacilities/LDMLogic.h
+        src/ics/facilities/stationFacilities/FixedStation.cpp
+        src/ics/facilities/stationFacilities/FixedStation.h
+        src/ics/facilities/stationFacilities/MobileStation.cpp
+        src/ics/facilities/stationFacilities/MobileStation.h
+        src/ics/facilities/stationFacilities/Station.cpp
+        src/ics/facilities/stationFacilities/Station.h
+        src/ics/facilities/stationFacilities/StationFacilities.cpp
+        src/ics/facilities/stationFacilities/StationFacilities.h
+        src/ics/facilities/ICSFacilities.cpp
+        src/ics/facilities/ICSFacilities.h
+        src/ics/traffic_sim_communicator/traci-client.cpp
+        src/ics/traffic_sim_communicator/traci-client.h
+        src/ics/traffic_sim_communicator/traci-comm-constants.h
+        src/ics/traffic_sim_communicator/traffic-simulator-communicator.h
+        src/ics/wirelesscom_sim_communicator/ns3-client.cpp
+        src/ics/wirelesscom_sim_communicator/ns3-client.h
+        src/ics/wirelesscom_sim_communicator/ns3-comm-constants.h
+        src/ics/wirelesscom_sim_communicator/wireless-communication-simulator-communicator.h
+        src/ics/wirelesscom_sim_message_tracker/V2X-cam-area.cpp
+        src/ics/wirelesscom_sim_message_tracker/V2X-cam-area.h
+        src/ics/wirelesscom_sim_message_tracker/V2X-geobroadcast-area.cpp
+        src/ics/wirelesscom_sim_message_tracker/V2X-geobroadcast-area.h
+        src/ics/wirelesscom_sim_message_tracker/V2X-message-manager.cpp
+        src/ics/wirelesscom_sim_message_tracker/V2X-message-manager.h
+        src/ics/FacilitiesManager.cpp
+        src/ics/FacilitiesManager.h
+        src/ics/fixed-node.cpp
+        src/ics/fixed-node.h
+        src/ics/ics.cpp
+        src/ics/ics.h
+        src/ics/itetris-node.cpp
+        src/ics/itetris-node.h
+        src/ics/itetris-simulation-config.cpp
+        src/ics/itetris-simulation-config.h
+        src/ics/sync-manager.cpp
+        src/ics/sync-manager.h
+        src/ics/tmc-node.cpp
+        src/ics/tmc-node.h
+        src/ics/utilities.cpp
+        src/ics/utilities.h
+        src/ics/vehicle-node.cpp
+        src/ics/vehicle-node.h
+        src/unittest/iCSSumoFormat_unitTests.cpp
+        src/utils/ics/geometric/Area2D.h
+        src/utils/ics/geometric/Circle.cpp
+        src/utils/ics/geometric/Circle.h
+        src/utils/ics/geometric/ConvexPolygon.cpp
+        src/utils/ics/geometric/ConvexPolygon.h
+        src/utils/ics/geometric/Ellipse.cpp
+        src/utils/ics/geometric/Ellipse.h
+        src/utils/ics/geometric/GeometricShape.h
+        src/utils/ics/geometric/Point2D.h
+        src/utils/ics/geometric/Rectangle.cpp
+        src/utils/ics/geometric/Rectangle.h
+        src/utils/ics/geometric/Shapes.h
+        src/utils/ics/log/ics-log.cpp
+        src/utils/ics/log/ics-log.h
+        src/utils/ics/iCSGeoUtils.cpp
+        src/utils/ics/iCSGeoUtils.h
+        src/utils/ics/iCStypes.h
+        src/config.h
+        src/iCS_main.cpp
+        src/version.h
+        src/windows_config.h)

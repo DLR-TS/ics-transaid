@@ -44,6 +44,7 @@
 #include "libsumo/TraCIDefs.h"
 #include <cmath>
 #include <memory>
+#include "message-scheduler-helper.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
@@ -79,6 +80,9 @@ namespace testapp
             Scheduler::Cancel(m_eventBroadcastCAM);
             Scheduler::Cancel(m_eventBroadcastCPM);
             Scheduler::Cancel(m_eventBroadcastMCM);
+			if (ProgramConfiguration::GetTestCase() == "testMessageScheduler"){
+				delete m_MessageScheduler;
+			}
         }
 
 		void BehaviourTestNode::Start()
@@ -143,7 +147,18 @@ namespace testapp
 
                 m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &BehaviourTestNode::VehicleBroadcastTestV2XmsgSet, this);
 
-            }
+			} else if (ProgramConfiguration::GetTestCase() == "testMessageScheduler"){
+
+				GetController()->startReceivingGeobroadcast(MSGCAT_TRANSAID);
+				m_subReceiveMessage = true;
+
+				std::cout << "Starting test Message Scheduler at Vehicle"  << std::endl;
+
+
+				m_MessageScheduler = new MessageScheduler( GetController());
+
+
+			}
 		}
 
 
@@ -157,7 +172,11 @@ namespace testapp
 
 		bool BehaviourTestNode::IsSubscribedTo(ProtocolId pid) const
 		{
-			return pid == PID_UNKNOWN;
+			if (ProgramConfiguration::GetTestCase() == "testMessageScheduler"){
+				return pid == PID_TRANSAID;
+			} else {
+				return pid == PID_UNKNOWN;
+			}
 		}
 
 		void BehaviourTestNode::Receive(server::Payload *payload, double snr)
@@ -168,7 +187,7 @@ namespace testapp
             CommHeader* commHeader;
             GetController()->GetHeader(payload, server::PAYLOAD_FRONT, commHeader);
 
-            if (ProgramConfiguration::GetTestCase() == "testV2XmsgSet"){
+            if (ProgramConfiguration::GetTestCase() == "testV2XmsgSet" || ProgramConfiguration::GetTestCase() == "testMessageScheduler"){
 
             	TransaidHeader* transaidHeader;
 				GetController()->GetHeader(payload, server::PAYLOAD_END, transaidHeader);

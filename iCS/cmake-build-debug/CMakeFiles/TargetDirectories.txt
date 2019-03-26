@@ -1,0 +1,3 @@
+/home/alex/iTetris/transaid-dev/transaid/iCS/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/alex/iTetris/transaid-dev/transaid/iCS/cmake-build-debug/CMakeFiles/iCS.dir
+/home/alex/iTetris/transaid-dev/transaid/iCS/cmake-build-debug/CMakeFiles/edit_cache.dir
