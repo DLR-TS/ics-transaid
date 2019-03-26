@@ -37,8 +37,7 @@ namespace baseapp {
 
             TransaidHeader::CamInfo  * messageCAM = new TransaidHeader::CamInfo() ;
             m_lastCAMsent = *messageCAM;
-            TransaidHeader::CpmInfo  * messageCPM = new TransaidHeader::CpmInfo() ;
-            m_lastCPMsent = *messageCPM;
+
 
             m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &MessageScheduler::V2XmessageScheduler, this);
 
@@ -108,7 +107,7 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_CPM, message);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-            std::cout << "Send CPM at node " << m_node_interface->GetId() << " time " << m_lastCPMsent.generationTime << std::endl;
+            std::cout << "Send CPM at node " << m_node_interface->GetId() << " time " << message->generationTime << std::endl;
 
 
 
