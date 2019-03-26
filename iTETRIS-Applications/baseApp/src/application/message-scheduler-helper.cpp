@@ -159,6 +159,16 @@ namespace baseapp {
             std::cout << "Send RSU-MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
         }
 
+        void MessageScheduler::SendMAP(TransaidHeader::MapInfo  * message)
+        {
+
+
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MAP, message);
+            m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
+            std::cout << "Send MAP ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
+        }
+
+
         void MessageScheduler::ForwardSensing(int sendernode, int sensorno){
             // std::cout << "FORWARD SENSING START :  "<< std::endl;
 
