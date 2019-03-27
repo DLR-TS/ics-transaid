@@ -80,10 +80,10 @@ namespace ics
 			static int Delete(ics_types::stationID_t stationID, std::vector<Subscription*>* subscriptions);
 
 		private:
-        #define VALUE_SET_EDGE_TRAVELTIME       0x01
-        #define VALUE_GET_EDGE_TRAVELTIME       0x02
-        #define VALUE_RE_ROUTE   	    		0x03
-        #define VALUE_GET_ROUTE_VARIABLE	 	0x04
+//        #define VALUE_SET_EDGE_TRAVELTIME       0x01
+//        #define VALUE_GET_EDGE_TRAVELTIME       0x02
+//        #define VALUE_RE_ROUTE   	    		0x03
+//        #define VALUE_GET_ROUTE_VARIABLE	 	0x04
         tcpip::Storage            m_msg;
         tcpip::Storage            m_message;
 	};
