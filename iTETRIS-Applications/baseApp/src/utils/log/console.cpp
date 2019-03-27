@@ -42,7 +42,7 @@ namespace baseapp
 {
 using namespace std;
 
-string Console::m_appName = "testApp -> ";
+string Console::m_appName = "{appName undefined} -> ";
 
 void Console::Log(const string & msg, const int & msg2)
 {
