@@ -2,22 +2,28 @@
  * TMCBehaviour.cpp
  *
  *  Created on: Mar 25, 2019
- *      Author: Leonhard Lücken
+ *      Author: Leonhard Luecken
  */
 
-
-#include <TMCBehaviour.h>
+#include "ics-interface.h"
+#include "current-time.h"
+#include "TMCBehaviour.h"
 
 namespace baseapp {
 namespace application {
 
-TMCBehaviour::TMCBehaviour() {
-    // TODO Auto-generated constructor stub
-
+TMCBehaviour::TMCBehaviour() : iface(nullptr) {
 }
 
 TMCBehaviour::~TMCBehaviour() {
-    // TODO Auto-generated destructor stub
+}
+
+void
+TMCBehaviour::addRSU(iCSInterface* rsu) {
+    m_RSUController.insert(std::make_pair(rsu->GetId(), rsu));
+    if (iface == nullptr) {
+        iface = rsu;
+    }
 }
 
 } /* namespace application */

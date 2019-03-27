@@ -2,39 +2,58 @@
  * TMCBehaviour.h
  *
  *  Created on: Mar 25, 2019
- *      Author: Leonhard Lücken
+ *      Author: Leonhard Luecken
  */
 
 #ifndef SRC_APPLICATION_MODEL_TMCBEHAVIOUR_H_
 #define SRC_APPLICATION_MODEL_TMCBEHAVIOUR_H_
 
-#include "ics-interface.h"
+#include <map>
 
 namespace baseapp {
+
+namespace server {
+class Payload;
+}
+
 namespace application {
+
+class iCSInterface;
 
 class TMCBehaviour {
 public:
     TMCBehaviour();
     virtual ~TMCBehaviour();
 
+    /// @brief Add a new RSU to be controlled by this TMC, pointer deletion responsibility lies at caller side
+    /// @note  On the first RSU registration, some provisions are taken - the first added RSU's controller will serve
+    ///        as interface to the generic application functionalities.
+    /// @todo: If it is deleted before the TMCBehaviour, the RSU should be removed
+    virtual void addRSU(iCSInterface* rsu);
+
     /// @brief To be called, when a message is received at an RSU
+    /// @note  The payload pointer will be deleted externally after this call.
     virtual void ReceiveMessage(int rsuID, server::Payload * payload, double snr) = 0;
 
     /// @brief Add a new RSU to be controlled by this TMC
-    virtual void addRSU(iCSInterface* rsu) {
-        m_RSUController.insert(std::make_pair(rsu->GetId(), rsu));
-    };
+    /// @brief Execute() is called once per simulation step, when the first RSU is executed.
+    ///        The TMC is allowed to use the rsu's interface for issuing of general subscriptions.
+    virtual void Execute() = 0;
 
-    /// @brief Add a new RSU to be controlled by this TMC
-    virtual void Execute();
+    /// @brief OnAddSubscriptions() is called once per simulation step, when the first RSU gets
+    ///        its turn to issue iCS subscriptions. The TMC is allowed to use the rsu's interface for general
+    ///        subscriptions.
+    virtual void OnAddSubscriptions() = 0;
 
-private:
+protected:
+
     /// @brief RSU interfaces controllable by the TMC
     std::map<int, iCSInterface*> m_RSUController;
 
-    /// @brief To be called by an RSU, when a message is received
-    virtual void ReceiveMessage() = 0;
+    /// @brief Controller (iCSInterface) of an arbitrary RSU (currently the first RSU added to the TMC).
+    /// @note Should be used for generic interactions with the application/iCS
+    /// @todo Handle rsu-deletion
+    iCSInterface * iface;
 };
 
 } /* namespace application */

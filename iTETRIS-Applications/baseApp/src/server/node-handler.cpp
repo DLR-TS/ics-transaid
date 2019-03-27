@@ -49,6 +49,14 @@
 #include <climits>
 #include <vector>
 
+
+
+/*
+ *  DEBUG Defines
+ */
+//#define DEBUG_TMC
+
+
 namespace baseapp
 {
 	namespace server
@@ -58,11 +66,15 @@ namespace baseapp
 
 		std::string NodeHandler::emptyString = "";
 
-		NodeHandler::NodeHandler(BehaviourFactory* factory) : m_factory(factory)
+		NodeHandler::NodeHandler(BehaviourFactory* factory) :
+		        m_factory(factory), m_TMCBehaviour(nullptr), askedTMCForSubscriptions(false), executedTMC(false)
 		{
 			m_storage = new PayloadStorage();
 			m_timeStepBuffer = new CircularBuffer<int>(ProgramConfiguration::GetMessageLifetime());
-			m_TMCBehaviour = factory->createTMCBehaviour();
+			setTMCBehaviour(factory->createTMCBehaviour());
+#ifdef DEBUG_TMC
+		std::cout << "NodeHandler(): TMC present: " << (m_TMCBehaviour == nullptr ? "no" : "yes") << std::endl;
+#endif
 		}
 
 		NodeHandler::~NodeHandler()
@@ -106,15 +118,14 @@ namespace baseapp
 		}
 
 		void NodeHandler::addNode(application::Node * node) {
-            m_nodes.insert(std::make_pair(node->getId(), node));
-            if (node->isFixed()) {
-                // Memorize RSUs in separate container
-                m_RSUs.insert(std::make_pair(node->getId(), node));
-                if (m_TMCBehaviour != nullptr) {
-                    // Provide the TMC access to the RSU's sending facilities.
-                    m_TMCBehaviour->addRSU(node->getController());
-                }
-            }
+		    m_nodes.insert(std::make_pair(node->getId(), node));
+		    if (m_TMCBehaviour != nullptr && node->isFixed()) {
+#ifdef DEBUG_TMC
+		        std::cout << "NodeHandler: Registering new RSU with id " << node->getId() << std::endl;
+#endif
+		        // Provide the TMC access to the RSU's sending facilities.
+		        m_TMCBehaviour->addRSU(node->getController());
+		    }
 		}
 
 
@@ -164,6 +175,7 @@ namespace baseapp
 				}
 				addNode(node);
 			}
+			checkTMCSubscriptionRequests(node);
 			return node->askForSubscription(subscriptionId, request);
 		}
 
@@ -229,8 +241,17 @@ namespace baseapp
 						payload->snr = it->m_snr;
 					node->applicationMessageReceive(it->m_messageId, payload);
 					if (node->isFixed() && m_TMCBehaviour != nullptr) {
+#ifdef DEBUG_TMC
+                    std::cout << "NodeHandler::applicationMessageReceive(): Sending copy of received message to TMC "
+                            << "(receiver: " << node->getId() << ", msgID: " << it->m_messageId << ")"
+                            << std::endl;
+#endif
 					    // send a copy of the received message to the TMC
 					    m_TMCBehaviour->ReceiveMessage(node->getId(), payload, it->m_messageId);
+					} else {
+#ifdef DEBUG_TMC
+            std::cout << "NodeHandler::applicationMessageReceive(): No TMC." << std::endl;
+#endif
 					}
 
 					//The payload is deleted if necessary
@@ -247,25 +268,57 @@ namespace baseapp
 			Node * node;
 			if (getNode(nodeId, node))
 			{
+			    checkTMCExecution(node);
 				const bool res = node->applicationExecute(data);
-                if (node->isFixed()) {
-                    // Trigger TMC execution after RSU execution
-                    checkTMCExecution(node);
-                }
                 return res;
 			}
 			return false;
 		}
 
 		void NodeHandler::checkTMCExecution(const Node* node) {
-		    if (m_TMCBehaviour != nullptr) {
-		        m_remainingRSUs.erase(node->getId());
-		        if (m_remainingRSUs.empty()) {
-		            // The last RSU has been executed => Execute the TMC and reset the execution list
-		            m_TMCBehaviour->Execute();
-		            for (auto& p : m_RSUs) {
-		                m_remainingRSUs.insert(p.first);
+		    if (node->isFixed()) {
+#ifdef DEBUG_TMC
+		        std::cout << "NodeHandler: checkTMCExecution()" << std::endl;
+#endif
+		        if (m_TMCBehaviour != nullptr) {
+#ifdef DEBUG_TMC
+		            std::cout << "NodeHandler: Executing TMC (intercepting at RSU " << node->getId() << ")" << std::endl;
+#endif
+		            if (!executedTMC) {
+		                // Execute the TMC
+		                m_TMCBehaviour->Execute();
+		                executedTMC = true;
+		                // reset askedForSubscription flag for next sim step.
+		                askedTMCForSubscriptions = false;
 		            }
+		        } else {
+#ifdef DEBUG_TMC
+		            std::cout << "NodeHandler::checkTMCExecution(): No TMC." << std::endl;
+#endif
+		        }
+		    }
+		}
+
+		void NodeHandler::checkTMCSubscriptionRequests(const Node* node) {
+		    if (node->isFixed()) {
+#ifdef DEBUG_TMC
+		        std::cout << "NodeHandler: checkTMCSubscriptionRequests()" << std::endl;
+#endif
+		        if (m_TMCBehaviour != nullptr) {
+		            if (!askedTMCForSubscriptions) {
+#ifdef DEBUG_TMC
+		                std::cout << "NodeHandler: Asking TMC for new subscriptions (intercepting at RSU " << node->getId() << ")" << std::endl;
+#endif
+		                // Provide the TMC access to subscripiton facilities. (It will use the current node's controller as a host)
+		                m_TMCBehaviour->OnAddSubscriptions();
+		                askedTMCForSubscriptions = true;
+		                // reset executed flag for this sim step.
+		                executedTMC = false;
+		            }
+		        } else {
+#ifdef DEBUG_TMC
+		            std::cout << "NodeHandler::checkTMCSubscriptionRequests(): No TMC." << std::endl;
+#endif
 		        }
 		    }
 		}
@@ -344,6 +397,14 @@ namespace baseapp
                 return emptyString;
             }
             return nodeIt->second->getSumoId();
+        }
+
+
+        void NodeHandler::setTMCBehaviour(application::TMCBehaviour * b) {
+            if (m_TMCBehaviour != nullptr) {
+                delete m_TMCBehaviour;
+            }
+            m_TMCBehaviour = b;
         }
 
 	} /* namespace server */

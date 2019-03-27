@@ -228,6 +228,10 @@ namespace baseapp
 				 */
 				void TraciCommandResult(const int executionId, tcpip::Storage & traciReply);
 
+                /// @brief return time and result object for the last TraCI response received for the given object and variable
+                /// returns noResponse if no entry exists in TraCIResponses
+                static const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >& GetLastTraCIResponse(std::string objID, int variableID);
+
                 /// @brief schedule a traci command to be executed
                 /// @param[in] cmdID traci command id
                 /// @param[in] varID traci variable id

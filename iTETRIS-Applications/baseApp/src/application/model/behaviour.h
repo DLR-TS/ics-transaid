@@ -142,12 +142,13 @@ namespace baseapp
 					return TYPE_BEHAVIOUR;
 				}
 
+                /// @brief return time and result object for the last TraCI response received for the given object and variable
+                /// returns noResponse if no entry exists in TraCIResponses
+                static const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >& GetLastTraCIResponse(std::string objID, int variableID);
+
 			protected:
 				virtual std::string Log() const;
 				iCSInterface* GetController() const;
-				/// @brief return time and result object for the last TraCI response received for the given object and variable
-				/// returns noResponse if no entry exists in TraCIResponses
-                const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >& GetLastTraCIResponse(std::string objID, int variableID);
 
                 /// @brief noResponse is returned by @getLastTraCIResponse if there is no entry for the requested
                 /// object/command in TraCIResponses

@@ -472,6 +472,12 @@ namespace baseapp
 //			a state change
 		}
 
+
+        const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >&
+        iCSInterface::GetLastTraCIResponse(std::string objID, int variableID) {
+            return Behaviour::GetLastTraCIResponse(objID, variableID);
+        }
+
 		std::shared_ptr<libsumo::TraCIColor>
 		iCSInterface::readColor(tcpip::Storage& inputStorage) {
 		    std::shared_ptr<libsumo::TraCIColor> res = std::make_shared<libsumo::TraCIColor>();

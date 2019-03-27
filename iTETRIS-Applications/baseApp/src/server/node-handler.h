@@ -120,20 +120,21 @@ namespace baseapp
 				    return m_nodes;
 				}
 
+		        void setTMCBehaviour(application::TMCBehaviour * b);
+
 			private:
-				/// @brief This method monitores the execution of RSU Behaviours and if all have been executed,
-				///        executes the TMC Behaviour, if existent.
-				void checkTMCExecution(const application::Node * node);
+                /// @brief This method controls the execution of the TMC Behaviour, if existent.
+                void checkTMCExecution(const application::Node * node);
+
+                /// @brief This method monitores the request for subscriptions by the TMC Behaviour, if existent.
+                void checkTMCSubscriptionRequests(const application::Node * node);
 
                 NodeMap m_nodes;
 
-                /// @brief IDs of all rsu known to the application
-                /// @note This knowledge is used to monitor the execution of all RSU-residing logic
-                ///       and to trigger the execution of the TMC Behaviour, if such exists (@see BehaviourFactory)
-                std::map<int, application::Node*> m_RSUs;
-                /// @brief If a TMC Behaviour exists, this ID-list is used to keep track of which RSUs did not yet complete their logic
-                ///        If the last RSU executed, the TMC Behaviour is executed as well.
-                std::set<int> m_remainingRSUs;
+                /// @brief Whether the TMC was already asked for general subscriptions to be issued in this sim step
+                bool askedTMCForSubscriptions;
+                /// @brief Whether the TMC was already executed in this sim step
+                bool executedTMC;
 
 				PayloadStorage * m_storage;
 				CircularBuffer<int> * m_timeStepBuffer;
