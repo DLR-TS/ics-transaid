@@ -38,6 +38,11 @@
 #define BEHAVIOUR_FACTORY_H_
 
 
+/*
+ *  DEBUG Defines
+ */
+//#define DEBUG_TMC
+
 namespace baseapp
 {
 	namespace application
@@ -53,6 +58,7 @@ namespace baseapp
 		class BehaviourFactory
 		{
 		public:
+		    virtual ~BehaviourFactory() {};
 			/**
 			 * @brief Create one or several new RSU behaviour(s) and add them to the interface
 			 */
@@ -65,6 +71,9 @@ namespace baseapp
              * @brief Create a new TMC behaviour, the caller is responsible for deletion
              */
             virtual TMCBehaviour * createTMCBehaviour() {
+#ifdef DEBUG_TMC
+                std::cout << "BehaviourFactory::createTMCBehaviour() is not overriden: No TMC Behaviour will be created." << std::endl;
+#endif
                 return nullptr;
             }
 		};
