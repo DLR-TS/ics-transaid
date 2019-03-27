@@ -55,7 +55,7 @@ namespace testapp
 		{
 			interface->SubscribeBehaviour(new BehaviourTestRSU(interface));
 
-			if (ProgramConfiguration::GetTestCase() == "TMCBehaviour") {
+			if (ProgramConfiguration::GetTestCase() == "TMCBehaviour" || ProgramConfiguration::GetTestCase() == "TMCBehaviour_multiRSU") {
 			    // Manually create a TMCBehaviour (in other applications, this should be done in BehaviourFactory::createTMCBehaviour())
                 if (!createdTMCBehaviour) {
                     std::cout << "BehaviourTestFactory::createRSUBehaviour(): Creating TMCBehaviour." << std::endl;

@@ -141,8 +141,10 @@ namespace testapp
 
                 m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &BehaviourTestRSU::RSUBroadcastTestV2XmsgSet, this);
 
-            } else if (ProgramConfiguration::GetTestCase() == "TMCBehaviour"){
-                GetController()->requestMobilityInfo();
+            } else if (ProgramConfiguration::GetTestCase() == "TMCBehaviour" || ProgramConfiguration::GetTestCase() == "TMCBehaviour_multiRSU"){
+                if (GetController()->GetId() == 5000){
+                    GetController()->requestMobilityInfo();
+                }
                 GetController()->startReceivingGeobroadcast(MSGCAT_TESTAPP);
                 m_subReceiveMessage = true;
             }

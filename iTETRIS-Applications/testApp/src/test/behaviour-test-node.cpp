@@ -70,6 +70,7 @@ namespace testapp
             m_broadcastCheckInterval = 100;
             m_eventBroadcastMCM = 0;
             m_eventBroadcastCPM = 0;
+            m_counter = 0;
 		}
 
         BehaviourTestNode::~BehaviourTestNode() {
@@ -143,7 +144,7 @@ namespace testapp
 
                 m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &BehaviourTestNode::VehicleBroadcastTestV2XmsgSet, this);
 
-            } else if (ProgramConfiguration::GetTestCase() == "TMCBehaviour") {
+            } else if (ProgramConfiguration::GetTestCase() == "TMCBehaviour" || ProgramConfiguration::GetTestCase() == "TMCBehaviour_multiRSU") {
                 m_eventBroadcast = Scheduler::Schedule(m_broadcastInterval, &BehaviourTestNode::sendRepeatedBroadcast, this);
             }
 		}
@@ -377,7 +378,23 @@ namespace testapp
 
         void BehaviourTestNode::sendRepeatedBroadcast() {
             TestHeader * responseHeader = new TestHeader(PID_UNKNOWN, MT_TEST_RESPONSE, "Regular broadcast from vehicle " + GetController()->GetId());
-            int rsuID = 5000;
+            int rsuID;
+            if (ProgramConfiguration::GetTestCase() == "TMCBehaviour_multiRSU") {
+                m_counter++;
+                switch (m_counter % 3) {
+                case 0:
+                    rsuID = 5000;
+                    break;
+                case 1:
+                    rsuID = 5001;
+                    break;
+                case 2:
+                    rsuID = 5002;
+                    break;
+                }
+            } else {
+                rsuID = 5000;
+            }
             GetController()->SendTo(rsuID, responseHeader , PID_UNKNOWN, MSGCAT_TESTAPP);
             m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &BehaviourTestNode::sendRepeatedBroadcast, this);
         }

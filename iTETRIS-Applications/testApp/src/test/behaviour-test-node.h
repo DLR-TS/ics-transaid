@@ -123,6 +123,9 @@ namespace testapp
             event_id m_eventBroadcastCPM;
             /// @}
 
+            /// @brief Multipurpose counter (used in TMCBehaviour test to alternate between different RSUs)
+            int m_counter;
+
             int m_broadcastCheckInterval;
             TransaidHeader::CamInfo m_lastCAMsent;
             TransaidHeader::DenmInfo m_lastDENMsent;
