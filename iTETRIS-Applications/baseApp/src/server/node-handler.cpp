@@ -67,7 +67,7 @@ namespace baseapp
 		std::string NodeHandler::emptyString = "";
 
 		NodeHandler::NodeHandler(BehaviourFactory* factory) :
-		        m_factory(factory), m_TMCBehaviour(nullptr), askedTMCForSubscriptions(false), executedTMC(false)
+		        m_factory(factory), m_TMCBehaviour(nullptr), askedTMCForSubscriptions(false), executedRSUs(0)
 		{
 			m_storage = new PayloadStorage();
 			m_timeStepBuffer = new CircularBuffer<int>(ProgramConfiguration::GetMessageLifetime());
@@ -125,6 +125,7 @@ namespace baseapp
 #endif
 		        // Provide the TMC access to the RSU's sending facilities.
 		        m_TMCBehaviour->addRSU(node->getController());
+		        rsuIDs.insert(node->getId());
 		    }
 		}
 
@@ -268,8 +269,8 @@ namespace baseapp
 			Node * node;
 			if (getNode(nodeId, node))
 			{
-			    checkTMCExecution(node);
 				const bool res = node->applicationExecute(data);
+                checkTMCExecution(node);
                 return res;
 			}
 			return false;
@@ -281,15 +282,18 @@ namespace baseapp
 		        std::cout << "NodeHandler: checkTMCExecution()" << std::endl;
 #endif
 		        if (m_TMCBehaviour != nullptr) {
+		            ++executedRSUs;
 #ifdef DEBUG_TMC
-		            std::cout << "NodeHandler: Executing TMC (intercepting at RSU " << node->getId() << ")" << std::endl;
+		            std::cout << "Executed RSU " << node->getId() << " no. excuted: "
+		                    << executedRSUs << ", askedTMCForSubs: " << askedTMCForSubscriptions
+		                    << "\nNodeHandler: Executing TMC (intercepting at RSU " << node->getId() << ")" << std::endl;
 #endif
-		            if (!executedTMC) {
-		                // Execute the TMC
+		            if (executedRSUs == rsuIDs.size()) {
+		                // Execute the TMC when all RSUs have executed
 		                m_TMCBehaviour->Execute();
-		                executedTMC = true;
-		                // reset askedForSubscription flag for next sim step.
+		                // reset askedForSubscription and executed for next sim step.
 		                askedTMCForSubscriptions = false;
+		                executedRSUs = 0;
 		            }
 		        } else {
 #ifdef DEBUG_TMC
@@ -309,11 +313,10 @@ namespace baseapp
 #ifdef DEBUG_TMC
 		                std::cout << "NodeHandler: Asking TMC for new subscriptions (intercepting at RSU " << node->getId() << ")" << std::endl;
 #endif
-		                // Provide the TMC access to subscripiton facilities. (It will use the current node's controller as a host)
+		                // Provide the TMC access to subscription facilities. As soon as the first RSU is asked for subscriptions.
+		                // The TMC Behaviour will use its iface member to request the subscriptions
 		                m_TMCBehaviour->OnAddSubscriptions();
 		                askedTMCForSubscriptions = true;
-		                // reset executed flag for this sim step.
-		                executedTMC = false;
 		            }
 		        } else {
 #ifdef DEBUG_TMC

@@ -134,7 +134,10 @@ namespace baseapp
                 /// @brief Whether the TMC was already asked for general subscriptions to be issued in this sim step
                 bool askedTMCForSubscriptions;
                 /// @brief Whether the TMC was already executed in this sim step
-                bool executedTMC;
+                int executedRSUs;
+                /// @brief All RSU ids whrer the application is installed
+                std::set<int> rsuIDs;
+
 
 				PayloadStorage * m_storage;
 				CircularBuffer<int> * m_timeStepBuffer;
