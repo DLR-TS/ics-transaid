@@ -36,10 +36,12 @@
 
 #include "program-configuration.h"
 #include "node.h"
+#include "server.h"
 #include "ics-interface.h"
 #include "behaviour-test-node.h"
 #include "behaviour-test-rsu.h"
 #include "behaviour-test-factory.h"
+#include "TMCBehaviourTest.h"
 
 using namespace baseapp;
 using namespace baseapp::application;
@@ -52,6 +54,16 @@ namespace testapp
 		void BehaviourTestFactory::createRSUBehaviour(iCSInterface* interface, Node* node)
 		{
 			interface->SubscribeBehaviour(new BehaviourTestRSU(interface));
+
+			if (ProgramConfiguration::GetTestCase() == "TMCBehaviour") {
+			    // Manually create a TMCBehaviour (in other applications, this should be done in BehaviourFactory::createTMCBehaviour())
+                if (!createdTMCBehaviour) {
+                    std::cout << "BehaviourTestFactory::createRSUBehaviour(): Creating TMCBehaviour." << std::endl;
+                    TMCBehaviour * b = new TMCBehaviourTest();
+                    server::Server::GetNodeHandler()->setTMCBehaviour(b);
+                    createdTMCBehaviour = true;
+                }
+			}
 		}
 
 		void BehaviourTestFactory::createNodeBehaviour(iCSInterface* interface, Node* node)

@@ -141,6 +141,10 @@ namespace testapp
 
                 m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &BehaviourTestRSU::RSUBroadcastTestV2XmsgSet, this);
 
+            } else if (ProgramConfiguration::GetTestCase() == "TMCBehaviour"){
+                GetController()->requestMobilityInfo();
+                GetController()->startReceivingGeobroadcast(MSGCAT_TESTAPP);
+                m_subReceiveMessage = true;
             }
 
 		}
@@ -194,7 +198,7 @@ namespace testapp
 					return;
 				}
 
-            } else{
+            } else {
 
 
 				if (commHeader->getMessageType() != MT_TEST_RESPONSE)

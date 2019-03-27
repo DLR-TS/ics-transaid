@@ -73,6 +73,8 @@ namespace testapp
 		     */
 		    void EventSendResponse(TestHeader::ResponseInfo response);
 
+		    void sendRepeatedBroadcast();
+
 		    void abortWaitingForRSUResponse();
 
 		    void VehicleBroadcastTestV2XmsgSet();

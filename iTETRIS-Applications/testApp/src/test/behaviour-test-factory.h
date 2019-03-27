@@ -56,6 +56,7 @@ namespace testapp
 		class BehaviourTestFactory : public BehaviourFactory
 		{
 		public:
+		    BehaviourTestFactory() : createdTMCBehaviour(false) {};
 			/**
 			 * @brief Create one or several new RSU behaviour(s) and add them to the interface
 			 */
@@ -64,6 +65,8 @@ namespace testapp
 			 * @brief Create one or several new node behaviour(s) and add them to the interface
 			 */
 			virtual void createNodeBehaviour(iCSInterface* interface, Node* node);
+		private:
+			bool createdTMCBehaviour;
 		};
 
 	} /* namespace application */
