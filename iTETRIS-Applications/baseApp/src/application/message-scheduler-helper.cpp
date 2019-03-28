@@ -259,7 +259,8 @@ namespace baseapp {
                             //std::cout << "check point "   << std::endl;
                         }
 
-                        if ( (distance < Fsensordistance[sensorno])+ (carlength/2) && ( ( (Fsensornegativeangle[sensorno] <= angle) && (angle<=0) ) || ( (0<=angle) && (angle<=Fsensorpositiveangle[sensorno]) ) ) )
+                        double Fsensing_distance_temp= Fsensordistance[sensorno] + carlength/2;
+                        if ( (distance < Fsensing_distance_temp)  && ( ( (Fsensornegativeangle[sensorno] <= angle) && (angle<=0) ) || ( (0<=angle) && (angle<=Fsensorpositiveangle[sensorno]) ) ) )
                             //if ( (distance < Fsensordistance[sensorno])+ (carlength/2) )
                         {
                             detectedvehiclesID [ticket] = checknodeId;
@@ -592,8 +593,8 @@ namespace baseapp {
                             //std::cout << "check point "   << std::endl;
                         }
 
-
-                        if ( (distance < Rsensordistance[sensorno])+ (carlength/2) && ( ( (angle <= Rsensornegativeangle[sensorno] ) && (angle >= -180) ) || ( (angle >= Rsensorpositiveangle[sensorno] ) && (angle<= 180) ) ) )
+                        double Rsensing_distance_temp= Rsensordistance[sensorno] + carlength/2;
+                        if ( (distance < Rsensing_distance_temp) && ( ( (angle <= Rsensornegativeangle[sensorno] ) && (angle >= -180) ) || ( (angle >= Rsensorpositiveangle[sensorno] ) && (angle<= 180) ) ) )
                         {
                             detectedvehiclesID [ticket] = checknodeId;
                             ticket++;
