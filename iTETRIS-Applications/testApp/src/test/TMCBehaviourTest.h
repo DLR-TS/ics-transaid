@@ -30,8 +30,6 @@ public:
 
     virtual ~TMCBehaviourTest();
 
-    void addRSU(iCSInterface * rsu);
-
     /// @brief To be called, when a message is received at an RSU
     /// @note  The payload pointer will be deleted externally after this call.
     void ReceiveMessage(int rsuID, server::Payload * payload, double snr);
@@ -42,6 +40,9 @@ public:
     /// @brief Add a new RSU to be controlled by this TMC
     void OnAddSubscriptions();
 
+private:
+
+    bool isActive();
 
 };
 

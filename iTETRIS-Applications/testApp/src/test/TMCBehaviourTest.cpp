@@ -20,14 +20,10 @@ TMCBehaviourTest::TMCBehaviourTest() {
 TMCBehaviourTest::~TMCBehaviourTest() {
 }
 
-
-void
-TMCBehaviourTest::addRSU(iCSInterface * rsu) {
-    TMCBehaviour::addRSU(rsu);
-    std::cout << CurrentTime::Now() << " TMCBehaviourTest::addRSU(), rsuID: " << rsu->GetId() << std::endl;
-}
-
 void TMCBehaviourTest::ReceiveMessage(int rsuID, server::Payload * payload, double snr) {
+    if (!isActive()) {
+        return;
+    }
     if (m_RSUController.find(rsuID) == m_RSUController.end()) {
         std::cerr << CurrentTime::Now() << "TMCBehaviourTest::ReceiveMessage(): ERROR: RSU " << rsuID << " unknown to TMC Behaviour!" << std::endl;
     } else {
@@ -36,14 +32,25 @@ void TMCBehaviourTest::ReceiveMessage(int rsuID, server::Payload * payload, doub
 }
 
 void TMCBehaviourTest::Execute() {
+    if (!isActive()) {
+    return;
+}
     std::cout << CurrentTime::Now() << " TMCBehaviourTest::Execute() called."
             << " hostController: " << iface->GetId() << std::endl;
 }
 
 void TMCBehaviourTest::OnAddSubscriptions() {
+    if (!isActive()) {
+            return;
+        }
     std::cout << CurrentTime::Now() << " TMCBehaviourTest::onAddSubscriptions() called."
             << " hostController: " << iface->GetId() << std::endl;
 }
+
+bool TMCBehaviourTest::isActive() {
+    return CurrentTime::Now() >= 0;
+}
+
 
 } /* namespace application */
 } /* namespace testapp */
