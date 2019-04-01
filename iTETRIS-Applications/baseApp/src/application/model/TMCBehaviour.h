@@ -29,14 +29,14 @@ public:
     /// @note  On the first RSU registration, some provisions are taken - the first added RSU's controller will serve
     ///        as interface to the generic application functionalities.
     /// @todo: If it is deleted before the TMCBehaviour, the RSU should be removed
-    virtual void addRSU(iCSInterface* rsu);
+    void addRSU(iCSInterface* rsu);
 
     /// @brief To be called, when a message is received at an RSU
     /// @note  The payload pointer will be deleted externally after this call.
     virtual void ReceiveMessage(int rsuID, server::Payload * payload, double snr) = 0;
 
     /// @brief Add a new RSU to be controlled by this TMC
-    /// @brief Execute() is called once per simulation step, when the first RSU is executed.
+    /// @brief Execute() is called once per simulation step, when the last RSU has been executed.
     ///        The TMC is allowed to use the rsu's interface for issuing of general subscriptions.
     virtual void Execute() = 0;
 
