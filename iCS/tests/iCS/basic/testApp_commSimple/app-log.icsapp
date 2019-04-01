@@ -1,6 +1,5 @@
 Test App Log File
 ===============================
-[2019-03-12T12:59:06.882] [INFO ] #@# Current timestep -1000
 [2019-03-12T12:59:06.882] [INFO ] Added new fixed station with id 5000
 [2019-03-12T12:59:06.882] [INFO ] [Node 5000] added subscription 1 type 0x3a
 [2019-03-12T12:59:06.883] [INFO ] [Node 5000] added subscription 2 type 0x42
@@ -25,7 +24,6 @@ Test App Log File
 [2019-03-12T12:59:06.912] [INFO ] #@# Current timestep 400
 [2019-03-12T12:59:06.913] [INFO ] Mobility info on nodes: 5000 
 [2019-03-12T12:59:06.914] [INFO ] #@# Current timestep 450
-[2019-03-12T12:59:06.914] [INFO ] ExpiredPayloadCleanUp for time: -1000. Removing keys: noting to remove Current size: 0
 [2019-03-12T12:59:06.916] [INFO ] Mobility info on nodes: 5000 
 [2019-03-12T12:59:06.917] [INFO ] #@# Current timestep 500
 [2019-03-12T12:59:06.917] [INFO ] ExpiredPayloadCleanUp for time: 0. Removing keys: noting to remove Current size: 0

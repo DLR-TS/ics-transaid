@@ -1,10 +1,6 @@
 Test App NS-Log File
 ===============================
 [2019-01-28T10:56:38.879] [INFO ] Schedule at 1000
-[2019-01-28T10:56:40.950] [DEBUG] #@# Current timestep -1000
-[2019-01-28T10:56:40.950] [INFO ] [Scheduler] Notify time: -1000. Current size: 1
-[2019-01-28T10:56:40.950] [INFO ] [Scheduler] 0 have been executed.
-[2019-01-28T10:56:40.950] [INFO ] [-1000][Scheduler] next at 1000 in 2000
 [2019-01-28T10:56:40.950] [DEBUG] (RSU 5000): Added behaviour TestRSU
 [2019-01-28T10:56:40.950] [FUNCT] void baseapp::application::iCSInterface::Activate():~(RSU 5000): 
 [2019-01-28T10:56:40.950] [INFO ] (RSU 5000): : Activated

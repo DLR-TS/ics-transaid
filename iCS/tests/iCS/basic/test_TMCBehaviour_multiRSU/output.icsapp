@@ -7,7 +7,8 @@ iCS --> SUMO launched.
 iCS --> ns-3 launched.
 
 STEP 2 - SETUP PHASE
-testApp -> Starting iTetris test app
+Loading configuration... testApp -> Starting iTetris test app
+done.
 testApp -> [WARNING]Ignoring socket port specified in configuration. (Overridden by command line argument.)
 testApp -> Test case set to TMCBehaviour_multiRSU
 testApp -> ParseGeneral done
@@ -15,19 +16,18 @@ testApp -> ParseInfrastructure done
 testApp -> ParseSetup done
 testApp -> ParseOutput done
 testApp -> Load Configuration done
-Loading configuration... done.
 main-inci v 3.20
 ns3 -> No option file found. Must be named option.txt
 
 STEP 3 - SETUP PHASE
-iCS --> Trying 0 to connect SUMO on port 51981...
+iCS --> Trying 0 to connect SUMO on port 34021...
 iCS --> Connected to SUMO
 
-iCS --> Trying 0 to connect ns-3 on port 50203 and Host localhost...
+iCS --> Trying 0 to connect ns-3 on port 57143 and Host localhost...
 iCS --> Connected to ns-3
 
-iCS --> Trying 0 to connect Application on port 59355...
-testApp -> Server listening on port: 59355
+iCS --> Trying 0 to connect Application on port 34911...
+testApp -> Server listening on port: 34911
 iCS --> Application testApp connected.
 
 
@@ -39,10 +39,6 @@ WaveRsuInstaller::AllocateIpv6Prefix()3001:0:0:2::
 jin <iCS/ns3-client.cc> CMD_CREATENODE=8
 WaveRsuInstaller::AllocateIpv6Prefix()3001:0:0:3::
 BehaviourTestFactory::createRSUBehaviour(): Creating TMCBehaviour.
--1000 TMCBehaviourTest::addRSU(), rsuID: 5000
--1000 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
--1000 TMCBehaviourTest::addRSU(), rsuID: 5001
--1000 TMCBehaviourTest::addRSU(), rsuID: 5002
 
 iCS --> Starting scheduling V2X messages in setup phase
 

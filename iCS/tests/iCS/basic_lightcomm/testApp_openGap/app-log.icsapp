@@ -1,6 +1,5 @@
 Test App Log File
 ===============================
-[2019-01-28T10:56:40.950] [INFO ] #@# Current timestep -1000
 [2019-01-28T10:56:40.950] [INFO ] Added new fixed station with id 5000
 [2019-01-28T10:56:40.953] [INFO ] #@# Current timestep 0
 [2019-01-28T10:56:40.955] [INFO ] #@# Current timestep 50
@@ -12,7 +11,6 @@ Test App Log File
 [2019-01-28T10:56:40.965] [INFO ] #@# Current timestep 350
 [2019-01-28T10:56:40.967] [INFO ] #@# Current timestep 400
 [2019-01-28T10:56:40.969] [INFO ] #@# Current timestep 450
-[2019-01-28T10:56:40.969] [INFO ] ExpiredPayloadCleanUp for time: -1000. Removing keys: noting to remove Current size: 0
 [2019-01-28T10:56:40.970] [INFO ] #@# Current timestep 500
 [2019-01-28T10:56:40.971] [INFO ] ExpiredPayloadCleanUp for time: 0. Removing keys: noting to remove Current size: 0
 [2019-01-28T10:56:40.972] [INFO ] #@# Current timestep 550
