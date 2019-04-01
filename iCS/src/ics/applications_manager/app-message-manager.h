@@ -86,6 +86,11 @@ namespace ics
 			 */
 		    bool initSUMOStepLength(int stepLength);
 
+		    /**
+		     * @brief Inform application about current simulation time.
+		     */
+		    bool sendSimStep();
+
 			/**
 			 * @brief Closes the connection with the application module.
 			 * @return True: If the connection closes successfully.

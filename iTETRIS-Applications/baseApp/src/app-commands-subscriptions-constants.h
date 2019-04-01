@@ -50,6 +50,9 @@
 // command: inform app about SUMO simulation step length
 #define CMD_SUMO_STEPLENGTH 0x17 // 23
 
+// command: inform app about current simulation step
+#define CMD_NEW_SIMSTEP 0x16 // 22
+
 // command create new node
 #define CMD_CREATE_MOBILE_NODE 0x01
 

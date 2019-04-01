@@ -62,7 +62,9 @@ namespace baseapp
 				virtual ~Server();
 
 				int dispatchCommand();
-				void updateTimeStep(int current);
+				/// @brief Called by the iCS once at the begin of each simulations step
+                bool step();
+                void updateTimeStep(int current);
 				void checkNodeToRemove();
 				void writeStatusCmd(int commandId, int status, const std::string & description);
 

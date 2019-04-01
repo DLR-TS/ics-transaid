@@ -726,7 +726,16 @@ int SyncManager::RunOneNs3TimeStep()
 
 int SyncManager::RunApplicationLogic()
 {
-	bool success = true;
+    // Send current time step to all applications
+    for (auto& a : *m_applicationHandlerCollection)
+    {
+        if (!a->m_appMessageManager->sendSimStep()) {
+            cout << "iCS --> [ERROR] RunApplicationLogic() in NewSubscriptions." << endl;
+            return EXIT_FAILURE;
+        }
+    }
+
+    bool success = true;
 
 	for (NodeMap::iterator nodeIt = m_iTetrisNodeMap->begin(); nodeIt != m_iTetrisNodeMap->end(); ++nodeIt)
 	{

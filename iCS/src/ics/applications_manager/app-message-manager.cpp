@@ -107,7 +107,7 @@ namespace ics
 		return false;
 	}
 
-	bool AppMessageManager::initSUMOStepLength(int stepLength) {
+    bool AppMessageManager::initSUMOStepLength(int stepLength) {
         Storage outMsg;
         Storage inMsg;
         std::stringstream msg;
@@ -129,7 +129,7 @@ namespace ics
         try
         {
             m_socket->sendExact(outMsg);
-        } catch (SocketException e)
+        } catch (SocketException& e)
         {
             cout << "iCS --> Error while sending command: " << e.what() << endl;
             return false;
@@ -139,7 +139,7 @@ namespace ics
         try
         {
             m_socket->receiveExact(inMsg);
-        } catch (SocketException e)
+        } catch (SocketException& e)
         {
             cout << "iCS --> #Error while receiving command: " << e.what() << endl;
             return false;
@@ -152,7 +152,55 @@ namespace ics
         }
 
         return true;
-	}
+    }
+
+
+    bool AppMessageManager::sendSimStep() {
+        Storage outMsg;
+        Storage inMsg;
+        std::stringstream msg;
+
+        if (m_socket == NULL)
+        {
+            cout << "iCS --> #Error while sending command: no connection to server (sendSimStep())." << endl;
+            return false;
+        }
+
+        // command length
+        outMsg.writeInt(4 + 1 + 4); // len + cmd + currentStep
+        // command id
+        outMsg.writeUnsignedByte(CMD_NEW_SIMSTEP);
+        // command id
+        outMsg.writeInt(SyncManager::m_simStep);
+
+        // send message
+        try
+        {
+            m_socket->sendExact(outMsg);
+        } catch (SocketException& e)
+        {
+            cout << "iCS --> Error while sending command: " << e.what() << endl;
+            return false;
+        }
+
+        // receive answer message
+        try
+        {
+            m_socket->receiveExact(inMsg);
+        } catch (SocketException& e)
+        {
+            cout << "iCS --> #Error while receiving command: " << e.what() << endl;
+            return false;
+        }
+
+        // validate result state
+        if (!ReportResultState(inMsg, CMD_NEW_SIMSTEP))
+        {
+            return false;
+        }
+
+        return true;
+    };
 
 	bool AppMessageManager::Close()
 	{
@@ -185,7 +233,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> Error while sending command: " << e.what() << endl;
 			return EXIT_FAILURE;
@@ -195,7 +243,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving command: " << e.what() << endl;
 			return EXIT_FAILURE;
@@ -264,7 +312,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return false;
@@ -274,7 +322,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return false;
@@ -321,7 +369,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return false;
@@ -331,7 +379,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return false;
@@ -778,7 +826,7 @@ namespace ics
 				noMoreSubs = true;
 			}
 			}
-		} catch (std::invalid_argument e)
+		} catch (std::invalid_argument& e)
 		{
 			cout << "App --> iCS #Error: an exception was thrown while reading result state message. (Subscription code: "
 					<< subscriptionCode << ")" << endl;
@@ -827,7 +875,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return false;
@@ -837,7 +885,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			noMoreUnSubs = true;
@@ -933,7 +981,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return -1;
@@ -943,7 +991,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return -1;
@@ -1025,7 +1073,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return false;
@@ -1035,7 +1083,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return false;
@@ -1080,7 +1128,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return EXIT_FAILURE;
@@ -1095,7 +1143,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return EXIT_FAILURE;
@@ -1188,7 +1236,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return false;
@@ -1198,7 +1246,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return false;
@@ -1259,7 +1307,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return false;
@@ -1269,7 +1317,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			cout << "iCS --> #Error sent " << totalLengthPacket << " bytes to application" << endl;
@@ -1333,7 +1381,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return EXIT_FAILURE;
@@ -1343,7 +1391,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return EXIT_FAILURE;
@@ -1400,7 +1448,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return false;
@@ -1410,7 +1458,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return false;
@@ -1484,7 +1532,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return EXIT_FAILURE;
@@ -1494,7 +1542,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return EXIT_FAILURE;
@@ -1553,7 +1601,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return false;
@@ -1563,7 +1611,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return false;
@@ -1618,7 +1666,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return false;
@@ -1628,7 +1676,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return false;
@@ -1668,7 +1716,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return false;
@@ -1679,7 +1727,7 @@ namespace ics
 		{
 			m_socket->receiveExact(inMsg);
 
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return false;
@@ -1763,7 +1811,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return EXIT_FAILURE;
@@ -1773,7 +1821,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return EXIT_FAILURE;
@@ -1827,7 +1875,7 @@ namespace ics
 	  try
 	  {
 	    m_socket->sendExact(outMsg);
-	  } catch (SocketException e)
+	  } catch (SocketException& e)
 	  {
 	    cout << "iCS --> #Error while sending immediate command to Application: " << e.what() << endl;
 	    return EXIT_FAILURE;
@@ -1837,7 +1885,7 @@ namespace ics
 	  try
 	  {
 	    m_socket->receiveExact(inMsg);
-	  } catch (SocketException e)
+	  } catch (SocketException& e)
 	  {
 	    cout << "iCS --> #Error while receiving immediate response from Application: " << e.what() << endl;
 	    return EXIT_FAILURE;
@@ -1894,7 +1942,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return EXIT_FAILURE;
@@ -1904,7 +1952,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cout << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return EXIT_FAILURE;
@@ -1940,7 +1988,7 @@ namespace ics
 			}
 			resultType = inMsg.readUnsignedByte();
 			msg = inMsg.readString();
-		} catch (std::invalid_argument e)
+		} catch (std::invalid_argument& e)
 		{
 			cout << "App --> iCS #Error: an exception was thrown while reading result state message. (command code: "
 					<< command << ")" << endl;
@@ -2090,7 +2138,7 @@ namespace ics
 					cout << "iCS --> #Error: received unknown position format" << endl;
 					return false;
 				}
-			} catch (std::invalid_argument e)
+			} catch (std::invalid_argument& e)
 			{
                 cout<< "#Error while reading message:" << e.what() << endl;
 				return false;
@@ -2133,7 +2181,7 @@ namespace ics
 
 				return -1;
 
-			} catch (std::invalid_argument e)
+			} catch (std::invalid_argument& e)
 			{
                 cout << "#Error while reading message:" << e.what() << endl;
 				return -1;
@@ -2179,7 +2227,7 @@ namespace ics
 		try
 		{
 			m_socket->sendExact(outMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cerr << "iCS --> #Error while sending command to Application: " << e.what() << endl;
 			return EXIT_FAILURE;
@@ -2189,7 +2237,7 @@ namespace ics
 		try
 		{
 			m_socket->receiveExact(inMsg);
-		} catch (SocketException e)
+		} catch (SocketException& e)
 		{
 			cerr << "iCS --> #Error while receiving response from Application: " << e.what() << endl;
 			return EXIT_FAILURE;

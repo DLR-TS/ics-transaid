@@ -160,16 +160,19 @@ namespace baseapp
 			int commandLength = m_inputStorage.readInt();
 
 			int commandId = m_inputStorage.readUnsignedByte();
-			if (commandId != CMD_APP_CLOSE && commandId != CMD_SUMO_STEPLENGTH)
+			if (commandId != CMD_APP_CLOSE && commandId != CMD_SUMO_STEPLENGTH && commandId != CMD_NEW_SIMSTEP)
 				updateTimeStep(m_inputStorage.readInt());
 
 			bool success = false;
 			// dispatch commands
 			switch (commandId)
 			{
-			case CMD_CREATE_MOBILE_NODE:
-				success = createMobileNode();
-				break;
+            case CMD_NEW_SIMSTEP:
+                success = step();
+                break;
+            case CMD_CREATE_MOBILE_NODE:
+                success = createMobileNode();
+                break;
 			case CMD_REMOVE_MOBILE_NODE:
 				success = removeMobileNode();
 				break;
@@ -231,6 +234,15 @@ namespace baseapp
 
 			return commandId;
 		}
+
+		bool Server::step()
+		{
+		    int currentTime = m_inputStorage.readInt();
+		    updateTimeStep(currentTime);
+            writeStatusCmd(CMD_NEW_SIMSTEP, APP_RTYPE_OK, "CMD_NEW_SIMSTEP");
+		    return true;
+		}
+
 
         void Server::updateTimeStep(int current)
         {
