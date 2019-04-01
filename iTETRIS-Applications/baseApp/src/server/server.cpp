@@ -160,8 +160,6 @@ namespace baseapp
 			int commandLength = m_inputStorage.readInt();
 
 			int commandId = m_inputStorage.readUnsignedByte();
-			if (commandId != CMD_APP_CLOSE && commandId != CMD_SUMO_STEPLENGTH && commandId != CMD_NEW_SIMSTEP)
-				updateTimeStep(m_inputStorage.readInt());
 
 			bool success = false;
 			// dispatch commands

@@ -300,12 +300,9 @@ namespace ics
 		}
 
 		// command length
-		outMsg.writeInt(4 + 1 + 4 + tmpMsg.size());
+        outMsg.writeInt(4 + 1 + tmpMsg.size());
 		// command id
 		outMsg.writeUnsignedByte(cmd);
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);
-
 		outMsg.writeStorage(tmpMsg);
 
 		// send request message
@@ -350,11 +347,9 @@ namespace ics
 		}
 
 		// command length
-		outMsg.writeInt(4 + 1 + 4 + 4 + 4);
+        outMsg.writeInt(4 + 1 + 4 + 4);
 		// command id
 		outMsg.writeUnsignedByte(CMD_ASK_FOR_SUBSCRIPTION);
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);
 		// node identifier
 		outMsg.writeInt(nodeId);
 		// subscription will have this id
@@ -858,11 +853,9 @@ namespace ics
 		}
 
 		// command length
-		outMsg.writeInt(4 + 1 + 4 + 4);
+       outMsg.writeInt(4 + 1 + 4);
 		// command id
 		outMsg.writeUnsignedByte(CMD_END_SUBSCRIPTION);
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);
 		// node identifier
 		outMsg.writeInt(nodeId);
 
@@ -938,11 +931,9 @@ namespace ics
     IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
 		// command length
-		outMsg.writeInt(4 + 1 + 4 + 4 + 1 + 4);
+        outMsg.writeInt(4 + 1 + 4 + 1 + 4);
 		// command id
 		outMsg.writeUnsignedByte(CMD_END_SUBSCRIPTION);
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);
 		// node identifier
 		outMsg.writeInt(nodeId);
 		// subscription to be maintained or dropped
@@ -1028,11 +1019,9 @@ namespace ics
 		int numberOfCarsSize = numberOfCars * (4 + 4 + 4 + 4 + 4 + 4);
 
 		// command length
-		outMsg.writeInt(4 + 1 + 4 + 4 + 4 + 4 + numberOfCarsSize);
+        outMsg.writeInt(4 + 1 + 4 + 4 + 4 + numberOfCarsSize);
 		// command id
 		outMsg.writeUnsignedByte(CMD_CARS_IN_ZONE);
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);
 		// subscribed node id
 		outMsg.writeInt(nodeId);
 		// subscribed subscriptionId
@@ -1112,11 +1101,9 @@ namespace ics
 		}
 
 		// command length
-		outMsg.writeInt(1 + 1 + 4 + 4 + 4 + 4);
+        outMsg.writeInt(1 + 1 + 4 + 4 + 4);
 		// command id
 		outMsg.writeUnsignedByte(CMD_TRAVEL_TIME_ESTIMATION);
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);
 		// subscribed node id
 		outMsg.writeInt(nodeId);
 		// start station
@@ -1189,7 +1176,6 @@ namespace ics
 		// command length
 		int totalLengthPacket = 4 /*length*/
 		+ 1 /*commandId*/
-		+ 4 /*timeStep*/
 		+ 4 /*nodeId*/
 		+ 4 /*nodeX*/
 		+ 4 /*nodeY*/
@@ -1199,8 +1185,6 @@ namespace ics
 		outMsg.writeInt(totalLengthPacket);                 // bytes: 0-3
 		// command id
 		outMsg.writeUnsignedByte(CMD_RECEIVED_CAM_INFO);    // bytes: 4
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);            // bytes: 5-8
 		// subscribed node id
 		outMsg.writeInt(nodeId);                            // bytes: 9-12
 		// node's position when receiving
@@ -1279,7 +1263,6 @@ namespace ics
 		// command length
 		int totalLengthPacket = 4 /*length*/
 		+ 1 /*commandId*/
-		+ 4 /*timeStep*/
 		+ 4 /*nodeId*/
 		+ 1 /* size indication of facInfo */
 		+ facInfo->size();
@@ -1293,8 +1276,6 @@ namespace ics
 		outMsg.writeInt(totalLengthPacket);                            // bytes: 0-3
 		// command id
 		outMsg.writeUnsignedByte(CMD_FACILITIES_INFORMATION);            // bytes: 4
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);                       // bytes: 5-8
 		// subscribed node id
 		outMsg.writeInt(nodeId);                                      // bytes: 9-12
 		// facilities information (expressed according to the Type-Length-Value syntax)
@@ -1351,11 +1332,9 @@ namespace ics
 		int messagesSize = (receivedMessages.size() * 4) * 2;
 
 		// command length
-		outMsg.writeInt(4 + 1 + 4 + 4 + 4 + messagesSize);
+        outMsg.writeInt(4 + 1 + 4 + 4 + messagesSize);
 		// command id
 		outMsg.writeUnsignedByte(CMD_NOTIFY_APP_MESSAGE_STATUS);
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);
 		// the node in which the applications is running
 		outMsg.writeInt(nodeId);
 		// number of received messages
@@ -1428,7 +1407,6 @@ namespace ics
 		// command length
 		int totalLengthPacket = 4 /*length*/
 		+ 1 /*commandId*/
-		+ 4 /*timeStep*/
 		+ 4 /*nodeId*/
 		+ 1 /*scheduling status*/
 		+ 4;/*subscription id*/
@@ -1436,8 +1414,6 @@ namespace ics
 		outMsg.writeInt(totalLengthPacket);                            // bytes: 0-3
 		// command id
 		outMsg.writeUnsignedByte(command);                      // bytes: 4
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);                       // bytes: 5-8
 		// subscribed node id
 		outMsg.writeInt(nodeId);                                      // bytes: 9-12
 		// scheduling status information (0x00 = NOT SCHEDULED, 0x01 = SCHEDULED)
@@ -1512,15 +1488,12 @@ namespace ics
 		// command length
 		int totalLengthPacket = 4 /*length*/
 		+ 1 /*commandId*/
-		+ 4 /*timeStep*/
 		+ 4 /* number of Rcv. Messages */
 		+ tmpMsg.size(); /*contains sequences of nodeId and appMsgId enhanced with a generic TagContainer */
 
 		outMsg.writeInt(totalLengthPacket);                            // bytes: 0-3
 		// command id
 		outMsg.writeUnsignedByte(CMD_APP_MSG_RECEIVE);                   // bytes: 4
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);                       // bytes: 5-8
 
 		// number of messages
 		outMsg.writeInt(rcvMsg);
@@ -1580,7 +1553,6 @@ namespace ics
 		// command length
 		int totalLengthPacket = 4 /*length*/
 		+ 1 /*commandId*/
-		+ 4 /*timeStep*/
 		+ 4 /*nodeId*/
 		+ 4 // subscriptionId
 				+ tsInfo.size();
@@ -1588,8 +1560,6 @@ namespace ics
 		outMsg.writeInt(totalLengthPacket);                            // bytes: 0-3
 		// command id
 		outMsg.writeUnsignedByte(CMD_APP_RESULT_TRAFF_SIM);              // bytes: 4
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);                       // bytes: 5-8
 		// subscribed node id
 		outMsg.writeInt(nodeId);                       	               // bytes: 9-12
 		// id of the subscription
@@ -1645,7 +1615,6 @@ namespace ics
 		// command length
 		int totalLengthPacket = 4 /*length*/
 		+ 1 /*commandId*/
-		+ 4 /*timeStep*/
 		+ 4 /*nodeId*/
 		+ 4 //subscriptionId
 				+ xAppData.size();
@@ -1653,8 +1622,6 @@ namespace ics
 		outMsg.writeInt(totalLengthPacket);                            // bytes: 0-3
 		// command id
 		outMsg.writeUnsignedByte(CMD_X_APPLICATION_DATA);                // bytes: 4
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);                       // bytes: 5-8
 		// subscribed node id
 		outMsg.writeInt(nodeId);                                      // bytes: 9-12
 		// subscription id
@@ -1699,11 +1666,9 @@ namespace ics
 		tcpip::Storage inMsg;
 
 		// command length
-		outMsg.writeInt(4 + 1 + 4 + 4); // Added by Ramon Bauza 29-09-10
+        outMsg.writeInt(4 + 1 + 4); // Added by Ramon Bauza 29-09-10
 		// command id
 		outMsg.writeUnsignedByte(CMD_NOTIFY_APP_EXECUTE);
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);
 		// the node in which the applications is running
 		outMsg.writeInt(nodeId);
 
@@ -1789,7 +1754,6 @@ namespace ics
 		// command length
 		int totalLengthPacket = 4 /*length*/
 		+ 1 /*commandId*/
-		+ 4 /*timeStep*/
 		+ 4 /*nodeId*/
 		+ 2 /* number of messages */
 		+ tmpMsg.size(); /*contains sequences of nodeId and appMsgId enhanced with a generic TagContainer */
@@ -1797,8 +1761,6 @@ namespace ics
 		outMsg.writeInt(totalLengthPacket);                            // bytes: 0-3
 		// command id
 		outMsg.writeUnsignedByte(CMD_MOBILITY_INFORMATION);                   // bytes: 4
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);                       // bytes: 5-8
 
 		outMsg.writeInt(nodeId);
 		// number of messages
@@ -1855,7 +1817,6 @@ namespace ics
 	  // command length
 	  int totalLengthPacket = 4 /*length*/
 	  + 1 /*commandId*/
-	  + 4 /*timeStep*/
 	  + 4 /*nodeId*/
 	  + 4 /*subscriptionId*/
 	  + proxyMsg.size(); /*contains data from TraCI, following a TraCI encoding */
@@ -1863,8 +1824,6 @@ namespace ics
 	  outMsg.writeInt(totalLengthPacket);                            // bytes: 0-3
 	  // command id
 	  outMsg.writeUnsignedByte(CMD_CONTROL_TRACI);                   // bytes: 4   // RET_CONTROL_TRACI
-	  // simulation timestep
-	  outMsg.writeInt(SyncManager::m_simStep);                       // bytes: 5-8
 	  // the node that called for TraCI
 	  outMsg.writeInt(nodeId);
 	  outMsg.writeInt(m_id);
@@ -1920,7 +1879,6 @@ namespace ics
 		// command length
 		int totalLengthPacket = 4 /*length*/
 		+ 1 /*commandId*/
-		+ 4 /*timeStep*/
 		+ 4 /*nodeId*/
 		+ 1 /* error */
 		+ tmpMsg.size(); /*contains sequences of nodeId and appMsgId enhanced with a generic TagContainer */
@@ -1928,8 +1886,6 @@ namespace ics
 		outMsg.writeInt(totalLengthPacket);                            // bytes: 0-3
 		// command id
 		outMsg.writeUnsignedByte(CMD_TRAFFIC_LIGHT_INFORMATION);                   // bytes: 4
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);                       // bytes: 5-8
 
 		outMsg.writeInt(nodeId);
 		// error
@@ -2205,7 +2161,6 @@ namespace ics
 		// command length
 		int totalLengthPacket = 4 /*length*/
 		+ 1 /*commandId*/
-		+ 4 /*timeStep*/
 		+ 4 /*nodeId*/
 		+ 4 /*subscriptionId*/
 		+ 4 /*executionId*/
@@ -2214,8 +2169,6 @@ namespace ics
 		outMsg.writeInt(totalLengthPacket);                            // bytes: 0-3
 		// command id
 		outMsg.writeUnsignedByte(CMD_SUMO_TRACI_COMMAND);                   // bytes: 4
-		// simulation timestep
-		outMsg.writeInt(SyncManager::m_simStep);                       // bytes: 5-8
 		outMsg.writeInt(nodeId);
 		outMsg.writeInt(subscriptionId);
 		outMsg.writeInt(executionId);

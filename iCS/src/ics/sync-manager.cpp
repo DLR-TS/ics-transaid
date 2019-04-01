@@ -286,6 +286,11 @@ int SyncManager::Run(bool interactive)
 			cout << "STEP 5 - SIMULATION PHASE - Tics = " << m_simStep << endl;
 		}
 
+#ifdef APPLICATIONS_ON
+		// Update simulation time in applications
+        SendSimStepToApplications();
+#endif
+
 #ifdef NS3_ON
 
 		if (m_simStep >= m_firstTimeStep)
@@ -724,8 +729,8 @@ int SyncManager::RunOneNs3TimeStep()
 	return EXIT_FAILURE;
 }
 
-int SyncManager::RunApplicationLogic()
-{
+
+int SyncManager::SendSimStepToApplications() {
     // Send current time step to all applications
     for (auto& a : *m_applicationHandlerCollection)
     {
@@ -734,7 +739,12 @@ int SyncManager::RunApplicationLogic()
             return EXIT_FAILURE;
         }
     }
+    return EXIT_SUCCESS;
+}
 
+
+int SyncManager::RunApplicationLogic()
+{
     bool success = true;
 
 	for (NodeMap::iterator nodeIt = m_iTetrisNodeMap->begin(); nodeIt != m_iTetrisNodeMap->end(); ++nodeIt)

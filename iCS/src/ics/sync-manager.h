@@ -261,6 +261,13 @@ namespace ics
 			 */
 			int GetDataFromNs3();
 
+            /**
+             * @brief Sends the current time to all applications
+             * @return 0: If the transmission finishes successfully
+             * @return 1: If an error occurs
+             */
+			int SendSimStepToApplications();
+
 			/**
 			 * @brief Executes an application
 			 * @return 0: If the execution finishes successfully
