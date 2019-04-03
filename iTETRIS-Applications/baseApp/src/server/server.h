@@ -57,6 +57,11 @@ namespace baseapp
                 /// If the icsID is not known, an empty string is returned
                 static const std::string& getSumoID(int icsID);
 
+                /// @brief Looks up icsID for given sumo ID, returns false, if the sumoID is not known
+                /// @param[in] sumoID sumo id of node for which the ics id should be retrieved
+                /// @param[out] icsID here the corresponding ics ID will be written, if the node exists
+                static bool getICSID(std::string sumoID, int& icsID);
+
 			private:
 				Server(application::BehaviourFactory* factory);
 				virtual ~Server();

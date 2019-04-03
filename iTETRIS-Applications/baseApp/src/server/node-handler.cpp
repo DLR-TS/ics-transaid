@@ -119,13 +119,17 @@ namespace baseapp
 
 		void NodeHandler::addNode(application::Node * node) {
 		    m_nodes.insert(std::make_pair(node->getId(), node));
-		    if (m_TMCBehaviour != nullptr && node->isFixed()) {
+		    if (node->isFixed()) {
+		        if (m_TMCBehaviour != nullptr) {
 #ifdef DEBUG_TMC
 		        std::cout << "NodeHandler: Registering new RSU with id " << node->getId() << std::endl;
 #endif
 		        // Provide the TMC access to the RSU's sending facilities.
 		        m_TMCBehaviour->addRSU(node->getController());
 		        rsuIDs.insert(node->getId());
+		        }
+		    } else {
+		        m_sumoICSIDMap.insert(std::make_pair(node->getSumoId(), node->getId()));
 		    }
 		}
 
@@ -402,6 +406,16 @@ namespace baseapp
             return nodeIt->second->getSumoId();
         }
 
+        bool NodeHandler::getICSID(std::string sumoID, int& icsID) const
+        {
+            auto i = m_sumoICSIDMap.find(sumoID);
+            if (i == m_sumoICSIDMap.end()) {
+                return false;
+            } else {
+                icsID = i->second;
+                return true;
+            }
+        }
 
         void NodeHandler::setTMCBehaviour(application::TMCBehaviour * b) {
             if (m_TMCBehaviour != nullptr) {

@@ -154,6 +154,10 @@ namespace baseapp
             return m_instance->GetNodeHandler()->getSumoID(icsID);
         }
 
+        bool Server::getICSID(std::string sumoID, int& icsID) {
+            return m_instance->GetNodeHandler()->getICSID(sumoID, icsID);
+        }
+
 		int Server::dispatchCommand()
 		{
 			int commandStart = m_inputStorage.position();

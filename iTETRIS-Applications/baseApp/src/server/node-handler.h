@@ -116,6 +116,11 @@ namespace baseapp
 
 				const std::string& getSumoID(int icsID) const;
 
+				/// @brief Looks up icsID for given sumo ID, returns false, if the sumoID is not known
+				/// @param[in] sumoID sumo id of node for which the ics id should be retrieved
+				/// @param[out] icsID here the corresponding ics ID will be written, if the node exists
+				bool getICSID(std::string sumoID, int& icsID) const;
+
 				const NodeMap& getNodes() const {
 				    return m_nodes;
 				}
@@ -130,6 +135,7 @@ namespace baseapp
                 void checkTMCSubscriptionRequests(const application::Node * node);
 
                 NodeMap m_nodes;
+                std::map<std::string, int> m_sumoICSIDMap;
 
                 /// @brief Whether the TMC was already asked for general subscriptions to be issued in this sim step
                 bool askedTMCForSubscriptions;
