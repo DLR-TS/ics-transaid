@@ -101,6 +101,11 @@ namespace baseapp
                 int GetId() const;
                 std::string GetSumoID(int icsID = -1) const;
 
+                // @brief Get iCS ID of a node with given SUMO ID
+                // @param sumoID SUMO ID of the node
+                // @return Corresponding iCS ID if SUMO ID was found in map container, -1 else
+                int getICSID(std::string sumoID) const;
+
 
                 /** @brief get a reference to the map icsID -> Node*
                  *         containing all nodes known to the application.

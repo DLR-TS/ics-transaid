@@ -757,6 +757,14 @@ namespace baseapp
             return baseapp::server::Server::getSumoID(icsID);
         }
 
+        int iCSInterface::getICSID(std::string sumoID) const
+        {
+            int icsID;
+            bool success = baseapp::server::Server::getICSID(sumoID, icsID);
+
+            return success ? icsID : -1;
+        }
+
         const server::NodeMap& iCSInterface::GetAllNodes() const {
             return server::Server::GetNodeHandler()->getNodes();
         }
