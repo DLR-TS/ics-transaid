@@ -937,6 +937,17 @@ public:
    */
   void NotifyRxEnd (Ptr<const Packet> packet);
 
+    //Added by Goku
+    void NotifyRxEndDist (Ptr<const Packet> packet, double distanceTxRx, uint32_t ID);
+    void NotifyTxDist (Ptr<const Packet> packet, double distanceTxRx, uint32_t ID);
+
+    void NotifyRxDropDist (Ptr<const Packet> packet, double distanceTxRx, uint32_t ID);
+    void NotifyRxDropDistall (Ptr<const Packet> packet, double distanceTxRx, uint32_t ID);
+    void NotifyRxDropDistTxRx (Ptr<const Packet> packet, double distanceTxRx, uint32_t ID);
+    //
+
+    void NotifyTx (Ptr<const Packet> packet);
+
   /**
    * Public method used to fire a PhyRxDrop trace.  Implemented for encapsulation
    * purposes.
@@ -1105,12 +1116,24 @@ private:
    */
   TracedCallback<Ptr<const Packet> > m_phyRxEndTrace;
 
+    //Added by Goku
+    TracedCallback<Ptr<const Packet>, double, uint32_t> m_phyRxEndTraceDist;
+    TracedCallback<Ptr<const Packet>, double, uint32_t > m_phyTxTraceDist;
+    TracedCallback<Ptr<const Packet>, double, uint32_t > m_phyRxDropTraceDist;
+    TracedCallback<Ptr<const Packet>, double, uint32_t > m_phyRxDropTraceDistall;
+    TracedCallback<Ptr<const Packet>, double, uint32_t > m_phyRxDropTraceDistTxRx;
+    //
+
+
   /**
    * The trace source fired when the phy layer drops a packet it has received.
    *
    * \see class CallBackTraceSource
    */
   TracedCallback<Ptr<const Packet> > m_phyRxDropTrace;
+
+
+  TracedCallback<Ptr<const Packet> > m_phyTxTrace;
 
   /**
    * A trace source that emulates a wifi device in monitor mode

@@ -51,6 +51,7 @@ NS_LOG_COMPONENT_DEFINE ("YansWifiPhy");
 
 namespace ns3 {
 
+
 NS_OBJECT_ENSURE_REGISTERED (YansWifiPhy);
 
 TypeId
@@ -582,6 +583,198 @@ maybeCcaBusy:
     }
 }
 
+
+//Added by Goku///////////////////////////////////////////Polymorphism function
+    void
+    YansWifiPhy::StartReceivePacket (Ptr<Packet> packet,
+                                     double rxPowerDbm,
+                                     WifiTxVector txVector,
+                                     enum WifiPreamble preamble, double distTxRx, uint32_t ID)
+    {
+        NS_LOG_FUNCTION (this << packet << rxPowerDbm << txVector.GetMode()<< preamble);
+        rxPowerDbm += m_rxGainDb;
+        double rxPowerW = DbmToW (rxPowerDbm);
+        Time rxDuration = CalculateTxDuration (packet->GetSize (), txVector, preamble);
+        WifiMode txMode = txVector.GetMode();
+        Time endRx = Simulator::Now () + rxDuration;
+
+        NotifyTx(packet);//Goku: It can be commented (optional)
+
+        //Alex/Goku/////////
+        Ptr<MobilityModel> senderMobility = this->GetMobility()->GetObject<MobilityModel> ();
+        Vector position = senderMobility->GetPosition();
+
+
+        NotifyTxDist(packet, distTxRx, ID);
+
+
+
+        Ptr<InterferenceHelper::Event> event;
+        event = m_interference.Add (packet->GetSize (),
+                                    txMode,
+                                    preamble,
+                                    rxDuration,
+                                    rxPowerW,
+                                    txVector);  // we need it to calculate duration of HT training symbols
+        Ptr<Node> node=m_mobility->GetObject<Node>();
+        switch (m_state->GetState ())
+        {
+            case YansWifiPhy::SWITCHING:
+                NS_LOG_DEBUG ("drop packet because of channel switching");
+                if (rxPowerW > m_edThresholdW)
+                {
+                    //Ns3Server::myfile<<Simulator::Now().GetSeconds() <<" Collision node "<<node->GetId()<<" SWITCHING "<< rxPowerDbm <<std::endl;
+                    //NS_LOG_INFO(Simulator::Now().GetSeconds() <<" #*#* Collision node "<<node->GetId()<<" SWITCHING "<< rxPowerDbm);
+                }
+                NotifyRxDrop (packet);
+                //Added by Goku
+
+
+                /*
+                 * Packets received on the upcoming channel are added to the event list
+                 * during the switching state. This way the medium can be correctly sensed
+                 * when the device listens to the channel for the first time after the
+                 * switching e.g. after channel switching, the channel may be sensed as
+                 * busy due to other devices' tramissions started before the end of
+                 * the switching.
+                 */
+                if (endRx > Simulator::Now () + m_state->GetDelayUntilIdle ())
+                {
+                    // that packet will be noise _after_ the completion of the
+                    // channel switching.
+                    goto maybeCcaBusy;
+                }
+                break;
+            case YansWifiPhy::RX:
+                //flag = 1;
+                NS_LOG_DEBUG ("drop packet because already in Rx (power=" << rxPowerW << "W)");
+                if (rxPowerW > m_edThresholdW)
+                {
+                    Ns3Server::myfile<<Simulator::Now().GetSeconds() <<" Collision node "<<node->GetId()<<" RX "<< rxPowerDbm  <<std::endl;
+                    //NS_LOG_UNCOND(Simulator::Now().GetSeconds() <<" #*#* Collision node "<<node->GetId()<<" RX "<< rxPowerDbm);
+                    //flag = 1;
+                    //Added by Goku
+                    if (Simulator::Now().GetSeconds()>300){
+                        if(position.x>1500 && position.x<3500){
+
+                            NotifyRxDropDistTxRx(packet, distTxRx, ID); //collission
+
+                        }
+
+                    }
+
+                }
+                else
+                {
+                    if (Simulator::Now().GetSeconds()>300){
+                        if(position.x>1500 && position.x<3500){
+                            NotifyRxDropDistall(packet, distTxRx, ID); //sensitivity
+
+                        }
+
+                    }
+
+                }
+
+                NotifyRxDrop (packet);
+
+
+                if (endRx > Simulator::Now () + m_state->GetDelayUntilIdle ())
+                {
+                    // that packet will be noise _after_ the reception of the
+                    // currently-received packet.
+                    goto maybeCcaBusy;
+                }
+                break;
+            case YansWifiPhy::TX:
+                NS_LOG_DEBUG ("drop packet because already in Tx (power=" << rxPowerW << "W)");
+                if (rxPowerW > m_edThresholdW)
+                {
+                    Ns3Server::myfile<<Simulator::Now().GetSeconds() <<" Collision node "<<node->GetId() << " TX "<< rxPowerDbm<<std::endl;
+                    //NS_LOG_UNCOND(Simulator::Now().GetSeconds() <<" #*#* Collision node "<<node->GetId()<<" TX "<< rxPowerDbm);
+                }
+                NotifyRxDrop (packet);
+
+                //Added by Goku
+                if (Simulator::Now().GetSeconds()>300){
+                    if(position.x>1500 && position.x<3500){
+
+                        NotifyRxDropDistTxRx(packet, distTxRx, ID); //collission
+
+                    }
+
+                }
+
+                if (endRx > Simulator::Now () + m_state->GetDelayUntilIdle ())
+                {
+                    // that packet will be noise _after_ the transmission of the
+                    // currently-transmitted packet.
+                    goto maybeCcaBusy;
+                }
+                break;
+            case YansWifiPhy::CCA_BUSY:
+            case YansWifiPhy::IDLE:
+                if (rxPowerW > m_edThresholdW)
+                {
+                    if (IsModeSupported (txMode) || IsMcsSupported(txMode))
+                    {
+                        NS_LOG_DEBUG ("sync to signal (power=" << rxPowerW << "W)");
+                        // sync to signal
+                        m_state->SwitchToRx (rxDuration);
+                        NS_ASSERT (m_endRxEvent.IsExpired ());
+                        NotifyRxBegin (packet);
+                        m_interference.NotifyRxStart ();
+                        m_endRxEvent = Simulator::Schedule (rxDuration, &YansWifiPhy::EndReceiveV2, this,
+                                                            packet,
+                                                            event, distTxRx, ID);
+                    }
+                    else
+                    {
+                        NS_LOG_DEBUG ("drop packet because it was sent using an unsupported mode (" << txMode << ")");
+                        NotifyRxDrop (packet);
+
+                        goto maybeCcaBusy;
+                    }
+                }
+                else
+                {
+                    NS_LOG_DEBUG ("drop packet because signal power too Small (" <<
+                                                                                 rxPowerW << "<" << m_edThresholdW << ")");
+                    NotifyRxDrop (packet);
+                    //Added by Goku
+                    // flag = 1;
+                    if (Simulator::Now().GetSeconds()>300){
+                        if(position.x>1500 && position.x<3500){
+                            NotifyRxDropDistall(packet, distTxRx, ID);//sensitivity
+
+                        }
+
+                    }
+
+                    goto maybeCcaBusy;
+                }
+                break;
+        }
+
+        return;
+
+        maybeCcaBusy:
+        // We are here because we have received the first bit of a packet and we are
+        // not going to be able to synchronize on it
+        // In this model, CCA becomes busy when the aggregation of all signals as
+        // tracked by the InterferenceHelper class is higher than the CcaBusyThreshold
+
+        Time delayUntilCcaEnd = m_interference.GetEnergyDuration (m_ccaMode1ThresholdW);
+        if (!delayUntilCcaEnd.IsZero ())
+        {
+            m_state->SwitchMaybeToCcaBusy (delayUntilCcaEnd);
+        }
+    }
+
+
+
+//
+
 void
 YansWifiPhy::SendPacket (Ptr<const Packet> packet, WifiMode txMode, WifiPreamble preamble, WifiTxVector txVector)
 {
@@ -927,6 +1120,157 @@ YansWifiPhy::EndReceive (Ptr<Packet> packet, Ptr<InterferenceHelper::Event> even
       m_state->SwitchFromRxEndError (packet, snrPer.snr);
     }
 }
+
+//Added by Goku
+//////////////////////////////////////////
+    void
+    YansWifiPhy::EndReceiveV2 (Ptr<Packet> packet, Ptr<InterferenceHelper::Event> event, double distTxRx, uint32_t ID)
+    {
+        NS_LOG_FUNCTION (this << packet << event);
+        NS_ASSERT (IsStateRx ());
+        NS_ASSERT (event->GetEndTime () == Simulator::Now ());
+
+        struct InterferenceHelper::SnrPer snrPer;
+
+        snrPer = m_interference.CalculateSnrPer (event );
+        // m_interference.NotifyRxEnd ();
+
+        //struct InterferenceHelper::snrwoIPer snrwoIPer;
+        //snrwoIPer = m_interference.CalculateSnrPerV1 (event); //added by gokul for calculating interference alone
+        m_interference.NotifyRxEnd ();
+
+        //Added by Goku
+        Ptr<MobilityModel> senderMobility = this->GetMobility()->GetObject<MobilityModel> ();
+        Vector position = senderMobility->GetPosition();
+
+
+        NS_LOG_DEBUG ("mode=" << (event->GetPayloadMode ().GetDataRate ()) <<
+                              ", snr=" << snrPer.snr << ", per=" << snrPer.per << ", size=" << packet->GetSize ());
+
+        double Random_Value = m_random->GetValue () ;// Added by gokul
+
+        /* if (Random_Value < snrwoIPer.per) //10-01-19 Added by gokul to find the packet dropped by interference
+           {
+               flag = 1; //14-01-19 Only propogation
+
+                if (Simulator::Now().GetSeconds()>2){
+                       if(position.x>1500 && position.x<3500){
+
+                           NotifyRxDropDist(packet, distTxRx);//SNR
+
+                      }
+
+                 }
+
+           }*/
+
+////////////////
+
+        if (Random_Value > snrPer.per)
+        {
+            // CORRECT PACKET
+            //goku To log the received packet with distance
+            //Alex/Goku//////////////////////////////
+
+
+            NotifyRxEndDist(packet, distTxRx, ID);
+
+            //Alex//////////////////////////////
+
+            NotifyRxEnd (packet); //Goku : it can be commented (optional)
+
+            uint32_t dataRate500KbpsUnits = event->GetPayloadMode ().GetDataRate () * event->GetTxVector().GetNss()/ 500000;
+            bool isShortPreamble = (WIFI_PREAMBLE_SHORT == event->GetPreambleType ());
+            double signalDbm = RatioToDb (event->GetRxPowerW ()) + 30;
+            double noiseDbm = RatioToDb (event->GetRxPowerW () / snrPer.snr) - GetRxNoiseFigure () + 30;
+            NotifyMonitorSniffRx (packet, (uint16_t)GetChannelFrequencyMhz (), GetChannelNumber (), dataRate500KbpsUnits, isShortPreamble, signalDbm, noiseDbm);
+
+            //Edit By Federico Caselli
+            //Added tags
+            SnrTag snrtag;
+            snrtag.Set(signalDbm - noiseDbm);
+            if (!packet->PeekPacketTag(snrtag))
+            {
+                packet->AddPacketTag(snrtag);
+                NS_LOG_DEBUG("Add SNR Tag with value :" << snrtag.Get());
+            }
+            TxPowerTag powertag;
+            powertag.Set(m_lastTxPower);
+            if (!packet->PeekPacketTag(powertag))
+            {
+                packet->AddPacketTag(powertag);
+                NS_LOG_DEBUG("Add Power Tag with value :" << (int) powertag.Get());
+            }
+
+            //Should also add RSSI tag (it is signalDbm)
+            //End edit
+            m_state->SwitchFromRxEndOk (packet, snrPer.snr, event->GetPayloadMode (), event->GetPreambleType ());
+        }
+        else
+        {
+            // DROPPED PACKET
+            // if (flag == 1){
+            //std::cout << "check point flag value "<< flag <<std::endl;
+
+            /* failure. */
+            NotifyRxDrop (packet);
+            //Added by Goku
+            /*if (flag == 0){
+                // PROPAGATION ERROR
+                if (Simulator::Now().GetSeconds()>2){
+                    if(position.x>1500 && position.x<3500){
+
+                      NotifyRxDropDist(packet, distTxRx); //SNR
+
+                    }
+                }
+            }*/
+
+            /*
+             if (Random_Value < snrwoIPer.per) {
+                // PROPAGATION
+                if (Simulator::Now().GetSeconds()>300){
+                    if(position.x>1500 && position.x<3500){
+
+                        NotifyRxDropDist(packet, distTxRx, ID); //SNR
+
+                    }
+                }
+
+            }
+            else
+            {
+                if (Random_Value < snrPer.per)  { //preciousely it was else
+                    // COLLISION
+                    if (Simulator::Now().GetSeconds()>300){
+                        if(position.x>1500 && position.x<3500){
+
+                            NotifyRxDropDistTxRx(packet, distTxRx, ID); //SNIR
+
+
+                        }
+                    }
+                }
+                else
+                {
+                    if (Simulator::Now().GetSeconds()>300){
+                        if(position.x>1500 && position.x<3500){
+
+                            std::cout << "Yans-wifi-phy: This condition should never happen " << std::endl; //17-01-19 Added by goku
+
+                        }
+                    }
+                }
+
+
+            }*/
+
+
+            m_state->SwitchFromRxEndError (packet, snrPer.snr);
+        }
+
+    }
+//
 
 int64_t
 YansWifiPhy::AssignStreams (int64_t stream)

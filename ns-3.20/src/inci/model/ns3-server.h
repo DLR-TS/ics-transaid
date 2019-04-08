@@ -36,6 +36,7 @@
 #include "ns3/iTETRISNodeManager.h"
 #include "ns3/packet-manager.h" 
 #include <fstream>
+#include "ns3/iTETRIS-Results.h"
 
 namespace ns3
 {
@@ -73,7 +74,12 @@ class Ns3Server
     static int targetTime_;
     static bool Log(const char* message);
     static bool logActive_;
-    
+
+    // Log Results TransAID
+    iTETRISResults * my_resultsManager;
+    static std::ofstream outfileLogPacketsRx;
+    static std::ofstream outfileLogPacketsTx;
+
   private:
     static std::string CAM_TYPE; 
     static std::string DNEM_TYPE;
@@ -191,6 +197,7 @@ class Ns3Server
     std::string Int2String (int n);
 
     std::string Double2String (double n);
+
 
 };
 

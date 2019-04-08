@@ -36,6 +36,8 @@
 #include <sys/time.h>
 #include "ns3/log.h"
 #include <string>
+#include "ns3/config.h"
+#include "ns3/iTETRIS-Results.h"
 
 
 
@@ -51,6 +53,8 @@ namespace ns3
 	bool Ns3Server::closeConnection_ = false;
 	int Ns3Server::targetTime_ = 0;
 	ofstream Ns3Server::myfile;
+    ofstream Ns3Server::outfileLogPacketsRx;
+    ofstream Ns3Server::outfileLogPacketsTx;
 	string Ns3Server::CAM_TYPE = "0";
 	string Ns3Server::DNEM_TYPE = "1";
 	bool Ns3Server::logActive_ = false;
@@ -61,6 +65,11 @@ namespace ns3
 		closeConnection_ = false;
 		my_nodeManagerPtr = node_manager;
 		my_packetManagerPtr = packetManager;
+
+		// Log results TransAID
+        outfileLogPacketsRx.open("ReceivedPackets.txt");
+        outfileLogPacketsTx.open("TransmittedPackets.txt" );
+        //
 
 		try
 		{
@@ -85,6 +94,7 @@ namespace ns3
 			myfile.open(logfile.c_str());
 			logActive_ = true;
 		}
+
 
 		try
 		{
@@ -167,6 +177,9 @@ namespace ns3
 
 		if (logActive_)
 			myfile.close();
+
+        outfileLogPacketsTx.close();
+        outfileLogPacketsRx.close();
 	}
 
 	int Ns3Server::dispatchCommand()
@@ -424,10 +437,32 @@ namespace ns3
 		Log((log.str()).c_str());
 #endif
 
+        // Log results TransAID
+        std::ostringstream resultString;
+        resultString << "/NodeList/"
+                     << nodeId
+                     << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyTxDist";
+
+        Config::Connect (resultString.str (), MakeCallback( &my_resultsManager->LogPacketsTx) );
+
+        resultString.str("");
+
+        resultString << "/NodeList/"
+                     << nodeId
+                     << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
+
+        Config::Connect (resultString.str (),MakeCallback( &my_resultsManager->LogPacketsRx) );
+        //
+
+
+
 		writeStatusCmd(CMD_CREATENODE, RTYPE_OK, "CreateNode()");
 		myOutputStorage.writeUnsignedByte(1 + 1 + 4);
 		myOutputStorage.writeUnsignedByte(CMD_CREATENODE);
 		myOutputStorage.writeInt(nodeId);
+
+
+
 
 		return success;
 	}
@@ -467,6 +502,24 @@ namespace ns3
 		log<< "ns-3 server --> Node with ID "<< nodeId<<" created successfully in Position "<<x<<" "<<y<< endl;
 		Log((log.str()).c_str());
 #endif
+
+        // Log results TransAID
+        std::ostringstream resultString;
+        resultString << "/NodeList/"
+                     << nodeId
+                     << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyTxDist";
+
+        Config::Connect (resultString.str (), MakeCallback( &my_resultsManager->LogPacketsTx) );
+
+        resultString.str("");
+
+        resultString << "/NodeList/"
+                     << nodeId
+                     << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
+
+        Config::Connect (resultString.str (),MakeCallback( &my_resultsManager->LogPacketsRx) );
+
+        //
 
 		writeStatusCmd(CMD_CREATENODE2, RTYPE_OK, "CreateNode2()");
 
