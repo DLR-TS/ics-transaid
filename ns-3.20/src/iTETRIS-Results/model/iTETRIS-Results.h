@@ -26,8 +26,7 @@
 #include "ns3/uinteger.h"
 #include "ns3/double.h"
 #include "ns3/boolean.h"
-
-
+#include "ns3/object.h"
 #include "ns3/channel-tag.h"
 #include "ns3/callback.h"
 #include "ns3/storage.h"
@@ -37,30 +36,51 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <map>
 
 namespace ns3
 {
+    class NodeContainer;
 
+    struct PDRdata{
+        uint32_t countTx[50] = { 0 };
+        uint32_t countRx[50] = { 0 };
+    };
+    struct NARdata{
+        uint32_t countTotal[50] = { 0 };
+        uint32_t countRx[50] = { 0 };
+    };
+    struct NIRdata{
+        double countRx[50] = { 0 };
+        uint32_t countTotal = 0;
+    };
 
-	class iTETRISResults
+	class iTETRISResults : public Object
 	{
 		public:
 
 			iTETRISResults();
 			virtual ~iTETRISResults();
 
-        static void LogPacketsTx(std::string context, Ptr<const Packet> packet , double distanceTxRx, uint32_t sendernodeId);
-        static void LogPacketsRx(std::string context, Ptr<const Packet> packet , double distanceTxRx, uint32_t sendernodeId);
+         void LogPacketsTx(std::string context, Ptr<const Packet> packet , double distanceTxRx, uint32_t sendernodeId);
+         void LogPacketsRx(std::string context, Ptr<const Packet> packet , double distanceTxRx, uint32_t sendernodeId);
 
+         void LogAwarenessRatio(NodeContainer m_NodeContainer);
 
-        void writeResultsLogPacketsTx(std::string file, std::string data );
-        void writeResultsLogPacketsRx(std::string file, std::string data );
+         void writeResults();
+
 
 		private:
 
+        void ResetCounters ();
+
+        PDRdata m_PDRdata;
 
 
+        std::map<int, NARdata> m_NARdataMap;
+        std::map<int, NIRdata> m_NIRdataMap;
 
+        int m_interval;
 
 	};
 

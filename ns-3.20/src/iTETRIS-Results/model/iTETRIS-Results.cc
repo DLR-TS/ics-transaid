@@ -33,7 +33,7 @@
 #include "ns3/config.h"
 #include <stdio.h>
 #include "ns3/ns3-server.h"
-
+#include <math.h>
 
 using namespace std;
 
@@ -41,83 +41,217 @@ namespace ns3
 {
 
 
-
-
     iTETRISResults::iTETRISResults()
-	{
-
-	}
+    {
+        m_interval = 1;
+        Simulator::ScheduleNow (&iTETRISResults::writeResults, this);
+    }
 
     iTETRISResults::~iTETRISResults()
-	{
+    {
 
-	}
+    }
 
-	void iTETRISResults::LogPacketsTx(std::string context, Ptr<const Packet> packet, double distanceTxRx, uint32_t sendernodeId){
+    void iTETRISResults::LogPacketsTx(std::string context, Ptr<const Packet> packet, double distanceTxRx, uint32_t sendernodeId){
 
+        if (distanceTxRx < 10){
+            ++m_PDRdata.countTx[0];
 
-        std::string file;
+        } else if (distanceTxRx > 490){
+            ++m_PDRdata.countTx[49];
+        } else {
+            int indexAux = floor(distanceTxRx/10);
+            ++m_PDRdata.countTx[indexAux];
+        }
 
-        file = "ReceivedPackets.txt";
-
-        std::string data;
-
-        data = "IDPacket ";
-        data +=   to_string(packet->GetUid());
-        data += " Size ";
-        data += to_string(packet->GetSize());
-        data += " Time ";
-        data += to_string(Simulator::Now().GetSeconds());
-        data += " Sender ID ";
-        data += to_string( sendernodeId);
-        data += " distance ";
-        data += to_string(distanceTxRx);
-
-        iTETRISResults m_ObjHandler;
-
-        m_ObjHandler.writeResultsLogPacketsTx(file, data);
     }
 
     void iTETRISResults::LogPacketsRx(std::string context, Ptr<const Packet> packet, double distanceTxRx, uint32_t sendernodeId){
 
+        int indexAux;
 
-        std::string file;
+        if (distanceTxRx < 10){
+            ++m_PDRdata.countRx[0];
 
-        file = "TransmittedPackets.txt";
+        } else if (distanceTxRx > 490){
+            ++m_PDRdata.countRx[49];
+        } else {
+            indexAux = floor(distanceTxRx/10);
+            ++m_PDRdata.countRx[indexAux];
+        }
+
+        std::size_t posInit = context.find("/NodeList/");
+        std::size_t posEnd = context.find("/DeviceList/");
+        std::string strRx = context.substr (posInit+10, (posEnd-posInit-10));
+
+        int nodeRx = std::stoi(strRx);
+
+        std::map<int, NARdata> ::iterator itNAR;
+
+        itNAR = m_NARdataMap.find(nodeRx);
+        if (itNAR != m_NARdataMap.end()){
+
+            if (distanceTxRx < 10){
+                ++(*itNAR).second.countRx[0];
+
+            } else if (distanceTxRx > 490){
+                ++(*itNAR).second.countRx[49];
+            } else {
+                indexAux = floor(distanceTxRx/10);
+                for (int i=0; i<=indexAux;i++) {
+                    ++(*itNAR).second.countRx[i];
+                }
+            }
+
+        }
+
+        std::map<int, NIRdata> ::iterator itNIR;
+
+        itNIR = m_NIRdataMap.find(nodeRx);
+        if (itNIR == m_NIRdataMap.end()) {
+            NIRdata auxNIRdata = {};
+            itNIR = m_NIRdataMap.insert(m_NIRdataMap.end(),std::pair<int,NIRdata>(nodeRx,auxNIRdata));
+        }
+
+        if (distanceTxRx < 10) {
+
+        } else if (distanceTxRx >= 500) {
+            ++(*itNIR).second.countRx[49];
+        } else {
+            indexAux = floor(distanceTxRx / 10) - 1;
+            for (int i = 0; i <= indexAux; i++) {
+                ++(*itNIR).second.countRx[i];
+            }
+        }
+        ++(*itNIR).second.countTotal;
+
+    }
+
+    void iTETRISResults::LogAwarenessRatio(NodeContainer m_NodeContainer){
+
+        double distance;
+        int indexAux;
+
+        for (NodeContainer::Iterator it = m_NodeContainer.Begin(); it != m_NodeContainer.End(); ++it)
+        {
+            uint32_t nodeId = (*it)->GetId();
+            NARdata m_auxNAR = {};
+
+            Ptr<MobilityModel> mobModel = (*it)->GetObject<MobilityModel> ();
+
+            for (NodeContainer::Iterator it1 = m_NodeContainer.Begin(); it1 != m_NodeContainer.End(); ++it1)
+            {
+                if (nodeId != (*it1)->GetId()){
+
+                    Ptr<MobilityModel> mobModel1 = (*it1)->GetObject<MobilityModel> ();
+                    mobModel->GetPosition();
+
+                    distance =  sqrt( (mobModel->GetPosition().x - mobModel1->GetPosition().x) * (mobModel->GetPosition().x - mobModel1->GetPosition().x)  +
+                                      (mobModel->GetPosition().y - mobModel1->GetPosition().y)*(mobModel->GetPosition().y - mobModel1->GetPosition().y) );
+
+
+                    if (distance < 10){
+                        ++m_auxNAR.countTotal[0];
+                    } else if (distance > 490){
+                        ++m_auxNAR.countTotal[49];
+                    } else {
+                        indexAux = floor(distance/10);
+                        for (int i=0; i<=indexAux;i++) {
+                            ++m_auxNAR.countTotal[i];
+                        }
+                    }
+
+                }
+            }
+            m_NARdataMap.operator[](nodeId) = m_auxNAR;
+        }
+
+    }
+
+
+    void iTETRISResults::writeResults (){
+
+
+        // Transmitted Packets PDR
+
 
         std::string data;
 
-        data = "IDPacket ";
-        data +=  to_string(packet->GetUid());
-        data += " Size ";
-        data += to_string(packet->GetSize());
-        data += " Time ";
-        data += to_string(Simulator::Now().GetSeconds());
-        data += " Sender ID ";
-        data += to_string( sendernodeId);
-        data += " distance ";
-        data += to_string(distanceTxRx);
+        data = "Time " + to_string(Simulator::Now().GetSeconds());
 
+        for (int i=0; i< 50; i++){
 
-
-        iTETRISResults m_ObjHandler;
-
-        m_ObjHandler.writeResultsLogPacketsRx(file, data);
-    }
-
-
-    void iTETRISResults::writeResultsLogPacketsTx(std::string file, std::string data ){
-
-
+            data += " " + to_string(m_PDRdata.countTx[i]);
+        }
         Ns3Server::outfileLogPacketsTx << data << std::endl;
 
+        // Received Packets PDR
 
-    }
 
-    void iTETRISResults::writeResultsLogPacketsRx(std::string file, std::string data ){
+        data = "Time " + to_string(Simulator::Now().GetSeconds());
 
+        for (int i=0; i< 50; i++){
+
+            data += " " + to_string(m_PDRdata.countRx[i]);
+        }
         Ns3Server::outfileLogPacketsRx << data << std::endl;
 
+        // NAR
+
+
+        double average_NAR [50] = {0};
+
+        for (std::map<int, NARdata>::iterator it = m_NARdataMap.begin(); it != m_NARdataMap.end(); ++it){
+            for (int i = 0; i < 50; ++i) {
+                if ((*it).second.countTotal[i] != 0){
+                    average_NAR[i] += (double) ((double) (*it).second.countRx[i] / (*it).second.countTotal[i]) / m_NARdataMap.size();
+                }
+            }
+        }
+
+
+        data = "Time " + to_string(Simulator::Now().GetSeconds());
+
+        for(int i=0; i< 50; i++){
+            data += " " + to_string(average_NAR[i]);
+        }
+
+        Ns3Server::outfileLogNAR << data << std::endl;
+
+        // NIR
+
+
+        double average_NIR [50] = {0};
+
+
+        for (std::map<int, NIRdata>::iterator it = m_NIRdataMap.begin(); it != m_NIRdataMap.end(); ++it)
+        {
+
+            if ((*it).second.countTotal !=0 ) {
+                for (int i = 0; i < 50; ++i) {
+                    average_NIR[i] += ((*it).second.countRx[i] / (*it).second.countTotal) / m_NIRdataMap.size();
+                }
+            }
+        }
+
+
+        data = "Time " + to_string(Simulator::Now().GetSeconds());
+
+        for (int i=0; i< 50; i++){
+            data += " " + to_string(average_NIR[i]);
+        }
+
+        Ns3Server::outfileLogNIR << data << std::endl;
+
+        Simulator::Schedule(Seconds(m_interval),&iTETRISResults::writeResults,this);
+        ResetCounters();
+    }
+
+    void iTETRISResults::ResetCounters ()
+    {
+        m_PDRdata = {};
+        m_NARdataMap.clear();
+        m_NIRdataMap.clear();
     }
 
 

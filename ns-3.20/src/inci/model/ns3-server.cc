@@ -55,6 +55,8 @@ namespace ns3
 	ofstream Ns3Server::myfile;
     ofstream Ns3Server::outfileLogPacketsRx;
     ofstream Ns3Server::outfileLogPacketsTx;
+    ofstream Ns3Server::outfileLogNAR;
+    ofstream Ns3Server::outfileLogNIR;
 	string Ns3Server::CAM_TYPE = "0";
 	string Ns3Server::DNEM_TYPE = "1";
 	bool Ns3Server::logActive_ = false;
@@ -67,8 +69,12 @@ namespace ns3
 		my_packetManagerPtr = packetManager;
 
 		// Log results TransAID
-        outfileLogPacketsRx.open("ReceivedPackets.txt");
-        outfileLogPacketsTx.open("TransmittedPackets.txt" );
+        outfileLogPacketsRx.open("ReceivedPackets.txt"); // Added by A Correa
+        outfileLogPacketsTx.open("TransmittedPackets.txt" ); // Added by A Correa
+        outfileLogNAR.open("NAR.txt" ); // Added by A Correa
+        outfileLogNIR.open("NIR.txt" ); // Added by A Correa
+
+        my_resultsManager = new iTETRISResults(); // Added by A Correa
         //
 
 		try
@@ -178,9 +184,15 @@ namespace ns3
 		if (logActive_)
 			myfile.close();
 
+
+        // Close log files //Added by A Correa
         outfileLogPacketsTx.close();
         outfileLogPacketsRx.close();
-	}
+        outfileLogNAR.close();
+        outfileLogNIR.close();
+        //
+
+    }
 
 	int Ns3Server::dispatchCommand()
 	{        
@@ -402,6 +414,9 @@ namespace ns3
 
         Simulator::Stop(MilliSeconds(time) - Simulator::Now());
         Simulator::Run();
+
+        my_resultsManager->LogAwarenessRatio(my_nodeManagerPtr->GetItetrisNodes()); // Added by A Correa
+
         //Simulator::RunOneEvent();
         writeStatusCmd(CMD_SIMSTEP, RTYPE_OK, "RunSimStep()");
         return true;
@@ -421,6 +436,7 @@ namespace ns3
 
 		int32_t nodeId = my_nodeManagerPtr->CreateItetrisNode(pos);
 
+
 		for (moduleIt = listOfCommModules.begin(); moduleIt < listOfCommModules.end(); moduleIt++)
 		{
 			string cadena = *moduleIt;
@@ -437,13 +453,15 @@ namespace ns3
 		Log((log.str()).c_str());
 #endif
 
-        // Log results TransAID
+
+
+        // Log results TransAID // Added by A Correa
         std::ostringstream resultString;
         resultString << "/NodeList/"
                      << nodeId
                      << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyTxDist";
 
-        Config::Connect (resultString.str (), MakeCallback( &my_resultsManager->LogPacketsTx) );
+        Config::Connect (resultString.str (), MakeCallback( &iTETRISResults::LogPacketsTx,my_resultsManager) );
 
         resultString.str("");
 
@@ -451,7 +469,7 @@ namespace ns3
                      << nodeId
                      << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
 
-        Config::Connect (resultString.str (),MakeCallback( &my_resultsManager->LogPacketsRx) );
+         Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsRx,my_resultsManager) );
         //
 
 
@@ -503,13 +521,13 @@ namespace ns3
 		Log((log.str()).c_str());
 #endif
 
-        // Log results TransAID
+        // Log results TransAID // Added by A Correa
         std::ostringstream resultString;
         resultString << "/NodeList/"
                      << nodeId
                      << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyTxDist";
 
-        Config::Connect (resultString.str (), MakeCallback( &my_resultsManager->LogPacketsTx) );
+        Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsTx,my_resultsManager) );
 
         resultString.str("");
 
@@ -517,7 +535,7 @@ namespace ns3
                      << nodeId
                      << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
 
-        Config::Connect (resultString.str (),MakeCallback( &my_resultsManager->LogPacketsRx) );
+       Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsRx,my_resultsManager) );
 
         //
 
@@ -858,6 +876,9 @@ namespace ns3
 
 	bool Ns3Server::Close()
 	{
+
+
+
 		closeConnection_ = true;
 		writeStatusCmd(CMD_CLOSE, RTYPE_OK, "Close()");
 		return true;

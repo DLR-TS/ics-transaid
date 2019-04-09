@@ -75,10 +75,13 @@ class Ns3Server
     static bool Log(const char* message);
     static bool logActive_;
 
-    // Log Results TransAID
+    // Log Results TransAID // Added by A Correa
     iTETRISResults * my_resultsManager;
     static std::ofstream outfileLogPacketsRx;
     static std::ofstream outfileLogPacketsTx;
+    static std::ofstream outfileLogNAR;
+    static std::ofstream outfileLogNIR;
+    //
 
   private:
     static std::string CAM_TYPE; 

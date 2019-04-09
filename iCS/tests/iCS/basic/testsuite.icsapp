@@ -53,3 +53,6 @@ test_V2XmsgSet
 
 # Tests transmission of messages using the MessageScheduler class
 test_MessageScheduler
+
+# Tests the logging of results in NS-3
+test_ResultsLogging
