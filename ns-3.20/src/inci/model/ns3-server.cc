@@ -1257,6 +1257,7 @@ bool Ns3Server::StartIpCiuTxon(void)
 						<< NanoSeconds(msgb->time * 1000000).GetSeconds() << " From " << msgb->senderIdCollection[0]);
 		Simulator::Schedule(NanoSeconds(msgb->time * 1000000) - Simulator::Now(), &MessageSchedule::DoInvoke, msgb);
 		writeStatusCmd(CMD_START_GEO_BROAD_TXON, RTYPE_OK, "StartGeobroadcastTxon ()");
+
 		return true;
 	}
 

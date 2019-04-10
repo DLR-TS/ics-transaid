@@ -87,7 +87,9 @@ namespace baseapp {
 
             m_lastCAMsent = *message;
 
-            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_CAM, message);
+            int messageSize = 190;
+
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_CAM, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
            //  std::cout << "Send CAM at node " << m_node_interface->GetId() << " time " << m_lastCAMsent.generationTime << std::endl;
         }
@@ -114,7 +116,7 @@ namespace baseapp {
             }
 
 
-            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_CPM, message);
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_CPM, message, pktSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
            // std::cout << "Send CPM at node " << m_node_interface->GetId() << " time " << message->generationTime << std::endl;
 
@@ -138,7 +140,9 @@ namespace baseapp {
 
             m_lastMCMsentVehicle = *message;
 
-            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_VEHICLE, message);
+            int messageSize = 190;
+
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_VEHICLE, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
           //  std::cout << "Send MCM at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
         }
@@ -148,15 +152,17 @@ namespace baseapp {
 
             m_lastMCMsentVehicle = *message;
 
-            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_VEHICLE, message);
+            int messageSize = 190;
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_VEHICLE, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
           //  std::cout << "Send Vehicle-MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
         }
 
         void MessageScheduler::SendMCMrsu(TransaidHeader::McmRsuInfo  * message)
         {
+            int messageSize = 190;
 
-            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_RSU, message);
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_RSU, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
         //    std::cout << "Send RSU-MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
         }
@@ -164,26 +170,27 @@ namespace baseapp {
         void MessageScheduler::SendMAP(TransaidHeader::MapInfo  * message)
         {
 
+            int messageSize = 190;
 
-            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MAP, message);
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MAP, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
         //    std::cout << "Send MAP ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
         }
 
         void MessageScheduler::SendIVI(TransaidHeader::IviInfo  * message)
         {
+            int messageSize = 190;
 
-
-            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_IVI, message);
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_IVI, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
          //   std::cout << "Send IVI ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
         }
 
         void MessageScheduler::SendDENM(TransaidHeader::DenmInfo  * message)
         {
+            int messageSize = 190;
 
-
-            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_DENM, message);
+            TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_DENM, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
          //   std::cout << "Send DENM ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
         }
