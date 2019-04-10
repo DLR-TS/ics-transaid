@@ -276,6 +276,7 @@ namespace baseapp
 				os << " Id=All";
 			else
 				os << " Id=" << m_destinationId;
+			os << " Message type " << m_messageType;
 		}
 
 ///BeaconHeader

@@ -354,6 +354,8 @@ namespace baseapp
 			payload->addHeader(header);
 			payload->addHeader(commHeader);
 
+			//std::cout << "Payload content " << payload << std::endl;
+
 			// send packet
 			m_traceSend(payload);
 			//Like in the original protocol use only grobroadcast messages

@@ -379,7 +379,9 @@ namespace baseapp
 				Message message;
 				message.m_destinationId = m_inputStorage.readInt();
 				message.m_messageId = m_inputStorage.readInt();
-				message.m_extra = m_inputStorage.readString();
+				std::string extra_aux = m_inputStorage.readString();
+				extra_aux.substr(0,extra_aux.find(" "));
+				message.m_extra = extra_aux;
 
 				short size = m_inputStorage.readShort();
 				ostringstream log;

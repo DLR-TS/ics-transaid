@@ -214,6 +214,8 @@ namespace baseapp
 
                 int MessageSize = header->getMessageRealSize();
 
+                key += " " + to_string(header->getMessageType());
+
                 m_toSubscribe.push(
                         SubscriptionHelper::SendGeobroadcast(m_id, MessageSize, messageCategory,
                                                              Circle(getPosition(), getPropagationRadius()), key, time));

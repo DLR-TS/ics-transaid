@@ -285,6 +285,7 @@ namespace baseapp
 			request->writeUnsignedByte(EXT_HEADER__EXTRA);
 			request->writeString(extra);
 
+
 			return new SubscriptionHolder(SUB_APP_MSG_SEND, request);
 		}
 

@@ -1258,6 +1258,10 @@ bool Ns3Server::StartIpCiuTxon(void)
 		Simulator::Schedule(NanoSeconds(msgb->time * 1000000) - Simulator::Now(), &MessageSchedule::DoInvoke, msgb);
 		writeStatusCmd(CMD_START_GEO_BROAD_TXON, RTYPE_OK, "StartGeobroadcastTxon ()");
 
+        //std::string s( msgb->genericContainer.begin(), msgb->genericContainer.end() );
+
+		//std::cout << "Content of the generic container " << s  << " size " << msgb->genericContainer.size()  << std::endl;
+		
 		return true;
 	}
 
