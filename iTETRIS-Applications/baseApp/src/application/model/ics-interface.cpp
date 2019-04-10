@@ -47,6 +47,8 @@
 #include "server.h"
 #include "../../app-commands-subscriptions-constants.h"
 #include <libsumo/TraCIDefs.h>
+//#include <libsumo/Helper.h>
+#include <utils/common/RGBColor.h>
 //#include "traci-server/TraCIConstants.h"
 //#include <foreign/tcpip/storage.h>
 
@@ -478,15 +480,23 @@ namespace baseapp
             return Behaviour::GetLastTraCIResponse(objID, variableID);
         }
 
-		std::shared_ptr<libsumo::TraCIColor>
-		iCSInterface::readColor(tcpip::Storage& inputStorage) {
-		    std::shared_ptr<libsumo::TraCIColor> res = std::make_shared<libsumo::TraCIColor>();
-		    res->r = static_cast<unsigned char>(inputStorage.readUnsignedByte());
-		    res->g = static_cast<unsigned char>(inputStorage.readUnsignedByte());
-		    res->b = static_cast<unsigned char>(inputStorage.readUnsignedByte());
-		    res->a = static_cast<unsigned char>(inputStorage.readUnsignedByte());
-		    return res;
-		}
+        std::shared_ptr<libsumo::TraCIColor>
+        iCSInterface::readColor(tcpip::Storage& inputStorage) {
+            std::shared_ptr<libsumo::TraCIColor> res = std::make_shared<libsumo::TraCIColor>();
+            res->r = static_cast<unsigned char>(inputStorage.readUnsignedByte());
+            res->g = static_cast<unsigned char>(inputStorage.readUnsignedByte());
+            res->b = static_cast<unsigned char>(inputStorage.readUnsignedByte());
+            res->a = static_cast<unsigned char>(inputStorage.readUnsignedByte());
+            return res;
+        }
+
+        void
+        iCSInterface::writeColor(std::shared_ptr<libsumo::TraCIColor> color, tcpip::Storage& outputStorage) {
+            outputStorage.writeUnsignedByte(color->r);
+            outputStorage.writeUnsignedByte(color->g);
+            outputStorage.writeUnsignedByte(color->b);
+            outputStorage.writeUnsignedByte(color->a);
+        }
 
 
         void iCSInterface::AddTraciSubscription(const int cmdID, const int varID, const int varTypeID, tcpip::Storage * value)
@@ -676,10 +686,43 @@ namespace baseapp
                 int varID = libsumo::VAR_COLOR;
                 int varTypeID = libsumo::TYPE_COLOR;
                 tcpip::Storage content;
-                content.writeUnsignedByte(color->r);
-                content.writeUnsignedByte(color->g);
-                content.writeUnsignedByte(color->b);
-                content.writeUnsignedByte(color->a);
+                writeColor(color, content);
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
+            }
+        }
+
+        void iCSInterface::Highlight(std::string colorDef, const double duration, const std::string& sumoPOI) {
+            RGBColor c = RGBColor::parseColor(colorDef);
+            auto color = std::make_shared<libsumo::TraCIColor>(c.red(), c.green(), c.blue(), c.alpha());
+            Highlight(color, duration, sumoPOI);
+        }
+
+        void iCSInterface::Highlight(std::shared_ptr<libsumo::TraCIColor> color, const double duration, const std::string& sumoPOI) {
+            std::string ID;
+            int cmdID;
+            if (sumoPOI != "") {
+                ID = sumoPOI;
+                cmdID = libsumo::CMD_SET_POI_VARIABLE;
+            } else {
+                ID = m_node->getSumoId();
+                cmdID = libsumo::CMD_SET_VEHICLE_VARIABLE;
+            }
+            // Highlight associated node if sumo id is known
+            if (ID != INVALID_STRING)
+            {
+                int varID = libsumo::VAR_HIGHLIGHT;
+                int varTypeID = libsumo::TYPE_COMPOUND;
+                unsigned int alphaMax = 255;
+                tcpip::Storage content;
+                unsigned int length = 3;
+                content.writeUnsignedByte(length);
+                content.writeUnsignedByte(libsumo::TYPE_COLOR);
+                writeColor(color, content);
+                content.writeUnsignedByte(libsumo::TYPE_UBYTE);
+                content.writeUnsignedByte(alphaMax);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(duration);
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
                 AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
             }
