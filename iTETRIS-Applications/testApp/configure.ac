@@ -28,9 +28,63 @@ AC_PROG_LN_S
 AC_PROG_MAKE_SET
 AC_PROG_RANLIB
 
-AM_CPPFLAGS="-I$PWD/$srcdir/src -I$PWD/$srcdir/../baseApp/src -I$PWD/$srcdir/../baseApp/src/server -I$PWD/$srcdir/../baseApp/src/application -I$PWD/$srcdir/../baseApp/src/utils -I$PWD/$srcdir/../baseApp/src/application/helper -I$PWD/$srcdir/../baseApp/src/application/model -I$PWD/$srcdir/../../sumo/src -I$PWD/$srcdir/../../sumo/src/utils/common/ $AM_CPPFLAGS"
+AM_CPPFLAGS="-I$PWD/$srcdir/src -I$PWD/$srcdir/../baseApp/src -I$PWD/$srcdir/../baseApp/src/server -I$PWD/$srcdir/../baseApp/src/application -I$PWD/$srcdir/../baseApp/src/utils -I$PWD/$srcdir/../baseApp/src/application/helper -I$PWD/$srcdir/../baseApp/src/application/model -I$PWD/$srcdir/../../sumo/src $AM_CPPFLAGS"
 AC_SUBST(AM_CPPFLAGS)
 AC_SUBST(AM_CXXFLAGS)
+
+SUMOUTILS_LDFLAGS=-L$PWD/$srcdir/../../lib
+AC_SUBST(SUMOUTILS_LDFLAGS)
+
+
+dnl ---------------------------------------------
+dnl check for libraries...
+dnl - - - - - - - - - - - - - - - - - - - - - - -
+
+dnl  ... for xerces
+AC_ARG_WITH([xerces], [AS_HELP_STRING([--with-xerces=DIR],[where Xerces-C is installed (libraries in DIR/lib, headers in DIR/include).])])
+if test x"$with_xerces" != x; then
+   if test x"$with_xerces_libraries" = x; then
+      with_xerces_libraries=$with_xerces/lib
+   fi
+   if test x"$with_xerces_includes" = x; then
+      with_xerces_includes=$with_xerces/include
+   fi
+fi
+
+dnl   ... for libs
+LIB_XERCES="xerces-c"
+AC_ARG_WITH([xerces-libraries], [AS_HELP_STRING([--with-xerces-libraries=DIR],[where the Xerces-C library is installed.])])
+if test x"$with_xerces_libraries" = x; then
+   AC_CHECK_LIB([$LIB_XERCES], [main], [true],
+                [AC_MSG_ERROR([xerces-lib not found. Specify path with option --with-xerces-libraries=DIR.])])
+else
+   save_ldflags=$LDFLAGS
+   LDFLAGS="-L$with_xerces_libraries"
+   export LDFLAGS
+   AC_CHECK_LIB([$LIB_XERCES], [main], [XERCES_LDFLAGS=$LDFLAGS],
+                [AC_MSG_ERROR([xerces-lib not found in "$with_xerces_libraries".])])
+   LDFLAGS=$save_ldflags
+   AC_SUBST(XERCES_LDFLAGS)
+fi
+AC_SUBST(LIB_XERCES)
+
+
+dnl   ... for includes
+AC_ARG_WITH([xerces-includes], [AS_HELP_STRING([--with-xerces-includes=DIR],[where the Xerces-C includes are.])])
+save_cppflags=$CPPFLAGS
+if test x"$with_xerces_includes" = x; then
+    CPPFLAGS="$CPPFLAGS -I/usr/local/include -I/usr/include"
+    export CPPFLAGS
+    AC_CHECK_HEADER([xercesc/util/XercesVersion.hpp], [AM_CPPFLAGS="$CPPFLAGS $AM_CPPFLAGS"],
+                    [AC_MSG_ERROR([xerces-includes not found. Specify path with option --with-xerces-includes=DIR.])])
+else
+    CPPFLAGS="-I$with_xerces_includes"
+    export CPPFLAGS
+    AC_CHECK_HEADER([xercesc/util/XercesVersion.hpp], [AM_CPPFLAGS="$CPPFLAGS $AM_CPPFLAGS"],
+                    [AC_MSG_ERROR([xerces-includes not found in "$with_xerces_includes".])])
+fi
+CPPFLAGS=$save_cppflags
+
 
 dnl ---------------------------------------------
 dnl Checks proposed by autoscan.

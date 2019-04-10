@@ -2,7 +2,7 @@ bin_PROGRAMS = protocolspeedApp
 
 protocolspeedApp_SOURCES = app-main.cpp speed-configuration.h speed-configuration.cpp
 
-protocolspeedApp_LDADD = $(AM_CPPFLAGS) ./speed/libspeed.a \
+protocolspeedApp_LDADD = $(AM_CPPFLAGS) $(SUMOUTILS_LDFLAGS) $(XERCES_LDFLAGS) ./speed/libspeed.a \
 ../../baseApp/src/server/payload.o \
 ../../baseApp/src/application/traci-helper.o \
 ../../baseApp/src/server/libserver.a \
@@ -13,6 +13,7 @@ protocolspeedApp_LDADD = $(AM_CPPFLAGS) ./speed/libspeed.a \
 ../../baseApp/src/utils/exception/libexception.a \
 ../../baseApp/src/utils/log/liblog.a \
 ../../baseApp/src/utils/xml/libxml.a \
-../../../lib/libforeign_tcpip.a
+-lsumoutils \
+-l$(LIB_XERCES)
 
 SUBDIRS = speed
