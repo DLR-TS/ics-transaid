@@ -244,7 +244,7 @@ else
     ac_disabled="$ac_disabled UnitTests"
 fi
 
-SUMOUTILS_LDFLAGS=-L$PWD/$srcdir/../sumo/bin
+SUMOUTILS_LDFLAGS=-L$PWD/$srcdir/../lib
 AC_SUBST(SUMOUTILS_LDFLAGS)
 
 AM_CPPFLAGS="-I$PWD/$srcdir/src -I$PWD/$srcdir/../sumo/src $AM_CPPFLAGS"
