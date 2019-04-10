@@ -19,7 +19,7 @@ namespace baseapp {
         MessageScheduler::MessageScheduler(iCSInterface*  node) :
                 m_node_interface(node), m_eventBroadcast(0),  m_broadcastCheckInterval(100) {
 
-            std::cout << "Starting  Message Scheduler"  << std::endl;
+           // std::cout << "Starting  Message Scheduler"  << std::endl;
 
             Start();
 
@@ -33,7 +33,7 @@ namespace baseapp {
 
         void MessageScheduler::Start(){
 
-            std::cout << "Starting  timer of Message Scheduler"  << std::endl;
+            //std::cout << "Starting  timer of Message Scheduler"  << std::endl;
 
             TransaidHeader::CamInfo  * messageCAM = new TransaidHeader::CamInfo() ;
             m_lastCAMsent = *messageCAM;
@@ -49,10 +49,11 @@ namespace baseapp {
         void MessageScheduler::V2XmessageScheduler(){
 
 
-            std::cout << "Message Scheduler checks Tx of cams at node " << m_node_interface->GetId()
+          /*  std::cout << "Message Scheduler checks Tx of cams at node " << m_node_interface->GetId()
                       << " time diff "
                       << (CurrentTime::Now() - m_lastCAMsent.generationTime) << " last tx "
                       << m_lastCAMsent.generationTime << std::endl;
+                      */
             // Check CAM Tx
 
             if (  (CurrentTime::Now() - m_lastCAMsent.generationTime)>1000)
@@ -75,7 +76,7 @@ namespace baseapp {
 
         void MessageScheduler::SendCAM()
         {
-            std::cout << "Message Scheduler sendCAM function"  << std::endl;
+            // std::cout << "Message Scheduler sendCAM function"  << std::endl;
 
             TransaidHeader::CamInfo  * message = new TransaidHeader::CamInfo() ;
             message->generationTime = CurrentTime::Now();
@@ -88,12 +89,12 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_CAM, message);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-            std::cout << "Send CAM at node " << m_node_interface->GetId() << " time " << m_lastCAMsent.generationTime << std::endl;
+           //  std::cout << "Send CAM at node " << m_node_interface->GetId() << " time " << m_lastCAMsent.generationTime << std::endl;
         }
 
         void MessageScheduler::SendCPM()
         {
-            std::cout << "Message Scheduler sendCPM function"  << std::endl;
+            // std::cout << "Message Scheduler sendCPM function"  << std::endl;
 
             TransaidHeader::CpmInfo  * message = new TransaidHeader::CpmInfo() ;
             message->generationTime = CurrentTime::Now();
@@ -115,13 +116,13 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_CPM, message);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-            std::cout << "Send CPM at node " << m_node_interface->GetId() << " time " << message->generationTime << std::endl;
+           // std::cout << "Send CPM at node " << m_node_interface->GetId() << " time " << message->generationTime << std::endl;
 
 
 
-            for (NodeMap::const_iterator it = m_NodeMap.begin(); it != m_NodeMap.end(); ++it)
-                std::cout <<  " CPM Vehicle node " << it->second->getId()  << " of type " <<   it->second->getNodeType()<< " speed " << it->second->getController()->GetNode()->getSpeed()
-                          << " direction " << it->second->getController()->GetNode()->getDirection()  << " in position "<<it->second->getController()->GetNode()->getPosition() << std::endl;
+           // for (NodeMap::const_iterator it = m_NodeMap.begin(); it != m_NodeMap.end(); ++it)
+              //  std::cout <<  " CPM Vehicle node " << it->second->getId()  << " of type " <<   it->second->getNodeType()<< " speed " << it->second->getController()->GetNode()->getSpeed()
+                //          << " direction " << it->second->getController()->GetNode()->getDirection()  << " in position "<<it->second->getController()->GetNode()->getPosition() << std::endl;
 
 
         }
@@ -139,7 +140,7 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_VEHICLE, message);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-            std::cout << "Send MCM at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
+          //  std::cout << "Send MCM at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
         }
 
         void MessageScheduler::SendMCMvehicle(TransaidHeader::McmVehicleInfo  * message)
@@ -149,7 +150,7 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_VEHICLE, message);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-            std::cout << "Send Vehicle-MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
+          //  std::cout << "Send Vehicle-MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
         }
 
         void MessageScheduler::SendMCMrsu(TransaidHeader::McmRsuInfo  * message)
@@ -157,7 +158,7 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_RSU, message);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-            std::cout << "Send RSU-MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
+        //    std::cout << "Send RSU-MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
         }
 
         void MessageScheduler::SendMAP(TransaidHeader::MapInfo  * message)
@@ -166,7 +167,7 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MAP, message);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-            std::cout << "Send MAP ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
+        //    std::cout << "Send MAP ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
         }
 
         void MessageScheduler::SendIVI(TransaidHeader::IviInfo  * message)
@@ -175,7 +176,7 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_IVI, message);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-            std::cout << "Send IVI ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
+         //   std::cout << "Send IVI ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
         }
 
         void MessageScheduler::SendDENM(TransaidHeader::DenmInfo  * message)
@@ -184,7 +185,7 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_DENM, message);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-            std::cout << "Send DENM ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
+         //   std::cout << "Send DENM ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
         }
 
 
@@ -909,7 +910,7 @@ namespace baseapp {
             int sendernodeId = m_node_interface->GetId() ;
             const Vector2D senderposition = m_node_interface->GetNode()->getPosition();
 
-            std::cout << "----------------------******* SENDER vehicle ID :  "<< sendernodeId  <<"  Direction  "  << m_node_interface->GetNode()->getDirection()<< " Vehicle Type " << m_node_interface->GetNode()->getNodeType() <<"  POSITION_X  "<< senderposition.x << "  POSITION_Y  "<< senderposition.y <<"  TIME  " << t << std::endl;
+          //  std::cout << "----------------------******* SENDER vehicle ID :  "<< sendernodeId  <<"  Direction  "  << m_node_interface->GetNode()->getDirection()<< " Vehicle Type " << m_node_interface->GetNode()->getNodeType() <<"  POSITION_X  "<< senderposition.x << "  POSITION_Y  "<< senderposition.y <<"  TIME  " << t << std::endl;
 
             for (uint32_t sensorno = 0; sensorno < totalsensors; ++sensorno)
             {
@@ -975,7 +976,7 @@ namespace baseapp {
                         ETSIlist.erase (ETSIit);
                         ETSIlist.insert ( std::pair<int,data1>(ETvehid1,current) );
 
-                        std::cout << "*******Vehicle Included in the CPM (if):  "<< ETvehid1  << "  TIME  " << t << std::endl;
+                       // std::cout << "*******Vehicle Included in the CPM (if):  "<< ETvehid1  << "  TIME  " << t << std::endl;
 
                     }
 
@@ -986,7 +987,7 @@ namespace baseapp {
 
                     detectedvehiclesETSI [ETSIcount] = ETvehid1;
                     ETSIcount ++;
-                    std::cout << "*******Vehicle Included in the CPM (else) :  "<< ETvehid1  << "  TIME  " << t << std::endl;
+                //    std::cout << "*******Vehicle Included in the CPM (else) :  "<< ETvehid1  << "  TIME  " << t << std::endl;
 
                 }
 
@@ -1039,20 +1040,20 @@ namespace baseapp {
                     sensorcontainer_size = t;
 
                     sensorcontainer = 35 ;
-                    std::cout << "*******************************The SENSOR CONTAINER SIZE IS 35: ////////////////////// "<< std::endl;
+                   // std::cout << "*******************************The SENSOR CONTAINER SIZE IS 35: ////////////////////// "<< std::endl;
                 }
                 else
                 {
                     sensorcontainer = 0;
-                    std::cout << "*******************************The SENSOR CONTAINER SIZE IS 0: ////////////////////// "<< std::endl;
+                    // std::cout << "*******************************The SENSOR CONTAINER SIZE IS 0: ////////////////////// "<< std::endl;
                 }
 
 
                 pktSize = 121 + sensorcontainer + objectcontainer ;
 
-                std::cout << "*******The CPM Size is :  "<< pktSize  << "  TIME  " << t << std::endl;
+           //     std::cout << "*******The CPM Size is :  "<< pktSize  << "  TIME  " << t << std::endl;
 
-                std::cout << "//////////////////////////**The Sender sent the message: ////////////////////// "<< std::endl;
+             //   std::cout << "//////////////////////////**The Sender sent the message: ////////////////////// "<< std::endl;
 
                 SendCPM();
 

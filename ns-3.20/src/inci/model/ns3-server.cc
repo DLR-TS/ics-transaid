@@ -57,6 +57,7 @@ namespace ns3
     ofstream Ns3Server::outfileLogPacketsTx;
     ofstream Ns3Server::outfileLogNAR;
     ofstream Ns3Server::outfileLogNIR;
+    ofstream Ns3Server::outfileLogLatency;
 	string Ns3Server::CAM_TYPE = "0";
 	string Ns3Server::DNEM_TYPE = "1";
 	bool Ns3Server::logActive_ = false;
@@ -69,11 +70,11 @@ namespace ns3
 		my_packetManagerPtr = packetManager;
 
 		// Log results TransAID
-        outfileLogPacketsRx.open("ReceivedPackets.txt"); // Added by A Correa
-        outfileLogPacketsTx.open("TransmittedPackets.txt" ); // Added by A Correa
-        outfileLogNAR.open("NAR.txt" ); // Added by A Correa
-        outfileLogNIR.open("NIR.txt" ); // Added by A Correa
-
+        outfileLogPacketsRx.open("ReceivedPackets.csv"); // Added by A Correa
+        outfileLogPacketsTx.open("TransmittedPackets.csv" ); // Added by A Correa
+        outfileLogNAR.open("NAR.csv" ); // Added by A Correa
+        outfileLogNIR.open("NIR.csv" ); // Added by A Correa
+        outfileLogLatency.open("Latency.csv"); // Added by A Correa
         my_resultsManager = new iTETRISResults(); // Added by A Correa
         //
 
@@ -190,6 +191,7 @@ namespace ns3
         outfileLogPacketsRx.close();
         outfileLogNAR.close();
         outfileLogNIR.close();
+        outfileLogLatency.close();
         //
 
     }

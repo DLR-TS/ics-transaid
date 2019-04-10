@@ -152,7 +152,7 @@ namespace testapp
                 m_subReceiveMessage = true;
                 GetController()->requestMobilityInfo();
 
-                std::cout << "Starting test Message Scheduler at RSU"  << std::endl;
+                // std::cout << "Starting test Message Scheduler at RSU"  << std::endl;
 
 
                 m_MessageScheduler = new MessageScheduler( GetController());
@@ -191,8 +191,8 @@ namespace testapp
 				if (commHeader->getMessageType() == TRANSAID_CAM)
 				{
 				    const TransaidHeader::CamInfo * camInfo = transaidHeader->getCamInfo();
-					std::cout << "Received CAM at node " << GetController()->GetId() << "  sender " << camInfo->senderID << " time " << camInfo->generationTime <<  " position " << camInfo->position <<
-							 " speed " << camInfo->speed  <<  " acceleration " << camInfo->acceleration  << std::endl;
+					// std::cout << "Received CAM at node " << GetController()->GetId() << "  sender " << camInfo->senderID << " time " << camInfo->generationTime <<  " position " << camInfo->position <<
+					//		 " speed " << camInfo->speed  <<  " acceleration " << camInfo->acceleration  << std::endl;
 
 					return;
 				}
@@ -201,11 +201,12 @@ namespace testapp
 				{
 				    const TransaidHeader::CpmInfo * cpmInfo = transaidHeader->getCpmInfo();
 
-					std::cout << "Received CPM at node " << GetController()->GetId() << "  sender " << cpmInfo->senderID << " time " << cpmInfo->generationTime << " Number OF Received Obstacles in the CPM " << cpmInfo->numObstacles << " CPM Message Size " << cpmInfo->CPM_message_size << std::endl;
+					// std::cout << "Received CPM at node " << GetController()->GetId() << "  sender " << cpmInfo->senderID << " time " << cpmInfo->generationTime << " Number OF Received Obstacles in the CPM " << cpmInfo->numObstacles << " CPM Message Size " << cpmInfo->CPM_message_size << std::endl;
+					/*
 					for(int i=0; i < cpmInfo->numObstacles ; ++i )
 					{
 						std::cout << "Received Object ID : " << cpmInfo->CPM_detected_objectID[i] <<std::endl;
-					}
+					} */
 					return;
 				}
 
@@ -213,7 +214,7 @@ namespace testapp
 				{
 				    const TransaidHeader::McmVehicleInfo * mcmInfo = transaidHeader->getMcmVehicleInfo();
 
-					std::cout << "Received MCM at node " << GetController()->GetId() << "  sender " << mcmInfo->senderID << " time " << mcmInfo->generationTime  << std::endl;
+					// std::cout << "Received MCM at node " << GetController()->GetId() << "  sender " << mcmInfo->senderID << " time " << mcmInfo->generationTime  << std::endl;
 
 					return;
 				}

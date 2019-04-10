@@ -55,6 +55,11 @@ namespace ns3
         uint32_t countTotal = 0;
     };
 
+    struct LatencyData{
+        double latency =  0 ;
+        uint32_t countTotal = 0;
+    };
+
 	class iTETRISResults : public Object
 	{
 		public:
@@ -75,7 +80,7 @@ namespace ns3
         void ResetCounters ();
 
         PDRdata m_PDRdata;
-
+        LatencyData m_LatencyData;
 
         std::map<int, NARdata> m_NARdataMap;
         std::map<int, NIRdata> m_NIRdataMap;

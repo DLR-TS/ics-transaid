@@ -34,6 +34,8 @@
 #include <stdio.h>
 #include "ns3/ns3-server.h"
 #include <math.h>
+#include "ns3/time-step-tag.h"
+#include "ns3/node-id-tag.h"
 
 using namespace std;
 
@@ -125,6 +127,15 @@ namespace ns3
         }
         ++(*itNIR).second.countTotal;
 
+        // Latency
+
+        TimeStepTag timestepTag;
+        packet->PeekPacketTag(timestepTag);
+        uint32_t timeStep = timestepTag.Get();
+
+       m_LatencyData.latency += Simulator::Now().GetMilliSeconds() - timeStep;
+       ++m_LatencyData.countTotal;
+
     }
 
     void iTETRISResults::LogAwarenessRatio(NodeContainer m_NodeContainer){
@@ -177,22 +188,22 @@ namespace ns3
 
         std::string data;
 
-        data = "Time " + to_string(Simulator::Now().GetSeconds());
+        data = "Time," + to_string(Simulator::Now().GetMilliSeconds());
 
         for (int i=0; i< 50; i++){
 
-            data += " " + to_string(m_PDRdata.countTx[i]);
+            data += "," + to_string(m_PDRdata.countTx[i]);
         }
         Ns3Server::outfileLogPacketsTx << data << std::endl;
 
         // Received Packets PDR
 
 
-        data = "Time " + to_string(Simulator::Now().GetSeconds());
+        data = "Time," + to_string(Simulator::Now().GetMilliSeconds());
 
         for (int i=0; i< 50; i++){
 
-            data += " " + to_string(m_PDRdata.countRx[i]);
+            data += "," + to_string(m_PDRdata.countRx[i]);
         }
         Ns3Server::outfileLogPacketsRx << data << std::endl;
 
@@ -210,10 +221,10 @@ namespace ns3
         }
 
 
-        data = "Time " + to_string(Simulator::Now().GetSeconds());
+        data = "Time," + to_string(Simulator::Now().GetSeconds());
 
         for(int i=0; i< 50; i++){
-            data += " " + to_string(average_NAR[i]);
+            data += "," + to_string(average_NAR[i]);
         }
 
         Ns3Server::outfileLogNAR << data << std::endl;
@@ -235,13 +246,23 @@ namespace ns3
         }
 
 
-        data = "Time " + to_string(Simulator::Now().GetSeconds());
+        data = "Time," + to_string(Simulator::Now().GetSeconds());
 
         for (int i=0; i< 50; i++){
-            data += " " + to_string(average_NIR[i]);
+            data += "," + to_string(average_NIR[i]);
         }
 
         Ns3Server::outfileLogNIR << data << std::endl;
+
+        // latency
+
+        data = "Time," + to_string(Simulator::Now().GetSeconds());
+        if (m_LatencyData.countTotal!=0){
+            m_LatencyData.latency /= m_LatencyData.countTotal;
+            data += "," + to_string(m_LatencyData.latency);
+            Ns3Server::outfileLogLatency << data << std::endl;
+        }
+
 
         Simulator::Schedule(Seconds(m_interval),&iTETRISResults::writeResults,this);
         ResetCounters();
