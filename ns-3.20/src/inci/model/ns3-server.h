@@ -77,8 +77,11 @@ class Ns3Server
 
     // Log Results TransAID // Added by A Correa
     iTETRISResults * my_resultsManager;
-    static std::ofstream outfileLogPacketsRx;
-    static std::ofstream outfileLogPacketsTx;
+    static std::ofstream outfileLogPacketsPDR;
+    static std::ofstream outfileLogPacketsPDRCAM;
+    static std::ofstream outfileLogPacketsPDRCPM;
+    static std::ofstream outfileLogPacketsPDRMCM;
+    //static std::ofstream outfileLogPacketsTx;
     static std::ofstream outfileLogNAR;
     static std::ofstream outfileLogNIR;
     static std::ofstream outfileLogLatency;

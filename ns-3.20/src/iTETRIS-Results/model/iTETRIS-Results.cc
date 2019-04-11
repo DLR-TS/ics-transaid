@@ -58,36 +58,117 @@ namespace ns3
 
     void iTETRISResults::LogPacketsTx(std::string context, Ptr<const Packet> packet, double distanceTxRx, uint32_t sendernodeId){
 
-        if (distanceTxRx < 10){
-            ++m_PDRdata.countTx[0];
-
-        } else if (distanceTxRx > 490){
-            ++m_PDRdata.countTx[49];
-        } else {
-            int indexAux = floor(distanceTxRx/10);
-            ++m_PDRdata.countTx[indexAux];
-        }
-
         V2XmessageTypeTag v2x_tag;
         packet->PeekPacketTag(v2x_tag);
         uint32_t v2x_type = v2x_tag.Get();
 
-        // std::cout << "Transmitted packet of type " << v2x_type << std::endl;
+        switch(v2x_type) {
+            case 6  : // CAM
+                if (distanceTxRx < 10){
+                    ++m_PDRdataCAM.countTx[0];
+
+                } else if (distanceTxRx > 490){
+                    ++m_PDRdataCAM.countTx[49];
+                } else {
+                    int indexAux = floor(distanceTxRx/10);
+                    ++m_PDRdataCAM.countTx[indexAux];
+                }
+                break; //optional
+            case 7 : // CPM
+                if (distanceTxRx < 10){
+                    ++m_PDRdataCPM.countTx[0];
+
+                } else if (distanceTxRx > 490){
+                    ++m_PDRdataCPM.countTx[49];
+                } else {
+                    int indexAux = floor(distanceTxRx/10);
+                    ++m_PDRdataCPM.countTx[indexAux];
+                }
+                break; //optional
+            case 8 : // MCM
+                if (distanceTxRx < 10){
+                    ++m_PDRdataMCM.countTx[0];
+
+                } else if (distanceTxRx > 490){
+                    ++m_PDRdataMCM.countTx[49];
+                } else {
+                    int indexAux = floor(distanceTxRx/10);
+                    ++m_PDRdataMCM.countTx[indexAux];
+                }
+                break; //optional
+
+                // you can have any number of case statements.
+            default : //Optional
+                if (distanceTxRx < 10){
+                    ++m_PDRdata.countTx[0];
+
+                } else if (distanceTxRx > 490){
+                    ++m_PDRdata.countTx[49];
+                } else {
+                    int indexAux = floor(distanceTxRx/10);
+                    ++m_PDRdata.countTx[indexAux];
+                }
+        }
+
     }
 
     void iTETRISResults::LogPacketsRx(std::string context, Ptr<const Packet> packet, double distanceTxRx, uint32_t sendernodeId){
 
         int indexAux;
 
-        if (distanceTxRx < 10){
-            ++m_PDRdata.countRx[0];
+        V2XmessageTypeTag v2x_tag;
+        packet->PeekPacketTag(v2x_tag);
+        uint32_t v2x_type = v2x_tag.Get();
 
-        } else if (distanceTxRx > 490){
-            ++m_PDRdata.countRx[49];
-        } else {
-            indexAux = floor(distanceTxRx/10);
-            ++m_PDRdata.countRx[indexAux];
+        switch(v2x_type) {
+            case 6  : // CAM
+                if (distanceTxRx < 10){
+                    ++m_PDRdataCAM.countRx[0];
+
+                } else if (distanceTxRx > 490){
+                    ++m_PDRdataCAM.countRx[49];
+                } else {
+                    indexAux = floor(distanceTxRx/10);
+                    ++m_PDRdataCAM.countRx[indexAux];
+                }
+                break; //optional
+            case 7 : // CPM
+                if (distanceTxRx < 10){
+                    ++m_PDRdataCPM.countRx[0];
+
+                } else if (distanceTxRx > 490){
+                    ++m_PDRdataCPM.countRx[49];
+                } else {
+                    indexAux = floor(distanceTxRx/10);
+                    ++m_PDRdataCPM.countRx[indexAux];
+                }
+                break; //optional
+            case 8 : // MCM
+                if (distanceTxRx < 10){
+                    ++m_PDRdataMCM.countRx[0];
+
+                } else if (distanceTxRx > 490){
+                    ++m_PDRdataMCM.countRx[49];
+                } else {
+                    indexAux = floor(distanceTxRx/10);
+                    ++m_PDRdataMCM.countRx[indexAux];
+                }
+                break; //optional
+
+                // you can have any number of case statements.
+            default : //Optional
+                if (distanceTxRx < 10){
+                    ++m_PDRdata.countRx[0];
+
+                } else if (distanceTxRx > 490){
+                    ++m_PDRdata.countRx[49];
+                } else {
+                    indexAux = floor(distanceTxRx/10);
+                    ++m_PDRdata.countRx[indexAux];
+                }
         }
+
+
 
         std::size_t posInit = context.find("/NodeList/");
         std::size_t posEnd = context.find("/DeviceList/");
@@ -193,26 +274,32 @@ namespace ns3
         // Transmitted Packets PDR
 
 
-        std::string data;
+        std::string data, data1, data2, data3;
 
         data = "Time," + to_string(Simulator::Now().GetMilliSeconds());
-
-        for (int i=0; i< 50; i++){
-
-            data += "," + to_string(m_PDRdata.countTx[i]);
-        }
-        Ns3Server::outfileLogPacketsTx << data << std::endl;
-
-        // Received Packets PDR
-
-
-        data = "Time," + to_string(Simulator::Now().GetMilliSeconds());
+        data1 = "Time," + to_string(Simulator::Now().GetMilliSeconds());
+        data2 = "Time," + to_string(Simulator::Now().GetMilliSeconds());
+        data3 = "Time," + to_string(Simulator::Now().GetMilliSeconds());
 
         for (int i=0; i< 50; i++){
 
             data += "," + to_string(m_PDRdata.countRx[i]);
+            data1 += "," + to_string(m_PDRdataCAM.countRx[i]);
+            data2 += "," + to_string(m_PDRdataCPM.countRx[i]);
+            data3 += "," + to_string(m_PDRdataMCM.countRx[i]);
         }
-        Ns3Server::outfileLogPacketsRx << data << std::endl;
+
+        for (int i=0; i< 50; i++){
+
+            data += "," + to_string(m_PDRdata.countTx[i]);
+            data1 += "," + to_string(m_PDRdataCAM.countTx[i]);
+            data2 += "," + to_string(m_PDRdataCPM.countTx[i]);
+            data3 += "," + to_string(m_PDRdataMCM.countTx[i]);
+        }
+        Ns3Server::outfileLogPacketsPDR << data << std::endl;
+        Ns3Server::outfileLogPacketsPDRCAM << data1 << std::endl;
+        Ns3Server::outfileLogPacketsPDRCPM << data2 << std::endl;
+        Ns3Server::outfileLogPacketsPDRMCM << data3 << std::endl;
 
         // NAR
 

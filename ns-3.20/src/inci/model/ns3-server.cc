@@ -53,8 +53,10 @@ namespace ns3
 	bool Ns3Server::closeConnection_ = false;
 	int Ns3Server::targetTime_ = 0;
 	ofstream Ns3Server::myfile;
-    ofstream Ns3Server::outfileLogPacketsRx;
-    ofstream Ns3Server::outfileLogPacketsTx;
+    ofstream Ns3Server::outfileLogPacketsPDR;
+    ofstream Ns3Server::outfileLogPacketsPDRCAM;
+    ofstream Ns3Server::outfileLogPacketsPDRCPM;
+    ofstream Ns3Server::outfileLogPacketsPDRMCM;
     ofstream Ns3Server::outfileLogNAR;
     ofstream Ns3Server::outfileLogNIR;
     ofstream Ns3Server::outfileLogLatency;
@@ -70,8 +72,11 @@ namespace ns3
 		my_packetManagerPtr = packetManager;
 
 		// Log results TransAID
-        outfileLogPacketsRx.open("ReceivedPackets.csv"); // Added by A Correa
-        outfileLogPacketsTx.open("TransmittedPackets.csv" ); // Added by A Correa
+        outfileLogPacketsPDR.open("PDR.csv"); // Added by A Correa
+        outfileLogPacketsPDRCAM.open("PDR_CAM.csv"); // Added by A Correa
+        outfileLogPacketsPDRCPM.open("PDR_CPM.csv"); // Added by A Correa
+        outfileLogPacketsPDRMCM.open("PDR_MCM.csv"); // Added by A Correa
+        //outfileLogPacketsTx.open("TransmittedPackets.csv" ); // Added by A Correa
         outfileLogNAR.open("NAR.csv" ); // Added by A Correa
         outfileLogNIR.open("NIR.csv" ); // Added by A Correa
         outfileLogLatency.open("Latency.csv"); // Added by A Correa
@@ -187,8 +192,10 @@ namespace ns3
 
 
         // Close log files //Added by A Correa
-        outfileLogPacketsTx.close();
-        outfileLogPacketsRx.close();
+        outfileLogPacketsPDR.close();
+        outfileLogPacketsPDRCAM.close();
+        outfileLogPacketsPDRCPM.close();
+        outfileLogPacketsPDRMCM.close();
         outfileLogNAR.close();
         outfileLogNIR.close();
         outfileLogLatency.close();

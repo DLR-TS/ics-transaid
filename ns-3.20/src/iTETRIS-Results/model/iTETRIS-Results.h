@@ -79,7 +79,11 @@ namespace ns3
 
         void ResetCounters ();
 
+        PDRdata m_PDRdataCAM;
+        PDRdata m_PDRdataCPM;
+        PDRdata m_PDRdataMCM;
         PDRdata m_PDRdata;
+
         LatencyData m_LatencyData;
 
         std::map<int, NARdata> m_NARdataMap;
