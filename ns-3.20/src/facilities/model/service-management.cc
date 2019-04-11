@@ -173,6 +173,30 @@ namespace ns3
 		//NS_LOG_INFO(Simulator::Now().GetSeconds() << " ServiceManagement::ActivateC2CService ");
 		m_MessageManagement->StartTransmission(App, address);
 	}
+
+    void ServiceManagement::ActivateC2CService(std::string ServiceID, Ptr<c2cAddress> address, double frequency,
+                                               double MessRegenerationTime, uint8_t msglifetime, uint32_t packetSize, uint32_t messageId, std::vector<unsigned char> genericContainer)
+    {
+        Ptr<Application> service = m_servicelist->GetService(ServiceID);
+        //std::cout<<"ServiceManagement::ActivateC2CService -> Service with ID="<<ServiceID<<std::endl;
+        Ptr<iTETRISApplication> App = DynamicCast<iTETRISApplication>(service);
+        NS_ASSERT_MSG(App,
+                      "ServiceManagement::ActivateC2CService -> Service with ID=" << ServiceID << " not found in the service list");
+        App->SetMessRegenerationTime(MessRegenerationTime);
+        App->SetFrequency(frequency);
+        App->SetPacketSize(packetSize);
+        App->SetMsgLifeTime(msglifetime);
+        App->SetMessageId(messageId);
+
+        // Obtain V2X message type from generic container  A Correa
+        std::string s( genericContainer.begin(), genericContainer.end() );
+        int V2XmessageType = std::stoi ((s.substr(s.find(" "))),nullptr,10);
+        App->SetV2XMessageType(V2XmessageType);
+
+        //NS_LOG_INFO(Simulator::Now().GetSeconds() << " ServiceManagement::ActivateC2CService ");
+        m_MessageManagement->StartTransmission(App, address);
+    }
+
 //	void ServiceManagement::ActivateC2CService(std::string ServiceID, Ptr<c2cAddress> address, double frequency,
 //			double MessRegenerationTime, uint8_t msglifetime, uint32_t packetSize)
 //	{

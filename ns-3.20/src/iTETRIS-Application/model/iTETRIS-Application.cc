@@ -65,6 +65,7 @@
 #include "ns3/storage.h" // to transmit tags to the iCS
 #include "ns3/message-id-tag.h"
 #include "ns3/qos-tag.h"
+#include "ns3/v2x-message-type-tag.h"
 
 #include "iTETRIS-Application.h"
 
@@ -173,6 +174,10 @@ namespace ns3
         QosTag qos_tag;
         qos_tag.SetTid(0); // AC_BE by default.
         p->AddPacketTag(qos_tag);
+
+        V2XmessageTypeTag v2x_tag;
+        v2x_tag.Set(m_V2XmessageType);
+        p->AddPacketTag(v2x_tag);
 
 	}
 
@@ -324,5 +329,11 @@ namespace ns3
 	{
 		m_messageId = messageId;
 	}
+
+    void iTETRISApplication::SetV2XMessageType(uint32_t msgType)
+    {
+        m_V2XmessageType = msgType;
+    }
+
 
 } // Namespace ns3

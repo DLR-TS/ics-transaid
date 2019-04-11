@@ -36,6 +36,8 @@
 #include <math.h>
 #include "ns3/time-step-tag.h"
 #include "ns3/node-id-tag.h"
+#include "ns3/v2x-message-type-tag.h"
+
 
 using namespace std;
 
@@ -66,6 +68,11 @@ namespace ns3
             ++m_PDRdata.countTx[indexAux];
         }
 
+        V2XmessageTypeTag v2x_tag;
+        packet->PeekPacketTag(v2x_tag);
+        uint32_t v2x_type = v2x_tag.Get();
+
+        // std::cout << "Transmitted packet of type " << v2x_type << std::endl;
     }
 
     void iTETRISResults::LogPacketsRx(std::string context, Ptr<const Packet> packet, double distanceTxRx, uint32_t sendernodeId){

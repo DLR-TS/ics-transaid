@@ -333,7 +333,7 @@ namespace ns3
 							<< " Area=" << destination.areaSize);
 			Ptr<c2cAddress> c2caddress = m_AddressingSupport->getC2CGeoBroadcastAddress(destination);
 			m_ServiceManagement->ActivateC2CService(serviceId, c2caddress, frequency, msgRegenerationTime, msgLifetime,
-					packetSize, messageId);
+					packetSize, messageId, genericContainer);
 		} else
 		{
 			NS_LOG_LOGIC(
