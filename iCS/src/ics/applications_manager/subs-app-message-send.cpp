@@ -165,6 +165,8 @@ bool SubsAppMessageSend::push(SyncManager* syncManager)
     string extra;
     std::vector<unsigned char> *genericContainer = readGenericContainerAndExtrea(extra);
 
+
+
     if (syncManager->ScheduleV2xTopobroadcastMessages(m_senderId, m_appId, m_msgSeqNo, m_frequency, m_appMsgLength,
         m_msgRegenerationTime, m_appMsgType, m_commProfile, m_prefTechs, numHops, m_msgLifetime, extra,
         genericContainer) == EXIT_SUCCESS)
@@ -294,7 +296,7 @@ bool SubsAppMessageSend::push(SyncManager* syncManager)
     string extra;
     std::vector<unsigned char> *genericContainer = readGenericContainerAndExtrea(extra);
 
-    std::vector<Area2D*> areas = syncManager->m_facilitiesManager->convertAreas(m_areas);
+        std::vector<Area2D*> areas = syncManager->m_facilitiesManager->convertAreas(m_areas);
 #ifdef LOG_ON
     log.str("");
     log << "Area center=" << ((Circle*) m_areas[0].shape)->getCenter() << " radius="
@@ -428,6 +430,7 @@ std::vector<unsigned char> * SubsAppMessageSend::readGenericContainerAndExtrea(s
       unsigned start = m_msg.position();
       extra = m_msg.readString();
       k += m_msg.position() - start;
+      genericContainer->assign(extra.begin(),extra.end());
     }
     else
     {
