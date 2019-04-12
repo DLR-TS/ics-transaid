@@ -75,3 +75,9 @@ iTETRIS-Applications/testApp/docs/html
 iTETRIS-Applications/testApp/docs/man
 iTETRIS-Applications/testApp/docs/latex
 TransAIDScenarios/**/los_*
+iCS/tests/iCS/**/data/*.csv
+.idea/
+CMakeLists.txt
+cmake-build-debug/
+**/cmake-build-debug/
+
