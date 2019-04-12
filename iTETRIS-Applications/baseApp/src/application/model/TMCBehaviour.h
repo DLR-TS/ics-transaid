@@ -9,6 +9,7 @@
 #define SRC_APPLICATION_MODEL_TMCBEHAVIOUR_H_
 
 #include <map>
+#include "node-handler.h"
 
 namespace baseapp {
 
@@ -18,9 +19,7 @@ class Payload;
 
 namespace application {
 
-class iCSInterface;
-
-class TMCBehaviour {
+class TMCBehaviour : public server::NodeHandler::MessageReceptionListener {
 public:
     TMCBehaviour();
     virtual ~TMCBehaviour();
@@ -33,7 +32,7 @@ public:
 
     /// @brief To be called, when a message is received at an RSU
     /// @note  The payload pointer will be deleted externally after this call.
-    virtual void ReceiveMessage(int rsuID, server::Payload * payload, double snr) = 0;
+    virtual void ReceiveMessage(int rsuID, server::Payload * payload, double snr, bool mobileNode = false) = 0;
 
     /// @brief Add a new RSU to be controlled by this TMC
     /// @brief Execute() is called once per simulation step, when the last RSU has been executed.

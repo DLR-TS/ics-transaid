@@ -34,6 +34,11 @@
  * University of Bologna
  ***************************************************************************************/
 
+#include <sstream>
+#include <climits>
+#include <vector>
+#include <memory>
+
 #include "node-handler.h"
 #include "current-time.h"
 #include "program-configuration.h"
@@ -45,9 +50,6 @@
 #include "fixed-station.h"
 #include "behaviour-factory.h"
 #include "TMCBehaviour.h"
-#include <sstream>
-#include <climits>
-#include <vector>
 
 
 
@@ -87,7 +89,6 @@ namespace baseapp
 			}
 			delete m_storage;
 			delete m_timeStepBuffer;
-			delete m_TMCBehaviour;
 		}
 
 		void NodeHandler::updateTimeStep(const int timeStep)
@@ -245,20 +246,22 @@ namespace baseapp
 					if (m_storage->find(it->m_extra, payload))
 						payload->snr = it->m_snr;
 					node->applicationMessageReceive(it->m_messageId, payload);
-					if (node->isFixed() && m_TMCBehaviour != nullptr) {
+					if (node->isFixed()) {
 #ifdef DEBUG_TMC
                     std::cout << "NodeHandler::applicationMessageReceive(): Sending copy of received message to TMC "
                             << "(receiver: " << node->getId() << ", msgID: " << it->m_messageId << ")"
                             << std::endl;
 #endif
-					    // send a copy of the received message to the TMC
-					    m_TMCBehaviour->ReceiveMessage(node->getId(), payload, it->m_messageId);
+					    // send a copy of the received message to all RSU message reception listeners
+					    for(auto l : m_RSUMessageReceptionListeners) {
+					    	l->ReceiveMessage(node->getId(), payload, it->m_messageId, false);
+					    }
 					} else {
-#ifdef DEBUG_TMC
-            std::cout << "NodeHandler::applicationMessageReceive(): No TMC." << std::endl;
-#endif
+					    // send a copy of the received message to all Vehicle message reception listeners
+					    for(auto l : m_VehicleMessageReceptionListeners) {
+					    	l->ReceiveMessage(node->getId(), payload, it->m_messageId, false);
+					    }
 					}
-
 					//The payload is deleted if necessary
 					if (m_storage->asPolicy(it->m_extra) == kDeleteOnRead)
 						delete payload;
@@ -418,10 +421,33 @@ namespace baseapp
         }
 
         void NodeHandler::setTMCBehaviour(application::TMCBehaviour * b) {
+            removeRSUMessageReceptionListener(m_TMCBehaviour);
+            m_TMCBehaviour = std::shared_ptr<application::TMCBehaviour>(b);
             if (m_TMCBehaviour != nullptr) {
-                delete m_TMCBehaviour;
+            	addRSUMessageReceptionListener(m_TMCBehaviour);
             }
-            m_TMCBehaviour = b;
+        }
+
+        void NodeHandler::addRSUMessageReceptionListener(std::shared_ptr<MessageReceptionListener> l) {
+            m_RSUMessageReceptionListeners.insert(l);
+        }
+
+        void NodeHandler::addVehicleMessageReceptionListener(std::shared_ptr<MessageReceptionListener> l) {
+            m_VehicleMessageReceptionListeners.insert(l);
+        }
+
+        void NodeHandler::removeVehicleMessageReceptionListener(std::shared_ptr<MessageReceptionListener> l) {
+        	auto i = m_VehicleMessageReceptionListeners.find(l);
+        	if (i != m_VehicleMessageReceptionListeners.end()) {
+        		m_VehicleMessageReceptionListeners.erase(i);
+        	}
+        }
+
+        void NodeHandler::removeRSUMessageReceptionListener(std::shared_ptr<MessageReceptionListener> l) {
+        	auto i = m_RSUMessageReceptionListeners.find(l);
+        	if (i != m_RSUMessageReceptionListeners.end()) {
+        		m_RSUMessageReceptionListeners.erase(i);
+        	}
         }
 
 	} /* namespace server */

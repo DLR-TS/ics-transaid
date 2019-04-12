@@ -6,9 +6,11 @@
  */
 
 
+#include <iostream>
+#include <map>
 #include "TMCBehaviourTest.h"
 #include "current-time.h"
-#include "ics-interface.h"
+#include "application/model/ics-interface.h"
 
 namespace testapp {
 namespace application {
@@ -20,8 +22,8 @@ TMCBehaviourTest::TMCBehaviourTest() {
 TMCBehaviourTest::~TMCBehaviourTest() {
 }
 
-void TMCBehaviourTest::ReceiveMessage(int rsuID, server::Payload * payload, double snr) {
-    if (!isActive()) {
+void TMCBehaviourTest::ReceiveMessage(int rsuID, server::Payload * payload, double snr, bool mobileNode) {
+    if (mobileNode || !isActive()) {
         return;
     }
     if (m_RSUController.find(rsuID) == m_RSUController.end()) {

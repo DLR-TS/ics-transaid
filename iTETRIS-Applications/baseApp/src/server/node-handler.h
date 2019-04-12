@@ -60,6 +60,16 @@ namespace baseapp
 		class NodeHandler
 		{
 			public:
+
+		    class MessageReceptionListener {
+		    public:
+		        /// @brief To be called, when a message is received
+		        /// @note  The payload pointer will be deleted externally after this call.
+		        virtual void ReceiveMessage(int receiverID, server::Payload * payload, double snr, bool mobileNode = false) = 0;
+		    };
+
+
+
 				NodeHandler(application::BehaviourFactory* factory);
 				virtual ~NodeHandler();
 				void updateTimeStep(const int timeStep);
@@ -127,7 +137,20 @@ namespace baseapp
 
 		        void setTMCBehaviour(application::TMCBehaviour * b);
 
+		        /// @brief Adds a RSU message reception listener.
+		        void addRSUMessageReceptionListener(std::shared_ptr<MessageReceptionListener> l);
+
+		        /// @brief Adds a RSU message reception listener.
+		        void addVehicleMessageReceptionListener(std::shared_ptr<MessageReceptionListener> l);
+
+		        /// @brief Adds a RSU message reception listener.
+		        void removeRSUMessageReceptionListener(std::shared_ptr<MessageReceptionListener> l);
+
+		        /// @brief Adds a RSU message reception listener.
+		        void removeVehicleMessageReceptionListener(std::shared_ptr<MessageReceptionListener> l);
+
 			private:
+
                 /// @brief This method controls the execution of the TMC Behaviour, if existent.
                 void checkTMCExecution(const application::Node * node);
 
@@ -150,9 +173,14 @@ namespace baseapp
 
 				/// @brief Logic for the traffic management control, @see BehaviourFactory
 				///        The TMC Behaviour receives a copy of all received messages for the RSUs
-				application::TMCBehaviour * m_TMCBehaviour;
+				std::shared_ptr<application::TMCBehaviour> m_TMCBehaviour;
 				application::BehaviourFactory* m_factory;
 				static std::string emptyString;
+
+
+				// Instances, that listen for message receptions at RSUs
+				std::set<std::shared_ptr<MessageReceptionListener> > m_RSUMessageReceptionListeners;
+				std::set<std::shared_ptr<MessageReceptionListener> > m_VehicleMessageReceptionListeners;
 		};
 
 	} /* namespace server */
