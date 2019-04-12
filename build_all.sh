@@ -2,6 +2,14 @@
 
 # This builds or rebuilds sumo, ns-3, iCS, LightComm and all apps
 # It understands the configurations "debug" and "profile" as parameter
+# 
+# Please note that you have to install additional dependencies before 
+# the build will succeed. These are currently (Ubuntu 18.04):
+# SUMO: cmake, libxerces-c-dev, libgdal-dev, libproj-dev, libfox-1.6-dev
+# iTETRIS: autoconf, make and the Geographic Lib, which you need to install
+# manually: Download the latest Linux tarball from 
+#   https://sourceforge.net/projects/geographiclib/files/latest/download
+# Unpack it and type ./configure && make -j8 && sudo make install
 
 if test "$1" == "debug"; then
     cmake_opt="-DCMAKE_BUILD_TYPE=Debug"
