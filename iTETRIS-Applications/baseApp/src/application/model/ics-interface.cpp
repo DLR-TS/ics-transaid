@@ -694,13 +694,13 @@ namespace baseapp
             }
         }
 
-        void iCSInterface::Highlight(std::string colorDef, const double duration, const std::string& sumoPOI) {
+        void iCSInterface::Highlight(std::string colorDef, const double size, const int type, const double duration, const std::string& sumoPOI) {
             RGBColor c = RGBColor::parseColor(colorDef);
             auto color = std::make_shared<libsumo::TraCIColor>(c.red(), c.green(), c.blue(), c.alpha());
-            Highlight(color, duration, sumoPOI);
+            Highlight(color, size, type, duration, sumoPOI);
         }
 
-        void iCSInterface::Highlight(std::shared_ptr<libsumo::TraCIColor> color, const double duration, const std::string& sumoPOI) {
+        void iCSInterface::Highlight(std::shared_ptr<libsumo::TraCIColor> color, const double size, const int type, const double duration, const std::string& sumoPOI) {
             std::string ID;
             int cmdID;
             if (sumoPOI != "") {
@@ -717,14 +717,18 @@ namespace baseapp
                 int varTypeID = libsumo::TYPE_COMPOUND;
                 unsigned int alphaMax = 255;
                 tcpip::Storage content;
-                unsigned int length = 3;
+                unsigned int length = 5;
                 content.writeUnsignedByte(length);
                 content.writeUnsignedByte(libsumo::TYPE_COLOR);
                 writeColor(color, content);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(size);
                 content.writeUnsignedByte(libsumo::TYPE_UBYTE);
                 content.writeUnsignedByte(alphaMax);
                 content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
                 content.writeDouble(duration);
+                content.writeUnsignedByte(libsumo::TYPE_UBYTE);
+                content.writeUnsignedByte(type);
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
                 AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
             }

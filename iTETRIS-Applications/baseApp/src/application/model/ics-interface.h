@@ -300,8 +300,8 @@ namespace baseapp
                 /// @param color Color for highlighting
                 /// @param color Duration of highlighting
                 /// @param sumoPOI ID of an associated sumoPOI to highlight
-                void Highlight(std::shared_ptr<libsumo::TraCIColor> color, const double duration, const std::string& sumoPOI="");
-                void Highlight(std::string colorDef, const double duration, const std::string& sumoPOI="");
+                void Highlight(std::shared_ptr<libsumo::TraCIColor> color, const double size, const int type, const double duration, const std::string& sumoPOI="");
+                void Highlight(std::string colorDef, const double size, const int type, const double duration, const std::string& sumoPOI="");
 
                 /// @brief Request IDs of vehicles that entered the simulation
                 void requestDepartedVehicles();
