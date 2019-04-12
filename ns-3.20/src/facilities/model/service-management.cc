@@ -189,10 +189,13 @@ namespace ns3
         App->SetMessageId(messageId);
 
         // Obtain V2X message type from generic container  A Correa
+        std::cout << "Start parsing of generic container" << std::endl;
         std::string s( genericContainer.begin(), genericContainer.end() );
-        int V2XmessageType = std::stoi ((s.substr(s.find(" "))),nullptr,10);
-        App->SetV2XMessageType(V2XmessageType);
-
+        if (s.find(" ") !=  std::string::npos) {
+            int V2XmessageType = std::stoi((s.substr(s.find(" "))), nullptr, 10);
+            App->SetV2XMessageType(V2XmessageType);
+        }
+        std::cout << "End parsing of generic container" << std::endl;
         //NS_LOG_INFO(Simulator::Now().GetSeconds() << " ServiceManagement::ActivateC2CService ");
         m_MessageManagement->StartTransmission(App, address);
     }
