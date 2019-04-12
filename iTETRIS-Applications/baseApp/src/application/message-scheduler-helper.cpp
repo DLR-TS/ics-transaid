@@ -16,8 +16,73 @@ namespace baseapp {
     namespace application {
         using namespace std;
 
-        MessageScheduler::MessageScheduler(iCSInterface*  node) :
-                m_node_interface(node), m_eventBroadcast(0),  m_broadcastCheckInterval(100) {
+        std::map<MessageType, bool> MessageScheduler::m_defaultHighlightSwitch = {
+        		{TRANSAID_CAM, false},
+				{TRANSAID_CPM, false},
+				{TRANSAID_MCM_VEHICLE, false},
+				{TRANSAID_DENM, false},
+				{TRANSAID_IVI, false},
+				{TRANSAID_MCM_RSU, false},
+				{TRANSAID_MAP, false}
+        };
+        std::map<MessageType, double> MessageScheduler::m_defaultHighlightSizeRSU = {
+        		{TRANSAID_CAM, 5},
+				{TRANSAID_CPM, 6},
+				{TRANSAID_DENM, 7},
+				{TRANSAID_MCM_RSU, 8},
+				{TRANSAID_MCM_VEHICLE, 9},
+				{TRANSAID_IVI, 10},
+				{TRANSAID_MAP, 11}
+        };
+        std::map<MessageType, double> MessageScheduler::m_defaultHighlightSizeVeh = {
+        		{TRANSAID_CAM, 3},
+				{TRANSAID_CPM, 4},
+				{TRANSAID_DENM, 5},
+				{TRANSAID_MCM_RSU, 6},
+				{TRANSAID_MCM_VEHICLE, 7},
+				{TRANSAID_IVI, 8},
+				{TRANSAID_MAP, 9}
+        };
+        std::map<MessageType, double> MessageScheduler::m_defaultHighlightDuration = {
+        		{TRANSAID_CAM, 2},
+				{TRANSAID_CPM, 2},
+				{TRANSAID_DENM, 3},
+				{TRANSAID_MCM_RSU, 4},
+				{TRANSAID_MCM_VEHICLE, 4},
+				{TRANSAID_IVI, 4},
+				{TRANSAID_MAP, 4}
+        };
+        std::map<MessageType, std::string> MessageScheduler::m_defaultHighlightColor =  {
+        		{TRANSAID_CAM, "blue"},
+				{TRANSAID_CPM, "cyan"},
+				{TRANSAID_MCM_VEHICLE, "orange"},
+				{TRANSAID_DENM, "yellow"},
+				{TRANSAID_IVI, "brown"},
+				{TRANSAID_MCM_RSU, "red"},
+				{TRANSAID_MAP, "green"}
+        };
+
+        MessageScheduler::MessageScheduler(iCSInterface*  controller, const std::string& sumoPOI) :
+                m_node_interface(controller), m_eventBroadcast(0),  m_broadcastCheckInterval(100),
+				m_highlightDuration(m_defaultHighlightDuration),
+				m_highlightSwitch(m_defaultHighlightSwitch),
+				m_highlightColor(m_defaultHighlightColor),
+				m_sumoPOI(sumoPOI)
+        {
+        	if (controller->GetNode()->isFixed()) {
+        		m_highlightSize = m_defaultHighlightSizeRSU;
+        		m_sumoID = sumoPOI;
+        	} else {
+        		m_highlightSize = m_defaultHighlightSizeVeh;
+        		m_sumoID = controller->GetNode()->getId();
+        		if (sumoPOI != "") {
+                	std::cerr << "Warning: MessageScheduler(): Ignoring given argument sumoPOI because this is a vehicle ('" << m_sumoID << "')" << std::endl;
+
+        		}
+        	}
+
+            std::cout << "Starting  Message Scheduler"  << std::endl;
+
             Start();
 
         }
@@ -27,8 +92,9 @@ namespace baseapp {
 
         }
 
-
         void MessageScheduler::Start(){
+
+            // std::cout << "Starting  timer of Message Scheduler"  << std::endl;
 
             TransaidHeader::CamInfo  * messageCAM = new TransaidHeader::CamInfo() ;
             m_lastCAMsent = *messageCAM;
@@ -36,10 +102,16 @@ namespace baseapp {
             TransaidHeader::McmVehicleInfo  * messageMCMvehicle = new TransaidHeader::McmVehicleInfo() ;
             m_lastMCMsentVehicle = *messageMCMvehicle;
 
+//           if (!m_node_interface->GetNode()->isFixed()) {
+        	   /// Start transmitting CAMs, CPMs, and MCMs
             m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &MessageScheduler::V2XmessageScheduler, this);
-
+//           }
         }
 
+        void MessageScheduler::ReceiveMessage(int receiverID, server::Payload * payload, double snr, bool mobileNode) {
+        	MessageType mt = payload->getHeader(server::Position::PAYLOAD_END)->getMessageType();
+        	highlightTransmission(mt);
+        }
 
         void MessageScheduler::V2XmessageScheduler(){
 
@@ -87,8 +159,8 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_CAM, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-           //  std::cout << "Send CAM at node " << m_node_interface->GetId() << " time " << m_lastCAMsent.generationTime << std::endl;
-
+            // std::cout << "Send CAM at node " << m_node_interface->GetId() << " time " << m_lastCAMsent.generationTime << std::endl;
+            highlightTransmission(TRANSAID_CAM);
         }
 
         void MessageScheduler::SendCPM()
@@ -126,7 +198,7 @@ namespace baseapp {
                 //          << " direction " << it->second->getController()->GetNode()->getDirection()  << " in position "<<it->second->getController()->GetNode()->getPosition() << std::endl;
 
 
-
+            highlightTransmission(TRANSAID_CPM);
         }
 
 
@@ -146,7 +218,7 @@ namespace baseapp {
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_VEHICLE, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
           //  std::cout << "Send MCM at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
-
+            highlightTransmission(TRANSAID_MCM_VEHICLE);
         }
 
         void MessageScheduler::SendMCMvehicle(TransaidHeader::McmVehicleInfo  * message)
@@ -158,8 +230,9 @@ namespace baseapp {
             int messageSize = 190;
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_VEHICLE, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-          //  std::cout << "Send Vehicle-MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
+            // std::cout << "Send Vehicle-MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << m_lastMCMsentVehicle.generationTime << std::endl;
 
+            highlightTransmission(TRANSAID_MCM_VEHICLE);
         }
 
         void MessageScheduler::SendMCMrsu(TransaidHeader::McmRsuInfo  * message)
@@ -169,8 +242,9 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MCM_RSU, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-        //    std::cout << "Send RSU-MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
+            //std::cout << "Send RSU-MCM ordered from behaviour at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
 
+            highlightTransmission(TRANSAID_MCM_RSU);
         }
 
         void MessageScheduler::SendMAP(TransaidHeader::MapInfo  * message)
@@ -181,8 +255,9 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_MAP, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-        //    std::cout << "Send MAP ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
+            // std::cout << "Send MAP ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
 
+            highlightTransmission(TRANSAID_MAP);
         }
 
         void MessageScheduler::SendIVI(TransaidHeader::IviInfo  * message)
@@ -192,8 +267,9 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_IVI, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-         //   std::cout << "Send IVI ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
+            // std::cout << "Send IVI ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
 
+            highlightTransmission(TRANSAID_IVI);
         }
 
         void MessageScheduler::SendDENM(TransaidHeader::DenmInfo  * message)
@@ -203,8 +279,9 @@ namespace baseapp {
 
             TransaidHeader * header = new TransaidHeader(PID_TRANSAID, TRANSAID_DENM, message, messageSize);
             m_node_interface->Send(NT_ALL,  header, PID_TRANSAID, MSGCAT_TRANSAID);
-         //   std::cout << "Send DENM ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
+            // std::cout << "Send DENM ordered from app at node " << m_node_interface->GetId() << " time " << CurrentTime::Now() << std::endl;
 
+            highlightTransmission(TRANSAID_DENM);
         }
 
 
@@ -1092,6 +1169,39 @@ namespace baseapp {
         }
 
 
+        void MessageScheduler::switchOnHighlight(MessageType mt) {
+        	if (mt != MT_ALL) {
+        		auto i = m_highlightSwitch.find(mt);
+        		if (i != m_highlightSwitch.end()) {
+        			i->second = true;
+        		}
+        	} else {
+        		for (auto p : m_highlightSwitch) {
+        			p.second = true;
+        		}
+        	}
+        }
 
+
+        void MessageScheduler::switchOffHighlight(MessageType mt) {
+        	if (mt != MT_ALL) {
+        		auto i = m_highlightSwitch.find(mt);
+        		if (i != m_highlightSwitch.end()) {
+        			i->second = false;
+        		}
+        	} else {
+        		for (auto p : m_highlightSwitch) {
+        			p.second = false;
+        		}
+        	}
+        }
+
+
+        void
+		MessageScheduler::highlightTransmission(MessageType mt) {
+            if (m_highlightSwitch[mt]) {
+            	m_node_interface->Highlight(m_highlightColor[mt], m_highlightSize[mt], mt, m_highlightDuration[mt], m_sumoPOI);
+            }
+        }
     } /* namespace application */
 } /* namespace baseapp */

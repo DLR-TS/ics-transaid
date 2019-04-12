@@ -701,9 +701,11 @@ namespace baseapp
         }
 
         void iCSInterface::Highlight(std::shared_ptr<libsumo::TraCIColor> color, const double size, const int type, const double duration, const std::string& sumoPOI) {
-            std::string ID;
+            std::string ID = m_node->getSumoId();
             int cmdID;
-            if (sumoPOI != "") {
+            if (ID != "" && sumoPOI != "") {
+            	std::cerr << "Warning: iCSInterface::Highlight(): Ignoring given argument sumoPOI because this is a vehicle ('" << ID << "')" << std::endl;
+            } else if (ID == "" && sumoPOI != "") {
                 ID = sumoPOI;
                 cmdID = libsumo::CMD_SET_POI_VARIABLE;
             } else {
@@ -732,6 +734,14 @@ namespace baseapp
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
                 AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
             }
+        }
+
+        void iCSInterface::registerMessageReceptionListener(std::shared_ptr<server::NodeHandler::MessageReceptionListener> l) {
+        	if (m_node->isFixed()) {
+        		server::Server::GetNodeHandler()->addRSUMessageReceptionListener(l);
+        	} else {
+        		server::Server::GetNodeHandler()->addVehicleMessageReceptionListener(l);
+        	}
         }
 
         void iCSInterface::requestDepartedVehicles() {

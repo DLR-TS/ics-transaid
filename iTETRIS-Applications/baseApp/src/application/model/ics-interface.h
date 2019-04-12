@@ -303,6 +303,9 @@ namespace baseapp
                 void Highlight(std::shared_ptr<libsumo::TraCIColor> color, const double size, const int type, const double duration, const std::string& sumoPOI="");
                 void Highlight(std::string colorDef, const double size, const int type, const double duration, const std::string& sumoPOI="");
 
+		        /// @brief Adds a message reception listener to the node handler.
+		        void registerMessageReceptionListener(std::shared_ptr<server::NodeHandler::MessageReceptionListener> l);
+
                 /// @brief Request IDs of vehicles that entered the simulation
                 void requestDepartedVehicles();
                 /// @brief Request IDs of vehicles that left the simulation

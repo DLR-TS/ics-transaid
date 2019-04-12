@@ -9,6 +9,7 @@
 #include <map>
 #include <queue>
 #include "foreign/tcpip/storage.h"
+#include "utils/common/RGBColor.h"
 #include "structs.h"
 #include "vector.h"
 #include "random-variable.h"
@@ -26,15 +27,27 @@ namespace baseapp {
 
         class Node;
 
-        class MessageScheduler{
+        class MessageScheduler : public server::NodeHandler::MessageReceptionListener {
 
         public:
+        	/// @brief Constructor
+        	/// @param controller iCSInterface of the corresponding node
+        	/// @param sumoPOI Optional parameter to specify a sumo POI to be highlighted with messaging
+        	///  	   (only effective for fixed nodes)
+            MessageScheduler(iCSInterface* controller, const std::string& sumoPOI="");
 
-            MessageScheduler(iCSInterface*);
-
-            ~MessageScheduler();
+            virtual ~MessageScheduler();
 
             void Start();
+
+	        /// @brief To be called, when a message is received
+	        /// @note  If this should be enabled, the MessageScheduler has to be added as a MessageReceptionListener
+            ///        at the application's NodeHandler. E.g. from the associated Behaviour:
+            ///             m_msgScheduler = std::make_shared<MessageScheduler>(GetController());
+            ///        		GetController()->registerMessageReceptionListener(m_msgScheduler);
+	        /// @note  The payload pointer will be deleted externally after this call.
+            /// TODO: Add into Wiki, add to test (to )
+	        void ReceiveMessage(int receiverID, server::Payload * payload, double snr, bool mobileNode = false);
 
             void V2XmessageScheduler();
 
@@ -57,10 +70,24 @@ namespace baseapp {
             void ForwardSensing(int sendernode, int sensorno);
             void ReverseSensing(int sendernode, int sensorno);
 
+            /// @brief Globally switch on/off highlighting for a specific message type or all (in case mt==0)
+            void switchOnHighlight(MessageType mt = MT_ALL);
+            void switchOffHighlight(MessageType mt = MT_ALL);
+
+        private:
+            /// @brief highlight event of sending a message
+            void highlightTransmission(MessageType);
 
         private:
             iCSInterface * m_node_interface;
 
+            /// @brief SUMO ID of the object
+            /// @note This is automatically retrieved for mobile nodes, for fixed,
+            ///       an associated POI ID may be specified.
+            std::string m_sumoID;
+            /// @brief associated poi ID of the object
+            /// @note Not effective for mobile nodes
+            std::string m_sumoPOI;
 
             // @brief used to refer to abort event scheduled at start
             event_id m_eventBroadcast;
@@ -121,6 +148,26 @@ namespace baseapp {
             typedef std::map<int, ETSItimer> DataMap1;
             DataMap1 ETSIlist1;
 
+            /// @name Visualization of message reception and emission
+            /// @{
+            /// @brief controls for which message types the highlighting will be displayed
+            std::map<MessageType, bool> m_highlightSwitch;
+            /// @brief controls the message type specific size of highlighting (in m.)
+            std::map<MessageType, double> m_highlightSize;
+            /// @brief controls the message type specific duration of highlighting (in s.)
+            std::map<MessageType, double> m_highlightDuration;
+            /// @brief controls the message type specific color of highlighting
+            std::map<MessageType, std::string> m_highlightColor;
+
+            /// @brief defaults for above maps
+            /// @{
+            static std::map<MessageType, bool> m_defaultHighlightSwitch;
+            static std::map<MessageType, double> m_defaultHighlightSizeRSU;
+            static std::map<MessageType, double> m_defaultHighlightSizeVeh;
+            static std::map<MessageType, double> m_defaultHighlightDuration;
+            static std::map<MessageType, std::string> m_defaultHighlightColor;
+            /// @}
+            /// @}
 
         protected:
 
@@ -130,7 +177,6 @@ namespace baseapp {
             TransaidHeader::McmVehicleInfo  m_lastMCMsentVehicle;
             //TransaidHeader::MapInfo * m_lastMAPsent;
             //TransaidHeader::IviInfo * m_lastIVIsent;
-
 
 
         };
