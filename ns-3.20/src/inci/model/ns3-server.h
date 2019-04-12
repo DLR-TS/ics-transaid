@@ -87,7 +87,9 @@ class Ns3Server
     static std::ofstream outfileLogLatency;
     //
 
-  private:
+
+
+private:
     static std::string CAM_TYPE; 
     static std::string DNEM_TYPE;
     int dispatchCommand();
@@ -191,10 +193,11 @@ class Ns3Server
      */
     bool DeactivateNode (void);
 
-    /** 
-     * @brief Pointer to iTETRISNodeManager object which is responsible for the creation, the initial placement, and the position updates of the nodes in ns-3
-     */
-    iTETRISNodeManager *my_nodeManagerPtr; 
+    /**
+ * @brief Pointer to iTETRISNodeManager object which is responsible for the creation, the initial placement, and the position updates of the nodes in ns-3
+ */
+    iTETRISNodeManager *my_nodeManagerPtr; // Made public by A Correa
+
 
     /** 
      * @brief Pointer to PacketManager object which is responsible for the the activation and deactivation of packet transmissions in ns-3

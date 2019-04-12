@@ -31,6 +31,7 @@
 #include "ns3/callback.h"
 #include "ns3/storage.h"
 #include "ns3/config.h"
+#include "ns3/node-container.h"
 #include <stdio.h>
 #include <fstream>
 #include <iostream>
@@ -42,16 +43,21 @@ namespace ns3
 {
     class NodeContainer;
 
+#define N_STEPS_METRIC 100
+#define N_LAST_STEP 99
+#define N_LAST_DISTANCE_STEP 990
+
+
     struct PDRdata{
-        uint32_t countTx[50] = { 0 };
-        uint32_t countRx[50] = { 0 };
+        uint32_t countTx[N_STEPS_METRIC] = { 0 };
+        uint32_t countRx[N_STEPS_METRIC] = { 0 };
     };
     struct NARdata{
-        uint32_t countTotal[50] = { 0 };
-        uint32_t countRx[50] = { 0 };
+        std::map <int,double> detectedVehicles;
+        std::map <int,double> totalVehicles;
     };
     struct NIRdata{
-        double countRx[50] = { 0 };
+        double countRx[N_STEPS_METRIC] = { 0 };
         uint32_t countTotal = 0;
     };
 
@@ -87,10 +93,14 @@ namespace ns3
         LatencyData m_LatencyData;
 
         std::map<int, NARdata> m_NARdataMap;
+
+
         std::map<int, NIRdata> m_NIRdataMap;
+
 
         int m_interval;
 
+        NodeContainer m_TransAIDNodes;
 	};
 
 } // namespace ns3
