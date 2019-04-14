@@ -1,5 +1,6 @@
 Test App Log File
 ===============================
+<<<<<<< HEAD
 [2019-03-26T13:05:44.229] [INFO ] #@# Current timestep -1000
 [2019-03-26T13:05:44.229] [INFO ] Added new fixed station with id 5000
 [2019-03-26T13:05:44.229] [INFO ] [Node 5000] added subscription 1 type 0x3a
@@ -2126,3 +2127,218 @@ Test App Log File
 [2019-03-26T13:05:45.230] [INFO ] #@# Current timestep 25000
 [2019-03-26T13:05:45.230] [INFO ] ExpiredPayloadCleanUp for time: 24500. Removing keys: noting to remove Current size: 0
 [2019-03-26T13:05:45.230] [INFO ] Mobility info on nodes: 5000 
+=======
+[2019-04-09T17:46:45.183] [INFO ] #@# Current timestep -1000
+[2019-04-09T17:46:45.183] [INFO ] Added new fixed station with id 5000
+[2019-04-09T17:46:45.183] [INFO ] [Node 5000] added subscription 1 type 0x3a
+[2019-04-09T17:46:45.184] [INFO ] [Node 5000] added subscription 2 type 0x42
+[2019-04-09T17:46:45.184] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.184] [INFO ] Rsu 5000 position update: 0:0
+[2019-04-09T17:46:45.186] [INFO ] #@# Current timestep 0
+[2019-04-09T17:46:45.187] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.197] [INFO ] #@# Current timestep 50
+[2019-04-09T17:46:45.198] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.200] [INFO ] #@# Current timestep 100
+[2019-04-09T17:46:45.200] [INFO ] [Node 5000] send to all. Key=m1. Time=100
+[2019-04-09T17:46:45.200] [INFO ] [Node 5000] added subscription 3 type 0x1e
+[2019-04-09T17:46:45.201] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.201] [INFO ] [Node 5000] Confirmed subscription 3. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.205] [INFO ] #@# Current timestep 150
+[2019-04-09T17:46:45.205] [INFO ] [Node 5000] removed subscription 3
+[2019-04-09T17:46:45.205] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.207] [INFO ] #@# Current timestep 200
+[2019-04-09T17:46:45.207] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.208] [INFO ] #@# Current timestep 250
+[2019-04-09T17:46:45.209] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.210] [INFO ] #@# Current timestep 300
+[2019-04-09T17:46:45.210] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.211] [INFO ] #@# Current timestep 350
+[2019-04-09T17:46:45.211] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.213] [INFO ] #@# Current timestep 400
+[2019-04-09T17:46:45.213] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.214] [INFO ] #@# Current timestep 450
+[2019-04-09T17:46:45.214] [INFO ] ExpiredPayloadCleanUp for time: -1000. Removing keys: noting to remove Current size: 1
+[2019-04-09T17:46:45.214] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.215] [INFO ] #@# Current timestep 500
+[2019-04-09T17:46:45.215] [INFO ] ExpiredPayloadCleanUp for time: 0. Removing keys: noting to remove Current size: 1
+[2019-04-09T17:46:45.216] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.217] [INFO ] #@# Current timestep 550
+[2019-04-09T17:46:45.217] [INFO ] ExpiredPayloadCleanUp for time: 50. Removing keys: noting to remove Current size: 1
+[2019-04-09T17:46:45.218] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.221] [INFO ] #@# Current timestep 600
+[2019-04-09T17:46:45.221] [INFO ] ExpiredPayloadCleanUp for time: 100. Removing keys: 1 Current size: 0
+[2019-04-09T17:46:45.222] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.222] [INFO ] #@# Current timestep 650
+[2019-04-09T17:46:45.222] [INFO ] ExpiredPayloadCleanUp for time: 150. Removing keys: noting to remove Current size: 0
+[2019-04-09T17:46:45.223] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.224] [INFO ] #@# Current timestep 700
+[2019-04-09T17:46:45.224] [INFO ] ExpiredPayloadCleanUp for time: 200. Removing keys: noting to remove Current size: 0
+[2019-04-09T17:46:45.225] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.226] [INFO ] #@# Current timestep 750
+[2019-04-09T17:46:45.226] [INFO ] ExpiredPayloadCleanUp for time: 250. Removing keys: noting to remove Current size: 0
+[2019-04-09T17:46:45.226] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.227] [INFO ] #@# Current timestep 800
+[2019-04-09T17:46:45.227] [INFO ] ExpiredPayloadCleanUp for time: 300. Removing keys: noting to remove Current size: 0
+[2019-04-09T17:46:45.230] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.231] [INFO ] #@# Current timestep 850
+[2019-04-09T17:46:45.231] [INFO ] ExpiredPayloadCleanUp for time: 350. Removing keys: noting to remove Current size: 0
+[2019-04-09T17:46:45.235] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.236] [INFO ] #@# Current timestep 900
+[2019-04-09T17:46:45.236] [INFO ] ExpiredPayloadCleanUp for time: 400. Removing keys: noting to remove Current size: 0
+[2019-04-09T17:46:45.236] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.237] [INFO ] #@# Current timestep 950
+[2019-04-09T17:46:45.237] [INFO ] ExpiredPayloadCleanUp for time: 450. Removing keys: noting to remove Current size: 0
+[2019-04-09T17:46:45.237] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.239] [INFO ] #@# Current timestep 1000
+[2019-04-09T17:46:45.239] [INFO ] ExpiredPayloadCleanUp for time: 500. Removing keys: noting to remove Current size: 0
+[2019-04-09T17:46:45.239] [INFO ] [Node 5000] send to all. Key=m2. Time=1000
+[2019-04-09T17:46:45.239] [INFO ] [Node 5000] added subscription 4 type 0x1e
+[2019-04-09T17:46:45.240] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.240] [INFO ] [Node 5000] Confirmed subscription 4. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.242] [INFO ] #@# Current timestep 1050
+[2019-04-09T17:46:45.242] [INFO ] ExpiredPayloadCleanUp for time: 550. Removing keys: noting to remove Current size: 1
+[2019-04-09T17:46:45.242] [INFO ] [Node 5000] removed subscription 4
+[2019-04-09T17:46:45.243] [INFO ] Mobility info on nodes: 5000 
+[2019-04-09T17:46:45.253] [INFO ] #@# Current timestep 1100
+[2019-04-09T17:46:45.253] [INFO ] ExpiredPayloadCleanUp for time: 600. Removing keys: noting to remove Current size: 1
+[2019-04-09T17:46:45.254] [INFO ] [Node 5000] send to all. Key=m3. Time=1100
+[2019-04-09T17:46:45.254] [INFO ] [Node 5000] send to all. Key=m4. Time=1100
+[2019-04-09T17:46:45.275] [INFO ] Selected class for node 2 is 6
+[2019-04-09T17:46:45.275] [INFO ] Added new mobile node with id 2 ns3id 1 sumoId veh0 sumoType t1 sumoClass passenger
+[2019-04-09T17:46:45.282] [INFO ] Selected class for node 3 is 6
+[2019-04-09T17:46:45.282] [INFO ] Added new mobile node with id 3 ns3id 2 sumoId veh1 sumoType t1 sumoClass passenger
+[2019-04-09T17:46:45.283] [INFO ] [Node 2] added subscription 5 type 0x3a
+[2019-04-09T17:46:45.284] [INFO ] [Node 3] added subscription 6 type 0x3a
+[2019-04-09T17:46:45.284] [INFO ] [Node 5000] added subscription 7 type 0x1e
+[2019-04-09T17:46:45.284] [INFO ] [Node 5000] added subscription 8 type 0x1e
+[2019-04-09T17:46:45.285] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.285] [INFO ] [Node 5000] Confirmed subscription 7. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.285] [INFO ] [Node 5000] Confirmed subscription 8. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.287] [INFO ] #@# Current timestep 1150
+[2019-04-09T17:46:45.287] [INFO ] ExpiredPayloadCleanUp for time: 650. Removing keys: noting to remove Current size: 3
+[2019-04-09T17:46:45.289] [INFO ] [Node 5000] removed subscription 7
+[2019-04-09T17:46:45.289] [INFO ] [Node 5000] removed subscription 8
+[2019-04-09T17:46:45.289] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.294] [INFO ] #@# Current timestep 1200
+[2019-04-09T17:46:45.294] [INFO ] ExpiredPayloadCleanUp for time: 700. Removing keys: noting to remove Current size: 3
+[2019-04-09T17:46:45.295] [INFO ] [Node 5000] send to all. Key=m5. Time=1200
+[2019-04-09T17:46:45.295] [INFO ] [Node 2] send to all. Key=m6. Time=1200
+[2019-04-09T17:46:45.295] [INFO ] [Node 2] send to all. Key=m7. Time=1200
+[2019-04-09T17:46:45.296] [INFO ] [Node 2] send to all. Key=m8. Time=1200
+[2019-04-09T17:46:45.296] [INFO ] [Node 3] send to all. Key=m9. Time=1200
+[2019-04-09T17:46:45.296] [INFO ] [Node 3] send to all. Key=m10. Time=1200
+[2019-04-09T17:46:45.296] [INFO ] [Node 3] send to all. Key=m11. Time=1200
+[2019-04-09T17:46:45.296] [INFO ] [Node 2] added subscription 9 type 0x1e
+[2019-04-09T17:46:45.297] [INFO ] [Node 2] added subscription 10 type 0x1e
+[2019-04-09T17:46:45.297] [INFO ] [Node 2] added subscription 11 type 0x1e
+[2019-04-09T17:46:45.298] [INFO ] [2|13|m3] RSSI= -1 SNR= 17.9993 POWER= 0 MSGID=3 []
+[2019-04-09T17:46:45.298] [INFO ] [2|13|m4] RSSI= -1 SNR= 17.9993 POWER= 0 MSGID=4 []
+[2019-04-09T17:46:45.298] [INFO ] Node 2 (sumoID: 'veh0') received message 13 payload 3 timestep 1100
+[2019-04-09T17:46:45.298] [INFO ] Node 2 (sumoID: 'veh0') received message 13 payload 4 timestep 1100
+[2019-04-09T17:46:45.298] [INFO ] [Node 2] Confirmed subscription 9. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.298] [INFO ] [Node 2] Confirmed subscription 10. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.298] [INFO ] [Node 2] Confirmed subscription 11. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.299] [INFO ] [Node 3] added subscription 12 type 0x1e
+[2019-04-09T17:46:45.299] [INFO ] [Node 3] added subscription 13 type 0x1e
+[2019-04-09T17:46:45.299] [INFO ] [Node 3] added subscription 14 type 0x1e
+[2019-04-09T17:46:45.300] [INFO ] [3|13|m3] RSSI= -1 SNR= 17.9993 POWER= 0 MSGID=3 []
+[2019-04-09T17:46:45.300] [INFO ] [3|13|m4] RSSI= -1 SNR= 17.9993 POWER= 0 MSGID=4 []
+[2019-04-09T17:46:45.300] [INFO ] Node 3 (sumoID: 'veh1') received message 13 payload 3 timestep 1100
+[2019-04-09T17:46:45.300] [INFO ] Node 3 (sumoID: 'veh1') received message 13 payload 4 timestep 1100
+[2019-04-09T17:46:45.300] [INFO ] [Node 3] Confirmed subscription 12. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.300] [INFO ] [Node 3] Confirmed subscription 13. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.301] [INFO ] [Node 3] Confirmed subscription 14. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.301] [INFO ] [Node 5000] added subscription 15 type 0x1e
+[2019-04-09T17:46:45.302] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.302] [INFO ] [Node 5000] Confirmed subscription 15. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.304] [INFO ] #@# Current timestep 1250
+[2019-04-09T17:46:45.304] [INFO ] ExpiredPayloadCleanUp for time: 750. Removing keys: noting to remove Current size: 10
+[2019-04-09T17:46:45.305] [INFO ] [Node 2] removed subscription 9
+[2019-04-09T17:46:45.305] [INFO ] [Node 2] removed subscription 10
+[2019-04-09T17:46:45.305] [INFO ] [Node 2] removed subscription 11
+[2019-04-09T17:46:45.305] [INFO ] [Node 3] removed subscription 12
+[2019-04-09T17:46:45.305] [INFO ] [Node 3] removed subscription 13
+[2019-04-09T17:46:45.305] [INFO ] [Node 3] removed subscription 14
+[2019-04-09T17:46:45.306] [INFO ] [Node 5000] removed subscription 15
+[2019-04-09T17:46:45.306] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.311] [INFO ] #@# Current timestep 1300
+[2019-04-09T17:46:45.311] [INFO ] ExpiredPayloadCleanUp for time: 800. Removing keys: noting to remove Current size: 10
+[2019-04-09T17:46:45.312] [INFO ] [5000|13|m10] RSSI= -1 SNR= 18.0029 POWER= 0 MSGID=9 []
+[2019-04-09T17:46:45.312] [INFO ] [5000|13|m11] RSSI= -1 SNR= 18.0029 POWER= 0 MSGID=10 []
+[2019-04-09T17:46:45.312] [INFO ] [5000|13|m7] RSSI= -1 SNR= 18.0029 POWER= 0 MSGID=6 []
+[2019-04-09T17:46:45.312] [INFO ] [5000|13|m8] RSSI= -1 SNR= 18.0029 POWER= 0 MSGID=7 []
+[2019-04-09T17:46:45.312] [INFO ] Node 5000 (sumoID: '') received message 13 payload 10 timestep 1200
+[2019-04-09T17:46:45.312] [INFO ] Node 5000 (sumoID: '') received message 13 payload 11 timestep 1200
+[2019-04-09T17:46:45.312] [INFO ] Node 5000 (sumoID: '') received message 13 payload 7 timestep 1200
+[2019-04-09T17:46:45.313] [INFO ] Node 5000 (sumoID: '') received message 13 payload 8 timestep 1200
+[2019-04-09T17:46:45.313] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.314] [INFO ] #@# Current timestep 1350
+[2019-04-09T17:46:45.314] [INFO ] ExpiredPayloadCleanUp for time: 850. Removing keys: noting to remove Current size: 10
+[2019-04-09T17:46:45.315] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.317] [INFO ] #@# Current timestep 1400
+[2019-04-09T17:46:45.317] [INFO ] ExpiredPayloadCleanUp for time: 900. Removing keys: noting to remove Current size: 10
+[2019-04-09T17:46:45.317] [INFO ] [Node 5000] send to all. Key=m12. Time=1400
+[2019-04-09T17:46:45.318] [INFO ] [Node 5000] added subscription 16 type 0x1e
+[2019-04-09T17:46:45.319] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.320] [INFO ] [Node 5000] Confirmed subscription 16. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.322] [INFO ] #@# Current timestep 1450
+[2019-04-09T17:46:45.322] [INFO ] ExpiredPayloadCleanUp for time: 950. Removing keys: noting to remove Current size: 11
+[2019-04-09T17:46:45.323] [INFO ] [Node 5000] removed subscription 16
+[2019-04-09T17:46:45.323] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.327] [INFO ] #@# Current timestep 1500
+[2019-04-09T17:46:45.327] [INFO ] ExpiredPayloadCleanUp for time: 1000. Removing keys: 2 Current size: 10
+[2019-04-09T17:46:45.328] [INFO ] [2|13|m12] RSSI= -1 SNR= 18.0208 POWER= 0 MSGID=12 []
+[2019-04-09T17:46:45.328] [INFO ] Node 2 (sumoID: 'veh0') received message 13 payload 12 timestep 1400
+[2019-04-09T17:46:45.330] [INFO ] [3|13|m12] RSSI= -1 SNR= 18.0208 POWER= 0 MSGID=12 []
+[2019-04-09T17:46:45.330] [INFO ] Node 3 (sumoID: 'veh1') received message 13 payload 12 timestep 1400
+[2019-04-09T17:46:45.330] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.331] [INFO ] #@# Current timestep 1550
+[2019-04-09T17:46:45.331] [INFO ] ExpiredPayloadCleanUp for time: 1050. Removing keys: noting to remove Current size: 10
+[2019-04-09T17:46:45.332] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.334] [INFO ] #@# Current timestep 1600
+[2019-04-09T17:46:45.334] [INFO ] ExpiredPayloadCleanUp for time: 1100. Removing keys: 3 4 Current size: 8
+[2019-04-09T17:46:45.334] [INFO ] [Node 5000] send to all. Key=m13. Time=1600
+[2019-04-09T17:46:45.334] [INFO ] [Node 5000] added subscription 17 type 0x1e
+[2019-04-09T17:46:45.335] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.335] [INFO ] [Node 5000] Confirmed subscription 17. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.337] [INFO ] #@# Current timestep 1650
+[2019-04-09T17:46:45.337] [INFO ] ExpiredPayloadCleanUp for time: 1150. Removing keys: noting to remove Current size: 9
+[2019-04-09T17:46:45.337] [INFO ] [Node 5000] removed subscription 17
+[2019-04-09T17:46:45.337] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.339] [INFO ] #@# Current timestep 1700
+[2019-04-09T17:46:45.339] [INFO ] ExpiredPayloadCleanUp for time: 1200. Removing keys: 5 6 7 8 9 10 11 Current size: 2
+[2019-04-09T17:46:45.340] [INFO ] [2|13|m13] RSSI= -1 SNR= 18.053 POWER= 0 MSGID=13 []
+[2019-04-09T17:46:45.340] [INFO ] Node 2 (sumoID: 'veh0') received message 13 payload 13 timestep 1600
+[2019-04-09T17:46:45.340] [INFO ] [3|13|m13] RSSI= -1 SNR= 18.053 POWER= 0 MSGID=13 []
+[2019-04-09T17:46:45.340] [INFO ] Node 3 (sumoID: 'veh1') received message 13 payload 13 timestep 1600
+[2019-04-09T17:46:45.341] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.342] [INFO ] #@# Current timestep 1750
+[2019-04-09T17:46:45.342] [INFO ] ExpiredPayloadCleanUp for time: 1250. Removing keys: noting to remove Current size: 2
+[2019-04-09T17:46:45.342] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.344] [INFO ] #@# Current timestep 1800
+[2019-04-09T17:46:45.344] [INFO ] ExpiredPayloadCleanUp for time: 1300. Removing keys: noting to remove Current size: 2
+[2019-04-09T17:46:45.344] [INFO ] [Node 5000] send to all. Key=m14. Time=1800
+[2019-04-09T17:46:45.345] [INFO ] [Node 5000] added subscription 18 type 0x1e
+[2019-04-09T17:46:45.345] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.346] [INFO ] [Node 5000] Confirmed subscription 18. Will be unsuscribed on the next timestep
+[2019-04-09T17:46:45.347] [INFO ] #@# Current timestep 1850
+[2019-04-09T17:46:45.347] [INFO ] ExpiredPayloadCleanUp for time: 1350. Removing keys: noting to remove Current size: 3
+[2019-04-09T17:46:45.348] [INFO ] [Node 5000] removed subscription 18
+[2019-04-09T17:46:45.348] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.351] [INFO ] #@# Current timestep 1900
+[2019-04-09T17:46:45.351] [INFO ] ExpiredPayloadCleanUp for time: 1400. Removing keys: 12 Current size: 2
+[2019-04-09T17:46:45.352] [INFO ] [2|13|m14] RSSI= -1 SNR= 18.0997 POWER= 0 MSGID=14 []
+[2019-04-09T17:46:45.352] [INFO ] Node 2 (sumoID: 'veh0') received message 13 payload 14 timestep 1800
+[2019-04-09T17:46:45.352] [INFO ] [3|13|m14] RSSI= -1 SNR= 18.0997 POWER= 0 MSGID=14 []
+[2019-04-09T17:46:45.352] [INFO ] Node 3 (sumoID: 'veh1') received message 13 payload 14 timestep 1800
+[2019-04-09T17:46:45.353] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.353] [INFO ] #@# Current timestep 1950
+[2019-04-09T17:46:45.353] [INFO ] ExpiredPayloadCleanUp for time: 1450. Removing keys: noting to remove Current size: 2
+[2019-04-09T17:46:45.354] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.356] [INFO ] #@# Current timestep 2000
+[2019-04-09T17:46:45.356] [INFO ] ExpiredPayloadCleanUp for time: 1500. Removing keys: noting to remove Current size: 2
+[2019-04-09T17:46:45.356] [INFO ] [Node 5000] send to all. Key=m15. Time=2000
+[2019-04-09T17:46:45.356] [INFO ] [Node 5000] added subscription 19 type 0x1e
+[2019-04-09T17:46:45.357] [INFO ] Mobility info on nodes: 2 3 5000 
+[2019-04-09T17:46:45.357] [INFO ] [Node 5000] Confirmed subscription 19. Will be unsuscribed on the next timestep
+>>>>>>> transaid-comms

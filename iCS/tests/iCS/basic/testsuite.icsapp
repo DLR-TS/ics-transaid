@@ -51,7 +51,6 @@ testApp_getDrivingDistance
 # Tests transaid headers
 test_V2XmsgSet
 
-
 # Tests TMCBehaviour for single RSU
 test_TMCBehaviour
 
@@ -60,4 +59,7 @@ test_TMCBehaviour_multiRSU
 
 # Tests transmission of messages using the MessageScheduler class
 test_MessageScheduler
+
+# Tests the logging of results in NS-3
+test_ResultsLogging
 

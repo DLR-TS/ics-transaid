@@ -35,6 +35,16 @@ class PropagationLossModel;
 class PropagationDelayModel;
 class YansWifiPhy;
 
+
+    struct Parameters // Added by Goku
+    {
+        double rxPowerDbm;
+        WifiTxVector txVector;
+        WifiPreamble preamble;
+        double distanceTxRx;
+        uint32_t sendernodeId;
+    };
+
 /**
  * \brief A Yans wifi channel
  * \ingroup wifi
@@ -125,12 +135,15 @@ private:
   void Receive (uint32_t i, Ptr<Packet> packet, double rxPowerDbm,
                 WifiTxVector txVector, WifiPreamble preamble) const;
 
+    //Added by Goku
+     void ReceiveV2 (uint32_t i, Ptr<Packet> packet, struct Parameters parameters) const; //Added by Goku
 
   PhyList m_phyList; //!< List of YansWifiPhys connected to this YansWifiChannel
   Ptr<PropagationLossModel> m_loss; //!< Propagation loss model
   Ptr<PropagationDelayModel> m_delay; //!< Propagation delay model
   float m_interferenceRangeVehicle;
   float m_interferenceRangeCiu;
+  bool m_PDRDist; //Added by Goku
 };
 
 } // namespace ns3

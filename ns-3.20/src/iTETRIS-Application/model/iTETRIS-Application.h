@@ -97,6 +97,8 @@ namespace ns3
 
 			virtual void SetMessageId(uint32_t messageId);
 
+            virtual void SetV2XMessageType(uint32_t msgType);
+
 		private:
 			/**
 			 * \brief Application specific startup code
@@ -141,6 +143,7 @@ namespace ns3
 			iTETRISApplication::ReceiveCallback m_forwardIcs;
 
 			uint32_t m_messageId;
+            uint32_t m_V2XmessageType;
 
 		private:
 			std::string m_mwServiceType;

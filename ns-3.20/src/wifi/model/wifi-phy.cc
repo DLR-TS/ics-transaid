@@ -70,6 +70,27 @@ WifiPhy::GetTypeId (void)
     .AddTraceSource ("PhyRxEnd",
                      "Trace source indicating a packet has been completely received from the channel medium by the device",
                      MakeTraceSourceAccessor (&WifiPhy::m_phyRxEndTrace))
+            //Added by Goku
+          .AddTraceSource ("PhyRxEndDist",
+                           "Trace source indicating a packet has been completely received from the channel medium by the device",
+                           MakeTraceSourceAccessor (&WifiPhy::m_phyRxEndTraceDist))
+
+
+          .AddTraceSource ("PhyTxDist",
+                           "Trace source indicating a packet has been completely received from the channel medium by the device",
+                           MakeTraceSourceAccessor (&WifiPhy::m_phyTxTraceDist))
+
+          .AddTraceSource ("PhyRxDropDist",
+                           "Trace source indicating a packet has been collided",
+                           MakeTraceSourceAccessor (&WifiPhy::m_phyRxDropTraceDist))
+          .AddTraceSource ("PhyRxDropDistall",
+                           "Trace source indicating a packet has been dropped by the device during reception",
+                           MakeTraceSourceAccessor (&WifiPhy::m_phyRxDropTraceDistall))
+
+          .AddTraceSource ("PhyRxDropDistTxRx",
+                           "Trace source indicating a packet has been collided",
+                           MakeTraceSourceAccessor (&WifiPhy::m_phyRxDropTraceDistTxRx))
+                           //
     .AddTraceSource ("PhyRxDrop",
                      "Trace source indicating a packet has been dropped by the device during reception",
                      MakeTraceSourceAccessor (&WifiPhy::m_phyRxDropTrace))
@@ -463,11 +484,47 @@ WifiPhy::NotifyTxEnd (Ptr<const Packet> packet)
   m_phyTxEndTrace (packet);
 }
 
+//Added by Goku
+    void
+    WifiPhy::NotifyRxEndDist (Ptr<const Packet> packet, double distanceTxRx, uint32_t ID)
+    {
+        m_phyRxEndTraceDist (packet, distanceTxRx, ID);
+    }
+
+    void
+    WifiPhy::NotifyTxDist (Ptr<const Packet> packet, double distanceTxRx, uint32_t ID)
+    {
+        m_phyTxTraceDist (packet, distanceTxRx, ID);
+    }
+    void
+    WifiPhy::NotifyRxDropDist (Ptr<const Packet> packet, double distanceTxRx, uint32_t ID)
+    {
+        m_phyRxDropTraceDist (packet, distanceTxRx, ID);
+    }
+    void
+    WifiPhy::NotifyRxDropDistall (Ptr<const Packet> packet, double distanceTxRx, uint32_t ID)
+    {
+        m_phyRxDropTraceDistall (packet, distanceTxRx, ID);
+    }
+
+    void
+    WifiPhy::NotifyRxDropDistTxRx (Ptr<const Packet> packet, double distanceTxRx, uint32_t ID)
+    {
+        m_phyRxDropTraceDistTxRx (packet, distanceTxRx, ID);
+    }
+//
+
 void
 WifiPhy::NotifyTxDrop (Ptr<const Packet> packet)
 {
   m_phyTxDropTrace (packet);
 }
+
+void
+    WifiPhy::NotifyTx (Ptr<const Packet> packet)
+    {
+        m_phyTxTrace (packet);
+    }
 
 void
 WifiPhy::NotifyRxBegin (Ptr<const Packet> packet)

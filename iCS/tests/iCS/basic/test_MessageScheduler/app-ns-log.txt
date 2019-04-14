@@ -1,5 +1,6 @@
 Test App NS-Log File
 ===============================
+<<<<<<< HEAD
 [2019-03-26T13:05:28.967] [INFO ] Schedule at 1000
 [2019-03-26T13:05:44.229] [DEBUG] #@# Current timestep -1000
 [2019-03-26T13:05:44.229] [INFO ] [Scheduler] Notify time: -1000. Current size: 1
@@ -3505,3 +3506,339 @@ Test App NS-Log File
 [2019-03-26T13:05:45.230] [INFO ] Schedule at 25100
 [2019-03-26T13:05:45.230] [INFO ] [Scheduler] 2 have been executed.
 [2019-03-26T13:05:45.230] [INFO ] [25000][Scheduler] next at 25100 in 100
+=======
+[2019-04-09T17:46:29.939] [INFO ] Schedule at 1000
+[2019-04-09T17:46:45.183] [DEBUG] #@# Current timestep -1000
+[2019-04-09T17:46:45.183] [INFO ] [Scheduler] Notify time: -1000. Current size: 1
+[2019-04-09T17:46:45.183] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.183] [INFO ] [-1000][Scheduler] next at 1000 in 2000
+[2019-04-09T17:46:45.183] [DEBUG] (RSU 5000): Added behaviour TestRSU
+[2019-04-09T17:46:45.183] [FUNCT] void baseapp::application::iCSInterface::Activate():~(RSU 5000): 
+[2019-04-09T17:46:45.183] [INFO ] (RSU 5000): : Activated
+[2019-04-09T17:46:45.183] [FUNCT] virtual void baseapp::application::Behaviour::Start():~(RSU 5000): TestRSU: 
+[2019-04-09T17:46:45.183] [INFO ] TracedCallback StartToggle number of calls 0
+[2019-04-09T17:46:45.183] [INFO ] Schedule at 100
+[2019-04-09T17:46:45.183] [INFO ] TracedCallback StateChange number of calls 0
+[2019-04-09T17:46:45.186] [DEBUG] #@# Current timestep 0
+[2019-04-09T17:46:45.186] [INFO ] [Scheduler] Notify time: 0. Current size: 2
+[2019-04-09T17:46:45.186] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.186] [INFO ] [0][Scheduler] next at 100 in 100
+[2019-04-09T17:46:45.197] [DEBUG] #@# Current timestep 50
+[2019-04-09T17:46:45.197] [INFO ] [Scheduler] Notify time: 50. Current size: 2
+[2019-04-09T17:46:45.197] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.197] [INFO ] [50][Scheduler] next at 100 in 50
+[2019-04-09T17:46:45.200] [DEBUG] #@# Current timestep 100
+[2019-04-09T17:46:45.200] [INFO ] [Scheduler] Notify time: 100. Current size: 2
+[2019-04-09T17:46:45.200] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.200] [DEBUG] (RSU 5000): [100] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:7, size:10
+[2019-04-09T17:46:45.200] [INFO ] Schedule at 200
+[2019-04-09T17:46:45.200] [INFO ] [Scheduler] 1 have been executed.
+[2019-04-09T17:46:45.200] [INFO ] [100][Scheduler] next at 200 in 100
+[2019-04-09T17:46:45.205] [DEBUG] #@# Current timestep 150
+[2019-04-09T17:46:45.205] [INFO ] [Scheduler] Notify time: 150. Current size: 2
+[2019-04-09T17:46:45.205] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.205] [INFO ] [150][Scheduler] next at 200 in 50
+[2019-04-09T17:46:45.207] [DEBUG] #@# Current timestep 200
+[2019-04-09T17:46:45.207] [INFO ] [Scheduler] Notify time: 200. Current size: 2
+[2019-04-09T17:46:45.207] [INFO ] Schedule at 300
+[2019-04-09T17:46:45.207] [INFO ] [Scheduler] 1 have been executed.
+[2019-04-09T17:46:45.207] [INFO ] [200][Scheduler] next at 300 in 100
+[2019-04-09T17:46:45.208] [DEBUG] #@# Current timestep 250
+[2019-04-09T17:46:45.208] [INFO ] [Scheduler] Notify time: 250. Current size: 2
+[2019-04-09T17:46:45.208] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.208] [INFO ] [250][Scheduler] next at 300 in 50
+[2019-04-09T17:46:45.210] [DEBUG] #@# Current timestep 300
+[2019-04-09T17:46:45.210] [INFO ] [Scheduler] Notify time: 300. Current size: 2
+[2019-04-09T17:46:45.210] [INFO ] Schedule at 400
+[2019-04-09T17:46:45.210] [INFO ] [Scheduler] 1 have been executed.
+[2019-04-09T17:46:45.210] [INFO ] [300][Scheduler] next at 400 in 100
+[2019-04-09T17:46:45.211] [DEBUG] #@# Current timestep 350
+[2019-04-09T17:46:45.211] [INFO ] [Scheduler] Notify time: 350. Current size: 2
+[2019-04-09T17:46:45.211] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.211] [INFO ] [350][Scheduler] next at 400 in 50
+[2019-04-09T17:46:45.213] [DEBUG] #@# Current timestep 400
+[2019-04-09T17:46:45.213] [INFO ] [Scheduler] Notify time: 400. Current size: 2
+[2019-04-09T17:46:45.213] [INFO ] Schedule at 500
+[2019-04-09T17:46:45.213] [INFO ] [Scheduler] 1 have been executed.
+[2019-04-09T17:46:45.213] [INFO ] [400][Scheduler] next at 500 in 100
+[2019-04-09T17:46:45.214] [DEBUG] #@# Current timestep 450
+[2019-04-09T17:46:45.214] [INFO ] [Scheduler] Notify time: 450. Current size: 2
+[2019-04-09T17:46:45.214] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.214] [INFO ] [450][Scheduler] next at 500 in 50
+[2019-04-09T17:46:45.215] [DEBUG] #@# Current timestep 500
+[2019-04-09T17:46:45.215] [INFO ] [Scheduler] Notify time: 500. Current size: 2
+[2019-04-09T17:46:45.216] [INFO ] Schedule at 600
+[2019-04-09T17:46:45.216] [INFO ] [Scheduler] 1 have been executed.
+[2019-04-09T17:46:45.216] [INFO ] [500][Scheduler] next at 600 in 100
+[2019-04-09T17:46:45.217] [DEBUG] #@# Current timestep 550
+[2019-04-09T17:46:45.217] [INFO ] [Scheduler] Notify time: 550. Current size: 2
+[2019-04-09T17:46:45.217] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.217] [INFO ] [550][Scheduler] next at 600 in 50
+[2019-04-09T17:46:45.221] [DEBUG] #@# Current timestep 600
+[2019-04-09T17:46:45.221] [INFO ] [Scheduler] Notify time: 600. Current size: 2
+[2019-04-09T17:46:45.221] [INFO ] Schedule at 700
+[2019-04-09T17:46:45.221] [INFO ] [Scheduler] 1 have been executed.
+[2019-04-09T17:46:45.221] [INFO ] [600][Scheduler] next at 700 in 100
+[2019-04-09T17:46:45.222] [DEBUG] #@# Current timestep 650
+[2019-04-09T17:46:45.222] [INFO ] [Scheduler] Notify time: 650. Current size: 2
+[2019-04-09T17:46:45.222] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.222] [INFO ] [650][Scheduler] next at 700 in 50
+[2019-04-09T17:46:45.224] [DEBUG] #@# Current timestep 700
+[2019-04-09T17:46:45.224] [INFO ] [Scheduler] Notify time: 700. Current size: 2
+[2019-04-09T17:46:45.225] [INFO ] Schedule at 800
+[2019-04-09T17:46:45.225] [INFO ] [Scheduler] 1 have been executed.
+[2019-04-09T17:46:45.225] [INFO ] [700][Scheduler] next at 800 in 100
+[2019-04-09T17:46:45.226] [DEBUG] #@# Current timestep 750
+[2019-04-09T17:46:45.226] [INFO ] [Scheduler] Notify time: 750. Current size: 2
+[2019-04-09T17:46:45.226] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.226] [INFO ] [750][Scheduler] next at 800 in 50
+[2019-04-09T17:46:45.227] [DEBUG] #@# Current timestep 800
+[2019-04-09T17:46:45.227] [INFO ] [Scheduler] Notify time: 800. Current size: 2
+[2019-04-09T17:46:45.227] [INFO ] Schedule at 900
+[2019-04-09T17:46:45.227] [INFO ] [Scheduler] 1 have been executed.
+[2019-04-09T17:46:45.227] [INFO ] [800][Scheduler] next at 900 in 100
+[2019-04-09T17:46:45.231] [DEBUG] #@# Current timestep 850
+[2019-04-09T17:46:45.231] [INFO ] [Scheduler] Notify time: 850. Current size: 2
+[2019-04-09T17:46:45.231] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.231] [INFO ] [850][Scheduler] next at 900 in 50
+[2019-04-09T17:46:45.236] [DEBUG] #@# Current timestep 900
+[2019-04-09T17:46:45.236] [INFO ] [Scheduler] Notify time: 900. Current size: 2
+[2019-04-09T17:46:45.236] [INFO ] Schedule at 1000
+[2019-04-09T17:46:45.236] [INFO ] [Scheduler] 1 have been executed.
+[2019-04-09T17:46:45.236] [INFO ] [900][Scheduler] next at 1000 in 100
+[2019-04-09T17:46:45.237] [DEBUG] #@# Current timestep 950
+[2019-04-09T17:46:45.237] [INFO ] [Scheduler] Notify time: 950. Current size: 2
+[2019-04-09T17:46:45.237] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.237] [INFO ] [950][Scheduler] next at 1000 in 50
+[2019-04-09T17:46:45.239] [DEBUG] #@# Current timestep 1000
+[2019-04-09T17:46:45.239] [INFO ] [Scheduler] Notify time: 1000. Current size: 2
+[2019-04-09T17:46:45.239] [INFO ] Schedule at 2000
+[2019-04-09T17:46:45.239] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.239] [DEBUG] (RSU 5000): [1000] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:6, size:10
+[2019-04-09T17:46:45.239] [INFO ] Schedule at 1100
+[2019-04-09T17:46:45.239] [INFO ] [Scheduler] 2 have been executed.
+[2019-04-09T17:46:45.239] [INFO ] [1000][Scheduler] next at 1100 in 100
+[2019-04-09T17:46:45.242] [DEBUG] #@# Current timestep 1050
+[2019-04-09T17:46:45.242] [INFO ] [Scheduler] Notify time: 1050. Current size: 2
+[2019-04-09T17:46:45.242] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.242] [INFO ] [1050][Scheduler] next at 1100 in 50
+[2019-04-09T17:46:45.253] [DEBUG] #@# Current timestep 1100
+[2019-04-09T17:46:45.253] [INFO ] [Scheduler] Notify time: 1100. Current size: 2
+[2019-04-09T17:46:45.254] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.254] [DEBUG] (RSU 5000): [1100] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:7, size:10
+[2019-04-09T17:46:45.254] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.254] [DEBUG] (RSU 5000): [1100] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:8, size:10
+[2019-04-09T17:46:45.254] [INFO ] Schedule at 1200
+[2019-04-09T17:46:45.254] [INFO ] [Scheduler] 1 have been executed.
+[2019-04-09T17:46:45.254] [INFO ] [1100][Scheduler] next at 1200 in 100
+[2019-04-09T17:46:45.275] [DEBUG] (Node 2): Added behaviour TestNode
+[2019-04-09T17:46:45.275] [FUNCT] void baseapp::application::iCSInterface::Activate():~(Node 2): 
+[2019-04-09T17:46:45.275] [INFO ] (Node 2): : Activated
+[2019-04-09T17:46:45.275] [FUNCT] virtual void baseapp::application::Behaviour::Start():~(Node 2): TestNode: 
+[2019-04-09T17:46:45.275] [INFO ] TracedCallback StartToggle number of calls 0
+[2019-04-09T17:46:45.275] [INFO ] Schedule at 1200
+[2019-04-09T17:46:45.275] [INFO ] TracedCallback StateChange number of calls 1
+[2019-04-09T17:46:45.275] [INFO ] Schedule at 2100
+[2019-04-09T17:46:45.282] [DEBUG] (Node 3): Added behaviour TestNode
+[2019-04-09T17:46:45.282] [FUNCT] void baseapp::application::iCSInterface::Activate():~(Node 3): 
+[2019-04-09T17:46:45.282] [INFO ] (Node 3): : Activated
+[2019-04-09T17:46:45.282] [FUNCT] virtual void baseapp::application::Behaviour::Start():~(Node 3): TestNode: 
+[2019-04-09T17:46:45.282] [INFO ] TracedCallback StartToggle number of calls 0
+[2019-04-09T17:46:45.282] [INFO ] Schedule at 1200
+[2019-04-09T17:46:45.282] [INFO ] TracedCallback StateChange number of calls 1
+[2019-04-09T17:46:45.282] [INFO ] Schedule at 2100
+[2019-04-09T17:46:45.287] [DEBUG] #@# Current timestep 1150
+[2019-04-09T17:46:45.287] [INFO ] [Scheduler] Notify time: 1150. Current size: 6
+[2019-04-09T17:46:45.287] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.287] [INFO ] [1150][Scheduler] next at 1200 in 50
+[2019-04-09T17:46:45.294] [DEBUG] #@# Current timestep 1200
+[2019-04-09T17:46:45.294] [INFO ] [Scheduler] Notify time: 1200. Current size: 6
+[2019-04-09T17:46:45.295] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.295] [DEBUG] (RSU 5000): [1200] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:7, size:10
+[2019-04-09T17:46:45.295] [INFO ] Schedule at 1300
+[2019-04-09T17:46:45.295] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.295] [DEBUG] (Node 2): [1200] Sent packet. Its Header: Pid=??? SRC: Vehicle Id=2 Pos=(-1:-1) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:6, size:10
+[2019-04-09T17:46:45.295] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.295] [DEBUG] (Node 2): [1200] Sent packet. Its Header: Pid=??? SRC: Vehicle Id=2 Pos=(-1:-1) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:7, size:10
+[2019-04-09T17:46:45.296] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.296] [DEBUG] (Node 2): [1200] Sent packet. Its Header: Pid=??? SRC: Vehicle Id=2 Pos=(-1:-1) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:8, size:10
+[2019-04-09T17:46:45.296] [INFO ] Schedule at 1300
+[2019-04-09T17:46:45.296] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.296] [DEBUG] (Node 3): [1200] Sent packet. Its Header: Pid=??? SRC: Vehicle Id=3 Pos=(-1:-1) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:6, size:10
+[2019-04-09T17:46:45.296] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.296] [DEBUG] (Node 3): [1200] Sent packet. Its Header: Pid=??? SRC: Vehicle Id=3 Pos=(-1:-1) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:7, size:10
+[2019-04-09T17:46:45.296] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.296] [DEBUG] (Node 3): [1200] Sent packet. Its Header: Pid=??? SRC: Vehicle Id=3 Pos=(-1:-1) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:8, size:10
+[2019-04-09T17:46:45.296] [INFO ] Schedule at 1300
+[2019-04-09T17:46:45.296] [INFO ] [Scheduler] 3 have been executed.
+[2019-04-09T17:46:45.296] [INFO ] [1200][Scheduler] next at 1300 in 100
+[2019-04-09T17:46:45.298] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.298] [DEBUG] (Node 2): Received packet snr=17.9993470688 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All
+[2019-04-09T17:46:45.298] [DEBUG] (Node 2): Forwarded packet to TestNode
+[2019-04-09T17:46:45.298] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 2): TestNode: 
+[2019-04-09T17:46:45.298] [INFO ] (Node 2): TestNode: Received a test message from node 5000 with message type: 7
+[2019-04-09T17:46:45.298] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.298] [DEBUG] (Node 2): Received packet snr=17.9993470688 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All
+[2019-04-09T17:46:45.298] [DEBUG] (Node 2): Forwarded packet to TestNode
+[2019-04-09T17:46:45.298] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 2): TestNode: 
+[2019-04-09T17:46:45.298] [INFO ] (Node 2): TestNode: Received a test message from node 5000 with message type: 8
+[2019-04-09T17:46:45.300] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.300] [DEBUG] (Node 3): Received packet snr=17.9993470688 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All
+[2019-04-09T17:46:45.300] [DEBUG] (Node 3): Forwarded packet to TestNode
+[2019-04-09T17:46:45.300] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 3): TestNode: 
+[2019-04-09T17:46:45.300] [INFO ] (Node 3): TestNode: Received a test message from node 5000 with message type: 7
+[2019-04-09T17:46:45.300] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.300] [DEBUG] (Node 3): Received packet snr=17.9993470688 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All
+[2019-04-09T17:46:45.300] [DEBUG] (Node 3): Forwarded packet to TestNode
+[2019-04-09T17:46:45.300] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 3): TestNode: 
+[2019-04-09T17:46:45.300] [INFO ] (Node 3): TestNode: Received a test message from node 5000 with message type: 8
+[2019-04-09T17:46:45.304] [DEBUG] #@# Current timestep 1250
+[2019-04-09T17:46:45.304] [INFO ] [Scheduler] Notify time: 1250. Current size: 6
+[2019-04-09T17:46:45.304] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.304] [INFO ] [1250][Scheduler] next at 1300 in 50
+[2019-04-09T17:46:45.311] [DEBUG] #@# Current timestep 1300
+[2019-04-09T17:46:45.311] [INFO ] [Scheduler] Notify time: 1300. Current size: 6
+[2019-04-09T17:46:45.311] [INFO ] Schedule at 1400
+[2019-04-09T17:46:45.311] [INFO ] Schedule at 1400
+[2019-04-09T17:46:45.311] [INFO ] Schedule at 1400
+[2019-04-09T17:46:45.311] [INFO ] [Scheduler] 3 have been executed.
+[2019-04-09T17:46:45.311] [INFO ] [1300][Scheduler] next at 1400 in 100
+[2019-04-09T17:46:45.312] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.312] [DEBUG] (RSU 5000): Received packet snr=18.0029162207 ItsHeader: Pid=??? SRC: Vehicle Id=3 Pos=(-1:-1) DEST: All Id=All
+[2019-04-09T17:46:45.312] [DEBUG] (RSU 5000): Forwarded packet to TestRSU
+[2019-04-09T17:46:45.312] [FUNCT] virtual void testapp::application::BehaviourTestRSU::Receive(baseapp::server::Payload*, double):~(RSU 5000): TestRSU: 
+[2019-04-09T17:46:45.312] [INFO ] (RSU 5000): TestRSU: Received a test message from node 3 with message type: 7
+[2019-04-09T17:46:45.312] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.312] [DEBUG] (RSU 5000): Received packet snr=18.0029162207 ItsHeader: Pid=??? SRC: Vehicle Id=3 Pos=(-1:-1) DEST: All Id=All
+[2019-04-09T17:46:45.312] [DEBUG] (RSU 5000): Forwarded packet to TestRSU
+[2019-04-09T17:46:45.312] [FUNCT] virtual void testapp::application::BehaviourTestRSU::Receive(baseapp::server::Payload*, double):~(RSU 5000): TestRSU: 
+[2019-04-09T17:46:45.312] [INFO ] (RSU 5000): TestRSU: Received a test message from node 3 with message type: 8
+[2019-04-09T17:46:45.312] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.313] [DEBUG] (RSU 5000): Received packet snr=18.0029162207 ItsHeader: Pid=??? SRC: Vehicle Id=2 Pos=(-1:-1) DEST: All Id=All
+[2019-04-09T17:46:45.313] [DEBUG] (RSU 5000): Forwarded packet to TestRSU
+[2019-04-09T17:46:45.313] [FUNCT] virtual void testapp::application::BehaviourTestRSU::Receive(baseapp::server::Payload*, double):~(RSU 5000): TestRSU: 
+[2019-04-09T17:46:45.313] [INFO ] (RSU 5000): TestRSU: Received a test message from node 2 with message type: 7
+[2019-04-09T17:46:45.313] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.313] [DEBUG] (RSU 5000): Received packet snr=18.0029162207 ItsHeader: Pid=??? SRC: Vehicle Id=2 Pos=(-1:-1) DEST: All Id=All
+[2019-04-09T17:46:45.313] [DEBUG] (RSU 5000): Forwarded packet to TestRSU
+[2019-04-09T17:46:45.313] [FUNCT] virtual void testapp::application::BehaviourTestRSU::Receive(baseapp::server::Payload*, double):~(RSU 5000): TestRSU: 
+[2019-04-09T17:46:45.313] [INFO ] (RSU 5000): TestRSU: Received a test message from node 2 with message type: 8
+[2019-04-09T17:46:45.314] [DEBUG] #@# Current timestep 1350
+[2019-04-09T17:46:45.314] [INFO ] [Scheduler] Notify time: 1350. Current size: 6
+[2019-04-09T17:46:45.314] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.314] [INFO ] [1350][Scheduler] next at 1400 in 50
+[2019-04-09T17:46:45.317] [DEBUG] #@# Current timestep 1400
+[2019-04-09T17:46:45.317] [INFO ] [Scheduler] Notify time: 1400. Current size: 6
+[2019-04-09T17:46:45.317] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.317] [DEBUG] (RSU 5000): [1400] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:7, size:10
+[2019-04-09T17:46:45.318] [INFO ] Schedule at 1500
+[2019-04-09T17:46:45.318] [INFO ] Schedule at 1500
+[2019-04-09T17:46:45.318] [INFO ] Schedule at 1500
+[2019-04-09T17:46:45.318] [INFO ] [Scheduler] 3 have been executed.
+[2019-04-09T17:46:45.318] [INFO ] [1400][Scheduler] next at 1500 in 100
+[2019-04-09T17:46:45.322] [DEBUG] #@# Current timestep 1450
+[2019-04-09T17:46:45.322] [INFO ] [Scheduler] Notify time: 1450. Current size: 6
+[2019-04-09T17:46:45.322] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.322] [INFO ] [1450][Scheduler] next at 1500 in 50
+[2019-04-09T17:46:45.327] [DEBUG] #@# Current timestep 1500
+[2019-04-09T17:46:45.327] [INFO ] [Scheduler] Notify time: 1500. Current size: 6
+[2019-04-09T17:46:45.327] [INFO ] Schedule at 1600
+[2019-04-09T17:46:45.327] [INFO ] Schedule at 1600
+[2019-04-09T17:46:45.327] [INFO ] Schedule at 1600
+[2019-04-09T17:46:45.327] [INFO ] [Scheduler] 3 have been executed.
+[2019-04-09T17:46:45.327] [INFO ] [1500][Scheduler] next at 1600 in 100
+[2019-04-09T17:46:45.328] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.328] [DEBUG] (Node 2): Received packet snr=18.0207756085 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All
+[2019-04-09T17:46:45.328] [DEBUG] (Node 2): Forwarded packet to TestNode
+[2019-04-09T17:46:45.328] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 2): TestNode: 
+[2019-04-09T17:46:45.328] [INFO ] (Node 2): TestNode: Received a test message from node 5000 with message type: 7
+[2019-04-09T17:46:45.330] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.330] [DEBUG] (Node 3): Received packet snr=18.0207756085 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All
+[2019-04-09T17:46:45.330] [DEBUG] (Node 3): Forwarded packet to TestNode
+[2019-04-09T17:46:45.330] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 3): TestNode: 
+[2019-04-09T17:46:45.330] [INFO ] (Node 3): TestNode: Received a test message from node 5000 with message type: 7
+[2019-04-09T17:46:45.331] [DEBUG] #@# Current timestep 1550
+[2019-04-09T17:46:45.331] [INFO ] [Scheduler] Notify time: 1550. Current size: 6
+[2019-04-09T17:46:45.331] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.331] [INFO ] [1550][Scheduler] next at 1600 in 50
+[2019-04-09T17:46:45.334] [DEBUG] #@# Current timestep 1600
+[2019-04-09T17:46:45.334] [INFO ] [Scheduler] Notify time: 1600. Current size: 6
+[2019-04-09T17:46:45.334] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.334] [DEBUG] (RSU 5000): [1600] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:7, size:10
+[2019-04-09T17:46:45.334] [INFO ] Schedule at 1700
+[2019-04-09T17:46:45.334] [INFO ] Schedule at 1700
+[2019-04-09T17:46:45.334] [INFO ] Schedule at 1700
+[2019-04-09T17:46:45.334] [INFO ] [Scheduler] 3 have been executed.
+[2019-04-09T17:46:45.334] [INFO ] [1600][Scheduler] next at 1700 in 100
+[2019-04-09T17:46:45.337] [DEBUG] #@# Current timestep 1650
+[2019-04-09T17:46:45.337] [INFO ] [Scheduler] Notify time: 1650. Current size: 6
+[2019-04-09T17:46:45.337] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.337] [INFO ] [1650][Scheduler] next at 1700 in 50
+[2019-04-09T17:46:45.339] [DEBUG] #@# Current timestep 1700
+[2019-04-09T17:46:45.339] [INFO ] [Scheduler] Notify time: 1700. Current size: 6
+[2019-04-09T17:46:45.340] [INFO ] Schedule at 1800
+[2019-04-09T17:46:45.340] [INFO ] Schedule at 1800
+[2019-04-09T17:46:45.340] [INFO ] Schedule at 1800
+[2019-04-09T17:46:45.340] [INFO ] [Scheduler] 3 have been executed.
+[2019-04-09T17:46:45.340] [INFO ] [1700][Scheduler] next at 1800 in 100
+[2019-04-09T17:46:45.340] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.340] [DEBUG] (Node 2): Received packet snr=18.0529851518 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All
+[2019-04-09T17:46:45.340] [DEBUG] (Node 2): Forwarded packet to TestNode
+[2019-04-09T17:46:45.340] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 2): TestNode: 
+[2019-04-09T17:46:45.340] [INFO ] (Node 2): TestNode: Received a test message from node 5000 with message type: 7
+[2019-04-09T17:46:45.340] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.340] [DEBUG] (Node 3): Received packet snr=18.0529851518 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All
+[2019-04-09T17:46:45.340] [DEBUG] (Node 3): Forwarded packet to TestNode
+[2019-04-09T17:46:45.340] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 3): TestNode: 
+[2019-04-09T17:46:45.340] [INFO ] (Node 3): TestNode: Received a test message from node 5000 with message type: 7
+[2019-04-09T17:46:45.342] [DEBUG] #@# Current timestep 1750
+[2019-04-09T17:46:45.342] [INFO ] [Scheduler] Notify time: 1750. Current size: 6
+[2019-04-09T17:46:45.342] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.342] [INFO ] [1750][Scheduler] next at 1800 in 50
+[2019-04-09T17:46:45.344] [DEBUG] #@# Current timestep 1800
+[2019-04-09T17:46:45.344] [INFO ] [Scheduler] Notify time: 1800. Current size: 6
+[2019-04-09T17:46:45.344] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.344] [DEBUG] (RSU 5000): [1800] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:7, size:10
+[2019-04-09T17:46:45.344] [INFO ] Schedule at 1900
+[2019-04-09T17:46:45.344] [INFO ] Schedule at 1900
+[2019-04-09T17:46:45.344] [INFO ] Schedule at 1900
+[2019-04-09T17:46:45.344] [INFO ] [Scheduler] 3 have been executed.
+[2019-04-09T17:46:45.344] [INFO ] [1800][Scheduler] next at 1900 in 100
+[2019-04-09T17:46:45.347] [DEBUG] #@# Current timestep 1850
+[2019-04-09T17:46:45.347] [INFO ] [Scheduler] Notify time: 1850. Current size: 6
+[2019-04-09T17:46:45.347] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.347] [INFO ] [1850][Scheduler] next at 1900 in 50
+[2019-04-09T17:46:45.351] [DEBUG] #@# Current timestep 1900
+[2019-04-09T17:46:45.351] [INFO ] [Scheduler] Notify time: 1900. Current size: 6
+[2019-04-09T17:46:45.351] [INFO ] Schedule at 2000
+[2019-04-09T17:46:45.351] [INFO ] Schedule at 2000
+[2019-04-09T17:46:45.351] [INFO ] Schedule at 2000
+[2019-04-09T17:46:45.351] [INFO ] [Scheduler] 3 have been executed.
+[2019-04-09T17:46:45.351] [INFO ] [1900][Scheduler] next at 2000 in 100
+[2019-04-09T17:46:45.352] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.352] [DEBUG] (Node 2): Received packet snr=18.0996515052 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All
+[2019-04-09T17:46:45.352] [DEBUG] (Node 2): Forwarded packet to TestNode
+[2019-04-09T17:46:45.352] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 2): TestNode: 
+[2019-04-09T17:46:45.352] [INFO ] (Node 2): TestNode: Received a test message from node 5000 with message type: 7
+[2019-04-09T17:46:45.352] [INFO ] TracedCallback Receive number of calls 0
+[2019-04-09T17:46:45.352] [DEBUG] (Node 3): Received packet snr=18.0996515052 ItsHeader: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All
+[2019-04-09T17:46:45.352] [DEBUG] (Node 3): Forwarded packet to TestNode
+[2019-04-09T17:46:45.352] [FUNCT] virtual void testapp::application::BehaviourTestNode::Receive(baseapp::server::Payload*, double):~(Node 3): TestNode: 
+[2019-04-09T17:46:45.352] [INFO ] (Node 3): TestNode: Received a test message from node 5000 with message type: 7
+[2019-04-09T17:46:45.353] [DEBUG] #@# Current timestep 1950
+[2019-04-09T17:46:45.353] [INFO ] [Scheduler] Notify time: 1950. Current size: 6
+[2019-04-09T17:46:45.353] [INFO ] [Scheduler] 0 have been executed.
+[2019-04-09T17:46:45.353] [INFO ] [1950][Scheduler] next at 2000 in 50
+[2019-04-09T17:46:45.356] [DEBUG] #@# Current timestep 2000
+[2019-04-09T17:46:45.356] [INFO ] [Scheduler] Notify time: 2000. Current size: 6
+[2019-04-09T17:46:45.356] [DEBUG] [GMSample][2] dir=0 not found.
+[2019-04-09T17:46:45.356] [DEBUG] [GMSample][3] dir=180 not found.
+[2019-04-09T17:46:45.356] [INFO ] Schedule at 3000
+[2019-04-09T17:46:45.356] [INFO ] TracedCallback Send number of calls 1
+[2019-04-09T17:46:45.356] [DEBUG] (RSU 5000): [2000] Sent packet. Its Header: Pid=??? SRC: Rsu Id=5000 Pos=(0:0) DEST: All Id=All, and following TransaidHeader:  [TransaidHeader] PId:2, MsgTypeId:7, size:10
+[2019-04-09T17:46:45.356] [INFO ] Schedule at 2100
+[2019-04-09T17:46:45.356] [INFO ] Schedule at 2100
+[2019-04-09T17:46:45.356] [INFO ] Schedule at 2100
+[2019-04-09T17:46:45.356] [INFO ] [Scheduler] 4 have been executed.
+[2019-04-09T17:46:45.356] [INFO ] [2000][Scheduler] next at 2100 in 100
+>>>>>>> transaid-comms

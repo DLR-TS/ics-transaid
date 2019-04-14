@@ -216,14 +216,14 @@ namespace baseapp
 
 
         public:
-            TransaidHeader (ProtocolId pid, MessageType msgType, CamInfo * message);
-            TransaidHeader (ProtocolId pid, MessageType msgType, DenmInfo * message);
-            TransaidHeader (ProtocolId pid, MessageType msgType, CpmInfo * message);
-            TransaidHeader (ProtocolId pid, MessageType msgType, McmVehicleInfo * message);
-            TransaidHeader (ProtocolId pid, MessageType msgType, McmRsuInfo * message);
-            TransaidHeader (ProtocolId pid, MessageType msgType, MapInfo * message);
-            TransaidHeader (ProtocolId pid, MessageType msgType, IviInfo * message);
 
+            TransaidHeader (ProtocolId pid, MessageType msgType, CamInfo * message, int msgSize);
+            TransaidHeader (ProtocolId pid, MessageType msgType, DenmInfo * message, int msgSize);
+            TransaidHeader (ProtocolId pid, MessageType msgType, CpmInfo * message, int msgSize);
+            TransaidHeader (ProtocolId pid, MessageType msgType, McmVehicleInfo * message,int msgSize);
+            TransaidHeader (ProtocolId pid, MessageType msgType, McmRsuInfo * message, int msgSize);
+            TransaidHeader (ProtocolId pid, MessageType msgType, MapInfo * message, int msgSize);
+            TransaidHeader (ProtocolId pid, MessageType msgType, IviInfo * message,int msgSize);
 
 
 
@@ -244,6 +244,7 @@ namespace baseapp
             const McmVehicleInfo * getMcmVehicleInfo() const;
             const MapInfo * getMapInfo() const ;
             const IviInfo * getIviInfo() const;
+            int getMessageRealSize() const;
 
         private:
             ProtocolId m_protocolId;
@@ -255,6 +256,7 @@ namespace baseapp
             McmRsuInfo* m_mcmRsuInfo;
             McmVehicleInfo* m_mcmVehicleInfo;
             IviInfo* m_iviInfo;
+            int m_realMessageSize = 0;
 		};
 
         /**

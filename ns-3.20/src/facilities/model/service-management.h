@@ -95,6 +95,12 @@ namespace ns3
 			void ActivateC2CService(std::string ServiceID, Ptr<c2cAddress> address, double frequency,
 					double MessRegenerationTime, uint8_t msglifetime, uint32_t packetSize, uint32_t messageId);
 
+            /**
+             * Activate a specific service among those stored in the service list and transmit with the C2C stack
+            */
+            void ActivateC2CService(std::string ServiceID, Ptr<c2cAddress> address, double frequency,
+                                double MessRegenerationTime, uint8_t msglifetime, uint32_t packetSize, uint32_t messageId, std::vector<unsigned char> genericContainer);
+
 			/**
 			 * Activate a specific service among those stored in the service list and transmit with the C2C stack
 			 */

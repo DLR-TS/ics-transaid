@@ -326,14 +326,14 @@ namespace ns3
 			TechnologyList technologies, CircularGeoAddress destination, double frequency, uint32_t packetSize,
 			double msgRegenerationTime, uint8_t msgLifetime, uint32_t messageId, std::vector<unsigned char> genericContainer)
 	{
-		if (commProfile == 0)
+	    if (commProfile == 0)
 		{
 			NS_LOG_LOGIC(
 					"iTETRISns3Facilities::InitiateGeoBroadcastTxon Lat=" << destination.lat << " Lon=" << destination.lon
 							<< " Area=" << destination.areaSize);
 			Ptr<c2cAddress> c2caddress = m_AddressingSupport->getC2CGeoBroadcastAddress(destination);
 			m_ServiceManagement->ActivateC2CService(serviceId, c2caddress, frequency, msgRegenerationTime, msgLifetime,
-					packetSize, messageId);
+					packetSize, messageId, genericContainer);
 		} else
 		{
 			NS_LOG_LOGIC(

@@ -160,12 +160,10 @@ namespace testapp
                 m_subReceiveMessage = true;
                 GetController()->requestMobilityInfo();
 
-                std::cout << "Starting test Message Scheduler at RSU"  << std::endl;
+                // std::cout << "Starting test Message Scheduler at RSU"  << std::endl;
 
 
                 m_MessageScheduler = new MessageScheduler( GetController());
-
-
 
             }
 
@@ -200,7 +198,7 @@ namespace testapp
 				if (commHeader->getMessageType() == TRANSAID_CAM)
 				{
 				    const TransaidHeader::CamInfo * camInfo = transaidHeader->getCamInfo();
-					std::cout << "Received CAM at node " << GetController()->GetId() << "  sender " << camInfo->senderID << " time " << camInfo->generationTime <<  " position " << camInfo->position <<
+					 std::cout << "Received CAM at node " << GetController()->GetId() << "  sender " << camInfo->senderID << " time " << camInfo->generationTime <<  " position " << camInfo->position <<
 							 " speed " << camInfo->speed  <<  " acceleration " << camInfo->acceleration  << std::endl;
 
 					return;
@@ -210,11 +208,14 @@ namespace testapp
 				{
 				    const TransaidHeader::CpmInfo * cpmInfo = transaidHeader->getCpmInfo();
 
-					std::cout << "Received CPM at node " << GetController()->GetId() << "  sender " << cpmInfo->senderID << " time " << cpmInfo->generationTime << " Number OF Received Obstacles in the CPM " << cpmInfo->numObstacles << " CPM Message Size " << cpmInfo->CPM_message_size << std::endl;
+
+					 std::cout << "Received CPM at node " << GetController()->GetId() << "  sender " << cpmInfo->senderID << " time " << cpmInfo->generationTime << " Number OF Received Obstacles in the CPM " << cpmInfo->numObstacles << " CPM Message Size " << cpmInfo->CPM_message_size << std::endl;
+					/*
 					for(int i=0; i < cpmInfo->numObstacles ; ++i )
 					{
 						std::cout << "Received Object ID : " << cpmInfo->CPM_detected_objectID[i] <<std::endl;
-					}
+					} */
+
 					return;
 				}
 
@@ -222,7 +223,7 @@ namespace testapp
 				{
 				    const TransaidHeader::McmVehicleInfo * mcmInfo = transaidHeader->getMcmVehicleInfo();
 
-					std::cout << "Received MCM at node " << GetController()->GetId() << "  sender " << mcmInfo->senderID << " time " << mcmInfo->generationTime  << std::endl;
+					 std::cout << "Received MCM at node " << GetController()->GetId() << "  sender " << mcmInfo->senderID << " time " << mcmInfo->generationTime  << std::endl;
 
 					return;
 				}
@@ -436,7 +437,7 @@ namespace testapp
 
             m_lastCAMsent = message;
 
-            TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CAM, message);
+            TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CAM, message,100);
             GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
             std::cout << "Send CAM at node " << GetController()->GetId() <<  std::endl;
             GetController();
@@ -452,7 +453,7 @@ namespace testapp
 
             m_lastDENMsent = message;
 
-            TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_DENM, message);
+            TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_DENM, message,100);
             GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
             std::cout << "Send DENM at node " << GetController()->GetId() <<  std::endl;
         }
@@ -467,7 +468,7 @@ namespace testapp
 
 			m_lastCPMsent = message;
 
-			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CPM, message);
+			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_CPM, message,100);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
 
             std::cout << "Send CPM at node " << GetController()->GetId() <<  std::endl;
@@ -485,7 +486,7 @@ namespace testapp
 
 			m_lastMCMsent = message;
 
-			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN,   TRANSAID_MCM_RSU, message);
+			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN,   TRANSAID_MCM_RSU, message,100);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
 
             std::cout << "Send MCM at node " << GetController()->GetId() <<  std::endl;
@@ -501,7 +502,7 @@ namespace testapp
 
 			m_lastMAPsent = message;
 
-			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_MAP, message);
+			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_MAP, message,100);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
 
             std::cout << "Send MAP at node " << GetController()->GetId() <<  std::endl;
@@ -516,7 +517,7 @@ namespace testapp
 
 
 			m_lastIVIsent = message;
-			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_IVI, message);
+			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_IVI, message,100);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
 
             std::cout << "Send IVI at node " << GetController()->GetId() <<  std::endl;

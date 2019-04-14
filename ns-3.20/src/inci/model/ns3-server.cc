@@ -36,6 +36,8 @@
 #include <sys/time.h>
 #include "ns3/log.h"
 #include <string>
+#include "ns3/config.h"
+#include "ns3/iTETRIS-Results.h"
 
 
 
@@ -51,6 +53,13 @@ namespace ns3
 	bool Ns3Server::closeConnection_ = false;
 	int Ns3Server::targetTime_ = 0;
 	ofstream Ns3Server::myfile;
+    ofstream Ns3Server::outfileLogPacketsPDR;
+    ofstream Ns3Server::outfileLogPacketsPDRCAM;
+    ofstream Ns3Server::outfileLogPacketsPDRCPM;
+    ofstream Ns3Server::outfileLogPacketsPDRMCM;
+    ofstream Ns3Server::outfileLogNAR;
+    ofstream Ns3Server::outfileLogNIR;
+    ofstream Ns3Server::outfileLogLatency;
 	string Ns3Server::CAM_TYPE = "0";
 	string Ns3Server::DNEM_TYPE = "1";
 	bool Ns3Server::logActive_ = false;
@@ -61,6 +70,18 @@ namespace ns3
 		closeConnection_ = false;
 		my_nodeManagerPtr = node_manager;
 		my_packetManagerPtr = packetManager;
+
+		// Log results TransAID
+        outfileLogPacketsPDR.open("PDR.csv"); // Added by A Correa
+        outfileLogPacketsPDRCAM.open("PDR_CAM.csv"); // Added by A Correa
+        outfileLogPacketsPDRCPM.open("PDR_CPM.csv"); // Added by A Correa
+        outfileLogPacketsPDRMCM.open("PDR_MCM.csv"); // Added by A Correa
+        //outfileLogPacketsTx.open("TransmittedPackets.csv" ); // Added by A Correa
+        outfileLogNAR.open("NAR.csv" ); // Added by A Correa
+        outfileLogNIR.open("NIR.csv" ); // Added by A Correa
+        outfileLogLatency.open("Latency.csv"); // Added by A Correa
+        my_resultsManager = new iTETRISResults(); // Added by A Correa
+        //
 
 		try
 		{
@@ -85,6 +106,7 @@ namespace ns3
 			myfile.open(logfile.c_str());
 			logActive_ = true;
 		}
+
 
 		try
 		{
@@ -167,7 +189,19 @@ namespace ns3
 
 		if (logActive_)
 			myfile.close();
-	}
+
+
+        // Close log files //Added by A Correa
+        outfileLogPacketsPDR.close();
+        outfileLogPacketsPDRCAM.close();
+        outfileLogPacketsPDRCPM.close();
+        outfileLogPacketsPDRMCM.close();
+        outfileLogNAR.close();
+        outfileLogNIR.close();
+        outfileLogLatency.close();
+        //
+
+    }
 
 	int Ns3Server::dispatchCommand()
 	{        
@@ -389,6 +423,9 @@ namespace ns3
 
         Simulator::Stop(MilliSeconds(time) - Simulator::Now());
         Simulator::Run();
+
+        my_resultsManager->LogAwarenessRatio(my_nodeManagerPtr->GetItetrisNodes()); // Added by A Correa
+
         //Simulator::RunOneEvent();
         writeStatusCmd(CMD_SIMSTEP, RTYPE_OK, "RunSimStep()");
         return true;
@@ -408,6 +445,7 @@ namespace ns3
 
 		int32_t nodeId = my_nodeManagerPtr->CreateItetrisNode(pos);
 
+
 		for (moduleIt = listOfCommModules.begin(); moduleIt < listOfCommModules.end(); moduleIt++)
 		{
 			string cadena = *moduleIt;
@@ -424,10 +462,34 @@ namespace ns3
 		Log((log.str()).c_str());
 #endif
 
+
+
+        // Log results TransAID // Added by A Correa
+        std::ostringstream resultString;
+        resultString << "/NodeList/"
+                     << nodeId
+                     << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyTxDist";
+
+        Config::Connect (resultString.str (), MakeCallback( &iTETRISResults::LogPacketsTx,my_resultsManager) );
+
+        resultString.str("");
+
+        resultString << "/NodeList/"
+                     << nodeId
+                     << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
+
+         Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsRx,my_resultsManager) );
+        //
+
+
+
 		writeStatusCmd(CMD_CREATENODE, RTYPE_OK, "CreateNode()");
 		myOutputStorage.writeUnsignedByte(1 + 1 + 4);
 		myOutputStorage.writeUnsignedByte(CMD_CREATENODE);
 		myOutputStorage.writeInt(nodeId);
+
+
+
 
 		return success;
 	}
@@ -467,6 +529,24 @@ namespace ns3
 		log<< "ns-3 server --> Node with ID "<< nodeId<<" created successfully in Position "<<x<<" "<<y<< endl;
 		Log((log.str()).c_str());
 #endif
+
+        // Log results TransAID // Added by A Correa
+        std::ostringstream resultString;
+        resultString << "/NodeList/"
+                     << nodeId
+                     << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyTxDist";
+
+        Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsTx,my_resultsManager) );
+
+        resultString.str("");
+
+        resultString << "/NodeList/"
+                     << nodeId
+                     << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
+
+       Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsRx,my_resultsManager) );
+
+        //
 
 		writeStatusCmd(CMD_CREATENODE2, RTYPE_OK, "CreateNode2()");
 
@@ -805,6 +885,9 @@ namespace ns3
 
 	bool Ns3Server::Close()
 	{
+
+
+
 		closeConnection_ = true;
 		writeStatusCmd(CMD_CLOSE, RTYPE_OK, "Close()");
 		return true;
@@ -1181,6 +1264,11 @@ bool Ns3Server::StartIpCiuTxon(void)
 						<< NanoSeconds(msgb->time * 1000000).GetSeconds() << " From " << msgb->senderIdCollection[0]);
 		Simulator::Schedule(NanoSeconds(msgb->time * 1000000) - Simulator::Now(), &MessageSchedule::DoInvoke, msgb);
 		writeStatusCmd(CMD_START_GEO_BROAD_TXON, RTYPE_OK, "StartGeobroadcastTxon ()");
+
+        //std::string s( msgb->genericContainer.begin(), msgb->genericContainer.end() );
+
+		//std::cout << "Content of the generic container " << s  << " size " << msgb->genericContainer.size()  << std::endl;
+
 		return true;
 	}
 

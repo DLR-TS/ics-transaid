@@ -99,6 +99,7 @@ int main(int argc, char **argv)
                                      "getSUMOStepLength", "testMobility", "testTrajectory", "testToC",
                                      "testOpenGap", "testV2XmsgSet", "TMCBehaviour", "TMCBehaviour_multiRSU","testMessageScheduler"});
 
+
     // start-up
     Console::Log("Starting iTetris test app");
     if (ProgramConfiguration::LoadConfiguration(configFile, port) == EXIT_FAILURE)

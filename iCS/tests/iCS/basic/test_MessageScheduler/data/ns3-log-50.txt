@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1.25 Collision node 0 RX -85.9734
 1.25 Collision node 2 TX -95.0043
 1.25 Collision node 1 TX -95.0043
@@ -100,3 +101,11 @@
 17.75 Collision node 0 RX -86.5624
 17.75 Collision node 2 TX -94.4241
 17.75 Collision node 1 TX -94.4241
+=======
+1.25 Collision node 0 TX -85.9734
+1.25 Collision node 0 TX -85.9734
+1.25 Collision node 1 TX -85.9734
+1.25 Collision node 2 TX -85.9734
+1.25 Collision node 2 TX -95.0043
+1.25 Collision node 1 TX -95.0043
+>>>>>>> transaid-comms

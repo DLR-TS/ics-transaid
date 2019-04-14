@@ -1,0 +1,1361 @@
+[2019-04-12T19:13:50.582] [0,000] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.582] [0,000] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.582] [0,000] Tics=0 MsgQueue=0
+[2019-04-12T19:13:50.582] [0,000] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.582] [0,000] [INFO] Message Sent...
+[2019-04-12T19:13:50.583] [0,000] [INFO] Message Received.
+[2019-04-12T19:13:50.583] [0,000] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.583] [0,000] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.583] [0,000] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.583] [0,000] [INFO] RunOneSumoTimeStep() Skipping SUMO simulation step since the current iCS time is less than the next traffic simulator time.
+[2019-04-12T19:13:50.583] [0,000] [INFO] .. Command acknowledged (162), [description: ]
+
+[2019-04-12T19:13:50.584] [0,000] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 0 
+[2019-04-12T19:13:50.584] [0,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.584] [0,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.584] [0,000] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.584] [0,000] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.584] [0,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.584] [0,000] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.584] [0,000] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.584] [0,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.584] [0,000] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.584] [0,000] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.584] [0,000] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.584] [0,000] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.584] [0,000] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.584] [0,000] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.584] [0,000] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.585] [0,000] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.585] [0,000] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.585] [0,000] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.585] [0,000] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.585] [0,050] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.585] [0,050] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.585] [0,050] Tics=50 StepT=3 ns3T=2 %ns3=66.6667 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.585] [0,050] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.585] [0,050] [INFO] Message Sent...
+[2019-04-12T19:13:50.585] [0,050] [INFO] Message Received.
+[2019-04-12T19:13:50.585] [0,050] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.586] [0,050] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.586] [0,050] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.586] [0,050] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 50 
+[2019-04-12T19:13:50.586] [0,050] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.586] [0,050] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.586] [0,050] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.586] [0,050] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.586] [0,050] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.586] [0,050] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.586] [0,050] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.586] [0,050] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.586] [0,050] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.586] [0,050] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.586] [0,050] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.586] [0,050] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.586] [0,050] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.586] [0,050] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.586] [0,050] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.586] [0,050] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.587] [0,050] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.587] [0,050] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.587] [0,050] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.587] [0,100] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.587] [0,100] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.587] [0,100] Tics=100 StepT=2 ns3T=1 %ns3=50 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.587] [0,100] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.587] [0,100] [INFO] Message Sent...
+[2019-04-12T19:13:50.587] [0,100] [INFO] Message Received.
+[2019-04-12T19:13:50.587] [0,100] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.587] [0,100] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.587] [0,100] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.587] [0,100] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 100 
+[2019-04-12T19:13:50.587] [0,100] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.587] [0,100] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.587] [0,100] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.587] [0,100] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.587] [0,100] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.587] [0,100] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.587] [0,100] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.587] [0,100] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.588] [0,100] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.588] [0,100] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.588] [0,100] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.588] [0,100] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.588] [0,100] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.588] [0,100] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.588] [0,100] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.588] [0,100] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.588] [0,100] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.588] [0,100] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.588] [0,100] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.588] [0,150] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.588] [0,150] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.588] [0,150] Tics=150 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.588] [0,150] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.588] [0,150] [INFO] Message Sent...
+[2019-04-12T19:13:50.588] [0,150] [INFO] Message Received.
+[2019-04-12T19:13:50.588] [0,150] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.588] [0,150] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.588] [0,150] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.588] [0,150] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 150 
+[2019-04-12T19:13:50.589] [0,150] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.589] [0,150] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.589] [0,150] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.589] [0,150] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.589] [0,150] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.589] [0,150] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.589] [0,150] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.589] [0,150] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.589] [0,150] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.589] [0,150] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.589] [0,150] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.589] [0,150] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.589] [0,150] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.589] [0,150] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.589] [0,150] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.589] [0,150] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.589] [0,150] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.589] [0,150] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.589] [0,150] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.589] [0,200] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.589] [0,200] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.589] [0,200] Tics=200 StepT=2 ns3T=1 %ns3=50 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.589] [0,200] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.589] [0,200] [INFO] Message Sent...
+[2019-04-12T19:13:50.590] [0,200] [INFO] Message Received.
+[2019-04-12T19:13:50.590] [0,200] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.590] [0,200] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.590] [0,200] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.590] [0,200] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 200 
+[2019-04-12T19:13:50.590] [0,200] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.590] [0,200] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.590] [0,200] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.590] [0,200] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.590] [0,200] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.590] [0,200] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.590] [0,200] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.590] [0,200] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.590] [0,200] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.590] [0,200] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.590] [0,200] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.590] [0,200] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.590] [0,200] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.590] [0,200] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.590] [0,200] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.590] [0,200] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.590] [0,200] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.590] [0,200] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.590] [0,200] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.590] [0,250] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.590] [0,250] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.590] [0,250] Tics=250 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.590] [0,250] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.591] [0,250] [INFO] Message Sent...
+[2019-04-12T19:13:50.591] [0,250] [INFO] Message Received.
+[2019-04-12T19:13:50.591] [0,250] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.591] [0,250] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.591] [0,250] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.591] [0,250] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 250 
+[2019-04-12T19:13:50.591] [0,250] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.591] [0,250] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.591] [0,250] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.591] [0,250] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.591] [0,250] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.591] [0,250] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.591] [0,250] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.591] [0,250] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.591] [0,250] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.591] [0,250] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.591] [0,250] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.591] [0,250] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.591] [0,250] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.591] [0,250] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.591] [0,250] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.591] [0,250] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.592] [0,250] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.592] [0,250] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.592] [0,250] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.592] [0,300] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.592] [0,300] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.592] [0,300] Tics=300 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.592] [0,300] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.592] [0,300] [INFO] Message Sent...
+[2019-04-12T19:13:50.592] [0,300] [INFO] Message Received.
+[2019-04-12T19:13:50.592] [0,300] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.592] [0,300] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.592] [0,300] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.592] [0,300] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 300 
+[2019-04-12T19:13:50.592] [0,300] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.592] [0,300] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.592] [0,300] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.592] [0,300] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.592] [0,300] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.592] [0,300] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.592] [0,300] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.592] [0,300] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.592] [0,300] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.592] [0,300] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.592] [0,300] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.592] [0,300] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.592] [0,300] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.592] [0,300] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.592] [0,300] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.592] [0,300] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.592] [0,300] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.592] [0,300] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.592] [0,300] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.592] [0,350] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.592] [0,350] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.592] [0,350] Tics=350 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.592] [0,350] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.592] [0,350] [INFO] Message Sent...
+[2019-04-12T19:13:50.592] [0,350] [INFO] Message Received.
+[2019-04-12T19:13:50.593] [0,350] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.593] [0,350] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.593] [0,350] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.593] [0,350] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 350 
+[2019-04-12T19:13:50.593] [0,350] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.593] [0,350] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.593] [0,350] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.593] [0,350] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.593] [0,350] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.593] [0,350] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.593] [0,350] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.593] [0,350] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.593] [0,350] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.593] [0,350] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.593] [0,350] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.593] [0,350] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.593] [0,350] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.593] [0,350] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.593] [0,350] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.593] [0,350] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.593] [0,350] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.593] [0,350] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.593] [0,350] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.593] [0,400] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.593] [0,400] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.593] [0,400] Tics=400 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.593] [0,400] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.593] [0,400] [INFO] Message Sent...
+[2019-04-12T19:13:50.593] [0,400] [INFO] Message Received.
+[2019-04-12T19:13:50.593] [0,400] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.593] [0,400] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.593] [0,400] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.593] [0,400] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 400 
+[2019-04-12T19:13:50.593] [0,400] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.593] [0,400] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.593] [0,400] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.593] [0,400] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.593] [0,400] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.594] [0,400] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.594] [0,400] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.594] [0,400] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.594] [0,400] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.594] [0,400] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.594] [0,400] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.594] [0,400] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.594] [0,400] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.594] [0,400] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.594] [0,400] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.594] [0,400] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.594] [0,400] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.594] [0,400] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.594] [0,400] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.594] [0,450] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.594] [0,450] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.594] [0,450] Tics=450 StepT=0 ns3T=0 %ns3=-nan DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.594] [0,450] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.594] [0,450] [INFO] Message Sent...
+[2019-04-12T19:13:50.594] [0,450] [INFO] Message Received.
+[2019-04-12T19:13:50.594] [0,450] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.594] [0,450] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.594] [0,450] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.594] [0,450] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 450 
+[2019-04-12T19:13:50.594] [0,450] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.594] [0,450] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.594] [0,450] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.594] [0,450] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.594] [0,450] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.594] [0,450] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.594] [0,450] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.594] [0,450] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.594] [0,450] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.594] [0,450] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.594] [0,450] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.594] [0,450] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.594] [0,450] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.594] [0,450] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.594] [0,450] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.594] [0,450] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.594] [0,450] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.594] [0,450] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.594] [0,450] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.594] [0,500] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.594] [0,500] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.595] [0,500] Tics=500 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.595] [0,500] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.595] [0,500] [INFO] Message Sent...
+[2019-04-12T19:13:50.595] [0,500] [INFO] Message Received.
+[2019-04-12T19:13:50.595] [0,500] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.595] [0,500] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.595] [0,500] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.595] [0,500] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 500 
+[2019-04-12T19:13:50.595] [0,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.595] [0,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.595] [0,500] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.595] [0,500] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.595] [0,500] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.595] [0,500] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.595] [0,500] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.595] [0,500] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.595] [0,500] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.595] [0,500] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.595] [0,500] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.595] [0,500] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.595] [0,500] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.595] [0,500] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.595] [0,500] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.595] [0,500] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.595] [0,500] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.595] [0,500] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.595] [0,500] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.595] [0,550] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.595] [0,550] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.595] [0,550] Tics=550 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.595] [0,550] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.595] [0,550] [INFO] Message Sent...
+[2019-04-12T19:13:50.595] [0,550] [INFO] Message Received.
+[2019-04-12T19:13:50.595] [0,550] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.595] [0,550] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.595] [0,550] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.595] [0,550] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 550 
+[2019-04-12T19:13:50.596] [0,550] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.596] [0,550] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.596] [0,550] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.596] [0,550] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.596] [0,550] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.596] [0,550] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.596] [0,550] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.596] [0,550] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.596] [0,550] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.596] [0,550] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.596] [0,550] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.596] [0,550] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.596] [0,550] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.596] [0,550] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.596] [0,550] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.596] [0,550] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.596] [0,550] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.596] [0,550] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.596] [0,550] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.596] [0,600] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.596] [0,600] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.596] [0,600] Tics=600 StepT=0 ns3T=0 %ns3=-nan DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.596] [0,600] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.596] [0,600] [INFO] Message Sent...
+[2019-04-12T19:13:50.596] [0,600] [INFO] Message Received.
+[2019-04-12T19:13:50.596] [0,600] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.596] [0,600] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.596] [0,600] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.596] [0,600] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 600 
+[2019-04-12T19:13:50.596] [0,600] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.596] [0,600] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.596] [0,600] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.596] [0,600] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.596] [0,600] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.596] [0,600] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.596] [0,600] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.596] [0,600] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.596] [0,600] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.596] [0,600] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.596] [0,600] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.596] [0,600] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.596] [0,600] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.596] [0,600] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.596] [0,600] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.596] [0,600] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.596] [0,600] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.596] [0,600] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.596] [0,600] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.596] [0,650] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.596] [0,650] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.596] [0,650] Tics=650 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.596] [0,650] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.596] [0,650] [INFO] Message Sent...
+[2019-04-12T19:13:50.597] [0,650] [INFO] Message Received.
+[2019-04-12T19:13:50.597] [0,650] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.597] [0,650] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.597] [0,650] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.597] [0,650] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 650 
+[2019-04-12T19:13:50.597] [0,650] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.597] [0,650] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.597] [0,650] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.597] [0,650] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.597] [0,650] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.597] [0,650] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.597] [0,650] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.597] [0,650] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.597] [0,650] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.597] [0,650] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.597] [0,650] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.597] [0,650] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.597] [0,650] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.597] [0,650] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.597] [0,650] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.597] [0,650] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.597] [0,650] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.597] [0,650] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.597] [0,650] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.597] [0,700] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.597] [0,700] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.597] [0,700] Tics=700 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.597] [0,700] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.597] [0,700] [INFO] Message Sent...
+[2019-04-12T19:13:50.597] [0,700] [INFO] Message Received.
+[2019-04-12T19:13:50.597] [0,700] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.597] [0,700] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.597] [0,700] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.597] [0,700] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 700 
+[2019-04-12T19:13:50.597] [0,700] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.597] [0,700] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.597] [0,700] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.598] [0,700] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.598] [0,700] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.598] [0,700] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.598] [0,700] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.598] [0,700] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.598] [0,700] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.598] [0,700] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.598] [0,700] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.598] [0,700] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.598] [0,700] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.598] [0,700] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.598] [0,700] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.598] [0,700] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.598] [0,700] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.598] [0,700] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.598] [0,700] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.598] [0,750] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.598] [0,750] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.598] [0,750] Tics=750 StepT=0 ns3T=0 %ns3=-nan DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.598] [0,750] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.598] [0,750] [INFO] Message Sent...
+[2019-04-12T19:13:50.598] [0,750] [INFO] Message Received.
+[2019-04-12T19:13:50.598] [0,750] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.598] [0,750] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.598] [0,750] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.598] [0,750] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 750 
+[2019-04-12T19:13:50.599] [0,750] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.599] [0,750] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.599] [0,750] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.599] [0,750] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.599] [0,750] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.599] [0,750] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.599] [0,750] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.599] [0,750] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.599] [0,750] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.599] [0,750] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.599] [0,750] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.599] [0,750] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.599] [0,750] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.599] [0,750] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.599] [0,750] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.599] [0,750] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.599] [0,750] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.599] [0,750] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.599] [0,750] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.599] [0,800] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.599] [0,800] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.599] [0,800] Tics=800 StepT=1 ns3T=1 %ns3=100 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.599] [0,800] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.599] [0,800] [INFO] Message Sent...
+[2019-04-12T19:13:50.599] [0,800] [INFO] Message Received.
+[2019-04-12T19:13:50.599] [0,800] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.599] [0,800] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.599] [0,800] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.599] [0,800] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 800 
+[2019-04-12T19:13:50.599] [0,800] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.599] [0,800] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.599] [0,800] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.599] [0,800] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.599] [0,800] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.599] [0,800] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.599] [0,800] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.599] [0,800] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.599] [0,800] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.599] [0,800] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.599] [0,800] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.599] [0,800] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.599] [0,800] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.599] [0,800] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.599] [0,800] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.599] [0,800] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.599] [0,800] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.600] [0,800] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.600] [0,800] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.600] [0,850] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.600] [0,850] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.600] [0,850] Tics=850 StepT=1 ns3T=1 %ns3=100 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.600] [0,850] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.600] [0,850] [INFO] Message Sent...
+[2019-04-12T19:13:50.600] [0,850] [INFO] Message Received.
+[2019-04-12T19:13:50.600] [0,850] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.600] [0,850] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.600] [0,850] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.600] [0,850] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 850 
+[2019-04-12T19:13:50.600] [0,850] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.600] [0,850] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.600] [0,850] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.600] [0,850] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.600] [0,850] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.600] [0,850] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.600] [0,850] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.600] [0,850] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.600] [0,850] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.600] [0,850] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.600] [0,850] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.600] [0,850] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.600] [0,850] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.600] [0,850] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.600] [0,850] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.600] [0,850] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.600] [0,850] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.600] [0,850] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.600] [0,850] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.600] [0,900] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.600] [0,900] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.600] [0,900] Tics=900 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.600] [0,900] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.600] [0,900] [INFO] Message Sent...
+[2019-04-12T19:13:50.600] [0,900] [INFO] Message Received.
+[2019-04-12T19:13:50.600] [0,900] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.601] [0,900] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.601] [0,900] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.601] [0,900] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 900 
+[2019-04-12T19:13:50.601] [0,900] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.601] [0,900] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.601] [0,900] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.601] [0,900] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.601] [0,900] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.601] [0,900] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.601] [0,900] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.601] [0,900] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.601] [0,900] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.601] [0,900] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.601] [0,900] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.601] [0,900] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.601] [0,900] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.601] [0,900] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.601] [0,900] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.601] [0,900] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.601] [0,900] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.601] [0,900] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.601] [0,900] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.601] [0,950] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.601] [0,950] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.601] [0,950] Tics=950 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.601] [0,950] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.601] [0,950] [INFO] Message Sent...
+[2019-04-12T19:13:50.601] [0,950] [INFO] Message Received.
+[2019-04-12T19:13:50.601] [0,950] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.601] [0,950] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.601] [0,950] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.601] [0,950] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 950 
+[2019-04-12T19:13:50.602] [0,950] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.602] [0,950] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.602] [0,950] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.602] [0,950] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.602] [0,950] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.602] [0,950] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.602] [0,950] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.602] [0,950] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.602] [0,950] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.602] [0,950] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.602] [0,950] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.602] [0,950] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.602] [0,950] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.602] [0,950] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.602] [0,950] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.602] [0,950] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.602] [0,950] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.602] [0,950] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.602] [0,950] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.602] [1,000] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.602] [1,000] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.602] [1,000] Tics=1000 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.602] [1,000] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.602] [1,000] [INFO] Message Sent...
+[2019-04-12T19:13:50.602] [1,000] [INFO] Message Received.
+[2019-04-12T19:13:50.602] [1,000] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.602] [1,000] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.602] [1,000] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.603] [1,000] [INFO] .. Command acknowledged (2), [description: ]
+
+[2019-04-12T19:13:50.603] [1,000] [INFO] RunOneSumoTimeStep() Number of vehicles that left the simulation: 0
+[2019-04-12T19:13:50.603] [1,000] [INFO] RunOneSumoTimeStep() Number of vehicles that entered the simulation: 0
+[2019-04-12T19:13:50.603] [1,000] [INFO] .. Command acknowledged (17), [description: ActivateNode()]
+
+[2019-04-12T19:13:50.603] [1,000] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1000 
+[2019-04-12T19:13:50.603] [1,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.603] [1,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.603] [1,000] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.603] [1,000] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.603] [1,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.603] [1,000] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.603] [1,000] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.603] [1,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.603] [1,000] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.603] [1,000] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.603] [1,000] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.603] [1,000] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.603] [1,000] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.603] [1,000] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.603] [1,000] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.603] [1,000] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.603] [1,000] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.603] [1,000] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.603] [1,000] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.603] [1,050] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.603] [1,050] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.603] [1,050] Tics=1050 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.603] [1,050] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.603] [1,050] [INFO] Message Sent...
+[2019-04-12T19:13:50.604] [1,050] [INFO] Message Received.
+[2019-04-12T19:13:50.604] [1,050] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.604] [1,050] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.604] [1,050] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.604] [1,050] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1050 
+[2019-04-12T19:13:50.604] [1,050] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.604] [1,050] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.604] [1,050] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.604] [1,050] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.604] [1,050] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.604] [1,050] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.604] [1,050] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.604] [1,050] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.604] [1,050] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.604] [1,050] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.604] [1,050] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.604] [1,050] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.604] [1,050] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.604] [1,050] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.604] [1,050] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.604] [1,050] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.604] [1,050] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.604] [1,050] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.604] [1,050] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.604] [1,100] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.604] [1,100] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.604] [1,100] Tics=1100 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.604] [1,100] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.604] [1,100] [INFO] Message Sent...
+[2019-04-12T19:13:50.604] [1,100] [INFO] Message Received.
+[2019-04-12T19:13:50.604] [1,100] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.604] [1,100] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.604] [1,100] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.604] [1,100] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1100 
+[2019-04-12T19:13:50.604] [1,100] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.604] [1,100] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.604] [1,100] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.604] [1,100] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.604] [1,100] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.604] [1,100] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.604] [1,100] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.604] [1,100] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.604] [1,100] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.604] [1,100] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.604] [1,100] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.604] [1,100] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.605] [1,100] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.605] [1,100] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.605] [1,100] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.605] [1,100] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.605] [1,100] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.605] [1,100] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.605] [1,100] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.605] [1,150] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.605] [1,150] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.605] [1,150] Tics=1150 StepT=0 ns3T=0 %ns3=-nan DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.605] [1,150] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.605] [1,150] [INFO] Message Sent...
+[2019-04-12T19:13:50.605] [1,150] [INFO] Message Received.
+[2019-04-12T19:13:50.605] [1,150] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.605] [1,150] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.605] [1,150] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.605] [1,150] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1150 
+[2019-04-12T19:13:50.605] [1,150] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.605] [1,150] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.605] [1,150] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.605] [1,150] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.605] [1,150] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.605] [1,150] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.605] [1,150] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.605] [1,150] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.605] [1,150] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.605] [1,150] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.605] [1,150] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.605] [1,150] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.605] [1,150] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.605] [1,150] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.605] [1,150] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.605] [1,150] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.605] [1,150] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.605] [1,150] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.605] [1,150] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.605] [1,200] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.605] [1,200] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.605] [1,200] Tics=1200 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.605] [1,200] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.605] [1,200] [INFO] Message Sent...
+[2019-04-12T19:13:50.605] [1,200] [INFO] Message Received.
+[2019-04-12T19:13:50.605] [1,200] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.605] [1,200] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.605] [1,200] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.605] [1,200] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1200 
+[2019-04-12T19:13:50.605] [1,200] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.605] [1,200] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.605] [1,200] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.605] [1,200] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.605] [1,200] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.605] [1,200] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.606] [1,200] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.606] [1,200] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.606] [1,200] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.606] [1,200] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.606] [1,200] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.606] [1,200] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.606] [1,200] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.606] [1,200] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.606] [1,200] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.606] [1,200] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.606] [1,200] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.606] [1,200] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.606] [1,200] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.606] [1,250] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.606] [1,250] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.606] [1,250] Tics=1250 StepT=0 ns3T=0 %ns3=-nan DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.606] [1,250] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.606] [1,250] [INFO] Message Sent...
+[2019-04-12T19:13:50.606] [1,250] [INFO] Message Received.
+[2019-04-12T19:13:50.606] [1,250] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.606] [1,250] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.606] [1,250] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.606] [1,250] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1250 
+[2019-04-12T19:13:50.606] [1,250] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.606] [1,250] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.606] [1,250] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.606] [1,250] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.606] [1,250] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.606] [1,250] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.606] [1,250] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.606] [1,250] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.606] [1,250] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.606] [1,250] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.606] [1,250] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.606] [1,250] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.606] [1,250] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.606] [1,250] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.606] [1,250] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.606] [1,250] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.606] [1,250] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.606] [1,250] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.606] [1,250] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.606] [1,300] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.606] [1,300] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.606] [1,300] Tics=1300 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.606] [1,300] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.606] [1,300] [INFO] Message Sent...
+[2019-04-12T19:13:50.606] [1,300] [INFO] Message Received.
+[2019-04-12T19:13:50.606] [1,300] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.606] [1,300] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.606] [1,300] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.606] [1,300] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1300 
+[2019-04-12T19:13:50.606] [1,300] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.607] [1,300] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.607] [1,300] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.607] [1,300] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.607] [1,300] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.607] [1,300] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.607] [1,300] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.607] [1,300] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.607] [1,300] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.607] [1,300] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.607] [1,300] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.607] [1,300] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.607] [1,300] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.607] [1,300] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.607] [1,300] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.607] [1,300] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.607] [1,300] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.607] [1,300] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.607] [1,300] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.607] [1,350] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.607] [1,350] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.607] [1,350] Tics=1350 StepT=0 ns3T=0 %ns3=-nan DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.607] [1,350] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.607] [1,350] [INFO] Message Sent...
+[2019-04-12T19:13:50.607] [1,350] [INFO] Message Received.
+[2019-04-12T19:13:50.607] [1,350] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.607] [1,350] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.607] [1,350] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.607] [1,350] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1350 
+[2019-04-12T19:13:50.607] [1,350] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.607] [1,350] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.607] [1,350] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.607] [1,350] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.607] [1,350] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.607] [1,350] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.607] [1,350] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.607] [1,350] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.607] [1,350] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.607] [1,350] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.607] [1,350] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.607] [1,350] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.607] [1,350] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.607] [1,350] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.607] [1,350] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.607] [1,350] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.607] [1,350] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.607] [1,350] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.607] [1,350] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.607] [1,400] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.607] [1,400] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.607] [1,400] Tics=1400 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.607] [1,400] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.607] [1,400] [INFO] Message Sent...
+[2019-04-12T19:13:50.607] [1,400] [INFO] Message Received.
+[2019-04-12T19:13:50.607] [1,400] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.607] [1,400] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.607] [1,400] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.607] [1,400] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1400 
+[2019-04-12T19:13:50.608] [1,400] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.608] [1,400] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.608] [1,400] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.608] [1,400] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.608] [1,400] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.608] [1,400] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.608] [1,400] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.608] [1,400] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.608] [1,400] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.608] [1,400] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.608] [1,400] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.608] [1,400] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.608] [1,400] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.608] [1,400] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.608] [1,400] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.608] [1,400] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.608] [1,400] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.608] [1,400] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.608] [1,400] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.608] [1,450] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.608] [1,450] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.608] [1,450] Tics=1450 StepT=0 ns3T=0 %ns3=-nan DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.608] [1,450] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.608] [1,450] [INFO] Message Sent...
+[2019-04-12T19:13:50.608] [1,450] [INFO] Message Received.
+[2019-04-12T19:13:50.608] [1,450] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.608] [1,450] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.608] [1,450] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.608] [1,450] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1450 
+[2019-04-12T19:13:50.608] [1,450] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.608] [1,450] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.608] [1,450] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.608] [1,450] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.608] [1,450] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.608] [1,450] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.608] [1,450] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.608] [1,450] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.608] [1,450] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.608] [1,450] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.608] [1,450] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.608] [1,450] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.608] [1,450] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.608] [1,450] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.608] [1,450] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.608] [1,450] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.608] [1,450] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.608] [1,450] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.608] [1,450] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.608] [1,500] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.608] [1,500] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.608] [1,500] Tics=1500 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.608] [1,500] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.608] [1,500] [INFO] Message Sent...
+[2019-04-12T19:13:50.608] [1,500] [INFO] Message Received.
+[2019-04-12T19:13:50.609] [1,500] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.609] [1,500] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.609] [1,500] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.609] [1,500] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1500 
+[2019-04-12T19:13:50.609] [1,500] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.609] [1,500] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.609] [1,500] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.609] [1,500] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.609] [1,500] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.609] [1,500] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.609] [1,500] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.609] [1,500] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.609] [1,500] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.609] [1,500] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.609] [1,500] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.609] [1,500] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.609] [1,500] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.609] [1,500] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.609] [1,500] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.609] [1,500] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.609] [1,500] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.609] [1,500] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.609] [1,500] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.609] [1,550] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.609] [1,550] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.609] [1,550] Tics=1550 StepT=0 ns3T=0 %ns3=-nan DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.609] [1,550] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.609] [1,550] [INFO] Message Sent...
+[2019-04-12T19:13:50.609] [1,550] [INFO] Message Received.
+[2019-04-12T19:13:50.609] [1,550] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.609] [1,550] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.609] [1,550] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.609] [1,550] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1550 
+[2019-04-12T19:13:50.609] [1,550] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.609] [1,550] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.609] [1,550] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.609] [1,550] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.609] [1,550] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.609] [1,550] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.609] [1,550] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.609] [1,550] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.609] [1,550] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.609] [1,550] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.609] [1,550] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.609] [1,550] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.609] [1,550] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.609] [1,550] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.609] [1,550] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.609] [1,550] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.609] [1,550] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.609] [1,550] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.609] [1,550] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.609] [1,600] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.609] [1,600] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.609] [1,600] Tics=1600 StepT=1 ns3T=1 %ns3=100 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.609] [1,600] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.610] [1,600] [INFO] Message Sent...
+[2019-04-12T19:13:50.610] [1,600] [INFO] Message Received.
+[2019-04-12T19:13:50.610] [1,600] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.610] [1,600] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.610] [1,600] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.610] [1,600] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1600 
+[2019-04-12T19:13:50.610] [1,600] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.610] [1,600] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.610] [1,600] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.610] [1,600] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.610] [1,600] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.610] [1,600] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.610] [1,600] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.610] [1,600] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.610] [1,600] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.610] [1,600] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.610] [1,600] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.610] [1,600] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.610] [1,600] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.610] [1,600] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.610] [1,600] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.610] [1,600] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.610] [1,600] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.610] [1,600] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.610] [1,600] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.610] [1,650] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.610] [1,650] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.610] [1,650] Tics=1650 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.610] [1,650] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.610] [1,650] [INFO] Message Sent...
+[2019-04-12T19:13:50.610] [1,650] [INFO] Message Received.
+[2019-04-12T19:13:50.610] [1,650] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.610] [1,650] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.610] [1,650] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.610] [1,650] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1650 
+[2019-04-12T19:13:50.610] [1,650] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.610] [1,650] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.610] [1,650] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.610] [1,650] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.610] [1,650] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.610] [1,650] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.610] [1,650] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.610] [1,650] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.610] [1,650] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.610] [1,650] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.610] [1,650] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.610] [1,650] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.610] [1,650] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.610] [1,650] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.610] [1,650] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.610] [1,650] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.610] [1,650] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.611] [1,650] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.611] [1,650] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.611] [1,700] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.611] [1,700] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.611] [1,700] Tics=1700 StepT=0 ns3T=0 %ns3=-nan DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.611] [1,700] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.611] [1,700] [INFO] Message Sent...
+[2019-04-12T19:13:50.611] [1,700] [INFO] Message Received.
+[2019-04-12T19:13:50.611] [1,700] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.611] [1,700] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.611] [1,700] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.611] [1,700] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1700 
+[2019-04-12T19:13:50.611] [1,700] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.611] [1,700] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.611] [1,700] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.611] [1,700] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.611] [1,700] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.611] [1,700] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.611] [1,700] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.611] [1,700] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.611] [1,700] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.611] [1,700] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.611] [1,700] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.611] [1,700] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.611] [1,700] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.611] [1,700] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.611] [1,700] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.611] [1,700] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.611] [1,700] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.611] [1,700] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.611] [1,700] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.611] [1,750] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.611] [1,750] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.611] [1,750] Tics=1750 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.611] [1,750] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.611] [1,750] [INFO] Message Sent...
+[2019-04-12T19:13:50.611] [1,750] [INFO] Message Received.
+[2019-04-12T19:13:50.611] [1,750] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.611] [1,750] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.611] [1,750] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.611] [1,750] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1750 
+[2019-04-12T19:13:50.611] [1,750] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.611] [1,750] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.611] [1,750] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.611] [1,750] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.611] [1,750] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.611] [1,750] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.611] [1,750] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.611] [1,750] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.611] [1,750] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.612] [1,750] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.612] [1,750] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.612] [1,750] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.612] [1,750] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.612] [1,750] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.612] [1,750] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.612] [1,750] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.612] [1,750] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.612] [1,750] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.612] [1,750] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.612] [1,800] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.612] [1,800] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.612] [1,800] Tics=1800 StepT=0 ns3T=0 %ns3=-nan DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.612] [1,800] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.612] [1,800] [INFO] Message Sent...
+[2019-04-12T19:13:50.612] [1,800] [INFO] Message Received.
+[2019-04-12T19:13:50.612] [1,800] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.612] [1,800] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.612] [1,800] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.612] [1,800] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1800 
+[2019-04-12T19:13:50.612] [1,800] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.612] [1,800] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.612] [1,800] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.612] [1,800] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.612] [1,800] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.612] [1,800] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.612] [1,800] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.612] [1,800] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.612] [1,800] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.612] [1,800] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.612] [1,800] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.612] [1,800] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.612] [1,800] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.612] [1,800] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.612] [1,800] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.612] [1,800] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.612] [1,800] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.612] [1,800] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.612] [1,800] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.612] [1,850] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.612] [1,850] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.612] [1,850] Tics=1850 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.612] [1,850] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.612] [1,850] [INFO] Message Sent...
+[2019-04-12T19:13:50.612] [1,850] [INFO] Message Received.
+[2019-04-12T19:13:50.612] [1,850] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.612] [1,850] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.612] [1,850] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.612] [1,850] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1850 
+[2019-04-12T19:13:50.612] [1,850] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.612] [1,850] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.612] [1,850] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.612] [1,850] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.613] [1,850] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.613] [1,850] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.613] [1,850] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.613] [1,850] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.613] [1,850] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.613] [1,850] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.613] [1,850] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.613] [1,850] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.613] [1,850] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.613] [1,850] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.613] [1,850] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.613] [1,850] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.613] [1,850] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.613] [1,850] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.613] [1,850] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.613] [1,900] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.613] [1,900] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.613] [1,900] Tics=1900 StepT=0 ns3T=0 %ns3=-nan DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.613] [1,900] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.613] [1,900] [INFO] Message Sent...
+[2019-04-12T19:13:50.613] [1,900] [INFO] Message Received.
+[2019-04-12T19:13:50.613] [1,900] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.613] [1,900] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.613] [1,900] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.613] [1,900] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1900 
+[2019-04-12T19:13:50.613] [1,900] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.613] [1,900] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.613] [1,900] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.613] [1,900] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.613] [1,900] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.613] [1,900] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.613] [1,900] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.613] [1,900] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.613] [1,900] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.613] [1,900] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.613] [1,900] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.613] [1,900] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.613] [1,900] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.613] [1,900] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.613] [1,900] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.613] [1,900] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.613] [1,900] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.613] [1,900] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.613] [1,900] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.613] [1,950] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.613] [1,950] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.613] [1,950] Tics=1950 StepT=1 ns3T=0 %ns3=0 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.613] [1,950] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.613] [1,950] [INFO] Message Sent...
+[2019-04-12T19:13:50.613] [1,950] [INFO] Message Received.
+[2019-04-12T19:13:50.613] [1,950] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.613] [1,950] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.613] [1,950] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.613] [1,950] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 1950 
+[2019-04-12T19:13:50.614] [1,950] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.614] [1,950] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.614] [1,950] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.614] [1,950] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.614] [1,950] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.614] [1,950] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.614] [1,950] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.614] [1,950] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.614] [1,950] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.614] [1,950] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.614] [1,950] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.614] [1,950] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.614] [1,950] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.614] [1,950] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.614] [1,950] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.614] [1,950] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.614] [1,950] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.614] [1,950] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.614] [1,950] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.614] [2,000] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.614] [2,000] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 0, removed 0
+[2019-04-12T19:13:50.614] [2,000] Tics=2000 StepT=0 ns3T=0 %ns3=-nan DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.614] [2,000] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.614] [2,000] [INFO] Message Sent...
+[2019-04-12T19:13:50.614] [2,000] [INFO] Message Received.
+[2019-04-12T19:13:50.614] [2,000] [INFO] .. Command acknowledged (1), [description: RunSimStep()]
+
+[2019-04-12T19:13:50.614] [2,000] [INFO] .. Command acknowledged (23), [description: GetReceivedMessages()]
+
+[2019-04-12T19:13:50.614] [2,000] [INFO] [CommandGetAllReceivedMessages] 0 nodes received messages.
+[2019-04-12T19:13:50.614] [2,000] [INFO] .. Command acknowledged (2), [description: ]
+
+[2019-04-12T19:13:50.614] [2,000] [INFO] RunOneSumoTimeStep() Number of vehicles that left the simulation: 0
+[2019-04-12T19:13:50.614] [2,000] [INFO] RunOneSumoTimeStep() Number of vehicles that entered the simulation: 1
+[2019-04-12T19:13:50.614] [2,000] [INFO] VehicleNode() Created vehicle with iCS ID: 2
+[2019-04-12T19:13:50.614] [2,000] [INFO] RunOneSumoTimeStep() vehicle veh0  entered the simulation. Assigned iCS-ID 2
+[2019-04-12T19:13:50.614] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.614] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.615] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.615] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.615] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.615] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.615] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.615] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.618] [2,000] [INFO] .. Command acknowledged (19), [description: CreateNode2()]
+
+[2019-04-12T19:13:50.618] [2,000] [INFO] AddNode() Added node. icsId=2, ns3Id=1, sumoId=veh0. Assing=1
+[2019-04-12T19:13:50.618] [2,000] [INFO] iCS --> Notifying the application of the creation of node 2 at TS 2000
+[2019-04-12T19:13:50.630] [2,000] [INFO] .. Command acknowledged (1), [description: Create node 2]
+[2019-04-12T19:13:50.630] [2,000] [INFO] .. Command acknowledged (17), [description: ActivateNode()]
+
+[2019-04-12T19:13:50.630] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.630] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.630] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.630] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.630] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.630] [2,000] [INFO] .. Command acknowledged (164), [description: ]
+
+[2019-04-12T19:13:50.630] [2,000] [INFO] iCS --> Asking new subscriptions to node 2 at TS 2000 
+[2019-04-12T19:13:50.630] [2,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 2]
+[2019-04-12T19:13:50.630] [2,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x11
+[2019-04-12T19:13:50.630] [2,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() Subscribed to Set CAM Area 0 0 170
+[2019-04-12T19:13:50.630] [2,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() Subscribed to Set CAM Area 0 0 170 New subscription ID is 3.
+[2019-04-12T19:13:50.631] [2,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 2]
+[2019-04-12T19:13:50.631] [2,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x18
+[2019-04-12T19:13:50.631] [2,000] [INFO] CommandGetNewSubscriptions() Station 2 subscribed to get information about the received CAM messages.
+[2019-04-12T19:13:50.631] [2,000] [INFO] CommandGetNewSubscriptions() Station 2 subscribed to get information about the received CAM messages. New subscription ID is 4.
+[2019-04-12T19:13:50.631] [2,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 2]
+[2019-04-12T19:13:50.631] [2,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.631] [2,000] [INFO] CommandGetNewSubscriptions() No more requests from node 2
+[2019-04-12T19:13:50.631] [2,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 3
+[2019-04-12T19:13:50.631] [2,000] [INFO] .. Command acknowledged (8), [description: Subscription 3 kept]
+[2019-04-12T19:13:50.631] [2,000] [INFO] AskForUnsubscriptions() subscription 3 in node [iCS-ID] [2] is alive.
+[2019-04-12T19:13:50.631] [2,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 4
+[2019-04-12T19:13:50.631] [2,000] [INFO] .. Command acknowledged (8), [description: Subscription 4 kept]
+[2019-04-12T19:13:50.631] [2,000] [INFO] AskForUnsubscriptions() subscription 4 in node [iCS-ID] [2] is alive.
+[2019-04-12T19:13:50.631] [2,000] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [2] getting facilities data.
+[2019-04-12T19:13:50.631] [2,000] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.631] [2,000] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 2 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.631] [2,000] [INFO] [INFO] SendSubscribedData() Node 2 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.631] [2,000] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.631] [2,000] [INFO] iCS --> executing application (node 2)
+[2019-04-12T19:13:50.631] [2,000] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.631] [2,000] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 2
+[2019-04-12T19:13:50.631] [2,000] [INFO] iCS --> Asking new subscriptions to node 5000 at TS 2000 
+[2019-04-12T19:13:50.631] [2,000] [INFO] .. Command acknowledged (10), [description: Ask For Subscription node 5000]
+[2019-04-12T19:13:50.631] [2,000] [INFO] [INFO] AppMessageManager::CommandGetNewSubscriptions() subscription code is 0x0b
+[2019-04-12T19:13:50.631] [2,000] [INFO] CommandGetNewSubscriptions() No more requests from node 5000
+[2019-04-12T19:13:50.631] [2,000] [INFO] iCS --> NewSubscriptions() The node 5000 requested 0 subscriptions
+[2019-04-12T19:13:50.631] [2,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 1
+[2019-04-12T19:13:50.631] [2,000] [INFO] .. Command acknowledged (8), [description: Subscription 1 kept]
+[2019-04-12T19:13:50.631] [2,000] [INFO] AskForUnsubscriptions() subscription 1 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.631] [2,000] [INFO] AppMessageManager::CommandUnsubcribe - ### Subscription id 2
+[2019-04-12T19:13:50.631] [2,000] [INFO] .. Command acknowledged (8), [description: Subscription 2 kept]
+[2019-04-12T19:13:50.631] [2,000] [INFO] AskForUnsubscriptions() subscription 2 in node [iCS-ID] [5000] is alive.
+[2019-04-12T19:13:50.631] [2,000] [INFO] ForwardSubscribedDataToApplication() subscription in node [iCS-ID] [5000] getting facilities data.
+[2019-04-12T19:13:50.631] [2,000] [INFO] SendSubscribedData() SubsSetCamArea does not inform about anything.
+[2019-04-12T19:13:50.631] [2,000] [INFO] [INFO] getInformationFromLastReceivedCAMs() - NodeID: 5000 -> #Rec CAMs: 0 |
+[2019-04-12T19:13:50.631] [2,000] [INFO] [INFO] SendSubscribedData() Node 5000 did not receive CAM messages in the last time step.
+[2019-04-12T19:13:50.631] [2,000] [INFO] SendMessageStatus() The application does not send message status.
+[2019-04-12T19:13:50.631] [2,000] [INFO] iCS --> executing application (node 5000)
+[2019-04-12T19:13:50.631] [2,000] [INFO] .. Command acknowledged (6), [description: CMD_NOTIFY_APP_EXECUTE]
+[2019-04-12T19:13:50.631] [2,000] [INFO] ResultGeneric::ProcessResult() The application did NOT execute in the station: 5000
+[2019-04-12T19:13:50.631] [2,000] [INFO] iCS --> [ProcessApplicationResults] on node 2 (SUMO-id veh0) NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.631] [2,000] [INFO] iCS --> [ProcessApplicationResults] on node 5000 NO RESULTS TO PROCESS
+[2019-04-12T19:13:50.632] [2,000] [INFO] .. Command acknowledged (5), [description: StartSendingCam()]
+
+[2019-04-12T19:13:50.632] [2,000] [INFO] [INFO] ScheduleV2xCamAreaMessages() create and store cams for node: 2
+[2019-04-12T19:13:50.662] [2,000] [INFO] LDMLogic::storePayload: 000000000200000
+[2019-04-12T19:13:50.662] [2,000] [INFO] [facilities] - createCAMpayload() - station: 2 | actionID: 000000000200000
+[2019-04-12T19:13:50.662] [2,000] [INFO] [INFO] ScheduleV2xCamAreaMessages() create and store cams for node: 5000
+[2019-04-12T19:13:50.662] [2,000] [INFO] LDMLogic::storePayload: 000000500000000
+[2019-04-12T19:13:50.662] [2,000] [INFO] [facilities] - createCAMpayload() - station: 5000 | actionID: 000000500000000
+[2019-04-12T19:13:50.662] [2,050] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 0
+[2019-04-12T19:13:50.662] [2,050] [INFO] [LDMLogic::cleanup] IFMT size 0, removed 0. IFPT size 2, removed 0
+[2019-04-12T19:13:50.663] [2,050] Tics=2050 StepT=49 ns3T=1 %ns3=2.04082 DispMsgs=0 MsgQueue=0
+[2019-04-12T19:13:50.663] [2,050] [INFO] Reached CommandSimulationStep... = 
+[2019-04-12T19:13:50.663] [2,050] [INFO] Message Sent...

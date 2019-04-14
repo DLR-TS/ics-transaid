@@ -36,6 +36,7 @@
 #include "ns3/iTETRISNodeManager.h"
 #include "ns3/packet-manager.h" 
 #include <fstream>
+#include "ns3/iTETRIS-Results.h"
 
 namespace ns3
 {
@@ -73,8 +74,22 @@ class Ns3Server
     static int targetTime_;
     static bool Log(const char* message);
     static bool logActive_;
-    
-  private:
+
+    // Log Results TransAID // Added by A Correa
+    iTETRISResults * my_resultsManager;
+    static std::ofstream outfileLogPacketsPDR;
+    static std::ofstream outfileLogPacketsPDRCAM;
+    static std::ofstream outfileLogPacketsPDRCPM;
+    static std::ofstream outfileLogPacketsPDRMCM;
+    //static std::ofstream outfileLogPacketsTx;
+    static std::ofstream outfileLogNAR;
+    static std::ofstream outfileLogNIR;
+    static std::ofstream outfileLogLatency;
+    //
+
+
+
+private:
     static std::string CAM_TYPE; 
     static std::string DNEM_TYPE;
     int dispatchCommand();
@@ -178,10 +193,11 @@ class Ns3Server
      */
     bool DeactivateNode (void);
 
-    /** 
-     * @brief Pointer to iTETRISNodeManager object which is responsible for the creation, the initial placement, and the position updates of the nodes in ns-3
-     */
-    iTETRISNodeManager *my_nodeManagerPtr; 
+    /**
+ * @brief Pointer to iTETRISNodeManager object which is responsible for the creation, the initial placement, and the position updates of the nodes in ns-3
+ */
+    iTETRISNodeManager *my_nodeManagerPtr; // Made public by A Correa
+
 
     /** 
      * @brief Pointer to PacketManager object which is responsible for the the activation and deactivation of packet transmissions in ns-3
@@ -191,6 +207,7 @@ class Ns3Server
     std::string Int2String (int n);
 
     std::string Double2String (double n);
+
 
 };
 

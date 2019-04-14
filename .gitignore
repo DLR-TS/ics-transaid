@@ -80,4 +80,7 @@ iCS/tests/iCS/**/data/*.csv
 CMakeLists.txt
 cmake-build-debug/
 **/cmake-build-debug/
+<<<<<<< HEAD
 
+=======
+>>>>>>> transaid-comms

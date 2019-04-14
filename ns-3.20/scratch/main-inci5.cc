@@ -35,7 +35,7 @@
 #include "ns3/internet-module.h"
 #include "ns3/inci-module.h"
 #include "ns3/mobility-module.h"
-#include "ns3/inci-utils-module.h" 
+#include "ns3/inci-utils-module.h"
 #include <exception>
 
 using namespace ns3;
@@ -105,7 +105,7 @@ int main (int argc, char *argv[])
 
   cmd.Parse (argc, argv);
 
- 
+
   if (fileGeneralParameters != "")
     {
       Config::SetDefault ("ns3::ConfigStore::Filename", StringValue (fileGeneralParameters));
@@ -128,10 +128,12 @@ int main (int argc, char *argv[])
   packetManager->SetNodeManager (nodeManager);
   confManager.ReadFile(nodeManager);
   SeedManager::SetSeed (confManager.GetSeed());  
-  SeedManager::SetRun (confManager.GetRunNumber()); 
+  SeedManager::SetRun (confManager.GetRunNumber());
 
 
   loadOptionFile();
+
+
 
   try {
     ns3::Ns3Server::processCommandsUntilSimStep(port, logFile, nodeManager, packetManager); 
@@ -140,7 +142,8 @@ int main (int argc, char *argv[])
     std::cout << "Exiting... " << std::endl;
     return 0;
   }
-  
+
+
   Simulator::Destroy ();
   
   return 0;

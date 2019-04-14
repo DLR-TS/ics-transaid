@@ -55,46 +55,46 @@ namespace baseapp
 		}
 
 // TransaidHeader
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, CamInfo * message):
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, CamInfo * message, int msgSize):
                 m_camInfo(message), m_denmInfo(nullptr), m_cpmInfo(nullptr),
                 m_mapInfo(nullptr), m_mcmRsuInfo(nullptr), m_mcmVehicleInfo(nullptr), m_iviInfo(nullptr),
-				m_protocolId(pid), m_messageType(msgType)
+				m_protocolId(pid), m_messageType(msgType), m_realMessageSize(msgSize)
 				{};
 
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, DenmInfo * message):
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, DenmInfo * message, int msgSize):
                 m_camInfo(nullptr), m_denmInfo(message), m_cpmInfo(nullptr),
                 m_mapInfo(nullptr), m_mcmRsuInfo(nullptr), m_mcmVehicleInfo(nullptr), m_iviInfo(nullptr),
-				m_protocolId(pid), m_messageType(msgType)
+				m_protocolId(pid), m_messageType(msgType), m_realMessageSize(msgSize)
 				{};
 
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, CpmInfo * message):
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, CpmInfo * message, int msgSize):
                 m_camInfo(nullptr), m_denmInfo(nullptr), m_cpmInfo(message),
                 m_mapInfo(nullptr), m_mcmRsuInfo(nullptr), m_mcmVehicleInfo(nullptr), m_iviInfo(nullptr),
-				m_protocolId(pid), m_messageType(msgType)
+				m_protocolId(pid), m_messageType(msgType), m_realMessageSize(msgSize)
 				{};
 
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, MapInfo * message):
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, MapInfo * message, int msgSize):
                 m_camInfo(nullptr), m_denmInfo(nullptr), m_cpmInfo(nullptr),
                 m_mapInfo(message), m_mcmRsuInfo(nullptr), m_mcmVehicleInfo(nullptr), m_iviInfo(nullptr),
-				m_protocolId(pid), m_messageType(msgType)
+				m_protocolId(pid), m_messageType(msgType), m_realMessageSize(msgSize)
 				{};
 
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, McmVehicleInfo * message):
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, McmVehicleInfo * message, int msgSize):
                 m_camInfo(nullptr), m_denmInfo(nullptr), m_cpmInfo(nullptr),
                 m_mapInfo(nullptr), m_mcmRsuInfo(nullptr), m_mcmVehicleInfo(message), m_iviInfo(nullptr),
-				m_protocolId(pid), m_messageType(msgType)
+				m_protocolId(pid), m_messageType(msgType), m_realMessageSize(msgSize)
 				{};
 
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, McmRsuInfo * message):
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, McmRsuInfo * message, int msgSize):
                 m_camInfo(nullptr), m_denmInfo(nullptr), m_cpmInfo(nullptr),
                 m_mapInfo(nullptr), m_mcmRsuInfo(message), m_mcmVehicleInfo(nullptr), m_iviInfo(nullptr),
-				m_protocolId(pid), m_messageType(msgType)
+				m_protocolId(pid), m_messageType(msgType), m_realMessageSize(msgSize)
 				{};
 
-		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, IviInfo * message):
+		TransaidHeader::TransaidHeader (ProtocolId pid, MessageType msgType, IviInfo * message, int msgSize):
                 m_camInfo(nullptr), m_denmInfo(nullptr), m_cpmInfo(nullptr),
                 m_mapInfo(nullptr), m_mcmRsuInfo(nullptr), m_mcmVehicleInfo(nullptr), m_iviInfo(message),
-				m_protocolId(pid), m_messageType(msgType)
+				m_protocolId(pid), m_messageType(msgType), m_realMessageSize(msgSize)
 				{};
 
 		TransaidHeader::~TransaidHeader() {
@@ -181,7 +181,9 @@ namespace baseapp
              return m_iviInfo;
          }
 
-
+        int TransaidHeader::getMessageRealSize() const {
+            return m_realMessageSize;
+        }
 
 // TestHeader
 		uint16_t TestHeader::maxResponseTime = 100;
@@ -274,6 +276,7 @@ namespace baseapp
 				os << " Id=All";
 			else
 				os << " Id=" << m_destinationId;
+			//os << " Message type " << m_messageType;
 		}
 
 ///BeaconHeader

@@ -83,6 +83,7 @@ def build(bld):
         'model/time-step-tag.cc',
         'model/TStep-sequence-number-tag.cc',
         'model/app-index-tag.cc',
+        'model/v2x-message-type-tag.cc',
 	'helper/c2c-interface-helper.cc',
 		# aggiunto, fa parte di itetris
 	'helper/c2c-interface-container.cc',
@@ -111,6 +112,7 @@ def build(bld):
         'model/time-step-tag.h',
         'model/TStep-sequence-number-tag.h',
         'model/app-index-tag.h',
+        'model/v2x-message-type-tag.h',
 	'helper/c2c-interface-helper.h',
 		# aggiunto, fa parte di itetris
 	'helper/c2c-interface-container.h',

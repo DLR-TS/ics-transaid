@@ -108,6 +108,12 @@ public:
                            WifiTxVector txVector,
                            WifiPreamble preamble);
 
+//Added by Goku
+    void StartReceivePacket (Ptr<Packet> packet,
+                             double rxPowerDbm,
+                             WifiTxVector txVector,
+                             WifiPreamble preamble, double distTxRx,uint32_t ID);
+
   /**
    * Sets the RX loss (dB) in the Signal-to-Noise-Ratio due to non-idealities in the receiver.
    *
@@ -458,6 +464,8 @@ private:
    * \param event the corresponding event of the first time the packet arrives
    */
   void EndReceive (Ptr<Packet> packet, Ptr<InterferenceHelper::Event> event);
+
+  void EndReceiveV2 (Ptr<Packet> packet, Ptr<InterferenceHelper::Event> event, double distTxRx, uint32_t ID); // Added by Goku
 
 private:
   double   m_edThresholdW;        //!< Energy detection threshold in watts

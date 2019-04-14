@@ -56,7 +56,8 @@ YansWifiChannel::GetTypeId (void)
 
 YansWifiChannel::YansWifiChannel ()
 : m_interferenceRangeVehicle (3000),
-  m_interferenceRangeCiu (5000)
+  m_interferenceRangeCiu (5000),
+  m_PDRDist(true) //Added by Goku
 {
 }
 YansWifiChannel::~YansWifiChannel ()
@@ -81,7 +82,13 @@ YansWifiChannel::Send (Ptr<YansWifiPhy> sender, Ptr<const Packet> packet, double
                        WifiTxVector txVector, WifiPreamble preamble) const
 {
   Ptr<MobilityModel> senderMobility = sender->GetMobility ()->GetObject<MobilityModel> ();
-  NS_ASSERT (senderMobility != 0);
+
+      //17-01-19 Added by Goku**********
+    uint32_t sendernodeId = senderMobility->GetObject<Node> ()->GetId ();
+    //********************************
+
+
+    NS_ASSERT (senderMobility != 0);
   uint32_t j = 0;
   for (PhyList::const_iterator i = m_phyList.begin (); i != m_phyList.end (); i++, j++)
     {
@@ -117,6 +124,7 @@ YansWifiChannel::Send (Ptr<YansWifiPhy> sender, Ptr<const Packet> packet, double
 				continue;
 			}
 		  }
+            double distanceTxRx = senderMobility->GetDistanceFrom(receiverMobility);//Added by Goku
 
           Time delay = m_delay->GetDelay (senderMobility, receiverMobility);
           double rxPowerDbm = m_loss->CalcRxPower (txPowerDbm, senderMobility, receiverMobility);
@@ -133,9 +141,27 @@ YansWifiChannel::Send (Ptr<YansWifiPhy> sender, Ptr<const Packet> packet, double
             {
               dstNode = dstNetDevice->GetObject<NetDevice> ()->GetNode ()->GetId ();
             }
-          Simulator::ScheduleWithContext (dstNode,
+
+            //Added by Goku
+            // To reduce the parameter passing crea a struct
+            struct Parameters parameters;
+            parameters.rxPowerDbm = rxPowerDbm;
+            parameters.txVector = txVector;
+            parameters.preamble = preamble;
+            parameters.distanceTxRx = distanceTxRx;
+            parameters.sendernodeId = sendernodeId;
+            NS_LOG_DEBUG("Receiving Node ID=" << dstNode);
+            //////////////////////////////////////
+            if(m_PDRDist==true){
+                Simulator::ScheduleWithContext(dstNode, delay, &YansWifiChannel::ReceiveV2, this, j, copy, parameters);
+            }else{
+                Simulator::ScheduleWithContext (dstNode,
+                                                delay, &YansWifiChannel::Receive, this,
+                                                j, copy, rxPowerDbm, txVector, preamble);
+            }
+         /* Simulator::ScheduleWithContext (dstNode,
                                           delay, &YansWifiChannel::Receive, this,
-                                          j, copy, rxPowerDbm, txVector, preamble);
+                                          j, copy, rxPowerDbm, txVector, preamble); */ // Commented by Goku
         }
     }
 }
@@ -146,6 +172,16 @@ YansWifiChannel::Receive (uint32_t i, Ptr<Packet> packet, double rxPowerDbm,
 {
   m_phyList[i]->StartReceivePacket (packet, rxPowerDbm, txVector, preamble);
 }
+
+//Added by Goku
+    void
+    YansWifiChannel::ReceiveV2(uint32_t i, Ptr<Packet> packet, struct Parameters parameters ) const {
+        NS_LOG_FUNCTION(this << i << packet);
+        m_phyList[i]->StartReceivePacket(packet, parameters.rxPowerDbm, parameters.txVector, parameters.preamble, parameters.distanceTxRx, parameters.sendernodeId);
+        //m_phyList[i]->GetDevice()->GetNode()->Get;
+    }
+    //
+
 
 uint32_t
 YansWifiChannel::GetNDevices (void) const

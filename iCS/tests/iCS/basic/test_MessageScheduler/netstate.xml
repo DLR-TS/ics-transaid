@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<<<<<<< HEAD
 <!-- generated on Tue Mar 26 13:05:29 2019 by Eclipse SUMO Version UNKNOWN
+=======
+<!-- generated on Tue Apr  9 17:46:30 2019 by Eclipse SUMO Version UNKNOWN
+>>>>>>> transaid-comms
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
@@ -26,7 +30,11 @@
     </report>
 
     <traci_server>
+<<<<<<< HEAD
         <remote-port value="48021"/>
+=======
+        <remote-port value="55897"/>
+>>>>>>> transaid-comms
     </traci_server>
 
     <gui_only>
@@ -167,6 +175,7 @@
             </lane>
         </edge>
     </timestep>
+<<<<<<< HEAD
     <timestep time="2.00">
         <edge id="EC">
             <lane id="EC_0">
@@ -2197,4 +2206,6 @@
     <timestep time="24.80"/>
     <timestep time="24.90"/>
     <timestep time="25.00"/>
+=======
+>>>>>>> transaid-comms
 </netstate>

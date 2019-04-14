@@ -204,9 +204,26 @@ namespace baseapp
 			oss << "[Node " << m_id << "] send to all. Key=" << key << ". Time=" << time;
 			Log::WriteLog(oss);
 			//Schedule the creation of the subscription.
-			m_toSubscribe.push(
-					SubscriptionHelper::SendGeobroadcast(m_id, payload->size(), messageCategory,
-							Circle(getPosition(), getPropagationRadius()), key, time));
+			// Variable message size for NS-3 (Size of the transmitted packet different from the size of the structure send)
+			// The application decides the size of the packet simulated in NS-3
+			if (messageCategory == 13) // MSGCAT_TRANSAID =13 , TransAID message category
+			{
+                application::TransaidHeader * header;
+
+                header = dynamic_cast<TransaidHeader*>(payload->getHeader(server::PAYLOAD_END));
+
+                int MessageSize = header->getMessageRealSize();
+
+                key += " " + to_string(header->getMessageType());
+
+                m_toSubscribe.push(
+                        SubscriptionHelper::SendGeobroadcast(m_id, MessageSize, messageCategory,
+                                                             Circle(getPosition(), getPropagationRadius()), key, time));
+			}else {
+                m_toSubscribe.push(
+                        SubscriptionHelper::SendGeobroadcast(m_id, payload->size(), messageCategory,
+                                                             Circle(getPosition(), getPropagationRadius()), key, time));
+            }
 		}
 
 		void Node::sendTo(const int destinationId, server::Payload * payload, double time, const int messageCategory)
