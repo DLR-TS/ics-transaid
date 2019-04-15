@@ -488,6 +488,7 @@ WifiPhy::NotifyTxEnd (Ptr<const Packet> packet)
     void
     WifiPhy::NotifyRxEndDist (Ptr<const Packet> packet, double distanceTxRx, uint32_t ID)
     {
+        NS_LOG_FUNCTION (this << packet << distanceTxRx << ID);
         m_phyRxEndTraceDist (packet, distanceTxRx, ID);
     }
 

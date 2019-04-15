@@ -71,6 +71,7 @@ namespace ns3
 		my_nodeManagerPtr = node_manager;
 		my_packetManagerPtr = packetManager;
 
+
 		// Log results TransAID
         outfileLogPacketsPDR.open("PDR.csv"); // Added by A Correa
         outfileLogPacketsPDRCAM.open("PDR_CAM.csv"); // Added by A Correa
@@ -421,10 +422,11 @@ namespace ns3
 		NS_LOG_INFO(Simulator::Now().GetSeconds() << " RunSimStep " << time);
 		targetTime_ = time;
 
+        my_resultsManager->LogAwarenessRatio(my_nodeManagerPtr->GetItetrisNodes()); // Added by A Correa
+
         Simulator::Stop(MilliSeconds(time) - Simulator::Now());
         Simulator::Run();
 
-        my_resultsManager->LogAwarenessRatio(my_nodeManagerPtr->GetItetrisNodes()); // Added by A Correa
 
         //Simulator::RunOneEvent();
         writeStatusCmd(CMD_SIMSTEP, RTYPE_OK, "RunSimStep()");
@@ -666,7 +668,6 @@ namespace ns3
 			uint32_t nodeId;
 			temp << cadena;
 			temp >> nodeId;
-
 			my_packetManagerPtr->ActivateCamTxon(nodeId, frequency, payloadLength, messageId);
 		}
 
@@ -679,6 +680,7 @@ namespace ns3
 			Log((log.str()).c_str());
 #endif
 		}
+
 
 		writeStatusCmd(CMD_START_CAM, RTYPE_OK, "StartSendingCam()");
 

@@ -205,7 +205,7 @@ CAMmanage::ScheduleTx (void)
 {
   if (m_running)
     {
-      m_dataRate = (m_packetSize * 8) * m_frequency;
+      m_dataRate = DataRate( ((m_packetSize * 8) * m_frequency ) ); // modified by A Correa, original ;: ((m_packetSize * 8) * m_frequency ) )
       Time tNext (Seconds (m_packetSize * 8 / static_cast<double> (m_dataRate.GetBitRate ())));
       m_sendEvent = Simulator::Schedule (tNext, &CAMmanage::SendPacket, this);
     }

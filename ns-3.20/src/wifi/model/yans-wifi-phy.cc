@@ -1166,15 +1166,14 @@ YansWifiPhy::EndReceive (Ptr<Packet> packet, Ptr<InterferenceHelper::Event> even
 
 ////////////////
 
+
         if (Random_Value > snrPer.per)
         {
             // CORRECT PACKET
             //goku To log the received packet with distance
             //Alex/Goku//////////////////////////////
 
-
             NotifyRxEndDist(packet, distTxRx, ID);
-
             //Alex//////////////////////////////
 
             NotifyRxEnd (packet); //Goku : it can be commented (optional)

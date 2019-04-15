@@ -122,14 +122,39 @@ namespace ns3
     void iTETRISResults::LogPacketsRx(std::string context, Ptr<const Packet> packet, double distanceTxRx, uint32_t sendernodeId){
 
 
+/*
         std::size_t posInit = context.find("/NodeList/");
         std::size_t posEnd = context.find("/DeviceList/");
         std::string strRx = context.substr (posInit+10, (posEnd-posInit-10));
+        int nodeRx = std::stoul(strRx);
+*/
 
-        int nodeRx = std::stoi(strRx);
+        char temp[3];
+        int j=0;
+        int count = 0;
+        int numbers[]= {1,10,100,1000};
+        int h =0;
+        for(int i = 10; i < 14; ++i)
+        {
+            if (((context[i] >= '0' && context[i]<='9') ))
+            {
+                temp[j] = context[i] ;
+                j++;
+                count ++;
+            }
+        }
+        for( int z = count-1, j= 0; z>=0; --z, ++j)
+        {
+            h= h + (numbers[z] * ( (temp[j]-'0')  ) ) ;
 
-        Ptr<MobilityModel> modelrx = m_TransAIDNodes.Get(nodeRx)->GetObject<MobilityModel>();
-        Ptr<MobilityModel> modeltx = m_TransAIDNodes.Get(sendernodeId)->GetObject<MobilityModel>();
+        }
+        int nodeRx = h;
+
+
+        if(m_TransAIDNodes.GetById(nodeRx)!=NULL){
+
+        Ptr<MobilityModel> modelrx = m_TransAIDNodes.GetById(nodeRx)->GetObject<MobilityModel>();
+        Ptr<MobilityModel> modeltx = m_TransAIDNodes.GetById(sendernodeId)->GetObject<MobilityModel>();
 
         if ( (modelrx->GetPosition().x > 0 && modelrx->GetPosition().x < 10000) && (modeltx->GetPosition().x > 0 && modeltx->GetPosition().x < 10000)  ) // TODO update the conditions of the border of the scenario
         {
@@ -255,10 +280,12 @@ namespace ns3
             ++m_LatencyData.countTotal;
 
         }
+        }else{
+            std::cout << "Node not found" << std::endl;
+        }
     }
 
     void iTETRISResults::LogAwarenessRatio(NodeContainer m_NodeContainer){
-
 
 
         m_TransAIDNodes = m_NodeContainer;
