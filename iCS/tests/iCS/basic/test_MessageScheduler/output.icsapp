@@ -7,27 +7,26 @@ iCS --> SUMO launched.
 iCS --> ns-3 launched.
 
 STEP 2 - SETUP PHASE
+Loading configuration... done.
 testApp -> Starting iTetris test app
-testApp -> [WARNING]Ignoring socket port specified in configuration. (Overridden by command line argument.)
-testApp -> Test case set to commSimple2
+testApp -> Test case set to testMessageScheduler
 testApp -> ParseGeneral done
 testApp -> ParseInfrastructure done
 testApp -> ParseSetup done
 testApp -> ParseOutput done
 testApp -> Load Configuration done
-Loading configuration... done.
 main-inci v 3.20
 ns3 -> No option file found. Must be named option.txt
 
 STEP 3 - SETUP PHASE
-iCS --> Trying 0 to connect SUMO on port 39987...
+iCS --> Trying 0 to connect SUMO on port 60277...
 iCS --> Connected to SUMO
 
-iCS --> Trying 0 to connect ns-3 on port 33561 and Host localhost...
+iCS --> Trying 0 to connect ns-3 on port 50053 and Host localhost...
 iCS --> Connected to ns-3
 
-iCS --> Trying 0 to connect Application on port 58371...
-testApp -> Server listening on port: 58371
+iCS --> Trying 0 to connect Application on port 1987...
+testApp -> Server listening on port: 1987
 iCS --> Application testApp connected.
 
 
@@ -220,6 +219,8 @@ STEP 9 - SIMULATION PHASE - Tics = 1050
 		============================================================
 STEP 5 - SIMULATION PHASE - Tics = 1100
 STEP 6 - SIMULATION PHASE - Tics = 1100
+Starting test Message Scheduler at Vehicle
+Starting test Message Scheduler at Vehicle
 STEP 7 - SIMULATION PHASE - Tics = 1100
 
 STEP 8 - SIMULATION PHASE - Tics = 1100
@@ -237,6 +238,10 @@ STEP 9 - SIMULATION PHASE - Tics = 1150
 STEP 5 - SIMULATION PHASE - Tics = 1200
 STEP 6 - SIMULATION PHASE - Tics = 1200
 STEP 7 - SIMULATION PHASE - Tics = 1200
+Received CPM at node 2  sender 5000 time 1100 Number OF Received Obstacles in the CPM 0 CPM Message Size 156
+Received MCM from a vehicle at node 2  sender 5000 time 1100 Message size 190
+Received CPM at node 3  sender 5000 time 1100 Number OF Received Obstacles in the CPM 0 CPM Message Size 156
+Received MCM from a vehicle at node 3  sender 5000 time 1100 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 1200
 STEP 9 - SIMULATION PHASE - Tics = 1200
@@ -253,6 +258,10 @@ STEP 9 - SIMULATION PHASE - Tics = 1250
 STEP 5 - SIMULATION PHASE - Tics = 1300
 STEP 6 - SIMULATION PHASE - Tics = 1300
 STEP 7 - SIMULATION PHASE - Tics = 1300
+Received CPM at node 5000  sender 3 time 1200 Number OF Received Obstacles in the CPM 0 CPM Message Size 156
+Received MCM at node 5000  sender 3 time 1200
+Received CPM at node 5000  sender 2 time 1200 Number OF Received Obstacles in the CPM 0 CPM Message Size 156
+Received MCM at node 5000  sender 2 time 1200
 
 STEP 8 - SIMULATION PHASE - Tics = 1300
 STEP 9 - SIMULATION PHASE - Tics = 1300
@@ -285,6 +294,8 @@ STEP 9 - SIMULATION PHASE - Tics = 1450
 STEP 5 - SIMULATION PHASE - Tics = 1500
 STEP 6 - SIMULATION PHASE - Tics = 1500
 STEP 7 - SIMULATION PHASE - Tics = 1500
+Received CPM at node 2  sender 5000 time 1400 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 1400 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 1500
 STEP 9 - SIMULATION PHASE - Tics = 1500
@@ -317,6 +328,8 @@ STEP 9 - SIMULATION PHASE - Tics = 1650
 STEP 5 - SIMULATION PHASE - Tics = 1700
 STEP 6 - SIMULATION PHASE - Tics = 1700
 STEP 7 - SIMULATION PHASE - Tics = 1700
+Received CPM at node 2  sender 5000 time 1600 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 1600 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 1700
 STEP 9 - SIMULATION PHASE - Tics = 1700
@@ -349,6 +362,8 @@ STEP 9 - SIMULATION PHASE - Tics = 1850
 STEP 5 - SIMULATION PHASE - Tics = 1900
 STEP 6 - SIMULATION PHASE - Tics = 1900
 STEP 7 - SIMULATION PHASE - Tics = 1900
+Received CPM at node 2  sender 5000 time 1800 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 1800 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 1900
 STEP 9 - SIMULATION PHASE - Tics = 1900
@@ -381,6 +396,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2050
 STEP 5 - SIMULATION PHASE - Tics = 2100
 STEP 6 - SIMULATION PHASE - Tics = 2100
 STEP 7 - SIMULATION PHASE - Tics = 2100
+Received CPM at node 2  sender 5000 time 2000 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 2000 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 2100
 STEP 9 - SIMULATION PHASE - Tics = 2100
@@ -397,6 +414,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2150
 STEP 5 - SIMULATION PHASE - Tics = 2200
 STEP 6 - SIMULATION PHASE - Tics = 2200
 STEP 7 - SIMULATION PHASE - Tics = 2200
+Received CAM at node 2  sender 5000 time 2100 position 0:0 speed 0 acceleration 0 Message size 190
+Received CAM at node 3  sender 5000 time 2100 position 0:0 speed 0 acceleration 0 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 2200
 STEP 9 - SIMULATION PHASE - Tics = 2200
@@ -413,6 +432,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2250
 STEP 5 - SIMULATION PHASE - Tics = 2300
 STEP 6 - SIMULATION PHASE - Tics = 2300
 STEP 7 - SIMULATION PHASE - Tics = 2300
+Received MCM from a vehicle at node 2  sender 5000 time 2200 Message size 190
+Received MCM from a vehicle at node 3  sender 5000 time 2200 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 2300
 STEP 9 - SIMULATION PHASE - Tics = 2300
@@ -445,6 +466,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2450
 STEP 5 - SIMULATION PHASE - Tics = 2500
 STEP 6 - SIMULATION PHASE - Tics = 2500
 STEP 7 - SIMULATION PHASE - Tics = 2500
+Received CPM at node 2  sender 5000 time 2400 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 2400 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 2500
 STEP 9 - SIMULATION PHASE - Tics = 2500
@@ -477,6 +500,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2650
 STEP 5 - SIMULATION PHASE - Tics = 2700
 STEP 6 - SIMULATION PHASE - Tics = 2700
 STEP 7 - SIMULATION PHASE - Tics = 2700
+Received CPM at node 2  sender 5000 time 2600 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 2600 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 2700
 STEP 9 - SIMULATION PHASE - Tics = 2700
@@ -509,6 +534,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2850
 STEP 5 - SIMULATION PHASE - Tics = 2900
 STEP 6 - SIMULATION PHASE - Tics = 2900
 STEP 7 - SIMULATION PHASE - Tics = 2900
+Received CPM at node 2  sender 5000 time 2800 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 2800 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 2900
 STEP 9 - SIMULATION PHASE - Tics = 2900
@@ -541,6 +568,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3050
 STEP 5 - SIMULATION PHASE - Tics = 3100
 STEP 6 - SIMULATION PHASE - Tics = 3100
 STEP 7 - SIMULATION PHASE - Tics = 3100
+Received CPM at node 2  sender 5000 time 3000 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 3000 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 3100
 STEP 9 - SIMULATION PHASE - Tics = 3100
@@ -573,6 +602,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3250
 STEP 5 - SIMULATION PHASE - Tics = 3300
 STEP 6 - SIMULATION PHASE - Tics = 3300
 STEP 7 - SIMULATION PHASE - Tics = 3300
+Received CPM at node 2  sender 5000 time 3200 Number OF Received Obstacles in the CPM 2 CPM Message Size 226
+Received CPM at node 3  sender 5000 time 3200 Number OF Received Obstacles in the CPM 2 CPM Message Size 226
 
 STEP 8 - SIMULATION PHASE - Tics = 3300
 STEP 9 - SIMULATION PHASE - Tics = 3300
@@ -589,6 +620,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3350
 STEP 5 - SIMULATION PHASE - Tics = 3400
 STEP 6 - SIMULATION PHASE - Tics = 3400
 STEP 7 - SIMULATION PHASE - Tics = 3400
+Received MCM from a vehicle at node 2  sender 5000 time 3300 Message size 190
+Received MCM from a vehicle at node 3  sender 5000 time 3300 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 3400
 STEP 9 - SIMULATION PHASE - Tics = 3400
@@ -605,6 +638,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3450
 STEP 5 - SIMULATION PHASE - Tics = 3500
 STEP 6 - SIMULATION PHASE - Tics = 3500
 STEP 7 - SIMULATION PHASE - Tics = 3500
+Received MCM at node 5000  sender 2 time 3400
+Received MCM at node 5000  sender 3 time 3400
 
 STEP 8 - SIMULATION PHASE - Tics = 3500
 STEP 9 - SIMULATION PHASE - Tics = 3500
@@ -637,6 +672,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3650
 STEP 5 - SIMULATION PHASE - Tics = 3700
 STEP 6 - SIMULATION PHASE - Tics = 3700
 STEP 7 - SIMULATION PHASE - Tics = 3700
+Received CPM at node 2  sender 5000 time 3600 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 3600 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 3700
 STEP 9 - SIMULATION PHASE - Tics = 3700
@@ -669,6 +706,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3850
 STEP 5 - SIMULATION PHASE - Tics = 3900
 STEP 6 - SIMULATION PHASE - Tics = 3900
 STEP 7 - SIMULATION PHASE - Tics = 3900
+Received CPM at node 2  sender 5000 time 3800 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 3800 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 3900
 STEP 9 - SIMULATION PHASE - Tics = 3900
@@ -701,6 +740,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4050
 STEP 5 - SIMULATION PHASE - Tics = 4100
 STEP 6 - SIMULATION PHASE - Tics = 4100
 STEP 7 - SIMULATION PHASE - Tics = 4100
+Received CPM at node 2  sender 5000 time 4000 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 4000 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 4100
 STEP 9 - SIMULATION PHASE - Tics = 4100
@@ -749,6 +790,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4350
 STEP 5 - SIMULATION PHASE - Tics = 4400
 STEP 6 - SIMULATION PHASE - Tics = 4400
 STEP 7 - SIMULATION PHASE - Tics = 4400
+Received CAM at node 2  sender 5000 time 4300 position 0:0 speed 0 acceleration 0 Message size 190
+Received CAM at node 3  sender 5000 time 4300 position 0:0 speed 0 acceleration 0 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 4400
 STEP 9 - SIMULATION PHASE - Tics = 4400
@@ -765,6 +808,10 @@ STEP 9 - SIMULATION PHASE - Tics = 4450
 STEP 5 - SIMULATION PHASE - Tics = 4500
 STEP 6 - SIMULATION PHASE - Tics = 4500
 STEP 7 - SIMULATION PHASE - Tics = 4500
+Received CPM at node 2  sender 5000 time 4400 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received MCM from a vehicle at node 2  sender 5000 time 4400 Message size 190
+Received CPM at node 3  sender 5000 time 4400 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received MCM from a vehicle at node 3  sender 5000 time 4400 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 4500
 STEP 9 - SIMULATION PHASE - Tics = 4500
@@ -781,6 +828,9 @@ STEP 9 - SIMULATION PHASE - Tics = 4550
 STEP 5 - SIMULATION PHASE - Tics = 4600
 STEP 6 - SIMULATION PHASE - Tics = 4600
 STEP 7 - SIMULATION PHASE - Tics = 4600
+Received MCM from a vehicle at node 3  sender 2 time 4500 Message size 190
+Received MCM at node 5000  sender 3 time 4500
+Received MCM at node 5000  sender 2 time 4500
 
 STEP 8 - SIMULATION PHASE - Tics = 4600
 STEP 9 - SIMULATION PHASE - Tics = 4600
@@ -797,6 +847,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4650
 STEP 5 - SIMULATION PHASE - Tics = 4700
 STEP 6 - SIMULATION PHASE - Tics = 4700
 STEP 7 - SIMULATION PHASE - Tics = 4700
+Received CPM at node 2  sender 5000 time 4600 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 4600 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 4700
 STEP 9 - SIMULATION PHASE - Tics = 4700
@@ -829,6 +881,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4850
 STEP 5 - SIMULATION PHASE - Tics = 4900
 STEP 6 - SIMULATION PHASE - Tics = 4900
 STEP 7 - SIMULATION PHASE - Tics = 4900
+Received CPM at node 2  sender 5000 time 4800 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 4800 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 4900
 STEP 9 - SIMULATION PHASE - Tics = 4900
@@ -925,6 +979,8 @@ STEP 9 - SIMULATION PHASE - Tics = 5450
 STEP 5 - SIMULATION PHASE - Tics = 5500
 STEP 6 - SIMULATION PHASE - Tics = 5500
 STEP 7 - SIMULATION PHASE - Tics = 5500
+Received CPM at node 2  sender 5000 time 5400 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 5400 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 5500
 STEP 9 - SIMULATION PHASE - Tics = 5500
@@ -941,6 +997,8 @@ STEP 9 - SIMULATION PHASE - Tics = 5550
 STEP 5 - SIMULATION PHASE - Tics = 5600
 STEP 6 - SIMULATION PHASE - Tics = 5600
 STEP 7 - SIMULATION PHASE - Tics = 5600
+Received MCM from a vehicle at node 2  sender 5000 time 5500 Message size 190
+Received MCM from a vehicle at node 3  sender 5000 time 5500 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 5600
 STEP 9 - SIMULATION PHASE - Tics = 5600
@@ -957,6 +1015,14 @@ STEP 9 - SIMULATION PHASE - Tics = 5650
 STEP 5 - SIMULATION PHASE - Tics = 5700
 STEP 6 - SIMULATION PHASE - Tics = 5700
 STEP 7 - SIMULATION PHASE - Tics = 5700
+Received CPM at node 2  sender 3 time 5600 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM from a vehicle at node 2  sender 3 time 5600 Message size 190
+Received CPM at node 3  sender 2 time 5600 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM from a vehicle at node 3  sender 2 time 5600 Message size 190
+Received CPM at node 5000  sender 2 time 5600 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received CPM at node 5000  sender 3 time 5600 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM at node 5000  sender 3 time 5600
+Received MCM at node 5000  sender 2 time 5600
 
 STEP 8 - SIMULATION PHASE - Tics = 5700
 STEP 9 - SIMULATION PHASE - Tics = 5700
@@ -1101,6 +1167,8 @@ STEP 9 - SIMULATION PHASE - Tics = 6550
 STEP 5 - SIMULATION PHASE - Tics = 6600
 STEP 6 - SIMULATION PHASE - Tics = 6600
 STEP 7 - SIMULATION PHASE - Tics = 6600
+Received CAM at node 2  sender 5000 time 6500 position 0:0 speed 0 acceleration 0 Message size 190
+Received CAM at node 3  sender 5000 time 6500 position 0:0 speed 0 acceleration 0 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 6600
 STEP 9 - SIMULATION PHASE - Tics = 6600
@@ -1109,6 +1177,8 @@ STEP 9 - SIMULATION PHASE - Tics = 6600
 STEP 5 - SIMULATION PHASE - Tics = 6650
 STEP 6 - SIMULATION PHASE - Tics = 6650
 STEP 7 - SIMULATION PHASE - Tics = 6650
+Received DENM at node 2  sender 5000 type 0 time 6550 Message size 190
+Received DENM at node 3  sender 5000 type 0 time 6550 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 6650
 STEP 9 - SIMULATION PHASE - Tics = 6650
@@ -1117,6 +1187,8 @@ STEP 9 - SIMULATION PHASE - Tics = 6650
 STEP 5 - SIMULATION PHASE - Tics = 6700
 STEP 6 - SIMULATION PHASE - Tics = 6700
 STEP 7 - SIMULATION PHASE - Tics = 6700
+Received MCM from a vehicle at node 2  sender 5000 time 6600 Message size 190
+Received MCM from a vehicle at node 3  sender 5000 time 6600 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 6700
 STEP 9 - SIMULATION PHASE - Tics = 6700
@@ -1133,6 +1205,14 @@ STEP 9 - SIMULATION PHASE - Tics = 6750
 STEP 5 - SIMULATION PHASE - Tics = 6800
 STEP 6 - SIMULATION PHASE - Tics = 6800
 STEP 7 - SIMULATION PHASE - Tics = 6800
+Received CPM at node 2  sender 3 time 6700 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM from a vehicle at node 2  sender 3 time 6700 Message size 190
+Received CPM at node 3  sender 2 time 6700 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM from a vehicle at node 3  sender 2 time 6700 Message size 190
+Received CPM at node 5000  sender 2 time 6700 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received CPM at node 5000  sender 3 time 6700 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM at node 5000  sender 2 time 6700
+Received MCM at node 5000  sender 3 time 6700
 
 STEP 8 - SIMULATION PHASE - Tics = 6800
 STEP 9 - SIMULATION PHASE - Tics = 6800
@@ -1277,6 +1357,8 @@ STEP 9 - SIMULATION PHASE - Tics = 7650
 STEP 5 - SIMULATION PHASE - Tics = 7700
 STEP 6 - SIMULATION PHASE - Tics = 7700
 STEP 7 - SIMULATION PHASE - Tics = 7700
+Received CPM at node 2  sender 5000 time 7600 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 7600 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 7700
 STEP 9 - SIMULATION PHASE - Tics = 7700
@@ -1293,6 +1375,8 @@ STEP 9 - SIMULATION PHASE - Tics = 7750
 STEP 5 - SIMULATION PHASE - Tics = 7800
 STEP 6 - SIMULATION PHASE - Tics = 7800
 STEP 7 - SIMULATION PHASE - Tics = 7800
+Received MCM from a vehicle at node 2  sender 5000 time 7700 Message size 190
+Received MCM from a vehicle at node 3  sender 5000 time 7700 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 7800
 STEP 9 - SIMULATION PHASE - Tics = 7800
@@ -1309,6 +1393,10 @@ STEP 9 - SIMULATION PHASE - Tics = 7850
 STEP 5 - SIMULATION PHASE - Tics = 7900
 STEP 6 - SIMULATION PHASE - Tics = 7900
 STEP 7 - SIMULATION PHASE - Tics = 7900
+Received MCM from a vehicle at node 2  sender 3 time 7800 Message size 190
+Received MCM from a vehicle at node 3  sender 2 time 7800 Message size 190
+Received MCM at node 5000  sender 3 time 7800
+Received MCM at node 5000  sender 2 time 7800
 
 STEP 8 - SIMULATION PHASE - Tics = 7900
 STEP 9 - SIMULATION PHASE - Tics = 7900
@@ -1453,6 +1541,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8750
 STEP 5 - SIMULATION PHASE - Tics = 8800
 STEP 6 - SIMULATION PHASE - Tics = 8800
 STEP 7 - SIMULATION PHASE - Tics = 8800
+Received CAM at node 2  sender 5000 time 8700 position 0:0 speed 0 acceleration 0 Message size 190
+Received CAM at node 3  sender 5000 time 8700 position 0:0 speed 0 acceleration 0 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 8800
 STEP 9 - SIMULATION PHASE - Tics = 8800
@@ -1469,6 +1559,8 @@ STEP 9 - SIMULATION PHASE - Tics = 8850
 STEP 5 - SIMULATION PHASE - Tics = 8900
 STEP 6 - SIMULATION PHASE - Tics = 8900
 STEP 7 - SIMULATION PHASE - Tics = 8900
+Received MCM from a vehicle at node 2  sender 5000 time 8800 Message size 190
+Received MCM from a vehicle at node 3  sender 5000 time 8800 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 8900
 STEP 9 - SIMULATION PHASE - Tics = 8900
@@ -1485,6 +1577,10 @@ STEP 9 - SIMULATION PHASE - Tics = 8950
 STEP 5 - SIMULATION PHASE - Tics = 9000
 STEP 6 - SIMULATION PHASE - Tics = 9000
 STEP 7 - SIMULATION PHASE - Tics = 9000
+Received MCM from a vehicle at node 2  sender 3 time 8900 Message size 190
+Received MCM from a vehicle at node 3  sender 2 time 8900 Message size 190
+Received MCM at node 5000  sender 2 time 8900
+Received MCM at node 5000  sender 3 time 8900
 
 STEP 8 - SIMULATION PHASE - Tics = 9000
 STEP 9 - SIMULATION PHASE - Tics = 9000
@@ -1517,6 +1613,7 @@ STEP 9 - SIMULATION PHASE - Tics = 9150
 STEP 5 - SIMULATION PHASE - Tics = 9200
 STEP 6 - SIMULATION PHASE - Tics = 9200
 STEP 7 - SIMULATION PHASE - Tics = 9200
+Received CPM at node 2  sender 5000 time 9100 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 9200
 STEP 9 - SIMULATION PHASE - Tics = 9200
@@ -1533,6 +1630,7 @@ STEP 9 - SIMULATION PHASE - Tics = 9250
 STEP 5 - SIMULATION PHASE - Tics = 9300
 STEP 6 - SIMULATION PHASE - Tics = 9300
 STEP 7 - SIMULATION PHASE - Tics = 9300
+Received CPM at node 3  sender 5000 time 9200 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 9300
 STEP 9 - SIMULATION PHASE - Tics = 9300
@@ -1565,6 +1663,7 @@ STEP 9 - SIMULATION PHASE - Tics = 9450
 STEP 5 - SIMULATION PHASE - Tics = 9500
 STEP 6 - SIMULATION PHASE - Tics = 9500
 STEP 7 - SIMULATION PHASE - Tics = 9500
+Received CPM at node 2  sender 5000 time 9400 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 9500
 STEP 9 - SIMULATION PHASE - Tics = 9500
@@ -1597,6 +1696,7 @@ STEP 9 - SIMULATION PHASE - Tics = 9650
 STEP 5 - SIMULATION PHASE - Tics = 9700
 STEP 6 - SIMULATION PHASE - Tics = 9700
 STEP 7 - SIMULATION PHASE - Tics = 9700
+Received CPM at node 3  sender 5000 time 9600 Number OF Received Obstacles in the CPM 1 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 9700
 STEP 9 - SIMULATION PHASE - Tics = 9700
@@ -1613,6 +1713,7 @@ STEP 9 - SIMULATION PHASE - Tics = 9750
 STEP 5 - SIMULATION PHASE - Tics = 9800
 STEP 6 - SIMULATION PHASE - Tics = 9800
 STEP 7 - SIMULATION PHASE - Tics = 9800
+Received CPM at node 2  sender 5000 time 9700 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 9800
 STEP 9 - SIMULATION PHASE - Tics = 9800
@@ -1629,6 +1730,8 @@ STEP 9 - SIMULATION PHASE - Tics = 9850
 STEP 5 - SIMULATION PHASE - Tics = 9900
 STEP 6 - SIMULATION PHASE - Tics = 9900
 STEP 7 - SIMULATION PHASE - Tics = 9900
+Received CAM at node 2  sender 5000 time 9800 position 0:0 speed 0 acceleration 0 Message size 190
+Received CAM at node 3  sender 5000 time 9800 position 0:0 speed 0 acceleration 0 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 9900
 STEP 9 - SIMULATION PHASE - Tics = 9900
@@ -1645,6 +1748,8 @@ STEP 9 - SIMULATION PHASE - Tics = 9950
 STEP 5 - SIMULATION PHASE - Tics = 10000
 STEP 6 - SIMULATION PHASE - Tics = 10000
 STEP 7 - SIMULATION PHASE - Tics = 10000
+Received MCM from a vehicle at node 2  sender 5000 time 9900 Message size 190
+Received MCM from a vehicle at node 3  sender 5000 time 9900 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 10000
 STEP 9 - SIMULATION PHASE - Tics = 10000
@@ -1661,6 +1766,12 @@ STEP 9 - SIMULATION PHASE - Tics = 10050
 STEP 5 - SIMULATION PHASE - Tics = 10100
 STEP 6 - SIMULATION PHASE - Tics = 10100
 STEP 7 - SIMULATION PHASE - Tics = 10100
+Received CPM at node 2  sender 3 time 10000 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM from a vehicle at node 2  sender 3 time 10000 Message size 190
+Received MCM from a vehicle at node 3  sender 2 time 10000 Message size 190
+Received CPM at node 5000  sender 3 time 10000 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM at node 5000  sender 2 time 10000
+Received MCM at node 5000  sender 3 time 10000
 
 STEP 8 - SIMULATION PHASE - Tics = 10100
 STEP 9 - SIMULATION PHASE - Tics = 10100
@@ -1677,6 +1788,7 @@ STEP 9 - SIMULATION PHASE - Tics = 10150
 STEP 5 - SIMULATION PHASE - Tics = 10200
 STEP 6 - SIMULATION PHASE - Tics = 10200
 STEP 7 - SIMULATION PHASE - Tics = 10200
+Received CPM at node 3  sender 5000 time 10100 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 10200
 STEP 9 - SIMULATION PHASE - Tics = 10200
@@ -1709,6 +1821,7 @@ STEP 9 - SIMULATION PHASE - Tics = 10350
 STEP 5 - SIMULATION PHASE - Tics = 10400
 STEP 6 - SIMULATION PHASE - Tics = 10400
 STEP 7 - SIMULATION PHASE - Tics = 10400
+Received CPM at node 2  sender 5000 time 10300 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 10400
 STEP 9 - SIMULATION PHASE - Tics = 10400
@@ -1757,6 +1870,7 @@ STEP 9 - SIMULATION PHASE - Tics = 10650
 STEP 5 - SIMULATION PHASE - Tics = 10700
 STEP 6 - SIMULATION PHASE - Tics = 10700
 STEP 7 - SIMULATION PHASE - Tics = 10700
+Received CPM at node 2  sender 5000 time 10600 Number OF Received Obstacles in the CPM 1 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 10700
 STEP 9 - SIMULATION PHASE - Tics = 10700
@@ -1805,6 +1919,8 @@ STEP 9 - SIMULATION PHASE - Tics = 10950
 STEP 5 - SIMULATION PHASE - Tics = 11000
 STEP 6 - SIMULATION PHASE - Tics = 11000
 STEP 7 - SIMULATION PHASE - Tics = 11000
+Received CPM at node 2  sender 5000 time 10900 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 10900 Number OF Received Obstacles in the CPM 2 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 11000
 STEP 9 - SIMULATION PHASE - Tics = 11000
@@ -1821,6 +1937,8 @@ STEP 9 - SIMULATION PHASE - Tics = 11050
 STEP 5 - SIMULATION PHASE - Tics = 11100
 STEP 6 - SIMULATION PHASE - Tics = 11100
 STEP 7 - SIMULATION PHASE - Tics = 11100
+Received MCM from a vehicle at node 2  sender 5000 time 11000 Message size 190
+Received MCM from a vehicle at node 3  sender 5000 time 11000 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 11100
 STEP 9 - SIMULATION PHASE - Tics = 11100
@@ -1837,6 +1955,12 @@ STEP 9 - SIMULATION PHASE - Tics = 11150
 STEP 5 - SIMULATION PHASE - Tics = 11200
 STEP 6 - SIMULATION PHASE - Tics = 11200
 STEP 7 - SIMULATION PHASE - Tics = 11200
+Received MCM from a vehicle at node 2  sender 3 time 11100 Message size 190
+Received CPM at node 3  sender 2 time 11100 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM from a vehicle at node 3  sender 2 time 11100 Message size 190
+Received MCM at node 5000  sender 3 time 11100
+Received CPM at node 5000  sender 2 time 11100 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM at node 5000  sender 2 time 11100
 
 STEP 8 - SIMULATION PHASE - Tics = 11200
 STEP 9 - SIMULATION PHASE - Tics = 11200
@@ -1853,6 +1977,7 @@ STEP 9 - SIMULATION PHASE - Tics = 11250
 STEP 5 - SIMULATION PHASE - Tics = 11300
 STEP 6 - SIMULATION PHASE - Tics = 11300
 STEP 7 - SIMULATION PHASE - Tics = 11300
+Received CPM at node 2  sender 3 time 11200 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 11300
 STEP 9 - SIMULATION PHASE - Tics = 11300
@@ -1869,6 +1994,7 @@ STEP 9 - SIMULATION PHASE - Tics = 11350
 STEP 5 - SIMULATION PHASE - Tics = 11400
 STEP 6 - SIMULATION PHASE - Tics = 11400
 STEP 7 - SIMULATION PHASE - Tics = 11400
+Received CPM at node 3  sender 5000 time 11300 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 11400
 STEP 9 - SIMULATION PHASE - Tics = 11400
@@ -1933,6 +2059,7 @@ STEP 9 - SIMULATION PHASE - Tics = 11750
 STEP 5 - SIMULATION PHASE - Tics = 11800
 STEP 6 - SIMULATION PHASE - Tics = 11800
 STEP 7 - SIMULATION PHASE - Tics = 11800
+Received CPM at node 3  sender 5000 time 11700 Number OF Received Obstacles in the CPM 1 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 11800
 STEP 9 - SIMULATION PHASE - Tics = 11800
@@ -1965,6 +2092,7 @@ STEP 9 - SIMULATION PHASE - Tics = 11950
 STEP 5 - SIMULATION PHASE - Tics = 12000
 STEP 6 - SIMULATION PHASE - Tics = 12000
 STEP 7 - SIMULATION PHASE - Tics = 12000
+Received CPM at node 3  sender 5000 time 11900 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 12000
 STEP 9 - SIMULATION PHASE - Tics = 12000
@@ -1981,6 +2109,8 @@ STEP 9 - SIMULATION PHASE - Tics = 12050
 STEP 5 - SIMULATION PHASE - Tics = 12100
 STEP 6 - SIMULATION PHASE - Tics = 12100
 STEP 7 - SIMULATION PHASE - Tics = 12100
+Received CAM at node 2  sender 5000 time 12000 position 0:0 speed 0 acceleration 0 Message size 190
+Received CAM at node 3  sender 5000 time 12000 position 0:0 speed 0 acceleration 0 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 12100
 STEP 9 - SIMULATION PHASE - Tics = 12100
@@ -1997,6 +2127,8 @@ STEP 9 - SIMULATION PHASE - Tics = 12150
 STEP 5 - SIMULATION PHASE - Tics = 12200
 STEP 6 - SIMULATION PHASE - Tics = 12200
 STEP 7 - SIMULATION PHASE - Tics = 12200
+Received MCM from a vehicle at node 2  sender 5000 time 12100 Message size 190
+Received MCM from a vehicle at node 3  sender 5000 time 12100 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 12200
 STEP 9 - SIMULATION PHASE - Tics = 12200
@@ -2013,6 +2145,11 @@ STEP 9 - SIMULATION PHASE - Tics = 12250
 STEP 5 - SIMULATION PHASE - Tics = 12300
 STEP 6 - SIMULATION PHASE - Tics = 12300
 STEP 7 - SIMULATION PHASE - Tics = 12300
+Received MCM from a vehicle at node 2  sender 3 time 12200 Message size 190
+Received MCM from a vehicle at node 3  sender 2 time 12200 Message size 190
+Received CAM at node 5000  sender 3 time 12200 position -4.56369:1.9636 speed 0 acceleration 0
+Received MCM at node 5000  sender 3 time 12200
+Received MCM at node 5000  sender 2 time 12200
 
 STEP 8 - SIMULATION PHASE - Tics = 12300
 STEP 9 - SIMULATION PHASE - Tics = 12300
@@ -2029,6 +2166,7 @@ STEP 9 - SIMULATION PHASE - Tics = 12350
 STEP 5 - SIMULATION PHASE - Tics = 12400
 STEP 6 - SIMULATION PHASE - Tics = 12400
 STEP 7 - SIMULATION PHASE - Tics = 12400
+Received CPM at node 3  sender 5000 time 12300 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 12400
 STEP 9 - SIMULATION PHASE - Tics = 12400
@@ -2045,6 +2183,7 @@ STEP 9 - SIMULATION PHASE - Tics = 12450
 STEP 5 - SIMULATION PHASE - Tics = 12500
 STEP 6 - SIMULATION PHASE - Tics = 12500
 STEP 7 - SIMULATION PHASE - Tics = 12500
+Received CPM at node 2  sender 5000 time 12400 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 12500
 STEP 9 - SIMULATION PHASE - Tics = 12500
@@ -2061,6 +2200,7 @@ STEP 9 - SIMULATION PHASE - Tics = 12550
 STEP 5 - SIMULATION PHASE - Tics = 12600
 STEP 6 - SIMULATION PHASE - Tics = 12600
 STEP 7 - SIMULATION PHASE - Tics = 12600
+Received CPM at node 3  sender 5000 time 12500 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 12600
 STEP 9 - SIMULATION PHASE - Tics = 12600
@@ -2125,6 +2265,7 @@ STEP 9 - SIMULATION PHASE - Tics = 12950
 STEP 5 - SIMULATION PHASE - Tics = 13000
 STEP 6 - SIMULATION PHASE - Tics = 13000
 STEP 7 - SIMULATION PHASE - Tics = 13000
+Received CPM at node 3  sender 5000 time 12900 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 13000
 STEP 9 - SIMULATION PHASE - Tics = 13000
@@ -2141,6 +2282,7 @@ STEP 9 - SIMULATION PHASE - Tics = 13050
 STEP 5 - SIMULATION PHASE - Tics = 13100
 STEP 6 - SIMULATION PHASE - Tics = 13100
 STEP 7 - SIMULATION PHASE - Tics = 13100
+Received CPM at node 2  sender 5000 time 13000 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 13100
 STEP 9 - SIMULATION PHASE - Tics = 13100
@@ -2157,6 +2299,9 @@ STEP 9 - SIMULATION PHASE - Tics = 13150
 STEP 5 - SIMULATION PHASE - Tics = 13200
 STEP 6 - SIMULATION PHASE - Tics = 13200
 STEP 7 - SIMULATION PHASE - Tics = 13200
+Received CPM at node 2  sender 5000 time 13100 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received CAM at node 3  sender 5000 time 13100 position 0:0 speed 0 acceleration 0 Message size 190
+Received CPM at node 3  sender 5000 time 13100 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 13200
 STEP 9 - SIMULATION PHASE - Tics = 13200
@@ -2173,6 +2318,8 @@ STEP 9 - SIMULATION PHASE - Tics = 13250
 STEP 5 - SIMULATION PHASE - Tics = 13300
 STEP 6 - SIMULATION PHASE - Tics = 13300
 STEP 7 - SIMULATION PHASE - Tics = 13300
+Received MCM from a vehicle at node 2  sender 5000 time 13200 Message size 190
+Received MCM from a vehicle at node 3  sender 5000 time 13200 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 13300
 STEP 9 - SIMULATION PHASE - Tics = 13300
@@ -2189,6 +2336,12 @@ STEP 9 - SIMULATION PHASE - Tics = 13350
 STEP 5 - SIMULATION PHASE - Tics = 13400
 STEP 6 - SIMULATION PHASE - Tics = 13400
 STEP 7 - SIMULATION PHASE - Tics = 13400
+Received CPM at node 2  sender 3 time 13300 Number OF Received Obstacles in the CPM 1 CPM Message Size 191
+Received MCM from a vehicle at node 2  sender 3 time 13300 Message size 190
+Received MCM from a vehicle at node 3  sender 2 time 13300 Message size 190
+Received CPM at node 5000  sender 3 time 13300 Number OF Received Obstacles in the CPM 1 CPM Message Size 191
+Received MCM at node 5000  sender 2 time 13300
+Received MCM at node 5000  sender 3 time 13300
 
 STEP 8 - SIMULATION PHASE - Tics = 13400
 STEP 9 - SIMULATION PHASE - Tics = 13400
@@ -2205,6 +2358,7 @@ STEP 9 - SIMULATION PHASE - Tics = 13450
 STEP 5 - SIMULATION PHASE - Tics = 13500
 STEP 6 - SIMULATION PHASE - Tics = 13500
 STEP 7 - SIMULATION PHASE - Tics = 13500
+Received CPM at node 3  sender 5000 time 13400 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 13500
 STEP 9 - SIMULATION PHASE - Tics = 13500
@@ -2237,6 +2391,7 @@ STEP 9 - SIMULATION PHASE - Tics = 13650
 STEP 5 - SIMULATION PHASE - Tics = 13700
 STEP 6 - SIMULATION PHASE - Tics = 13700
 STEP 7 - SIMULATION PHASE - Tics = 13700
+Received CPM at node 2  sender 5000 time 13600 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 13700
 STEP 9 - SIMULATION PHASE - Tics = 13700
@@ -2253,6 +2408,7 @@ STEP 9 - SIMULATION PHASE - Tics = 13750
 STEP 5 - SIMULATION PHASE - Tics = 13800
 STEP 6 - SIMULATION PHASE - Tics = 13800
 STEP 7 - SIMULATION PHASE - Tics = 13800
+Received CPM at node 3  sender 5000 time 13700 Number OF Received Obstacles in the CPM 1 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 13800
 STEP 9 - SIMULATION PHASE - Tics = 13800
@@ -2285,6 +2441,7 @@ STEP 9 - SIMULATION PHASE - Tics = 13950
 STEP 5 - SIMULATION PHASE - Tics = 14000
 STEP 6 - SIMULATION PHASE - Tics = 14000
 STEP 7 - SIMULATION PHASE - Tics = 14000
+Received CPM at node 2  sender 5000 time 13900 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 14000
 STEP 9 - SIMULATION PHASE - Tics = 14000
@@ -2301,6 +2458,7 @@ STEP 9 - SIMULATION PHASE - Tics = 14050
 STEP 5 - SIMULATION PHASE - Tics = 14100
 STEP 6 - SIMULATION PHASE - Tics = 14100
 STEP 7 - SIMULATION PHASE - Tics = 14100
+Received CPM at node 3  sender 5000 time 14000 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 14100
 STEP 9 - SIMULATION PHASE - Tics = 14100
@@ -2333,6 +2491,9 @@ STEP 9 - SIMULATION PHASE - Tics = 14250
 STEP 5 - SIMULATION PHASE - Tics = 14300
 STEP 6 - SIMULATION PHASE - Tics = 14300
 STEP 7 - SIMULATION PHASE - Tics = 14300
+Received CAM at node 2  sender 5000 time 14200 position 0:0 speed 0 acceleration 0 Message size 190
+Received CPM at node 2  sender 5000 time 14200 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received CPM at node 3  sender 5000 time 14200 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 14300
 STEP 9 - SIMULATION PHASE - Tics = 14300
@@ -2349,6 +2510,9 @@ STEP 9 - SIMULATION PHASE - Tics = 14350
 STEP 5 - SIMULATION PHASE - Tics = 14400
 STEP 6 - SIMULATION PHASE - Tics = 14400
 STEP 7 - SIMULATION PHASE - Tics = 14400
+Received MCM from a vehicle at node 2  sender 5000 time 14300 Message size 190
+Received CPM at node 3  sender 5000 time 14300 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM from a vehicle at node 3  sender 5000 time 14300 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 14400
 STEP 9 - SIMULATION PHASE - Tics = 14400
@@ -2365,6 +2529,11 @@ STEP 9 - SIMULATION PHASE - Tics = 14450
 STEP 5 - SIMULATION PHASE - Tics = 14500
 STEP 6 - SIMULATION PHASE - Tics = 14500
 STEP 7 - SIMULATION PHASE - Tics = 14500
+Received MCM from a vehicle at node 2  sender 3 time 14400 Message size 190
+Received MCM from a vehicle at node 3  sender 2 time 14400 Message size 190
+Received CAM at node 5000  sender 3 time 14400 position -31.2873:0.691535 speed 0 acceleration 0
+Received MCM at node 5000  sender 2 time 14400
+Received MCM at node 5000  sender 3 time 14400
 
 STEP 8 - SIMULATION PHASE - Tics = 14500
 STEP 9 - SIMULATION PHASE - Tics = 14500
@@ -2381,6 +2550,7 @@ STEP 9 - SIMULATION PHASE - Tics = 14550
 STEP 5 - SIMULATION PHASE - Tics = 14600
 STEP 6 - SIMULATION PHASE - Tics = 14600
 STEP 7 - SIMULATION PHASE - Tics = 14600
+Received CPM at node 2  sender 5000 time 14500 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 14600
 STEP 9 - SIMULATION PHASE - Tics = 14600
@@ -2397,6 +2567,7 @@ STEP 9 - SIMULATION PHASE - Tics = 14650
 STEP 5 - SIMULATION PHASE - Tics = 14700
 STEP 6 - SIMULATION PHASE - Tics = 14700
 STEP 7 - SIMULATION PHASE - Tics = 14700
+Received CPM at node 3  sender 5000 time 14600 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 14700
 STEP 9 - SIMULATION PHASE - Tics = 14700
@@ -2429,6 +2600,7 @@ STEP 9 - SIMULATION PHASE - Tics = 14850
 STEP 5 - SIMULATION PHASE - Tics = 14900
 STEP 6 - SIMULATION PHASE - Tics = 14900
 STEP 7 - SIMULATION PHASE - Tics = 14900
+Received CPM at node 2  sender 5000 time 14800 Number OF Received Obstacles in the CPM 1 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 14900
 STEP 9 - SIMULATION PHASE - Tics = 14900
@@ -2445,6 +2617,7 @@ STEP 9 - SIMULATION PHASE - Tics = 14950
 STEP 5 - SIMULATION PHASE - Tics = 15000
 STEP 6 - SIMULATION PHASE - Tics = 15000
 STEP 7 - SIMULATION PHASE - Tics = 15000
+Received CPM at node 3  sender 5000 time 14900 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 15000
 STEP 9 - SIMULATION PHASE - Tics = 15000
@@ -2477,6 +2650,7 @@ STEP 9 - SIMULATION PHASE - Tics = 15150
 STEP 5 - SIMULATION PHASE - Tics = 15200
 STEP 6 - SIMULATION PHASE - Tics = 15200
 STEP 7 - SIMULATION PHASE - Tics = 15200
+Received CPM at node 2  sender 5000 time 15100 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 15200
 STEP 9 - SIMULATION PHASE - Tics = 15200
@@ -2493,6 +2667,7 @@ STEP 9 - SIMULATION PHASE - Tics = 15250
 STEP 5 - SIMULATION PHASE - Tics = 15300
 STEP 6 - SIMULATION PHASE - Tics = 15300
 STEP 7 - SIMULATION PHASE - Tics = 15300
+Received CPM at node 3  sender 5000 time 15200 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 15300
 STEP 9 - SIMULATION PHASE - Tics = 15300
@@ -2509,6 +2684,8 @@ STEP 9 - SIMULATION PHASE - Tics = 15350
 STEP 5 - SIMULATION PHASE - Tics = 15400
 STEP 6 - SIMULATION PHASE - Tics = 15400
 STEP 7 - SIMULATION PHASE - Tics = 15400
+Received CAM at node 2  sender 5000 time 15300 position 0:0 speed 0 acceleration 0 Message size 190
+Received CAM at node 3  sender 5000 time 15300 position 0:0 speed 0 acceleration 0 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 15400
 STEP 9 - SIMULATION PHASE - Tics = 15400
@@ -2525,6 +2702,9 @@ STEP 9 - SIMULATION PHASE - Tics = 15450
 STEP 5 - SIMULATION PHASE - Tics = 15500
 STEP 6 - SIMULATION PHASE - Tics = 15500
 STEP 7 - SIMULATION PHASE - Tics = 15500
+Received CPM at node 2  sender 5000 time 15400 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM from a vehicle at node 2  sender 5000 time 15400 Message size 190
+Received MCM from a vehicle at node 3  sender 5000 time 15400 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 15500
 STEP 9 - SIMULATION PHASE - Tics = 15500
@@ -2541,6 +2721,12 @@ STEP 9 - SIMULATION PHASE - Tics = 15550
 STEP 5 - SIMULATION PHASE - Tics = 15600
 STEP 6 - SIMULATION PHASE - Tics = 15600
 STEP 7 - SIMULATION PHASE - Tics = 15600
+Received MCM from a vehicle at node 2  sender 3 time 15500 Message size 190
+Received CPM at node 3  sender 2 time 15500 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM from a vehicle at node 3  sender 2 time 15500 Message size 190
+Received CPM at node 5000  sender 2 time 15500 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM at node 5000  sender 3 time 15500
+Received MCM at node 5000  sender 2 time 15500
 
 STEP 8 - SIMULATION PHASE - Tics = 15600
 STEP 9 - SIMULATION PHASE - Tics = 15600
@@ -2573,6 +2759,7 @@ STEP 9 - SIMULATION PHASE - Tics = 15750
 STEP 5 - SIMULATION PHASE - Tics = 15800
 STEP 6 - SIMULATION PHASE - Tics = 15800
 STEP 7 - SIMULATION PHASE - Tics = 15800
+Received CPM at node 2  sender 5000 time 15700 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 15800
 STEP 9 - SIMULATION PHASE - Tics = 15800
@@ -2589,6 +2776,7 @@ STEP 9 - SIMULATION PHASE - Tics = 15850
 STEP 5 - SIMULATION PHASE - Tics = 15900
 STEP 6 - SIMULATION PHASE - Tics = 15900
 STEP 7 - SIMULATION PHASE - Tics = 15900
+Received CPM at node 3  sender 5000 time 15800 Number OF Received Obstacles in the CPM 1 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 15900
 STEP 9 - SIMULATION PHASE - Tics = 15900
@@ -2621,6 +2809,7 @@ STEP 9 - SIMULATION PHASE - Tics = 16050
 STEP 5 - SIMULATION PHASE - Tics = 16100
 STEP 6 - SIMULATION PHASE - Tics = 16100
 STEP 7 - SIMULATION PHASE - Tics = 16100
+Received CPM at node 2  sender 5000 time 16000 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 16100
 STEP 9 - SIMULATION PHASE - Tics = 16100
@@ -2637,6 +2826,7 @@ STEP 9 - SIMULATION PHASE - Tics = 16150
 STEP 5 - SIMULATION PHASE - Tics = 16200
 STEP 6 - SIMULATION PHASE - Tics = 16200
 STEP 7 - SIMULATION PHASE - Tics = 16200
+Received CPM at node 3  sender 5000 time 16100 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 16200
 STEP 9 - SIMULATION PHASE - Tics = 16200
@@ -2669,6 +2859,7 @@ STEP 9 - SIMULATION PHASE - Tics = 16350
 STEP 5 - SIMULATION PHASE - Tics = 16400
 STEP 6 - SIMULATION PHASE - Tics = 16400
 STEP 7 - SIMULATION PHASE - Tics = 16400
+Received CPM at node 2  sender 5000 time 16300 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 16400
 STEP 9 - SIMULATION PHASE - Tics = 16400
@@ -2685,6 +2876,9 @@ STEP 9 - SIMULATION PHASE - Tics = 16450
 STEP 5 - SIMULATION PHASE - Tics = 16500
 STEP 6 - SIMULATION PHASE - Tics = 16500
 STEP 7 - SIMULATION PHASE - Tics = 16500
+Received CPM at node 2  sender 5000 time 16400 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received CAM at node 3  sender 5000 time 16400 position 0:0 speed 0 acceleration 0 Message size 190
+Received CPM at node 3  sender 5000 time 16400 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 16500
 STEP 9 - SIMULATION PHASE - Tics = 16500
@@ -2701,6 +2895,8 @@ STEP 9 - SIMULATION PHASE - Tics = 16550
 STEP 5 - SIMULATION PHASE - Tics = 16600
 STEP 6 - SIMULATION PHASE - Tics = 16600
 STEP 7 - SIMULATION PHASE - Tics = 16600
+Received MCM from a vehicle at node 2  sender 5000 time 16500 Message size 190
+Received MCM from a vehicle at node 3  sender 5000 time 16500 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 16600
 STEP 9 - SIMULATION PHASE - Tics = 16600
@@ -2717,6 +2913,12 @@ STEP 9 - SIMULATION PHASE - Tics = 16650
 STEP 5 - SIMULATION PHASE - Tics = 16700
 STEP 6 - SIMULATION PHASE - Tics = 16700
 STEP 7 - SIMULATION PHASE - Tics = 16700
+Received CPM at node 2  sender 3 time 16600 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM from a vehicle at node 2  sender 3 time 16600 Message size 190
+Received MCM from a vehicle at node 3  sender 2 time 16600 Message size 190
+Received MCM at node 5000  sender 2 time 16600
+Received CPM at node 5000  sender 3 time 16600 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM at node 5000  sender 3 time 16600
 
 STEP 8 - SIMULATION PHASE - Tics = 16700
 STEP 9 - SIMULATION PHASE - Tics = 16700
@@ -2733,6 +2935,7 @@ STEP 9 - SIMULATION PHASE - Tics = 16750
 STEP 5 - SIMULATION PHASE - Tics = 16800
 STEP 6 - SIMULATION PHASE - Tics = 16800
 STEP 7 - SIMULATION PHASE - Tics = 16800
+Received CPM at node 3  sender 5000 time 16700 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 16800
 STEP 9 - SIMULATION PHASE - Tics = 16800
@@ -2765,6 +2968,8 @@ STEP 9 - SIMULATION PHASE - Tics = 16950
 STEP 5 - SIMULATION PHASE - Tics = 17000
 STEP 6 - SIMULATION PHASE - Tics = 17000
 STEP 7 - SIMULATION PHASE - Tics = 17000
+Received CPM at node 2  sender 5000 time 16900 Number OF Received Obstacles in the CPM 1 CPM Message Size 191
+Received CPM at node 3  sender 5000 time 16900 Number OF Received Obstacles in the CPM 1 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 17000
 STEP 9 - SIMULATION PHASE - Tics = 17000
@@ -2781,6 +2986,8 @@ STEP 9 - SIMULATION PHASE - Tics = 17050
 STEP 5 - SIMULATION PHASE - Tics = 17100
 STEP 6 - SIMULATION PHASE - Tics = 17100
 STEP 7 - SIMULATION PHASE - Tics = 17100
+Received CPM at node 2  sender 5000 time 17000 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received CPM at node 3  sender 5000 time 17000 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 17100
 STEP 9 - SIMULATION PHASE - Tics = 17100
@@ -2813,6 +3020,8 @@ STEP 9 - SIMULATION PHASE - Tics = 17250
 STEP 5 - SIMULATION PHASE - Tics = 17300
 STEP 6 - SIMULATION PHASE - Tics = 17300
 STEP 7 - SIMULATION PHASE - Tics = 17300
+Received CPM at node 2  sender 5000 time 17200 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received CPM at node 3  sender 5000 time 17200 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 17300
 STEP 9 - SIMULATION PHASE - Tics = 17300
@@ -2829,6 +3038,8 @@ STEP 9 - SIMULATION PHASE - Tics = 17350
 STEP 5 - SIMULATION PHASE - Tics = 17400
 STEP 6 - SIMULATION PHASE - Tics = 17400
 STEP 7 - SIMULATION PHASE - Tics = 17400
+Received CPM at node 2  sender 5000 time 17300 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received CPM at node 3  sender 5000 time 17300 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 17400
 STEP 9 - SIMULATION PHASE - Tics = 17400
@@ -2861,6 +3072,10 @@ STEP 9 - SIMULATION PHASE - Tics = 17550
 STEP 5 - SIMULATION PHASE - Tics = 17600
 STEP 6 - SIMULATION PHASE - Tics = 17600
 STEP 7 - SIMULATION PHASE - Tics = 17600
+Received CAM at node 2  sender 5000 time 17500 position 0:0 speed 0 acceleration 0 Message size 190
+Received CPM at node 2  sender 5000 time 17500 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received CAM at node 3  sender 5000 time 17500 position 0:0 speed 0 acceleration 0 Message size 190
+Received CPM at node 3  sender 5000 time 17500 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 17600
 STEP 9 - SIMULATION PHASE - Tics = 17600
@@ -2877,6 +3092,9 @@ STEP 9 - SIMULATION PHASE - Tics = 17650
 STEP 5 - SIMULATION PHASE - Tics = 17700
 STEP 6 - SIMULATION PHASE - Tics = 17700
 STEP 7 - SIMULATION PHASE - Tics = 17700
+Received CPM at node 2  sender 5000 time 17600 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
+Received MCM from a vehicle at node 2  sender 5000 time 17600 Message size 190
+Received MCM from a vehicle at node 3  sender 5000 time 17600 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 17700
 STEP 9 - SIMULATION PHASE - Tics = 17700
@@ -2893,6 +3111,9 @@ STEP 9 - SIMULATION PHASE - Tics = 17750
 STEP 5 - SIMULATION PHASE - Tics = 17800
 STEP 6 - SIMULATION PHASE - Tics = 17800
 STEP 7 - SIMULATION PHASE - Tics = 17800
+Received CPM at node 5000  sender 2 time 17700 Number OF Received Obstacles in the CPM 0 CPM Message Size 156
+Received MCM at node 5000  sender 2 time 17700
+Received MCM at node 5000  sender 3 time 17700
 
 STEP 8 - SIMULATION PHASE - Tics = 17800
 STEP 9 - SIMULATION PHASE - Tics = 17800
@@ -2909,6 +3130,7 @@ STEP 9 - SIMULATION PHASE - Tics = 17850
 STEP 5 - SIMULATION PHASE - Tics = 17900
 STEP 6 - SIMULATION PHASE - Tics = 17900
 STEP 7 - SIMULATION PHASE - Tics = 17900
+Received CPM at node 3  sender 5000 time 17800 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 17900
 STEP 9 - SIMULATION PHASE - Tics = 17900
@@ -2925,6 +3147,7 @@ STEP 9 - SIMULATION PHASE - Tics = 17950
 STEP 5 - SIMULATION PHASE - Tics = 18000
 STEP 6 - SIMULATION PHASE - Tics = 18000
 STEP 7 - SIMULATION PHASE - Tics = 18000
+Received CPM at node 3  sender 5000 time 17900 Number OF Received Obstacles in the CPM 1 CPM Message Size 191
 
 STEP 8 - SIMULATION PHASE - Tics = 18000
 STEP 9 - SIMULATION PHASE - Tics = 18000
@@ -2973,6 +3196,7 @@ STEP 9 - SIMULATION PHASE - Tics = 18250
 STEP 5 - SIMULATION PHASE - Tics = 18300
 STEP 6 - SIMULATION PHASE - Tics = 18300
 STEP 7 - SIMULATION PHASE - Tics = 18300
+Received CPM at node 3  sender 5000 time 18200 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 18300
 STEP 9 - SIMULATION PHASE - Tics = 18300
@@ -3021,6 +3245,7 @@ STEP 9 - SIMULATION PHASE - Tics = 18550
 STEP 5 - SIMULATION PHASE - Tics = 18600
 STEP 6 - SIMULATION PHASE - Tics = 18600
 STEP 7 - SIMULATION PHASE - Tics = 18600
+Received CPM at node 3  sender 5000 time 18500 Number OF Received Obstacles in the CPM 1 CPM Message Size 156
 
 STEP 8 - SIMULATION PHASE - Tics = 18600
 STEP 9 - SIMULATION PHASE - Tics = 18600
@@ -3053,6 +3278,7 @@ STEP 9 - SIMULATION PHASE - Tics = 18750
 STEP 5 - SIMULATION PHASE - Tics = 18800
 STEP 6 - SIMULATION PHASE - Tics = 18800
 STEP 7 - SIMULATION PHASE - Tics = 18800
+Received MCM from a vehicle at node 3  sender 5000 time 18700 Message size 190
 
 STEP 8 - SIMULATION PHASE - Tics = 18800
 STEP 9 - SIMULATION PHASE - Tics = 18800
@@ -3069,6 +3295,7 @@ STEP 9 - SIMULATION PHASE - Tics = 18850
 STEP 5 - SIMULATION PHASE - Tics = 18900
 STEP 6 - SIMULATION PHASE - Tics = 18900
 STEP 7 - SIMULATION PHASE - Tics = 18900
+Received MCM at node 5000  sender 3 time 18800
 
 STEP 8 - SIMULATION PHASE - Tics = 18900
 STEP 9 - SIMULATION PHASE - Tics = 18900

@@ -53,4 +53,5 @@ YansWifiPhyHelper::Default ns3::NistErrorRateModel
 YansWifiPhyHelper::Default ns3::NistErrorRateModel
 YansWifiPhyHelper::Default ns3::NistErrorRateModel
 YansWifiPhyHelper::Default ns3::NistErrorRateModel
-2 Install on node 1 com WaveVehicle
+1.1 Install on node 1 com WaveVehicle
+1.1 Install on node 2 com WaveVehicle
