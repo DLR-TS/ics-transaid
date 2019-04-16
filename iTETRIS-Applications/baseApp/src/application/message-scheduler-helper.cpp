@@ -81,7 +81,7 @@ namespace baseapp {
         		}
         	}
 
-            std::cout << "Starting  Message Scheduler"  << std::endl;
+            // std::cout << "Starting  Message Scheduler"  << std::endl;
 
             Start();
 
