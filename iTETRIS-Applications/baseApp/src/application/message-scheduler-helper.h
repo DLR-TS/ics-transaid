@@ -46,8 +46,8 @@ namespace baseapp {
             ///             m_msgScheduler = std::make_shared<MessageScheduler>(GetController());
             ///        		GetController()->registerMessageReceptionListener(m_msgScheduler);
 	        /// @note  The payload pointer will be deleted externally after this call.
-            /// TODO: Add into Wiki, add to test (to )
-	        void ReceiveMessage(int receiverID, server::Payload * payload, double snr, bool mobileNode = false);
+            /// TODO: Add into Wiki, add test
+	        void ReceiveMessage(int receiverID, server::Payload * payload, double snr, bool mobileNode = false) override;
 
             void V2XmessageScheduler();
 

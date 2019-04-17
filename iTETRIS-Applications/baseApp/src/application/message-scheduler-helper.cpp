@@ -149,9 +149,9 @@ namespace baseapp {
             TransaidHeader::CamInfo  * message = new TransaidHeader::CamInfo() ;
             message->generationTime = CurrentTime::Now();
             message->senderID = m_node_interface->GetId();
-            message->position = m_node_interface->GetPosition(); // TODO update correctly
-            message->speed = 0 ; // TODO update correctly
-            message->acceleration = 0 ; //TODO update correctly
+            message->position = m_node_interface->GetPosition();
+            message->speed = m_node_interface->GetSpeed();
+            message->acceleration = m_node_interface->GetNode()->getAcceleration();
 
             m_lastCAMsent = *message;
 
