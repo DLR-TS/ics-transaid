@@ -59,10 +59,10 @@ namespace ns3
     void iTETRISResults::LogPacketsTx(std::string context, Ptr<const Packet> packet, double distanceTxRx, uint32_t sendernodeId){
 
 
-        Ptr<MobilityModel> mobModel = m_TransAIDNodes.Get(sendernodeId)->GetObject<MobilityModel>();
+      //  Ptr<MobilityModel> mobModel = m_TransAIDNodes.Get(sendernodeId)->GetObject<MobilityModel>();
 
-        if (mobModel->GetPosition().x > 0 && mobModel->GetPosition().x < 10000 ) // TODO update the conditions of the border of the scenario
-        {
+      //  if (mobModel->GetPosition().x > 0 && mobModel->GetPosition().x < 10000 ) // TODO update the conditions of the border of the scenario
+       // {
 
             V2XmessageTypeTag v2x_tag;
             packet->PeekPacketTag(v2x_tag);
@@ -115,7 +115,7 @@ namespace ns3
                         ++m_PDRdata.countTx[indexAux];
                     }
             }
-        }
+       // }
 
     }
 
@@ -131,7 +131,7 @@ namespace ns3
 
         char temp[3];
         int j=0;
-        int count = 0;
+        int count = 0;c
         int numbers[]= {1,10,100,1000};
         int h =0;
         for(int i = 10; i < 14; ++i)
@@ -153,11 +153,11 @@ namespace ns3
 
         if(m_TransAIDNodes.GetById(nodeRx)!=NULL){
 
-        Ptr<MobilityModel> modelrx = m_TransAIDNodes.GetById(nodeRx)->GetObject<MobilityModel>();
-        Ptr<MobilityModel> modeltx = m_TransAIDNodes.GetById(sendernodeId)->GetObject<MobilityModel>();
+       // Ptr<MobilityModel> modelrx = m_TransAIDNodes.GetById(nodeRx)->GetObject<MobilityModel>();
+       // Ptr<MobilityModel> modeltx = m_TransAIDNodes.GetById(sendernodeId)->GetObject<MobilityModel>();
 
-        if ( (modelrx->GetPosition().x > 0 && modelrx->GetPosition().x < 10000) && (modeltx->GetPosition().x > 0 && modeltx->GetPosition().x < 10000)  ) // TODO update the conditions of the border of the scenario
-        {
+       // if ( (modelrx->GetPosition().x > -100000 && modelrx->GetPosition().x < 1000000) && (modeltx->GetPosition().x > -100000 && modeltx->GetPosition().x < 10000000)  ) // TODO update the conditions of the border of the scenario
+       // {
 
             int indexAux;
 
@@ -174,6 +174,7 @@ namespace ns3
                         ++m_PDRdataCAM.countRx[N_LAST_STEP];
                     } else {
                         indexAux = floor(distanceTxRx / 10);
+
                         ++m_PDRdataCAM.countRx[indexAux];
                     }
 
@@ -197,6 +198,7 @@ namespace ns3
                         ++m_PDRdataMCM.countRx[N_LAST_STEP];
                     } else {
                         indexAux = floor(distanceTxRx / 10);
+
                         ++m_PDRdataMCM.countRx[indexAux];
                     }
                     break; //optional
@@ -219,16 +221,14 @@ namespace ns3
                     itNAR = m_NARdataMap.find(nodeRx);
                     if (itNAR != m_NARdataMap.end()) {
 
-                        std::map<int, double>::iterator itNARrx;
-                        itNARrx = (*itNAR).second.detectedVehicles.find(nodeRx);
+                        std::map<int, int>::iterator itNARrx;
+                        itNARrx = (*itNAR).second.detectedVehicles.find(sendernodeId);
                         if (itNARrx != (*itNAR).second.detectedVehicles.end()) {
                             if ( (*itNARrx).second < distanceTxRx ){
                                 (*itNARrx).second = distanceTxRx;
-                                std::cout << "Node " << nodeRx << " detected at distance " << distanceTxRx << std::endl;
                             }
                         } else {
                             (*itNAR).second.detectedVehicles.insert((*itNAR).second.detectedVehicles.end(), std::pair<int, double>(nodeRx, distanceTxRx));
-                            std::cout << "Node " << nodeRx << " inserted at distance " << distanceTxRx << std::endl;
                         }
                     }
 
@@ -281,9 +281,7 @@ namespace ns3
             m_LatencyData.latency += Simulator::Now().GetMilliSeconds() - timeStep;
             ++m_LatencyData.countTotal;
 
-        }
-        }else{
-            std::cout << "Node not found" << std::endl;
+        //}
         }
     }
 
@@ -321,7 +319,7 @@ namespace ns3
 
                     if (itNAR != m_NARdataMap.end()) {
 
-                        std::map<int, double>::iterator itNARtot;
+                        std::map<int, int>::iterator itNARtot;
                         itNARtot = (*itNAR).second.totalVehicles.find((*it1)->GetId());
                         if (itNARtot != (*itNAR).second.totalVehicles.end()) {
                             if ( (*itNARtot).second < distance ){
@@ -348,13 +346,14 @@ namespace ns3
 
         // Transmitted Packets PDR
 
-
         std::string data, data1, data2, data3;
 
         data = "Time," + to_string(Simulator::Now().GetMilliSeconds());
         data1 = "Time," + to_string(Simulator::Now().GetMilliSeconds());
         data2 = "Time," + to_string(Simulator::Now().GetMilliSeconds());
         data3 = "Time," + to_string(Simulator::Now().GetMilliSeconds());
+
+        std::cout << data << std::endl;
 
         for (int i=0; i< N_STEPS_METRIC; i++){
 
@@ -371,6 +370,7 @@ namespace ns3
             data2 += "," + to_string(m_PDRdataCPM.countTx[i]);
             data3 += "," + to_string(m_PDRdataMCM.countTx[i]);
         }
+
         Ns3Server::outfileLogPacketsPDR << data << std::endl;
         Ns3Server::outfileLogPacketsPDRCAM << data1 << std::endl;
         Ns3Server::outfileLogPacketsPDRCPM << data2 << std::endl;
@@ -378,35 +378,33 @@ namespace ns3
 
         // NAR
 
-        double average_NAR_detected [N_STEPS_METRIC] = {0};
-        double average_NAR_total [N_STEPS_METRIC] = {0};
-        double average_NAR_total_vehicles= {0};
+        int sum_NAR_detected [N_STEPS_METRIC] = {0};
+        int sum_NAR_total [N_STEPS_METRIC] = {0};
 
         std::map<int, NARdata>::iterator it;
 
+
         for (it = m_NARdataMap.begin(); it != m_NARdataMap.end(); ++it)
         {
-            std::map <int,double>::iterator detectedIterator;
+            std::map <int,int>::iterator detectedIterator;
 
             for (detectedIterator = (*it).second.detectedVehicles.begin(); detectedIterator != (*it).second.detectedVehicles.end(); ++detectedIterator)
             {
                 int indexAux = floor( (*detectedIterator).second / 10);
                 for (int i = 0; i < indexAux; i++) {
-                    ++average_NAR_detected[i];
+                    ++sum_NAR_detected[i];
                 }
             }
 
-            std::map <int,double>::iterator totalIterator;
+            std::map <int,int>::iterator totalIterator;
 
             for (totalIterator = (*it).second.totalVehicles.begin(); totalIterator != (*it).second.totalVehicles.end(); ++totalIterator)
             {
                 int indexAux = floor( (*totalIterator).second / 10);
                 for (int i = 0; i < indexAux; i++) {
-                    ++average_NAR_total[i];
+                    ++sum_NAR_total[i];
                 }
             }
-            ++average_NAR_total_vehicles;
-
         }
 
 
@@ -416,18 +414,17 @@ namespace ns3
 
         for (int i=0; i< N_STEPS_METRIC; i++){
 
-            data += "," + to_string(average_NAR_detected[i]);
+            data += "," + to_string(sum_NAR_detected[i]);
 
         }
 
         for (int i=0; i< N_STEPS_METRIC; i++){
 
-            data += "," + to_string(average_NAR_total[i]);
+            data += "," + to_string(sum_NAR_total[i]);
 
         }
 
         data += "," + to_string(m_NARdataMap.size());
-
 
         Ns3Server::outfileLogNAR << data << std::endl;
 
