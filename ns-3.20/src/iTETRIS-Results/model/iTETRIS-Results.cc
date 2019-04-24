@@ -131,7 +131,7 @@ namespace ns3
 
         char temp[3];
         int j=0;
-        int count = 0;c
+        int count = 0;
         int numbers[]= {1,10,100,1000};
         int h =0;
         for(int i = 10; i < 14; ++i)
