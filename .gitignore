@@ -56,6 +56,25 @@ iTETRIS-Applications/transaidUC2App/src/uc2App
 iTETRIS-Applications/transaidUC3App/src/uc3App
 iTETRIS-Applications/transaidUC4App/src/uc4App
 iTETRIS-Applications/transaidUC5App/src/uc5App
+TransAIDScenarios/**/outputSSM.xml
+TransAIDScenarios/**/outputEmission.xml
+TransAIDScenarios/**/outputLaneChanges.xml
+TransAIDScenarios/**/outputMeandata.xml
+TransAIDScenarios/**/outputQueue.xml
+TransAIDScenarios/**/outputSummary.xml
+TransAIDScenarios/**/*log*.txt
+TransAIDScenarios/**/app-data.txt
+TransAIDScenarios/**/loop.xml
+TransAIDScenarios/**/area.xml
+TransAIDScenarios/**/E2.xml
+TransAIDScenarios/**/Latency.csv
+TransAIDScenarios/**/Latency.csv
+TransAIDScenarios/**/NAR.csv
+TransAIDScenarios/**/NIR.csv
+TransAIDScenarios/**/PDR.csv
+TransAIDScenarios/**/PDR_CAM.csv
+TransAIDScenarios/**/PDR_CPM.csv
+TransAIDScenarios/**/PDR_MCM.csv
 iCS/docs/man/
 iCS/docs/html/
 iCS/docs/latex/
@@ -74,13 +93,13 @@ iTETRIS-Applications/testApp/testScenario/*.txt
 iTETRIS-Applications/testApp/docs/html
 iTETRIS-Applications/testApp/docs/man
 iTETRIS-Applications/testApp/docs/latex
+iTETRIS-Applications/**/confdefs.h
+iTETRIS-Applications/**/conftest.c
+iTETRIS-Applications/**/conftest.err
 TransAIDScenarios/**/los_*
 iCS/tests/iCS/**/data/*.csv
 .idea/
 CMakeLists.txt
 cmake-build-debug/
 **/cmake-build-debug/
-<<<<<<< HEAD
 
-=======
->>>>>>> transaid-comms
