@@ -1,7 +1,8 @@
 [28,250] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 4
 [28,250] [INFO] [facilities] messages to be deleted this time: 000000500000094,
 [28,250] [INFO] [LDMLogic::cleanup] IFMT size 3, removed 1. IFPT size 1, removed 0
-[28,250] Tics=28250 StepT=85 ns3T=11 %ns3=12.9412 DispMsgs=5 MsgQueue=4
+[28,250] Tics=28250 StepT=156 ns3T=30 %ns3=19.2308 DispMsgs=5 MsgQueue=4
+[28,250] [INFO] .. Command acknowledged (22), [description: CMD_NEW_SIMSTEP]
 [28,250] [INFO] Reached CommandSimulationStep... = 
 [28,250] [INFO] Message Sent...
 [28,250] [INFO] Message Received.
@@ -2010,7 +2011,8 @@ Node 37 received 1 msgs. [99->0, ]
 [28,500] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 4
 [28,500] [INFO] [facilities] messages to be deleted this time: 000000500000095,
 [28,500] [INFO] [LDMLogic::cleanup] IFMT size 3, removed 1. IFPT size 1, removed 0
-[28,500] Tics=28500 StepT=32 ns3T=7 %ns3=21.875 DispMsgs=6 MsgQueue=4
+[28,500] Tics=28500 StepT=123 ns3T=40 %ns3=32.5203 DispMsgs=6 MsgQueue=4
+[28,500] [INFO] .. Command acknowledged (22), [description: CMD_NEW_SIMSTEP]
 [28,500] [INFO] Reached CommandSimulationStep... = 
 [28,500] [INFO] Message Sent...
 [28,500] [INFO] Message Received.
@@ -4013,7 +4015,8 @@ Node 29 received 1 msgs. [100->0, ]
 [28,500] [INFO] RefreshScheduledMessageMap() Current size=5. Removed=0 time1250
 [28,750] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 4
 [28,750] [INFO] [LDMLogic::cleanup] IFMT size 4, removed 0. IFPT size 1, removed 0
-[28,750] Tics=28750 StepT=44 ns3T=8 %ns3=18.1818 DispMsgs=5 MsgQueue=5
+[28,750] Tics=28750 StepT=73 ns3T=27 %ns3=36.9863 DispMsgs=5 MsgQueue=5
+[28,750] [INFO] .. Command acknowledged (22), [description: CMD_NEW_SIMSTEP]
 [28,750] [INFO] Reached CommandSimulationStep... = 
 [28,750] [INFO] Message Sent...
 [28,750] [INFO] Message Received.
@@ -6017,7 +6020,8 @@ Node 29 received 1 msgs. [101->0, ]
 [29,000] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 5
 [29,000] [INFO] [facilities] messages to be deleted this time: 000000500000096,
 [29,000] [INFO] [LDMLogic::cleanup] IFMT size 4, removed 1. IFPT size 1, removed 0
-[29,000] Tics=29000 StepT=51 ns3T=7 %ns3=13.7255 DispMsgs=5 MsgQueue=5
+[29,000] Tics=29000 StepT=47 ns3T=17 %ns3=36.1702 DispMsgs=5 MsgQueue=5
+[29,000] [INFO] .. Command acknowledged (22), [description: CMD_NEW_SIMSTEP]
 [29,000] [INFO] Reached CommandSimulationStep... = 
 [29,000] [INFO] Message Sent...
 [29,000] [INFO] Message Received.
@@ -9247,7 +9251,8 @@ Node 29 received 1 msgs. [102->0, ]
 [29,250] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 5
 [29,250] [INFO] [facilities] messages to be deleted this time: 000000500000097,
 [29,250] [INFO] [LDMLogic::cleanup] IFMT size 4, removed 1. IFPT size 1, removed 0
-[29,250] Tics=29250 StepT=152 ns3T=7 %ns3=4.60526 DispMsgs=5 MsgQueue=5
+[29,250] Tics=29250 StepT=244 ns3T=38 %ns3=15.5738 DispMsgs=5 MsgQueue=5
+[29,250] [INFO] .. Command acknowledged (22), [description: CMD_NEW_SIMSTEP]
 [29,250] [INFO] Reached CommandSimulationStep... = 
 [29,250] [INFO] Message Sent...
 [29,250] [INFO] Message Received.
@@ -11297,7 +11302,8 @@ Node 37 received 1 msgs. [103->0, ]
 [29,500] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 5
 [29,500] [INFO] [facilities] messages to be deleted this time: 000000500000098,
 [29,500] [INFO] [LDMLogic::cleanup] IFMT size 4, removed 1. IFPT size 0, removed 0
-[29,500] Tics=29500 StepT=53 ns3T=8 %ns3=15.0943 DispMsgs=7 MsgQueue=4
+[29,500] Tics=29500 StepT=127 ns3T=20 %ns3=15.748 DispMsgs=7 MsgQueue=4
+[29,500] [INFO] .. Command acknowledged (22), [description: CMD_NEW_SIMSTEP]
 [29,500] [INFO] Reached CommandSimulationStep... = 
 [29,500] [INFO] Message Sent...
 [29,500] [INFO] Message Received.
@@ -13313,7 +13319,8 @@ Node 37 received 1 msgs. [103->0, ]
 [29,750] [INFO] [facilities] - launchIFMTCleanupManager: total number of stored messages iFMT: 4
 [29,750] [INFO] [facilities] messages to be deleted this time: 000000500000099,
 [29,750] [INFO] [LDMLogic::cleanup] IFMT size 3, removed 1. IFPT size 1, removed 0
-[29,750] Tics=29750 StepT=50 ns3T=6 %ns3=12 DispMsgs=0 MsgQueue=4
+[29,750] Tics=29750 StepT=80 ns3T=24 %ns3=30 DispMsgs=0 MsgQueue=4
+[29,750] [INFO] .. Command acknowledged (22), [description: CMD_NEW_SIMSTEP]
 [29,750] [INFO] Reached CommandSimulationStep... = 
 [29,750] [INFO] Message Sent...
 [29,750] [INFO] Message Received.
