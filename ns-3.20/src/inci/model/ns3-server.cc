@@ -46,6 +46,9 @@ using namespace tcpip;
 
 NS_LOG_COMPONENT_DEFINE ("Ns3Server");
 
+// Comment to disable result logging
+#define LOG_ITETRIS_RESULTS
+
 namespace ns3
 {
 
@@ -72,6 +75,7 @@ namespace ns3
 		my_packetManagerPtr = packetManager;
 
 
+#ifdef LOG_ITETRIS_RESULTS
 		// Log results TransAID
         outfileLogPacketsPDR.open("PDR.csv"); // Added by A Correa
         outfileLogPacketsPDRCAM.open("PDR_CAM.csv"); // Added by A Correa
@@ -82,6 +86,9 @@ namespace ns3
         outfileLogNIR.open("NIR.csv" ); // Added by A Correa
         outfileLogLatency.open("Latency.csv"); // Added by A Correa
         my_resultsManager = new iTETRISResults(); // Added by A Correa
+#else
+        my_resultsManager = nullptr; // Added by A Correa
+#endif
         //
 
 		try
@@ -422,8 +429,9 @@ namespace ns3
 		NS_LOG_INFO(Simulator::Now().GetSeconds() << " RunSimStep " << time);
 		targetTime_ = time;
 
+#ifdef LOG_ITETRIS_RESULTS
         my_resultsManager->LogAwarenessRatio(my_nodeManagerPtr->GetItetrisNodes()); // Added by A Correa
-
+#endif
         Simulator::Stop(MilliSeconds(time) - Simulator::Now());
         Simulator::Run();
 
@@ -466,6 +474,7 @@ namespace ns3
 
 
 
+#ifdef LOG_ITETRIS_RESULTS
         // Log results TransAID // Added by A Correa
         std::ostringstream resultString;
         resultString << "/NodeList/"
@@ -481,7 +490,8 @@ namespace ns3
                      << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
 
          Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsRx,my_resultsManager) );
-        //
+#endif
+         //
 
 
 
@@ -532,6 +542,7 @@ namespace ns3
 		Log((log.str()).c_str());
 #endif
 
+#ifdef LOG_ITETRIS_RESULTS
         // Log results TransAID // Added by A Correa
         std::ostringstream resultString;
         resultString << "/NodeList/"
@@ -539,7 +550,6 @@ namespace ns3
                      << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyTxDist";
 
         Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsTx,my_resultsManager) );
-
         resultString.str("");
 
         resultString << "/NodeList/"
@@ -547,7 +557,7 @@ namespace ns3
                      << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
 
        Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsRx,my_resultsManager) );
-
+#endif
         //
 
 		writeStatusCmd(CMD_CREATENODE2, RTYPE_OK, "CreateNode2()");
