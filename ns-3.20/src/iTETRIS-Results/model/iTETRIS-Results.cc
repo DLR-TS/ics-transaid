@@ -353,7 +353,7 @@ namespace ns3
         data2 = "Time," + to_string(Simulator::Now().GetMilliSeconds());
         data3 = "Time," + to_string(Simulator::Now().GetMilliSeconds());
 
-        std::cout << data << std::endl;
+//        std::cout << data << std::endl;
 
         for (int i=0; i< N_STEPS_METRIC; i++){
 
