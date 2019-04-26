@@ -204,7 +204,8 @@ namespace baseapp
 			for (std::vector<MobilityInfo*>::const_iterator it = info.begin(); it != info.end(); ++it)
 			{
 				Node * node;
-				if (getNode((*it)->id, node))
+				const int nodeID = (*it)->id;
+				if (getNode(nodeID, node))
 				{
 					node->updateMobilityInformation(*it);
 				} else
@@ -213,18 +214,13 @@ namespace baseapp
 						node = new MobileNode(*it, m_factory);
 					else
 					{
-						node = new FixedStation((*it)->id, m_factory);
+						node = new FixedStation(nodeID, m_factory);
 						node->updateMobilityInformation(*it);
 					}
-					Log::WriteLog(std::ostringstream("Added new node with id " + toString((*it)->id)));
+					Log::WriteLog(std::ostringstream("Added new node with id " + toString(nodeID)));
 					++count;
 					addNode(node);
 				}
-			}
-			FixedStation * node;
-			if (asStation(nodeId, node))
-			{
-				node->mobilityInformationHasRun();
 			}
 			return count;
 		}

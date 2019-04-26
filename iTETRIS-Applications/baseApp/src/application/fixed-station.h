@@ -64,7 +64,6 @@ namespace baseapp
                 float getAcceleration() const;
 				double getDirection() const;
 				void updateMobilityInformation(MobilityInfo * info);
-				void mobilityInformationHasRun();
 
 				/**
 				 * @brief Called with the updated information about the traffic light.

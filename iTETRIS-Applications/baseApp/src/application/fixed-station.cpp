@@ -73,10 +73,6 @@ namespace baseapp
 			delete info;
 		}
 
-		void FixedStation::mobilityInformationHasRun()
-		{
-		}
-
 		Vector2D FixedStation::getPosition() const
 		{
 			return m_rsuData.position;
