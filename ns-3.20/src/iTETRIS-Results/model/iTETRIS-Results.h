@@ -76,7 +76,7 @@ namespace ns3
          void LogPacketsTx(std::string context, Ptr<const Packet> packet , double distanceTxRx, uint32_t sendernodeId);
          void LogPacketsRx(std::string context, Ptr<const Packet> packet , double distanceTxRx, uint32_t sendernodeId);
 
-         void LogAwarenessRatio(NodeContainer m_NodeContainer);
+         void LogAwarenessRatio(const NodeContainer& m_NodeContainer);
 
          void writeResults();
 
@@ -100,7 +100,7 @@ namespace ns3
 
         int m_interval;
 
-        NodeContainer m_TransAIDNodes;
+        const NodeContainer * m_TransAIDNodes;
 	};
 
 } // namespace ns3

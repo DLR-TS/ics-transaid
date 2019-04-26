@@ -151,7 +151,7 @@ namespace ns3
         int nodeRx = h;
 
 
-        if(m_TransAIDNodes.GetById(nodeRx)!=NULL){
+        if(m_TransAIDNodes->GetById(nodeRx)!=NULL){
 
        // Ptr<MobilityModel> modelrx = m_TransAIDNodes.GetById(nodeRx)->GetObject<MobilityModel>();
        // Ptr<MobilityModel> modeltx = m_TransAIDNodes.GetById(sendernodeId)->GetObject<MobilityModel>();
@@ -285,10 +285,10 @@ namespace ns3
         }
     }
 
-    void iTETRISResults::LogAwarenessRatio(NodeContainer m_NodeContainer){
+    void iTETRISResults::LogAwarenessRatio(const NodeContainer& m_NodeContainer){
 
 
-        m_TransAIDNodes = m_NodeContainer;
+        m_TransAIDNodes = &m_NodeContainer;
 
 
         double distance;
