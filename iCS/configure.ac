@@ -66,6 +66,15 @@ else
     ac_disabled="$ac_disabled LogOn"
 fi
 
+dnl disable Steplogging
+AC_ARG_ENABLE([steplog], [AS_HELP_STRING([--disable-steplog],[Write each iCS step to stdout.])])
+if test x$enable_steplog != xno; then
+    AC_DEFINE([STEPLOG_ON], 1, [Steplogging is active])
+    ac_enabled="$ac_enabled SteplogOn"
+else    
+    ac_disabled="$ac_disabled SteplogOn"
+fi
+
 
 dnl Checks for programs.
 AC_PROG_CC

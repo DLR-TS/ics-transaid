@@ -273,6 +273,7 @@ int SyncManager::Run(bool interactive)
 			cout << endl;
 			utils::Conversion::Wait("Press <Enter> to run the next ns-3 timestep");
 			cout << endl;
+#ifdef STEPLOG_ON
 			cout << "STEP 5 - SIMULATION PHASE - Tics = " << m_simStep << endl;
 			cout << "======================================" << endl;
 			cout << "[ns-3] EXECUTING EVENTS Tns-3 = Tics + 1" << endl;
@@ -281,9 +282,12 @@ int SyncManager::Run(bool interactive)
 			cout << "[SUMO] WAITING." << endl;
 			utils::Conversion::Wait("Press <Enter> to continue...");
 			cout << endl;
+#endif
 		} else
 		{
+#ifdef STEPLOG_ON
 			cout << "STEP 5 - SIMULATION PHASE - Tics = " << m_simStep << endl;
+#endif
 		}
 
 #ifdef APPLICATIONS_ON
@@ -315,6 +319,7 @@ int SyncManager::Run(bool interactive)
 			cout << endl << endl;
 			utils::Conversion::Wait("Press <Enter> to run the next SUMO timestep");
 			cout << endl;
+#ifdef STEPLOG_ON
 			cout << "STEP 6 - SIMULATION PHASE - Tics = " << m_simStep << endl;
 			cout << "======================================" << endl;
 			cout << "[ns-3] CREATE NEW NODES." << endl;
@@ -323,9 +328,12 @@ int SyncManager::Run(bool interactive)
 			cout << "[SUMO] EXECUTING EVENTS = Tics" << endl;
 			utils::Conversion::Wait("Press <Enter> to continue...");
 			cout << endl;
+#endif
 		} else
 		{
+#ifdef STEPLOG_ON
 			cout << "STEP 6 - SIMULATION PHASE - Tics = " << m_simStep << endl;
+#endif
 		}
 
 #ifdef SUMO_ON
@@ -360,6 +368,7 @@ int SyncManager::Run(bool interactive)
 		{
 			utils::Conversion::Wait("Press <Enter> to run the next Application round");
 			cout << endl;
+#ifdef STEPLOG_ON
 			cout << "STEP 7 - SIMULATION PHASE - Tics = " << m_simStep << endl;
 			cout << "======================================" << endl;
 			cout << "[ns-3] WAITING" << endl;
@@ -368,9 +377,12 @@ int SyncManager::Run(bool interactive)
 			cout << "[SUMO] WAITING" << endl;
 			utils::Conversion::Wait("Press <Enter> to continue...");
 			cout << endl;
+#endif
 		} else
 		{
+#ifdef STEPLOG_ON
 			cout << "STEP 7 - SIMULATION PHASE - Tics = " << m_simStep << endl;
+#endif
 		}
 
 #ifdef APPLICATIONS_ON
@@ -388,6 +400,7 @@ int SyncManager::Run(bool interactive)
 		{
 			utils::Conversion::Wait("Press <Enter> to process the result of Applications");
 			cout << endl;
+#ifdef STEPLOG_ON
 			cout << "STEP 8 - SIMULATION PHASE - Tics = " << m_simStep << endl;
 			cout << "======================================" << endl;
 			cout << "[ns-3] WAITING" << endl;
@@ -396,9 +409,12 @@ int SyncManager::Run(bool interactive)
 			cout << "[SUMO] WAITING" << endl;
 			utils::Conversion::Wait("Press <Enter> to continue...");
 			cout << endl;
+#endif
 		} else
 		{
+#ifdef STEPLOG_ON
 			cout << "STEP 8 - SIMULATION PHASE - Tics = " << m_simStep << endl;
+#endif
 		}
 #ifdef APPLICATIONS_ON
 		if (m_simStep >= m_firstTimeStep)
@@ -418,6 +434,7 @@ int SyncManager::Run(bool interactive)
 			cout << endl;
 			utils::Conversion::Wait("Press <Enter> to update positions in ns-3");
 			cout << endl;
+#ifdef STEPLOG_ON
 			cout << "STEP 9 - SIMULATION PHASE - Tics = " << m_simStep << endl;
 			cout << "========================================" << endl;
 			cout << "[ns-3] UPDATE POSITIONS." << endl;
@@ -426,9 +443,12 @@ int SyncManager::Run(bool interactive)
 			cout << "[SUMO] WAITING." << endl;
 			utils::Conversion::Wait("Press <Enter> to continue...");
 			cout << endl;
+#endif
 		} else
 		{
+#ifdef STEPLOG_ON
 			cout << "STEP 9 - SIMULATION PHASE - Tics = " << m_simStep << endl;
+#endif
 		}
 
 #ifdef NS3_ON
@@ -458,9 +478,11 @@ int SyncManager::Run(bool interactive)
 		// To not display the last time step header
 		if (m_lastTimeStep >= m_simStep)
 		{
+#ifdef STEPLOG_ON
 			cout << "\t\tiCS --> Global simulation timestep is: " << m_simStep << "; last step is: " << m_lastTimeStep
 					<< endl;
 			cout << "\t\t============================================================" << endl;
+#endif
 		}
 	}
 
