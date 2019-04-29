@@ -382,10 +382,6 @@ namespace ns3
         int sum_NAR_detected [N_STEPS_METRIC] = {0};
         int sum_NAR_total [N_STEPS_METRIC] = {0};
 
-//        for (int i = 0; i < N_STEPS_METRIC; ++i) {
-//        	std::cout << "sum_NAR_total[" << i << "]=" << sum_NAR_total[i] << endl;
-//        }
-
         std::map<int, NARdata>::iterator it;
 
 
@@ -397,7 +393,6 @@ namespace ns3
             {
                 int indexAux = std::min(N_LAST_STEP, (int) floor( (*detectedIterator).second / 10));
                 for (int i = 0; i < indexAux; i++) {
-//                	std::cout << "(1) i=" << i << std::endl;
                     ++sum_NAR_detected[i];
                 }
             }
@@ -408,7 +403,6 @@ namespace ns3
             {
                 int indexAux = std::min(N_LAST_STEP, (int) floor( (*totalIterator).second / 10));
                 for (int i = 0; i < indexAux; i++) {
-//                	std::cout << "(2) i=" << i << std::endl;
                     ++sum_NAR_total[i];
                 }
             }
@@ -472,7 +466,6 @@ namespace ns3
 */
 
         Simulator::Schedule(Seconds(m_interval),&iTETRISResults::writeResults,this);
-//    	std::cout << "resetting counters..." << std::endl;
         ResetCounters();
     }
 
@@ -480,13 +473,11 @@ namespace ns3
     {
 
         m_PDRdata = {};
-//        std::cout << m_PDRdataCAM.countTx[0] << std::endl;
         m_PDRdataCAM = {};
         m_PDRdataCPM = {};
         m_PDRdataMCM = {};
         m_NARdataMap.clear();
         m_NIRdataMap.clear();
-//    	std::cout << "resetted counters..." << std::endl;
 
     }
 
