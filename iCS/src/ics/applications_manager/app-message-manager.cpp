@@ -1738,7 +1738,7 @@ namespace ics
 			tmpMsg.writeFloat(it->positionY);
 #ifdef LOG_ON
             stringstream log;
-            log<<"[CommandSendSubscriptionMobilityInfo] time step"<<SyncManager::m_simStep<<"nodeID:"<<m_syncManager->GetNodeByIcsId(it->timeStep)->m_tsId<<" position x"<<it->positionX<<":y:"<<it->positionY;
+            log<<"[CommandSendSubscriptionMobilityInfo] time step "<<SyncManager::m_simStep<<", icsID: " << it->timeStep <<", sumoID: "<<m_syncManager->GetNodeByIcsId(it->timeStep)->m_tsId<<", position x:"<<it->positionX<<", y:"<<it->positionY;
             IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
 			tmpMsg.writeUnsignedByte(it->exteriorLights ? 1 : 0);
