@@ -15,11 +15,13 @@ if test "$1" == "debug"; then
     cmake_opt="-DCMAKE_BUILD_TYPE=Debug"
     config_opt="--enable-debug"
     waf_opt="--build-profile=debug"
+    waf_flags="-std=c++11 -g"
 fi
 if test "$1" == "profile"; then
     export CXXFLAGS=-pg
     config_opt="--enable-debug"
     cmake_opt="-DCMAKE_BUILD_TYPE=Debug -DPROFILING=ON"
+    waf_flags="-std=c++11"
 fi
 
 mkdir -p sumo/build/cmake-build$1
@@ -35,7 +37,7 @@ cd ../../..
 
 cd ns-3.20
 echo "## Building ns-3 in $PWD..."
-CXXFLAGS="-std=c++11" ./waf configure $waf_opt --prefix=$PWD/..
+CXXFLAGS="$waf_flags" ./waf configure $waf_opt --prefix=$PWD/..
 if ! ./waf -j8; then
     echo "### Build failed!"
     cd ..
