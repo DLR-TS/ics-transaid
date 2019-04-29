@@ -9,6 +9,7 @@ iCS --> ns-3 launched.
 STEP 2 - SETUP PHASE
 Loading configuration... done.
 testApp -> Starting iTetris test app
+testApp -> [WARNING]Ignoring socket port specified in configuration. (Overridden by command line argument.)
 testApp -> Test case set to testMessageScheduler
 testApp -> ParseGeneral done
 testApp -> ParseInfrastructure done
@@ -19,14 +20,14 @@ main-inci v 3.20
 ns3 -> No option file found. Must be named option.txt
 
 STEP 3 - SETUP PHASE
-iCS --> Trying 0 to connect SUMO on port 60277...
+iCS --> Trying 0 to connect SUMO on port 45233...
 iCS --> Connected to SUMO
 
-iCS --> Trying 0 to connect ns-3 on port 50053 and Host localhost...
+iCS --> Trying 0 to connect ns-3 on port 45069 and Host localhost...
 iCS --> Connected to ns-3
 
-iCS --> Trying 0 to connect Application on port 1987...
-testApp -> Server listening on port: 1987
+iCS --> Trying 0 to connect Application on port 36989...
+testApp -> Server listening on port: 36989
 iCS --> Application testApp connected.
 
 
@@ -2147,7 +2148,7 @@ STEP 6 - SIMULATION PHASE - Tics = 12300
 STEP 7 - SIMULATION PHASE - Tics = 12300
 Received MCM from a vehicle at node 2  sender 3 time 12200 Message size 190
 Received MCM from a vehicle at node 3  sender 2 time 12200 Message size 190
-Received CAM at node 5000  sender 3 time 12200 position -4.56369:1.9636 speed 0 acceleration 0
+Received CAM at node 5000  sender 3 time 12200 position -4.56369:1.9636 speed 11.0191 acceleration 0.26
 Received MCM at node 5000  sender 3 time 12200
 Received MCM at node 5000  sender 2 time 12200
 
@@ -2531,7 +2532,7 @@ STEP 6 - SIMULATION PHASE - Tics = 14500
 STEP 7 - SIMULATION PHASE - Tics = 14500
 Received MCM from a vehicle at node 2  sender 3 time 14400 Message size 190
 Received MCM from a vehicle at node 3  sender 2 time 14400 Message size 190
-Received CAM at node 5000  sender 3 time 14400 position -31.2873:0.691535 speed 0 acceleration 0
+Received CAM at node 5000  sender 3 time 14400 position -31.2873:0.691535 speed 13.8749 acceleration 0
 Received MCM at node 5000  sender 2 time 14400
 Received MCM at node 5000  sender 3 time 14400
 
@@ -4278,4 +4279,4 @@ STEP 9 - SIMULATION PHASE - Tics = 25000
 ns-3 server --> Finishing server.... 
 
 Success.
-Elapsed time (in seconds): 3.00
+Elapsed time (in seconds): 4.00
