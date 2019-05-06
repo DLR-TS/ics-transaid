@@ -90,7 +90,7 @@ typedef enum
 
 typedef enum
 {
-  LANE_CHANGE = 0x01, SPEED = 0x02, GAP = 0x03, TOC = 0x04
+  LANE_CHANGE = 0x01, SPEED = 0x02, GAP = 0x03, TOC = 0x04, HEADWAY = 0x05
 } AdviceType;
 
 const unsigned int ID_ALL = 0xffffffff;

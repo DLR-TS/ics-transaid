@@ -145,6 +145,15 @@ namespace baseapp
             	double tocEndPosition;
             };
 
+            struct HeadwayAdvice : Advice
+            {
+                double newTimeHeadway;
+                double newSpaceHeadway;
+                double duration;
+                double changeRate;
+                double maxDecel;
+            };
+
             struct AdviceInfo
             {
                 AdviceInfo(AdviceType adviceType, std::shared_ptr<Advice> advice) :
@@ -179,6 +188,10 @@ namespace baseapp
                     }
                     case(TOC): {
                         advice = std::make_shared<ToCAdvice>();
+                        break;
+                    }
+                    case(HEADWAY): {
+                        advice = std::make_shared<HeadwayAdvice>();
                         break;
                     }
                     default: {}
