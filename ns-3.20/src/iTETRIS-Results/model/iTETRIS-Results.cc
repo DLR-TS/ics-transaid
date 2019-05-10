@@ -38,6 +38,7 @@
 #include "ns3/time-step-tag.h"
 #include "ns3/node-id-tag.h"
 #include "ns3/v2x-message-type-tag.h"
+#include "ns3/vehicle-sta-mgnt.h"
 
 
 using namespace std;
@@ -123,14 +124,14 @@ namespace ns3
     void iTETRISResults::LogPacketsRx(std::string context, Ptr<const Packet> packet, double distanceTxRx, uint32_t sendernodeId){
 
 
-/*
+
         std::size_t posInit = context.find("/NodeList/");
         std::size_t posEnd = context.find("/DeviceList/");
         std::string strRx = context.substr (posInit+10, (posEnd-posInit-10));
         int nodeRx = std::stoul(strRx);
-*/
 
-        char temp[3];
+
+/*        char temp[3];
         int j=0;
         int count = 0;
         int numbers[]= {1,10,100,1000};
@@ -149,7 +150,7 @@ namespace ns3
             h= h + (numbers[z] * ( (temp[j]-'0')  ) ) ;
 
         }
-        int nodeRx = h;
+        int nodeRx = h;*/
 
 
         if(m_TransAIDNodes->GetById(nodeRx)!=NULL){
@@ -294,53 +295,79 @@ namespace ns3
 
         double distance;
         int indexAux;
+        bool NodeActive = false;
+        bool NodeActiveRx = false;
 
         NodeContainer::Iterator it;
         for (it = m_NodeContainer.Begin(); it != m_NodeContainer.End(); ++it)
         {
             uint32_t nodeId = (*it)->GetId();
 
-            Ptr<MobilityModel> mobModel = (*it)->GetObject<MobilityModel> ();
+            if( (*it)->IsMobileNode()) {
 
-            NodeContainer::Iterator it1;
-            for (it1 = m_NodeContainer.Begin(); it1 != m_NodeContainer.End(); ++it1)
-            {
-                if (nodeId != (*it1)->GetId()){
+                Ptr<VehicleStaMgnt> StaMgnt = (*it)->GetObject<VehicleStaMgnt>();
+                NodeActive = StaMgnt->IsNodeActive();
+            } else {
+                NodeActive = true;
+            }
 
-                    Ptr<MobilityModel> mobModel1 = (*it1)->GetObject<MobilityModel> ();
-                    mobModel->GetPosition();
-
-                    distance =  sqrt( (mobModel->GetPosition().x - mobModel1->GetPosition().x) * (mobModel->GetPosition().x - mobModel1->GetPosition().x)  +
-                                      (mobModel->GetPosition().y - mobModel1->GetPosition().y)*(mobModel->GetPosition().y - mobModel1->GetPosition().y) );
+            if (NodeActive) {
 
 
-                    std::map<int, NARdata>::iterator itNAR;
+                Ptr<MobilityModel> mobModel = (*it)->GetObject<MobilityModel>();
 
-                    itNAR = m_NARdataMap.find(nodeId);
+                NodeContainer::Iterator it1;
+                for (it1 = m_NodeContainer.Begin(); it1 != m_NodeContainer.End(); ++it1) {
+                    if ((*it1)->IsMobileNode()) {
 
-                    if (itNAR != m_NARdataMap.end()) {
-
-                        std::map<int, int>::iterator itNARtot;
-                        itNARtot = (*itNAR).second.totalVehicles.find((*it1)->GetId());
-                        if (itNARtot != (*itNAR).second.totalVehicles.end()) {
-                            if ( (*itNARtot).second < distance ){
-                                (*itNARtot).second = distance;
-                            }
-                        } else {
-                            (*itNAR).second.totalVehicles.insert((*itNAR).second.totalVehicles.end(), std::pair<int, double>((*it1)->GetId(), distance));
-                        }
-                    } else{
-                        NARdata NARdataAux = {};
-                        m_NARdataMap.insert(m_NARdataMap.end(), std::pair<int,NARdata>(nodeId,NARdataAux));
+                        Ptr<VehicleStaMgnt> StaMgntRx = (*it1)->GetObject<VehicleStaMgnt>();
+                        NodeActiveRx = StaMgntRx->IsNodeActive();
+                    } else {
+                        NodeActiveRx = true;
                     }
 
+                    if ((nodeId != (*it1)->GetId()) && NodeActiveRx) {
 
+                        //if (nodeId != (*it1)->GetId()){
+
+                        Ptr<MobilityModel> mobModel1 = (*it1)->GetObject<MobilityModel>();
+                        mobModel->GetPosition();
+
+                        distance = sqrt((mobModel->GetPosition().x - mobModel1->GetPosition().x) *
+                                        (mobModel->GetPosition().x - mobModel1->GetPosition().x) +
+                                        (mobModel->GetPosition().y - mobModel1->GetPosition().y) *
+                                        (mobModel->GetPosition().y - mobModel1->GetPosition().y));
+
+
+                        std::map<int, NARdata>::iterator itNAR;
+
+                        itNAR = m_NARdataMap.find(nodeId);
+
+                        if (itNAR != m_NARdataMap.end()) {
+
+                            std::map<int, int>::iterator itNARtot;
+                            itNARtot = (*itNAR).second.totalVehicles.find((*it1)->GetId());
+                            if (itNARtot != (*itNAR).second.totalVehicles.end()) {
+                                if ((*itNARtot).second < distance) {
+                                    (*itNARtot).second = distance;
+                                }
+                            } else {
+                                (*itNAR).second.totalVehicles.insert((*itNAR).second.totalVehicles.end(),
+                                                                     std::pair<int, double>((*it1)->GetId(), distance));
+                            }
+                        } else {
+                            NARdata NARdataAux = {};
+                            m_NARdataMap.insert(m_NARdataMap.end(), std::pair<int, NARdata>(nodeId, NARdataAux));
+                        }
+
+
+                    }
                 }
+
             }
         }
 
     }
-
 
     void iTETRISResults::writeResults (){
 
@@ -391,7 +418,7 @@ namespace ns3
 
             for (detectedIterator = (*it).second.detectedVehicles.begin(); detectedIterator != (*it).second.detectedVehicles.end(); ++detectedIterator)
             {
-                int indexAux = std::min(N_LAST_STEP, (int) floor( (*detectedIterator).second / 10));
+                int indexAux = std::min(N_STEPS_METRIC, (int) floor( (*detectedIterator).second / 10));
                 for (int i = 0; i < indexAux; i++) {
                     ++sum_NAR_detected[i];
                 }
@@ -401,7 +428,7 @@ namespace ns3
 
             for (totalIterator = (*it).second.totalVehicles.begin(); totalIterator != (*it).second.totalVehicles.end(); ++totalIterator)
             {
-                int indexAux = std::min(N_LAST_STEP, (int) floor( (*totalIterator).second / 10));
+                int indexAux = std::min(N_STEPS_METRIC, (int) floor( (*totalIterator).second / 10));
                 for (int i = 0; i < indexAux; i++) {
                     ++sum_NAR_total[i];
                 }
