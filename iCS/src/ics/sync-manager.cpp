@@ -262,6 +262,7 @@ int SyncManager::Run(bool interactive)
 		if (log_msgNumber != -1)
 			log << " DispMsgs=" << log_msgNumber;
 		log << " MsgQueue=" << m_messageMap.size();
+		log << " NrStations=" << m_facilitiesManager->getAllStations().size();
 		IcsLog::Log((log.str()).c_str());
 		log_stepTime = GetMilliCount();
 		log_msgNumber = 0;
@@ -305,12 +306,12 @@ int SyncManager::Run(bool interactive)
 				utils::Conversion::Wait("iCS --> [ERROR] RunOneNs3TimeStep()");
 				return EXIT_FAILURE;
 			}
-			log_ns3Time = GetMilliSpan(log_ns3Time);
 			if (GetDataFromNs3() == EXIT_FAILURE)
 			{
 				utils::Conversion::Wait("iCS --> [ERROR] GetDataFromNs3()");
 				return EXIT_FAILURE;
 			}
+			log_ns3Time = GetMilliSpan(log_ns3Time);
 		}
 #endif
 
