@@ -29,6 +29,10 @@ alternatively
 
 $ ./build_all.sh debug
 
+or
+
+$ ./build_all.sh profile
+
 --------------------------------
 Step 4 - Set required environment variables
 $ . ./setenv.sh
