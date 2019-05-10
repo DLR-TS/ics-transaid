@@ -51,7 +51,7 @@
 #include <math.h>
 
 
-
+//#define DEBUG_MESSAGING
 
 namespace lightcomm
 {
@@ -691,8 +691,9 @@ namespace lightcomm
 
                 std::string cadena = *senderIt;
 
+#ifdef DEBUG_MESSAGING
                 std::cout << "Sender: " << cadena << " of " << senderIdCollection.size() << " with frequency " << frequency << std::endl;
-
+#endif
                 stringstream temp;
                 int nodeId;
                 temp << cadena;
