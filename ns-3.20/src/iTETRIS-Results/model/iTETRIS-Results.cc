@@ -78,7 +78,7 @@ namespace ns3
                     } else if (distanceTxRx > N_LAST_DISTANCE_STEP) {
                         ++m_PDRdataCAM.countTx[N_LAST_STEP];
                     } else {
-                        int indexAux = floor(distanceTxRx / 10);
+                        int indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
                         ++m_PDRdataCAM.countTx[indexAux];
                     }
                     break; //optional
@@ -89,7 +89,7 @@ namespace ns3
                     } else if (distanceTxRx > N_LAST_DISTANCE_STEP) {
                         ++m_PDRdataCPM.countTx[N_LAST_STEP];
                     } else {
-                        int indexAux = floor(distanceTxRx / 10);
+                        int indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
                         ++m_PDRdataCPM.countTx[indexAux];
                     }
                     break; //optional
@@ -100,7 +100,7 @@ namespace ns3
                     } else if (distanceTxRx > N_LAST_DISTANCE_STEP) {
                         ++m_PDRdataMCM.countTx[N_LAST_STEP];
                     } else {
-                        int indexAux = floor(distanceTxRx / 10);
+                        int indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
                         ++m_PDRdataMCM.countTx[indexAux];
                     }
                     break; //optional
@@ -113,7 +113,7 @@ namespace ns3
                     } else if (distanceTxRx > N_LAST_DISTANCE_STEP) {
                         ++m_PDRdata.countTx[N_LAST_STEP];
                     } else {
-                        int indexAux = floor(distanceTxRx / 10);
+                        int indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
                         ++m_PDRdata.countTx[indexAux];
                     }
             }
@@ -175,7 +175,7 @@ namespace ns3
                     } else if (distanceTxRx > N_LAST_DISTANCE_STEP) {
                         ++m_PDRdataCAM.countRx[N_LAST_STEP];
                     } else {
-                        indexAux = floor(distanceTxRx / 10);
+                        indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
 
                         ++m_PDRdataCAM.countRx[indexAux];
                     }
@@ -188,7 +188,7 @@ namespace ns3
                     } else if (distanceTxRx > N_LAST_DISTANCE_STEP) {
                         ++m_PDRdataCPM.countRx[N_LAST_STEP];
                     } else {
-                        indexAux = floor(distanceTxRx / 10);
+                        indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
                         ++m_PDRdataCPM.countRx[indexAux];
                     }
                     break; //optional
@@ -199,7 +199,7 @@ namespace ns3
                     } else if (distanceTxRx > N_LAST_DISTANCE_STEP) {
                         ++m_PDRdataMCM.countRx[N_LAST_STEP];
                     } else {
-                        indexAux = floor(distanceTxRx / 10);
+                        indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
 
                         ++m_PDRdataMCM.countRx[indexAux];
                     }
@@ -213,7 +213,7 @@ namespace ns3
                     } else if (distanceTxRx > N_LAST_DISTANCE_STEP) {
                         ++m_PDRdata.countRx[N_LAST_STEP];
                     } else {
-                        indexAux = floor(distanceTxRx / 10);
+                        indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
                         ++m_PDRdata.countRx[indexAux];
                     }
 
@@ -267,7 +267,7 @@ namespace ns3
             } else if (distanceTxRx >= 500) {
                 ++(*itNIR).second.countRx[49];
             } else {
-                indexAux = floor(distanceTxRx / 10) - 1;
+                indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10)) - 1;
                 for (int i = 0; i <= indexAux; i++) {
                     ++(*itNIR).second.countRx[i];
                 }
