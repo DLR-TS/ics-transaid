@@ -391,7 +391,7 @@ namespace lightcomm
             for (int i = 0; i < number; ++i)
             {
                 int nodeId = m_inputStorage.readInt();
-
+		m_NodeMap.erase(nodeId);
             }
             writeStatusCmd(CMD_DEACTIVATE_NODE, RTYPE_OK, "DeactivateNode()");
             return true;
