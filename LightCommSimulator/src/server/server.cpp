@@ -391,7 +391,8 @@ namespace lightcomm
             for (int i = 0; i < number; ++i)
             {
                 int nodeId = m_inputStorage.readInt();
-		m_NodeMap.erase(nodeId);
+                m_NodeMap.erase(nodeId);
+
             }
             writeStatusCmd(CMD_DEACTIVATE_NODE, RTYPE_OK, "DeactivateNode()");
             return true;
@@ -516,6 +517,8 @@ namespace lightcomm
 
             }
 
+            m_GeneralReceivedMessageMap.clear();
+
             writeStatusCmd(CMD_GET_ALL_RECEIVED_MESSAGES, RTYPE_OK, "GetReceivedMessages()");
             m_outputStorage.writeInt(4 + 1 + 4 + messageStorage.size());
             m_outputStorage.writeUnsignedByte(CMD_GET_ALL_RECEIVED_MESSAGES);
@@ -592,9 +595,9 @@ namespace lightcomm
 
             float range;
             if (txData.type == "RSU"){
-			            range = 50000; // increased to assure all message from RSU are received
+			    range = 1500; // increased to assure all message from RSU are received
             } else{
-            	range = 50000; // increased to assure all messages are received
+            	range = 1500; // increased to assure all messages are received
             }
 
 			float distance;
