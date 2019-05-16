@@ -75,6 +75,11 @@ class Ns3Server
     static bool Log(const char* message);
     static bool logActive_;
 
+    /// @brief Switch for logging communication KPIs
+    bool myLogCommunicationKPIs;
+
+    /// @name communication KPI logging
+    /// @{
     // Log Results TransAID // Added by A Correa
     iTETRISResults * my_resultsManager;
     static std::ofstream outfileLogPacketsPDR;
@@ -86,6 +91,7 @@ class Ns3Server
     static std::ofstream outfileLogNIR;
     static std::ofstream outfileLogLatency;
     //
+    /// @}
 
 
 

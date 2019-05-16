@@ -47,7 +47,10 @@ NS_LOG_COMPONENT_DEFINE ("iTETRISNodeManager");
 namespace ns3
 {
     
-iTETRISNodeManager::iTETRISNodeManager(){} 
+iTETRISNodeManager::iTETRISNodeManager() :
+		m_logKPIs(false),
+		m_KPIFilePrefix("")
+	{}
 
 uint32_t iTETRISNodeManager::CreateItetrisNode ( Vector position)
 {
@@ -350,5 +353,26 @@ iTETRISNodeManager::GetEdgeId (std::string laneId)
     }
   return edgeId;
 }
+
+
+const std::string&
+iTETRISNodeManager::GetKPIFilePrefix (void) const
+{
+  return m_KPIFilePrefix;
+}
+
+void
+iTETRISNodeManager::SetKPIFilePrefix (const std::string& runID)
+{
+  m_KPIFilePrefix = runID;
+}
+
+
+void
+iTETRISNodeManager::SetKPILogging (bool on)
+{
+	m_logKPIs = on;
+}
+
 
 }

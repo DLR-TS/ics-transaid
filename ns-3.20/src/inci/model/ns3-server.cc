@@ -46,9 +46,6 @@ using namespace tcpip;
 
 NS_LOG_COMPONENT_DEFINE ("Ns3Server");
 
-// Comment to disable result logging
-#define LOG_ITETRIS_RESULTS
-
 namespace ns3
 {
 
@@ -73,22 +70,27 @@ namespace ns3
 		closeConnection_ = false;
 		my_nodeManagerPtr = node_manager;
 		my_packetManagerPtr = packetManager;
+		commands = nullptr;
+		myLogCommunicationKPIs = node_manager->KPILogOn();
 
-
-#ifdef LOG_ITETRIS_RESULTS
-		// Log results TransAID
-        outfileLogPacketsPDR.open("PDR.csv"); // Added by A Correa
-        outfileLogPacketsPDRCAM.open("PDR_CAM.csv"); // Added by A Correa
-        outfileLogPacketsPDRCPM.open("PDR_CPM.csv"); // Added by A Correa
-        outfileLogPacketsPDRMCM.open("PDR_MCM.csv"); // Added by A Correa
-        //outfileLogPacketsTx.open("TransmittedPackets.csv" ); // Added by A Correa
-        outfileLogNAR.open("NAR.csv" ); // Added by A Correa
-        outfileLogNIR.open("NIR.csv" ); // Added by A Correa
-        outfileLogLatency.open("Latency.csv"); // Added by A Correa
-        my_resultsManager = new iTETRISResults(); // Added by A Correa
-#else
-        my_resultsManager = nullptr; // Added by A Correa
-#endif
+		if (myLogCommunicationKPIs) {
+			std::string prefix = node_manager->GetKPIFilePrefix();
+			if (prefix != "") {
+				prefix += "_";
+			}
+			// Log results TransAID
+			outfileLogPacketsPDR.open(prefix + "PDR.csv"); // Added by A Correa
+			outfileLogPacketsPDRCAM.open(prefix + "PDR_CAM.csv"); // Added by A Correa
+			outfileLogPacketsPDRCPM.open(prefix + "PDR_CPM.csv"); // Added by A Correa
+			outfileLogPacketsPDRMCM.open(prefix + "PDR_MCM.csv"); // Added by A Correa
+			//outfileLogPacketsTx.open("TransmittedPackets.csv" ); // Added by A Correa
+			outfileLogNAR.open(prefix + "NAR.csv" ); // Added by A Correa
+			outfileLogNIR.open(prefix + "NIR.csv" ); // Added by A Correa
+			outfileLogLatency.open(prefix + "Latency.csv"); // Added by A Correa
+			my_resultsManager = new iTETRISResults(); // Added by A Correa
+		} else {
+			my_resultsManager = nullptr; // Added by A Correa
+		}
         //
 
 		try
@@ -429,9 +431,9 @@ namespace ns3
 		NS_LOG_INFO(Simulator::Now().GetSeconds() << " RunSimStep " << time);
 		targetTime_ = time;
 
-#ifdef LOG_ITETRIS_RESULTS
-        my_resultsManager->LogAwarenessRatio(my_nodeManagerPtr->GetItetrisNodes()); // Added by A Correa
-#endif
+		if (myLogCommunicationKPIs) {
+			my_resultsManager->LogAwarenessRatio(my_nodeManagerPtr->GetItetrisNodes()); // Added by A Correa
+		}
         Simulator::Stop(MilliSeconds(time) - Simulator::Now());
         Simulator::Run();
 
@@ -473,27 +475,24 @@ namespace ns3
 #endif
 
 
+		if (myLogCommunicationKPIs) {
+			// Log results TransAID // Added by A Correa
+			std::ostringstream resultString;
+			resultString << "/NodeList/"
+					<< nodeId
+					<< "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyTxDist";
 
-#ifdef LOG_ITETRIS_RESULTS
-        // Log results TransAID // Added by A Correa
-        std::ostringstream resultString;
-        resultString << "/NodeList/"
-                     << nodeId
-                     << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyTxDist";
+			Config::Connect (resultString.str (), MakeCallback( &iTETRISResults::LogPacketsTx,my_resultsManager) );
 
-        Config::Connect (resultString.str (), MakeCallback( &iTETRISResults::LogPacketsTx,my_resultsManager) );
+			resultString.str("");
 
-        resultString.str("");
+			resultString << "/NodeList/"
+					<< nodeId
+					<< "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
 
-        resultString << "/NodeList/"
-                     << nodeId
-                     << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
-
-         Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsRx,my_resultsManager) );
-#endif
-         //
-
-
+			Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsRx,my_resultsManager) );
+		}
+		//
 
 		writeStatusCmd(CMD_CREATENODE, RTYPE_OK, "CreateNode()");
 		myOutputStorage.writeUnsignedByte(1 + 1 + 4);
@@ -542,22 +541,22 @@ namespace ns3
 		Log((log.str()).c_str());
 #endif
 
-#ifdef LOG_ITETRIS_RESULTS
-        // Log results TransAID // Added by A Correa
-        std::ostringstream resultString;
-        resultString << "/NodeList/"
-                     << nodeId
-                     << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyTxDist";
+		if (myLogCommunicationKPIs) {
+			// Log results TransAID // Added by A Correa
+			std::ostringstream resultString;
+			resultString << "/NodeList/"
+					<< nodeId
+					<< "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyTxDist";
 
-        Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsTx,my_resultsManager) );
-        resultString.str("");
+			Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsTx,my_resultsManager) );
+			resultString.str("");
 
-        resultString << "/NodeList/"
-                     << nodeId
-                     << "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
+			resultString << "/NodeList/"
+					<< nodeId
+					<< "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
 
-       Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsRx,my_resultsManager) );
-#endif
+			Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsRx,my_resultsManager) );
+		}
         //
 
 		writeStatusCmd(CMD_CREATENODE2, RTYPE_OK, "CreateNode2()");

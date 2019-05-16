@@ -57,7 +57,8 @@ int ConfigurationManagerXml::GetRunNumber (void)
   return m_runNumber;
 }
 
-void ConfigurationManagerXml::SetSeed (int seed)
+void
+ConfigurationManagerXml::SetSeed (int seed)
 {
   m_seed = seed;
 }
@@ -179,9 +180,38 @@ ConfigurationManagerXml::ReadFile (iTETRISNodeManager* nodeManager)
 	  xmlFree (runNumber);
 	} // randomGenerator
 
+
+      if (std::string ((char*)tag) == "KPIFilePrefix")
+	{
+	  xmlChar *runID = xmlTextReaderGetAttribute (reader, BAD_CAST "value");
+	  if (runID == 0)
+	    {
+	      NS_FATAL_ERROR ("Error getting attribute 'value' of element 'KPIFilePrefix'");
+	    }
+	  std::cout << " Parsed runID = " << (char*)runID << std::endl;
+	  nodeManager->SetKPIFilePrefix (std::string((char*)runID));
+	  xmlFree (runID);
+	} // runID
+
+      if (std::string ((char*)tag) == "logKPIs")
+    {
+    	  xmlChar *value = xmlTextReaderGetAttribute (reader, BAD_CAST "value");
+    	  if (value == 0)
+    	    {
+    	      NS_FATAL_ERROR ("Error getting attribute 'value' of element 'logKPIs'");
+    	    }
+    	  std::string valueStr((char*)value);
+    	  const bool logKPIs = (bool) atoi((char*)value);
+    	  std::cout << " Parsed logKPIs = " << logKPIs << std::endl;
+    	  nodeManager->SetKPILogging (logKPIs);
+    	  xmlFree (value);
+    } // enable comm result logging
       rc = xmlTextReaderRead (reader);
     }
   xmlFreeTextReader (reader);
+  if (nodeManager->GetKPIFilePrefix() != "" && !nodeManager->KPILogOn()) {
+	  std::cerr << "ns3::ConfigurationManagerXml: Warning: Specified KPIFilePrefix but KPILog is off." << std::endl;
+  }
 }
 
 

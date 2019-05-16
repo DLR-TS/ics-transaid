@@ -57,6 +57,7 @@ public:
   void ReadFile (iTETRISNodeManager* nodeManager);
   int GetSeed (void);
   int GetRunNumber (void);
+  const std::string & GetRunID (void) const;
 
 
 private:

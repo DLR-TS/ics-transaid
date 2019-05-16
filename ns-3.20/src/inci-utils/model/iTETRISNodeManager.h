@@ -104,6 +104,14 @@ class iTETRISNodeManager
     bool DeactivateNode (uint32_t nodeId);
     bool IsNodeActive (uint32_t nodeId);
 
+    void SetKPIFilePrefix (const std::string& runID);
+    const std::string& GetKPIFilePrefix (void) const;
+    void SetKPILogging (bool on);
+    inline bool KPILogOn() const {
+    	return m_logKPIs;
+    }
+
+
   private:
 
     std::string GetEdgeId (std::string laneId);
@@ -128,6 +136,10 @@ class iTETRISNodeManager
 
     std::vector<Ptr<CommModuleInstaller> > m_defaultModules;
  
+    /// @brief Whether to log communication related KPIs
+    bool m_logKPIs;
+    /// @brief defines an ID for the run (used for naming KPI output files), @see logKPIs
+    std::string m_KPIFilePrefix;
 };
 
 }
