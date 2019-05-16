@@ -53,12 +53,11 @@ namespace ns3
         uint32_t countRx[N_STEPS_METRIC] = {0};
     };
     struct NARdata{
-        std::map <int,int> detectedVehicles;
-        std::map <int,int> totalVehicles;
+        std::map <int,double> detectedVehicles;
+        std::map <int,double> totalVehicles;
     };
     struct NIRdata{
-        double countRx[N_STEPS_METRIC] = { 0 };
-        uint32_t countTotal = 0;
+        std::map <int,double> detectedVehicles;
     };
 
     struct LatencyData{
