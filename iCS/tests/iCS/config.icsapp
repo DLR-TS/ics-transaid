@@ -11,6 +11,14 @@ app-ns-log:app-ns-log.txt
 app-data:app-data.txt
 detector:detector.xml
 netstate:netstate.xml
+NIR:test_NIR.csv
+NAR:test_NAR.csv
+Latency:test_Latency.csv
+PDR_CAM:test_PDR_CAM.csv
+PDR_CPM:test_PDR_CPM.csv
+PDR_MCM:test_PDR_MCM.csv
+PDR:test_PDR.csv
+
 
 [run_dependent_text]
 errors:no process found
