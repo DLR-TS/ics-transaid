@@ -57,8 +57,6 @@ namespace ns3
         m_end_x = end_x;
         m_end_y = end_y;
 
-
-
         Simulator::ScheduleNow (&iTETRISResults::writeResults, this);
     }
 
@@ -71,6 +69,7 @@ namespace ns3
 
 
         Ptr<MobilityModel> mobModel = m_TransAIDNodes->Get(sendernodeId)->GetObject<MobilityModel>();
+
 
         if (mobModel->GetPosition().x > m_initial_x && mobModel->GetPosition().x < m_end_x && mobModel->GetPosition().y > m_initial_y && mobModel->GetPosition().y < m_end_y ) // TODO update the conditions of the border of the scenario
         {

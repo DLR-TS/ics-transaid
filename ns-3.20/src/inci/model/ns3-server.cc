@@ -90,7 +90,7 @@ namespace ns3
 			outfileLogNIR.open(prefix + "NIR.csv" ); // Added by A Correa
 			outfileLogLatency.open(prefix + "Latency.csv"); // Added by A Correa
             outfileLogPacketsCBR.open(prefix + "CBR.csv"); // Added by A Correa
-			my_resultsManager = new iTETRISResults(node_manager->GetInitialX(), node_manager->GetInitialY(), node_manager->GetEndX(),node_manager->GetEndY()); // Added by A Correa
+ 			my_resultsManager = new iTETRISResults( node_manager->GetInitialX(), node_manager->GetInitialY(), node_manager->GetEndX(), node_manager->GetEndY() ); // Added by A Correa
 		} else {
 			my_resultsManager = nullptr; // Added by A Correa
 		}

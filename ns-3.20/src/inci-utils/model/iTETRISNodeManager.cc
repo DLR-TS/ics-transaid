@@ -375,27 +375,32 @@ iTETRISNodeManager::SetKPILogging (bool on)
 }
 
     void
-    iTETRISNodeManager::SetInitialX (int initial_x)
+    iTETRISNodeManager::SetInitialX ( int initial_x)
     {
         m_InitialX = initial_x;
+        std::cout << " Initial X for logging " << m_InitialX << std::endl;
+
     }
 
     void
-    iTETRISNodeManager::SetInitialY (int initial_y)
+    iTETRISNodeManager::SetInitialY ( int initial_y)
     {
         m_InitialY = initial_y;
+        std::cout << " Initial Y for logging " << m_InitialY << std::endl;
     }
 
     void
-    iTETRISNodeManager::SetEndX (int end_x)
+    iTETRISNodeManager::SetEndX ( int end_x)
     {
         m_EndX = end_x;
+        std::cout << " End Y for logging " << m_EndX << std::endl;
     }
 
     void
-    iTETRISNodeManager::SetEndY (int end_y)
+    iTETRISNodeManager::SetEndY ( int end_y)
     {
-        m_EndX = end_y;
+        m_EndY = end_y;
+        std::cout << " End Y for logging " << m_EndY << std::endl;
     }
 
     int

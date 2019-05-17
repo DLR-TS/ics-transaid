@@ -110,15 +110,15 @@ class iTETRISNodeManager
     inline bool KPILogOn() const {
     	return m_logKPIs;
     }
-    void SetInitialX (int initial_x);
-    void SetInitialY (int initial_y);
-    void SetEndX (int end_x);
-    void SetEndY (int end_y);
+    void SetInitialX ( int initial_x);
+    void SetInitialY ( int initial_y);
+    void SetEndX ( int end_x);
+    void SetEndY ( int end_y);
 
-    int GetInitialX (void);
-    int GetInitialY (void);
-    int GetEndX (void);
-    int GetEndY (void);
+    int GetInitialX (void) ;
+    int GetInitialY (void) ;
+    int GetEndX (void) ;
+    int GetEndY (void) ;
 
 private:
 
