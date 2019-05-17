@@ -16,4 +16,6 @@
       <installer type="ns3::ItetrisNetworkTransportInstaller" name="NetTrans" default="true" />
       <installer type="ns3::MobilityModelInstaller" name="Mobility" default="true" />
   </installers>
+  <logKPIs value="1" />
+  <KPIFilePrefix value="test" />
 </ns3Configuration>

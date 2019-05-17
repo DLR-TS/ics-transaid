@@ -2,9 +2,7 @@
 <waveVehicle>
 
   <yansWifiChannel>
-    <propagationLoss name="ns3::LogDistancePropagationLossModel"/>
-    <propagationLoss attribute="ReferenceLoss" value="46.6777"/>
-    <propagationLoss attribute="Exponent" value="3"/>
+    <propagationLoss name="ns3::WINNERB1plusFreeWayPropagationLossModel"/>
   </yansWifiChannel>
  
    <yansWifiPhy>
