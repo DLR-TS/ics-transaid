@@ -205,13 +205,64 @@ ConfigurationManagerXml::ReadFile (iTETRISNodeManager* nodeManager)
     	  std::cout << " Parsed logKPIs = " << logKPIs << std::endl;
     	  nodeManager->SetKPILogging (logKPIs);
     	  xmlFree (value);
-    } // enable comm result logging
+    }
+
+        if (std::string ((char*)tag) == "InitialXlogKPI")
+        {
+            xmlChar *cordIniX = xmlTextReaderGetAttribute (reader, BAD_CAST "value");
+            if (cordIniX == 0)
+            {
+                NS_FATAL_ERROR ("Error getting attribute 'value' of element 'InitialXlogKPI'");
+            }
+            nodeManager->SetInitialX(atoi((char*)cordIniX));
+            xmlFree (cordIniX);
+        }
+
+        if (std::string ((char*)tag) == "EndXlogKPI")
+        {
+            xmlChar *cordEndX = xmlTextReaderGetAttribute (reader, BAD_CAST "value");
+            if (cordEndX == 0)
+            {
+                NS_FATAL_ERROR ("Error getting attribute 'value' of element 'EndXlogKPI'");
+            }
+            nodeManager->SetEndX(atoi((char*)cordEndX));
+            xmlFree (cordEndX);
+        }
+
+        if (std::string ((char*)tag) == "InitialYlogKPI")
+        {
+            xmlChar *cordIniY = xmlTextReaderGetAttribute (reader, BAD_CAST "value");
+            if (cordIniY == 0)
+            {
+                NS_FATAL_ERROR ("Error getting attribute 'value' of element 'InitialXlogKPI'");
+            }
+            nodeManager->SetInitialY(atoi((char*)cordIniY));
+            xmlFree (cordIniY);
+        }
+
+        if (std::string ((char*)tag) == "EndYlogKPI")
+        {
+            xmlChar *cordEndY = xmlTextReaderGetAttribute (reader, BAD_CAST "value");
+            if (cordEndY == 0)
+            {
+                NS_FATAL_ERROR ("Error getting attribute 'value' of element 'EndYlogKPI'");
+            }
+            nodeManager->SetEndY(atoi((char*)cordEndY));
+            xmlFree (cordEndY);
+        }
+
+
+      // enable comm result logging
       rc = xmlTextReaderRead (reader);
     }
   xmlFreeTextReader (reader);
   if (nodeManager->GetKPIFilePrefix() != "" && !nodeManager->KPILogOn()) {
 	  std::cerr << "ns3::ConfigurationManagerXml: Warning: Specified KPIFilePrefix but KPILog is off." << std::endl;
   }
+
+
+
+
 }
 
 

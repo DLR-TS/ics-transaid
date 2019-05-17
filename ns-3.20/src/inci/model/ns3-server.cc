@@ -60,7 +60,9 @@ namespace ns3
     ofstream Ns3Server::outfileLogNAR;
     ofstream Ns3Server::outfileLogNIR;
     ofstream Ns3Server::outfileLogLatency;
-	string Ns3Server::CAM_TYPE = "0";
+    ofstream Ns3Server::outfileLogPacketsCBR;
+
+    string Ns3Server::CAM_TYPE = "0";
 	string Ns3Server::DNEM_TYPE = "1";
 	bool Ns3Server::logActive_ = false;
 
@@ -87,7 +89,8 @@ namespace ns3
 			outfileLogNAR.open(prefix + "NAR.csv" ); // Added by A Correa
 			outfileLogNIR.open(prefix + "NIR.csv" ); // Added by A Correa
 			outfileLogLatency.open(prefix + "Latency.csv"); // Added by A Correa
-			my_resultsManager = new iTETRISResults(); // Added by A Correa
+            outfileLogPacketsCBR.open(prefix + "CBR.csv"); // Added by A Correa
+			my_resultsManager = new iTETRISResults(node_manager->GetInitialX(), node_manager->GetInitialY(), node_manager->GetEndX(),node_manager->GetEndY()); // Added by A Correa
 		} else {
 			my_resultsManager = nullptr; // Added by A Correa
 		}
@@ -209,6 +212,8 @@ namespace ns3
         outfileLogNAR.close();
         outfileLogNIR.close();
         outfileLogLatency.close();
+        outfileLogPacketsCBR.close();
+
         //
 
     }
@@ -491,6 +496,16 @@ namespace ns3
 					<< "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
 
 			Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsRx,my_resultsManager) );
+
+
+            resultString.str("");
+
+            resultString << "/NodeList/"
+                         << nodeId
+                         << "/DeviceList/*/$ns3::WifiNetDevice/Phy/$ns3::YansWifiPhy/State/State";
+
+            Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::PhyStateTracer,my_resultsManager) );
+
 		}
 		//
 
@@ -556,6 +571,14 @@ namespace ns3
 					<< "/DeviceList/*/$ns3::WifiNetDevice/Phy/PhyRxEndDist";
 
 			Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::LogPacketsRx,my_resultsManager) );
+
+            resultString.str("");
+
+            resultString << "/NodeList/"
+                         << nodeId
+                         << "/DeviceList/*/$ns3::WifiNetDevice/Phy/$ns3::YansWifiPhy/State/State";
+
+            Config::Connect (resultString.str (),MakeCallback( &iTETRISResults::PhyStateTracer,my_resultsManager) );
 		}
         //
 

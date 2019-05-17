@@ -18,4 +18,8 @@
   </installers>
   <logKPIs value="1" />
   <KPIFilePrefix value="test" />
+    <InitialXlogKPI value="1000" />
+    <EndXlogKPI value="4000" />
+    <InitialYlogKPI value="-1000" />
+    <EndYlogKPI value="1000" />
 </ns3Configuration>

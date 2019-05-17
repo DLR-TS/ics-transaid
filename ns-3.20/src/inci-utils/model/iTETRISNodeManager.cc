@@ -374,5 +374,52 @@ iTETRISNodeManager::SetKPILogging (bool on)
 	m_logKPIs = on;
 }
 
+    void
+    iTETRISNodeManager::SetInitialX (int initial_x)
+    {
+        m_InitialX = initial_x;
+    }
+
+    void
+    iTETRISNodeManager::SetInitialY (int initial_y)
+    {
+        m_InitialY = initial_y;
+    }
+
+    void
+    iTETRISNodeManager::SetEndX (int end_x)
+    {
+        m_EndX = end_x;
+    }
+
+    void
+    iTETRISNodeManager::SetEndY (int end_y)
+    {
+        m_EndX = end_y;
+    }
+
+    int
+    iTETRISNodeManager::GetInitialX (void)
+    {
+        return m_InitialX;
+    }
+
+    int
+    iTETRISNodeManager::GetInitialY (void)
+    {
+        return m_InitialY;
+    }
+
+    int
+    iTETRISNodeManager::GetEndX (void)
+    {
+        return m_EndX;
+    }
+
+    int
+    iTETRISNodeManager::GetEndY (void)
+    {
+        return m_EndY;
+    }
 
 }

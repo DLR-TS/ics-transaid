@@ -90,6 +90,8 @@ class Ns3Server
     static std::ofstream outfileLogNAR;
     static std::ofstream outfileLogNIR;
     static std::ofstream outfileLogLatency;
+    static std::ofstream outfileLogPacketsCBR;
+
     //
     /// @}
 

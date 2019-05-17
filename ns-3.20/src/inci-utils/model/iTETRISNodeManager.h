@@ -110,36 +110,49 @@ class iTETRISNodeManager
     inline bool KPILogOn() const {
     	return m_logKPIs;
     }
+    void SetInitialX (int initial_x);
+    void SetInitialY (int initial_y);
+    void SetEndX (int end_x);
+    void SetEndY (int end_y);
 
+    int GetInitialX (void);
+    int GetInitialY (void);
+    int GetEndX (void);
+    int GetEndY (void);
 
-  private:
+private:
 
     std::string GetEdgeId (std::string laneId);
 
     /**
      * @brief Node container with all the iTETRIS nodes
      */
-    NodeContainer m_iTETRISNodes; 
+    NodeContainer m_iTETRISNodes;
 
-    typedef std::map<std::string, Ptr<CommModuleInstaller> > InstallerContainerList; 
-    typedef std::map<std::string, NodeContainer*> NodeContainerList; 
+    typedef std::map<std::string, Ptr<CommModuleInstaller> > InstallerContainerList;
+    typedef std::map<std::string, NodeContainer*> NodeContainerList;
 
     /**
      * @brief List of NodeContainers with a NodeContainer per communication module (e.g. WAVE, DVB-H, etc.)
      */
-    NodeContainerList m_itetrisTechNodes; 
+    NodeContainerList m_itetrisTechNodes;
 
     /**
-     * @brief List of communication module installers. 
+     * @brief List of communication module installers.
      */
-    InstallerContainerList m_itetrisInstallers;  
+    InstallerContainerList m_itetrisInstallers;
 
     std::vector<Ptr<CommModuleInstaller> > m_defaultModules;
- 
+
     /// @brief Whether to log communication related KPIs
     bool m_logKPIs;
     /// @brief defines an ID for the run (used for naming KPI output files), @see logKPIs
     std::string m_KPIFilePrefix;
+
+    int m_InitialX;
+    int m_InitialY;
+    int m_EndX;
+    int m_EndY;
 };
 
 }

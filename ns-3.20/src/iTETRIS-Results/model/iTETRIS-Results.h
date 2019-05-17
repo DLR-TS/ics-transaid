@@ -38,6 +38,9 @@
 #include <fstream>
 #include <string>
 #include <map>
+#include "ns3/yans-wifi-helper.h"
+#include "ns3/wifi-module.h"
+#include "ns3/wifi-80211p-helper.h"
 
 namespace ns3
 {
@@ -60,6 +63,7 @@ namespace ns3
         std::map <int,double> detectedVehicles;
     };
 
+
     struct LatencyData{
         double latency =  0 ;
         uint32_t countTotal = 0;
@@ -69,11 +73,13 @@ namespace ns3
 	{
 		public:
 
-			iTETRISResults();
+           iTETRISResults(int initial_x, int initial_y, int end_x , int end_y);
 			virtual ~iTETRISResults();
 
          void LogPacketsTx(std::string context, Ptr<const Packet> packet , double distanceTxRx, uint32_t sendernodeId);
          void LogPacketsRx(std::string context, Ptr<const Packet> packet , double distanceTxRx, uint32_t sendernodeId);
+         void PhyStateTracer (std::string context, Time start, Time duration, enum WifiPhy::State state);
+
 
          void LogAwarenessRatio(const NodeContainer& m_NodeContainer);
 
@@ -96,8 +102,14 @@ namespace ns3
 
         std::map<int, NIRdata> m_NIRdataMap;
 
+        std::map<int, double> m_CBRdataMap;
 
         int m_interval;
+
+        int m_initial_x;
+        int m_initial_y;
+        int m_end_x;
+        int m_end_y;
 
         const NodeContainer * m_TransAIDNodes;
 	};
