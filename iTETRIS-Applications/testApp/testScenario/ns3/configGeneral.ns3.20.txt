@@ -368,4 +368,4 @@ default ns3::RateErrorModel::RanVar "ns3::UniformRandomVariable[Min=0.0|Max=1.0]
 default ns3::PcapWriter::CaptureSize "0"
 default ns3::RealtimeSimulatorImpl::SynchronizationMode "BestEffort"
 default ns3::RealtimeSimulatorImpl::HardLimit "100000000ns"
-global WifiPhyHelperErrorModel "ns3::NistErrorRateModel"
+global WifiPhyHelperErrorModel "ns3::DSRCErrorRateModel"
