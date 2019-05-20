@@ -71,43 +71,47 @@ namespace ns3
         Ptr<MobilityModel> mobModel = m_TransAIDNodes->Get(sendernodeId)->GetObject<MobilityModel>();
 
 
-        if (mobModel->GetPosition().x > m_initial_x && mobModel->GetPosition().x < m_end_x && mobModel->GetPosition().y > m_initial_y && mobModel->GetPosition().y < m_end_y ) // TODO update the conditions of the border of the scenario
-        {
+        if (mobModel->GetPosition().x < m_end_x) {
+            if (mobModel->GetPosition().y < m_end_y) {
+                if (mobModel->GetPosition().x > m_initial_x) {
+                    if (mobModel->GetPosition().y > m_initial_y) {
 
-            V2XmessageTypeTag v2x_tag;
-            packet->PeekPacketTag(v2x_tag);
-            uint32_t v2x_type = v2x_tag.Get();
-            int indexAux =0;
-            switch (v2x_type) {
-                case 6  : // CAM
+                        V2XmessageTypeTag v2x_tag;
+                        packet->PeekPacketTag(v2x_tag);
+                        uint32_t v2x_type = v2x_tag.Get();
+                        int indexAux =0;
+                        switch (v2x_type) {
+                            case 6  : // CAM
 
-                    indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
-                    ++m_PDRdataCAM.countTx[indexAux];
-                    break; //optional
-                case 7 : // CPM
+                                indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
+                                ++m_PDRdataCAM.countTx[indexAux];
+                                break; //optional
+                            case 7 : // CPM
 
-                    indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
-                    ++m_PDRdataCPM.countTx[indexAux];
-                    break; //optional
-                case 8 : // MCM
+                                indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
+                                ++m_PDRdataCPM.countTx[indexAux];
+                                break; //optional
+                            case 8 : // MCM
 
-                    indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
-                    ++m_PDRdataMCM.countTx[indexAux];
-                    break; //optional
+                                indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
+                                ++m_PDRdataMCM.countTx[indexAux];
+                                break; //optional
 
-                    // you can have any number of case statements.
-                default : //Optional
+                                // you can have any number of case statements.
+                            default : //Optional
 
-                    indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
-                    ++m_PDRdata.countTx[indexAux];
+                                indexAux = std::min(N_LAST_STEP, (int) floor(distanceTxRx / 10));
+                                ++m_PDRdata.countTx[indexAux];
 
+                        }
+                    }
+                }
             }
         }
 
     }
 
     void iTETRISResults::LogPacketsRx(std::string context, Ptr<const Packet> packet, double distanceTxRx, uint32_t sendernodeId){
-
 
 
         std::size_t posInit = context.find("/NodeList/");
@@ -297,6 +301,7 @@ namespace ns3
     void iTETRISResults::PhyStateTracer (std::string context, Time start, Time duration, enum WifiPhy::State state) {
 //	std::cout << "Context text  : " << context << std::endl;
 
+
         std::size_t posInit = context.find("/NodeList/");
         std::size_t posEnd = context.find("/DeviceList/");
         std::string strRx = context.substr(posInit + 10, (posEnd - posInit - 10));
@@ -459,10 +464,10 @@ namespace ns3
         int total_cbr[100] = {0};
         std::map<int, double>::iterator itCBR;
 
-        for (itCBR = m_CBRdataMap.begin(); itCBR != m_CBRdataMap.end(); ++itNIR)
+        for (itCBR = m_CBRdataMap.begin(); itCBR != m_CBRdataMap.end(); ++itCBR)
         {
             int indexAux = std::min(N_LAST_STEP, (int) floor( (*itCBR).second) * 100);
-            ++ total_cbr[indexAux];
+            ++total_cbr[indexAux];
         }
 
         data = "Time," + to_string(Simulator::Now().GetMilliSeconds());
