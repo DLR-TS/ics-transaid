@@ -123,20 +123,38 @@ namespace baseapp {
 
             // Check CAM Tx
 
-            if (  (CurrentTime::Now() - m_lastCAMsent.generationTime)>1000)
-            {
-                SendCAM();
+            if (m_node_interface->GetNodeType() != NT_RSU) {
+
+                double distance = GetDistance(m_node_interface->GetNode()->getPosition(), m_lastCAMsent.position);
+
+                if (  (CurrentTime::Now() - m_lastCAMsent.generationTime)>1000  || distance > 4 )
+                {
+                    SendCAM();
+                }
+
+            } else {
+                if (  (CurrentTime::Now() - m_lastCAMsent.generationTime)>1000  )
+                {
+                    SendCAM();
+                }
             }
 
             // Check CPM tx
             m_NodeMap  = m_node_interface->GetAllNodes() ;
             CPM_Sensing();
 
+
+
             // Check MCM tx
-            if (  (CurrentTime::Now() - m_lastMCMsentVehicle.generationTime)>1000)
-            {
-                SendMCMvehicle();
+            if (m_node_interface->GetNodeType() != NT_RSU) {
+                double distance = GetDistance(m_node_interface->GetNode()->getPosition(), m_lastMCMsentVehicle.position);
+                
+                if (  (CurrentTime::Now() - m_lastMCMsentVehicle.generationTime)>1000 || distance > 4 )
+                {
+                    SendMCMvehicle();
+                }
             }
+
 
             m_eventBroadcast = Scheduler::Schedule(m_broadcastCheckInterval, &MessageScheduler::V2XmessageScheduler, this);
         }
@@ -149,8 +167,8 @@ namespace baseapp {
             TransaidHeader::CamInfo  * message = new TransaidHeader::CamInfo() ;
             message->generationTime = CurrentTime::Now();
             message->senderID = m_node_interface->GetId();
-            message->position = m_node_interface->GetPosition();
-            message->speed = m_node_interface->GetSpeed();
+            message->position = m_node_interface->GetNode()->getPosition();
+            message->speed = m_node_interface->GetNode()->getSpeed();
             message->acceleration = m_node_interface->GetNode()->getAcceleration();
 
             m_lastCAMsent = *message;
@@ -209,6 +227,7 @@ namespace baseapp {
             TransaidHeader::McmVehicleInfo  * message = new TransaidHeader::McmVehicleInfo() ;
             message->generationTime = CurrentTime::Now();
             message->senderID = m_node_interface->GetId();
+            message->position = m_node_interface->GetNode()->getPosition();
 
             m_lastMCMsentVehicle = *message;
 

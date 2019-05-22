@@ -210,6 +210,7 @@ namespace baseapp
             	int generationTime;
             	bool adviceFollowed;
             	int adviceId;
+                application::Vector2D position;
             };
 
             struct MapInfo
