@@ -55,19 +55,31 @@ namespace ns3
         uint32_t countTx[N_STEPS_METRIC] = {0};
         uint32_t countRx[N_STEPS_METRIC] = {0};
     };
+
     struct NARdata{
         std::map <int,double> detectedVehicles;
         std::map <int,double> totalVehicles;
     };
+
     struct NIRdata{
         std::map <int,double> detectedVehicles;
     };
 
 
     struct LatencyData{
-        double latency =  0 ;
+        int latency [200] =  {0} ;
         uint32_t countTotal = 0;
     };
+
+    struct IPRTdata{
+        std::map <int,double> initial_time;
+    };
+
+    struct IPRTdataDistance{
+        double IPRT[N_STEPS_METRIC] = {0};
+        uint32_t countRx[N_STEPS_METRIC] = {0};
+    };
+
 
 	class iTETRISResults : public Object
 	{
@@ -99,10 +111,15 @@ namespace ns3
 
         std::map<int, NARdata> m_NARdataMap;
 
-
         std::map<int, NIRdata> m_NIRdataMap;
 
         std::map<int, double> m_CBRdataMap;
+
+        std::map<int, IPRTdata> m_IPRTdataMapCAM;
+
+        IPRTdataDistance m_IPRT_CAM;
+
+        std::map<int, int> m_MessagesRxMap;
 
         int m_interval;
 

@@ -37,6 +37,8 @@
 #include "ns3/packet-manager.h" 
 #include <fstream>
 #include "ns3/iTETRIS-Results.h"
+#include "ns3/random-variable.h" // A Correa
+
 
 namespace ns3
 {
@@ -91,6 +93,8 @@ class Ns3Server
     static std::ofstream outfileLogNIR;
     static std::ofstream outfileLogLatency;
     static std::ofstream outfileLogPacketsCBR;
+    static std::ofstream outfileLogPacketsIPRT;
+    static std::ofstream outfileLogMessages;
 
     //
     /// @}
@@ -216,6 +220,8 @@ private:
 
     std::string Double2String (double n);
 
+
+    RandomVariable  m_rndOffset; // A Correa
 
 };
 

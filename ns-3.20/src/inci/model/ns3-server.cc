@@ -61,6 +61,8 @@ namespace ns3
     ofstream Ns3Server::outfileLogNIR;
     ofstream Ns3Server::outfileLogLatency;
     ofstream Ns3Server::outfileLogPacketsCBR;
+    ofstream Ns3Server::outfileLogPacketsIPRT;
+    ofstream Ns3Server::outfileLogMessages;
 
     string Ns3Server::CAM_TYPE = "0";
 	string Ns3Server::DNEM_TYPE = "1";
@@ -74,8 +76,9 @@ namespace ns3
 		my_packetManagerPtr = packetManager;
 		commands = nullptr;
 		myLogCommunicationKPIs = node_manager->KPILogOn();
+        m_rndOffset = UniformVariable(0.0,50000000); // A Correa
 
-		if (myLogCommunicationKPIs) {
+        if (myLogCommunicationKPIs) {
 			std::string prefix = node_manager->GetKPIFilePrefix();
 			if (prefix != "") {
 				prefix += "_";
@@ -90,6 +93,8 @@ namespace ns3
 			outfileLogNIR.open(prefix + "NIR.csv" ); // Added by A Correa
 			outfileLogLatency.open(prefix + "Latency.csv"); // Added by A Correa
             outfileLogPacketsCBR.open(prefix + "CBR.csv"); // Added by A Correa
+            outfileLogPacketsIPRT.open(prefix + "IPRT.csv"); // Added by A Correa
+            outfileLogMessages.open(prefix + "MessagesRx.csv"); //Added by A Correa
  			my_resultsManager = new iTETRISResults( node_manager->GetInitialX(), node_manager->GetInitialY(), node_manager->GetEndX(), node_manager->GetEndY() ); // Added by A Correa
 		} else {
 			my_resultsManager = nullptr; // Added by A Correa
@@ -213,7 +218,8 @@ namespace ns3
         outfileLogNIR.close();
         outfileLogLatency.close();
         outfileLogPacketsCBR.close();
-
+        outfileLogPacketsIPRT.close();
+        outfileLogMessages.close();
         //
 
     }
@@ -1293,11 +1299,12 @@ bool Ns3Server::StartIpCiuTxon(void)
 		if (container_l > 0)
 			for (int i = 0; i < container_l; i++)
 				msgb->genericContainer.push_back(myInputStorage.readChar());
-		NS_LOG_INFO(
-				Simulator::Now().GetSeconds() << " StartGeobroadcastTxon." << " Scheduled message at "
-						<< NanoSeconds(msgb->time * 1000000).GetSeconds() << " From " << msgb->senderIdCollection[0]);
-		Simulator::Schedule(NanoSeconds(msgb->time * 1000000) - Simulator::Now(), &MessageSchedule::DoInvoke, msgb);
-		writeStatusCmd(CMD_START_GEO_BROAD_TXON, RTYPE_OK, "StartGeobroadcastTxon ()");
+		auto jitter = 	NanoSeconds(msgb->time * 1000000) - Simulator::Now() + NanoSeconds(m_rndOffset.GetValue()); // A Correa
+			NS_LOG_INFO(
+                Simulator::Now().GetSeconds() << " StartGeobroadcastTxon." << " Scheduled message at "
+                                              << (jitter + Simulator::Now()).GetSeconds() << " From " << msgb->senderIdCollection[0]); // A Correa
+        Simulator::Schedule(jitter, &MessageSchedule::DoInvoke, msgb);
+        writeStatusCmd(CMD_START_GEO_BROAD_TXON, RTYPE_OK, "StartGeobroadcastTxon ()"); // A Correa
 
         //std::string s( msgb->genericContainer.begin(), msgb->genericContainer.end() );
 
