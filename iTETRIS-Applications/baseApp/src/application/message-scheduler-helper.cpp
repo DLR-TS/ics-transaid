@@ -148,7 +148,7 @@ namespace baseapp {
             // Check MCM tx
             if (m_node_interface->GetNodeType() != NT_RSU) {
                 double distance = GetDistance(m_node_interface->GetNode()->getPosition(), m_lastMCMsentVehicle.position);
-                
+
                 if (  (CurrentTime::Now() - m_lastMCMsentVehicle.generationTime)>1000 || distance > 4 )
                 {
                     SendMCMvehicle();
