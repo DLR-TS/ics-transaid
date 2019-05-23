@@ -67,6 +67,7 @@ namespace testapp
             m_lastIVIsent = nullptr;
             m_lastMAPsent = nullptr;
             m_lastMCMsent = nullptr;
+            m_MessageScheduler = nullptr;
 		}
 
 		BehaviourTestRSU::~BehaviourTestRSU() {

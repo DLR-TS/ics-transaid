@@ -72,6 +72,7 @@ namespace testapp
             m_eventBroadcastMCM = 0;
             m_eventBroadcastCPM = 0;
             m_counter = 0;
+            m_MessageScheduler = nullptr;
 		}
 
         BehaviourTestNode::~BehaviourTestNode() {
