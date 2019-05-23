@@ -168,6 +168,7 @@ namespace baseapp {
             message->generationTime = CurrentTime::Now();
             message->senderID = m_node_interface->GetId();
             message->position = m_node_interface->GetNode()->getPosition();
+            message->laneIndex = m_node_interface->GetNode()->getLaneIndex();
             message->speed = m_node_interface->GetNode()->getSpeed();
             message->acceleration = m_node_interface->GetNode()->getAcceleration();
 
@@ -1195,7 +1196,7 @@ namespace baseapp {
         			i->second = true;
         		}
         	} else {
-        		for (auto p : m_highlightSwitch) {
+        		for (auto& p : m_highlightSwitch) {
         			p.second = true;
         		}
         	}
@@ -1209,7 +1210,7 @@ namespace baseapp {
         			i->second = false;
         		}
         	} else {
-        		for (auto p : m_highlightSwitch) {
+        		for (auto& p : m_highlightSwitch) {
         			p.second = false;
         		}
         	}
