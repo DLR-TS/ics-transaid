@@ -211,6 +211,7 @@ namespace baseapp
             	bool adviceFollowed;
             	int adviceId;
                 application::Vector2D position;
+                float speed;
             };
 
             struct MapInfo

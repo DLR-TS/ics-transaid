@@ -126,18 +126,20 @@ namespace baseapp {
             if (m_node_interface->GetNodeType() != NT_RSU) {
 
                 double distance = GetDistance(m_node_interface->GetNode()->getPosition(), m_lastCAMsent.position);
+                double speedDiference = fabs(m_lastCAMsent.speed - m_node_interface->GetNode()->getSpeed() );
 
-                if (  (CurrentTime::Now() - m_lastCAMsent.generationTime)>1000  || distance > 4 )
+                if (  (CurrentTime::Now() - m_lastCAMsent.generationTime)>1000  || distance > 4 || speedDiference >0.5)
                 {
                     SendCAM();
                 }
 
-            } else {
+            }
+            /* else {
                 if (  (CurrentTime::Now() - m_lastCAMsent.generationTime)>1000  )
                 {
                     SendCAM();
                 }
-            }
+            } */
 
             // Check CPM tx
             m_NodeMap  = m_node_interface->GetAllNodes() ;
@@ -148,8 +150,9 @@ namespace baseapp {
             // Check MCM tx
             if (m_node_interface->GetNodeType() != NT_RSU) {
                 double distance = GetDistance(m_node_interface->GetNode()->getPosition(), m_lastMCMsentVehicle.position);
+                double speedDifference = fabs(m_lastMCMsentVehicle.speed - m_node_interface->GetNode()->getSpeed() );
 
-                if (  (CurrentTime::Now() - m_lastMCMsentVehicle.generationTime)>1000 || distance > 4 )
+                if (  (CurrentTime::Now() - m_lastMCMsentVehicle.generationTime)>1000  || distance > 4 || speedDifference >0.5)
                 {
                     SendMCMvehicle();
                 }
@@ -229,6 +232,7 @@ namespace baseapp {
             message->generationTime = CurrentTime::Now();
             message->senderID = m_node_interface->GetId();
             message->position = m_node_interface->GetNode()->getPosition();
+            message->speed = m_node_interface->GetNode()->getSpeed();
 
             m_lastMCMsentVehicle = *message;
 
