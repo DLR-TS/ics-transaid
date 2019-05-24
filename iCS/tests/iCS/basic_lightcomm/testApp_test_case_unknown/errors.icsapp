@@ -32,28 +32,5 @@ Error: Attribute 'intLanes' in definition of junction 'S' is empty.
 Error: Attribute 'intLanes' in definition of junction 'W' is empty.
 testApp -> [ERROR]Unknown test case 'unknown'
 testApp -> [ERROR]Quitting (on error).
-Could not set default value for ns3::c2cMessageStore::MaxPacketNumber
-Could not set default value for ns3::c2cNotificationGenerator::MaxPackets
-Could not set default value for ns3::c2cNotificationGenerator::Timeout
-Could not set default value for ns3::c2cNotificationGenerator::Interval
-Could not set default value for ns3::c2cNotificationGenerator::PacketSize
-Could not set default value for ns3::c2cInfrastructureMessageManagement::RemotePort
-Could not set default value for ns3::c2cRoadsideMessageManagement::Port
-Could not set default value for ns3::c2cVehicleMessageManagement::Port
-Could not set default value for ns3::c2cVehicleMessageManagement::PacketWindowSize
-Could not set default value for ns3::Ipv6RawSocketImpl::IcmpFilter
-Could not set default value for ns3::TcpL4Protocol::RttEstimatorFactory
-Could not set default value for ns3::JakesPropagationLossModel::NumberOfRaysPerPath
-Could not set default value for ns3::JakesPropagationLossModel::NumberOfOscillatorsPerRay
-Could not set default value for ns3::JakesPropagationLossModel::DopplerFreq
-Could not set default value for ns3::JakesPropagationLossModel::Distribution
-Could not set default value for ns3::FriisPropagationLossModel::Lambda
-Could not set default value for ns3::FriisPropagationLossModel::MinDistance
-Could not set default value for ns3::TwoRayGroundPropagationLossModel::Lambda
-Could not set default value for ns3::RateErrorModel::ErrorUnit
-YansWifiPhyHelper::Default ns3::NistErrorRateModel
-YansWifiPhyHelper::Default ns3::NistErrorRateModel
-YansWifiPhyHelper::Default ns3::NistErrorRateModel
-YansWifiPhyHelper::Default ns3::NistErrorRateModel
 Error: Process Error
 Quitting (on error).

@@ -4,9 +4,11 @@ WELCOME TO iTETRIS
 ==================
 STEP 1 - SETUP PHASE
 iCS --> SUMO launched.
-iCS --> ns-3 launched.
+iCS --> lightcomm launched.
 
 STEP 2 - SETUP PHASE
+Lightcomm: Loading Configuration
+LightComm listening on port 51399
 Loading configuration... done.
 protocolspeedApp -> Starting iTetris protocol speed app
 protocolspeedApp -> [WARNING]Ignoring socket port specified in configuration. (Overridden by command line argument.)
@@ -16,24 +18,21 @@ protocolspeedApp -> ParseInfrastructure done
 protocolspeedApp -> ParseSetup done
 protocolspeedApp -> ParseOutput done
 protocolspeedApp -> Load Configuration done
-main-inci v 3.20
-ns3 -> No option file found. Must be named option.txt
 
 STEP 3 - SETUP PHASE
-iCS --> Trying 0 to connect SUMO on port 48795...
+iCS --> Trying 0 to connect SUMO on port 40735...
 iCS --> Connected to SUMO
 
-iCS --> Trying 0 to connect ns-3 on port 47277 and Host localhost...
+iCS --> Trying 0 to connect ns-3 on port 51399 and Host localhost...
 iCS --> Connected to ns-3
 
-iCS --> Trying 0 to connect Application on port 43805...
+iCS --> Trying 0 to connect Application on port 54429...
+protocolspeedApp -> Server listening on port: 54429
 iCS --> Application protocolspeedApp connected.
 
 
 STEP 4 - SETUP PHASE
 jin <iCS/ns3-client.cc> CMD_CREATENODE=8
-protocolspeedApp -> Server listening on port: 43805
-WaveRsuInstaller::AllocateIpv6Prefix()3001:0:0:1::
 
 iCS --> Starting scheduling V2X messages in setup phase
 
@@ -1015,8 +1014,6 @@ STEP 7 - SIMULATION PHASE - Tics = 30000
 
 STEP 8 - SIMULATION PHASE - Tics = 30000
 STEP 9 - SIMULATION PHASE - Tics = 30000
-ns-3 server --> Finishing server.... 
-
+Step #0.00 (0ms ?*RT. ?UPS, TraCI: 1006ms, vehicles TOT 10 ACT 10 BUF 6)                  Step #1.00 (0ms ?*RT. ?UPS, TraCI: 28ms, vehicles TOT 10 ACT 10 BUF 6)                    Step #2.00 (27ms ~= 37.04*RT, ~444.44UPS, TraCI: 10ms, vehicles TOT 12 ACT 12 BUF 7)      Step #3.00 (0ms ?*RT. ?UPS, TraCI: 11ms, vehicles TOT 15 ACT 15 BUF 6)                    Step #4.00 (0ms ?*RT. ?UPS, TraCI: 19ms, vehicles TOT 20 ACT 20 BUF 4)                    Step #5.00 (0ms ?*RT. ?UPS, TraCI: 25ms, vehicles TOT 21 ACT 21 BUF 5)                    Step #6.00 (0ms ?*RT. ?UPS, TraCI: 27ms, vehicles TOT 22 ACT 22 BUF 5)                    Step #7.00 (1ms ~= 1000.00*RT, ~25000.00UPS, TraCI: 27ms, vehicles TOT 25 ACT 25 BUF 5)   Step #8.00 (0ms ?*RT. ?UPS, TraCI: 32ms, vehicles TOT 29 ACT 29 BUF 3)                    Step #9.00 (0ms ?*RT. ?UPS, TraCI: 36ms, vehicles TOT 32 ACT 32 BUF 3)                    Step #10.00 (0ms ?*RT. ?UPS, TraCI: 39ms, vehicles TOT 34 ACT 34 BUF 4)                   Step #11.00 (0ms ?*RT. ?UPS, TraCI: 40ms, vehicles TOT 37 ACT 37 BUF 3)                   Step #12.00 (0ms ?*RT. ?UPS, TraCI: 46ms, vehicles TOT 39 ACT 39 BUF 3)                   Step #13.00 (0ms ?*RT. ?UPS, TraCI: 40ms, vehicles TOT 42 ACT 42 BUF 2)                   Step #14.00 (0ms ?*RT. ?UPS, TraCI: 49ms, vehicles TOT 45 ACT 45 BUF 2)                   Step #15.00 (0ms ?*RT. ?UPS, TraCI: 49ms, vehicles TOT 46 ACT 46 BUF 3)                   Step #16.00 (0ms ?*RT. ?UPS, TraCI: 46ms, vehicles TOT 48 ACT 48 BUF 2)                   Step #17.00 (0ms ?*RT. ?UPS, TraCI: 46ms, vehicles TOT 51 ACT 51 BUF 2)                   Step #18.00 (1ms ~= 1000.00*RT, ~55000.00UPS, TraCI: 58ms, vehicles TOT 55 ACT 55 BUF 3)  Step #19.00 (0ms ?*RT. ?UPS, TraCI: 57ms, vehicles TOT 55 ACT 55 BUF 3)                   Step #20.00 (1ms ~= 1000.00*RT, ~57000.00UPS, TraCI: 58ms, vehicles TOT 57 ACT 57 BUF 3)  Step #21.00 (0ms ?*RT. ?UPS, TraCI: 55ms, vehicles TOT 62 ACT 62 BUF 2)                   Step #22.00 (1ms ~= 1000.00*RT, ~64000.00UPS, TraCI: 61ms, vehicles TOT 64 ACT 64 BUF 1)  Step #23.00 (1ms ~= 1000.00*RT, ~65000.00UPS, TraCI: 63ms, vehicles TOT 65 ACT 65 BUF 2)  Step #24.00 (1ms ~= 1000.00*RT, ~69000.00UPS, TraCI: 63ms, vehicles TOT 69 ACT 69 BUF 1)  Step #25.00 (0ms ?*RT. ?UPS, TraCI: 73ms, vehicles TOT 71 ACT 71 BUF 2)                   Step #26.00 (1ms ~= 1000.00*RT, ~72000.00UPS, TraCI: 93ms, vehicles TOT 72 ACT 72 BUF 1)  Step #27.00 (0ms ?*RT. ?UPS, TraCI: 88ms, vehicles TOT 76 ACT 76 BUF 0)                   Step #28.00 (0ms ?*RT. ?UPS, TraCI: 116ms, vehicles TOT 78 ACT 78 BUF 2)                  Step #29.00 (1ms ~= 1000.00*RT, ~80000.00UPS, TraCI: 125ms, vehicles TOT 80 ACT 80 BUF 2) Step #30.00 (1ms ~= 1000.00*RT, ~82000.00UPS, TraCI: 30ms, vehicles TOT 82 ACT 82 BUF 2)  
 Success.
-Elapsed time (in seconds): 6.00
-Step #0.00 (0ms ?*RT. ?UPS, TraCI: 1025ms, vehicles TOT 10 ACT 10 BUF 6)      Step #1.00 (0ms ?*RT. ?UPS, TraCI: 77ms, vehicles TOT 10 ACT 10 BUF 6)        Step #2.00 (30ms ~= 33.33*RT, ~400.00UPS, TraCI: 20ms, vehicles TOT 12 ACT 12 Step #3.00 (0ms ?*RT. ?UPS, TraCI: 33ms, vehicles TOT 15 ACT 15 BUF 6)        Step #4.00 (0ms ?*RT. ?UPS, TraCI: 45ms, vehicles TOT 20 ACT 20 BUF 4)        Step #5.00 (0ms ?*RT. ?UPS, TraCI: 51ms, vehicles TOT 21 ACT 21 BUF 5)        Step #6.00 (0ms ?*RT. ?UPS, TraCI: 46ms, vehicles TOT 22 ACT 22 BUF 5)        Step #7.00 (1ms ~= 1000.00*RT, ~25000.00UPS, TraCI: 50ms, vehicles TOT 25 ACT Step #8.00 (1ms ~= 1000.00*RT, ~29000.00UPS, TraCI: 61ms, vehicles TOT 29 ACT Step #9.00 (1ms ~= 1000.00*RT, ~31000.00UPS, TraCI: 88ms, vehicles TOT 31 ACT Step #10.00 (1ms ~= 1000.00*RT, ~34000.00UPS, TraCI: 83ms, vehicles TOT 34 ACTStep #11.00 (0ms ?*RT. ?UPS, TraCI: 133ms, vehicles TOT 37 ACT 37 BUF 3)      Step #12.00 (0ms ?*RT. ?UPS, TraCI: 141ms, vehicles TOT 39 ACT 39 BUF 3)      Step #13.00 (0ms ?*RT. ?UPS, TraCI: 135ms, vehicles TOT 42 ACT 42 BUF 2)      Step #14.00 (0ms ?*RT. ?UPS, TraCI: 127ms, vehicles TOT 45 ACT 45 BUF 2)      Step #15.00 (1ms ~= 1000.00*RT, ~47000.00UPS, TraCI: 164ms, vehicles TOT 47 ACStep #16.00 (0ms ?*RT. ?UPS, TraCI: 127ms, vehicles TOT 48 ACT 48 BUF 2)      Step #17.00 (0ms ?*RT. ?UPS, TraCI: 166ms, vehicles TOT 52 ACT 52 BUF 1)      Step #18.00 (1ms ~= 1000.00*RT, ~55000.00UPS, TraCI: 147ms, vehicles TOT 55 ACStep #19.00 (0ms ?*RT. ?UPS, TraCI: 207ms, vehicles TOT 55 ACT 55 BUF 3)      Step #20.00 (0ms ?*RT. ?UPS, TraCI: 148ms, vehicles TOT 57 ACT 57 BUF 3)      Step #21.00 (1ms ~= 1000.00*RT, ~62000.00UPS, TraCI: 178ms, vehicles TOT 62 ACStep #22.00 (1ms ~= 1000.00*RT, ~63000.00UPS, TraCI: 247ms, vehicles TOT 63 ACStep #23.00 (1ms ~= 1000.00*RT, ~66000.00UPS, TraCI: 197ms, vehicles TOT 66 ACStep #24.00 (1ms ~= 1000.00*RT, ~69000.00UPS, TraCI: 231ms, vehicles TOT 69 ACStep #25.00 (0ms ?*RT. ?UPS, TraCI: 223ms, vehicles TOT 71 ACT 71 BUF 2)      Step #26.00 (1ms ~= 1000.00*RT, ~73000.00UPS, TraCI: 224ms, vehicles TOT 73 ACStep #27.00 (1ms ~= 1000.00*RT, ~76000.00UPS, TraCI: 233ms, vehicles TOT 76 ACStep #28.00 (1ms ~= 1000.00*RT, ~78000.00UPS, TraCI: 193ms, vehicles TOT 78 ACStep #29.00 (1ms ~= 1000.00*RT, ~81000.00UPS, TraCI: 232ms, vehicles TOT 81 ACStep #30.00 (1ms ~= 1000.00*RT, ~83000.00UPS, TraCI: 83ms, vehicles TOT 83 ACT
+Elapsed time (in seconds): 3.00

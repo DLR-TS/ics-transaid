@@ -4,9 +4,12 @@ WELCOME TO iTETRIS
 ==================
 STEP 1 - SETUP PHASE
 iCS --> SUMO launched.
-iCS --> ns-3 launched.
+iCS --> lightcomm launched.
 
 STEP 2 - SETUP PHASE
+Lightcomm: Loading Configuration
+LightComm listening on port 45051
+Loading configuration... done.
 testApp -> Starting iTetris test app
 testApp -> [WARNING]Ignoring socket port specified in configuration. (Overridden by command line argument.)
 testApp -> Test case set to drivingDistance
@@ -15,25 +18,21 @@ testApp -> ParseInfrastructure done
 testApp -> ParseSetup done
 testApp -> ParseOutput done
 testApp -> Load Configuration done
-Loading configuration... done.
-main-inci v 3.20
-ns3 -> No option file found. Must be named option.txt
 
 STEP 3 - SETUP PHASE
-iCS --> Trying 0 to connect SUMO on port 41999...
+iCS --> Trying 0 to connect SUMO on port 51837...
 iCS --> Connected to SUMO
 
-iCS --> Trying 0 to connect ns-3 on port 56177 and Host localhost...
+iCS --> Trying 0 to connect ns-3 on port 45051 and Host localhost...
 iCS --> Connected to ns-3
 
-iCS --> Trying 0 to connect Application on port 51357...
+iCS --> Trying 0 to connect Application on port 43925...
+testApp -> Server listening on port: 43925
 iCS --> Application testApp connected.
 
 
 STEP 4 - SETUP PHASE
 jin <iCS/ns3-client.cc> CMD_CREATENODE=8
-testApp -> Server listening on port: 51357
-WaveRsuInstaller::AllocateIpv6Prefix()3001:0:0:1::
 
 iCS --> Starting scheduling V2X messages in setup phase
 
@@ -16048,7 +16047,6 @@ STEP 7 - SIMULATION PHASE - Tics = 100000
 
 STEP 8 - SIMULATION PHASE - Tics = 100000
 STEP 9 - SIMULATION PHASE - Tics = 100000
-ns-3 server --> Finishing server.... 
 
 Success.
-Elapsed time (in seconds): 5.00
+Elapsed time (in seconds): 3.00
