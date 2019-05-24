@@ -7,6 +7,7 @@ iCS --> SUMO launched.
 iCS --> ns-3 launched.
 
 STEP 2 - SETUP PHASE
+Loading configuration... done.
 testApp -> Starting iTetris test app
 testApp -> [WARNING]Ignoring socket port specified in configuration. (Overridden by command line argument.)
 testApp -> Test case set to TMCBehaviour
@@ -15,19 +16,18 @@ testApp -> ParseInfrastructure done
 testApp -> ParseSetup done
 testApp -> ParseOutput done
 testApp -> Load Configuration done
-Loading configuration... done.
 main-inci v 3.20
 ns3 -> No option file found. Must be named option.txt
 
 STEP 3 - SETUP PHASE
-iCS --> Trying 0 to connect SUMO on port 41813...
+iCS --> Trying 0 to connect SUMO on port 41819...
 iCS --> Connected to SUMO
 
-iCS --> Trying 0 to connect ns-3 on port 50603 and Host localhost...
+iCS --> Trying 0 to connect ns-3 on port 50629 and Host localhost...
 iCS --> Connected to ns-3
 
-iCS --> Trying 0 to connect Application on port 49775...
-testApp -> Server listening on port: 49775
+iCS --> Trying 0 to connect Application on port 50565...
+testApp -> Server listening on port: 50565
 iCS --> Application testApp connected.
 
 
@@ -398,6 +398,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2150
 STEP 5 - SIMULATION PHASE - Tics = 2200
 STEP 6 - SIMULATION PHASE - Tics = 2200
 STEP 7 - SIMULATION PHASE - Tics = 2200
+2200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+2200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 2200
 STEP 9 - SIMULATION PHASE - Tics = 2200
@@ -414,6 +416,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2250
 STEP 5 - SIMULATION PHASE - Tics = 2300
 STEP 6 - SIMULATION PHASE - Tics = 2300
 STEP 7 - SIMULATION PHASE - Tics = 2300
+2300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+2300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 2300
 STEP 9 - SIMULATION PHASE - Tics = 2300
@@ -430,6 +434,7 @@ STEP 9 - SIMULATION PHASE - Tics = 2350
 STEP 5 - SIMULATION PHASE - Tics = 2400
 STEP 6 - SIMULATION PHASE - Tics = 2400
 STEP 7 - SIMULATION PHASE - Tics = 2400
+2400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 2400
 STEP 9 - SIMULATION PHASE - Tics = 2400
@@ -438,6 +443,7 @@ STEP 9 - SIMULATION PHASE - Tics = 2400
 STEP 5 - SIMULATION PHASE - Tics = 2450
 STEP 6 - SIMULATION PHASE - Tics = 2450
 STEP 7 - SIMULATION PHASE - Tics = 2450
+2450 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 2450
 STEP 9 - SIMULATION PHASE - Tics = 2450
@@ -446,6 +452,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2450
 STEP 5 - SIMULATION PHASE - Tics = 2500
 STEP 6 - SIMULATION PHASE - Tics = 2500
 STEP 7 - SIMULATION PHASE - Tics = 2500
+2500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+2500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 2500
 STEP 9 - SIMULATION PHASE - Tics = 2500
@@ -462,6 +470,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2550
 STEP 5 - SIMULATION PHASE - Tics = 2600
 STEP 6 - SIMULATION PHASE - Tics = 2600
 STEP 7 - SIMULATION PHASE - Tics = 2600
+2600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+2600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 2600
 STEP 9 - SIMULATION PHASE - Tics = 2600
@@ -478,6 +488,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2650
 STEP 5 - SIMULATION PHASE - Tics = 2700
 STEP 6 - SIMULATION PHASE - Tics = 2700
 STEP 7 - SIMULATION PHASE - Tics = 2700
+2700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+2700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 2700
 STEP 9 - SIMULATION PHASE - Tics = 2700
@@ -494,6 +506,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2750
 STEP 5 - SIMULATION PHASE - Tics = 2800
 STEP 6 - SIMULATION PHASE - Tics = 2800
 STEP 7 - SIMULATION PHASE - Tics = 2800
+2800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+2800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 2800
 STEP 9 - SIMULATION PHASE - Tics = 2800
@@ -510,6 +524,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2850
 STEP 5 - SIMULATION PHASE - Tics = 2900
 STEP 6 - SIMULATION PHASE - Tics = 2900
 STEP 7 - SIMULATION PHASE - Tics = 2900
+2900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+2900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 2900
 STEP 9 - SIMULATION PHASE - Tics = 2900
@@ -526,6 +542,8 @@ STEP 9 - SIMULATION PHASE - Tics = 2950
 STEP 5 - SIMULATION PHASE - Tics = 3000
 STEP 6 - SIMULATION PHASE - Tics = 3000
 STEP 7 - SIMULATION PHASE - Tics = 3000
+3000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+3000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 3000
 STEP 9 - SIMULATION PHASE - Tics = 3000
@@ -542,6 +560,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3050
 STEP 5 - SIMULATION PHASE - Tics = 3100
 STEP 6 - SIMULATION PHASE - Tics = 3100
 STEP 7 - SIMULATION PHASE - Tics = 3100
+3100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+3100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 3100
 STEP 9 - SIMULATION PHASE - Tics = 3100
@@ -558,6 +578,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3150
 STEP 5 - SIMULATION PHASE - Tics = 3200
 STEP 6 - SIMULATION PHASE - Tics = 3200
 STEP 7 - SIMULATION PHASE - Tics = 3200
+3200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+3200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 3200
 STEP 9 - SIMULATION PHASE - Tics = 3200
@@ -574,6 +596,7 @@ STEP 9 - SIMULATION PHASE - Tics = 3250
 STEP 5 - SIMULATION PHASE - Tics = 3300
 STEP 6 - SIMULATION PHASE - Tics = 3300
 STEP 7 - SIMULATION PHASE - Tics = 3300
+3300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 3300
 STEP 9 - SIMULATION PHASE - Tics = 3300
@@ -582,6 +605,7 @@ STEP 9 - SIMULATION PHASE - Tics = 3300
 STEP 5 - SIMULATION PHASE - Tics = 3350
 STEP 6 - SIMULATION PHASE - Tics = 3350
 STEP 7 - SIMULATION PHASE - Tics = 3350
+3350 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 3350
 STEP 9 - SIMULATION PHASE - Tics = 3350
@@ -590,6 +614,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3350
 STEP 5 - SIMULATION PHASE - Tics = 3400
 STEP 6 - SIMULATION PHASE - Tics = 3400
 STEP 7 - SIMULATION PHASE - Tics = 3400
+3400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+3400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 3400
 STEP 9 - SIMULATION PHASE - Tics = 3400
@@ -606,6 +632,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3450
 STEP 5 - SIMULATION PHASE - Tics = 3500
 STEP 6 - SIMULATION PHASE - Tics = 3500
 STEP 7 - SIMULATION PHASE - Tics = 3500
+3500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+3500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 3500
 STEP 9 - SIMULATION PHASE - Tics = 3500
@@ -622,6 +650,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3550
 STEP 5 - SIMULATION PHASE - Tics = 3600
 STEP 6 - SIMULATION PHASE - Tics = 3600
 STEP 7 - SIMULATION PHASE - Tics = 3600
+3600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+3600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 3600
 STEP 9 - SIMULATION PHASE - Tics = 3600
@@ -638,6 +668,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3650
 STEP 5 - SIMULATION PHASE - Tics = 3700
 STEP 6 - SIMULATION PHASE - Tics = 3700
 STEP 7 - SIMULATION PHASE - Tics = 3700
+3700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+3700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 3700
 STEP 9 - SIMULATION PHASE - Tics = 3700
@@ -654,6 +686,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3750
 STEP 5 - SIMULATION PHASE - Tics = 3800
 STEP 6 - SIMULATION PHASE - Tics = 3800
 STEP 7 - SIMULATION PHASE - Tics = 3800
+3800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+3800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 3800
 STEP 9 - SIMULATION PHASE - Tics = 3800
@@ -670,6 +704,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3850
 STEP 5 - SIMULATION PHASE - Tics = 3900
 STEP 6 - SIMULATION PHASE - Tics = 3900
 STEP 7 - SIMULATION PHASE - Tics = 3900
+3900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+3900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 3900
 STEP 9 - SIMULATION PHASE - Tics = 3900
@@ -686,6 +722,8 @@ STEP 9 - SIMULATION PHASE - Tics = 3950
 STEP 5 - SIMULATION PHASE - Tics = 4000
 STEP 6 - SIMULATION PHASE - Tics = 4000
 STEP 7 - SIMULATION PHASE - Tics = 4000
+4000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+4000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 4000
 STEP 9 - SIMULATION PHASE - Tics = 4000
@@ -702,6 +740,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4050
 STEP 5 - SIMULATION PHASE - Tics = 4100
 STEP 6 - SIMULATION PHASE - Tics = 4100
 STEP 7 - SIMULATION PHASE - Tics = 4100
+4100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+4100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 4100
 STEP 9 - SIMULATION PHASE - Tics = 4100
@@ -718,6 +758,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4150
 STEP 5 - SIMULATION PHASE - Tics = 4200
 STEP 6 - SIMULATION PHASE - Tics = 4200
 STEP 7 - SIMULATION PHASE - Tics = 4200
+4200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+4200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 4200
 STEP 9 - SIMULATION PHASE - Tics = 4200
@@ -734,6 +776,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4250
 STEP 5 - SIMULATION PHASE - Tics = 4300
 STEP 6 - SIMULATION PHASE - Tics = 4300
 STEP 7 - SIMULATION PHASE - Tics = 4300
+4300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+4300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 4300
 STEP 9 - SIMULATION PHASE - Tics = 4300
@@ -750,6 +794,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4350
 STEP 5 - SIMULATION PHASE - Tics = 4400
 STEP 6 - SIMULATION PHASE - Tics = 4400
 STEP 7 - SIMULATION PHASE - Tics = 4400
+4400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+4400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 4400
 STEP 9 - SIMULATION PHASE - Tics = 4400
@@ -766,6 +812,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4450
 STEP 5 - SIMULATION PHASE - Tics = 4500
 STEP 6 - SIMULATION PHASE - Tics = 4500
 STEP 7 - SIMULATION PHASE - Tics = 4500
+4500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+4500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 4500
 STEP 9 - SIMULATION PHASE - Tics = 4500
@@ -782,6 +830,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4550
 STEP 5 - SIMULATION PHASE - Tics = 4600
 STEP 6 - SIMULATION PHASE - Tics = 4600
 STEP 7 - SIMULATION PHASE - Tics = 4600
+4600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+4600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 4600
 STEP 9 - SIMULATION PHASE - Tics = 4600
@@ -798,6 +848,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4650
 STEP 5 - SIMULATION PHASE - Tics = 4700
 STEP 6 - SIMULATION PHASE - Tics = 4700
 STEP 7 - SIMULATION PHASE - Tics = 4700
+4700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+4700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 4700
 STEP 9 - SIMULATION PHASE - Tics = 4700
@@ -814,6 +866,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4750
 STEP 5 - SIMULATION PHASE - Tics = 4800
 STEP 6 - SIMULATION PHASE - Tics = 4800
 STEP 7 - SIMULATION PHASE - Tics = 4800
+4800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+4800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 4800
 STEP 9 - SIMULATION PHASE - Tics = 4800
@@ -830,6 +884,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4850
 STEP 5 - SIMULATION PHASE - Tics = 4900
 STEP 6 - SIMULATION PHASE - Tics = 4900
 STEP 7 - SIMULATION PHASE - Tics = 4900
+4900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+4900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 4900
 STEP 9 - SIMULATION PHASE - Tics = 4900
@@ -846,6 +902,8 @@ STEP 9 - SIMULATION PHASE - Tics = 4950
 STEP 5 - SIMULATION PHASE - Tics = 5000
 STEP 6 - SIMULATION PHASE - Tics = 5000
 STEP 7 - SIMULATION PHASE - Tics = 5000
+5000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+5000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 
 STEP 8 - SIMULATION PHASE - Tics = 5000
 STEP 9 - SIMULATION PHASE - Tics = 5000
@@ -864,6 +922,8 @@ STEP 5 - SIMULATION PHASE - Tics = 5100
 STEP 6 - SIMULATION PHASE - Tics = 5100
 STEP 7 - SIMULATION PHASE - Tics = 5100
 5100 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+5100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+5100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 5100 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 5100
@@ -884,6 +944,8 @@ STEP 5 - SIMULATION PHASE - Tics = 5200
 STEP 6 - SIMULATION PHASE - Tics = 5200
 STEP 7 - SIMULATION PHASE - Tics = 5200
 5200 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+5200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+5200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 5200 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 5200
@@ -904,6 +966,8 @@ STEP 5 - SIMULATION PHASE - Tics = 5300
 STEP 6 - SIMULATION PHASE - Tics = 5300
 STEP 7 - SIMULATION PHASE - Tics = 5300
 5300 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+5300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+5300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 5300 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 5300
@@ -924,6 +988,8 @@ STEP 5 - SIMULATION PHASE - Tics = 5400
 STEP 6 - SIMULATION PHASE - Tics = 5400
 STEP 7 - SIMULATION PHASE - Tics = 5400
 5400 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+5400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+5400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 5400 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 5400
@@ -944,6 +1010,8 @@ STEP 5 - SIMULATION PHASE - Tics = 5500
 STEP 6 - SIMULATION PHASE - Tics = 5500
 STEP 7 - SIMULATION PHASE - Tics = 5500
 5500 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+5500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+5500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 5500 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 5500
@@ -964,6 +1032,8 @@ STEP 5 - SIMULATION PHASE - Tics = 5600
 STEP 6 - SIMULATION PHASE - Tics = 5600
 STEP 7 - SIMULATION PHASE - Tics = 5600
 5600 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+5600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+5600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 5600 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 5600
@@ -984,6 +1054,8 @@ STEP 5 - SIMULATION PHASE - Tics = 5700
 STEP 6 - SIMULATION PHASE - Tics = 5700
 STEP 7 - SIMULATION PHASE - Tics = 5700
 5700 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+5700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+5700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 5700 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 5700
@@ -1004,6 +1076,8 @@ STEP 5 - SIMULATION PHASE - Tics = 5800
 STEP 6 - SIMULATION PHASE - Tics = 5800
 STEP 7 - SIMULATION PHASE - Tics = 5800
 5800 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+5800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+5800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 5800 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 5800
@@ -1024,6 +1098,8 @@ STEP 5 - SIMULATION PHASE - Tics = 5900
 STEP 6 - SIMULATION PHASE - Tics = 5900
 STEP 7 - SIMULATION PHASE - Tics = 5900
 5900 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+5900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+5900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 5900 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 5900
@@ -1044,6 +1120,8 @@ STEP 5 - SIMULATION PHASE - Tics = 6000
 STEP 6 - SIMULATION PHASE - Tics = 6000
 STEP 7 - SIMULATION PHASE - Tics = 6000
 6000 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+6000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+6000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 6000 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 6000
@@ -1064,6 +1142,8 @@ STEP 5 - SIMULATION PHASE - Tics = 6100
 STEP 6 - SIMULATION PHASE - Tics = 6100
 STEP 7 - SIMULATION PHASE - Tics = 6100
 6100 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+6100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+6100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 6100 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 6100
@@ -1084,6 +1164,8 @@ STEP 5 - SIMULATION PHASE - Tics = 6200
 STEP 6 - SIMULATION PHASE - Tics = 6200
 STEP 7 - SIMULATION PHASE - Tics = 6200
 6200 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+6200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+6200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 6200 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 6200
@@ -1104,6 +1186,8 @@ STEP 5 - SIMULATION PHASE - Tics = 6300
 STEP 6 - SIMULATION PHASE - Tics = 6300
 STEP 7 - SIMULATION PHASE - Tics = 6300
 6300 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+6300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+6300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 6300 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 6300
@@ -1124,6 +1208,8 @@ STEP 5 - SIMULATION PHASE - Tics = 6400
 STEP 6 - SIMULATION PHASE - Tics = 6400
 STEP 7 - SIMULATION PHASE - Tics = 6400
 6400 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+6400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+6400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 6400 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 6400
@@ -1144,6 +1230,8 @@ STEP 5 - SIMULATION PHASE - Tics = 6500
 STEP 6 - SIMULATION PHASE - Tics = 6500
 STEP 7 - SIMULATION PHASE - Tics = 6500
 6500 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+6500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+6500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 6500 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 6500
@@ -1164,6 +1252,8 @@ STEP 5 - SIMULATION PHASE - Tics = 6600
 STEP 6 - SIMULATION PHASE - Tics = 6600
 STEP 7 - SIMULATION PHASE - Tics = 6600
 6600 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+6600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+6600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 6600 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 6600
@@ -1184,6 +1274,8 @@ STEP 5 - SIMULATION PHASE - Tics = 6700
 STEP 6 - SIMULATION PHASE - Tics = 6700
 STEP 7 - SIMULATION PHASE - Tics = 6700
 6700 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+6700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+6700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 6700 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 6700
@@ -1204,6 +1296,8 @@ STEP 5 - SIMULATION PHASE - Tics = 6800
 STEP 6 - SIMULATION PHASE - Tics = 6800
 STEP 7 - SIMULATION PHASE - Tics = 6800
 6800 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+6800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+6800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 6800 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 6800
@@ -1224,6 +1318,8 @@ STEP 5 - SIMULATION PHASE - Tics = 6900
 STEP 6 - SIMULATION PHASE - Tics = 6900
 STEP 7 - SIMULATION PHASE - Tics = 6900
 6900 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+6900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+6900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 6900 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 6900
@@ -1244,6 +1340,8 @@ STEP 5 - SIMULATION PHASE - Tics = 7000
 STEP 6 - SIMULATION PHASE - Tics = 7000
 STEP 7 - SIMULATION PHASE - Tics = 7000
 7000 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+7000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+7000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 7000 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 7000
@@ -1264,6 +1362,8 @@ STEP 5 - SIMULATION PHASE - Tics = 7100
 STEP 6 - SIMULATION PHASE - Tics = 7100
 STEP 7 - SIMULATION PHASE - Tics = 7100
 7100 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+7100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+7100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 7100 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 7100
@@ -1284,6 +1384,8 @@ STEP 5 - SIMULATION PHASE - Tics = 7200
 STEP 6 - SIMULATION PHASE - Tics = 7200
 STEP 7 - SIMULATION PHASE - Tics = 7200
 7200 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+7200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+7200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 7200 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 7200
@@ -1304,6 +1406,8 @@ STEP 5 - SIMULATION PHASE - Tics = 7300
 STEP 6 - SIMULATION PHASE - Tics = 7300
 STEP 7 - SIMULATION PHASE - Tics = 7300
 7300 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+7300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+7300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 7300 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 7300
@@ -1324,6 +1428,8 @@ STEP 5 - SIMULATION PHASE - Tics = 7400
 STEP 6 - SIMULATION PHASE - Tics = 7400
 STEP 7 - SIMULATION PHASE - Tics = 7400
 7400 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+7400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+7400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 7400 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 7400
@@ -1344,6 +1450,8 @@ STEP 5 - SIMULATION PHASE - Tics = 7500
 STEP 6 - SIMULATION PHASE - Tics = 7500
 STEP 7 - SIMULATION PHASE - Tics = 7500
 7500 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+7500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+7500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 7500 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 7500
@@ -1364,6 +1472,8 @@ STEP 5 - SIMULATION PHASE - Tics = 7600
 STEP 6 - SIMULATION PHASE - Tics = 7600
 STEP 7 - SIMULATION PHASE - Tics = 7600
 7600 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+7600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+7600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 7600 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 7600
@@ -1384,6 +1494,8 @@ STEP 5 - SIMULATION PHASE - Tics = 7700
 STEP 6 - SIMULATION PHASE - Tics = 7700
 STEP 7 - SIMULATION PHASE - Tics = 7700
 7700 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+7700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+7700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 7700 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 7700
@@ -1404,6 +1516,8 @@ STEP 5 - SIMULATION PHASE - Tics = 7800
 STEP 6 - SIMULATION PHASE - Tics = 7800
 STEP 7 - SIMULATION PHASE - Tics = 7800
 7800 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+7800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+7800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 7800 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 7800
@@ -1424,6 +1538,8 @@ STEP 5 - SIMULATION PHASE - Tics = 7900
 STEP 6 - SIMULATION PHASE - Tics = 7900
 STEP 7 - SIMULATION PHASE - Tics = 7900
 7900 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+7900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+7900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 7900 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 7900
@@ -1444,6 +1560,8 @@ STEP 5 - SIMULATION PHASE - Tics = 8000
 STEP 6 - SIMULATION PHASE - Tics = 8000
 STEP 7 - SIMULATION PHASE - Tics = 8000
 8000 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+8000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+8000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 8000 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 8000
@@ -1464,6 +1582,8 @@ STEP 5 - SIMULATION PHASE - Tics = 8100
 STEP 6 - SIMULATION PHASE - Tics = 8100
 STEP 7 - SIMULATION PHASE - Tics = 8100
 8100 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+8100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+8100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 8100 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 8100
@@ -1484,6 +1604,8 @@ STEP 5 - SIMULATION PHASE - Tics = 8200
 STEP 6 - SIMULATION PHASE - Tics = 8200
 STEP 7 - SIMULATION PHASE - Tics = 8200
 8200 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+8200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+8200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 8200 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 8200
@@ -1504,6 +1626,8 @@ STEP 5 - SIMULATION PHASE - Tics = 8300
 STEP 6 - SIMULATION PHASE - Tics = 8300
 STEP 7 - SIMULATION PHASE - Tics = 8300
 8300 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+8300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+8300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 8300 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 8300
@@ -1524,6 +1648,8 @@ STEP 5 - SIMULATION PHASE - Tics = 8400
 STEP 6 - SIMULATION PHASE - Tics = 8400
 STEP 7 - SIMULATION PHASE - Tics = 8400
 8400 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+8400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+8400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 8400 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 8400
@@ -1544,6 +1670,8 @@ STEP 5 - SIMULATION PHASE - Tics = 8500
 STEP 6 - SIMULATION PHASE - Tics = 8500
 STEP 7 - SIMULATION PHASE - Tics = 8500
 8500 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+8500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+8500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 8500 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 8500
@@ -1564,6 +1692,8 @@ STEP 5 - SIMULATION PHASE - Tics = 8600
 STEP 6 - SIMULATION PHASE - Tics = 8600
 STEP 7 - SIMULATION PHASE - Tics = 8600
 8600 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+8600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+8600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 8600 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 8600
@@ -1584,6 +1714,7 @@ STEP 5 - SIMULATION PHASE - Tics = 8700
 STEP 6 - SIMULATION PHASE - Tics = 8700
 STEP 7 - SIMULATION PHASE - Tics = 8700
 8700 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+8700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 8700 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 8700
@@ -1594,6 +1725,7 @@ STEP 5 - SIMULATION PHASE - Tics = 8750
 STEP 6 - SIMULATION PHASE - Tics = 8750
 STEP 7 - SIMULATION PHASE - Tics = 8750
 8750 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+8750 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 8750 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 8750
@@ -1604,6 +1736,8 @@ STEP 5 - SIMULATION PHASE - Tics = 8800
 STEP 6 - SIMULATION PHASE - Tics = 8800
 STEP 7 - SIMULATION PHASE - Tics = 8800
 8800 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+8800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+8800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 8800 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 8800
@@ -1624,6 +1758,8 @@ STEP 5 - SIMULATION PHASE - Tics = 8900
 STEP 6 - SIMULATION PHASE - Tics = 8900
 STEP 7 - SIMULATION PHASE - Tics = 8900
 8900 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+8900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+8900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 8900 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 8900
@@ -1644,6 +1780,8 @@ STEP 5 - SIMULATION PHASE - Tics = 9000
 STEP 6 - SIMULATION PHASE - Tics = 9000
 STEP 7 - SIMULATION PHASE - Tics = 9000
 9000 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+9000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+9000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 9000 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 9000
@@ -1664,6 +1802,8 @@ STEP 5 - SIMULATION PHASE - Tics = 9100
 STEP 6 - SIMULATION PHASE - Tics = 9100
 STEP 7 - SIMULATION PHASE - Tics = 9100
 9100 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+9100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+9100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 9100 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 9100
@@ -1684,6 +1824,8 @@ STEP 5 - SIMULATION PHASE - Tics = 9200
 STEP 6 - SIMULATION PHASE - Tics = 9200
 STEP 7 - SIMULATION PHASE - Tics = 9200
 9200 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+9200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+9200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 9200 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 9200
@@ -1704,6 +1846,8 @@ STEP 5 - SIMULATION PHASE - Tics = 9300
 STEP 6 - SIMULATION PHASE - Tics = 9300
 STEP 7 - SIMULATION PHASE - Tics = 9300
 9300 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+9300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+9300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 9300 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 9300
@@ -1724,6 +1868,8 @@ STEP 5 - SIMULATION PHASE - Tics = 9400
 STEP 6 - SIMULATION PHASE - Tics = 9400
 STEP 7 - SIMULATION PHASE - Tics = 9400
 9400 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+9400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+9400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 9400 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 9400
@@ -1744,6 +1890,8 @@ STEP 5 - SIMULATION PHASE - Tics = 9500
 STEP 6 - SIMULATION PHASE - Tics = 9500
 STEP 7 - SIMULATION PHASE - Tics = 9500
 9500 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+9500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+9500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 9500 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 9500
@@ -1764,6 +1912,8 @@ STEP 5 - SIMULATION PHASE - Tics = 9600
 STEP 6 - SIMULATION PHASE - Tics = 9600
 STEP 7 - SIMULATION PHASE - Tics = 9600
 9600 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+9600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+9600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 9600 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 9600
@@ -1784,6 +1934,8 @@ STEP 5 - SIMULATION PHASE - Tics = 9700
 STEP 6 - SIMULATION PHASE - Tics = 9700
 STEP 7 - SIMULATION PHASE - Tics = 9700
 9700 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+9700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+9700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 9700 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 9700
@@ -1815,6 +1967,7 @@ STEP 5 - SIMULATION PHASE - Tics = 9850
 STEP 6 - SIMULATION PHASE - Tics = 9850
 STEP 7 - SIMULATION PHASE - Tics = 9850
 9850 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+9850 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 9850 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 9850
@@ -1825,6 +1978,7 @@ STEP 5 - SIMULATION PHASE - Tics = 9900
 STEP 6 - SIMULATION PHASE - Tics = 9900
 STEP 7 - SIMULATION PHASE - Tics = 9900
 9900 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+9900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 9900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 9900 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -1847,6 +2001,7 @@ STEP 6 - SIMULATION PHASE - Tics = 10000
 STEP 7 - SIMULATION PHASE - Tics = 10000
 10000 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 10000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+10000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10000 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 10000
@@ -1867,6 +2022,7 @@ STEP 5 - SIMULATION PHASE - Tics = 10100
 STEP 6 - SIMULATION PHASE - Tics = 10100
 STEP 7 - SIMULATION PHASE - Tics = 10100
 10100 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+10100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10100 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -1889,6 +2045,7 @@ STEP 6 - SIMULATION PHASE - Tics = 10200
 STEP 7 - SIMULATION PHASE - Tics = 10200
 10200 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 10200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+10200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10200 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 10200
@@ -1909,6 +2066,7 @@ STEP 5 - SIMULATION PHASE - Tics = 10300
 STEP 6 - SIMULATION PHASE - Tics = 10300
 STEP 7 - SIMULATION PHASE - Tics = 10300
 10300 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+10300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10300 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -1931,6 +2089,7 @@ STEP 6 - SIMULATION PHASE - Tics = 10400
 STEP 7 - SIMULATION PHASE - Tics = 10400
 10400 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 10400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+10400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10400 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 10400
@@ -1951,6 +2110,7 @@ STEP 5 - SIMULATION PHASE - Tics = 10500
 STEP 6 - SIMULATION PHASE - Tics = 10500
 STEP 7 - SIMULATION PHASE - Tics = 10500
 10500 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+10500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10500 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -1973,6 +2133,7 @@ STEP 6 - SIMULATION PHASE - Tics = 10600
 STEP 7 - SIMULATION PHASE - Tics = 10600
 10600 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 10600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+10600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10600 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 10600
@@ -1993,6 +2154,7 @@ STEP 5 - SIMULATION PHASE - Tics = 10700
 STEP 6 - SIMULATION PHASE - Tics = 10700
 STEP 7 - SIMULATION PHASE - Tics = 10700
 10700 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+10700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10700 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2015,6 +2177,7 @@ STEP 6 - SIMULATION PHASE - Tics = 10800
 STEP 7 - SIMULATION PHASE - Tics = 10800
 10800 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 10800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+10800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10800 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 10800
@@ -2035,6 +2198,7 @@ STEP 5 - SIMULATION PHASE - Tics = 10900
 STEP 6 - SIMULATION PHASE - Tics = 10900
 STEP 7 - SIMULATION PHASE - Tics = 10900
 10900 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+10900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 10900 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2057,6 +2221,7 @@ STEP 6 - SIMULATION PHASE - Tics = 11000
 STEP 7 - SIMULATION PHASE - Tics = 11000
 11000 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 11000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+11000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11000 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 11000
@@ -2077,6 +2242,8 @@ STEP 5 - SIMULATION PHASE - Tics = 11100
 STEP 6 - SIMULATION PHASE - Tics = 11100
 STEP 7 - SIMULATION PHASE - Tics = 11100
 11100 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+11100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+11100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11100 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 11100
@@ -2097,6 +2264,7 @@ STEP 5 - SIMULATION PHASE - Tics = 11200
 STEP 6 - SIMULATION PHASE - Tics = 11200
 STEP 7 - SIMULATION PHASE - Tics = 11200
 11200 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+11200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11200 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2119,6 +2287,7 @@ STEP 6 - SIMULATION PHASE - Tics = 11300
 STEP 7 - SIMULATION PHASE - Tics = 11300
 11300 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 11300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+11300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11300 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 11300
@@ -2139,6 +2308,7 @@ STEP 5 - SIMULATION PHASE - Tics = 11400
 STEP 6 - SIMULATION PHASE - Tics = 11400
 STEP 7 - SIMULATION PHASE - Tics = 11400
 11400 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+11400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11400 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2161,6 +2331,7 @@ STEP 6 - SIMULATION PHASE - Tics = 11500
 STEP 7 - SIMULATION PHASE - Tics = 11500
 11500 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 11500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+11500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11500 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 11500
@@ -2181,6 +2352,7 @@ STEP 5 - SIMULATION PHASE - Tics = 11600
 STEP 6 - SIMULATION PHASE - Tics = 11600
 STEP 7 - SIMULATION PHASE - Tics = 11600
 11600 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+11600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11600 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2203,6 +2375,7 @@ STEP 6 - SIMULATION PHASE - Tics = 11700
 STEP 7 - SIMULATION PHASE - Tics = 11700
 11700 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 11700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+11700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11700 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 11700
@@ -2223,6 +2396,7 @@ STEP 5 - SIMULATION PHASE - Tics = 11800
 STEP 6 - SIMULATION PHASE - Tics = 11800
 STEP 7 - SIMULATION PHASE - Tics = 11800
 11800 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+11800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11800 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2245,6 +2419,7 @@ STEP 6 - SIMULATION PHASE - Tics = 11900
 STEP 7 - SIMULATION PHASE - Tics = 11900
 11900 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 11900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+11900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 11900 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 11900
@@ -2265,6 +2440,7 @@ STEP 5 - SIMULATION PHASE - Tics = 12000
 STEP 6 - SIMULATION PHASE - Tics = 12000
 STEP 7 - SIMULATION PHASE - Tics = 12000
 12000 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+12000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12000 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2287,6 +2463,7 @@ STEP 6 - SIMULATION PHASE - Tics = 12100
 STEP 7 - SIMULATION PHASE - Tics = 12100
 12100 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 12100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+12100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12100 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 12100
@@ -2307,6 +2484,7 @@ STEP 5 - SIMULATION PHASE - Tics = 12200
 STEP 6 - SIMULATION PHASE - Tics = 12200
 STEP 7 - SIMULATION PHASE - Tics = 12200
 12200 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+12200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12200 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2329,6 +2507,7 @@ STEP 6 - SIMULATION PHASE - Tics = 12300
 STEP 7 - SIMULATION PHASE - Tics = 12300
 12300 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 12300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+12300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12300 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 12300
@@ -2349,6 +2528,7 @@ STEP 5 - SIMULATION PHASE - Tics = 12400
 STEP 6 - SIMULATION PHASE - Tics = 12400
 STEP 7 - SIMULATION PHASE - Tics = 12400
 12400 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+12400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12400 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2371,6 +2551,7 @@ STEP 6 - SIMULATION PHASE - Tics = 12500
 STEP 7 - SIMULATION PHASE - Tics = 12500
 12500 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 12500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+12500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12500 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 12500
@@ -2391,6 +2572,7 @@ STEP 5 - SIMULATION PHASE - Tics = 12600
 STEP 6 - SIMULATION PHASE - Tics = 12600
 STEP 7 - SIMULATION PHASE - Tics = 12600
 12600 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+12600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12600 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2413,6 +2595,7 @@ STEP 6 - SIMULATION PHASE - Tics = 12700
 STEP 7 - SIMULATION PHASE - Tics = 12700
 12700 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 12700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+12700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12700 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 12700
@@ -2433,6 +2616,7 @@ STEP 5 - SIMULATION PHASE - Tics = 12800
 STEP 6 - SIMULATION PHASE - Tics = 12800
 STEP 7 - SIMULATION PHASE - Tics = 12800
 12800 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+12800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12800 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2455,6 +2639,7 @@ STEP 6 - SIMULATION PHASE - Tics = 12900
 STEP 7 - SIMULATION PHASE - Tics = 12900
 12900 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 12900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+12900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 12900 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 12900
@@ -2475,6 +2660,7 @@ STEP 5 - SIMULATION PHASE - Tics = 13000
 STEP 6 - SIMULATION PHASE - Tics = 13000
 STEP 7 - SIMULATION PHASE - Tics = 13000
 13000 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+13000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13000 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2497,6 +2683,7 @@ STEP 6 - SIMULATION PHASE - Tics = 13100
 STEP 7 - SIMULATION PHASE - Tics = 13100
 13100 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 13100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+13100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13100 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 13100
@@ -2517,6 +2704,7 @@ STEP 5 - SIMULATION PHASE - Tics = 13200
 STEP 6 - SIMULATION PHASE - Tics = 13200
 STEP 7 - SIMULATION PHASE - Tics = 13200
 13200 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+13200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13200 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2539,6 +2727,7 @@ STEP 6 - SIMULATION PHASE - Tics = 13300
 STEP 7 - SIMULATION PHASE - Tics = 13300
 13300 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 13300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+13300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13300 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 13300
@@ -2559,6 +2748,7 @@ STEP 5 - SIMULATION PHASE - Tics = 13400
 STEP 6 - SIMULATION PHASE - Tics = 13400
 STEP 7 - SIMULATION PHASE - Tics = 13400
 13400 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+13400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13400 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2581,6 +2771,7 @@ STEP 6 - SIMULATION PHASE - Tics = 13500
 STEP 7 - SIMULATION PHASE - Tics = 13500
 13500 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 13500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+13500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13500 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 13500
@@ -2601,6 +2792,7 @@ STEP 5 - SIMULATION PHASE - Tics = 13600
 STEP 6 - SIMULATION PHASE - Tics = 13600
 STEP 7 - SIMULATION PHASE - Tics = 13600
 13600 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+13600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13600 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2623,6 +2815,7 @@ STEP 6 - SIMULATION PHASE - Tics = 13700
 STEP 7 - SIMULATION PHASE - Tics = 13700
 13700 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 13700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+13700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13700 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 13700
@@ -2643,6 +2836,7 @@ STEP 5 - SIMULATION PHASE - Tics = 13800
 STEP 6 - SIMULATION PHASE - Tics = 13800
 STEP 7 - SIMULATION PHASE - Tics = 13800
 13800 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+13800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13800 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2665,6 +2859,7 @@ STEP 6 - SIMULATION PHASE - Tics = 13900
 STEP 7 - SIMULATION PHASE - Tics = 13900
 13900 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 13900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+13900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 13900 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 13900
@@ -2686,6 +2881,7 @@ STEP 6 - SIMULATION PHASE - Tics = 14000
 STEP 7 - SIMULATION PHASE - Tics = 14000
 14000 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 14000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+14000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14000 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 14000
@@ -2706,6 +2902,7 @@ STEP 5 - SIMULATION PHASE - Tics = 14100
 STEP 6 - SIMULATION PHASE - Tics = 14100
 STEP 7 - SIMULATION PHASE - Tics = 14100
 14100 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+14100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14100 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2738,6 +2935,7 @@ STEP 5 - SIMULATION PHASE - Tics = 14250
 STEP 6 - SIMULATION PHASE - Tics = 14250
 STEP 7 - SIMULATION PHASE - Tics = 14250
 14250 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+14250 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14250 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 14250
@@ -2748,6 +2946,7 @@ STEP 5 - SIMULATION PHASE - Tics = 14300
 STEP 6 - SIMULATION PHASE - Tics = 14300
 STEP 7 - SIMULATION PHASE - Tics = 14300
 14300 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+14300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14300 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2770,6 +2969,7 @@ STEP 6 - SIMULATION PHASE - Tics = 14400
 STEP 7 - SIMULATION PHASE - Tics = 14400
 14400 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 14400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+14400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14400 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 14400
@@ -2790,6 +2990,7 @@ STEP 5 - SIMULATION PHASE - Tics = 14500
 STEP 6 - SIMULATION PHASE - Tics = 14500
 STEP 7 - SIMULATION PHASE - Tics = 14500
 14500 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+14500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14500 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2812,6 +3013,7 @@ STEP 6 - SIMULATION PHASE - Tics = 14600
 STEP 7 - SIMULATION PHASE - Tics = 14600
 14600 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 14600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+14600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14600 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 14600
@@ -2832,6 +3034,7 @@ STEP 5 - SIMULATION PHASE - Tics = 14700
 STEP 6 - SIMULATION PHASE - Tics = 14700
 STEP 7 - SIMULATION PHASE - Tics = 14700
 14700 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+14700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14700 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2854,6 +3057,7 @@ STEP 6 - SIMULATION PHASE - Tics = 14800
 STEP 7 - SIMULATION PHASE - Tics = 14800
 14800 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 14800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+14800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14800 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 14800
@@ -2874,6 +3078,7 @@ STEP 5 - SIMULATION PHASE - Tics = 14900
 STEP 6 - SIMULATION PHASE - Tics = 14900
 STEP 7 - SIMULATION PHASE - Tics = 14900
 14900 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+14900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 14900 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2896,6 +3101,7 @@ STEP 6 - SIMULATION PHASE - Tics = 15000
 STEP 7 - SIMULATION PHASE - Tics = 15000
 15000 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 15000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+15000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15000 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 15000
@@ -2916,6 +3122,7 @@ STEP 5 - SIMULATION PHASE - Tics = 15100
 STEP 6 - SIMULATION PHASE - Tics = 15100
 STEP 7 - SIMULATION PHASE - Tics = 15100
 15100 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+15100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15100 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2938,6 +3145,7 @@ STEP 6 - SIMULATION PHASE - Tics = 15200
 STEP 7 - SIMULATION PHASE - Tics = 15200
 15200 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 15200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+15200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15200 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 15200
@@ -2958,6 +3166,7 @@ STEP 5 - SIMULATION PHASE - Tics = 15300
 STEP 6 - SIMULATION PHASE - Tics = 15300
 STEP 7 - SIMULATION PHASE - Tics = 15300
 15300 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+15300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15300 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -2980,6 +3189,7 @@ STEP 6 - SIMULATION PHASE - Tics = 15400
 STEP 7 - SIMULATION PHASE - Tics = 15400
 15400 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 15400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+15400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15400 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 15400
@@ -3000,6 +3210,7 @@ STEP 5 - SIMULATION PHASE - Tics = 15500
 STEP 6 - SIMULATION PHASE - Tics = 15500
 STEP 7 - SIMULATION PHASE - Tics = 15500
 15500 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+15500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15500 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -3022,6 +3233,7 @@ STEP 6 - SIMULATION PHASE - Tics = 15600
 STEP 7 - SIMULATION PHASE - Tics = 15600
 15600 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 15600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+15600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15600 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 15600
@@ -3042,6 +3254,7 @@ STEP 5 - SIMULATION PHASE - Tics = 15700
 STEP 6 - SIMULATION PHASE - Tics = 15700
 STEP 7 - SIMULATION PHASE - Tics = 15700
 15700 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+15700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15700 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -3074,6 +3287,7 @@ STEP 5 - SIMULATION PHASE - Tics = 15850
 STEP 6 - SIMULATION PHASE - Tics = 15850
 STEP 7 - SIMULATION PHASE - Tics = 15850
 15850 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+15850 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15850 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 15850
@@ -3084,6 +3298,7 @@ STEP 5 - SIMULATION PHASE - Tics = 15900
 STEP 6 - SIMULATION PHASE - Tics = 15900
 STEP 7 - SIMULATION PHASE - Tics = 15900
 15900 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+15900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 15900 TMCBehaviourTest::Execute() called. hostController: 5000
 
@@ -3105,6 +3320,8 @@ STEP 5 - SIMULATION PHASE - Tics = 16000
 STEP 6 - SIMULATION PHASE - Tics = 16000
 STEP 7 - SIMULATION PHASE - Tics = 16000
 16000 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+16000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+16000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 16000 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 16000
@@ -3126,6 +3343,7 @@ STEP 6 - SIMULATION PHASE - Tics = 16100
 STEP 7 - SIMULATION PHASE - Tics = 16100
 16100 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 16100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+16100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 16100 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 16100
@@ -3146,6 +3364,8 @@ STEP 5 - SIMULATION PHASE - Tics = 16200
 STEP 6 - SIMULATION PHASE - Tics = 16200
 STEP 7 - SIMULATION PHASE - Tics = 16200
 16200 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+16200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+16200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 16200 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 16200
@@ -3167,6 +3387,7 @@ STEP 6 - SIMULATION PHASE - Tics = 16300
 STEP 7 - SIMULATION PHASE - Tics = 16300
 16300 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 16300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+16300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 16300 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 16300
@@ -3187,6 +3408,8 @@ STEP 5 - SIMULATION PHASE - Tics = 16400
 STEP 6 - SIMULATION PHASE - Tics = 16400
 STEP 7 - SIMULATION PHASE - Tics = 16400
 16400 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+16400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+16400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 16400 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 16400
@@ -3207,6 +3430,8 @@ STEP 5 - SIMULATION PHASE - Tics = 16500
 STEP 6 - SIMULATION PHASE - Tics = 16500
 STEP 7 - SIMULATION PHASE - Tics = 16500
 16500 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+16500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+16500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 16500 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 16500
@@ -3227,6 +3452,8 @@ STEP 5 - SIMULATION PHASE - Tics = 16600
 STEP 6 - SIMULATION PHASE - Tics = 16600
 STEP 7 - SIMULATION PHASE - Tics = 16600
 16600 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+16600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+16600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 16600 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 16600
@@ -3247,6 +3474,8 @@ STEP 5 - SIMULATION PHASE - Tics = 16700
 STEP 6 - SIMULATION PHASE - Tics = 16700
 STEP 7 - SIMULATION PHASE - Tics = 16700
 16700 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+16700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+16700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 16700 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 16700
@@ -3268,6 +3497,7 @@ STEP 6 - SIMULATION PHASE - Tics = 16800
 STEP 7 - SIMULATION PHASE - Tics = 16800
 16800 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
 16800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+16800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 16800 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 16800
@@ -3288,6 +3518,8 @@ STEP 5 - SIMULATION PHASE - Tics = 16900
 STEP 6 - SIMULATION PHASE - Tics = 16900
 STEP 7 - SIMULATION PHASE - Tics = 16900
 16900 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+16900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+16900 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 16900 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 16900
@@ -3308,6 +3540,8 @@ STEP 5 - SIMULATION PHASE - Tics = 17000
 STEP 6 - SIMULATION PHASE - Tics = 17000
 STEP 7 - SIMULATION PHASE - Tics = 17000
 17000 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+17000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+17000 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 17000 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 17000
@@ -3328,6 +3562,8 @@ STEP 5 - SIMULATION PHASE - Tics = 17100
 STEP 6 - SIMULATION PHASE - Tics = 17100
 STEP 7 - SIMULATION PHASE - Tics = 17100
 17100 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+17100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+17100 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 17100 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 17100
@@ -3348,6 +3584,8 @@ STEP 5 - SIMULATION PHASE - Tics = 17200
 STEP 6 - SIMULATION PHASE - Tics = 17200
 STEP 7 - SIMULATION PHASE - Tics = 17200
 17200 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+17200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+17200 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 17200 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 17200
@@ -3368,6 +3606,8 @@ STEP 5 - SIMULATION PHASE - Tics = 17300
 STEP 6 - SIMULATION PHASE - Tics = 17300
 STEP 7 - SIMULATION PHASE - Tics = 17300
 17300 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+17300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+17300 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 17300 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 17300
@@ -3388,6 +3628,8 @@ STEP 5 - SIMULATION PHASE - Tics = 17400
 STEP 6 - SIMULATION PHASE - Tics = 17400
 STEP 7 - SIMULATION PHASE - Tics = 17400
 17400 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+17400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+17400 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 17400 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 17400
@@ -3408,6 +3650,8 @@ STEP 5 - SIMULATION PHASE - Tics = 17500
 STEP 6 - SIMULATION PHASE - Tics = 17500
 STEP 7 - SIMULATION PHASE - Tics = 17500
 17500 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+17500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+17500 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 17500 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 17500
@@ -3428,6 +3672,8 @@ STEP 5 - SIMULATION PHASE - Tics = 17600
 STEP 6 - SIMULATION PHASE - Tics = 17600
 STEP 7 - SIMULATION PHASE - Tics = 17600
 17600 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+17600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+17600 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 17600 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 17600
@@ -3448,6 +3694,8 @@ STEP 5 - SIMULATION PHASE - Tics = 17700
 STEP 6 - SIMULATION PHASE - Tics = 17700
 STEP 7 - SIMULATION PHASE - Tics = 17700
 17700 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+17700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+17700 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 17700 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 17700
@@ -3468,6 +3716,8 @@ STEP 5 - SIMULATION PHASE - Tics = 17800
 STEP 6 - SIMULATION PHASE - Tics = 17800
 STEP 7 - SIMULATION PHASE - Tics = 17800
 17800 TMCBehaviourTest::onAddSubscriptions() called. hostController: 5000
+17800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
+17800 TMCBehaviourTest::ReceiveMessage(): received message from RSU 5000, snr=12
 17800 TMCBehaviourTest::Execute() called. hostController: 5000
 
 STEP 8 - SIMULATION PHASE - Tics = 17800
