@@ -71,6 +71,9 @@ fi
 cd ..
 
 for app in *; do
+    if test $app = "baseApp"; then
+        continue
+    fi
     cd $app
     if test -e configure.ac; then
         echo "## Building app in $PWD..."
