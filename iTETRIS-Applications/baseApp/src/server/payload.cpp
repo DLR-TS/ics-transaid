@@ -46,20 +46,20 @@ namespace server
 int Payload::PAYLOAD_ID = 0;
 
 Payload::Payload(int size) :
-    m_size(size)
+    m_size(size), snr(0)
 {
   m_id = ++PAYLOAD_ID;
   m_timeStep = CurrentTime::Now();
 }
 
 Payload::Payload(int id, int size) :
-    m_id(id), m_size(size)
+    m_id(id), m_size(size), snr(0)
 {
   m_timeStep = CurrentTime::Now();
 }
 
 Payload::Payload(int id, int size, int timeStep) :
-    m_id(id), m_timeStep(timeStep), m_size(size)
+    m_id(id), m_timeStep(timeStep), m_size(size), snr(0)
 {}
 
 Payload::~Payload()

@@ -245,6 +245,7 @@ namespace baseapp
 			m_sourceId = m_destinationId = ID_ALL;
 			m_sourcePosition = Vector2D();
 			m_protocolId = PID_SPEED;
+			m_messageType = MT_ALL;
 		}
 
 		uint32_t CommHeader::GetSerializedSize(void) const

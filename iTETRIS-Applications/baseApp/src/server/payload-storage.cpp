@@ -109,7 +109,7 @@ int PayloadStorage::expiredPayloadCleanUp(const int oldTimeStep)
       log << it->first << " ";
       ++number;
       delete (it->second);
-      m_storage.erase(it++);
+      it = m_storage.erase(it);
     }
     else
       ++it;
