@@ -36,7 +36,7 @@
 #ifndef HEADER_H_
 #define HEADER_H_
 
-#include "vector.h"
+#include <vector>
 #include "common.h"
 #include <memory>
 #include <stdint.h>
@@ -102,7 +102,7 @@ namespace baseapp
             	int generationTime;
             	int numObstacles;
 				int CPM_message_size;
-				int CPM_detected_objectID[50]; // TODO chech how to dynamically initilize or define the appropiate value (i.e. max number of objecst that can be tranmitted in a CPM)
+				std::vector<int> CPM_detected_objectID; // TODO check how to dynamically initialize or define the appropriate value (i.e. max number of objects that can be transmitted in a CPM)
             };
 
 

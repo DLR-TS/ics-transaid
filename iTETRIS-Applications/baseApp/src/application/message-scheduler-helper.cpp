@@ -8,9 +8,11 @@
 #include "ics-interface.h"
 #include <stdio.h>
 #include <string.h>
+#include <algorithm> // min
 
 
-
+// Maximal number of objects to be stored in a CPM message
+#define MAX_NUM_CPM_OBJECTS 50
 
 namespace baseapp {
     namespace application {
@@ -198,13 +200,14 @@ namespace baseapp {
 
             if(CPM_number_of_objects > 0)
             {
-                int i = 0;
+                int i=0;
+                message->CPM_detected_objectID.reserve(std::min<size_t>(MAX_NUM_CPM_OBJECTS, ETSIlist.size()));
                 for(std::map<int, data1> ::iterator it = ETSIlist.begin() ; it != ETSIlist.end(); ++it )
                 {
-                    message->CPM_detected_objectID[i]= it->first;
-                    i = i+1;
+                    message->CPM_detected_objectID.push_back(it->first);
+                    i++;
+                    if (i == 50) break;
                 }
-
             }
 
 
