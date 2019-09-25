@@ -55,8 +55,8 @@ YansWifiChannel::GetTypeId (void)
 }
 
 YansWifiChannel::YansWifiChannel ()
-: m_interferenceRangeVehicle (3000),
-  m_interferenceRangeCiu (5000),
+: m_interferenceRangeVehicle (1500), // Originally was 3000 reduced to 1500 to speed up, by A Correa
+  m_interferenceRangeCiu (2000), // Originally was 5000 reduced to 2000 to speed up, by A Correa
   m_PDRDist(true) //Added by Goku
 {
 }
