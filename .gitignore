@@ -88,6 +88,7 @@ LightCommSimulator/src/lightcomm
 **.pydevproject
 **language.settings.xml
 .vscode
+*.code-workspace
 iTETRIS-Applications/testApp/testScenario/sumo/*.xml
 iTETRIS-Applications/testApp/testScenario/*.txt
 iTETRIS-Applications/testApp/docs/html
