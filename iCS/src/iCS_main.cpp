@@ -139,7 +139,7 @@ void fillOptions()
   oc.doRegister("penetration-rate", 'r', new Option_Integer(-1));
   oc.addDescription("penetration-rate", "Scenario", "Defines the percentage of vehicles equipped with a RAT");
 
-  oc.doRegister("vehicleSelector", new Option_String(""));
+  oc.doRegister("vehicleSelector", new Option_StringVector(StringVector({""})));
   oc.addDescription("vehicleSelector", "Scenario", "A list of substrings to determine whether vehicles are equipped with a RAT by their ID");
 
   oc.doRegister("facilities-config-file", 'f', new Option_FileName());
