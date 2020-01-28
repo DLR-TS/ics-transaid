@@ -28,7 +28,7 @@ AC_PROG_LN_S
 AC_PROG_MAKE_SET
 AC_PROG_RANLIB
 
-AM_CPPFLAGS="-I$PWD/$srcdir/src -I$PWD/$srcdir/src/server -I$PWD/$srcdir/src/application -I$PWD/$srcdir/src/utils -I$PWD/$srcdir/src/foreign -I$PWD/$srcdir/src/application/helper -I$PWD/$srcdir/src/application/model -I$PWD/$srcdir/src/application/model -I$PWD/$srcdir/../../sumo/src $AM_CPPFLAGS"
+AM_CPPFLAGS="-I$PWD/$srcdir/src -I$PWD/$srcdir/src/server -I$PWD/$srcdir/src/application -I$PWD/$srcdir/src/utils -I$PWD/$srcdir/src/foreign -I$PWD/$srcdir/src/application/helper -I$PWD/$srcdir/src/application/model -I$PWD/$srcdir/src/application/model -I$PWD/$srcdir/../../sumo/src -I$PWD/$srcdir/../../iCS/src/ics/applications_manager $AM_CPPFLAGS"
 AC_SUBST(AM_CPPFLAGS)
 AC_SUBST(AM_CXXFLAGS)
 

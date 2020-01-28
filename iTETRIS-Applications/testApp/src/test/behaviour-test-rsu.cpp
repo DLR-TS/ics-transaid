@@ -40,7 +40,7 @@
 #include "fixed-station.h"
 #include "program-configuration.h"
 #include "node.h"
-#include "../../app-commands-subscriptions-constants.h"
+#include <app-commands-subscriptions-constants.h>
 #include "current-time.h"
 #include "log/console.h"
 #include "libsumo/TraCIDefs.h"
@@ -299,6 +299,10 @@ namespace testapp
                 }
             } else if (ProgramConfiguration::GetTestCase() == "commSimple2") {
                 // do nothing
+            } else if (ProgramConfiguration::GetTestCase() == "commRSU2Vehicle") {
+                if (CurrentTime::Now() == 10000) {
+                    SendMCM();
+                }
             } else if (ProgramConfiguration::GetTestCase() == "testMessageScheduler") {
                 if (CurrentTime::Now() == 6550){
                     TransaidHeader::DenmInfo * message = new TransaidHeader::DenmInfo() ;
@@ -487,7 +491,7 @@ namespace testapp
 
 			m_lastMCMsent = message;
 
-			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN,   TRANSAID_MCM_RSU, message,100);
+			TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_MCM_RSU, message, 100);
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
 
             std::cout << "Send MCM at node " << GetController()->GetId() <<  std::endl;

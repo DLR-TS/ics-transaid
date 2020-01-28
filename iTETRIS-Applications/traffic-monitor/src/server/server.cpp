@@ -40,7 +40,7 @@
 #include "log/log.h"
 #include "log/ToString.h"
 #include "program-configuration.h"
-#include "app-commands-subscriptions-constants.h"
+#include <app-commands-subscriptions-constants.h>
 #include "current-time.h"
 #include <climits>
 #include <sstream>

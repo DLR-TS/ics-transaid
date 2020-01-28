@@ -37,7 +37,7 @@
 #include "behaviour-rsu.h"
 #include "current-time.h"
 #include "ics-interface.h"
-#include "../../app-commands-subscriptions-constants.h"
+#include <app-commands-subscriptions-constants.h>
 #include "log/console.h"
 
 namespace baseapp

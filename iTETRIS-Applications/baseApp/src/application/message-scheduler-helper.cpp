@@ -4,7 +4,7 @@
 
 #include "message-scheduler-helper.h"
 #include "node.h"
-#include "../../app-commands-subscriptions-constants.h"
+#include <app-commands-subscriptions-constants.h>
 #include "ics-interface.h"
 #include <stdio.h>
 #include <string.h>
