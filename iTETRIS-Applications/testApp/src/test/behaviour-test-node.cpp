@@ -124,6 +124,11 @@ namespace testapp
                 }
                 m_eventAbortWaitingForRSU = Scheduler::Schedule(endWaitingTime, &BehaviourTestNode::abortWaitingForRSUResponse, this);
                 NS_LOG_INFO(Log() << "Vehicle scheduled abort waiting for RSU acknowledgement at " << endWaitingTime + insertionAccordingToRoutresFile);
+            } else if (ProgramConfiguration::GetTestCase() == "commRSU2Vehicle") {
+                if (!m_subReceiveMessage) {
+                    GetController()->startReceivingGeobroadcast(MSGCAT_TESTAPP);
+                    m_subReceiveMessage = true;
+                }
             } else if (ProgramConfiguration::GetTestCase() == "CAMsimple"){
                 if (!m_setCAMareaSubscription)
                 {
@@ -194,6 +199,28 @@ namespace testapp
             CommHeader* commHeader;
             GetController()->GetHeader(payload, server::PAYLOAD_FRONT, commHeader);
 
+            if (ProgramConfiguration::GetTestCase() == "commRSU2Vehicle") {
+                TransaidHeader* transaidHeader;
+                GetController()->GetHeader(payload, server::PAYLOAD_END, transaidHeader);
+                Header * receivedHeader = payload->getHeader(baseapp::server::PAYLOAD_END);
+                TransaidHeader* receivedTestHeader = dynamic_cast<TransaidHeader*>(receivedHeader);
+
+                NS_LOG_INFO(Log() << "Received a test message from node " << commHeader->getSourceId() << " with message type: " << transaidHeader->getMessageType());
+
+                if (commHeader->getMessageType() == TRANSAID_MCM_RSU) {
+                    const TransaidHeader::McmRsuInfo * mcmInfo = transaidHeader->getMcmRsuInfo();
+                    std::shared_ptr<TransaidHeader::AdviceInfo> adviceInfo = mcmInfo->adviceInfo;
+
+                    std::cout << "Received MCM from " << mcmInfo->senderID << " at node " << GetController()->GetId() << ", time " << mcmInfo->generationTime << ", destination " << mcmInfo->adviceInfo->targetId << std::endl;
+                    
+                    if (mcmInfo->adviceInfo->targetId != GetController()->GetId()) {
+                        std::cerr << "Error: Received MCM from " << mcmInfo->senderID << " at node " << GetController()->GetId() << ", time " << mcmInfo->generationTime << ", destination " << mcmInfo->adviceInfo->targetId << std::endl;
+                    }
+                }
+
+                return;
+            }
+
             if (ProgramConfiguration::GetTestCase() == "testV2XmsgSet" || ProgramConfiguration::GetTestCase() == "testMessageScheduler"){
 
             	TransaidHeader* transaidHeader;
@@ -247,7 +274,7 @@ namespace testapp
 
 					std::cout << "Received MCM from a RSU at node " << GetController()->GetId() << "  sender " << mcmInfo->senderID << " time " << mcmInfo->generationTime  << std::endl;
 
-					std::shared_ptr<TransaidHeader::AdviceInfo> adviceInfo = mcmInfo->adviceInfo;;
+					std::shared_ptr<TransaidHeader::AdviceInfo> adviceInfo = mcmInfo->adviceInfo;
 					std::shared_ptr<TransaidHeader::ToCAdvice> tocAdvice = std::dynamic_pointer_cast<TransaidHeader::ToCAdvice>(adviceInfo->advice);
 
 					std::cout << "Received MCM from a RSU with a ToC advice at time " << tocAdvice->tocTime << " and start position " << tocAdvice->tocStartPosition <<

@@ -94,11 +94,12 @@ int main(int argc, char **argv)
 
   try
   {
-    std::set<std::string> testCases({"", "acosta", "simpleExecute", "setVType", "inductionLoop",
-                                     "commSimple", "commSimple2", "CAMsimple", "drivingDistance",
-                                     "getSUMOStepLength", "testMobility", "testTrajectory", "testToC",
-                                     "testOpenGap", "testV2XmsgSet", "TMCBehaviour", "TMCBehaviour_multiRSU","testMessageScheduler"});
-
+    std::set<std::string> testCases(
+        {"", "acosta", "simpleExecute", "setVType", "inductionLoop",
+         "commSimple", "commSimple2", "commRSU2Vehicle", "CAMsimple",
+         "drivingDistance", "getSUMOStepLength", "testMobility",
+         "testTrajectory", "testToC", "testOpenGap", "testV2XmsgSet",
+         "TMCBehaviour", "TMCBehaviour_multiRSU", "testMessageScheduler"});
 
     // start-up
     Console::Log("Starting iTetris test app");

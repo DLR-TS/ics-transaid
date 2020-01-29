@@ -300,8 +300,8 @@ namespace testapp
             } else if (ProgramConfiguration::GetTestCase() == "commSimple2") {
                 // do nothing
             } else if (ProgramConfiguration::GetTestCase() == "commRSU2Vehicle") {
-                if (CurrentTime::Now() == 10000) {
-                    SendMCM();
+                if (CurrentTime::Now() % 3000 == 0) {
+                    SendMCMTo("veh0");
                 }
             } else if (ProgramConfiguration::GetTestCase() == "testMessageScheduler") {
                 if (CurrentTime::Now() == 6550){
@@ -495,6 +495,19 @@ namespace testapp
 			GetController()->Send(NT_ALL, header, PID_UNKNOWN, MSGCAT_TESTAPP);
 
             std::cout << "Send MCM at node " << GetController()->GetId() <<  std::endl;
+        }
+
+        void BehaviourTestRSU::SendMCMTo(const std::string & vehID) {
+            TransaidHeader::McmRsuInfo * mcmInfo = new TransaidHeader::McmRsuInfo(GetController()->GetId(), CurrentTime::Now(), TOC);
+            mcmInfo->adviceInfo->adviceId = -1;
+            mcmInfo->adviceInfo->targetId = GetController()->getICSID(vehID);
+            std::shared_ptr<TransaidHeader::ToCAdvice> advice = std::dynamic_pointer_cast<TransaidHeader::ToCAdvice>(mcmInfo->adviceInfo->advice);
+
+            int msgSize = sizeof(TransaidHeader::McmRsuInfo);
+            TransaidHeader * header = new TransaidHeader(PID_UNKNOWN, TRANSAID_MCM_RSU, mcmInfo, msgSize);
+            GetController()->SendTo(GetController()->getICSID(vehID), header, PID_UNKNOWN, MSGCAT_TESTAPP);
+
+            std::cout << "Send MCM from node " << GetController()->GetId() << " to node " << mcmInfo->adviceInfo->targetId <<  std::endl;
         }
 
         void BehaviourTestRSU::SendMAP()

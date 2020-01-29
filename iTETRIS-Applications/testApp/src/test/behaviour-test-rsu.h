@@ -85,6 +85,8 @@ namespace testapp
 
                 void SendMCM();
 
+                void SendMCMTo(const std::string & vehID);
+
                 void SendCPM();
 
                 void SendMAP();
