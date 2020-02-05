@@ -130,6 +130,10 @@ std::string ToString(TypeBehaviour type)
       return "UC5Node";
   case TYPE_BEHAVIOUR_UC5_RSU:
       return "UC5RSU";
+  case TYPE_BEHAVIOUR_UC45_NODE:
+      return "UC45Node";
+  case TYPE_BEHAVIOUR_UC45_RSU:
+      return "UC45RSU";
   default:
   {
       std::stringstream ss;
