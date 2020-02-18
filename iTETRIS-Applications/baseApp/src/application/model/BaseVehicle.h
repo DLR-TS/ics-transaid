@@ -48,7 +48,7 @@ static std::map<std::string, AutomationType> vTypeAutomationTypeMap = {
 /// map: identifier -> double
 static std::map<AutomationType, double> ToC_lead_times = {
     {AT_CAV, 10.0},
-    {AT_CV, 1.0},
+    {AT_CV, 1.5},
     {AT_MANUAL, -1.0}
 };
 
