@@ -94,7 +94,7 @@ SUMODigitalMap::myStartElement(int element, const SUMOSAXAttributes& attrs) {
         myCurrentEdge.stringFrom = attrs.get<std::string>(SUMO_ATTR_FROM, myCurrentEdge.id.c_str(), ok);
         myCurrentEdge.stringTo = attrs.get<std::string>(SUMO_ATTR_TO, myCurrentEdge.id.c_str(), ok);
         myCurrentEdge.funct = attrs.getEdgeFunc(ok);
-        myCurrentEdge.inner = myCurrentEdge.funct == EDGEFUNC_INTERNAL;
+        myCurrentEdge.inner = myCurrentEdge.funct == SumoXMLEdgeFunc::INTERNAL;
                             }
         break;
     case SUMO_TAG_LANE: {
