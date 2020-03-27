@@ -104,7 +104,12 @@ namespace baseapp
 		return EXIT_SUCCESS;
 	}
 
-	ProgramConfiguration::ProgramConfiguration() : m_messageLifetime(10), m_socket(-1), m_testCase(""), m_start(0) {}
+	ProgramConfiguration::ProgramConfiguration()
+		: m_messageLifetime(10),
+		  m_sumoTotalDemandLevel(0),
+		  m_socket(-1),
+		  m_testCase(""),
+		  m_start(0) {}
 
 	ProgramConfiguration::~ProgramConfiguration() {}
 
@@ -157,6 +162,14 @@ namespace baseapp
 			unsigned tmp = xmlElem->UnsignedAttribute("value");
 			if (tmp > 0)
 				m_messageLifetime = tmp;
+		}
+
+		xmlElem = general->FirstChildElement("sumo-total-demand-level");
+		if (xmlElem)
+		{
+			unsigned tmp = xmlElem->UnsignedAttribute("value");
+			if (tmp > 0)
+				m_sumoTotalDemandLevel = tmp;
 		}
 
 		xmlElem = general->FirstChildElement("random-run");

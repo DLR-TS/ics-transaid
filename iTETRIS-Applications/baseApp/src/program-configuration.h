@@ -113,6 +113,10 @@ public:
   {
     return m_instance->m_messageLifetime;
   }
+  static unsigned GetSumoTotalDemandLevel()
+  {
+    return m_instance->m_sumoTotalDemandLevel;
+  }
 
   static const std::string& GetTestCase()
   {
@@ -139,6 +143,7 @@ private:
   int m_start;
   int m_socket;
   unsigned m_messageLifetime;
+  unsigned m_sumoTotalDemandLevel;
   std::string m_testCase;
   std::map<int, RsuData> m_rsus;
   std::map<LogType, std::string> m_logs;
