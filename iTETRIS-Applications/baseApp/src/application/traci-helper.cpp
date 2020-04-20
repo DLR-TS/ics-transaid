@@ -70,9 +70,10 @@ namespace baseapp
 		int TraciHelper::AddSetCommand(const int commandId, const int variableId, const std::string & objId)
 		{
 		    CommandType t = SET_COMMAND;
-		    if (variableId == libsumo::DISTANCE_REQUEST) {
-		        // Hack for retrieving driving distance response.
-		        // TODO: allow parameters for GET_COMMANDS, @see AddTraciSubscription()
+		    if (variableId == libsumo::DISTANCE_REQUEST ||
+                variableId == libsumo::VAR_LEADER) {
+		        /// Hack for retrieving responses with input params (e.g., driving distance).
+		        /// TODO: allow parameters for GET_COMMANDS, @see AddTraciSubscription()
 		        t = GET_COMMAND;
 		    }
 			Command c(commandId, variableId, objId, t);

@@ -48,10 +48,7 @@
 #include "behaviour.h"
 #include "node-handler.h"
 #include "foreign/tcpip/storage.h"
-
-namespace libsumo {
-    class TraCIColor;
-}
+#include "libsumo/TraCIDefs.h"
 
 namespace baseapp
 {
@@ -290,6 +287,10 @@ namespace baseapp
                 ///        see http://sumo.dlr.de/wiki/TraCI/Vehicle_Value_Retrieval
                 void commandTraciGetDrivingDistance(const std::string edgeID, const double pos, const int laneIndex = 0);
 
+                /// @brief Get the leader vehicle
+                ///        see https://sumo.dlr.de/docs/TraCI/Vehicle_Value_Retrieval.html#leader_0x68
+                void commandTraciGetLeader(const double dist = 0.);
+
                 /// @brief Set parameter for ToC model
                 void SetTraciParameter(const std::string key, const std::string value, const std::string vehID = "");
 
@@ -354,6 +355,8 @@ namespace baseapp
 
                 static std::shared_ptr<libsumo::TraCIColor> readColor(tcpip::Storage& inputStorage);
                 void writeColor(std::shared_ptr<libsumo::TraCIColor> color, tcpip::Storage& outputStorage);
+
+                static std::shared_ptr<libsumo::TraCILeaderDistance> readLeaderDistance(tcpip::Storage& inputStorage);
                 ///@}
 
 				/**

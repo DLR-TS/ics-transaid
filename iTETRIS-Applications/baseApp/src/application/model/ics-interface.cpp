@@ -46,7 +46,6 @@
 #include "ics-interface.h"
 #include "server.h"
 #include <app-commands-subscriptions-constants.h>
-#include <libsumo/TraCIDefs.h>
 //#include <libsumo/Helper.h>
 #include <utils/common/RGBColor.h>
 //#include "traci-server/TraCIConstants.h"
@@ -450,6 +449,19 @@ namespace baseapp
                         processTraCIResult(readColor(traciReply), command);
                     }
                     break;
+                    case libsumo::TYPE_COMPOUND:
+                    {
+                        switch (varId) {
+                        case libsumo::VAR_LEADER:
+                        {
+                            processTraCIResult(readLeaderDistance(traciReply), command);
+                        }
+                        break;
+                        default:
+                            NS_LOG_ERROR(LogNode() <<"iCSInferface::TraciCommandResult unknown/unimplemented TYPE_COMPOUND varID " << Log::toHex(varId));
+                        }
+                    }
+                    break;
 				    default:
 				        NS_LOG_ERROR(LogNode() <<"iCSInferface::TraciCommandResult unknown/unimplemented return type " << Log::toHex(varType));
 				    }
@@ -498,6 +510,17 @@ namespace baseapp
             outputStorage.writeUnsignedByte(color->g);
             outputStorage.writeUnsignedByte(color->b);
             outputStorage.writeUnsignedByte(color->a);
+        }
+
+        std::shared_ptr<libsumo::TraCILeaderDistance>
+        iCSInterface::readLeaderDistance(tcpip::Storage& inputStorage) {
+            std::shared_ptr<libsumo::TraCILeaderDistance> res = std::make_shared<libsumo::TraCILeaderDistance>();
+            inputStorage.readInt(); // length (2)
+            inputStorage.readUnsignedByte();  // libsumo::TYPE_STRING
+            res->leaderID = static_cast<std::string>(inputStorage.readString());
+            inputStorage.readUnsignedByte();  // libsumo::TYPE_DOUBLE
+            res->dist = static_cast<double>(inputStorage.readDouble());
+            return res;
         }
 
 
@@ -660,6 +683,22 @@ namespace baseapp
             }
         }
 
+        void iCSInterface::commandTraciGetLeader(const double dist)
+        {
+            if (m_node->getSumoId() != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_LEADER;
+                int varTypeID = libsumo::TYPE_DOUBLE;
+
+                tcpip::Storage content;
+                content.writeDouble(dist);
+
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(cmdID, varID, varTypeID, &content);
+            }
+        }
+
         void iCSInterface::SetTraciParameter(const std::string key, const std::string value, const std::string vehID)
         {
             std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
@@ -760,7 +799,8 @@ namespace baseapp
 
         void iCSInterface::AddTraciSubscription(const std::string objID, const int cmdID, const int varID, const int varTypeID, tcpip::Storage * value)
         {
-            // TODO: get command with value != 0 (e.g. DISTANCE_REQUEST for getDrivingDistance())
+            /// TODO: get command with value != 0 (e.g. DISTANCE_REQUEST for getDrivingDistance())
+            /// Command type might be derived from varID
             tcpip::Storage sumoQuery;
             if (value == 0) {
                 const int execID = TraciHelper::AddValueGetStorage(sumoQuery, cmdID, varID, objID);

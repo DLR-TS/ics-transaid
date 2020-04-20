@@ -42,11 +42,7 @@
 #include "headers.h"
 #include "fatal-error.h"
 #include "structs.h"
-
-namespace libsumo {
-    class TraCIResult;
-    class TraCIColor;
-}
+#include "libsumo/TraCIDefs.h"
 
 namespace baseapp
 {
@@ -131,6 +127,7 @@ namespace baseapp
 				virtual void processTraCIResult(const std::string result, const Command& command);
 				virtual void processTraCIResult(const std::vector<std::string> result, const Command& command);
 		        void processTraCIResult(std::shared_ptr<libsumo::TraCIColor> color, const Command& command);
+                void processTraCIResult(std::shared_ptr<libsumo::TraCILeaderDistance> leaderDist, const Command& command);
 
 				virtual TypeBehaviour GetType() const
 				{
