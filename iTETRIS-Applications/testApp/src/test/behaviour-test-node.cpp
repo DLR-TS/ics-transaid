@@ -179,6 +179,10 @@ namespace testapp
                 if (CurrentTime::Now() == 5000) {
                     GetController()->commandTraciGetDrivingDistance("CE", 50);
                 }
+            } else if (ProgramConfiguration::GetTestCase() == "getLeader") {
+                if (CurrentTime::Now() == 5000) {
+                    GetController()->commandTraciGetLeader();
+                }
             }
         }
 
@@ -365,7 +369,7 @@ namespace testapp
 		{
 
             if (ProgramConfiguration::GetTestCase() == "drivingDistance") {
-                if (CurrentTime::Now() == 5000) {
+                if (CurrentTime::Now() == 5050) {
                     std::string sumoID = GetController()->GetNode()->getSumoId();
                     auto distResponse = std::dynamic_pointer_cast<libsumo::TraCIDouble>(GetLastTraCIResponse(sumoID, libsumo::DISTANCE_REQUEST).second);
                     if (distResponse != nullptr) {
@@ -373,6 +377,19 @@ namespace testapp
                         NS_LOG_INFO(Log() << "Driving distance for veh " << sumoID << " at time " << CurrentTime::Now() << " is " << dist);
                     } else {
                         NS_LOG_INFO(Log() << "No driving distance result for veh " << sumoID);
+                    }
+                }
+            } else if (ProgramConfiguration::GetTestCase() == "getLeader") {
+                if (CurrentTime::Now() == 5050) {
+                    std::string sumoID = GetController()->GetNode()->getSumoId();
+                    auto leaderResponse = std::dynamic_pointer_cast<libsumo::TraCILeaderDistance>(
+                        GetLastTraCIResponse(sumoID, libsumo::VAR_LEADER).second);
+                    if (leaderResponse != nullptr) {
+                        std::string leaderSumoID = leaderResponse->leaderID;
+                        double dist = leaderResponse->dist;
+                        NS_LOG_INFO(Log() << "Leader of veh " << sumoID << " at time " << CurrentTime::Now() << " is " << leaderSumoID << " (dist = " << dist << ")");
+                    } else {
+                        NS_LOG_INFO(Log() << "No leader result for veh " << sumoID);
                     }
                 }
             } else if (ProgramConfiguration::GetTestCase() == "setVType") {

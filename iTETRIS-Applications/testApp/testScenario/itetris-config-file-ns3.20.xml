@@ -11,7 +11,7 @@
     </scenario>
 
     <trafficsim>
-	<traffic-executable value="../../../sumo/bin/sumo -c"/>
+	<traffic-executable value="../../../bin/sumo -c"/>
 	<traffic-file value="./sumo/test.sumocfg"/>
 	<traffic-host value="localhost"/>
         <traffic-port value="5500"/>

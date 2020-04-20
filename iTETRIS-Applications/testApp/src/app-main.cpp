@@ -97,7 +97,7 @@ int main(int argc, char **argv)
     std::set<std::string> testCases(
         {"", "acosta", "simpleExecute", "setVType", "inductionLoop",
          "commSimple", "commSimple2", "commRSU2Vehicle", "CAMsimple",
-         "drivingDistance", "getSUMOStepLength", "testMobility",
+         "drivingDistance", "getLeader", "getSUMOStepLength", "testMobility",
          "testTrajectory", "testToC", "testOpenGap", "testV2XmsgSet",
          "TMCBehaviour", "TMCBehaviour_multiRSU", "testMessageScheduler"});
 
