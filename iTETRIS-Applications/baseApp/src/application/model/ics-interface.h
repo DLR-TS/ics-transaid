@@ -291,6 +291,10 @@ namespace baseapp
                 ///        see https://sumo.dlr.de/docs/TraCI/Vehicle_Value_Retrieval.html#leader_0x68
                 void commandTraciGetLeader(const double dist = 0.);
 
+                /// @brief Get the vehicle's next stops
+                ///        see https://sumo.dlr.de/docs/TraCI/Vehicle_Value_Retrieval.html#response_0xb4_vehicle_variable
+                void commandTraciGetNextStops();
+
                 /// @brief Set parameter for ToC model
                 void SetTraciParameter(const std::string key, const std::string value, const std::string vehID = "");
 
@@ -357,6 +361,8 @@ namespace baseapp
                 void writeColor(std::shared_ptr<libsumo::TraCIColor> color, tcpip::Storage& outputStorage);
 
                 static std::shared_ptr<libsumo::TraCILeaderDistance> readLeaderDistance(tcpip::Storage& inputStorage);
+
+                static std::shared_ptr<libsumo::TraCINextStopDataVector> readNextStopDataVector(tcpip::Storage& inputStorage);
                 ///@}
 
 				/**

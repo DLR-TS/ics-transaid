@@ -457,6 +457,11 @@ namespace baseapp
                             processTraCIResult(readLeaderDistance(traciReply), command);
                         }
                         break;
+                        case libsumo::VAR_NEXT_STOPS:
+                        {
+                            processTraCIResult(readNextStopDataVector(traciReply), command);
+                        }
+                        break;
                         default:
                             NS_LOG_ERROR(LogNode() <<"iCSInferface::TraciCommandResult unknown/unimplemented TYPE_COMPOUND varID " << Log::toHex(varId));
                         }
@@ -523,6 +528,28 @@ namespace baseapp
             return res;
         }
 
+        std::shared_ptr<libsumo::TraCINextStopDataVector>
+        iCSInterface::readNextStopDataVector(tcpip::Storage& inputStorage) {
+            std::shared_ptr<libsumo::TraCINextStopDataVector> res = std::make_shared<libsumo::TraCINextStopDataVector>();
+
+            for (int length = inputStorage.readInt(); length > 0; --length) {
+                libsumo::TraCINextStopData nsd;
+                inputStorage.readUnsignedByte();  // libsumo::TYPE_STRING
+                nsd.lane = static_cast<std::string>(inputStorage.readString());
+                inputStorage.readUnsignedByte();  // libsumo::TYPE_DOUBLE
+                nsd.endPos = static_cast<double>(inputStorage.readDouble());
+                inputStorage.readUnsignedByte();  // libsumo::TYPE_STRING
+                nsd.stoppingPlaceID = static_cast<std::string>(inputStorage.readString());
+                inputStorage.readUnsignedByte();  // libsumo::TYPE_INTEGER
+                nsd.stopFlags = static_cast<int>(inputStorage.readInt());
+                inputStorage.readUnsignedByte();  // libsumo::TYPE_DOUBLE
+                nsd.duration = static_cast<double>(inputStorage.readDouble());
+                inputStorage.readUnsignedByte();  // libsumo::TYPE_DOUBLE
+                nsd.until = static_cast<double>(inputStorage.readDouble());
+                res->value.push_back(nsd);
+            }
+            return res;
+        }
 
         void iCSInterface::AddTraciSubscription(const int cmdID, const int varID, const int varTypeID, tcpip::Storage * value)
         {
@@ -696,6 +723,18 @@ namespace baseapp
 
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
                 AddTraciSubscription(cmdID, varID, varTypeID, &content);
+            }
+        }
+
+        void iCSInterface::commandTraciGetNextStops()
+        {
+            if (m_node->getSumoId() != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_NEXT_STOPS;
+
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(cmdID, varID);
             }
         }
 
