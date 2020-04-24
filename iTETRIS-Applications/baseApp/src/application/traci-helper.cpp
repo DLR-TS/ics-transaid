@@ -70,8 +70,8 @@ namespace baseapp
 		int TraciHelper::AddSetCommand(const int commandId, const int variableId, const std::string & objId)
 		{
 		    CommandType t = SET_COMMAND;
-		    if (variableId == libsumo::DISTANCE_REQUEST ||
-                variableId == libsumo::VAR_LEADER) {
+            if (commandId == libsumo::CMD_GET_VEHICLE_VARIABLE ||
+                commandId == libsumo::CMD_GET_SIM_VARIABLE) {
 		        /// Hack for retrieving responses with input params (e.g., driving distance).
 		        /// TODO: allow parameters for GET_COMMANDS, @see AddTraciSubscription()
 		        t = GET_COMMAND;
