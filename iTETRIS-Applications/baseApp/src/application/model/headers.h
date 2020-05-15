@@ -123,19 +123,6 @@ namespace baseapp
             	int laneChangeMode;
             };
 
-            struct LaneKeepAdvice : Advice
-			{
-                    	int laneKeepPosition;
-                    	int laneKeepTime;
-                    	int laneKeepSpeed;
-                    	int leadingVehicleId;
-                    	int followingVehicleId;
-                    	int targetLaneId;
-                    	int TriggerPointToC;
-                        int laneKeepMode;
-            };
-
-
             struct GapAdvice : Advice
             {
                 int laneId;
@@ -190,10 +177,6 @@ namespace baseapp
                     switch (adviceType) {
                     case (LANE_CHANGE): {
                         advice = std::make_shared<LaneChangeAdvice>();
-                        break;
-                    }
-                    case (LANE_KEEP): {
-                        advice = std::make_shared<LaneKeepAdvice>();
                         break;
                     }
                     case(SPEED): {
