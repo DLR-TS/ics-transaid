@@ -120,7 +120,6 @@ namespace baseapp
             	int followingVehicleId;
             	int targetLaneId;
             	int TriggerPointToC;
-            	int laneChangeMode;
             };
 
             struct GapAdvice : Advice
