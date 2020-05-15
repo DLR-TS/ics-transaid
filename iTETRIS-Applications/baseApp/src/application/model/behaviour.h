@@ -57,15 +57,11 @@ namespace baseapp
 		class iCSInterface;
 		class Node;
 		struct Command;
-		struct CommandInfo;
 
         /// @brief Structure to hold the TraCI responses for all GET-commands
         /// @brief maps: objID -> CMD -> Response-object (time x value)
         /// @todo  Consider including the domain as top level. (Problem: it is not sent to the app currently)
 		typedef std::map<std::string, std::map<int, std::pair <int, std::shared_ptr<libsumo::TraCIResult> > > > TraCIResponseMap;
-
-		//executionId - <CommandInfo, TraCIResult>
-		typedef std::map<int, std::pair <std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult> > > TraCIResponseMapId;
 
 		/**
 		 * Abstract behaviour class
@@ -126,19 +122,13 @@ namespace baseapp
 				///        Writes the according information into TraCIResponses
 				/// @note if this is overridden, the call to Behaviour::processTraCIResult should be
 				///       included in the derived method to store the response
-				virtual void processTraCIResult(const int result, const Command& command, const int executionId = -1);
-				virtual void processTraCIResult(const double result, const Command& command, const int executionId = -1);
-				virtual void processTraCIResult(const std::string result, const Command& command, const int executionId = -1);
-				virtual void processTraCIResult(const std::vector<std::string> result, const Command& command, const int executionId = -1);
-		        void processTraCIResult(std::shared_ptr<libsumo::TraCIColor> color, const Command& command, const int executionId = -1);
-                void processTraCIResult(std::shared_ptr<libsumo::TraCILeaderDistance> leaderDist, const Command& command, const int executionId = -1);
-                void processTraCIResult(std::shared_ptr<libsumo::TraCINextStopDataVector> stops, const Command& command, const int executionId = -1);
-
-
-				virtual void processTraCIResult(const std::shared_ptr<libsumo::TraCIPosition> position, const Command& command, const int executionId = -1);
-				virtual void processTraCIResult(const std::pair<int, int> result, const Command& command, const int executionId = -1);
-				virtual void processTraCIResult(const std::vector<std::pair<std::string, double>> result, const Command& command, const int executionId = -1);
-
+				virtual void processTraCIResult(const int result, const Command& command);
+				virtual void processTraCIResult(const double result, const Command& command);
+				virtual void processTraCIResult(const std::string result, const Command& command);
+				virtual void processTraCIResult(const std::vector<std::string> result, const Command& command);
+		        void processTraCIResult(std::shared_ptr<libsumo::TraCIColor> color, const Command& command);
+                void processTraCIResult(std::shared_ptr<libsumo::TraCILeaderDistance> leaderDist, const Command& command);
+                void processTraCIResult(std::shared_ptr<libsumo::TraCINextStopDataVector> stops, const Command& command);
 
 				virtual TypeBehaviour GetType() const
 				{
@@ -154,8 +144,6 @@ namespace baseapp
                 /// returns noResponse if no entry exists in TraCIResponses
                 static const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >& GetLastTraCIResponse(std::string objID, int variableID);
 
-				static const std::pair<std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult> >& getTraCIResponse(int executionId);
-
 			protected:
 				virtual std::string Log() const;
 				iCSInterface* GetController() const;
@@ -164,15 +152,11 @@ namespace baseapp
                 /// object/command in TraCIResponses
                 static std::pair<int, std::shared_ptr<libsumo::TraCIResult> > noResponse;
 
-				static std::pair<std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult> > noResponseId;
-
 				bool m_enabled;
 
 			private:
                 /// @brief Stores TraCI response in TraCIResponses
-                virtual void storeTraCIResult(const int time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command, const int executionId);
-
-				virtual void storeTraCIResultId(const int executionId, const int time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command);
+                virtual void storeTraCIResult(const int time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command);
 
                 iCSInterface* m_controller;
 				bool m_running;
@@ -184,7 +168,6 @@ namespace baseapp
                 /// @todo  Consider including the domain as top level. (Problem: it is not sent to the app currently)
                 /// maps: objID -> CMD -> Response (time x value)
                 static TraCIResponseMap TraCIResponses;
-				static TraCIResponseMapId TraCIResponsesId;
 		};
 
 	} /* namespace application */

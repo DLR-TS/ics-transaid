@@ -70,12 +70,6 @@ namespace baseapp
 
 		}typedef Command;
 
-		struct CommandInfo
-		{
-			Command cmd;
-			long timeId;
-		}typedef CommandInfo;
-
 		/**
 		 * Helper class for the subscription SumoTraciCommand
 		 * It contains a map to identify which is the current reply
@@ -205,8 +199,6 @@ namespace baseapp
 				static int AddValueSetStorage(tcpip::Storage & sumoQuery, const int commandId, const int variableId,
 						const std::string & objId, const int newValueType, tcpip::Storage & newValueStorage);
 
-				static int AddValueSetStorageGet(tcpip::Storage & sumoQuery, const int commandId, const int variableId,
-						const std::string & objId, const int newValueType, tcpip::Storage & newValueStorage);
 
                 /// @brief return the value type of the given traci variable
 				/// @todo  If a new variable type is to be used, it has to be added in createValueMap()

@@ -38,7 +38,6 @@ static std::map<std::string, AutomationType> vTypeAutomationTypeMap = {
     {"CAV", AT_CAV},
     {"CAVGA", AT_CAV},
     {"CAVGB", AT_CAV},
-    {"MRM", AT_CAV},
     {"CV", AT_CV},
     {"LV", AT_MANUAL},
     {"HGV", AT_MANUAL},
