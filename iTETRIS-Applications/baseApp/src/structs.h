@@ -38,6 +38,7 @@
 #define STRUCTS_H_
 
 #include "foreign/tcpip/storage.h"
+#include "libsumo/TraCIDefs.h"
 #include "log/log.h"
 #include "vector.h"
 #include <cmath>
@@ -46,6 +47,28 @@
 
 namespace baseapp
 {
+
+    struct TraCIPair2Int : libsumo::TraCIResult {
+        std::string getString() {
+            std::ostringstream os;
+            os << "[" << value.first << "," << value.second << "]";
+            return os.str();
+        }
+        std::pair<int, int> value;
+    };
+
+    struct TraCIVectorPair : libsumo::TraCIResult {
+        std::string getString() {
+            std::ostringstream os;
+            os << "[";
+            for (auto v : value) {
+                os << v.first << "," << v.second << " ";
+            }
+            os << "]";
+            return os.str();
+        }
+        std::vector<std::pair<std::string, double>> value;
+    };
 
 	typedef enum
 	{
