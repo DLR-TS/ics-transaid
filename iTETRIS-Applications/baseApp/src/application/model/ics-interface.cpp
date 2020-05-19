@@ -864,6 +864,14 @@ namespace baseapp
             AddTraciSubscription("_SIM", libsumo::CMD_GET_SIM_VARIABLE, libsumo::VAR_ARRIVED_VEHICLES_IDS);
         }
 
+        void iCSInterface::requestParkingStartingVehiclesIDList() {
+            AddTraciSubscription("_SIM", libsumo::CMD_GET_SIM_VARIABLE, libsumo::VAR_PARKING_STARTING_VEHICLES_IDS);
+        }
+
+        void iCSInterface::requestParkingEndingVehiclesIDList() {
+            AddTraciSubscription("_SIM", libsumo::CMD_GET_SIM_VARIABLE, libsumo::VAR_PARKING_ENDING_VEHICLES_IDS);
+        }
+
         void iCSInterface::requestToC(const std::string vehID, const double timeTillMRM)
         {
             // Set parameter for ToC model

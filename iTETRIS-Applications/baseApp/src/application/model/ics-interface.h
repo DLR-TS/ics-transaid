@@ -319,6 +319,11 @@ namespace baseapp
                 /// @brief Request IDs of vehicles that left the simulation
                 void requestArrivedVehicles();
 
+                /// @brief Request IDs of vehicles that start to park
+                void requestParkingStartingVehiclesIDList();
+                /// @brief Request IDs of vehicles that end to park
+                void requestParkingEndingVehiclesIDList();
+
                 /// @brief Helper function for setting the required parameters for ToC
                 void requestToC(const std::string vehID, const double timeTillMRM);
 
