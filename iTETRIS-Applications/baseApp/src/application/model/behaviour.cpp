@@ -168,6 +168,15 @@ namespace baseapp
             }
         }
 
+        void Behaviour::processTraCIResult(std::shared_ptr<baseapp::TraCIParameterWithKey> paramWithKey, const Command& command) {
+            NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << paramWithKey->getString());
+            if (command.type == GET_COMMAND) {
+                std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(paramWithKey);
+                const int time = CurrentTime::Now();
+                storeTraCIResult(time, res, command);
+            }
+        }
+
         void Behaviour::processTraCIResult(const std::vector<std::string> result, const Command& command) {
             std::stringstream ss;
             ss << "[";

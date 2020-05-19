@@ -461,6 +461,10 @@ namespace baseapp
                         {
                             processTraCIResult(readNextStopDataVector(traciReply), command);
                         }
+                        case libsumo::VAR_PARAMETER_WITH_KEY:
+                        {
+                            processTraCIResult(readParameterWithKey(traciReply), command);
+                        }
                         break;
                         default:
                             NS_LOG_ERROR(LogNode() <<"iCSInferface::TraciCommandResult unknown/unimplemented TYPE_COMPOUND varID " << Log::toHex(varId));
@@ -548,6 +552,17 @@ namespace baseapp
                 nsd.until = static_cast<double>(inputStorage.readDouble());
                 res->value.push_back(nsd);
             }
+            return res;
+        }
+
+        std::shared_ptr<baseapp::TraCIParameterWithKey>
+        iCSInterface::readParameterWithKey(tcpip::Storage& inputStorage) {
+            std::shared_ptr<baseapp::TraCIParameterWithKey> res = std::make_shared<baseapp::TraCIParameterWithKey>();
+            inputStorage.readInt(); // length (2)
+            inputStorage.readUnsignedByte();  // libsumo::TYPE_STRING
+            res->key = static_cast<std::string>(inputStorage.readString());
+            inputStorage.readUnsignedByte();  // libsumo::TYPE_STRING
+            res->value = static_cast<std::string>(inputStorage.readString());
             return res;
         }
 
@@ -735,6 +750,25 @@ namespace baseapp
 
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
                 AddTraciSubscription(cmdID, varID);
+            }
+        }
+
+        void iCSInterface::GetTraciParameterWithKey(const int cmdID, const std::string key, const std::string objID)
+        {
+            if (cmdID != libsumo::CMD_GET_VEHICLE_VARIABLE && cmdID != libsumo::CMD_GET_SIM_VARIABLE) {
+                return;
+            }
+
+            std::string ID = ((objID == "" && cmdID == libsumo::CMD_GET_VEHICLE_VARIABLE) ? m_node->getSumoId() : objID);
+
+            if (ID != INVALID_STRING) {
+                int varID = libsumo::VAR_PARAMETER_WITH_KEY;
+                int varTypeID = libsumo::TYPE_STRING;
+                tcpip::Storage content;
+                content.writeString(key);
+                // Add traci subscriptions without explicitely given objectID for
+                // mobile nodes only
+                AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
             }
         }
 

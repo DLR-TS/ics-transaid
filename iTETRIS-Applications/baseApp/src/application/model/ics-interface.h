@@ -295,6 +295,9 @@ namespace baseapp
                 ///        see https://sumo.dlr.de/docs/TraCI/Vehicle_Value_Retrieval.html#response_0xb4_vehicle_variable
                 void commandTraciGetNextStops();
 
+                /// @brief Get abstract parameter (vehicle or simulation domain)
+                void GetTraciParameterWithKey(const int cmdID, const std::string key, const std::string objID = "");
+
                 /// @brief Set parameter for ToC model
                 void SetTraciParameter(const std::string key, const std::string value, const std::string vehID = "");
 
@@ -363,6 +366,8 @@ namespace baseapp
                 static std::shared_ptr<libsumo::TraCILeaderDistance> readLeaderDistance(tcpip::Storage& inputStorage);
 
                 static std::shared_ptr<libsumo::TraCINextStopDataVector> readNextStopDataVector(tcpip::Storage& inputStorage);
+
+                static std::shared_ptr<baseapp::TraCIParameterWithKey> readParameterWithKey(tcpip::Storage& inputStorage);
                 ///@}
 
 				/**

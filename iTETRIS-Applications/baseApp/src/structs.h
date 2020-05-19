@@ -48,6 +48,16 @@
 namespace baseapp
 {
 
+    struct TraCIParameterWithKey : libsumo::TraCIResult {
+        std::string getString() {
+            std::ostringstream os;
+            os << "[" << key << "," << value << "]";
+            return os.str();
+        }
+        std::string key;
+        std::string value;
+    };
+
     struct TraCIPair2Int : libsumo::TraCIResult {
         std::string getString() {
             std::ostringstream os;

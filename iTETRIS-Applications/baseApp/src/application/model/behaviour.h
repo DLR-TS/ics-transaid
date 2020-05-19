@@ -129,6 +129,7 @@ namespace baseapp
 		        void processTraCIResult(std::shared_ptr<libsumo::TraCIColor> color, const Command& command);
                 void processTraCIResult(std::shared_ptr<libsumo::TraCILeaderDistance> leaderDist, const Command& command);
                 void processTraCIResult(std::shared_ptr<libsumo::TraCINextStopDataVector> stops, const Command& command);
+                void processTraCIResult(std::shared_ptr<baseapp::TraCIParameterWithKey> paramWithKey, const Command& command);
 
 				virtual TypeBehaviour GetType() const
 				{
