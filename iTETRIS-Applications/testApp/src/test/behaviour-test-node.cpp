@@ -183,6 +183,10 @@ namespace testapp
                 if (CurrentTime::Now() == 5000) {
                     GetController()->commandTraciGetLeader();
                 }
+            } else if (ProgramConfiguration::GetTestCase() == "GetTraciParameterWithKey") {
+                if (CurrentTime::Now() == 5000) {
+                  GetController()->GetTraciParameterWithKey(libsumo::CMD_GET_VEHICLE_VARIABLE, "has.toc.device");
+                }
             }
         }
 
@@ -390,6 +394,19 @@ namespace testapp
                         NS_LOG_INFO(Log() << "Leader of veh " << sumoID << " at time " << CurrentTime::Now() << " is " << leaderSumoID << " (dist = " << dist << ")");
                     } else {
                         NS_LOG_INFO(Log() << "No leader result for veh " << sumoID);
+                    }
+                }
+            } else if (ProgramConfiguration::GetTestCase() == "GetTraciParameterWithKey") {
+                if (CurrentTime::Now() == 5050) {
+                    std::string sumoID = GetController()->GetNode()->getSumoId();
+                    auto paramWithKeyResponse = std::dynamic_pointer_cast<baseapp::TraCIParameterWithKey>(
+                        GetLastTraCIResponse(sumoID, libsumo::VAR_PARAMETER_WITH_KEY).second);
+                    if (paramWithKeyResponse != nullptr) {
+                        std::string key = paramWithKeyResponse->key;
+                        std::string value = paramWithKeyResponse->value;
+                        NS_LOG_INFO(Log() << "Parameter \'" << key << "\' of veh " << sumoID << " at time " << CurrentTime::Now() << " is \'" << value << "\'");
+                    } else {
+                        NS_LOG_INFO(Log() << "No parameter result for veh " << sumoID);
                     }
                 }
             } else if (ProgramConfiguration::GetTestCase() == "setVType") {

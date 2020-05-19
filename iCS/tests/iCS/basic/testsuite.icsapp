@@ -54,6 +54,9 @@ testApp_getDrivingDistance
 # Tests iCSInterface::commandTraciGetLeader
 testApp_getLeader
 
+# Tests iCSInterface::GetTraciParameterWithKey
+testApp_GetTraciParameterWithKey
+
 # Tests transaid headers
 test_V2XmsgSet
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <route id="WE" edges="WC CE" />
+    <vType id="t1" sigma="0" maxSpeed="4.0"/>
+    <vType id="t2" sigma="0" maxSpeed="3.5"/>
+    
+    <vehicle id="veh1" route="WE" depart="0" type="t2" />
+    <vehicle id="veh0" route="WE" depart="1" type="t1" />
+    
+</routes>
