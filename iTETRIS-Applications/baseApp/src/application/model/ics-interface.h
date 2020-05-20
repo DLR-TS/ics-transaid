@@ -304,6 +304,12 @@ namespace baseapp
                 /// @brief Set vehicle color via TraCI
                 void SetTraCIColor(const std::string& vehID, std::shared_ptr<libsumo::TraCIColor> color);
 
+                /// @brief Set vehicle parking area stop via TraCI
+                void SetTraCIParkingAreaStop(const std::string& vehID, const std::string& stopID, const double duration = libsumo::INVALID_DOUBLE_VALUE, const double until = libsumo::INVALID_DOUBLE_VALUE, const int flags = libsumo::STOP_PARKING);
+
+                /// @brief Get vehicle stop state via TraCI
+                void GetTraCIStopState(const std::string& vehID);
+
                 /// @brief Highlight node
                 /// @param color Color for highlighting
                 /// @param color Duration of highlighting

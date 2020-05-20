@@ -806,6 +806,52 @@ namespace baseapp
             }
         }
 
+        void iCSInterface::SetTraCIParkingAreaStop(const std::string& vehID, const std::string& stopID, const double duration, const double until, const int flags)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_SET_VEHICLE_VARIABLE;
+                int varID = libsumo::CMD_STOP;
+                int varTypeID = libsumo::TYPE_COMPOUND;
+                double pos = 1.0;
+                int laneIndex = 0;
+                double startPos = libsumo::INVALID_DOUBLE_VALUE;
+
+                tcpip::Storage content;
+                content.writeInt(7);
+                content.writeUnsignedByte(libsumo::TYPE_STRING);
+                content.writeString(stopID);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(pos);
+                content.writeUnsignedByte(libsumo::TYPE_BYTE);
+                content.writeByte(laneIndex);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(duration);
+                content.writeUnsignedByte(libsumo::TYPE_BYTE);
+                content.writeByte(flags | libsumo::STOP_PARKING_AREA);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(startPos);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(until);
+                
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
+            }
+        }
+
+        void iCSInterface::GetTraCIStopState(const std::string& vehID)
+        {
+            if (m_node->getSumoId() != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_STOPSTATE;
+
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(cmdID, varID);
+            }
+        }
+
         void iCSInterface::Highlight(std::string colorDef, const double size, const int type, const double duration, const std::string& sumoPOI) {
             RGBColor c = RGBColor::parseColor(colorDef);
             auto color = std::make_shared<libsumo::TraCIColor>(c.red(), c.green(), c.blue(), c.alpha());
