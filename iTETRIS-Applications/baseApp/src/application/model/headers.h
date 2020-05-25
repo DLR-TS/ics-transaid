@@ -93,6 +93,8 @@ namespace baseapp
                     senderID(senderID), generationTime(generationTime), denmType(denmType) {};
             	int senderID;
             	int generationTime;
+            	double startingPoint;
+            	double endPoint;
             	DenmType denmType;
             };
 
