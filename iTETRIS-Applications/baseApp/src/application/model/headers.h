@@ -120,6 +120,7 @@ namespace baseapp
             	int followingVehicleId;
             	int targetLaneId;
             	int TriggerPointToC;
+            	int laneChangeMode;
             };
 
             struct GapAdvice : Advice
@@ -144,6 +145,19 @@ namespace baseapp
             	double tocTime;
             	double tocEndPosition;
             };
+
+            struct LaneKeepAdvice : Advice
+			{
+				int laneKeepPosition;
+				int laneKeepTime;
+				int laneKeepSpeed;
+				int leadingVehicleId;
+				int followingVehicleId;
+				int targetLaneId;
+				int TriggerPointToC;
+				int laneKeepMode;
+			};
+
 
             struct HeadwayAdvice : Advice
             {
@@ -192,6 +206,10 @@ namespace baseapp
                     }
                     case(HEADWAY): {
                         advice = std::make_shared<HeadwayAdvice>();
+                        break;
+                    }
+                    case(LANE_KEEP): {
+                        advice = std::make_shared<LaneKeepAdvice>();
                         break;
                     }
                     default: {}
