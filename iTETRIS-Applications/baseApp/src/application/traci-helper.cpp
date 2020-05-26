@@ -296,5 +296,9 @@ namespace baseapp
             return m_valueMap[varID];
         }
 
-	} /* namespace application */
+        bool TraciHelper::isStoppedParking(int stopState) {
+            return (stopState & 2) == 2;
+        }
+
+        } /* namespace application */
 } /* namespace protocol */

@@ -204,6 +204,9 @@ namespace baseapp
 				/// @todo  If a new variable type is to be used, it has to be added in createValueMap()
                 static int getValueType(int varID);
 
+                /// @brief return whether a vehicle's stop state equals parking
+                static bool isStoppedParking(int stopState);
+
 			private:
 				TraciHelper();
 				virtual ~TraciHelper();
