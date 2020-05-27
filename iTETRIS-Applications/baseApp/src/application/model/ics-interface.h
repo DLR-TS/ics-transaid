@@ -49,6 +49,7 @@
 #include "node-handler.h"
 #include "foreign/tcpip/storage.h"
 #include "libsumo/TraCIDefs.h"
+#include "utils/traci/TraCIAPI.h" //for DEFAULT_VIEW
 
 namespace baseapp
 {
@@ -234,12 +235,16 @@ namespace baseapp
                 /// returns noResponse if no entry exists in TraCIResponses
                 static const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >& GetLastTraCIResponse(std::string objID, int variableID);
 
+				static const std::pair<std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult>> &getTraCIResponse(int executionId);
+				
                 /// @brief schedule a traci command to be executed
                 /// @param[in] cmdID traci command id
                 /// @param[in] varID traci variable id
                 /// @param[in] varTypeID traci type id (only for set commands)
                 /// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
                 void AddTraciSubscription(const int cmdID, const int varID, const int varTypeID = 0, tcpip::Storage* value = 0);
+
+				const int AddTraciSubscriptionId(const int cmdID, const int varID, const bool getCommand = false, const int varTypeID = 0, tcpip::Storage *value = 0);
 
                 /// @brief helper function that adds GetMobilityInfo subscription
                 void requestMobilityInfo();
@@ -255,6 +260,7 @@ namespace baseapp
                 /// @param[in] value contents for a set-command, if default (=nullptr) is given, the command is treated as a get-command
                 void AddTraciSubscription(const std::string objID, const int cmdID, const int varID, const int varTypeID = 0, tcpip::Storage* value = 0);
 
+				const int AddTraciSubscriptionId(const std::string objID, const int cmdID, const int varID, const bool getCommand = false, const int varTypeID = 0, tcpip::Storage *value = 0);
 
                 /// @brief Schedule a stop for a mobile node
                 ///        see http://sumo.dlr.de/wiki/TraCI/Change_Vehicle_State
@@ -317,7 +323,79 @@ namespace baseapp
                 void Highlight(std::shared_ptr<libsumo::TraCIColor> color, const double size, const int type, const double duration, const std::string& sumoPOI="");
                 void Highlight(std::string colorDef, const double size, const int type, const double duration, const std::string& sumoPOI="");
 
-		        /// @brief Adds a message reception listener to the node handler.
+				//simulation------------------------------------------------------------------------------------------------------------------------------
+				//keep onomatology from python
+
+				const int getDepartedIDList();
+
+				const int getArrivedIDList();
+
+				const int getStartingTeleportIDList();
+
+				const int getEndingTeleportIDList();
+
+				//vehicle ---------------------------------------------------------------------------------------------------------------------------------
+
+				const int vehicleGetParameter(const std::string &vehID, const std::string &key);
+
+				void vehicleSetParameter(const std::string &vehID, const std::string &key, const std::string &value);
+
+				const int vehicleGetSpeed(const std::string &vehID);
+
+				const int vehicleGetNeighbors(const std::string &vehID, const unsigned int mode);
+
+				const int vehicleGetLaneIndex(const std::string &vehID);
+
+				void vehicleSetLaneChangeMode(const std::string &vehID, const int lcm);
+
+				void vehicleChangeLane(const std::string &vehID, const int laneIndex, const double duration);
+
+				const int vehicleGetDrivingDistance(const std::string &vehID, const std::string &edgeID, const double pos, const int laneIndex = 0);
+
+				const int vehicleGetLaneChangeState(const std::string &vehID, const int direction);
+
+				void vehicleSetColor(const std::string &vehID, std::shared_ptr<libsumo::TraCIColor> color);
+
+				void vehicleSetToC(const std::string &vehID, const double timeTillMRM);
+
+				void vehicleSetLcAssertive(const std::string &vehID, const double value);
+
+				void vehicleSetStop(const std::string &vehID, const std::string &edgeID, const double endPos = 1.,
+									const int laneIndex = 0, const double duration = std::numeric_limits<double>::max(),
+									const int flags = libsumo::STOP_DEFAULT, const double startPos = std::numeric_limits<double>::min(),
+									const double until = -1);
+
+				void vehicleSetParkingAreaStop(const std::string &vehID, const std::string &edgeID, const double endPos = 1.,
+											   const int laneIndex = 0, const double duration = std::numeric_limits<double>::max(),
+											   const int flags = libsumo::STOP_PARKING, const double startPos = std::numeric_limits<double>::min(),
+											   const double until = -1);
+
+				void vehicleOpenGap(const std::string &vehID, const double newTimeHeadway, const double newSpaceHeadway,
+									const double duration, const double changeRate, const double maxDecel, const std::string &referenceVehID = "");
+
+				void vehicleUpdateBestLanes(const std::string &vehID);
+
+				void vehicleSetClass(const std::string &vehID, const std::string &vClass);
+
+				//poi ---------------------------------------------------------------------------------------------------------------------------------
+				void poiRemove(const std::string &poi, const int layer = 0);
+
+				void poiSetPosition(const std::string &poi, const double xPos, const double yPos);
+
+				//gui ---------------------------------------------------------------------------------------------------------------------------------
+				void guiTrackVehicle(const std::string &viewID, const std::string &vehID);
+
+				const int guiGetOffset(const std::string &viewID = DEFAULT_VIEW);
+
+				void guiSetOffset(const std::string &viewID, const double x, const double y);
+
+				void guiSetZoom(const std::string &viewID, const double zoom);
+
+
+
+
+
+				/// @brief Adds a message reception listener to the node handler.
 		        void registerMessageReceptionListener(std::shared_ptr<server::NodeHandler::MessageReceptionListener> l);
 
                 /// @brief Request IDs of vehicles that entered the simulation
@@ -365,18 +443,24 @@ namespace baseapp
 				 * @brief App-specific traci result processing goes into the behavior processors
 				 */
 				/// @{
-                template<typename T> void processTraCIResult(const T result, const Command& command) {
+                template<typename T> void processTraCIResult(const T result, const Command& command, const int executionId = -1) {
 					for (const auto& it: m_behaviours) {
-						it.second->processTraCIResult(result, command);
+						it.second->processTraCIResult(result, command, executionId);
 					}
 				}
 
                 static std::shared_ptr<libsumo::TraCIColor> readColor(tcpip::Storage& inputStorage);
                 void writeColor(std::shared_ptr<libsumo::TraCIColor> color, tcpip::Storage& outputStorage);
 
+				static std::shared_ptr<libsumo::TraCIPosition> readPosition2D(tcpip::Storage &inputStorage);
+				
                 static std::shared_ptr<libsumo::TraCILeaderDistance> readLeaderDistance(tcpip::Storage& inputStorage);
 
                 static std::shared_ptr<libsumo::TraCINextStopDataVector> readNextStopDataVector(tcpip::Storage& inputStorage);
+
+                static std::shared_ptr<baseapp::TraCIPair2Int> readPair2Int(tcpip::Storage& inputStorage);
+
+                static std::shared_ptr<baseapp::TraCIVectorPair> readVectorPair(tcpip::Storage& inputStorage);
 
                 static std::shared_ptr<baseapp::TraCIParameterWithKey> readParameterWithKey(tcpip::Storage& inputStorage);
                 ///@}

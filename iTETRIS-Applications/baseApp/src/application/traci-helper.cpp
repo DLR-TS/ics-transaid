@@ -288,6 +288,12 @@ namespace baseapp
 			return AddSetCommand(commandId, variableId, objId);
 		}
 
+		int TraciHelper::AddValueSetStorageGet(tcpip::Storage & sumoQuery, const int commandId, const int variableId,
+				const std::string & objId, const int newValueType, tcpip::Storage & newValueStorage)
+		{
+			ValueSetStorage(sumoQuery, commandId, variableId, objId, newValueType, newValueStorage);
+			return AddGetCommand(commandId, variableId, objId);
+		}
 
         int TraciHelper::getValueType(int varID) {
             if(m_valueMap.find(varID) == m_valueMap.end()) {

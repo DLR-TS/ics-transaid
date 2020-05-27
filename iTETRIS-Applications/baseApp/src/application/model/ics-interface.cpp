@@ -416,58 +416,75 @@ namespace baseapp
 				    switch (varType) {
 				    case libsumo::TYPE_DOUBLE:
 				    {
-				        processTraCIResult(traciReply.readDouble(), command);
+				        processTraCIResult(traciReply.readDouble(), command, executionId);
 				    }
                     break;
                     case libsumo::TYPE_STRING:
                     {
-                        processTraCIResult(traciReply.readString(), command);
+                        processTraCIResult(traciReply.readString(), command, executionId);
                     }
                     break;
                     case libsumo::TYPE_INTEGER:
                     {
-                        processTraCIResult(traciReply.readInt(), command);
+                        processTraCIResult(traciReply.readInt(), command, executionId);
                     }
                     break;
                     case libsumo::TYPE_BYTE:
                     {
-                        processTraCIResult((int) traciReply.readByte(), command);
+                        processTraCIResult((int) traciReply.readByte(), command, executionId);
                     }
                     break;
                     case libsumo::TYPE_UBYTE:
                     {
-                        processTraCIResult((int) traciReply.readUnsignedByte(), command);
+                        processTraCIResult((int) traciReply.readUnsignedByte(), command, executionId);
                     }
                     break;
                     case libsumo::TYPE_STRINGLIST:
                     {
-                        processTraCIResult(traciReply.readStringList(), command);
+                        processTraCIResult(traciReply.readStringList(), command, executionId);
                     }
                     break;
                     case libsumo::TYPE_COLOR:
                     {
-                        processTraCIResult(readColor(traciReply), command);
+                        processTraCIResult(readColor(traciReply), command, executionId);
+                    }
+                    break;
+                    case libsumo::POSITION_2D:
+                    {
+                        processTraCIResult(readPosition2D(traciReply), command, executionId);
                     }
                     break;
                     case libsumo::TYPE_COMPOUND:
                     {
-                        switch (varId) {
+                        switch (varId)
+                        {
                         case libsumo::VAR_LEADER:
                         {
-                            processTraCIResult(readLeaderDistance(traciReply), command);
+                            processTraCIResult(readLeaderDistance(traciReply), command, executionId);
                         }
                         break;
                         case libsumo::VAR_NEXT_STOPS:
                         {
-                            processTraCIResult(readNextStopDataVector(traciReply), command);
+                            processTraCIResult(readNextStopDataVector(traciReply), command, executionId);
                         }
+                        break;
+                        case libsumo::CMD_CHANGELANE:
+                        {
+                            processTraCIResult(readPair2Int(traciReply), command, executionId);
+                        }
+                        break;
+                        case libsumo::VAR_NEIGHBORS:
+                        {
+                            processTraCIResult(readVectorPair(traciReply), command, executionId);
+                        }
+                        break;
                         case libsumo::VAR_PARAMETER_WITH_KEY:
                         {
                             processTraCIResult(readParameterWithKey(traciReply), command);
                         }
                         break;
                         default:
-                            NS_LOG_ERROR(LogNode() <<"iCSInferface::TraciCommandResult unknown/unimplemented TYPE_COMPOUND varID " << Log::toHex(varId));
+                            NS_LOG_ERROR(LogNode() << "iCSInferface::TraciCommandResult unknown/unimplemented TYPE_COMPOUND varID " << Log::toHex(varId));
                         }
                     }
                     break;
@@ -503,6 +520,11 @@ namespace baseapp
             return Behaviour::GetLastTraCIResponse(objID, variableID);
         }
 
+        const std::pair<std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult>> &iCSInterface::getTraCIResponse(int executionId)
+        {       
+            return Behaviour::getTraCIResponse(executionId);
+        }
+
         std::shared_ptr<libsumo::TraCIColor>
         iCSInterface::readColor(tcpip::Storage& inputStorage) {
             std::shared_ptr<libsumo::TraCIColor> res = std::make_shared<libsumo::TraCIColor>();
@@ -519,6 +541,498 @@ namespace baseapp
             outputStorage.writeUnsignedByte(color->g);
             outputStorage.writeUnsignedByte(color->b);
             outputStorage.writeUnsignedByte(color->a);
+        }
+
+        std::shared_ptr<libsumo::TraCIPosition> iCSInterface::readPosition2D(tcpip::Storage &inputStorage) {
+            std::shared_ptr<libsumo::TraCIPosition> res = std::make_shared<libsumo::TraCIPosition>();
+            res->x = static_cast<double>(inputStorage.readDouble());
+            res->y = static_cast<double>(inputStorage.readDouble());
+            res->z = 0;
+            return res;
+        }
+        //-------------------------------------------------------------------------------------------
+        //simulation
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::getDepartedIDList()
+        {
+            return AddTraciSubscriptionId("_SIM", libsumo::CMD_GET_SIM_VARIABLE, libsumo::VAR_DEPARTED_VEHICLES_IDS);
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //simulation
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::getArrivedIDList()
+        {
+            return AddTraciSubscriptionId("_SIM", libsumo::CMD_GET_SIM_VARIABLE, libsumo::VAR_ARRIVED_VEHICLES_IDS);
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //simulation
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::getStartingTeleportIDList()
+        {
+            return AddTraciSubscriptionId("_SIM", libsumo::CMD_GET_SIM_VARIABLE, libsumo::VAR_TELEPORT_STARTING_VEHICLES_IDS);
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //simulation
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::getEndingTeleportIDList()
+        {
+            return AddTraciSubscriptionId("_SIM", libsumo::CMD_GET_SIM_VARIABLE, libsumo::VAR_TELEPORT_ENDING_VEHICLES_IDS);
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::vehicleGetParameter(const std::string &vehID, const std::string &key)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_PARAMETER;
+                int varTypeID = libsumo::TYPE_STRING;
+
+                tcpip::Storage content;
+                content.writeString(key);
+
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                return AddTraciSubscriptionId(ID, cmdID, varID, true, varTypeID, &content);
+            }
+
+            return -1;
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::vehicleSetParameter(const std::string &vehID, const std::string &key, const std::string &value)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_SET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_PARAMETER;
+                int varTypeID = libsumo::TYPE_COMPOUND;
+                tcpip::Storage content;
+                content.writeInt(2);
+                content.writeUnsignedByte(libsumo::TYPE_STRING);
+                content.writeString(key);
+                content.writeUnsignedByte(libsumo::TYPE_STRING);
+                content.writeString(value);
+
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::vehicleGetLaneIndex(const std::string &vehID)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_LANE_INDEX;
+                int varTypeID = libsumo::TYPE_INTEGER;
+
+                return AddTraciSubscriptionId(ID, cmdID, varID, varTypeID);
+            }
+
+            return -1;
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::vehicleSetLaneChangeMode(const std::string &vehID, const int lcm)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_SET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_LANECHANGE_MODE;
+                int varTypeID = libsumo::TYPE_INTEGER;
+
+                tcpip::Storage content;
+                content.writeInt(lcm);
+
+                AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::vehicleChangeLane(const std::string &vehID, const int laneIndex, const double duration)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_SET_VEHICLE_VARIABLE;
+                int varID = libsumo::CMD_CHANGELANE;
+                int varTypeID = libsumo::TYPE_COMPOUND;
+
+                const int length = 2;
+
+                tcpip::Storage content;
+                content.writeInt(length);
+                content.writeUnsignedByte(libsumo::TYPE_BYTE);
+                content.writeByte(laneIndex);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(duration);
+
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::vehicleGetSpeed(const std::string &vehID)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_SPEED;
+
+                return AddTraciSubscriptionId(ID, cmdID, varID);
+            }
+
+            return -1;
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::vehicleGetNeighbors(const std::string &vehID, const unsigned int mode)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_NEIGHBORS;
+                int varTypeID = libsumo::TYPE_UBYTE;
+
+                tcpip::Storage content;
+                content.writeUnsignedByte(mode);
+
+                return AddTraciSubscriptionId(ID, cmdID, varID, true, varTypeID, &content);
+            }
+
+            return -1;
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::vehicleGetDrivingDistance(const std::string &vehID, const std::string &edgeID, const double pos, const int laneIndex)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
+                int varID = libsumo::DISTANCE_REQUEST;
+                int varTypeID = libsumo::TYPE_COMPOUND;
+
+                const int length = 2;
+
+                tcpip::Storage content;
+                content.writeInt(length);
+                content.writeUnsignedByte(libsumo::POSITION_ROADMAP);
+                content.writeString(edgeID);
+                content.writeDouble(pos);
+                content.writeUnsignedByte(laneIndex);
+                content.writeUnsignedByte(libsumo::REQUEST_DRIVINGDIST);
+
+                return AddTraciSubscriptionId(ID, cmdID, varID, true, varTypeID, &content);
+            }
+            return -1;
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::vehicleGetLaneChangeState(const std::string &vehID, const int direction)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
+                int varID = libsumo::CMD_CHANGELANE;
+                int varTypeID = libsumo::TYPE_INTEGER;
+
+                tcpip::Storage content;
+                content.writeInt(direction);
+
+                return AddTraciSubscriptionId(ID, cmdID, varID, true, varTypeID, &content);
+            }
+
+            return -1;
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::vehicleSetColor(const std::string &vehID, std::shared_ptr<libsumo::TraCIColor> color)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_SET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_COLOR;
+                int varTypeID = libsumo::TYPE_COLOR;
+
+                tcpip::Storage content;
+                writeColor(color, content);
+
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::vehicleSetToC(const std::string &vehID, const double timeTillMRM)
+        {
+            // Set parameter for ToC model
+            vehicleSetParameter(vehID, "device.toc.requestToC", toString(timeTillMRM));
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::vehicleSetLcAssertive(const std::string &vehID, const double value)
+        {
+            // Set parameter for ToC model
+            vehicleSetParameter(vehID, "laneChangeModel.lcAssertive", toString(value));
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::vehicleSetStop(const std::string &vehID, const std::string &edgeID, const double endPos,
+                                          const int laneIndex, const double duration, const int flags, const double startPos, const double until)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_SET_VEHICLE_VARIABLE;
+                int varID = libsumo::CMD_STOP;
+                int varTypeID = libsumo::TYPE_COMPOUND;
+
+                tcpip::Storage content;
+                content.writeInt(7);
+                content.writeUnsignedByte(libsumo::TYPE_STRING);
+                content.writeString(edgeID);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(endPos);
+                content.writeUnsignedByte(libsumo::TYPE_BYTE);
+                content.writeByte(laneIndex);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(duration);
+                content.writeUnsignedByte(libsumo::TYPE_BYTE);
+                content.writeByte(flags);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(startPos);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(until);
+
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::vehicleSetParkingAreaStop(const std::string &vehID, const std::string &edgeID, const double endPos,
+                                                     const int laneIndex, const double duration, const int flags, const double startPos, const double until)
+        {
+            vehicleSetStop(vehID, edgeID, endPos, laneIndex, duration, flags | libsumo::STOP_PARKING_AREA, startPos, until);
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::vehicleOpenGap(const std::string &vehID, const double newTimeHeadway, const double newSpaceHeadway,
+                                          const double duration, const double changeRate, const double maxDecel, const std::string &referenceVehID)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_SET_VEHICLE_VARIABLE;
+                int varID = libsumo::CMD_OPENGAP;
+                int varTypeID = libsumo::TYPE_COMPOUND;
+
+                const bool referenceVehicleGiven = referenceVehID != "";
+                const int length = 6 - int(!referenceVehicleGiven);
+
+                tcpip::Storage content;
+                content.writeInt(length);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(newTimeHeadway);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(newSpaceHeadway);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(duration);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(changeRate);
+                content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
+                content.writeDouble(maxDecel);
+
+                if (referenceVehicleGiven)
+                {
+                    content.writeUnsignedByte(libsumo::TYPE_STRING);
+                    content.writeString(referenceVehID);
+                }
+
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::vehicleUpdateBestLanes(const std::string &vehID)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_SET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_UPDATE_BESTLANES;
+                tcpip::Storage sumoQuery;
+                sumoQuery.writeUnsignedByte(1 + 1 + 1 + 4 + ID.length()); // command length
+                sumoQuery.writeUnsignedByte(cmdID);                       // command id
+                sumoQuery.writeUnsignedByte(varID);                       // variable id
+                sumoQuery.writeString(ID);                                // object id
+
+                m_node->traciCommand(TraciHelper::AddSetCommand(cmdID, varID, ID), sumoQuery);
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::vehicleSetClass(const std::string &vehID, const std::string &vClass)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                tcpip::Storage vehicleClass;
+                vehicleClass.writeString(vClass);
+
+                AddTraciSubscription(ID, libsumo::CMD_SET_VEHICLE_VARIABLE, libsumo::VAR_VEHICLECLASS, libsumo::TYPE_STRING, &vehicleClass);
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //poi
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::poiRemove(const std::string &poi, const int layer)
+        {
+            int cmdID = libsumo::CMD_SET_POI_VARIABLE;
+            int varID = libsumo::REMOVE;
+            int varTypeID = libsumo::TYPE_INTEGER;
+
+            tcpip::Storage content;
+            content.writeInt(layer);
+
+            AddTraciSubscription(poi, cmdID, varID, varTypeID, &content);
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //poi
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::poiSetPosition(const std::string &poi, const double xPos, const double yPos)
+        {
+            int cmdID = libsumo::CMD_SET_POI_VARIABLE;
+            int varID = libsumo::VAR_POSITION;
+            int varTypeID = libsumo::POSITION_2D;
+
+            tcpip::Storage content;
+            content.writeDouble(xPos);
+            content.writeDouble(yPos);
+
+            AddTraciSubscription(poi, cmdID, varID, varTypeID, &content);
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //gui
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::guiTrackVehicle(const std::string &viewID, const std::string &vehID)
+        {
+            int cmdID = libsumo::CMD_SET_GUI_VARIABLE;
+            int varID = libsumo::VAR_TRACK_VEHICLE;
+            int varTypeID = libsumo::TYPE_STRING;
+
+            tcpip::Storage content;
+            content.writeString(vehID);
+
+            AddTraciSubscription(viewID, cmdID, varID, varTypeID, &content);
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //gui
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::guiGetOffset(const std::string &viewID)
+        {
+            int cmdID = libsumo::CMD_GET_GUI_VARIABLE;
+            int varID = libsumo::VAR_VIEW_OFFSET;
+            int varTypeID = libsumo::POSITION_2D;
+
+            return AddTraciSubscriptionId(viewID, cmdID, varID, varTypeID);
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //gui
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::guiSetOffset(const std::string &viewID, const double x, const double y)
+        {
+            int cmdID = libsumo::CMD_SET_GUI_VARIABLE;
+            int varID = libsumo::VAR_VIEW_OFFSET;
+            int varTypeID = libsumo::POSITION_2D;
+
+            tcpip::Storage content;
+            content.writeDouble(x);
+            content.writeDouble(y);
+
+            AddTraciSubscription(viewID, cmdID, varID, varTypeID, &content);
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //gui
+        //-------------------------------------------------------------------------------------------
+        void iCSInterface::guiSetZoom(const std::string &viewID, const double zoom)
+        {
+            int cmdID = libsumo::CMD_SET_GUI_VARIABLE;
+            int varID = libsumo::VAR_VIEW_ZOOM;
+            int varTypeID = libsumo::TYPE_DOUBLE;
+
+            tcpip::Storage content;
+            content.writeDouble(zoom);
+
+            AddTraciSubscription(viewID, cmdID, varID, varTypeID, &content);
         }
 
         std::shared_ptr<libsumo::TraCILeaderDistance>
@@ -552,6 +1066,31 @@ namespace baseapp
                 nsd.until = static_cast<double>(inputStorage.readDouble());
                 res->value.push_back(nsd);
             }
+            return res;
+        }
+
+        std::shared_ptr<baseapp::TraCIPair2Int>
+        iCSInterface::readPair2Int(tcpip::Storage& inputStorage) {
+            std::shared_ptr<baseapp::TraCIPair2Int> res = std::make_shared<baseapp::TraCIPair2Int>();
+            inputStorage.readInt(); // length (2)
+            inputStorage.readUnsignedByte();  // libsumo::TYPE_INTEGER
+            res->value.first = static_cast<int>(inputStorage.readInt());
+            inputStorage.readUnsignedByte();  // libsumo::TYPE_INTEGER
+            res->value.second = static_cast<int>(inputStorage.readInt());
+            return res;
+        }
+
+        std::shared_ptr<baseapp::TraCIVectorPair>
+        iCSInterface::readVectorPair(tcpip::Storage& inputStorage) {
+            std::shared_ptr<baseapp::TraCIVectorPair> res = std::make_shared<baseapp::TraCIVectorPair>();
+
+            for (int length = inputStorage.readInt(); length > 0; --length) {
+                std::pair<std::string, double> p;
+                p.first = static_cast<std::string>(inputStorage.readString());
+                p.second = static_cast<double>(inputStorage.readDouble());
+                res->value.push_back(p);
+            }
+
             return res;
         }
 
@@ -949,6 +1488,41 @@ namespace baseapp
                     it->second->OnAddSubscriptions();
                 }
             }
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::AddTraciSubscriptionId(const int cmdID, const int varID, const bool getCommand, const int varTypeID, tcpip::Storage *value)
+        {
+            if (m_node->getSumoId() != INVALID_STRING)
+            {
+                // Add traci subscriptions without explicitely given objectID for mobile nodes only
+                return AddTraciSubscriptionId(m_node->getSumoId(), cmdID, varID, getCommand, varTypeID, value);
+            }
+            return -1;
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::AddTraciSubscriptionId(const std::string objID, const int cmdID, const int varID, const bool getCommand, const int varTypeID, tcpip::Storage *value)
+        {
+            tcpip::Storage sumoQuery;
+            if (value == 0)
+            {
+                const int execID = TraciHelper::AddValueGetStorage(sumoQuery, cmdID, varID, objID);
+                m_node->traciCommand(execID, sumoQuery);
+                return execID;
+            }
+            else
+            {
+                const int execID = getCommand ? TraciHelper::AddValueSetStorageGet(sumoQuery, cmdID, varID, objID, varTypeID, *value) : TraciHelper::AddValueSetStorage(sumoQuery, cmdID, varID, objID, varTypeID, *value);
+                m_node->traciCommand(execID, sumoQuery);
+                return execID;
+            }
+
+            return -1;
         }
 
         void iCSInterface::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)

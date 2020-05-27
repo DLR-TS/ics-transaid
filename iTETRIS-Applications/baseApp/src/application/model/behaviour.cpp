@@ -49,7 +49,11 @@ namespace baseapp
 
 	    uint16_t Behaviour::DefaultResponseTimeSpacing = 10;
         TraCIResponseMap Behaviour::TraCIResponses;
+        TraCIResponseMapId Behaviour::TraCIResponsesId;
+
         std::pair<int, std::shared_ptr<libsumo::TraCIResult> > Behaviour::noResponse = std::make_pair(0.0, nullptr);
+
+        std::pair<std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult> > Behaviour::noResponseId = std::make_pair(nullptr, nullptr);
 
 		Behaviour::Behaviour(iCSInterface* controller) :
 				m_running(false), m_enabled(true)
@@ -114,70 +118,70 @@ namespace baseapp
 		void Behaviour::processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages)
         {}
 
-        void Behaviour::processTraCIResult(const int result, const Command& command) {
+        void Behaviour::processTraCIResult(const int result, const Command& command, const int executionId) {
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
             if (command.type == GET_COMMAND) {
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(std::make_shared<libsumo::TraCIInt>(result));
                 const int time = CurrentTime::Now();
-                storeTraCIResult(time, res, command);
+                storeTraCIResult(time, res, command, executionId);
             }
         }
 
-        void Behaviour::processTraCIResult(const double result, const Command& command) {
+        void Behaviour::processTraCIResult(const double result, const Command& command, const int executionId) {
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
             if (command.type == GET_COMMAND) {
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(std::make_shared<libsumo::TraCIDouble>(result));
                 const int time = CurrentTime::Now();
-                storeTraCIResult(time, res, command);
+                storeTraCIResult(time, res, command, executionId);
             }
         }
 
-        void Behaviour::processTraCIResult(const std::string result, const Command& command) {
+        void Behaviour::processTraCIResult(const std::string result, const Command& command, const int executionId) {
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << result);
             if (command.type == GET_COMMAND) {
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(std::make_shared<libsumo::TraCIString>(result));
                 const int time = CurrentTime::Now();
-                storeTraCIResult(time, res, command);
+                storeTraCIResult(time, res, command, executionId);
             }
         }
 
-        void Behaviour::processTraCIResult(std::shared_ptr<libsumo::TraCIColor> color, const Command& command) {
+        void Behaviour::processTraCIResult(std::shared_ptr<libsumo::TraCIColor> color, const Command& command, const int executionId) {
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << color->getString());
             if (command.type == GET_COMMAND) {
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(color);
                 const int time = CurrentTime::Now();
-                storeTraCIResult(time, res, command);
+                storeTraCIResult(time, res, command, executionId);
             }
         }
 
-        void Behaviour::processTraCIResult(std::shared_ptr<libsumo::TraCILeaderDistance> leaderDist, const Command& command) {
+        void Behaviour::processTraCIResult(std::shared_ptr<libsumo::TraCILeaderDistance> leaderDist, const Command& command, const int executionId) {
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << leaderDist->getString());
             if (command.type == GET_COMMAND) {
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(leaderDist);
                 const int time = CurrentTime::Now();
-                storeTraCIResult(time, res, command);
+                storeTraCIResult(time, res, command, executionId);
             }
         }
 
-        void Behaviour::processTraCIResult(std::shared_ptr<libsumo::TraCINextStopDataVector> stops, const Command& command) {
+        void Behaviour::processTraCIResult(std::shared_ptr<libsumo::TraCINextStopDataVector> stops, const Command& command, const int executionId) {
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << stops->getString());
             if (command.type == GET_COMMAND) {
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(stops);
                 const int time = CurrentTime::Now();
-                storeTraCIResult(time, res, command);
+                storeTraCIResult(time, res, command, executionId);
             }
         }
 
-        void Behaviour::processTraCIResult(std::shared_ptr<baseapp::TraCIParameterWithKey> paramWithKey, const Command& command) {
+        void Behaviour::processTraCIResult(std::shared_ptr<baseapp::TraCIParameterWithKey> paramWithKey, const Command& command, const int executionId) {
             NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult of " << command.objId << " for variable " << Log::toHex(command.variableId, 2) << " is " << paramWithKey->getString());
             if (command.type == GET_COMMAND) {
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(paramWithKey);
                 const int time = CurrentTime::Now();
-                storeTraCIResult(time, res, command);
+                storeTraCIResult(time, res, command, executionId);
             }
         }
 
-        void Behaviour::processTraCIResult(const std::vector<std::string> result, const Command& command) {
+        void Behaviour::processTraCIResult(const std::vector<std::string> result, const Command& command, const int executionId) {
             std::stringstream ss;
             ss << "[";
             for (std::vector<std::string>::const_iterator i = result.begin(); i != result.end(); ++i) {
@@ -191,15 +195,51 @@ namespace baseapp
                 list->value = result;
                 std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(list);
                 const int time = CurrentTime::Now();
-                storeTraCIResult(time, res, command);
+                storeTraCIResult(time, res, command, executionId);
             }
         }
 
-        void Behaviour::storeTraCIResult(const int time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command) {
+        void Behaviour::processTraCIResult(std::shared_ptr<libsumo::TraCIPosition> position, const Command& command, const int executionId) {
+            NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult_ of " << command.objId << " is " << position->getString());
+            
+            if (command.type == GET_COMMAND) 
+            {
+                std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(position);
+                const int time = CurrentTime::Now();
+                storeTraCIResult(time, res, command, executionId);
+            }
+        }
+
+        void Behaviour::processTraCIResult(std::shared_ptr<baseapp::TraCIPair2Int> result, const Command& command, const int executionId) {
+            NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult_ of " << command.objId << " is " << result->getString());
+            
+            if (command.type == GET_COMMAND) 
+            {
+                std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(result);
+                const int time = CurrentTime::Now();
+                storeTraCIResult(time, res, command, executionId);
+            }
+        }
+
+        void Behaviour::processTraCIResult(std::shared_ptr<baseapp::TraCIVectorPair> result, const Command& command, const int executionId) {
+            NS_LOG_INFO(m_controller->LogNode() <<"iCSInferface::TraciCommandResult_ of " << command.objId << " is " << result->getString());
+            
+            if (command.type == GET_COMMAND) 
+            {
+                std::shared_ptr<libsumo::TraCIResult> res = std::dynamic_pointer_cast<libsumo::TraCIResult>(result);
+                const int time = CurrentTime::Now();
+                storeTraCIResult(time, res, command, executionId);
+            }
+        }
+
+        void Behaviour::storeTraCIResult(const int time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command, const int executionId) {
             if(TraCIResponses.find(command.objId) == end(TraCIResponses)){
                 TraCIResponses[command.objId] = std::map<int, std::pair <int, std::shared_ptr<libsumo::TraCIResult> > >();
             }
             TraCIResponses[command.objId][command.variableId] = std::make_pair(time, result);
+
+            if (executionId != -1)
+                storeTraCIResultId(executionId, time, result, command);
         }
 
         const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >&
@@ -212,6 +252,29 @@ namespace baseapp
                 }
             }
             return noResponse;
+        }
+
+
+        void Behaviour::storeTraCIResultId(const int executionId, const int time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command) {
+            if (TraCIResponsesId.find(executionId) == end(TraCIResponsesId))
+            {
+                TraCIResponsesId[executionId] = std::pair <std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult> >();
+            }
+            std::shared_ptr<CommandInfo> info = std::make_shared<CommandInfo>();
+            info->cmd = command;
+	        info->timeId = time;
+
+            TraCIResponsesId[executionId] = std::make_pair(info, result);
+        }
+
+        const std::pair<std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult>> & Behaviour::getTraCIResponse(const int executionId) {
+            auto objMapIt = TraCIResponsesId.find(executionId);
+
+            //TODO erase first and then return copied value
+            if (objMapIt != end(TraCIResponsesId))
+                return objMapIt->second;
+
+            return noResponseId;
         }
 
 
