@@ -110,7 +110,8 @@ typedef enum
   GAP = 0x03,
   TOC = 0x04,
   HEADWAY = 0x05,
-  LANE_KEEP = 0x06
+  LANE_KEEP = 0x06,
+  SAFE_SPOT = 0x07
 } AdviceType;
 
 const unsigned int ID_ALL = 0xffffffff;

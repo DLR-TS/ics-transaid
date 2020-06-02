@@ -170,6 +170,16 @@ namespace baseapp
                 double maxDecel;
             };
 
+            struct SafeSpotAdvice : Advice
+            {
+            	double duration;
+            	double until;
+            	double startPos;
+            	double endPos;
+            	int targetLaneId;
+            	std::string stopId;
+            };
+
             struct AdviceInfo
             {
                 AdviceInfo(AdviceType adviceType, std::shared_ptr<Advice> advice) :
@@ -212,6 +222,10 @@ namespace baseapp
                     }
                     case(LANE_KEEP): {
                         advice = std::make_shared<LaneKeepAdvice>();
+                        break;
+                    }
+                    case(SAFE_SPOT): {
+                        advice = std::make_shared<SafeSpotAdvice>();
                         break;
                     }
                     default: {}
