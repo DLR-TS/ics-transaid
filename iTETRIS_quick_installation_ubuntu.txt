@@ -1,3 +1,7 @@
+###
+# Tested on Ubuntu 18.04 with gcc v7.5.0
+###
+
 Step 1 - Install required libraries
 $ sudo apt-get update
 $ sudo apt-get install git autoconf automake libtool cmake libxerces-c-dev libfox-1.6-dev libgl1-mesa-dev libglu1-mesa-dev libgdal-dev libproj-dev libgeographic-dev python-pip
