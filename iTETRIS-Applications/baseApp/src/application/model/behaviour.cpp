@@ -50,6 +50,7 @@ namespace baseapp
 	    uint16_t Behaviour::DefaultResponseTimeSpacing = 10;
         TraCIResponseMap Behaviour::TraCIResponses;
         TraCIResponseMapId Behaviour::TraCIResponsesId;
+        TraCIResponseMapParameterKey Behaviour::TraCIResponsesParameterKey;
 
         std::pair<int, std::shared_ptr<libsumo::TraCIResult> > Behaviour::noResponse = std::make_pair(0.0, nullptr);
 
@@ -238,19 +239,34 @@ namespace baseapp
             }
             TraCIResponses[command.objId][command.variableId] = std::make_pair(time, result);
 
-            if (executionId != -1)
+            if (executionId != -1) {
                 storeTraCIResultId(executionId, time, result, command);
+            }
+            if (command.variableId == libsumo::VAR_PARAMETER_WITH_KEY) {
+                storeTraCIResultParameterKey(time, std::dynamic_pointer_cast<baseapp::TraCIParameterWithKey>(result), command);
+            }
         }
 
         const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >&
-        Behaviour::GetLastTraCIResponse(std::string objID, int variableID) {
-            auto objMapIt = TraCIResponses.find(objID);
-            if (objMapIt != end(TraCIResponses)){
-                auto cmdMapIt = objMapIt->second.find(variableID);
-                if (cmdMapIt != end(objMapIt->second)){
-                    return cmdMapIt->second;
+        Behaviour::GetLastTraCIResponse(std::string objID, int variableID, std::string parameterKey) {
+            if (parameterKey == INVALID_STRING) {
+                auto objMapIt = TraCIResponses.find(objID);
+                if (objMapIt != end(TraCIResponses)){
+                    auto cmdMapIt = objMapIt->second.find(variableID);
+                    if (cmdMapIt != end(objMapIt->second)){
+                        return cmdMapIt->second;
+                    }
+                }
+            } else {
+                auto objMapIt = TraCIResponsesParameterKey.find(objID);
+                if (objMapIt != end(TraCIResponsesParameterKey)) {
+                    auto keyMapIt = objMapIt->second.find(parameterKey);
+                    if (keyMapIt != end(objMapIt->second)){
+                        return keyMapIt->second;
+                    }
                 }
             }
+
             return noResponse;
         }
 
@@ -265,6 +281,14 @@ namespace baseapp
 	        info->timeId = time;
 
             TraCIResponsesId[executionId] = std::make_pair(info, result);
+        }
+
+        void Behaviour::storeTraCIResultParameterKey(const int time, const std::shared_ptr<baseapp::TraCIParameterWithKey> result, const Command& command) {
+            if (TraCIResponsesParameterKey.find(command.objId) == end(TraCIResponsesParameterKey)) {
+                TraCIResponsesParameterKey[command.objId] = std::map<std::string, std::pair <int, std::shared_ptr<baseapp::TraCIParameterWithKey> > >();
+            }
+
+            TraCIResponsesParameterKey[command.objId][result->key] = std::make_pair(time, result);
         }
 
         const std::pair<std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult>> & Behaviour::getTraCIResponse(const int executionId) {

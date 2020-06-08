@@ -233,7 +233,7 @@ namespace baseapp
 
                 /// @brief return time and result object for the last TraCI response received for the given object and variable
                 /// returns noResponse if no entry exists in TraCIResponses
-                static const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >& GetLastTraCIResponse(std::string objID, int variableID);
+                static const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >& GetLastTraCIResponse(std::string objID, int variableID, std::string parameterKey = INVALID_STRING);
 
 				static const std::pair<std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult>> &getTraCIResponse(int executionId);
 				

@@ -516,8 +516,8 @@ namespace baseapp
 
 
         const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >&
-        iCSInterface::GetLastTraCIResponse(std::string objID, int variableID) {
-            return Behaviour::GetLastTraCIResponse(objID, variableID);
+        iCSInterface::GetLastTraCIResponse(std::string objID, int variableID, std::string parameterKey) {
+            return Behaviour::GetLastTraCIResponse(objID, variableID, parameterKey);
         }
 
         const std::pair<std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult>> &iCSInterface::getTraCIResponse(int executionId)

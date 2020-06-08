@@ -42,7 +42,9 @@
 #include "headers.h"
 #include "fatal-error.h"
 #include "structs.h"
+#include "node.h"
 #include "libsumo/TraCIDefs.h"
+#include "libsumo/TraCIConstants.h"
 
 namespace baseapp
 {
@@ -67,7 +69,10 @@ namespace baseapp
 		//executionId - <CommandInfo, TraCIResult>
 		typedef std::map<int, std::pair <std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult> > > TraCIResponseMapId;
 
-		/**
+        // maps: objID -> parameterKey -> Response-object (time x value)
+        typedef std::map<std::string, std::map<std::string, std::pair<int,std::shared_ptr<baseapp::TraCIParameterWithKey> > > > TraCIResponseMapParameterKey;
+
+                /**
 		 * Abstract behaviour class
 		 */
 		class Behaviour: public TraceManager
@@ -151,7 +156,7 @@ namespace baseapp
 
                 /// @brief return time and result object for the last TraCI response received for the given object and variable
                 /// returns noResponse if no entry exists in TraCIResponses
-                static const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >& GetLastTraCIResponse(std::string objID, int variableID);
+                static const std::pair<int, std::shared_ptr<libsumo::TraCIResult> >& GetLastTraCIResponse(std::string objID, int variableID, std::string parameterKey = INVALID_STRING);
 
 				static const std::pair<std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult> >& getTraCIResponse(int executionId);
 
@@ -173,6 +178,8 @@ namespace baseapp
 
 				virtual void storeTraCIResultId(const int executionId, const int time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command);
 
+                virtual void storeTraCIResultParameterKey(const int time, const std::shared_ptr<baseapp::TraCIParameterWithKey> result, const Command& command);
+
                 iCSInterface* m_controller;
 				bool m_running;
 
@@ -184,6 +191,7 @@ namespace baseapp
                 /// maps: objID -> CMD -> Response (time x value)
                 static TraCIResponseMap TraCIResponses;
 				static TraCIResponseMapId TraCIResponsesId;
+                static TraCIResponseMapParameterKey TraCIResponsesParameterKey;
 		};
 
 	} /* namespace application */
