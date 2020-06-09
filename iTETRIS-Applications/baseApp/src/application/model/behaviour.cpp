@@ -243,7 +243,7 @@ namespace baseapp
                 storeTraCIResultId(executionId, time, result, command);
             }
             if (command.variableId == libsumo::VAR_PARAMETER_WITH_KEY) {
-                storeTraCIResultParameterKey(time, std::dynamic_pointer_cast<baseapp::TraCIParameterWithKey>(result), command);
+                storeTraCIResultParameterKey(time, result, command);
             }
         }
 
@@ -283,12 +283,13 @@ namespace baseapp
             TraCIResponsesId[executionId] = std::make_pair(info, result);
         }
 
-        void Behaviour::storeTraCIResultParameterKey(const int time, const std::shared_ptr<baseapp::TraCIParameterWithKey> result, const Command& command) {
+        void Behaviour::storeTraCIResultParameterKey(const int time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command) {
             if (TraCIResponsesParameterKey.find(command.objId) == end(TraCIResponsesParameterKey)) {
-                TraCIResponsesParameterKey[command.objId] = std::map<std::string, std::pair <int, std::shared_ptr<baseapp::TraCIParameterWithKey> > >();
+                TraCIResponsesParameterKey[command.objId] = std::map<std::string, std::pair <int, std::shared_ptr<libsumo::TraCIResult> > >();
             }
 
-            TraCIResponsesParameterKey[command.objId][result->key] = std::make_pair(time, result);
+            std::string paramKey = std::dynamic_pointer_cast<baseapp::TraCIParameterWithKey>(result)->key;
+            TraCIResponsesParameterKey[command.objId][paramKey] = std::make_pair(time, result);
         }
 
         const std::pair<std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult>> & Behaviour::getTraCIResponse(const int executionId) {

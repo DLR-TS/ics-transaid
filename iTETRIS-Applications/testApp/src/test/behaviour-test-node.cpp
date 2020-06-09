@@ -399,8 +399,7 @@ namespace testapp
             } else if (ProgramConfiguration::GetTestCase() == "GetTraciParameterWithKey") {
                 if (CurrentTime::Now() == 5050) {
                     std::string sumoID = GetController()->GetNode()->getSumoId();
-                    auto paramWithKeyResponse = std::dynamic_pointer_cast<baseapp::TraCIParameterWithKey>(
-                        GetLastTraCIResponse(sumoID, libsumo::VAR_PARAMETER_WITH_KEY).second);
+                    auto paramWithKeyResponse = std::dynamic_pointer_cast<baseapp::TraCIParameterWithKey>(GetLastTraCIResponse(sumoID, libsumo::VAR_PARAMETER_WITH_KEY, "has.toc.device").second);
                     if (paramWithKeyResponse != nullptr) {
                         std::string key = paramWithKeyResponse->key;
                         std::string value = paramWithKeyResponse->value;

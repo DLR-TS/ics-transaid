@@ -70,7 +70,7 @@ namespace baseapp
 		typedef std::map<int, std::pair <std::shared_ptr<CommandInfo>, std::shared_ptr<libsumo::TraCIResult> > > TraCIResponseMapId;
 
         // maps: objID -> parameterKey -> Response-object (time x value)
-        typedef std::map<std::string, std::map<std::string, std::pair<int,std::shared_ptr<baseapp::TraCIParameterWithKey> > > > TraCIResponseMapParameterKey;
+        typedef std::map<std::string, std::map<std::string, std::pair<int,std::shared_ptr<libsumo::TraCIResult> > > > TraCIResponseMapParameterKey;
 
                 /**
 		 * Abstract behaviour class
@@ -178,7 +178,7 @@ namespace baseapp
 
 				virtual void storeTraCIResultId(const int executionId, const int time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command);
 
-                virtual void storeTraCIResultParameterKey(const int time, const std::shared_ptr<baseapp::TraCIParameterWithKey> result, const Command& command);
+                virtual void storeTraCIResultParameterKey(const int time, const std::shared_ptr<libsumo::TraCIResult> result, const Command& command);
 
                 iCSInterface* m_controller;
 				bool m_running;
