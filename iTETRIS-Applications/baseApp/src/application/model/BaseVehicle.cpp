@@ -32,7 +32,7 @@ BaseVehicle::BaseVehicle()
       initialInformationReceived(false) {}
 
 BaseVehicle::BaseVehicle(double pos, double speed, double accel, int laneIndex,
-                         double length, double minGap, std::string sumoID,
+                         double length, double minGap, const std::string& sumoID,
                          int icsID, AutomationType automationType)
     : xPosition(pos),
       speed(speed),
@@ -50,7 +50,7 @@ BaseVehicle::BaseVehicle(double pos, double speed, double accel, int laneIndex,
       lastExtrapolationTime(-1),
       initialInformationReceived(true) {}
 
-BaseVehicle::BaseVehicle(std::string sumoID, int icsID)
+BaseVehicle::BaseVehicle(const std::string& sumoID, int icsID)
     : xPosition(-1),
       speed(-1),
       accel(0),

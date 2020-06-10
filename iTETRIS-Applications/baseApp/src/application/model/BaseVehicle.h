@@ -57,9 +57,9 @@ public:
 
     BaseVehicle();
     BaseVehicle(double pos, double speed, double accel, int laneIndex,
-                double length, double minGap, std::string sumoID, int icsID,
+                double length, double minGap, const std::string& sumoID, int icsID,
                 AutomationType automationType);
-    BaseVehicle(std::string sumoID, int icsID);
+    BaseVehicle(const std::string& sumoID, int icsID);
     virtual ~BaseVehicle(){};
 
     // Returns the positive front to backbumper distance between this and the
