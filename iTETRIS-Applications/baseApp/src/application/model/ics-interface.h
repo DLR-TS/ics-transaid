@@ -299,7 +299,7 @@ namespace baseapp
 
                 /// @brief Get the vehicle's next stops
                 ///        see https://sumo.dlr.de/docs/TraCI/Vehicle_Value_Retrieval.html#response_0xb4_vehicle_variable
-                void commandTraciGetNextStops();
+                void commandTraciGetNextStops(const std::string& vehID = INVALID_STRING);
 
                 /// @brief Get abstract parameter (vehicle or simulation domain)
                 void GetTraciParameterWithKey(const int cmdID, const std::string key, const std::string objID = "");
@@ -314,7 +314,7 @@ namespace baseapp
                 void SetTraCIParkingAreaStop(const std::string& vehID, const std::string& stopID, const double duration = libsumo::INVALID_DOUBLE_VALUE, const double until = libsumo::INVALID_DOUBLE_VALUE, const int flags = libsumo::STOP_PARKING);
 
                 /// @brief Get vehicle stop state via TraCI
-                void GetTraCIStopState(const std::string& vehID);
+                void GetTraCIStopState(const std::string& vehID = INVALID_STRING);
 
                 /// @brief Highlight node
                 /// @param color Color for highlighting

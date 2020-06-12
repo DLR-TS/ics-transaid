@@ -1280,15 +1280,16 @@ namespace baseapp
             }
         }
 
-        void iCSInterface::commandTraciGetNextStops()
+        void iCSInterface::commandTraciGetNextStops(const std::string& vehID)
         {
-            if (m_node->getSumoId() != INVALID_STRING)
+            std::string ID = (vehID == "" ? m_node->getSumoId() : vehID);
+            if (ID != INVALID_STRING)
             {
                 int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
                 int varID = libsumo::VAR_NEXT_STOPS;
 
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
-                AddTraciSubscription(cmdID, varID);
+                AddTraciSubscription(ID, cmdID, varID);
             }
         }
 
@@ -1381,13 +1382,14 @@ namespace baseapp
 
         void iCSInterface::GetTraCIStopState(const std::string& vehID)
         {
-            if (m_node->getSumoId() != INVALID_STRING)
+            std::string ID = (vehID == "" ? m_node->getSumoId() : vehID);
+            if (ID != INVALID_STRING)
             {
                 int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
                 int varID = libsumo::VAR_STOPSTATE;
 
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
-                AddTraciSubscription(cmdID, varID);
+                AddTraciSubscription(ID, cmdID, varID);
             }
         }
 
