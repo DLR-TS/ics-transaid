@@ -1418,8 +1418,8 @@ namespace baseapp
                 int varTypeID = libsumo::TYPE_COMPOUND;
                 unsigned int alphaMax = 255;
                 tcpip::Storage content;
-                unsigned int length = 5;
-                content.writeUnsignedByte(length);
+                const int length = 5;
+                content.writeInt(length);
                 content.writeUnsignedByte(libsumo::TYPE_COLOR);
                 writeColor(color, content);
                 content.writeUnsignedByte(libsumo::TYPE_DOUBLE);
