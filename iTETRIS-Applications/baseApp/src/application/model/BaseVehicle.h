@@ -64,9 +64,9 @@ public:
 
     // Returns the positive front to backbumper distance between this and the
     // given leader if applicable, -1 otherwise.
-    // @note: this assumes that both vehicles are on the same edge to avoid
-    // complicated calculations or a delayed result by waiting for response
-    // from a traci.getDrivingDistance() call.
+    // @note: Uses net-wide coordinates (via CAM) and assumes that both vehicles
+    // are on the same edge to avoid complicated calculations or a delayed result
+    // by waiting for response from a traci.getDrivingDistance() call.
     double getSpacing(const std::shared_ptr<BaseVehicle> leader) const;
 
     /// @brief Update the vehicle state according to the received CAM info

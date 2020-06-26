@@ -1049,7 +1049,8 @@ namespace baseapp
         std::shared_ptr<libsumo::TraCINextStopDataVector>
         iCSInterface::readNextStopDataVector(tcpip::Storage& inputStorage) {
             std::shared_ptr<libsumo::TraCINextStopDataVector> res = std::make_shared<libsumo::TraCINextStopDataVector>();
-
+            inputStorage.readInt();  // compound length
+            inputStorage.readUnsignedByte();  // libsumo::TYPE_INTEGER
             for (int length = inputStorage.readInt(); length > 0; --length) {
                 libsumo::TraCINextStopData nsd;
                 inputStorage.readUnsignedByte();  // libsumo::TYPE_STRING
