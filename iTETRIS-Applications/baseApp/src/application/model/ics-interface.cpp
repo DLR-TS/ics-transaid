@@ -1265,9 +1265,10 @@ namespace baseapp
             }
         }
 
-        void iCSInterface::commandTraciGetLeader(const double dist)
+        void iCSInterface::commandTraciGetLeader(const double dist, const std::string& vehID)
         {
-            if (m_node->getSumoId() != INVALID_STRING)
+            std::string ID = (vehID == "" ? m_node->getSumoId() : vehID);
+            if (ID != INVALID_STRING)
             {
                 int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
                 int varID = libsumo::VAR_LEADER;
@@ -1277,7 +1278,7 @@ namespace baseapp
                 content.writeDouble(dist);
 
                 // Add traci subscriptions without explicitely given objectID for mobile nodes only
-                AddTraciSubscription(cmdID, varID, varTypeID, &content);
+                AddTraciSubscription(ID, cmdID, varID, varTypeID, &content);
             }
         }
 

@@ -295,7 +295,7 @@ namespace baseapp
 
                 /// @brief Get the leader vehicle
                 ///        see https://sumo.dlr.de/docs/TraCI/Vehicle_Value_Retrieval.html#leader_0x68
-                void commandTraciGetLeader(const double dist = 0.);
+                void commandTraciGetLeader(const double dist = 0.0, const std::string& vehID = INVALID_STRING);
 
                 /// @brief Get the vehicle's next stops
                 ///        see https://sumo.dlr.de/docs/TraCI/Vehicle_Value_Retrieval.html#response_0xb4_vehicle_variable

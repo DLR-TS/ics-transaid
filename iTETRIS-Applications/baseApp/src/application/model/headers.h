@@ -146,6 +146,7 @@ namespace baseapp
                 double tocStartPosition;
             	double tocTime;
             	double tocEndPosition;
+                double timeUntilMRM;
             };
 
             struct LaneKeepAdvice : Advice
