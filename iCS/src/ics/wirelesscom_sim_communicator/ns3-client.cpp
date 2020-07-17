@@ -992,7 +992,7 @@ namespace ics
 		case NS3_RTYPE_OK:
 #ifdef LOG_ON
 			oss << ".. Command acknowledged (" << cmdId << "), [description: " << msg << "]" << endl;
-			IcsLog::LogLevel((oss.str()).c_str(), kLogLevelError);
+			IcsLog::LogLevel((oss.str()).c_str(), kLogLevelInfo);
 #endif
 			break;
 		default:
