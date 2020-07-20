@@ -377,6 +377,10 @@ namespace baseapp
 
 				void vehicleSetClass(const std::string &vehID, const std::string &vClass);
 
+				const int vehicleGetType(const std::string &vehID);
+
+				const int vehicleGetLeader(const std::string &vehID, const double dist = 0.);
+
 				//poi ---------------------------------------------------------------------------------------------------------------------------------
 				void poiRemove(const std::string &poi, const int layer = 0);
 

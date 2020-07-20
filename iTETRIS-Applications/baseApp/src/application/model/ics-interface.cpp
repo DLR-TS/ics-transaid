@@ -947,6 +947,46 @@ namespace baseapp
         }
 
         //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::vehicleGetType(const std::string &vehID)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_TYPE;
+
+                return AddTraciSubscriptionId(ID, cmdID, varID);
+            }
+
+            return -1;
+        }
+
+        //-------------------------------------------------------------------------------------------
+        //vehicle
+        //-------------------------------------------------------------------------------------------
+        const int iCSInterface::vehicleGetLeader(const std::string &vehID, const double dist)
+        {
+            std::string ID = vehID == "" ? m_node->getSumoId() : vehID;
+
+            if (ID != INVALID_STRING)
+            {
+                int cmdID = libsumo::CMD_GET_VEHICLE_VARIABLE;
+                int varID = libsumo::VAR_LEADER;
+                int varTypeID = libsumo::TYPE_DOUBLE;
+
+                tcpip::Storage content;
+                content.writeDouble(dist);
+
+                return AddTraciSubscriptionId(ID, cmdID, varID, true, varTypeID, &content);
+            }
+
+            return -1;
+        }
+
+        //-------------------------------------------------------------------------------------------
         //poi
         //-------------------------------------------------------------------------------------------
         void iCSInterface::poiRemove(const std::string &poi, const int layer)
