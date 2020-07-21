@@ -50,12 +50,14 @@ iTETRIS-Applications/testApp/testScenario/ics-log-50.txt
 iTETRIS-Applications/testApp/testScenario/ns3-log-50.txt
 iTETRIS-Applications/testApp/testScenario/sumo/sumo_log.txt
 iTETRIS-Applications/testApp/acosta/sumo/sumo_log.txt
+iTETRIS-Applications/exampleApp/src/exampleApp
 iTETRIS-Applications/protocolspeed/src/protocolspeedApp
 iTETRIS-Applications/transaidUC1App/src/uc1App
 iTETRIS-Applications/transaidUC2App/src/uc2App
 iTETRIS-Applications/transaidUC3App/src/uc3App
 iTETRIS-Applications/transaidUC4App/src/uc4App
 iTETRIS-Applications/transaidUC5App/src/uc5App
+iTETRIS-Applications/transaidUC45App/src/uc45App
 TransAIDScenarios/**/outputSSM.xml
 TransAIDScenarios/**/outputEmission.xml
 TransAIDScenarios/**/outputLaneChanges.xml
