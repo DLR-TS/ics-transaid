@@ -37,8 +37,8 @@ cd ../../..
 
 cd ns-3.20
 echo "## Building ns-3 in $PWD..."
-CXXFLAGS="$waf_flags" ./waf configure $waf_opt --prefix=$PWD/..
-if ! ./waf -j8; then
+CXXFLAGS="$waf_flags" python2 ./waf configure $waf_opt --prefix=$PWD/..
+if ! python2 ./waf -j8; then
     echo "### Build failed!"
     cd ..
     exit 1
