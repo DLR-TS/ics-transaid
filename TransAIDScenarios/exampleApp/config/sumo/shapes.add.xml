@@ -1,0 +1,7 @@
+<additionals>
+    <poi id="POI_0" color="white" layer="4.00" x="3000.00" y="53.50" imgFile="non_AV-Zone.png" width="5.00" height="5.00"/>
+    <poi id="POI_1" color="white" layer="4.00" x="3000.00" y="40.00" imgFile="non_AV-Zone.png" width="5.00" height="5.00"/>
+    <poi id="RSU_0" color="white" layer="4.00" x="200.00" y="53.50" imgFile="RSU.jpeg" width="5.00" height="5.00"/>
+    <poi id="RSU_1" color="white" layer="4.00" x="1200.00" y="53.50" imgFile="RSU.jpeg" width="5.00" height="5.00"/>
+    <poi id="RSU_2" color="white" layer="4.00" x="2200.00" y="53.50" imgFile="RSU.jpeg" width="5.00" height="5.00"/>
+</additionals>

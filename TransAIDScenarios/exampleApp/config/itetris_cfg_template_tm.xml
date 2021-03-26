@@ -1,0 +1,47 @@
+<configuration>
+
+    <scenario>
+        <begin value="0"/>
+        <end value="3800"/>
+        <resolution value="50" />
+        <penetration-rate value="100"/>
+        <vehicleSelector value="CVToC, CAVToC"/>               
+        <facilities-config-file value="facilities-config-file-tm.xml"/>
+        <message-reception-window value="5"/>
+        <interactive value="false"/>
+    </scenario>
+
+    <trafficsim>
+        <traffic-executable value="{sumoBinary} -c"/>
+        <traffic-file value="{sumoConfig}"/>
+        <traffic-host value="localhost"/>
+        <traffic-port value="0"/>
+    </trafficsim>
+
+    <communicationsim>
+        <!-- set to "main-inci5" to use NS-3 or set to "lightcomm -c lightcomm-config-file.xml" to employ the lightweight communications module -->
+	    <communication-executable value="{commBinary}"/>
+        <communication-host value="localhost"/>
+        <communication-port value="0"/>
+        <communication-general-params-file value="./ns3/configGeneral.ns3.20.txt"/>
+        <communication-config-technologies-file value="{ns3ConfigTechnologiesFile}"/>
+    </communicationsim>
+
+    <applications>
+        <app-config-file value="application-config-file-tm.xml"/>
+    </applications>
+
+    <logs>
+<!--
+        <ics-log-path value="./logs/log.txt"/>
+-->
+        <ics-log-path value="/dev/null" />
+        <ics-log-level value="ERROR"/><!-- INFO,ERROR,WARNING -->
+        <ics-log-time-size value="3800"/>
+<!--
+        <ns3-log-path value="./logs/ns3-log-50.txt"/>
+-->
+	    <ns3-log-path value="/dev/null" />
+    </logs>
+
+</configuration>

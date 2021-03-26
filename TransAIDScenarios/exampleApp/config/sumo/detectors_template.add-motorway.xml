@@ -1,0 +1,62 @@
+<additional>
+
+    <inductionLoop id="myDetector1" lane="start_0" pos="100" freq="300" file="{detectorOutput}"/>
+ 		<inductionLoop id="myDetector2" lane="start_1" pos="100" freq="300" file="{detectorOutput}"/>
+		<inductionLoop id="myDetector3" lane="start_0" pos="200" freq="300" file="{detectorOutput}"/>
+ 		<inductionLoop id="myDetector4" lane="start_1" pos="200" freq="300" file="{detectorOutput}"/>
+		<inductionLoop id="myDetector5" lane="start_0" pos="300" freq="300" file="{detectorOutput}"/>
+ 		<inductionLoop id="myDetector6" lane="start_1" pos="300" freq="300" file="{detectorOutput}"/>
+
+
+ 		<inductionLoop id="myDetector7" lane="approach1_0" pos="100" freq="300" file="{detectorOutput}"/>
+		<inductionLoop id="myDetector8" lane="approach1_1" pos="100" freq="300" file="{detectorOutput}"/>
+		<inductionLoop id="myDetector9" lane="approach1_0" pos="200" freq="300" file="{detectorOutput}"/>
+		<inductionLoop id="myDetector10" lane="approach1_1" pos="200" freq="300" file="{detectorOutput}"/>
+		<inductionLoop id="myDetector11" lane="approach1_0" pos="300" freq="300" file="{detectorOutput}"/>
+		<inductionLoop id="myDetector12" lane="approach1_1" pos="300" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector13" lane="approach1_0" pos="400" freq="300" file="{detectorOutput}"/>
+		<inductionLoop id="myDetector14" lane="approach1_1" pos="400" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector15" lane="approach1_0" pos="500" freq="300" file="{detectorOutput}"/>
+		<inductionLoop id="myDetector16" lane="approach1_1" pos="500" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector17" lane="approach1_0" pos="600" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector18" lane="approach1_1" pos="600" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector19" lane="approach1_0" pos="700" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector20" lane="approach1_1" pos="700" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector21" lane="approach1_0" pos="800" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector22" lane="approach1_1" pos="800" freq="300" file="{detectorOutput}"/>
+
+    <inductionLoop id="myDetector23" lane="approach2_0" pos="100" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector24" lane="approach2_1" pos="100" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector25" lane="approach2_0" pos="200" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector26" lane="approach2_1" pos="200" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector27" lane="approach2_0" pos="300" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector28" lane="approach2_1" pos="300" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector29" lane="approach2_0" pos="400" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector30" lane="approach2_1" pos="400" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector31" lane="approach2_0" pos="500" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector32" lane="approach2_1" pos="500" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector33" lane="approach2_0" pos="600" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector34" lane="approach2_1" pos="600" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector35" lane="approach2_0" pos="700" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector36" lane="approach2_1" pos="700" freq="300" file="{detectorOutput}"/>
+
+ 		<inductionLoop id="myDetector37" lane="safetyzone1_0" pos="100" freq="300" file="{detectorOutput}"/>
+		<inductionLoop id="myDetector38" lane="safetyzone1_1" pos="100" freq="300" file="{detectorOutput}"/>
+
+		<inductionLoop id="myDetector39" lane="workzone_0" pos="100" freq="300" file="{detectorOutput}"/>
+ 		<inductionLoop id="myDetector40" lane="workzone_1" pos="100" freq="300" file="{detectorOutput}"/>
+
+    <inductionLoop id="myDetector41" lane="safetyzone2_0" pos="50" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector42" lane="safetyzone2_1" pos="50" freq="300" file="{detectorOutput}"/>
+
+    <inductionLoop id="myDetector43" lane="leave_0" pos="50" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector44" lane="leave_1" pos="50" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector45" lane="leave_0" pos="150" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector46" lane="leave_1" pos="150" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector47" lane="leave_0" pos="250" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector48" lane="leave_1" pos="250" freq="300" file="{detectorOutput}"/>
+
+    <inductionLoop id="myDetector49" lane="end_0" pos="100" freq="300" file="{detectorOutput}"/>
+    <inductionLoop id="myDetector50" lane="end_1" pos="100" freq="300" file="{detectorOutput}"/>
+
+ </additional>

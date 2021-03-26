@@ -1,0 +1,111 @@
+{
+  "_comment0":"example : python3 batchRunner.py --gui --losc --mix2 --tm",
+  "_comment1":"example : python3 batchRunner.py --gui --tm --qt",
+  "_comment2":"example : python3 batchRunner.py --json",
+  
+  "optimizeForSpeed" : "False",
+
+  "guiSetZoomEnable": "True",
+  "guiDelay": 500.0,
+  
+  "view0":
+  {
+  "zoom": 100.0,
+  "offsetX": 100.0,
+  "offsetY": 0.0,
+  "trackVehicle" : "",
+  "trackEdge": "",
+  "trackPos": 0.0,
+  "trackPosBegin": 0.0
+  },
+
+  "scenario": "tm",
+  "handleTeleported": "True",
+
+  "removeItems": [],
+  
+  "rePositionItems": {"RSU_0" : {"xPos": 600.0, "yPos" :35.0}},
+
+  "mainDebug" : "False",
+  "tocDebug": "True",
+
+  "camMessageDebug": "False",
+  "denmMessageDebug": "False",
+
+  "printVehiclesList": "False",
+  
+  "useMobilityInfo": "True",
+  "useNS3Messages": "True",
+  "useTrafficLightInfo": "False",
+
+  "rsus" : {"RSU_0": 5000, "RSU_1": 5001, "RSU_2": 5002},
+
+  "denmMessages" : {"DENM_UNKNOWN" : 0, "ROAD_WORKS" : 1, "NO_AD_ZONE" : 2},
+  
+  "workzone" : {"begin":200, "end":2150},
+
+  "RSU_0":
+  {
+  "unicast": "True",
+  "geobroadcast": "True",
+  
+  "denmMsgEnable": "True",
+  "denmMsgType": 1,
+  "denmFrequency": 500.0,
+  "denmStartingPoint": 300.0,
+  "denmEndPoint": 3000.0,
+  "denmHighlight": "True"
+  },
+
+  "LV":
+  {
+    "camEnable": "False",
+    "tocEnable": "False",
+    "exitEnable": "False"
+  },
+
+  "CVToC":
+  {
+    "camEnable": "True",
+    "camAuto" : "True",
+    "camFrequency": 200.0,
+    "camHighlight": "True",
+
+    "tocEnable": "True",
+    "tocProbability": 1.0,
+    "tocLeadTime" : 1.5,
+    "tocDownwardEdge": "e0",
+    "tocDownwardPos": 50.0,
+    "tocDownwardPosBegin": 700.0,
+    "tocDownwardFromRsuDenm": 5000,
+    "tocDownwardDenmHighlight": "True",
+
+    "exitEnable": "True",
+    "exitEdge": "e0",
+    "exitPos": 4700.0,
+    "exitPosBegin": 4900.0
+  },
+
+  "CAVToC":
+  {
+    "camEnable": "True",
+    "camAuto" : "True",
+    "camFrequency": 200.0,
+    "camHighlight": "True",
+
+    "tocEnable": "True",
+    "tocProbability": 1.0,
+    "tocLeadTime" : 10.0,
+    "tocDownwardEdge": "e0",
+    "tocDownwardPos": 500.0,
+    "tocDownwardPosBegin": 700.0,
+    "tocDownwardFromRsuDenm": 5000,
+    "tocDownwardDenmHighlight": "True",
+    
+    "exitEnable": "True",
+    "exitEdge": "e0",
+    "exitPos": 4700.0,
+    "exitPosBegin": 4900.0
+  }
+
+  }

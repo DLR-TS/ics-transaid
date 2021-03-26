@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <edgeData id="emissions" type="emissions" freq="300" file="{outputEmission}" excludeEmpty="true" />
+    <edgeData id="meandata" freq="300" file="{outputMeandata}" excludeEmpty="true" />
+    <inductionLoop id="loop0" lane="e0_0" pos="10" freq="900" file="/dev/null"/>
+    <inductionLoop id="loop1" lane="e0_1" pos="10" freq="900" file="/dev/null"/>
+    <laneAreaDetector  id="area0" lanes="e0_0" pos="10" endPos="2800" freq="900" file="/dev/null" show="true"/>
+    <laneAreaDetector  id="area1" lanes="e0_1" pos="10" endPos="2800" freq="900" file="/dev/null" show="true"/>
+</additional>

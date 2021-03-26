@@ -1,0 +1,24 @@
+{
+  "buttons": [
+    "Run distribution",
+    "Create VType templates"
+  ],
+  "driverBehaviourList": [
+    "MSE"
+  ],
+  "typeList": [
+    "LV",
+    "CVToC",
+    "CAVToC"
+  ],
+  "sizeListDefault": [
+    1000,
+    1000,
+    1000
+  ],
+  "sizeList": [
+    1000,
+    1000,
+    1000
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "_comment0":"example : python3 batchRunner.py --gui --losc --mix2 --tm",
+  "_comment1":"example : python3 batchRunner.py --gui --tm --qt",
+  "_comment2":"example : python3 batchRunner.py --json",
+  "_comment3":"example : python3 batchRunner.py --sim=8",
+
+  "use_case": "example",
+  "network": "Example UC5",
+    
+  "linux_search_sumo":  ["Documents/sumo", "sumo", "SUMO/sumo", "Desktop/sumo"],
+  "linux_search_transaid":  ["share/transaid", "transaid", "Desktop/transaid"],
+
+  "win_search_sumo":  ["C:/sumo", "D:/sumo", "E:/sumo", "D:/sumo-master"],
+  "win_search_transaid":  ["C:/transaid/sumo", "D:/transaid/sumo", "E:/transaid/sumo"],
+
+  "json_work_path": "",
+  "json_scenario": "tm",
+  "json_gui": "True",
+  "json_quick_test": "True",
+
+  "json_run_parallel": "True",
+  "json_run_sequential": "False",
+
+  "json_verbose": "False",
+  "json_generateVTypes": "False",
+  "json_run_clean": "True",
+  "json_debug": "False",
+  "json_no_gzip": "False",
+  "json_lightcomm": "False",
+  "json_only_sumo": "False",
+
+  "json_mix": { "mix_2":{ "LV":0.2, "CVToC":0.4, "CAVToC":0.4}},
+  "json_demands" : {"los_C":1 },
+  "json_schemes": ["MSE"],
+  "json_sim_min": 0,
+  "json_sim_max": 10,
+
+  "runner": "runner.py",
+  
+  "config_dir": "config",
+  "sumo_folder": "sumo",
+  "ns3_folder": "ns3",
+  
+  "sumo_config": "sumo.cfg",
+
+  "itetris_config_manual": "itetris_cfg_template_manual.xml",
+  "itetris_config_tm": "itetris_cfg_template_tm.xml",
+
+  "transaid_dir": "transaid",
+  "output_dir": "raw_output",
+  "results_dir": "results",
+  "vtype_dir": "vTypes",
+  "detectors": "detectors_template.add.xml",
+  "additionals": "additionalOutput_template.add.xml",
+  "generateVTypes": "distribution.py",
+  
+  "ns3_cfg": "configTechnologies-ics.xml",
+  "itetris_app":"iTETRIS-Applications/exampleApp",
+  "itetris_base_app":"iTETRIS-Applications/baseApp",
+
+  "cluster_server_name" : "@illice.umh.es",
+  "cluster_scratch_save": "False",
+  "cluster_scratch_path": "Transaid_Service_4/example",
+  "cluster_path": "~/wp4sims/Transaid_Service_4/example",
+  "cluster_home": "/media/home",
+  "cluster_user": "",
+  "cluster_password" :"",
+
+  "vehicle_types-": ["LVR", "LV", "LGVR", "LGV", "HGVR", "HGV", "CVR", "CV", "CAVGAR", "CAVGBR", "CAVGA", "CAVGB", "crucialCAV" ],
+
+  "vehicle_types": ["LV", "CVToC", "CAVToC"],
+
+  "args": ["--sequential", "--generateVTypes", "--no-gzip", "--clean",  "--debug", "--json", "--gui", "--qt", "--lightcomm", "--onlysumo"],
+  "args_names": ["Sequential", "GenerateVTypes", "no-gzip", "Clean", "Debug", "Json", "Gui", "Quick Test", "LightComm", "Only Sumo"],
+  "args_tooltips": ["Sequential", "GenerateVTypes", "disable creating zip reuslt files", "erase result data files", "enable debug info (python code only)",
+    "use json specific arguments", "enable sumo graphic interface", "use quick test data", "use LightComm programm", "Run python code (runner.py)"],
+
+  "args_special": ["--sim="],
+
+  "args_demands": ["--losa", "--losb", "--losc", "--losd","--lose", "--losf"],
+  "args_demands_names": {"losa":"LOS A", "losb":"LOS B", "losc":"LOS C", "losd":"LOS D", "lose":"LOS E", "losf":"LOS F"},
+
+  "args_mix": ["--mix0", "--mix1", "--mix2", "--mix3","--mix4", "--mix5"],
+  "args_mix_names": {"mix_0":"Mix 0", "mix_1":"Mix 1", "mix_2":"Mix 2", "mix_3":"Mix 3","mix_4":"Mix 4", "mix_5":"Mix 5"},
+
+  "demands_names": {"losa":"los_A", "losb":"los_B","losc":"los_C","losd":"los_D","lose":"los_E","losf":"los_F"},
+  "mix_names": {"mix0":"mix_0", "mix1":"mix_1","mix2":"mix_2","mix3":"mix_3","mix4":"mix_4","mix5":"mix_5"},
+
+  "args_schemes": ["--fsp", "--pe'","--ps","--mse","--oe","--os"],
+  "args_schemes_names": {"fsp":"FSP", "pe":"PE", "ps":"PS", "mse":"MSE", "oe":"OE", "os":"OS"},
+  "args_schemes_clean": ["FSP", "PE", "PS", "MSE", "OE", "OS"],
+
+  "non_templated_vtypes":["LV"],
+
+  "template_0": "routes_manual.rou.xml",
+  "template_1": "routes_tm.rou.xml",
+
+  "net_file_use": "False",
+  "net_file_0": "example.net.xml",
+  "net_file_1": "example.net.xml",
+
+  "times_enable": "True",
+  "times_path": "times",
+  "times_csv": "times.csv",
+
+  "seed_start": 1042,
+  "sim_min": 0,
+  "sim_max": 10,
+  "lanes": 1,
+  "max_tries": 1,
+
+  "schemes": ["MSE"],
+  "args_scenarios": ["--manual", "--tm"],
+  "args_scenarios_clean": ["manual", "tm"],
+  "scenarios_names": ["Manual Driving", "Traffic Management"],
+  "scenarios": {"manual":0, "tm":1},
+
+  "demands": ["losa", "losb", "losc"],
+  "demands_map": {"los_A":1, "los_B":2, "los_C":3},
+
+  "demand_level_0": {"los_A":735, "los_B":1155, "los_C":1617},
+  "demand_level_1": {"los_A":735, "los_B":1155, "los_C":1617},
+
+  "demand_quick_test_0": {"los_C":1617},
+  "demand_quick_test_1": {"los_C":1617},
+
+  "use_external_mix_file": "False",
+
+  "traffic_mixes": {"mix_0":0, "mix_1":1, "mix_2":2},
+  "traffic_mixes_clean": ["mix0", "mix1", "mix2"],
+
+  "traffic_mix_0": { "mix_0":{"LV":1.00},
+                     "mix_1":{"LV":1.00},
+                     "mix_2":{"LV":1.00}},
+
+  "traffic_mix_1": {"mix_0":{"LV":0.7, "CVToC":0.15, "CAVToC":0.15},
+                    "mix_1":{"LV":0.5, "CVToC":0.25, "CAVToC":0.25},
+                    "mix_2":{"LV":0.2, "CVToC":0.4, "CAVToC":0.4}},
+
+  "traffic_mix_quick_test_0": {"mix_2":{"LV":1.00 }},
+  "traffic_mix_quick_test_1": {"mix_2":{"LV":0.2, "CVToC":0.4, "CAVToC":0.4}}
+}

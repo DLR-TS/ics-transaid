@@ -1,0 +1,54 @@
+{
+  "_comment0":"example : python3 batchRunner.py --gui --losc --mix2 --tm",
+  "_comment1":"example : python3 batchRunner.py --gui --tm --qt",
+  "_comment2":"example : python3 batchRunner.py --json",
+  
+  "optimizeForSpeed" : "False",
+
+  "guiSetZoomEnable": "True",
+  "guiDelay": 500.0,
+  
+  "view0":
+  {
+  "zoom": 1000.0,
+  "offsetX": 400.0,
+  "offsetY": 0.0,
+  "trackVehicle" : "",
+  "trackEdge": "",
+  "trackPos": 0.0,
+  "trackPosBegin": 0.0
+  },
+
+
+  "scenario": "manual",
+  "handleTeleported": "False",
+
+  "removeItems": ["RSU_0", "RSU_1", "RSU_2"],
+  "rePositionItems": { },
+
+  "mainDebug" : "False",
+  "tocDebug": "False",
+
+  "camMessageDebug": "False",
+  "denmMessageDebug": "False",
+
+  "printVehiclesList":"False",
+  
+  "useMobilityInfo": "False",
+  "useNS3Messages": "False",
+  "useTrafficLightInfo": "False",
+
+  "rsus" : {},
+
+  "denmMessages" : {"DENM_UNKNOWN" : 0, "ROAD_WORKS" : 1, "NO_AD_ZONE" : 2},
+  
+  "workzone":{"begin":1800, "end":2150},
+
+  "LV":
+  {
+    "camEnable": "False",
+    "tocEnable": "False",
+    "exitEnable": "False"
+  }
+  
+}

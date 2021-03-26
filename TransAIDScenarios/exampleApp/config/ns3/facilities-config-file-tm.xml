@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<facilities>
+	<localCoordinates latitude="43.580573" longitude="7.121054" altitude="0.0"/>	
+	<mapConfig mapConFilename="./sumo/example.net.xml"/>
+	<stationsConfig stationsConFilename="stations-config-file-tm.xml" />
+	<LDMrulesConfig LDMrulesConFilename="LDMrules-config-file.xml" />
+</facilities>

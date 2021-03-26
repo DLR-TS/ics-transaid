@@ -1,0 +1,257 @@
+********************************************************************************************
+Definition of parameters necessary for running TransAID-Service 4 simulations (json files) *
+********************************************************************************************
+
+# Comments for json files
+"_comment0":"example : python3 batchRunner.py --gui --losc --mix2 --tm"
+"_comment1":"example : python3 batchRunner.py --gui --tm --qt"
+"_comment2":"example : python3 batchRunner.py --json"
+"_comment3":"example : python3 batchRunner.py settings/batchRunner.json"
+
+# Enable automatic zoom in a specific network area
+"guiSetZoomEnable": "True"
+
+# Specify animation speed through parameter "Delay (ms)" ***Under Development
+"guiDelay": 500.0,
+  
+# Parametrization of SUMO default view window  
+"view0":
+{
+ "zoom": 1000.0,
+ "offsetX": 80,
+ "offsetY": 0,
+ "trackVehicle":""
+} 
+
+# Specify scenario name
+"scenario": "tm",
+
+# Enable handling of teleported vehicles throughout the simulation
+"handleTeleported": "False"
+
+# Input for "openGap" TraCI command used to facilitate cooperative lane changing (decentralized approach)
+"openGapMap": {"newTimeHeadway": 4.0, "newSpaceHeadway": 15.0, "duration": 5.0, "changeRate": 0.5, "maxDecel": 1.0},
+
+# Available lane change modes (https://sumo.dlr.de/docs/TraCI/Change_Vehicle_State.html#lane_change_mode_0xb6)
+"laneChangeMap": {"default": 1621, "remainLane_speedAdapt": 1536, "remainLane_no_speedAdapt": 1792, "speedAdapt": 1877, "noLaneChanges": 256},
+
+# Remove elements of the simulation on start (insert element names in square brackets)
+"removeItems": []
+
+# Change position of simulation elements on start (insert element names in curly brackets)
+"rePositionItems": { }
+
+# Enable debug flag for ToC requests
+"tocDebug": "False"
+
+# Enable debug flag for adjusting 'lcAssertive' value
+"lcAssertiveDebug": "False"
+
+# Enable debug flag for requesting lane changes
+"laneChangeDebug": "False"
+
+# Enable debug flag for CAV guidance to safe spot functionality
+"safeSpotDebug": "False"
+
+# Enable debug flag for cooperative lane changing
+"secureGapDebug": "False"
+
+#Enable debug flag for dynamic ToC functionality
+"dynamicTocDebug": "False"
+
+# TODO
+"debugVehicles":[]
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Flags/Properties per Vehicle Type
+-------------------------------------------------------------------------------------------------------------------------------------
+
+# Enable ToC request
+"tocEnable": "False"
+
+# Define ToC Probability (if equal to one all CVs/CAVs_GA request ToC)
+"tocProbability": 1.0
+
+# Define available lead time for driver to resume vehicle control (in seconds)
+"tocLeadTime" : 10.0
+
+# Define edge where downward ToC request is issued
+"tocDownwardEdge": "approach1"
+
+# Define position (from beginning of 'tocDownwardEdge') where downward ToC request is issued (in meters)
+"tocDownwardPos": 100.0
+
+# Define edge where upward ToC request is issued
+"tocUpwardEdge": "leave"
+
+# Define position (from beginning of 'tocUpwardEdge') where upward ToC request is issued (in meters)
+"tocUpwardPos": 150.0
+
+# Disable cooperative lane changing capability during ToC
+"tocDisableCoopMan":"True"
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+# Enable adjustment of 'lcAssertive' value
+"lcAssertiveEnable": "True"
+
+# Specify new value for 'lcAssertive' parameter
+"lcAssertive": 1.20
+
+# Determine edge where adjustment of 'lcAssertive' value occurs
+"lcAssertiveEdgeSet": "approach1"
+
+# Determine position (from beginning of 'lcAssertiveEdgeSet') where adjustment of 'lcAssertive' value occurs (in meters)
+"lcAssertivePosSet": 0.0
+
+# Determine edge where adjusted 'lcAssertive' value returns to initial value
+"lcAssertiveEdgeReset": "safetyzone1"
+
+# Determine position (from beginning of 'lcAssertiveEdgeReSet') where 'lcAssertive' returns to initial value (in meters)
+"lcAssertivePosReset": 0.0
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+# Enable lane change advice
+"laneChangeAdviceEnable": "True"
+
+# Determine target lane (lane index) in case of lane change advice provision
+"laneChangeTarget": 0
+
+# Determine edge where lane change advice is provided
+"laneChangeEdge": "approach1"
+
+# Determine position (from beggining of 'laneChangeEdge') where lane change advice is provided (in meters)
+"laneChangePos": 100.0
+
+# Define lane change advice duration (in seconds)
+"laneChangeAdviceDuration": 40.0
+
+# Define lane change mode (https://sumo.dlr.de/docs/TraCI/Change_Vehicle_State.html#lane_change_mode_0xb6)
+"laneChangeMode": "remainLane_speedAdapt"
+
+# Determine if lane change advice has been implemented or not
+"laneChangeDone": "True"
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+# Enable lane keep advice
+"laneKeepAdviceEnable": "True"
+
+# Determine target lane (lane index) in case of lane keep advice provision
+"laneKeepTarget": 0
+
+# Determine edge where lane keep advice is provided
+"laneKeepEdge": "approach1"
+
+# Determine position (from beggining of 'laneChangeEdge') where lane keep advice is provided (in meters)
+"laneKeepPos": 100.0
+
+# Define lane keep mode (https://sumo.dlr.de/docs/TraCI/Change_Vehicle_State.html#lane_change_mode_0xb6)
+"laneKeepMode": "noLaneChanges"
+
+# Determine if lane keep advice has been implemented or not
+"laneKeepDone": "True"
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+# Enable guidance of vehicle type "crucialCAV" to safe spot
+"safeSpotEnable": "True",
+
+# Determine edge where guidance to safe spot is provided to vehicle type "crucialCAV"
+"safeSpotStartEdge": "approach1",
+
+# Determine position (from beginning of 'safeSpotStartEdge') where guidance to safe spot is provided to vehicle type "crucialCAV" (in meters)
+"safeSpotStartPos": 100.0,
+
+# Determine edge where safe spot is located
+"safeSpotArea": "approach2",
+
+# Determine lane where safe spot is located
+"safeSpotLane": 1,
+
+# Provide name of safe spot
+"safeSpotAreaSpot": "SSpot_1",
+
+# Determine location of safe spot (from beginning of 'safeSpotArea') (in meters)
+"safeSpotAreaPos": 340.0,
+
+# Set lane change mode after reaching a safe spot (only for vehicle type crucialCAV)
+"safeSpotLaneChangeMode": "default",
+
+# Determine stop time (only for vehicle type crucialCAV) at safe spot (***Currently under development - not working) (in seconds)
+"safeSpotDurationMrm": 10.0,
+
+# Determine target lane index when "crucialCAV" leaves the safe spot
+safeSpotLaneLeave": 0,
+
+# Determine time when crucialCAV leaves safe spot (similar to crucialCAV response time at the moment) (in seconds)
+safeSpotEndTime": 90.0,
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+# Enable cooperative lane changing (among CAVs only)
+"secureGapEnable": "True",
+
+# Define lower speed threshold for allowing cooperative lane changing among CAVs (in meters/seconds)
+"secureGapSpeedLimit": 12.5,
+
+# Vehicle colour while opening gap to facilitate cooperative lane change
+"secureGapColor":[102, 255, 255]
+
+# Determine edge where cooperative lane changing ceases to be feasible
+"secureGapEdgeEnd": "end",
+
+# Determine position (from beginning of 'secureGapEdgeEnd') where cooperative lane changing ceases to be feasible (in meters)
+"secureGapEdgePos": 0.0,
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+# Enable dynamic ToC for vehicle type CAV_GB
+"dynamicTocEnable": "True",
+
+# Enable lane change mode modification as a result of dynamic ToC (only for vehicle type CAV_GB)
+"dynamicTocSetLaneChangeModeToDefault" : "True",
+
+# Enable resetting of 'dynamicTocThreashold' parameter to initial value (only for vehicle type CAV_GB)
+"dynamicTocSetRequestTocValue" : "True",
+
+# Determine edge where value for parameter 'dynamicTocThreashold' (only for vehicle type CAV_GB) is reset to initial value
+"dynamicTocSetRequestEdge" : "leave",
+
+# Determine position (from beginning of 'dynamicTocSetRequestEdge' where value for parameter 'dynamicTocThreashold' is reset (in meters)
+"dynamicTocSetRequestEdgePos" : 150.0,
+
+# Enable adjustment of parameter 'dynamicTocThreashold' value for vehicle type CAV_GB
+"dynamicTocThreasholdApply": "False",
+
+# Determine new value for parameter 'dynamicTocThreashold' (only for vehicle type CAV_GB)
+"dynamicTocThreasholdValue": 0.0,
+
+# Determine edge where value for parameter 'dynamicTocThreashold' (only for vehicle type CAV_GB) is adjusted
+"dynamicTocThreasholdEdge" : "approach2",
+
+# Determine position (from beginning of 'dynamicTocThreasholdEdge' where value for parameter 'dynamicTocThreashold' is adjusted (in meters)
+"dynamicTocThreasholdEdgePos" : 0.0,
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+# Enable minimum risk manoeuvre (MRM) for vehicle type "crucialCAV"
+"noMrmEnable": "False"
+
+# Determine new ToC response time for vehicle type "crucialCAV" if MRM is disabled
+"mrmTocResponseTime" : 6.0, 
+	
+-------------------------------------------------------------------------------------------------------------------------------------
+
+# Release tracked vehicles when they approach network exit
+"exitEnable": "False",
+
+# Determine edge where manipulated vehicles become untracked
+"exitEdge": "leave",
+
+# Determine position (from beginning of 'exitEdge') where manipulated vehicles become untracked
+"exitPos": 150.0
+
+-------------------------------------------------------------------------------------------------------------------------------------
+  

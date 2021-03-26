@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Mo 11 Mär 2019 13:04:07 CET by Eclipse SUMO netedit Version v1_1_0+0417-c407ef5
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="example.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="example.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="true"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="0"/>
+        <junctions.limit-turn-speed value="-1"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <visualisation>
+        <registry-viewport value="true"/>
+    </visualisation>
+
+</configuration>
+-->
+
+<net version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="0.00,50.10,5000.00,50.10" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+
+    <edge id="e0" from="gneJ0" to="n1" priority="3">
+        <lane id="e0_0" index="0" disallow="tram rail_urban rail rail_electric pedestrian ship" speed="36.11" length="4800.00" shape="200.00,45.30 5000.00,45.30"/>
+        <lane id="e0_1" index="1" disallow="tram rail_urban rail rail_electric pedestrian ship" speed="36.11" length="4800.00" shape="200.00,48.50 5000.00,48.50"/>
+    </edge>
+    <edge id="entry" from="n0" to="gneJ0" priority="3">
+        <lane id="entry_0" index="0" disallow="tram rail_urban rail rail_electric pedestrian ship" speed="36.11" length="200.00" shape="0.00,45.30 200.00,45.30"/>
+        <lane id="entry_1" index="1" disallow="tram rail_urban rail rail_electric pedestrian ship" speed="36.11" length="200.00" shape="0.00,48.50 200.00,48.50"/>
+    </edge>
+
+    <junction id="gneJ0" type="priority" x="200.00" y="50.10" incLanes="entry_0 entry_1" intLanes="" shape="200.00,50.10 200.00,43.70 200.00,50.10">
+        <request index="0" response="00" foes="00"/>
+        <request index="1" response="00" foes="00"/>
+    </junction>
+    <junction id="n0" type="dead_end" x="0.00" y="50.10" incLanes="" intLanes="" shape="0.00,50.10 0.00,43.70"/>
+    <junction id="n1" type="dead_end" x="5000.00" y="50.10" incLanes="e0_0 e0_1" intLanes="" shape="5000.00,43.70 5000.00,50.10"/>
+
+    <connection from="entry" to="e0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="entry" to="e0" fromLane="1" toLane="1" dir="s" state="M"/>
+
+</net>
