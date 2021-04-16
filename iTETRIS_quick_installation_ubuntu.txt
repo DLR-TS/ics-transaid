@@ -11,19 +11,17 @@ all following steps do not require sudo
 
 --------------------------------
 Step 2 - Get the source from git
-$ git clone --recursive https://gitlab.imet.gr/hit/transaid
-$ cd transaid
-$ git checkout transaid-dev
-$ git submodule update --init
+$ git clone --recursive https://github.com/DLR-TS/ics-transaid
+$ cd ics-transaid
 
 or if you already have a checkout
 
-$ cd transaid
+$ cd ics-transaid
 $ git pull
-$ git checkout transaid-dev
 $ git submodule update
 
 The "original" repository containing the master branch for iTetris is located at https://gitlab.eurecom.fr/iTETRIS/iTETRIS-release
+The development repository was at https://gitlab.imet.gr/hit/transaid
 
 --------------------------------
 Step 3 - (Re-)Build everything

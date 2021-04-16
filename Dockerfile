@@ -1,5 +1,5 @@
 # to build this image run the following command
-# $ docker build -t transaid --build-arg CREDS=<gitlab_user>:<gitlab_pass> - < Dockerfile
+# $ docker build -t transaid - < Dockerfile
 # to use it run (GUI applications won't work)
 # $ docker run -it transaid bash
 # now you have a bash inside a docker container and can for instance run
@@ -17,5 +17,5 @@ RUN apt-get -y update
 RUN apt-get -y install psmisc vim git cmake autoconf automake libtool libxerces-c-dev libfox-1.6-dev libgl1-mesa-dev libglu1-mesa-dev libgdal-dev libproj-dev libgeographic-dev python-pip
 RUN pip install texttest
 
-RUN git clone --recursive https://$CREDS@gitlab.imet.gr/hit/transaid
-RUN cd transaid; git checkout transaid-dev; git submodule update --init; ./build_all.sh
+RUN git clone --recursive https://github.com/DLR-TS/ics-transaid transaid
+RUN cd transaid; ./build_all.sh
