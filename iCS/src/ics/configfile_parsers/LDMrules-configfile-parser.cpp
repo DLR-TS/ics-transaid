@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    LDMrules-configfile-parser.cpp
 /// @author  Pasquale Cataldi (EURECOM)
@@ -260,19 +277,22 @@ throw(std::runtime_error) {
 
     struct stat fileStatus;
 
-    if (stat(configFile.c_str(), &fileStatus)<0) {
-        if (errno == ENOENT)
-            throw(std::runtime_error("Could not find ldm configuration file '" + configFile + "'."));
-        else if (errno == ENOTDIR)
-            throw(std::runtime_error("A component of the path is not a directory."));
+    if (stat(configFile.c_str(), &fileStatus) < 0) {
+        if (errno == ENOENT) {
+            throw (std::runtime_error("Could not find ldm configuration file '" + configFile + "'."));
+        } else if (errno == ENOTDIR) {
+            throw (std::runtime_error("A component of the path is not a directory."));
+        }
 #ifndef _MSC_VER
-        else if (errno == ELOOP)
-            throw(std::runtime_error("Too many symbolic links encountered while traversing the path."));
+        else if (errno == ELOOP) {
+            throw (std::runtime_error("Too many symbolic links encountered while traversing the path."));
+        }
 #endif
-        else if (errno == EACCES)
-            throw(std::runtime_error("Permission denied."));
-        else if (errno == ENAMETOOLONG)
-            throw(std::runtime_error("File can not be read\n"));
+        else if (errno == EACCES) {
+            throw (std::runtime_error("Permission denied."));
+        } else if (errno == ENAMETOOLONG) {
+            throw (std::runtime_error("File can not be read\n"));
+        }
     }
 
     // Configure DOM parser.
@@ -291,7 +311,9 @@ throw(std::runtime_error) {
         // Get the top-level element: Name is "root". No attributes for "root"
 
         DOMElement* elementRoot = xmlDoc->getDocumentElement();
-        if (!elementRoot) throw(std::runtime_error("empty XML document"));
+        if (!elementRoot) {
+            throw (std::runtime_error("empty XML document"));
+        }
 
         // Initialize useful variables
         DOMNodeList* def;
@@ -348,7 +370,7 @@ throw(std::runtime_error) {
                         if (_element->hasAttribute(ATTR_centerLat) &&
                                 _element->hasAttribute(ATTR_centerLon)) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_centerLat);
-                            char * tmp_stringLat_ch = XMLString::transcode(xmlch_string);
+                            char* tmp_stringLat_ch = XMLString::transcode(xmlch_string);
                             newCircle.m_center.m_Lat = StringUtils::toDouble(tmp_stringLat_ch);
                             XMLString::release(&tmp_stringLat_ch);
                             xmlch_string = _element->getAttribute(ATTR_centerLon);
@@ -366,7 +388,9 @@ throw(std::runtime_error) {
                             char* tmp_stringRadius_ch = XMLString::transcode(xmlch_stringRadius);
                             newCircle.m_radius = StringUtils::toDouble(tmp_stringRadius_ch);
                             XMLString::release(&tmp_stringRadius_ch);
-                        } else newCircle.m_radius = NAN;
+                        } else {
+                            newCircle.m_radius = NAN;
+                        }
 
                         m_relevantCircles.push_back(newCircle);
                     }
@@ -470,28 +494,36 @@ throw(std::runtime_error) {
                             char* tmp_stringEcc_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_eccentricity = StringUtils::toDouble(tmp_stringEcc_ch);
                             XMLString::release(&tmp_stringEcc_ch);
-                        } else newEllipse.m_eccentricity = NAN;
+                        } else {
+                            newEllipse.m_eccentricity = NAN;
+                        }
 
                         if (_element->hasAttribute(ATTR_minorAxis)) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_minorAxis);
                             char* tmp_stringMinor_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_minorAxis = StringUtils::toDouble(tmp_stringMinor_ch);
                             XMLString::release(&tmp_stringMinor_ch);
-                        } else newEllipse.m_minorAxis = NAN;
+                        } else {
+                            newEllipse.m_minorAxis = NAN;
+                        }
 
                         if (_element->hasAttribute(ATTR_majorAxis)) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_majorAxis);
                             char* tmp_stringMajor_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_majorAxis = StringUtils::toDouble(tmp_stringMajor_ch);
                             XMLString::release(&tmp_stringMajor_ch);
-                        } else newEllipse.m_majorAxis = NAN;
+                        } else {
+                            newEllipse.m_majorAxis = NAN;
+                        }
 
                         if (_element->hasAttribute(ATTR_rotationAngleRadians)) {
                             const XMLCh* xmlch_string = _element->getAttribute(ATTR_rotationAngleRadians);
                             char* tmp_stringAngle_ch = XMLString::transcode(xmlch_string);
                             newEllipse.m_rotationAngleRadians = StringUtils::toDouble(tmp_stringAngle_ch);
                             XMLString::release(&tmp_stringAngle_ch);
-                        } else newEllipse.m_rotationAngleRadians = NAN;
+                        } else {
+                            newEllipse.m_rotationAngleRadians = NAN;
+                        }
 
                         m_relevantEllipses.push_back(newEllipse);
                     }
@@ -716,7 +748,9 @@ throw(std::runtime_error) {
                             char* tmp_stringHeight_ch = XMLString::transcode(xmlch_string);
                             newRectangle.m_height = StringUtils::toDouble(tmp_stringHeight_ch);
                             XMLString::release(&tmp_stringHeight_ch);
-                        } else newRectangle.m_height = NAN;
+                        } else {
+                            newRectangle.m_height = NAN;
+                        }
 
                         m_relevantRectangles.push_back(newRectangle);
                     }
@@ -818,8 +852,9 @@ throw(std::runtime_error) {
                 m_relevantDirection.m_accuracy = StringUtils::toDouble(tmp_stringAccuracy_ch);
                 XMLString::release(&tmp_stringAccuracy_ch);
             }
-        } else
+        } else {
             m_relevantDirection.m_defined = false;
+        }
 
         // read relevantStationTypes, if defined
         def = elementRoot->getElementsByTagName(TAG_relevantStationTypes);

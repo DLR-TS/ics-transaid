@@ -1,34 +1,20 @@
-/****************************************************************************************
- * Copyright (c) 2015 The Regents of the University of Bologna.
- * This code has been developed in the context of the
- * FP7 ICT COLOMBO project under the Framework Programme,
- * FP7-ICT-2011-8, grant agreement no. 318622.
- * All rights reserved.
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
- * 1. Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software must display
- * the following acknowledgement: ''This product includes software developed by the
- * University of Bologna and its contributors''.
- * 4. Neither the name of the University nor the names of its contributors may be used to
- * endorse or promote products derived from this software without specific prior written
- * permission.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
  *
- * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ''AS IS'' AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
- * THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
- * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
- * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- ***************************************************************************************/
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************************
  * Author Federico Caselli <f.caselli@unibo.it>
  * University of Bologna
@@ -43,110 +29,96 @@
 #include "structs.h"
 #include "vector.h"
 
-namespace tinyxml2
-{
+namespace tinyxml2 {
 class XMLElement;
 }
 
-namespace baseapp
-{
+namespace baseapp {
 
-enum
-{
-  LOG_FILE = 0, DATA_FILE = 2, NS_LOG_FILE = 1
+enum {
+    LOG_FILE = 0, DATA_FILE = 2, NS_LOG_FILE = 1
 } typedef LogType;
 
 
-struct TLLane
-{
-  double dir;
-  std::string controlledLane;
-  std::string followingLane;
-  std::string friendlyName;
+struct TLLane {
+    double dir;
+    std::string controlledLane;
+    std::string followingLane;
+    std::string friendlyName;
 };
 
-struct Direction
-{
-  Direction()
-  {
-    leaving = false;
-    approaching = true;
-    direction = INVALID_DIRECTION;
-    approachingTime = leavingTime = 0;
-  }
-  double direction;
-  bool approaching;
-  bool leaving;
-  uint16_t approachingTime;
-  uint16_t leavingTime;
+struct Direction {
+    Direction() {
+        leaving = false;
+        approaching = true;
+        direction = INVALID_DIRECTION;
+        approachingTime = leavingTime = 0;
+    }
+    double direction;
+    bool approaching;
+    bool leaving;
+    uint16_t approachingTime;
+    uint16_t leavingTime;
 };
 
-struct RsuData
-{
-  int id;
-  application::Vector2D position;
-  std::vector<Direction> directions;
-  std::vector<TLLane> lanes;
-  Circle cam_area;
-  Circle car_area;
-}typedef RsuData;
+struct RsuData {
+    int id;
+    application::Vector2D position;
+    std::vector<Direction> directions;
+    std::vector<TLLane> lanes;
+    Circle cam_area;
+    Circle car_area;
+} typedef RsuData;
 
 
-class ProgramConfiguration
-{
+class ProgramConfiguration {
 public:
-  static int LoadConfiguration(const char* fileName, int port);
+    static int LoadConfiguration(const char* fileName, int port);
 
-  static int GetStartTime()
-  {
-    return m_instance->m_start;
-  }
-  static int GetSocketPort()
-  {
-    return m_instance->m_socket;
-  }
-  static void SetSocketPort(int port)
-  {
-    m_instance->m_socket = port;
-  }
-  static unsigned GetMessageLifetime()
-  {
-    return m_instance->m_messageLifetime;
-  }
-  static unsigned GetSumoTotalDemandLevel()
-  {
-    return m_instance->m_sumoTotalDemandLevel;
-  }
+    static int GetStartTime() {
+        return m_instance->m_start;
+    }
+    static int GetSocketPort() {
+        return m_instance->m_socket;
+    }
+    static void SetSocketPort(int port) {
+        m_instance->m_socket = port;
+    }
+    static unsigned GetMessageLifetime() {
+        return m_instance->m_messageLifetime;
+    }
+    static unsigned GetSumoTotalDemandLevel() {
+        return m_instance->m_sumoTotalDemandLevel;
+    }
 
-  static const std::string& GetTestCase()
-  {
-    return m_instance->m_testCase;
-  }
+    static const std::string& GetTestCase() {
+        return m_instance->m_testCase;
+    }
 
-  static bool GetLogFileName(LogType type, std::string & fileName);
-  static bool IsRsu(const int id);
-  static const RsuData & GetRsuData(const int id);
-  
-  // constructor and destructor should be protected as far as I am concerned but gcc thinks differently
-  ProgramConfiguration();
-  virtual ~ProgramConfiguration();
+    static bool GetLogFileName(LogType type, std::string& fileName);
+    static bool IsRsu(const int id);
+    static const RsuData& GetRsuData(const int id);
+
+    // constructor and destructor should be protected as far as I am concerned but gcc thinks differently
+    ProgramConfiguration();
+    virtual ~ProgramConfiguration();
 protected:
-  int ParseGeneral(tinyxml2::XMLElement * general);
-  int ParseInfrastructure(tinyxml2::XMLElement * infrastructure);
-  int ParseSetup(tinyxml2::XMLElement * setup);
-  int ParseOutput(tinyxml2::XMLElement * output);
-  int ParseNodeSampler(tinyxml2::XMLElement * nodeSampler);
-  void ParseLog(const tinyxml2::XMLElement * element,const LogType type);
-  static std::unique_ptr<ProgramConfiguration> m_instance;
+    int ParseGeneral(tinyxml2::XMLElement* general);
+    int ParseInfrastructure(tinyxml2::XMLElement* infrastructure);
+    int ParseSetup(tinyxml2::XMLElement* setup);
+    int ParseOutput(tinyxml2::XMLElement* output);
+    int ParseNodeSampler(tinyxml2::XMLElement* nodeSampler);
+    void ParseLog(const tinyxml2::XMLElement* element, const LogType type);
+    static std::unique_ptr<ProgramConfiguration> m_instance;
 
 private:
-  int m_start;
-  int m_socket;
-  unsigned m_messageLifetime;
-  unsigned m_sumoTotalDemandLevel;
-  std::string m_testCase;
-  std::map<int, RsuData> m_rsus;
-  std::map<LogType, std::string> m_logs;
+    int m_start;
+    int m_socket;
+    unsigned m_messageLifetime;
+    unsigned m_sumoTotalDemandLevel;
+    std::string m_testCase;
+    std::map<int, RsuData> m_rsus;
+    std::map<LogType, std::string> m_logs;
 };
 
 } /* namespace protocol */

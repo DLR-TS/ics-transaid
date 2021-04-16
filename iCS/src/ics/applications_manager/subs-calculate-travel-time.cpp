@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    subs-calculate-travel-time.cpp
 /// @author  Julen Maneros
@@ -33,14 +50,12 @@
 using namespace std;
 using namespace ics_types;
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // member method definitions
 // ===========================================================================
-SubsCalculateTravelTime::SubsCalculateTravelTime(int appId, stationID_t stationId) : Subscription(stationId)
-{
+SubsCalculateTravelTime::SubsCalculateTravelTime(int appId, stationID_t stationId) : Subscription(stationId) {
     m_id = ++m_subscriptionCounter;
     m_name = "CALCULATE TRAVEL TIME FLAGS";
     m_appId = appId;
@@ -54,24 +69,21 @@ SubsCalculateTravelTime::SubsCalculateTravelTime(int appId, stationID_t stationI
 SubsCalculateTravelTime::~SubsCalculateTravelTime() {}
 
 void
-SubsCalculateTravelTime::Start(stationID_t stationId)
-{
+SubsCalculateTravelTime::Start(stationID_t stationId) {
     m_startCommandReceived = true;
     m_startingStationId = stationId;
 }
 
 void
-SubsCalculateTravelTime::Stop(stationID_t stationId)
-{
+SubsCalculateTravelTime::Stop(stationID_t stationId) {
     m_stopCommandReceived = true;
     m_endingStationId = stationId;
 }
 
 int
-SubsCalculateTravelTime::InformApp(AppMessageManager* messageManager)
-{
+SubsCalculateTravelTime::InformApp(AppMessageManager* messageManager) {
     if (!m_startCommandReceived && !m_stopCommandReceived) {
-        IcsLog::LogLevel("InformApp() No information about SubsCalculateTravelTime will be sent to app.",kLogLevelInfo);
+        IcsLog::LogLevel("InformApp() No information about SubsCalculateTravelTime will be sent to app.", kLogLevelInfo);
     }
 
     // The vehicle go through the starting TTE RSU
@@ -101,8 +113,7 @@ SubsCalculateTravelTime::InformApp(AppMessageManager* messageManager)
 
 
 int
-SubsCalculateTravelTime::ProcessReceivedGeobroadcastMessage(ScheduledGeobroadcastMessageData message, SyncManager* syncManager)
-{
+SubsCalculateTravelTime::ProcessReceivedGeobroadcastMessage(ScheduledGeobroadcastMessageData message, SyncManager* syncManager) {
     if (syncManager == NULL) {
 #ifdef LOG_ON
         IcsLog::LogLevel("ProcessReceivedGeobroadcastMessage() SyncManager is NULL", kLogLevelError);
@@ -123,7 +134,7 @@ SubsCalculateTravelTime::ProcessReceivedGeobroadcastMessage(ScheduledGeobroadcas
         return EXIT_FAILURE;
     }
     for (vector<Subscription*>::iterator it = senderNode->m_subscriptionCollection->begin() ; it != senderNode->m_subscriptionCollection->end() ; ++it) {
-        Subscription *sub = (*it);
+        Subscription* sub = (*it);
         Subscription& reference = *sub;
         const type_info& typeinfo = typeid(reference);
 
@@ -145,8 +156,7 @@ SubsCalculateTravelTime::ProcessReceivedGeobroadcastMessage(ScheduledGeobroadcas
 }
 
 int
-SubsCalculateTravelTime::ProcessReceivedUnicastMessage(ScheduledUnicastMessageData message)
-{
+SubsCalculateTravelTime::ProcessReceivedUnicastMessage(ScheduledUnicastMessageData message) {
 #ifdef LOG_ON
     IcsLog::LogLevel("ProcessReceivedUnicastMessage() SubsCalculateTravelTime not based on Unicasting", kLogLevelWarning);
 #endif

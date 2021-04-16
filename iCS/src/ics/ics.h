@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    ics.h
 /// @author  Julen Maneros
@@ -38,8 +55,7 @@
  * @brief iCS main namespace.
  * Namespace fo the iCS core source code.
  */
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // class declarations
@@ -53,8 +69,7 @@ class SyncManager;
  * @class ICS
  * @brief Configures, executes and closes the iCS
  */
-class ICS
-{
+class ICS {
 public:
 
     /**
@@ -117,7 +132,7 @@ private:
     int SetupApplications(std::string filePath);
 
     /// @brief Member of the iCS related to synchronizing issues.
-    SyncManager *m_syncManager;
+    SyncManager* m_syncManager;
 
     /// @brief Whether the loop shall run in interactive mode.
     bool m_Interactive;

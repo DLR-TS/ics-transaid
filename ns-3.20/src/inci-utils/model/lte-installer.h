@@ -1,6 +1,23 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
- * Copyright (c) 
+ * Copyright (c)
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
  * published by the Free Software Foundation;
@@ -33,49 +50,47 @@
 //jin add
 #include "ns3/point-to-point-epc-helper.h"
 
-namespace ns3
-{
+namespace ns3 {
 
-class LteInstaller : public CommModuleInstaller
-{
-  public:
-    static TypeId GetTypeId (void);
+class LteInstaller : public CommModuleInstaller {
+public:
+    static TypeId GetTypeId(void);
     LteInstaller(void);
-    void Install (NodeContainer container); 
-    void Configure (std::string filename);
+    void Install(NodeContainer container);
+    void Configure(std::string filename);
     void AssignIpAddress(NetDeviceContainer devices);
-    void ProcessApplicationInstall (xmlTextReaderPtr reader);
+    void ProcessApplicationInstall(xmlTextReaderPtr reader);
     ~LteInstaller();
 
-    static Ptr<LteHelper> lteHelper; 
-   //Jin modified this
+    static Ptr<LteHelper> lteHelper;
+    //Jin modified this
     static Ptr<PointToPointEpcHelper> epcHelper;
-    //static Ptr<EpcHelper> epcHelper; 
-  
+    //static Ptr<EpcHelper> epcHelper;
+
     static NodeContainer enbNodeContainer;
     static NetDeviceContainer enbDeviceContainer;
 
-    std::string m_nodeType; 
+    std::string m_nodeType;
 
     LTEAppHelper* m_lteAppHelper;
     static Ipv4AddressHelper m_ipAddressHelper;
     ServiceListHelper* m_servListHelper;
     Ipv4StaticRoutingHelper  ipv4RoutingHelper;
 
-    virtual void DoInstall (NodeContainer container, NetDeviceContainer createdDevices) = 0;
-    void AddVehicles(NodeContainer container,NetDeviceContainer netDevices);     
-    void AddInterfacesToIpInterfaceList (NodeContainer container);
+    virtual void DoInstall(NodeContainer container, NetDeviceContainer createdDevices) = 0;
+    void AddVehicles(NodeContainer container, NetDeviceContainer netDevices);
+    void AddInterfacesToIpInterfaceList(NodeContainer container);
 
 //jin : add this part as inherited from EpcHelper
-/*
-     virtual void AddEnb (Ptr<Node> enbNode, Ptr<NetDevice> lteEnbNetDevice, uint16_t cellId);
-      virtual void AddUe (Ptr<NetDevice> ueLteDevice, uint64_t imsi);
-      virtual void AddX2Interface (Ptr<Node> enbNode1, Ptr<Node> enbNode2);
-      virtual uint8_t ActivateEpsBearer (Ptr<NetDevice> ueLteDevice, uint64_t imsi, Ptr<EpcTft> tft, EpsBearer bearer);
-      virtual Ptr<Node> GetPgwNode ();
-      virtual Ipv4InterfaceContainer AssignUeIpv4Address (NetDeviceContainer ueDevices);
-      virtual Ipv4Address GetUeDefaultGatewayAddress (); 
-*/
+    /*
+         virtual void AddEnb (Ptr<Node> enbNode, Ptr<NetDevice> lteEnbNetDevice, uint16_t cellId);
+          virtual void AddUe (Ptr<NetDevice> ueLteDevice, uint64_t imsi);
+          virtual void AddX2Interface (Ptr<Node> enbNode1, Ptr<Node> enbNode2);
+          virtual uint8_t ActivateEpsBearer (Ptr<NetDevice> ueLteDevice, uint64_t imsi, Ptr<EpcTft> tft, EpsBearer bearer);
+          virtual Ptr<Node> GetPgwNode ();
+          virtual Ipv4InterfaceContainer AssignUeIpv4Address (NetDeviceContainer ueDevices);
+          virtual Ipv4Address GetUeDefaultGatewayAddress ();
+    */
 };
 
 }

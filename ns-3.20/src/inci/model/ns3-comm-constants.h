@@ -1,8 +1,25 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2009-2010, EU FP7 iTETRIS project
  *                          CBT
- *                          Uwicore Laboratory (www.uwicore.umh.es), University Miguel Hernandez 
+ *                          Uwicore Laboratory (www.uwicore.umh.es), University Miguel Hernandez
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
@@ -17,7 +34,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * Author: Julen Maneros <jmaneros@cbt.es>, Ramon Bauza <rbauza@umh.es>, 
+ * Author: Julen Maneros <jmaneros@cbt.es>, Ramon Bauza <rbauza@umh.es>,
  */
 /****************************************************************************************
  * Edited by Federico Caselli <f.caselli@unibo.it>
@@ -60,8 +77,8 @@
 #define CMD_START_ID_BASED_TXON 0x0A
 
 // command: activate a transmision based on the destination node ID. This txon mode
-// can be used to active a unicast, broadcast or multicast transmision in a IP-based 
-// base station or CIU (e.g. UMTS base stations, WiMAX base station, etc.)   
+// can be used to active a unicast, broadcast or multicast transmision in a IP-based
+// base station or CIU (e.g. UMTS base stations, WiMAX base station, etc.)
 #define CMD_START_IPCIU_TXON 0x0B
 
 // command: deactivate the txon of a service running in a vehicle or a RSU.
@@ -74,18 +91,18 @@
 // JHNote: this command has been specified on the iCS side but not implemented on ns3...added here to avoid using values already reserved
 //#define CMD_GET_RECEIVED_MESSAGES2 0x0E
 
-// command: activate a geobroadcast txon in a WAVE vehicle or RSU. The geodestination area is a circle defined 
+// command: activate a geobroadcast txon in a WAVE vehicle or RSU. The geodestination area is a circle defined
 // by its radius (Lat and Lon coordinates) and center point (meters).
 #define CMD_START_GEO_BROAD_TXON 0x0F
 
-// command: activate a geoanycast txon in a WAVE vehicle or RSU. The geodestination area is a circle defined 
+// command: activate a geoanycast txon in a WAVE vehicle or RSU. The geodestination area is a circle defined
 //by its radius (Lat and Lon coordinates) and center point (meters).
 #define CMD_START_GEO_ANY_TXON 0x10
 
-// command: activate a node and all its communication modules, e.g. PHY layer 
+// command: activate a node and all its communication modules, e.g. PHY layer
 #define CMD_ACTIVATE_NODE 0x11
 
-// command: deactivate a node and all its communication modules, e.g. PHY layer 
+// command: deactivate a node and all its communication modules, e.g. PHY layer
 #define CMD_DEACTIVATE_NODE 0x12
 
 // command: create a new node (vehicle or CIU) specifying its initial position, speed, heading and laneId

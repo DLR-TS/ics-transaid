@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    itetris-node.h
 /// @author  Julen Maneros
@@ -34,8 +51,7 @@
 #include "utilities.h"
 #include "../utils/ics/iCStypes.h"
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // class declarations
@@ -54,8 +70,7 @@ class FacilitiesManager;
  * @class ITetrisNode
  * @brief Manages information relative to a node involved in the simulation
 */
-class ITetrisNode
-{
+class ITetrisNode {
 public:
 
     /// @brief Constructor
@@ -92,7 +107,7 @@ public:
     std::vector<V2xMessage*>* m_lastTimeStepReceivedMessages;
 
     /// @brief The node has been created on this step
-	bool m_newNode;
+    bool m_newNode;
 
     /**
     * @brief Get the x position of the node from the facilities.

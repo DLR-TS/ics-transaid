@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 //
 // Copyright (c) 2006 Georgia Tech Research Corporation
@@ -55,34 +72,33 @@ class RandomVariableBase;
  * generator is seeded all the time with the same seed value and run number
  * coming from the ns3::GlobalValue \ref GlobalValueRngSeed "RngSeed" and \ref GlobalValueRngRun "RngRun".
  */
-class RandomVariable
-{
+class RandomVariable {
 public:
-  RandomVariable ();
-  RandomVariable (const RandomVariable&o);
-  RandomVariable &operator = (const RandomVariable &o);
-  ~RandomVariable ();
+    RandomVariable();
+    RandomVariable(const RandomVariable& o);
+    RandomVariable& operator = (const RandomVariable& o);
+    ~RandomVariable();
 
-  /**
-   * \brief Returns a random double from the underlying distribution
-   * \return A floating point random value
-   */
-  double GetValue (void) const;
+    /**
+     * \brief Returns a random double from the underlying distribution
+     * \return A floating point random value
+     */
+    double GetValue(void) const;
 
-  /**
-   * \brief Returns a random integer integer from the underlying distribution
-   * \return  Integer cast of RandomVariable::GetValue
-   */
-  uint32_t GetInteger (void) const;
+    /**
+     * \brief Returns a random integer integer from the underlying distribution
+     * \return  Integer cast of RandomVariable::GetValue
+     */
+    uint32_t GetInteger(void) const;
 
 private:
-  friend std::ostream & operator << (std::ostream &os, const RandomVariable &var);
-  friend std::istream & operator >> (std::istream &os, RandomVariable &var);
+    friend std::ostream& operator << (std::ostream& os, const RandomVariable& var);
+    friend std::istream& operator >> (std::istream& os, RandomVariable& var);
 
-  RandomVariableBase *m_variable;
+    RandomVariableBase* m_variable;
 protected:
-  RandomVariable (const RandomVariableBase &variable);
-  RandomVariableBase * Peek (void) const;
+    RandomVariable(const RandomVariableBase& variable);
+    RandomVariableBase* Peek(void) const;
 };
 
 /**
@@ -100,48 +116,47 @@ protected:
  * x.GetValue ();  //will always return numbers [0,10)
  * \endcode
  */
-class UniformVariable : public RandomVariable
-{
+class UniformVariable : public RandomVariable {
 public:
-  /**
-   * Creates a uniform random number generator in the
-   * range [0.0 .. 1.0).
-   */
-  UniformVariable ();
+    /**
+     * Creates a uniform random number generator in the
+     * range [0.0 .. 1.0).
+     */
+    UniformVariable();
 
-  /**
-   * Creates a uniform random number generator with the specified range
-   * \param s Low end of the range
-   * \param l High end of the range
-   */
-  UniformVariable (double s, double l);
+    /**
+     * Creates a uniform random number generator with the specified range
+     * \param s Low end of the range
+     * \param l High end of the range
+     */
+    UniformVariable(double s, double l);
 
-  /**
-  * \brief call RandomVariable::GetValue
-  * \return A floating point random value
-  *
-  * Note: we have to re-implement this method here because the method is
-  * overloaded below for the two-argument variant and the c++ name resolution
-  * rules don't work well with overloads split between parent and child
-  * classes.
-  */
-  double GetValue (void) const;
+    /**
+    * \brief call RandomVariable::GetValue
+    * \return A floating point random value
+    *
+    * Note: we have to re-implement this method here because the method is
+    * overloaded below for the two-argument variant and the c++ name resolution
+    * rules don't work well with overloads split between parent and child
+    * classes.
+    */
+    double GetValue(void) const;
 
-  /**
-  * \brief Returns a random double with the specified range
-  * \param s Low end of the range
-  * \param l High end of the range
-  * \return A floating point random value
-  */
-  double GetValue (double s, double l);
+    /**
+    * \brief Returns a random double with the specified range
+    * \param s Low end of the range
+    * \param l High end of the range
+    * \return A floating point random value
+    */
+    double GetValue(double s, double l);
 
-  /**
-   * \brief Returns a random unsigned integer from the interval [s,l] including both ends.
-   * \param s Low end of the range
-   * \param l High end of the range
-   * \return A random unsigned integer value.
-   */
-  uint32_t GetInteger (uint32_t s, uint32_t l);
+    /**
+     * \brief Returns a random unsigned integer from the interval [s,l] including both ends.
+     * \param s Low end of the range
+     * \param l High end of the range
+     * \return A random unsigned integer value.
+     */
+    uint32_t GetInteger(uint32_t s, uint32_t l);
 };
 
 /**
@@ -151,27 +166,26 @@ public:
  * Class ConstantVariable defines a random number generator that
  * returns the same value every sample.
  */
-class ConstantVariable : public RandomVariable
-{
+class ConstantVariable : public RandomVariable {
 
 public:
-  /**
-   * Construct a ConstantVariable RNG that returns zero every sample
-   */
-  ConstantVariable ();
+    /**
+     * Construct a ConstantVariable RNG that returns zero every sample
+     */
+    ConstantVariable();
 
-  /**
-   * Construct a ConstantVariable RNG that returns the specified value
-   * every sample.
-   * \param c Unchanging value for this RNG.
-   */
-  ConstantVariable (double c);
+    /**
+     * Construct a ConstantVariable RNG that returns the specified value
+     * every sample.
+     * \param c Unchanging value for this RNG.
+     */
+    ConstantVariable(double c);
 
-  /**
-   * \brief Specify a new constant RNG for this generator.
-   * \param c New constant value for this RNG.
-   */
-  void SetConstant (double c);
+    /**
+     * \brief Specify a new constant RNG for this generator.
+     * \param c New constant value for this RNG.
+     */
+    void SetConstant(double c);
 
 };
 
@@ -184,33 +198,32 @@ public:
  * increases for a period, then wraps around to the low value
  * and begins monotonically increasing again.
  */
-class SequentialVariable : public RandomVariable
-{
+class SequentialVariable : public RandomVariable {
 public:
-  /**
-   * \brief Constructor for the SequentialVariable RNG.
-   *
-   * The four parameters define the sequence.  For example
-   * SequentialVariable(0,5,1,2) creates a RNG that has the sequence
-   * 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 0, 0 ...
-   * \param f First value of the sequence.
-   * \param l One more than the last value of the sequence.
-   * \param i Increment between sequence values
-   * \param c Number of times each member of the sequence is repeated
-   */
-  SequentialVariable (double f, double l, double i = 1, uint32_t c = 1);
+    /**
+     * \brief Constructor for the SequentialVariable RNG.
+     *
+     * The four parameters define the sequence.  For example
+     * SequentialVariable(0,5,1,2) creates a RNG that has the sequence
+     * 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 0, 0 ...
+     * \param f First value of the sequence.
+     * \param l One more than the last value of the sequence.
+     * \param i Increment between sequence values
+     * \param c Number of times each member of the sequence is repeated
+     */
+    SequentialVariable(double f, double l, double i = 1, uint32_t c = 1);
 
-  /**
-   * \brief Constructor for the SequentialVariable RNG.
-   *
-   * Differs from the first only in that the increment parameter is a
-   * random variable
-   * \param f First value of the sequence.
-   * \param l One more than the last value of the sequence.
-   * \param i Reference to a RandomVariable for the sequence increment
-   * \param c Number of times each member of the sequence is repeated
-   */
-  SequentialVariable (double f, double l, const RandomVariable& i, uint32_t c = 1);
+    /**
+     * \brief Constructor for the SequentialVariable RNG.
+     *
+     * Differs from the first only in that the increment parameter is a
+     * random variable
+     * \param f First value of the sequence.
+     * \param l One more than the last value of the sequence.
+     * \param i Reference to a RandomVariable for the sequence increment
+     * \param c Number of times each member of the sequence is repeated
+     */
+    SequentialVariable(double f, double l, const RandomVariable& i, uint32_t c = 1);
 
 };
 
@@ -237,33 +250,32 @@ public:
  * \endcode
  *
  */
-class ExponentialVariable : public RandomVariable
-{
+class ExponentialVariable : public RandomVariable {
 public:
-  /**
-   * Constructs an exponential random variable  with a mean
-   * value of 1.0.
-   */
-  ExponentialVariable ();
+    /**
+     * Constructs an exponential random variable  with a mean
+     * value of 1.0.
+     */
+    ExponentialVariable();
 
-  /**
-   * \brief Constructs an exponential random variable with a specified mean
-   * \param m Mean value for the random variable
-   */
-  explicit ExponentialVariable (double m);
+    /**
+     * \brief Constructs an exponential random variable with a specified mean
+     * \param m Mean value for the random variable
+     */
+    explicit ExponentialVariable(double m);
 
-  /**
-   * \brief Constructs an exponential random variable with specified
-   * mean and upper limit.
-   *
-   * Since exponential distributions can theoretically return unbounded values,
-   * it is sometimes useful to specify a fixed upper limit.  Note however when
-   * the upper limit is specified, the true mean of the distribution is
-   * slightly smaller than the mean value specified: \f$ m - b/(e^{b/m}-1) \f$.
-   * \param m Mean value of the random variable
-   * \param b Upper bound on returned values
-   */
-  ExponentialVariable (double m, double b);
+    /**
+     * \brief Constructs an exponential random variable with specified
+     * mean and upper limit.
+     *
+     * Since exponential distributions can theoretically return unbounded values,
+     * it is sometimes useful to specify a fixed upper limit.  Note however when
+     * the upper limit is specified, the true mean of the distribution is
+     * slightly smaller than the mean value specified: \f$ m - b/(e^{b/m}-1) \f$.
+     * \param m Mean value of the random variable
+     * \param b Upper bound on returned values
+     */
+    ExponentialVariable(double m, double b);
 
 };
 
@@ -287,67 +299,66 @@ public:
  * x.GetValue ();  //will always return with mean 3.14
  * \endcode
  */
-class ParetoVariable : public RandomVariable
-{
+class ParetoVariable : public RandomVariable {
 public:
-  /**
-   * \brief Constructs a pareto random variable with a mean of 1 and a shape
-   * parameter of 1.5
-   */
-  ParetoVariable ();
+    /**
+     * \brief Constructs a pareto random variable with a mean of 1 and a shape
+     * parameter of 1.5
+     */
+    ParetoVariable();
 
-  /**
-   * \brief Constructs a pareto random variable with specified mean and shape
-   * parameter of 1.5
-   *
-   * \param m Mean value of the distribution
-   */
-  explicit ParetoVariable (double m);
+    /**
+     * \brief Constructs a pareto random variable with specified mean and shape
+     * parameter of 1.5
+     *
+     * \param m Mean value of the distribution
+     */
+    explicit ParetoVariable(double m);
 
-  /**
-   * \brief Constructs a pareto random variable with the specified mean
-   * value and shape parameter. Beware, s must be strictly greater than 1.
-   *
-   * \param m Mean value of the distribution
-   * \param s Shape parameter for the distribution
-   */
-  ParetoVariable (double m, double s);
+    /**
+     * \brief Constructs a pareto random variable with the specified mean
+     * value and shape parameter. Beware, s must be strictly greater than 1.
+     *
+     * \param m Mean value of the distribution
+     * \param s Shape parameter for the distribution
+     */
+    ParetoVariable(double m, double s);
 
-  /**
-   * \brief Constructs a pareto random variable with the specified mean
-   * value, shape (alpha), and upper bound. Beware, s must be strictly greater than 1.
-   *
-   * Since pareto distributions can theoretically return unbounded values,
-   * it is sometimes useful to specify a fixed upper limit.  Note however
-   * when the upper limit is specified, the true mean of the distribution
-   * is slightly smaller than the mean value specified.
-   * \param m Mean value
-   * \param s Shape parameter
-   * \param b Upper limit on returned values
-   */
-  ParetoVariable (double m, double s, double b);
+    /**
+     * \brief Constructs a pareto random variable with the specified mean
+     * value, shape (alpha), and upper bound. Beware, s must be strictly greater than 1.
+     *
+     * Since pareto distributions can theoretically return unbounded values,
+     * it is sometimes useful to specify a fixed upper limit.  Note however
+     * when the upper limit is specified, the true mean of the distribution
+     * is slightly smaller than the mean value specified.
+     * \param m Mean value
+     * \param s Shape parameter
+     * \param b Upper limit on returned values
+     */
+    ParetoVariable(double m, double s, double b);
 
-  /**
-   * \brief Constructs a pareto random variable with the specified scale and shape
-   * parameters.
-   *
-   * \param params the two parameters, respectively scale and shape, of the distribution
-   */
-  ParetoVariable (std::pair<double, double> params);
+    /**
+     * \brief Constructs a pareto random variable with the specified scale and shape
+     * parameters.
+     *
+     * \param params the two parameters, respectively scale and shape, of the distribution
+     */
+    ParetoVariable(std::pair<double, double> params);
 
-  /**
-   * \brief Constructs a pareto random variable with the specified
-   * scale, shape (alpha), and upper bound.
-   *
-   * Since pareto distributions can theoretically return unbounded values,
-   * it is sometimes useful to specify a fixed upper limit.  Note however
-   * when the upper limit is specified, the true mean of the distribution
-   * is slightly smaller than the mean value specified.
-   *
-   * \param params the two parameters, respectively scale and shape, of the distribution
-   * \param b Upper limit on returned values
-   */
-  ParetoVariable (std::pair<double, double> params, double b);
+    /**
+     * \brief Constructs a pareto random variable with the specified
+     * scale, shape (alpha), and upper bound.
+     *
+     * Since pareto distributions can theoretically return unbounded values,
+     * it is sometimes useful to specify a fixed upper limit.  Note however
+     * when the upper limit is specified, the true mean of the distribution
+     * is slightly smaller than the mean value specified.
+     *
+     * \param params the two parameters, respectively scale and shape, of the distribution
+     * \param b Upper limit on returned values
+     */
+    ParetoVariable(std::pair<double, double> params, double b);
 
 };
 
@@ -365,43 +376,42 @@ public:
  * specified mean is related to the scale and shape parameters by the following relation:
  * \f$ mean = \lambda\Gamma\left(1+\frac{1}{k}\right) \f$ where \f$ \Gamma \f$ is the Gamma function.
  */
-class WeibullVariable : public RandomVariable
-{
+class WeibullVariable : public RandomVariable {
 public:
-  /**
-   * Constructs a weibull random variable  with a mean
-   * value of 1.0 and a shape (alpha) parameter of 1
-   */
-  WeibullVariable ();
+    /**
+     * Constructs a weibull random variable  with a mean
+     * value of 1.0 and a shape (alpha) parameter of 1
+     */
+    WeibullVariable();
 
 
-  /**
-   * Constructs a weibull random variable with the specified mean
-   * value and a shape (alpha) parameter of 1.5.
-   * \param m mean value of the distribution
-   */
-  WeibullVariable (double m);
+    /**
+     * Constructs a weibull random variable with the specified mean
+     * value and a shape (alpha) parameter of 1.5.
+     * \param m mean value of the distribution
+     */
+    WeibullVariable(double m);
 
-  /**
-   * Constructs a weibull random variable with the specified mean
-   * value and a shape (alpha).
-   * \param m Mean value for the distribution.
-   * \param s Shape (alpha) parameter for the distribution.
-   */
-  WeibullVariable (double m, double s);
+    /**
+     * Constructs a weibull random variable with the specified mean
+     * value and a shape (alpha).
+     * \param m Mean value for the distribution.
+     * \param s Shape (alpha) parameter for the distribution.
+     */
+    WeibullVariable(double m, double s);
 
-  /**
-  * \brief Constructs a weibull random variable with the specified mean
-  * \brief value, shape (alpha), and upper bound.
-  * Since WeibullVariable distributions can theoretically return unbounded values,
-  * it is sometimes usefull to specify a fixed upper limit.  Note however
-  * that when the upper limit is specified, the true mean of the distribution
-  * is slightly smaller than the mean value specified.
-  * \param m Mean value for the distribution.
-  * \param s Shape (alpha) parameter for the distribution.
-  * \param b Upper limit on returned values
-  */
-  WeibullVariable (double m, double s, double b);
+    /**
+    * \brief Constructs a weibull random variable with the specified mean
+    * \brief value, shape (alpha), and upper bound.
+    * Since WeibullVariable distributions can theoretically return unbounded values,
+    * it is sometimes usefull to specify a fixed upper limit.  Note however
+    * that when the upper limit is specified, the true mean of the distribution
+    * is slightly smaller than the mean value specified.
+    * \param m Mean value for the distribution.
+    * \param s Shape (alpha) parameter for the distribution.
+    * \param b Upper limit on returned values
+    */
+    WeibullVariable(double m, double s, double b);
 
 };
 
@@ -419,30 +429,29 @@ public:
  * where \f$ mean = \mu \f$ and \f$ variance = \sigma^2 \f$
  *
  */
-class NormalVariable : public RandomVariable
-{
+class NormalVariable : public RandomVariable {
 public:
-  /**
-   * Constructs an normal random variable  with a mean
-   * value of 0 and variance of 1.
-   */
-  NormalVariable ();
+    /**
+     * Constructs an normal random variable  with a mean
+     * value of 0 and variance of 1.
+     */
+    NormalVariable();
 
-  /**
-   * \brief Construct a normal random variable with specified mean and variance.
-   * \param m Mean value
-   * \param v Variance
-   */
-  NormalVariable (double m, double v);
+    /**
+     * \brief Construct a normal random variable with specified mean and variance.
+     * \param m Mean value
+     * \param v Variance
+     */
+    NormalVariable(double m, double v);
 
-  /**
-   * \brief Construct a normal random variable with specified mean and variance
-   * \param m Mean value
-   * \param v Variance
-   * \param b Bound.  The NormalVariable is bounded symmetrically about the mean
-   * [mean-bound,mean+bound]
-   */
-  NormalVariable (double m, double v, double b);
+    /**
+     * \brief Construct a normal random variable with specified mean and variance
+     * \param m Mean value
+     * \param v Variance
+     * \param b Bound.  The NormalVariable is bounded symmetrically about the mean
+     * [mean-bound,mean+bound]
+     */
+    NormalVariable(double m, double v, double b);
 };
 
 /**
@@ -460,22 +469,21 @@ public:
  * as inverse transform sampling:
  * (http://en.wikipedia.org/wiki/Inverse_transform_sampling).
  */
-class EmpiricalVariable : public RandomVariable
-{
+class EmpiricalVariable : public RandomVariable {
 public:
-  /**
-   * Constructor for the EmpiricalVariable random variables.
-   */
-  explicit EmpiricalVariable ();
+    /**
+     * Constructor for the EmpiricalVariable random variables.
+     */
+    explicit EmpiricalVariable();
 
-  /**
-   * \brief Specifies a point in the empirical distribution
-   * \param v The function value for this point
-   * \param c Probability that the function is less than or equal to v
-   */
-  void CDF (double v, double c);  // Value, prob <= Value
+    /**
+     * \brief Specifies a point in the empirical distribution
+     * \param v The function value for this point
+     * \param c Probability that the function is less than or equal to v
+     */
+    void CDF(double v, double c);   // Value, prob <= Value
 protected:
-  EmpiricalVariable (const RandomVariableBase &variable);
+    EmpiricalVariable(const RandomVariableBase& variable);
 };
 
 /**
@@ -487,10 +495,9 @@ protected:
  * sampling interpolation described in the EmpiricalVariable documentation
  * is modified to only return integers.
  */
-class IntEmpiricalVariable : public EmpiricalVariable
-{
+class IntEmpiricalVariable : public EmpiricalVariable {
 public:
-  IntEmpiricalVariable ();
+    IntEmpiricalVariable();
 };
 
 /**
@@ -502,21 +509,20 @@ public:
  * the RNG to return a known sequence, perhaps to
  * compare NS-3 to some other simulator
  */
-class DeterministicVariable : public RandomVariable
-{
+class DeterministicVariable : public RandomVariable {
 public:
-  /**
-   * \brief Constructor
-   *
-   * Creates a generator that returns successive elements of the d array
-   * on successive calls to RandomVariable::GetValue.  Note that the d pointer is copied
-   * for use by the generator (shallow-copy), not its contents, so the
-   * contents of the array d points to have to remain unchanged for the use
-   * of DeterministicVariable to be meaningful.
-   * \param d Pointer to array of random values to return in sequence
-   * \param c Number of values in the array
-   */
-  explicit DeterministicVariable (double* d, uint32_t c);
+    /**
+     * \brief Constructor
+     *
+     * Creates a generator that returns successive elements of the d array
+     * on successive calls to RandomVariable::GetValue.  Note that the d pointer is copied
+     * for use by the generator (shallow-copy), not its contents, so the
+     * contents of the array d points to have to remain unchanged for the use
+     * of DeterministicVariable to be meaningful.
+     * \param d Pointer to array of random values to return in sequence
+     * \param c Number of values in the array
+     */
+    explicit DeterministicVariable(double* d, uint32_t c);
 };
 
 /**
@@ -541,14 +547,13 @@ public:
  * \f$ \mu = ln(mean) - \frac{1}{2}ln\left(1+\frac{variance}{mean^2}\right)\f$, and,
  * \f$ \sigma = \sqrt{ln\left(1+\frac{variance}{mean^2}\right)}\f$
  */
-class LogNormalVariable : public RandomVariable
-{
+class LogNormalVariable : public RandomVariable {
 public:
-  /**
-   * \param mu mu parameter of the lognormal distribution
-   * \param sigma sigma parameter of the lognormal distribution
-   */
-  LogNormalVariable (double mu, double sigma);
+    /**
+     * \param mu mu parameter of the lognormal distribution
+     * \param sigma sigma parameter of the lognormal distribution
+     */
+    LogNormalVariable(double mu, double sigma);
 };
 
 /**
@@ -566,38 +571,37 @@ public:
  * where \f$ mean = \alpha\beta \f$ and
  * \f$ variance = \alpha \beta^2\f$
  */
-class GammaVariable : public RandomVariable
-{
+class GammaVariable : public RandomVariable {
 public:
-  /**
-   * Constructs a gamma random variable with alpha = 1.0 and beta = 1.0
-   */
-  GammaVariable ();
+    /**
+     * Constructs a gamma random variable with alpha = 1.0 and beta = 1.0
+     */
+    GammaVariable();
 
-  /**
-   * \param alpha alpha parameter of the gamma distribution
-   * \param beta beta parameter of the gamma distribution
-   */
-  GammaVariable (double alpha, double beta);
+    /**
+     * \param alpha alpha parameter of the gamma distribution
+     * \param beta beta parameter of the gamma distribution
+     */
+    GammaVariable(double alpha, double beta);
 
-  /**
-   * \brief call RandomVariable::GetValue
-   * \return A floating point random value
-   *
-   * Note: we have to re-implement this method here because the method is
-   * overloaded below for the two-argument variant and the c++ name resolution
-   * rules don't work well with overloads split between parent and child
-   * classes.
-   */
-  double GetValue (void) const;
+    /**
+     * \brief call RandomVariable::GetValue
+     * \return A floating point random value
+     *
+     * Note: we have to re-implement this method here because the method is
+     * overloaded below for the two-argument variant and the c++ name resolution
+     * rules don't work well with overloads split between parent and child
+     * classes.
+     */
+    double GetValue(void) const;
 
-  /**
-   * \brief Returns a gamma random distributed double with parameters alpha and beta.
-   * \param alpha alpha parameter of the gamma distribution
-   * \param beta beta parameter of the gamma distribution
-   * \return A floating point random value
-   */
-  double GetValue (double alpha, double beta) const;
+    /**
+     * \brief Returns a gamma random distributed double with parameters alpha and beta.
+     * \param alpha alpha parameter of the gamma distribution
+     * \param beta beta parameter of the gamma distribution
+     * \return A floating point random value
+     */
+    double GetValue(double alpha, double beta) const;
 };
 
 /**
@@ -619,38 +623,37 @@ public:
  * where \f$ mean = k \lambda \f$ and
  * \f$ variance = k \lambda^2\f$
  */
-class ErlangVariable : public RandomVariable
-{
+class ErlangVariable : public RandomVariable {
 public:
-  /**
-   * Constructs an Erlang random variable with k = 1 and lambda = 1.0
-   */
-  ErlangVariable ();
+    /**
+     * Constructs an Erlang random variable with k = 1 and lambda = 1.0
+     */
+    ErlangVariable();
 
-  /**
-   * \param k k parameter of the Erlang distribution. Must be a non-negative integer.
-   * \param lambda lambda parameter of the Erlang distribution
-   */
-  ErlangVariable (unsigned int k, double lambda);
+    /**
+     * \param k k parameter of the Erlang distribution. Must be a non-negative integer.
+     * \param lambda lambda parameter of the Erlang distribution
+     */
+    ErlangVariable(unsigned int k, double lambda);
 
-  /**
-   * \brief call RandomVariable::GetValue
-   * \return A floating point random value
-   *
-   * Note: we have to re-implement this method here because the method is
-   * overloaded below for the two-argument variant and the c++ name resolution
-   * rules don't work well with overloads split between parent and child
-   * classes.
-   */
-  double GetValue (void) const;
+    /**
+     * \brief call RandomVariable::GetValue
+     * \return A floating point random value
+     *
+     * Note: we have to re-implement this method here because the method is
+     * overloaded below for the two-argument variant and the c++ name resolution
+     * rules don't work well with overloads split between parent and child
+     * classes.
+     */
+    double GetValue(void) const;
 
-  /**
-   * \brief Returns an Erlang random distributed double with parameters k and lambda.
-   * \param k k parameter of the Erlang distribution. Must be a non-negative integer.
-   * \param lambda lambda parameter of the Erlang distribution
-   * \return A floating point random value
-   */
-  double GetValue (unsigned int k, double lambda) const;
+    /**
+     * \brief Returns an Erlang random distributed double with parameters k and lambda.
+     * \param k k parameter of the Erlang distribution. Must be a non-negative integer.
+     * \param lambda lambda parameter of the Erlang distribution
+     * \return A floating point random value
+     */
+    double GetValue(unsigned int k, double lambda) const;
 };
 
 /**
@@ -668,19 +671,18 @@ public:
  * Probability Mass Function is \f$ f(k; \alpha, N) = k^{-\alpha}/ H_{N,\alpha} \f$
  * where \f$ H_{N,\alpha} = \sum_{n=1}^N n^{-\alpha} \f$
  */
-class ZipfVariable : public RandomVariable
-{
+class ZipfVariable : public RandomVariable {
 public:
-  /**
-   * \brief Returns a Zipf random variable with parameters N and alpha.
-   * \param N the number of possible items. Must be a positive integer.
-   * \param alpha the alpha parameter. Must be a strictly positive real.
-   */
-  ZipfVariable (long N, double alpha);
-  /**
-   * Constructs a Zipf random variable with N=1 and alpha=0.
-   */
-  ZipfVariable ();
+    /**
+     * \brief Returns a Zipf random variable with parameters N and alpha.
+     * \param N the number of possible items. Must be a positive integer.
+     * \param alpha the alpha parameter. Must be a strictly positive real.
+     */
+    ZipfVariable(long N, double alpha);
+    /**
+     * Constructs a Zipf random variable with N=1 and alpha=0.
+     */
+    ZipfVariable();
 };
 
 /**
@@ -695,18 +697,17 @@ public:
  * Probability Mass Function is \f$ f(k; \alpha) = k^{-\alpha}/\zeta(\alpha) \f$
  * where \f$ \zeta(\alpha) \f$ is the Riemann zeta function ( \f$ \sum_{n=1}^\infty n^{-\alpha} ) \f$
  */
-class ZetaVariable : public RandomVariable
-{
+class ZetaVariable : public RandomVariable {
 public:
-  /**
-   * \brief Returns a Zeta random variable with parameter alpha.
-   * \param alpha the alpha parameter. Must be a strictly greater than 1, real.
-   */
-  ZetaVariable (double alpha);
-  /**
-   * Constructs a Zeta random variable with alpha=3.14
-   */
-  ZetaVariable ();
+    /**
+     * \brief Returns a Zeta random variable with parameter alpha.
+     * \param alpha the alpha parameter. Must be a strictly greater than 1, real.
+     */
+    ZetaVariable(double alpha);
+    /**
+     * Constructs a Zeta random variable with alpha=3.14
+     */
+    ZetaVariable();
 };
 
 /**
@@ -716,28 +717,27 @@ public:
  * This distribution is a triangular distribution.  The probability density
  * is in the shape of a triangle.
  */
-class TriangularVariable : public RandomVariable
-{
+class TriangularVariable : public RandomVariable {
 public:
-  /**
-   * Creates a triangle distribution random number generator in the
-   * range [0.0 .. 1.0), with mean of 0.5
-   */
-  TriangularVariable ();
+    /**
+     * Creates a triangle distribution random number generator in the
+     * range [0.0 .. 1.0), with mean of 0.5
+     */
+    TriangularVariable();
 
-  /**
-   * Creates a triangle distribution random number generator with the specified
-   * range
-   * \param s Low end of the range
-   * \param l High end of the range
-   * \param mean mean of the distribution
-   */
-  TriangularVariable (double s, double l, double mean);
+    /**
+     * Creates a triangle distribution random number generator with the specified
+     * range
+     * \param s Low end of the range
+     * \param l High end of the range
+     * \param mean mean of the distribution
+     */
+    TriangularVariable(double s, double l, double mean);
 
 };
 
-std::ostream & operator << (std::ostream &os, const RandomVariable &var);
-std::istream & operator >> (std::istream &os, RandomVariable &var);
+std::ostream& operator << (std::ostream& os, const RandomVariable& var);
+std::istream& operator >> (std::istream& os, RandomVariable& var);
 
 /**
  * \class ns3::RandomVariableValue

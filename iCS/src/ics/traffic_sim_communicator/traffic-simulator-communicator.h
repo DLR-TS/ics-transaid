@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    traffic-simulator-communicator.h
 /// @author  Julen Maneros
@@ -30,8 +47,7 @@
 
 #include "../../utils/ics/iCStypes.h"
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // class declarations
@@ -46,8 +62,7 @@ class ITetrisNode;
 * @class TrafficSimulatorCommunicator
 * @brief Contains virtual functions to manage the connection with SUMO.
 */
-class TrafficSimulatorCommunicator
-{
+class TrafficSimulatorCommunicator {
 
 public:
     virtual ~TrafficSimulatorCommunicator() {};
@@ -71,7 +86,7 @@ public:
     * @param[in] vehicles Group of SUMO vehicles
     * @return EXIT_SUCCESS if traffic simulator simulated correctly, EXIT_FAILURE otherwise
     */
-    virtual int CommandSimulationStep(int time, std::vector<std::string> &departed, std::vector<std::string> &arrived) = 0;
+    virtual int CommandSimulationStep(int time, std::vector<std::string>& departed, std::vector<std::string>& arrived) = 0;
 
     /**
     * @brief Sends a command close message
@@ -97,76 +112,76 @@ public:
     * @param[in] maxSeep The value of the maximum speed to assign to the node
     * @return EXIT_SUCCESS if the speed was successfuly updated, EXIT_FAILURE otherwise
     */
-    virtual int CommandSetMaximumSpeed(const ITetrisNode &node, float maxSpeed) = 0;
+    virtual int CommandSetMaximumSpeed(const ITetrisNode& node, float maxSpeed) = 0;
 
     /**
     * @brief Gets the speed of certain station from SUMO.
     * @param[in,out] &node The node to get information from.
     * @return The value of the speed.
     */
-    virtual float GetSpeed(const ITetrisNode &node) = 0;
+    virtual float GetSpeed(const ITetrisNode& node) = 0;
 
     /**
     * @brief Gets the direction of certain station.
     * @param[in,out] &node The node to get information from.
     * @return The value of the direction.
     */
-    virtual float GetDirection(const ITetrisNode &node) = 0;
+    virtual float GetDirection(const ITetrisNode& node) = 0;
 
     /**
     * @brief Gets the vehicle length of certain station.
     * @param[in,out] &node The node to get information from.
     * @return The value of the vehicle length
     */
-    virtual float GetVehicleLength(const ITetrisNode &node) = 0;
+    virtual float GetVehicleLength(const ITetrisNode& node) = 0;
 
     /**
     * @brief Gets the vehicle width of certain station.
     * @param[in,out] &node The node to get information from.
     * @return The value of the vehicle width.
     */
-    virtual float GetVehicleWidth(const ITetrisNode &node) = 0;
+    virtual float GetVehicleWidth(const ITetrisNode& node) = 0;
 
     /**
     * @brief Gets the vehicle's position.
     * @param[in,out] &node The node to get information from.
     * @return The coordinates correspondig to the node's position
     */
-    virtual std::pair<float,float> GetPosition(const ITetrisNode &node) = 0;
+    virtual std::pair<float, float> GetPosition(const ITetrisNode& node) = 0;
 
     /**
     * @brief Gets the status of the exterior lights.
     * @bug LOW PRIORITY.
     */
-    virtual bool GetExteriorLights(const ITetrisNode &node) = 0;
+    virtual bool GetExteriorLights(const ITetrisNode& node) = 0;
 
     /**
     * @brief Gets the lane identifier the node is at.
     * @param[in,out] &node The node to get information from.
     * @return The lane identifier
     */
-    virtual std::string GetLane(const ITetrisNode &node) = 0;
+    virtual std::string GetLane(const ITetrisNode& node) = 0;
 
     /**
     * @brief Gets the type of the vehicle.
     * @param[in,out] &node The node to get information from.
     * @return The type of the vehicle
     */
-    virtual std::string GetVehicleType(const ITetrisNode &node) = 0;
+    virtual std::string GetVehicleType(const ITetrisNode& node) = 0;
 
     /**
     * @brief Bus Lane Management.
     * Lets one station run in a lane that is "bus-only"
     * @todo to be commented
     */
-    virtual int SetVehicleToRunInLane(const ITetrisNode &node, std::string laneId)= 0;
+    virtual int SetVehicleToRunInLane(const ITetrisNode& node, std::string laneId) = 0;
 
     /**
     * @brief Bus Lane Management.
     * Lets every station to run in a lane that is "bus-only"
     * @todo to be commented
     */
-    virtual int SetVehicleToRunInLane(std::string laneId)= 0;
+    virtual int SetVehicleToRunInLane(std::string laneId) = 0;
 
     /**
     * @brief Request Based Personalized Navigation
@@ -174,7 +189,7 @@ public:
     * Reroute a vehicle giving it a new route
     * @todo to be commented
     */
-    virtual bool ReRoute(const ITetrisNode &node, std::vector<std::string> route)= 0;
+    virtual bool ReRoute(const ITetrisNode& node, std::vector<std::string> route) = 0;
 
     /**
     * @brief Request Based Personalized Navigation
@@ -182,7 +197,7 @@ public:
     * Reroute a vehicle forcing it to compute a new route by itself.
     * @todo to be commented
     */
-    virtual bool ReRoute(const ITetrisNode &node)= 0;
+    virtual bool ReRoute(const ITetrisNode& node) = 0;
 
     /**
     * @brief Changes the states of certain traffic light.
@@ -191,7 +206,7 @@ public:
     virtual bool ChangeTrafficLightStatus(std::string trafficLightId, std::string lightStates) = 0;
 
     /// @todo To be commented
-    virtual bool ChangeEdgeWeight(const ITetrisNode &node, std::string edgeId, float weight) = 0;
+    virtual bool ChangeEdgeWeight(const ITetrisNode& node, std::string edgeId, float weight) = 0;
 
     /// @todo To be commented
     virtual bool SetEdgeWeight(std::string edgeId, float weight) = 0;
@@ -200,7 +215,7 @@ public:
     virtual float GetEdgeWeight(std::string edgeId) = 0;
 
     /// @todo To be commented
-    virtual std::vector<std::string> GetRouteEdges(const ITetrisNode &node) = 0;
+    virtual std::vector<std::string> GetRouteEdges(const ITetrisNode& node) = 0;
 
     /// @todo To be commented
     virtual std::vector<std::string> GetRouteEdges(std::string routeID) = 0;
@@ -209,25 +224,25 @@ public:
     virtual int GetTrafficLights(std::vector<ics_types::trafficLightID_t>& trafficLigthIds) = 0;
 
     /// @todo To be commented
-    virtual int GetTrafficLightStatus(ics_types::trafficLightID_t trafficLightId, std::string &state) = 0;
+    virtual int GetTrafficLightStatus(ics_types::trafficLightID_t trafficLightId, std::string& state) = 0;
 
     /// @todo to be commented
-    virtual int GetTrafficLightControlledLanes(ics_types::trafficLightID_t trafficLightId, std::vector<std::string> &lanes) = 0;
+    virtual int GetTrafficLightControlledLanes(ics_types::trafficLightID_t trafficLightId, std::vector<std::string>& lanes) = 0;
 
     /// @todo to be commented
-    virtual int GetTrafficLightControlledLinks(ics_types::trafficLightID_t trafficLightId, std::vector<std::vector<std::string> > &lanes) = 0;
+    virtual int GetTrafficLightControlledLinks(ics_types::trafficLightID_t trafficLightId, std::vector<std::vector<std::string> >& lanes) = 0;
 
     /// @todo to be commented
-    virtual int GetLaneLinksConsecutiveLane(std::string laneId, std::vector<std::pair<std::string,std::string> > &consecutiveLanes) = 0;
+    virtual int GetLaneLinksConsecutiveLane(std::string laneId, std::vector<std::pair<std::string, std::string> >& consecutiveLanes) = 0;
 
     /// @todo to be commented
     virtual float GetLaneMaxSpeed(std::string laneId) = 0;
 
     /// @todo to be commented
-    virtual std::string GetVehicleClass(const ITetrisNode &node) = 0;
+    virtual std::string GetVehicleClass(const ITetrisNode& node) = 0;
 
     /// @todo to be commented
-		virtual int TraciCommand(tcpip::Storage & command,tcpip::Storage & result) = 0;
+    virtual int TraciCommand(tcpip::Storage& command, tcpip::Storage& result) = 0;
 
     /**
       * @brief generic Proxy method to forward an unknown external TraCI request to SUMO
@@ -235,7 +250,7 @@ public:
       * @param[in,out] &outMsg
       * @todo to be commented
     */
-    virtual void controlTraCI(tcpip::Storage &inMsg, tcpip::Storage &outMsg) = 0;
+    virtual void controlTraCI(tcpip::Storage& inMsg, tcpip::Storage& outMsg) = 0;
 
     /// @brief returns the start time of the traffic simulation
     virtual int getStartTime() = 0;

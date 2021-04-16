@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    subs-x-application-data.h
 /// @author  Jerome Haerri (EURECOM)
@@ -36,146 +53,130 @@
 
 #include "application-handler.h"
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // static member definitions
 // ===========================================================================
-int SubsXApplicationData::Delete(ics_types::stationID_t stationID, std::vector<Subscription*>* subscriptions)
-{
-	if (subscriptions == NULL)
-	{
-		return EXIT_FAILURE;
-	}
+int SubsXApplicationData::Delete(ics_types::stationID_t stationID, std::vector<Subscription*>* subscriptions) {
+    if (subscriptions == NULL) {
+        return EXIT_FAILURE;
+    }
 
-	vector<Subscription*>::iterator it;
-	for (it = subscriptions->begin(); it < subscriptions->end(); it++)
-	{
-		Subscription* sub = *it;
-		const type_info& typeinfo = typeid(sub);
-		if (typeinfo == typeid(SubsXApplicationData*))
-		{
-			SubsXApplicationData* subsXApplicationData = static_cast<SubsXApplicationData*>(sub);
-			if (subsXApplicationData->m_nodeId == stationID)
-			{
-				delete subsXApplicationData;
-				delete sub;
-				return EXIT_SUCCESS;
-			}
-		}
-	}
-	return EXIT_SUCCESS;
+    vector<Subscription*>::iterator it;
+    for (it = subscriptions->begin(); it < subscriptions->end(); it++) {
+        Subscription* sub = *it;
+        const type_info& typeinfo = typeid(sub);
+        if (typeinfo == typeid(SubsXApplicationData*)) {
+            SubsXApplicationData* subsXApplicationData = static_cast<SubsXApplicationData*>(sub);
+            if (subsXApplicationData->m_nodeId == stationID) {
+                delete subsXApplicationData;
+                delete sub;
+                return EXIT_SUCCESS;
+            }
+        }
+    }
+    return EXIT_SUCCESS;
 }
 
 // ===========================================================================
 // member method definitions
 // ===========================================================================
 SubsXApplicationData::SubsXApplicationData(int appId, ics_types::stationID_t stationId, SyncManager* syncManager,
-		unsigned char* msg, int msgSize) :
-		Subscription(stationId), m_msg(msg, msgSize)
-{
+        unsigned char* msg, int msgSize) :
+    Subscription(stationId), m_msg(msg, msgSize) {
 
-	m_id = ++m_subscriptionCounter;
+    m_id = ++m_subscriptionCounter;
 
-	m_name = "RETURN CROSS APPLICATION DATA";
+    m_name = "RETURN CROSS APPLICATION DATA";
 
-	m_appId = appId;
+    m_appId = appId;
 
-	m_nodeId = stationId;
+    m_nodeId = stationId;
 
 #ifdef LOG_ON
-	stringstream log;
-	log << "[INFO] SubsXApplicationData() - appID: " << appId;
-	IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+    stringstream log;
+    log << "[INFO] SubsXApplicationData() - appID: " << appId;
+    IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
 
-	m_data = pull(syncManager);
+    m_data = pull(syncManager);
 
 }
 
-std::vector<unsigned char> SubsXApplicationData::pull(SyncManager* syncManager)
-{
+std::vector<unsigned char> SubsXApplicationData::pull(SyncManager* syncManager) {
 
-	vector<unsigned char> info;
-	unsigned int index = 0;
+    vector<unsigned char> info;
+    unsigned int index = 0;
 
-	unsigned char cmdMode = m_msg.readUnsignedByte(); // Defines the command mode and thus the way the rest of the msg will be read.
+    unsigned char cmdMode = m_msg.readUnsignedByte(); // Defines the command mode and thus the way the rest of the msg will be read.
 
-	switch (cmdMode)
-	{
+    switch (cmdMode) {
 
-	case VALUE_GET_DATA_BY_RESULT_CONTAINER_ID:
-	{
+        case VALUE_GET_DATA_BY_RESULT_CONTAINER_ID: {
 
-		int cmd = m_msg.readUnsignedByte();
-		std::string tag = m_msg.readString();
+            int cmd = m_msg.readUnsignedByte();
+            std::string tag = m_msg.readString();
 
-		bool found = false;
-		// Loop Applications
-		ITetrisNode* node_local = syncManager->GetNodeByIcsId(m_nodeId);
+            bool found = false;
+            // Loop Applications
+            ITetrisNode* node_local = syncManager->GetNodeByIcsId(m_nodeId);
 #ifdef LOG_ON
-        stringstream log;
-        log << "SubsXApplicationData::pull node_local->m_applicationHandlerInstalled.size()"
+            stringstream log;
+            log << "SubsXApplicationData::pull node_local->m_applicationHandlerInstalled.size()"
                 << node_local->m_applicationHandlerInstalled->size();
-        IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+            IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
-		for (vector<ApplicationHandler*>::iterator appHandlerIt = node_local->m_applicationHandlerInstalled->begin();
-				appHandlerIt < node_local->m_applicationHandlerInstalled->end(); appHandlerIt++)
-		{
-			ApplicationHandler* appHandler = (*appHandlerIt);
+            for (vector<ApplicationHandler*>::iterator appHandlerIt = node_local->m_applicationHandlerInstalled->begin();
+                    appHandlerIt < node_local->m_applicationHandlerInstalled->end(); appHandlerIt++) {
+                ApplicationHandler* appHandler = (*appHandlerIt);
 
-			if (appHandler->m_id == m_appId)
-			{
+                if (appHandler->m_id == m_appId) {
 
 #ifdef LOG_ON
-                stringstream log;
-                log << "iCS --> Application " << appHandler->m_id << " Matches the subscribed application ID.";
-                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+                    stringstream log;
+                    log << "iCS --> Application " << appHandler->m_id << " Matches the subscribed application ID.";
+                    IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
 
-				for (vector<ResultContainer*>::iterator resultIt = node_local->m_resultContainerCollection->begin();
-						resultIt != node_local->m_resultContainerCollection->end(); ++resultIt)
-				{
-					ResultContainer* result = (*resultIt);
-					ResultContainer& reference = *result;
+                    for (vector<ResultContainer*>::iterator resultIt = node_local->m_resultContainerCollection->begin();
+                            resultIt != node_local->m_resultContainerCollection->end(); ++resultIt) {
+                        ResultContainer* result = (*resultIt);
+                        ResultContainer& reference = *result;
 
-					const type_info& type = typeid(reference);
-					if (type == typeid(ResultGeneric))
-					{  // the sub-x-application only works with Generic Result Containers
-						ResultGeneric* resultGeneric;
-						resultGeneric = static_cast<ResultGeneric*>(result);
-						vector<unsigned char> tmp = resultGeneric->pull(cmd, tag);
+                        const type_info& type = typeid(reference);
+                        if (type == typeid(ResultGeneric)) {
+                            // the sub-x-application only works with Generic Result Containers
+                            ResultGeneric* resultGeneric;
+                            resultGeneric = static_cast<ResultGeneric*>(result);
+                            vector<unsigned char> tmp = resultGeneric->pull(cmd, tag);
 #ifdef LOG_ON
-						stringstream log;
-						log << "SubsXApplicationData::pull() size returned " << tmp.size() << " for tag " << tag << " appId " << resultGeneric->m_applicationHandlerId << " size " << node_local->m_resultContainerCollection->size();
-						IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+                            stringstream log;
+                            log << "SubsXApplicationData::pull() size returned " << tmp.size() << " for tag " << tag << " appId " << resultGeneric->m_applicationHandlerId << " size " << node_local->m_resultContainerCollection->size();
+                            IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
-						return tmp;
-					}
-				}
-				break;
-			}
-		}
-		break;
-	}
-	default:
-	{
-		std::cout << "Impossible to find application for result container " << std::endl;
-		return info;
-	}
+                            return tmp;
+                        }
+                    }
+                    break;
+                }
+            }
+            break;
+        }
+        default: {
+            std::cout << "Impossible to find application for result container " << std::endl;
+            return info;
+        }
 
-	}
-	return info;
+    }
+    return info;
 }
 
-std::vector<unsigned char> SubsXApplicationData::returnStatus()
-{
-	return m_data;
+std::vector<unsigned char> SubsXApplicationData::returnStatus() {
+    return m_data;
 }
 
-SubsXApplicationData::~SubsXApplicationData()
-{
+SubsXApplicationData::~SubsXApplicationData() {
 }
 
 }

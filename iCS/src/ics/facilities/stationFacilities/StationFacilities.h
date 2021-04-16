@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    StationFacilities.h
 /// @author  Pasquale Cataldi (EURECOM)
@@ -99,42 +116,42 @@ public:
     * @param[in] Area expressed as geometric shape (circle, rectangle, ellipse, or convex polygon)
     * @return Pointer to the vector of pointers to the stations
     */
-    map<stationID_t, const Station*>* getStationsInArea(GeometricShape &area);
+    map<stationID_t, const Station*>* getStationsInArea(GeometricShape& area);
 
     /**
     * @brief Given a vector of areas, it returns the pointers to the stations inside.
     * @param[in] Vector of area pointers expressed as road elements (i.e., lane, edge or junctions).
     * @return Pointer to the vector of pointers to the stations
     */
-    map<stationID_t, const Station*>* getStationsInArea(vector<RoadElement*> &area);
+    map<stationID_t, const Station*>* getStationsInArea(vector<RoadElement*>& area);
 
     /**
     * @brief Given a vector of areas, it returns the pointers to the mobile stations inside.
     * @param[in] Area expressed as geometric shape (circle, rectangle, ellipse, or convex polygon)
     * @return Pointer to the vector of pointers to the stations
     */
-    map<stationID_t, const MobileStation*>* getMobileStationsInArea(GeometricShape &area);
+    map<stationID_t, const MobileStation*>* getMobileStationsInArea(GeometricShape& area);
 
     /**
     * @brief Given a vector of areas, it returns the pointers to the mobile stations inside.
     * @param[in] Vector of area pointers expressed as road elements (i.e., lane, edge or junctions).
     * @return Pointer to the vector of pointers to the stations
     */
-    map<stationID_t, const MobileStation*>* getMobileStationsInArea(vector<RoadElement*> &area);
+    map<stationID_t, const MobileStation*>* getMobileStationsInArea(vector<RoadElement*>& area);
 
     /**
     * @brief Given a vector of areas, it returns the pointers to the fixed stations inside.
     * @param[in] Area expressed as geometric shape (circle, rectangle, ellipse, or convex polygon)
     * @return Pointer to the vector of pointers to the stations
     */
-    map<stationID_t, const FixedStation*>* getFixedStationsInArea(GeometricShape &area);
+    map<stationID_t, const FixedStation*>* getFixedStationsInArea(GeometricShape& area);
 
     /**
     * @brief Given a vector of areas, it returns the pointers to the fixed stations inside.
     * @param[in] Vector of area pointers expressed as road elements (i.e., lane, edge or junctions).
     * @return Pointer to the vector of pointers to the stations
     */
-    map<stationID_t, const FixedStation*>* getFixedStationsInArea(vector<RoadElement*> &area);
+    map<stationID_t, const FixedStation*>* getFixedStationsInArea(vector<RoadElement*>& area);
 
     /**
     * @brief Check if a given station is inside a geometric area.
@@ -142,7 +159,7 @@ public:
     * @param[in] area Reference to the area.
     * @return True if the station is found. False otherwise.
     */
-    bool isStationInArea(stationID_t stationID, GeometricShape &area);
+    bool isStationInArea(stationID_t stationID, GeometricShape& area);
 
     /**
     * @brief Check if a given station is inside an area defined by a given road element.
@@ -150,7 +167,7 @@ public:
     * @param[in] area Reference to the road element.
     * @return True if the station is found. False otherwise.
     */
-    bool isStationInArea(stationID_t stationID, RoadElement &area);
+    bool isStationInArea(stationID_t stationID, RoadElement& area);
 
     /**
     * @brief Check if a given station is inside an area defined by a vector of geometric shapes and road elements.
@@ -158,7 +175,7 @@ public:
     * @param[in] area Vector of areas.
     * @return True if the station is found. False otherwise.
     */
-    bool isStationInArea(stationID_t stationID, vector<Area2D*> &area);
+    bool isStationInArea(stationID_t stationID, vector<Area2D*>& area);
 
     /**
     * @brief Updates the dynamic information (position, speed, etc...) related to mobile stations.

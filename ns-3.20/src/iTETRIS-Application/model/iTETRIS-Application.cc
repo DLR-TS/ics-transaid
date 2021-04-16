@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2009-2010, Uwicore Laboratory (www.uwicore.umh.es),
@@ -53,8 +70,8 @@
 #include "ns3/c2c-address.h"
 #include "ns3/simulator.h"
 #include "ns3/packet.h"
-#include "ns3/node-id-tag.h" 
-#include "ns3/time-step-tag.h" 
+#include "ns3/node-id-tag.h"
+#include "ns3/time-step-tag.h"
 #include "ns3/TStep-sequence-number-tag.h"
 #include "ns3/app-index-tag.h"
 #include "ns3/rssi-tag.h"
@@ -69,271 +86,241 @@
 
 #include "iTETRIS-Application.h"
 
-NS_LOG_COMPONENT_DEFINE ("iTETRISApplication");
+NS_LOG_COMPONENT_DEFINE("iTETRISApplication");
 
 using namespace std;
 
-namespace ns3
-{
+namespace ns3 {
 
-	NS_OBJECT_ENSURE_REGISTERED (iTETRISApplication);
+NS_OBJECT_ENSURE_REGISTERED(iTETRISApplication);
 
-	TypeId iTETRISApplication::GetTypeId(void)
-	{
-		static TypeId tid = TypeId("ns3::iTETRISApplication").SetParent<Application>().AddConstructor<iTETRISApplication>();
-		return tid;
-	}
+TypeId iTETRISApplication::GetTypeId(void) {
+    static TypeId tid = TypeId("ns3::iTETRISApplication").SetParent<Application>().AddConstructor<iTETRISApplication>();
+    return tid;
+}
 
-	iTETRISApplication::iTETRISApplication()
-	{
-		m_messageId = 0;
-	}
+iTETRISApplication::iTETRISApplication() {
+    m_messageId = 0;
+}
 
-	iTETRISApplication::~iTETRISApplication()
-	{
-	}
+iTETRISApplication::~iTETRISApplication() {
+}
 
-	void iTETRISApplication::DoDispose(void)
-	{
-		NS_LOG_FUNCTION_NOARGS();
-		Application::DoDispose();
-	}
+void iTETRISApplication::DoDispose(void) {
+    NS_LOG_FUNCTION_NOARGS();
+    Application::DoDispose();
+}
 
-	void iTETRISApplication::SetServiceType(std::string servicetype)
-	{
-		if (servicetype.find("-") != string::npos)
-		{
-			m_composedServiceType = servicetype;
-			int index = m_composedServiceType.find("-");
-			m_servicetype = m_composedServiceType.substr(index + 1);
-		} else
-		{
-			m_composedServiceType = servicetype;
-			m_servicetype = m_composedServiceType;
-		}
-	}
+void iTETRISApplication::SetServiceType(std::string servicetype) {
+    if (servicetype.find("-") != string::npos) {
+        m_composedServiceType = servicetype;
+        int index = m_composedServiceType.find("-");
+        m_servicetype = m_composedServiceType.substr(index + 1);
+    } else {
+        m_composedServiceType = servicetype;
+        m_servicetype = m_composedServiceType;
+    }
+}
 
-	void iTETRISApplication::SetServiceIndex(uint32_t app_index)
-	{
-		m_app_index = app_index;
-	}
+void iTETRISApplication::SetServiceIndex(uint32_t app_index) {
+    m_app_index = app_index;
+}
 
-	void iTETRISApplication::AddInciPacketTags(Ptr<Packet> p)
-	{
-		// Sender ID tag
-		Ptr<Node> local = GetNode();
-		uint32_t nodeID = local->GetId();
+void iTETRISApplication::AddInciPacketTags(Ptr<Packet> p) {
+    // Sender ID tag
+    Ptr<Node> local = GetNode();
+    uint32_t nodeID = local->GetId();
 
-		NodeIdTag nodeTag;
-		nodeTag.Set(nodeID);
-		p->AddPacketTag(nodeTag);
+    NodeIdTag nodeTag;
+    nodeTag.Set(nodeID);
+    p->AddPacketTag(nodeTag);
 
-		//Set message id;
-		MessageIdTag msgTag;
-		msgTag.Set(m_messageId);
-		p->AddPacketTag(msgTag);
+    //Set message id;
+    MessageIdTag msgTag;
+    msgTag.Set(m_messageId);
+    p->AddPacketTag(msgTag);
 
-		// Application Index tag
-		AppIndexTag appindexTag;
-		appindexTag.Set(m_app_index);
-		p->AddPacketTag(appindexTag);
+    // Application Index tag
+    AppIndexTag appindexTag;
+    appindexTag.Set(m_app_index);
+    p->AddPacketTag(appindexTag);
 
-		// update of timestep and time step sequence number
-		m_currentTimeStep = (static_cast<uint32_t>(Simulator::Now().GetMilliSeconds()));
-		if (m_currentTimeStep > m_previousTimeStep)
-		{
-			m_stepSequenceNumber = 0;
-			m_previousTimeStep = m_currentTimeStep;
-		} else
-		{
-			m_stepSequenceNumber++;
-		}
+    // update of timestep and time step sequence number
+    m_currentTimeStep = (static_cast<uint32_t>(Simulator::Now().GetMilliSeconds()));
+    if (m_currentTimeStep > m_previousTimeStep) {
+        m_stepSequenceNumber = 0;
+        m_previousTimeStep = m_currentTimeStep;
+    } else {
+        m_stepSequenceNumber++;
+    }
 
-		NS_LOG_INFO("\n");
-		NS_LOG_INFO(
-				"[ns3][iTETRISApplication]service =  " << m_servicetype << "         app index =  " << m_app_index
-						<< "          sender nodeID = " << nodeID << "      timestep = " << m_currentTimeStep
-						<< "        timestepSeqNo = " << m_stepSequenceNumber << "\n");
+    NS_LOG_INFO("\n");
+    NS_LOG_INFO(
+        "[ns3][iTETRISApplication]service =  " << m_servicetype << "         app index =  " << m_app_index
+        << "          sender nodeID = " << nodeID << "      timestep = " << m_currentTimeStep
+        << "        timestepSeqNo = " << m_stepSequenceNumber << "\n");
 
-		// time step tag
-		TimeStepTag timeStepTag;
-		timeStepTag.Set(m_currentTimeStep);
-		p->AddPacketTag(timeStepTag);
+    // time step tag
+    TimeStepTag timeStepTag;
+    timeStepTag.Set(m_currentTimeStep);
+    p->AddPacketTag(timeStepTag);
 
-		// time step sequence number tag
-		TStepSequenceNumberTag TSSeqNTag;
-		TSSeqNTag.Set(m_stepSequenceNumber);
-		p->AddPacketTag(TSSeqNTag);
+    // time step sequence number tag
+    TStepSequenceNumberTag TSSeqNTag;
+    TSSeqNTag.Set(m_stepSequenceNumber);
+    p->AddPacketTag(TSSeqNTag);
 
-        // add channel tag
-		ChannelTag ch_tag;
-        ch_tag.Set(CCH); //CCH by default
-		p->AddPacketTag(ch_tag);
-        // add EDCA queue
-        // deprecated: the EDCA queues will be set according to the TC in the Communication Facilities
-        QosTag qos_tag;
-        qos_tag.SetTid(0); // AC_BE by default.
-        p->AddPacketTag(qos_tag);
+    // add channel tag
+    ChannelTag ch_tag;
+    ch_tag.Set(CCH); //CCH by default
+    p->AddPacketTag(ch_tag);
+    // add EDCA queue
+    // deprecated: the EDCA queues will be set according to the TC in the Communication Facilities
+    QosTag qos_tag;
+    qos_tag.SetTid(0); // AC_BE by default.
+    p->AddPacketTag(qos_tag);
 
-        V2XmessageTypeTag v2x_tag;
-        v2x_tag.Set(m_V2XmessageType);
-        p->AddPacketTag(v2x_tag);
+    V2XmessageTypeTag v2x_tag;
+    v2x_tag.Set(m_V2XmessageType);
+    p->AddPacketTag(v2x_tag);
 
-	}
+}
 
-	void iTETRISApplication::RetrieveInciPacketTags(Ptr<Packet> packet)
-	{
-		NodeIdTag nodeTag;
-		bool found;
-		found = packet->PeekPacketTag(nodeTag);
-		NS_ASSERT(found);
-		uint32_t senderId = nodeTag.Get();
+void iTETRISApplication::RetrieveInciPacketTags(Ptr<Packet> packet) {
+    NodeIdTag nodeTag;
+    bool found;
+    found = packet->PeekPacketTag(nodeTag);
+    NS_ASSERT(found);
+    uint32_t senderId = nodeTag.Get();
 
-		TimeStepTag timestepTag;
-		found = packet->PeekPacketTag(timestepTag);
-		NS_ASSERT(found);
-		uint32_t timeStep = timestepTag.Get();
+    TimeStepTag timestepTag;
+    found = packet->PeekPacketTag(timestepTag);
+    NS_ASSERT(found);
+    uint32_t timeStep = timestepTag.Get();
 
-		TStepSequenceNumberTag timestepSNTag;
-		found = packet->PeekPacketTag(timestepSNTag);
-		NS_ASSERT(found);
-		uint32_t timeStepSN = timestepSNTag.Get();
+    TStepSequenceNumberTag timestepSNTag;
+    found = packet->PeekPacketTag(timestepSNTag);
+    NS_ASSERT(found);
+    uint32_t timeStepSN = timestepSNTag.Get();
 
-		MessageIdTag messageTag;
-		found = packet->PeekPacketTag(messageTag);
-		NS_ASSERT(found);
-		uint32_t messageId = messageTag.Get();
+    MessageIdTag messageTag;
+    found = packet->PeekPacketTag(messageTag);
+    NS_ASSERT(found);
+    uint32_t messageId = messageTag.Get();
 
-		// iTETRIS Extension for EU FP7 COLOMBO - generic container to transmit ns-3 data to the Application
-		//JHNote (04/09/2013): take any other type of Tag that may be of interest for the iCS and Application module and put it in a vector
+    // iTETRIS Extension for EU FP7 COLOMBO - generic container to transmit ns-3 data to the Application
+    //JHNote (04/09/2013): take any other type of Tag that may be of interest for the iCS and Application module and put it in a vector
 
-		tcpip::Storage *genericTagContainer = new tcpip::Storage(); // alternative if Ptr does not work here
+    tcpip::Storage* genericTagContainer = new tcpip::Storage(); // alternative if Ptr does not work here
 
-		RSSITag rssiTag;
-		uint16_t rssi = -1;
-		genericTagContainer->writeUnsignedByte(TAG_RSSI);
-		if (packet->PeekPacketTag(rssiTag))
-			rssi = rssiTag.Get();
-		genericTagContainer->writeShort((short) rssi);
+    RSSITag rssiTag;
+    uint16_t rssi = -1;
+    genericTagContainer->writeUnsignedByte(TAG_RSSI);
+    if (packet->PeekPacketTag(rssiTag)) {
+        rssi = rssiTag.Get();
+    }
+    genericTagContainer->writeShort((short) rssi);
 //		genericTagContainer->writeUnsignedByte(TAG_RSSI);
 //		genericTagContainer->writeShort((short) messageId);
 
-		SnrTag snrTag;
-		double snr = -1.0;
-		genericTagContainer->writeUnsignedByte(TAG_SNR);
-		if (packet->PeekPacketTag(snrTag))
-			snr = snrTag.Get();
-		genericTagContainer->writeDouble(snr);
-
-		TxPowerTag txPower;
-		uint8_t power = 0;
-		genericTagContainer->writeUnsignedByte(TAG_TXPOWER);
-		if (packet->PeekPacketTag(txPower))
-			power = txPower.Get();
-		genericTagContainer->writeUnsignedByte(power);
-
-		genericTagContainer->writeUnsignedByte(TAG_MSGID);
-		genericTagContainer->writeInt(messageId);
-
-		NS_LOG_INFO("\n");
-		NS_LOG_INFO(
-				"[ns3][iTETRISApplication]RECEPTION: service=" << m_servicetype << " messageId=" << messageId << " sender nodeID=" << senderId
-						<< "timestep=" << timeStep << " timestepSeqNo=" << timeStepSN << " packet RSSI=" << rssi
-						<< " packet SNR=" << snr << " packet TX_power=" << power);
-
-		m_forwardIcs(senderId, m_servicetype, timeStep, timeStepSN, messageId, genericTagContainer);
-	}
-
-	void iTETRISApplication::InitializeINCIvariables(void)
-	{
-		m_previousTimeStep = (static_cast<uint32_t>(Simulator::Now().GetSeconds()));
-		m_currentTimeStep = 0;
-		m_stepSequenceNumber = -1;
-	}
-
-	void iTETRISApplication::SetApplicationId(uint64_t applicationId)
-	{
-	}
-
-	void iTETRISApplication::StartApplication(void)
-	{
-	}
-
-	void iTETRISApplication::StopApplication(void)
-	{
-	}
-
-	void iTETRISApplication::StartTransmitting(Ipv4Address address)
-	{
-	}
-
-	void iTETRISApplication::StartTransmitting(Ipv6Address address)
-	{
-	}
-
-	void iTETRISApplication::StartTransmitting(Ptr<c2cAddress> address)
-	{
-	}
-
-	void iTETRISApplication::StopTransmitting(void)
-	{
-	}
-
-	void iTETRISApplication::SetFrequency(double frequency)
-	{
-		m_frequency = frequency;
-	}
-
-	void iTETRISApplication::SetMessRegenerationTime(double MessRegenerationTime)
-	{
-		m_MessRegenerationTime = MessRegenerationTime;
-	}
-
-	void iTETRISApplication::SetPacketSize(uint32_t PacketSize)
-	{
-		m_packetSize = PacketSize;
-	}
-
-	void iTETRISApplication::SetMsgLifeTime(uint8_t MsgLifeTime)
-	{
-		m_MsgLifeTime = MsgLifeTime;
-	}
-
-	void iTETRISApplication::SetSockets(void)
-	{
-	}
-
-	void iTETRISApplication::SetReceiveCallback(iTETRISApplication::ReceiveCallback cb)
-	{
-		m_forwardIcs = cb;
-	}
-
-	void iTETRISApplication::UnsetReceiveCallback(void)
-	{
-		m_forwardIcs.Nullify();
-	}
-
-	void iTETRISApplication::SetC2CAddress(Ptr<c2cAddress> address)
-	{
-	}
-
-	void iTETRISApplication::SetIPAddress(Ipv4Address address)
-	{
-	}
-
-	void iTETRISApplication::SetChTag(ChannelTag ch_tag)
-	{
-	}
-
-	void iTETRISApplication::SetMessageId(uint32_t messageId)
-	{
-		m_messageId = messageId;
-	}
-
-    void iTETRISApplication::SetV2XMessageType(uint32_t msgType)
-    {
-        m_V2XmessageType = msgType;
+    SnrTag snrTag;
+    double snr = -1.0;
+    genericTagContainer->writeUnsignedByte(TAG_SNR);
+    if (packet->PeekPacketTag(snrTag)) {
+        snr = snrTag.Get();
     }
+    genericTagContainer->writeDouble(snr);
+
+    TxPowerTag txPower;
+    uint8_t power = 0;
+    genericTagContainer->writeUnsignedByte(TAG_TXPOWER);
+    if (packet->PeekPacketTag(txPower)) {
+        power = txPower.Get();
+    }
+    genericTagContainer->writeUnsignedByte(power);
+
+    genericTagContainer->writeUnsignedByte(TAG_MSGID);
+    genericTagContainer->writeInt(messageId);
+
+    NS_LOG_INFO("\n");
+    NS_LOG_INFO(
+        "[ns3][iTETRISApplication]RECEPTION: service=" << m_servicetype << " messageId=" << messageId << " sender nodeID=" << senderId
+        << "timestep=" << timeStep << " timestepSeqNo=" << timeStepSN << " packet RSSI=" << rssi
+        << " packet SNR=" << snr << " packet TX_power=" << power);
+
+    m_forwardIcs(senderId, m_servicetype, timeStep, timeStepSN, messageId, genericTagContainer);
+}
+
+void iTETRISApplication::InitializeINCIvariables(void) {
+    m_previousTimeStep = (static_cast<uint32_t>(Simulator::Now().GetSeconds()));
+    m_currentTimeStep = 0;
+    m_stepSequenceNumber = -1;
+}
+
+void iTETRISApplication::SetApplicationId(uint64_t applicationId) {
+}
+
+void iTETRISApplication::StartApplication(void) {
+}
+
+void iTETRISApplication::StopApplication(void) {
+}
+
+void iTETRISApplication::StartTransmitting(Ipv4Address address) {
+}
+
+void iTETRISApplication::StartTransmitting(Ipv6Address address) {
+}
+
+void iTETRISApplication::StartTransmitting(Ptr<c2cAddress> address) {
+}
+
+void iTETRISApplication::StopTransmitting(void) {
+}
+
+void iTETRISApplication::SetFrequency(double frequency) {
+    m_frequency = frequency;
+}
+
+void iTETRISApplication::SetMessRegenerationTime(double MessRegenerationTime) {
+    m_MessRegenerationTime = MessRegenerationTime;
+}
+
+void iTETRISApplication::SetPacketSize(uint32_t PacketSize) {
+    m_packetSize = PacketSize;
+}
+
+void iTETRISApplication::SetMsgLifeTime(uint8_t MsgLifeTime) {
+    m_MsgLifeTime = MsgLifeTime;
+}
+
+void iTETRISApplication::SetSockets(void) {
+}
+
+void iTETRISApplication::SetReceiveCallback(iTETRISApplication::ReceiveCallback cb) {
+    m_forwardIcs = cb;
+}
+
+void iTETRISApplication::UnsetReceiveCallback(void) {
+    m_forwardIcs.Nullify();
+}
+
+void iTETRISApplication::SetC2CAddress(Ptr<c2cAddress> address) {
+}
+
+void iTETRISApplication::SetIPAddress(Ipv4Address address) {
+}
+
+void iTETRISApplication::SetChTag(ChannelTag ch_tag) {
+}
+
+void iTETRISApplication::SetMessageId(uint32_t messageId) {
+    m_messageId = messageId;
+}
+
+void iTETRISApplication::SetV2XMessageType(uint32_t msgType) {
+    m_V2XmessageType = msgType;
+}
 
 
 } // Namespace ns3

@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    subs-app-result-traff-sim.h
 /// @author  Jerome Haerri (EURECOM)
@@ -30,8 +47,7 @@
 
 #include "subscription.h"
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // class declarations
@@ -41,52 +57,51 @@ namespace ics
 // ===========================================================================
 // class definitions
 // ===========================================================================
-	/**
-	 * @class SubsAppResultTraffSim
-	 * @brief Manages the subscription to information from Traffic Simulator at the Application Level
-	 */
-	class SubsAppResultTraffSim: public ics::Subscription
-	{
-		public:
+/**
+ * @class SubsAppResultTraffSim
+ * @brief Manages the subscription to information from Traffic Simulator at the Application Level
+ */
+class SubsAppResultTraffSim: public ics::Subscription {
+public:
 
-			/**
-			 * @brief Constructor
-			 * @param[in] appId ID of the instantiated subscription.
-			 * @param[in] stationId Station that owns the subscription.
-			 * @param[in] msg Command fields to subscribe to the traffic simulator.
-			 * @param[in] msgSize Length of the command fields Command fields to subscribe to the traffic simulator.
-			 */
-			SubsAppResultTraffSim(int subId, ics_types::stationID_t stationId, unsigned char* msg, int msgSize);
+    /**
+     * @brief Constructor
+     * @param[in] appId ID of the instantiated subscription.
+     * @param[in] stationId Station that owns the subscription.
+     * @param[in] msg Command fields to subscribe to the traffic simulator.
+     * @param[in] msgSize Length of the command fields Command fields to subscribe to the traffic simulator.
+     */
+    SubsAppResultTraffSim(int subId, ics_types::stationID_t stationId, unsigned char* msg, int msgSize);
 
-			/**
-			 * @brief Destructor
-			 */
-			virtual ~SubsAppResultTraffSim();
+    /**
+     * @brief Destructor
+     */
+    virtual ~SubsAppResultTraffSim();
 
-			/**
-			 * @brief Send a set of commands to subscribe to the traffic simulator at the current timeStep.
-			 *
-			 * The required command and related informations are coded according to the Type-Length-Value method.
-			 *
-			 * @return a vector of requested data coded according to the TYPE-LENGTH-VALUE. NULL if it fails.
-			 */
-			std::vector<unsigned char> pull(SyncManager* syncManager);
+    /**
+     * @brief Send a set of commands to subscribe to the traffic simulator at the current timeStep.
+     *
+     * The required command and related informations are coded according to the Type-Length-Value method.
+     *
+     * @return a vector of requested data coded according to the TYPE-LENGTH-VALUE. NULL if it fails.
+     */
+    std::vector<unsigned char> pull(SyncManager* syncManager);
 
-			/**
-			 * @brief Deletes the subscription according to the input parameters.
-			 * @param[in] subscriptions Collection of subscriptions to delete
-			 * @return EXIT_SUCCESS if the operation result applied successfully EXIT_FAILURE
-			 */
-			static int Delete(ics_types::stationID_t stationID, std::vector<Subscription*>* subscriptions);
+    /**
+     * @brief Deletes the subscription according to the input parameters.
+     * @param[in] subscriptions Collection of subscriptions to delete
+     * @return EXIT_SUCCESS if the operation result applied successfully EXIT_FAILURE
+     */
+    static int Delete(ics_types::stationID_t stationID, std::vector<Subscription*>* subscriptions);
 
-		private:
+private:
 //        #define VALUE_SET_EDGE_TRAVELTIME       0x01
 //        #define VALUE_GET_EDGE_TRAVELTIME       0x02
 //        #define VALUE_RE_ROUTE   	    		0x03
 //        #define VALUE_GET_ROUTE_VARIABLE	 	0x04
-        tcpip::Storage            m_msg;
-        tcpip::Storage            m_message;
-	};
+    tcpip::Storage            m_msg;
+    tcpip::Storage            m_message;
+};
 
 }
 

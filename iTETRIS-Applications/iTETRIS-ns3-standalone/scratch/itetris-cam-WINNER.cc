@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2009-2010, HITACHI EUROPE SAS, UMH, EU FP7 iTETRIS project
@@ -47,148 +64,139 @@ using namespace std;
 
 uint32_t numNodes = 3;
 double sim_time = 100.0;
-iTETRISNodeManager* nodeManager = new iTETRISNodeManager ();
+iTETRISNodeManager* nodeManager = new iTETRISNodeManager();
 
 void
-PhyTxTrace (std::string context, Ptr<const Packet> packet, WifiMode mode, WifiPreamble preamble, uint8_t txPower)
-{
-  WifiMacHeader hdr;
-  packet->PeekHeader (hdr);
-  std::cout <<  Simulator::Now () << " " << context << " Packet Uid " << packet->GetUid() 
-  << " PHYTX mode=" << mode << " to=" << hdr.GetAddr1 () << " from=" << hdr.GetAddr2 () 
-  << std::endl;
+PhyTxTrace(std::string context, Ptr<const Packet> packet, WifiMode mode, WifiPreamble preamble, uint8_t txPower) {
+    WifiMacHeader hdr;
+    packet->PeekHeader(hdr);
+    std::cout <<  Simulator::Now() << " " << context << " Packet Uid " << packet->GetUid()
+              << " PHYTX mode=" << mode << " to=" << hdr.GetAddr1() << " from=" << hdr.GetAddr2()
+              << std::endl;
 }
 
 void
-PhyRxOkTrace (std::string context, Ptr<const Packet> packet, double snr, WifiMode mode, enum WifiPreamble preamble)
-{
-  WifiMacHeader hdr;
-  packet->PeekHeader (hdr);
-  std::cout <<  Simulator::Now () << " " << context << " Packet Uid " << packet->GetUid() 
-  << " PHYRXOK mode=" << mode << " to=" << hdr.GetAddr1 () << " from=" << hdr.GetAddr2 () 
-  << std::endl;
+PhyRxOkTrace(std::string context, Ptr<const Packet> packet, double snr, WifiMode mode, enum WifiPreamble preamble) {
+    WifiMacHeader hdr;
+    packet->PeekHeader(hdr);
+    std::cout <<  Simulator::Now() << " " << context << " Packet Uid " << packet->GetUid()
+              << " PHYRXOK mode=" << mode << " to=" << hdr.GetAddr1() << " from=" << hdr.GetAddr2()
+              << std::endl;
 }
 
 void
-moveright (Ptr<Node> node)
-{
-  Ptr<MobilityModel> model = node->GetObject<MobilityModel> ();
-  Vector position = model->GetPosition ();
-  
- // std::cout << "at "  << Simulator::Now () << " node " << node->GetId() << " in x= " << position.x << " y= " << position.y << std::endl; 
+moveright(Ptr<Node> node) {
+    Ptr<MobilityModel> model = node->GetObject<MobilityModel> ();
+    Vector position = model->GetPosition();
 
-  model->SetPosition(Vector ((position.x + 2.5), position.y, 0)); 
-  
-  Simulator::Schedule(Seconds(0.5),&moveright, node);
+// std::cout << "at "  << Simulator::Now () << " node " << node->GetId() << " in x= " << position.x << " y= " << position.y << std::endl;
+
+    model->SetPosition(Vector((position.x + 2.5), position.y, 0));
+
+    Simulator::Schedule(Seconds(0.5), &moveright, node);
 
 }
 
 void
-moveup (Ptr<Node> node)
-{
-  Ptr<MobilityModel> model = node->GetObject<MobilityModel> ();
-  Vector position = model->GetPosition ();
-  
- // std::cout << "at "  << Simulator::Now () << " node " << node->GetId() << " in x= " << position.x << " y= " << position.y << std::endl; 
+moveup(Ptr<Node> node) {
+    Ptr<MobilityModel> model = node->GetObject<MobilityModel> ();
+    Vector position = model->GetPosition();
 
-  model->SetPosition(Vector ((position.x), (position.y +2.5), 0)); 
-  
-  Simulator::Schedule(Seconds(0.5),&moveup, node);
+// std::cout << "at "  << Simulator::Now () << " node " << node->GetId() << " in x= " << position.x << " y= " << position.y << std::endl;
+
+    model->SetPosition(Vector((position.x), (position.y + 2.5), 0));
+
+    Simulator::Schedule(Seconds(0.5), &moveup, node);
 
 
 }
 
 void
-ReceivePackets (PacketManager* packetManager, uint32_t nodeId)
-{
-  struct InciPacket::ReceivedInciPacket inciPacket;
-  std::cout << "*** iCS collecting received CAMs ***" << std::endl;
-  while ( packetManager->GetReceivedPacket(nodeId,inciPacket) )
-    {
-      std::cout << "Node=" << nodeId << " at time=" << inciPacket.ts << " received a msgType="<< inciPacket.msgType 
-      << " fromNode="<< inciPacket.senderId << std::endl;
+ReceivePackets(PacketManager* packetManager, uint32_t nodeId) {
+    struct InciPacket::ReceivedInciPacket inciPacket;
+    std::cout << "*** iCS collecting received CAMs ***" << std::endl;
+    while (packetManager->GetReceivedPacket(nodeId, inciPacket)) {
+        std::cout << "Node=" << nodeId << " at time=" << inciPacket.ts << " received a msgType=" << inciPacket.msgType
+                  << " fromNode=" << inciPacket.senderId << std::endl;
     }
 }
 
-NS_LOG_COMPONENT_DEFINE ("ns3_iTETRIS");
+NS_LOG_COMPONENT_DEFINE("ns3_iTETRIS");
 
-int 
-main (int argc, char *argv[])
-{
-  /**
-   * Two different configuration files can be used: a file (fileGeneralParameters) with the default attribute values to be used 
-   * in the simulation and a file (ConfigTechnologies) with the configuration of the iTETRIS scenario. The file paths can be passed 
-   * from the command line.
-   *
-   * In this example, the configTechnologiesWINNER.xml is used. This configuration file calls the confWaveVehicleWINNER.xml configuration
-   * file to install on vehicles ITS G5A Netdevices that communicate over a propagation channel modeled with the WINNER model for urban scenarios. the 
-   * This model is able to emulate the propagation effects deriving by pathloss, correlated shadowing and multipath fading in LOS and NLOS conditions
-   * according to the building map provided in the file asymmetricbuildings.txt. 
-   *
-   * In this script, two vehicles are created to exchange beacons at 10Hz transmission frequency. Starting from second 30, the distance between the two 
-   * vehicles increase as a consequence of vehicle 1's movement. As a result, less CAMs are received. Then, starting from second 60, vehicle 0 
-   * moves to the right and creates NLOS conditions with vehicle 1 (a wall between the line linking the two nodes is defined in asymmetricbuildings.txt). 
-   * As a result, no CAMs are received any longer.
-   */
-  std::string fileGeneralParameters = "";
-  std::string fileConfTechnologies = "";
-  CommandLine cmd;
-  cmd.AddValue("fileGeneralParameters", "Path to the configuration file", fileGeneralParameters);
-  cmd.AddValue("fileConfTechnologies", "Path to the configuration file", fileConfTechnologies);
-  cmd.Parse (argc, argv);
-  
-   LogComponentEnable ("ConfigurationManagerXml",LOG_LEVEL_DEBUG);
-   LogComponentEnable ("WaveInstaller",LOG_LEVEL_DEBUG);
-  
+int
+main(int argc, char* argv[]) {
+    /**
+     * Two different configuration files can be used: a file (fileGeneralParameters) with the default attribute values to be used
+     * in the simulation and a file (ConfigTechnologies) with the configuration of the iTETRIS scenario. The file paths can be passed
+     * from the command line.
+     *
+     * In this example, the configTechnologiesWINNER.xml is used. This configuration file calls the confWaveVehicleWINNER.xml configuration
+     * file to install on vehicles ITS G5A Netdevices that communicate over a propagation channel modeled with the WINNER model for urban scenarios. the
+     * This model is able to emulate the propagation effects deriving by pathloss, correlated shadowing and multipath fading in LOS and NLOS conditions
+     * according to the building map provided in the file asymmetricbuildings.txt.
+     *
+     * In this script, two vehicles are created to exchange beacons at 10Hz transmission frequency. Starting from second 30, the distance between the two
+     * vehicles increase as a consequence of vehicle 1's movement. As a result, less CAMs are received. Then, starting from second 60, vehicle 0
+     * moves to the right and creates NLOS conditions with vehicle 1 (a wall between the line linking the two nodes is defined in asymmetricbuildings.txt).
+     * As a result, no CAMs are received any longer.
+     */
+    std::string fileGeneralParameters = "";
+    std::string fileConfTechnologies = "";
+    CommandLine cmd;
+    cmd.AddValue("fileGeneralParameters", "Path to the configuration file", fileGeneralParameters);
+    cmd.AddValue("fileConfTechnologies", "Path to the configuration file", fileConfTechnologies);
+    cmd.Parse(argc, argv);
 
-  if (fileGeneralParameters != "")
-    {
-      Config::SetDefault ("ns3::ConfigStore::Filename", StringValue (fileGeneralParameters));
-      Config::SetDefault ("ns3::ConfigStore::Mode", StringValue ("Load"));
-      ConfigStore config;
-      config.ConfigureDefaults ();
+    LogComponentEnable("ConfigurationManagerXml", LOG_LEVEL_DEBUG);
+    LogComponentEnable("WaveInstaller", LOG_LEVEL_DEBUG);
+
+
+    if (fileGeneralParameters != "") {
+        Config::SetDefault("ns3::ConfigStore::Filename", StringValue(fileGeneralParameters));
+        Config::SetDefault("ns3::ConfigStore::Mode", StringValue("Load"));
+        ConfigStore config;
+        config.ConfigureDefaults();
     }
 
-  if (fileConfTechnologies == "")
-    {
-      fileConfTechnologies = "scratch/configTechnologiesWINNER.xml"; // change this
+    if (fileConfTechnologies == "") {
+        fileConfTechnologies = "scratch/configTechnologiesWINNER.xml"; // change this
     }
 
-  ConfigurationManagerXml confManager (fileConfTechnologies);
-  iTETRISNodeManager* nodeManager = new iTETRISNodeManager ();
-  confManager.ReadFile(nodeManager);
+    ConfigurationManagerXml confManager(fileConfTechnologies);
+    iTETRISNodeManager* nodeManager = new iTETRISNodeManager();
+    confManager.ReadFile(nodeManager);
 
-  nodeManager->CreateItetrisNode (Vector(200,200,0));
-  nodeManager->InstallCommunicationModule ("WaveVehicle");
-  
-  nodeManager->CreateItetrisNode (Vector(200,250,0));
-  nodeManager->InstallCommunicationModule ("WaveVehicle");
- 
+    nodeManager->CreateItetrisNode(Vector(200, 200, 0));
+    nodeManager->InstallCommunicationModule("WaveVehicle");
 
-  PacketManager* packetManager = new PacketManager ();
-  packetManager->SetNodeManager(nodeManager);
-  nodeManager->ActivateNode(0);
-  nodeManager->ActivateNode(1);
-  
-  
-   NodeContainer mobileNodes = nodeManager->GetItetrisNodes ();
-  
-      
-  Simulator::Schedule (Seconds (1.0), &PacketManager::ActivateCamTxon,packetManager,0,10,300,1);
-  Simulator::Schedule (Seconds (1.0), &PacketManager::ActivateCamTxon,packetManager,1,10,300,1);
+    nodeManager->CreateItetrisNode(Vector(200, 250, 0));
+    nodeManager->InstallCommunicationModule("WaveVehicle");
 
 
-  Simulator::Schedule(Seconds(30.0),&moveup, mobileNodes.Get (1));
-  Simulator::Schedule(Seconds(60.0),&moveright, mobileNodes.Get (0));
+    PacketManager* packetManager = new PacketManager();
+    packetManager->SetNodeManager(nodeManager);
+    nodeManager->ActivateNode(0);
+    nodeManager->ActivateNode(1);
 
-   Simulator::Schedule (Seconds (80.0), &ReceivePackets,packetManager,0);
+
+    NodeContainer mobileNodes = nodeManager->GetItetrisNodes();
 
 
-  Simulator::Stop (Seconds (sim_time));
- // Config::Connect ("/NodeList/*/DeviceList/*/Phy/State/RxOk", MakeCallback (&PhyRxOkTrace));
- // Config::Connect ("/NodeList/*/DeviceList/*/Phy/State/Tx", MakeCallback (&PhyTxTrace));
+    Simulator::Schedule(Seconds(1.0), &PacketManager::ActivateCamTxon, packetManager, 0, 10, 300, 1);
+    Simulator::Schedule(Seconds(1.0), &PacketManager::ActivateCamTxon, packetManager, 1, 10, 300, 1);
 
-  Simulator::Run ();
-  Simulator::Destroy ();
-  return 0;
+
+    Simulator::Schedule(Seconds(30.0), &moveup, mobileNodes.Get(1));
+    Simulator::Schedule(Seconds(60.0), &moveright, mobileNodes.Get(0));
+
+    Simulator::Schedule(Seconds(80.0), &ReceivePackets, packetManager, 0);
+
+
+    Simulator::Stop(Seconds(sim_time));
+// Config::Connect ("/NodeList/*/DeviceList/*/Phy/State/RxOk", MakeCallback (&PhyRxOkTrace));
+// Config::Connect ("/NodeList/*/DeviceList/*/Phy/State/Tx", MakeCallback (&PhyTxTrace));
+
+    Simulator::Run();
+    Simulator::Destroy();
+    return 0;
 }

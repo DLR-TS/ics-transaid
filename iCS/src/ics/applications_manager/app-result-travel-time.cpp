@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    app-result-travel-time.cpp
 /// @author  Julen Maneros
@@ -42,14 +59,12 @@
 using namespace tcpip;
 using namespace std;
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // member method definitions
 // ===========================================================================
-ResultTravelTime::ResultTravelTime(stationID_t owner, int appHandlerId)
-{
+ResultTravelTime::ResultTravelTime(stationID_t owner, int appHandlerId) {
     m_ownerStation = owner;
     m_applicationHandlerId = appHandlerId;
     m_containerIsEmpty = false;
@@ -63,8 +78,7 @@ ResultTravelTime::ResultTravelTime(stationID_t owner, int appHandlerId)
 }
 
 bool
-ResultTravelTime::ProcessResult(Storage& storage)
-{
+ResultTravelTime::ProcessResult(Storage& storage) {
     if (storage.size() == 0) {
         cout << "[ERROR] ProcessResult() There is no data from the application to be processed." << endl;
         return false;
@@ -122,59 +136,57 @@ ResultTravelTime::ProcessResult(Storage& storage)
 }
 
 int
-ResultTravelTime::ApplyResult(SyncManager* syncManager)
-{
+ResultTravelTime::ApplyResult(SyncManager* syncManager) {
     switch (m_travelTime.m_messageStatus) {
-    case kToBeScheduled: {
-        ITetrisNode* destinationNode =  syncManager->GetNodeByIcsId(m_travelTime.m_destinationStationId);
-        if (destinationNode == NULL) {  // check the possibility that the vehicle left the simulation
-            stringstream log;
-            log << "ResultTravelTime::ApplyResult() The iCS ID node does not longer exist: " << m_travelTime.m_destinationStationId;
-            IcsLog::LogLevel((log.str()).c_str(),kLogLevelInfo);
+        case kToBeScheduled: {
+            ITetrisNode* destinationNode =  syncManager->GetNodeByIcsId(m_travelTime.m_destinationStationId);
+            if (destinationNode == NULL) {  // check the possibility that the vehicle left the simulation
+                stringstream log;
+                log << "ResultTravelTime::ApplyResult() The iCS ID node does not longer exist: " << m_travelTime.m_destinationStationId;
+                IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+                return EXIT_SUCCESS;
+            }
+            unsigned char appMsgType = 0x01;        // TODO: Application message type hardcoded.
+            unsigned char commProfile = 0xFF;       // TODO: Communication profile for the technology selection hardcoded.
+            unsigned char preferredRATs = 0xFF;     // TODO: Preferred RATs for the transmission of the message hardcoded.
+            unsigned int msgLifetime = 2;           // TODO: Message lifetime hardcoded.
+            if (syncManager->ScheduleV2xUnicastMessages(
+                        m_ownerStation,
+                        m_applicationHandlerId,
+                        destinationNode,
+                        m_travelTime.m_messageId,
+                        appMsgType,
+                        m_travelTime.m_frequency,
+                        m_travelTime.m_payloadLength,
+                        m_travelTime.m_msgRegenerationTime,
+                        commProfile,
+                        preferredRATs,
+                        msgLifetime
+                    ) == EXIT_FAILURE) {
+                m_travelTime.m_messageStatus = kScheduled;
+                return EXIT_FAILURE;
+            }
+            break;
+        }
+        case kScheduled: {
+            IcsLog::LogLevel("ApplyResult() Message is already scheduled", kLogLevelInfo);
+            return EXIT_SUCCESS;
+            break;
+        }
+        case kArrived: {
+            IcsLog::LogLevel("ApplyResult()", kLogLevelInfo);
+            return EXIT_SUCCESS;
+            break;
+        }
+        default: {
+            IcsLog::LogLevel("ApplyResult() Status is not defined for the message", kLogLevelWarning);
             return EXIT_SUCCESS;
         }
-        unsigned char appMsgType = 0x01;        // TODO: Application message type hardcoded.
-        unsigned char commProfile = 0xFF;       // TODO: Communication profile for the technology selection hardcoded.
-        unsigned char preferredRATs = 0xFF;     // TODO: Preferred RATs for the transmission of the message hardcoded.
-        unsigned int msgLifetime = 2;           // TODO: Message lifetime hardcoded.
-        if (syncManager->ScheduleV2xUnicastMessages(
-                    m_ownerStation,
-                    m_applicationHandlerId,
-                    destinationNode,
-                    m_travelTime.m_messageId,
-                    appMsgType,
-                    m_travelTime.m_frequency,
-                    m_travelTime.m_payloadLength,
-                    m_travelTime.m_msgRegenerationTime,
-                    commProfile,
-                    preferredRATs,
-                    msgLifetime
-                ) == EXIT_FAILURE) {
-            m_travelTime.m_messageStatus = kScheduled;
-            return EXIT_FAILURE;
-        }
-        break;
-    }
-    case kScheduled: {
-        IcsLog::LogLevel("ApplyResult() Message is already scheduled", kLogLevelInfo);
-        return EXIT_SUCCESS;
-        break;
-    }
-    case kArrived: {
-        IcsLog::LogLevel("ApplyResult()", kLogLevelInfo);
-        return EXIT_SUCCESS;
-        break;
-    }
-    default: {
-        IcsLog::LogLevel("ApplyResult() Status is not defined for the message", kLogLevelWarning);
-        return EXIT_SUCCESS;
-    }
     }
 }
 
 int
-ResultTravelTime::CheckMessage(int appMessageId)
-{
+ResultTravelTime::CheckMessage(int appMessageId) {
     if (m_travelTime.m_messageId == appMessageId) {
         m_travelTime.m_messageStatus = kArrived;
         return EXIT_SUCCESS;
@@ -187,10 +199,9 @@ ResultTravelTime::CheckMessage(int appMessageId)
 }
 
 
-void ResultTravelTime::GetReceivedMessages(vector<pair<int,stationID_t> >& messages)
-{
+void ResultTravelTime::GetReceivedMessages(vector<pair<int, stationID_t> >& messages) {
     if (m_travelTime.m_messageStatus == kArrived) {
-        pair<int,stationID_t> message = make_pair(m_travelTime.m_messageId, m_travelTime.m_destinationStationId);
+        pair<int, stationID_t> message = make_pair(m_travelTime.m_messageId, m_travelTime.m_destinationStationId);
         messages.push_back(message);
 
 #ifdef LOG_ON
@@ -202,9 +213,8 @@ void ResultTravelTime::GetReceivedMessages(vector<pair<int,stationID_t> >& messa
     }
 }
 
-bool ResultTravelTime::AskSendMessageStatus()
-{
-	return true;
+bool ResultTravelTime::AskSendMessageStatus() {
+    return true;
 }
 
 }

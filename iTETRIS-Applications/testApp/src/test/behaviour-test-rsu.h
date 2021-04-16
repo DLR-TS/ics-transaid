@@ -1,34 +1,20 @@
-/****************************************************************************************
- * Copyright (c) 2015 The Regents of the University of Bologna.
- * This code has been developed in the context of the
- * FP7 ICT COLOMBO project under the Framework Programme,
- * FP7-ICT-2011-8, grant agreement no. 318622.
- * All rights reserved.
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
  *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
- * 1. Redistributions of source code must retain the above copyright notice,
- * this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation and/or
- * other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software must display
- * the following acknowledgement: ''This product includes software developed by the
- * University of Bologna and its contributors''.
- * 4. Neither the name of the University nor the names of its contributors may be used to
- * endorse or promote products derived from this software without specific prior written
- * permission.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
  *
- * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ''AS IS'' AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
- * THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
- * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
- * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- ***************************************************************************************/
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************************
  * Author Federico Caselli <f.caselli@unibo.it>
  * University of Bologna
@@ -48,108 +34,103 @@
 using namespace baseapp;
 using namespace baseapp::application;
 
-namespace testapp
-{
-	namespace application
-	{
-        /**
-         * Behaviour for rsu in test cases. Inherits from BehaviourNode to have the random response offset variables at hand.
-         */
-		class BehaviourTestRSU: public BehaviourRsu
-		{
-			public:
-				BehaviourTestRSU(iCSInterface* controller);
-				~BehaviourTestRSU();
+namespace testapp {
+namespace application {
+/**
+ * Behaviour for rsu in test cases. Inherits from BehaviourNode to have the random response offset variables at hand.
+ */
+class BehaviourTestRSU: public BehaviourRsu {
+public:
+    BehaviourTestRSU(iCSInterface* controller);
+    ~BehaviourTestRSU();
 
-				void Start();
+    void Start();
 
-				bool IsSubscribedTo(ProtocolId pid) const;
-				void Receive(server::Payload *payload, double snr);
-				bool Execute(DirectionValueMap &data);
-				void processCAMmessagesReceived(const int nodeID , const std::vector<CAMdata> & receivedCAMmessages);
-				void processTraCIResult(const int result, const Command& command);
+    bool IsSubscribedTo(ProtocolId pid) const;
+    void Receive(server::Payload* payload, double snr);
+    bool Execute(DirectionValueMap& data);
+    void processCAMmessagesReceived(const int nodeID, const std::vector<CAMdata>& receivedCAMmessages);
+    void processTraCIResult(const int result, const Command& command);
 
-                /**
-                 * @brief Called after a random timeout when a test message is received, @see Receive()
-                 * @input[in] sender The source of the received message
-                 */
-                void EventSendResponse(TestHeader::ResponseInfo response);
+    /**
+     * @brief Called after a random timeout when a test message is received, @see Receive()
+     * @input[in] sender The source of the received message
+     */
+    void EventSendResponse(TestHeader::ResponseInfo response);
 
-                void RSUBroadcastCommSimple2();
+    void RSUBroadcastCommSimple2();
 
-                void RSUBroadcastTestV2XmsgSet();
+    void RSUBroadcastTestV2XmsgSet();
 
-                void SendCAM();
+    void SendCAM();
 
-                void SendDENM();
+    void SendDENM();
 
-                void SendMCM();
+    void SendMCM();
 
-                void SendMCMTo(const std::string & vehID);
+    void SendMCMTo(const std::string& vehID);
 
-                void SendCPM();
+    void SendCPM();
 
-                void SendMAP();
+    void SendMAP();
 
-                void SendIVI();
+    void SendIVI();
 
-                void abortBroadcast();
+    void abortBroadcast();
 
-                TypeBehaviour GetType() const
-                {
-                    return Type();
-                }
+    TypeBehaviour GetType() const {
+        return Type();
+    }
 
-                static TypeBehaviour Type()
-                {
-                    return TYPE_BEHAVIOUR_TEST_RSU;
-                }
+    static TypeBehaviour Type() {
+        return TYPE_BEHAVIOUR_TEST_RSU;
+    }
 
-			private:
+private:
 
-                /// @name Flags to be used by test cases
-                /// @{
-                bool m_firstBroadcast;
-                bool m_broadcastActive;
-                int m_broadcastInterval;
-                bool m_mobilitySubscription;
-                bool m_trafficLightSubscription;
-                bool m_setCAMareaSubscription;
-                bool m_subReceiveMessage;
-                // see test "setVType"
-                std::string m_lastVType;
-                /// @}
+    /// @name Flags to be used by test cases
+    /// @{
+    bool m_firstBroadcast;
+    bool m_broadcastActive;
+    int m_broadcastInterval;
+    bool m_mobilitySubscription;
+    bool m_trafficLightSubscription;
+    bool m_setCAMareaSubscription;
+    bool m_subReceiveMessage;
+    // see test "setVType"
+    std::string m_lastVType;
+    /// @}
 
 
-                /// @name Events
-                /// @{
-                /// @brief used to refer to abort event scheduled at start
-                event_id m_eventBroadcast;
-                event_id m_eventAbortBroadcast;
-                event_id m_eventBroadcastCAM;
-                event_id m_eventBroadcastDENM;
-                event_id m_eventBroadcastMAP;
-                event_id m_eventBroadcastMCM;
-                event_id m_eventBroadcastIVI;
-                event_id m_eventBroadcastCPM;
-                /// @}
-                MessageScheduler* m_MessageScheduler;
+    /// @name Events
+    /// @{
+    /// @brief used to refer to abort event scheduled at start
+    event_id m_eventBroadcast;
+    event_id m_eventAbortBroadcast;
+    event_id m_eventBroadcastCAM;
+    event_id m_eventBroadcastDENM;
+    event_id m_eventBroadcastMAP;
+    event_id m_eventBroadcastMCM;
+    event_id m_eventBroadcastIVI;
+    event_id m_eventBroadcastCPM;
+    /// @}
+    MessageScheduler* m_MessageScheduler;
 
-                int m_broadcastCheckInterval;
+    int m_broadcastCheckInterval;
 
-                TransaidHeader::CamInfo * m_lastCAMsent;
-                TransaidHeader::DenmInfo * m_lastDENMsent;
-                TransaidHeader::CpmInfo * m_lastCPMsent;
-                TransaidHeader::McmRsuInfo * m_lastMCMsent;
-                TransaidHeader::MapInfo * m_lastMAPsent;
-                TransaidHeader::IviInfo * m_lastIVIsent;
+    TransaidHeader::CamInfo* m_lastCAMsent;
+    TransaidHeader::DenmInfo* m_lastDENMsent;
+    TransaidHeader::CpmInfo* m_lastCPMsent;
+    TransaidHeader::McmRsuInfo* m_lastMCMsent;
+    TransaidHeader::MapInfo* m_lastMAPsent;
+    TransaidHeader::IviInfo* m_lastIVIsent;
 
-                //CPM object detection
-				typedef std::map<int, baseapp::application::Node*> NodeMap;
-				NodeMap m_NodeMap;
-		};
+    //CPM object detection
+    typedef std::map<int, baseapp::application::Node*> NodeMap;
+    NodeMap m_NodeMap;
+};
 
-	} /* namespace application */
+} /* namespace application */
 } /* namespace protocol */
 
 #endif /* BEHAVIOUR_TEST_RSU_H_ */

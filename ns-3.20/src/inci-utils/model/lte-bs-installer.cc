@@ -1,6 +1,23 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
- * Copyright (c) 
+ * Copyright (c)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
@@ -20,61 +37,54 @@
 
 #include "lte-bs-installer.h"
 
-NS_LOG_COMPONENT_DEFINE ("LteBsInstaller");
+NS_LOG_COMPONENT_DEFINE("LteBsInstaller");
 
-namespace ns3
-{
+namespace ns3 {
 
-NS_OBJECT_ENSURE_REGISTERED (LteBsInstaller);
+NS_OBJECT_ENSURE_REGISTERED(LteBsInstaller);
 
-TypeId LteBsInstaller::GetTypeId (void)
-{
-  static TypeId tid = TypeId ("ns3::LteBsInstaller")
-    .SetParent<Object> ()     
-    .AddConstructor<LteBsInstaller>()
-    ;
-  return tid;
+TypeId LteBsInstaller::GetTypeId(void) {
+    static TypeId tid = TypeId("ns3::LteBsInstaller")
+                        .SetParent<Object> ()
+                        .AddConstructor<LteBsInstaller>()
+                        ;
+    return tid;
 }
 
-LteBsInstaller::LteBsInstaller ()
-{
+LteBsInstaller::LteBsInstaller() {
 
 }
 
 void
-LteBsInstaller::DoInstall (NodeContainer container, NetDeviceContainer createdDevices)
-{
-  NS_LOG_INFO ("*** LteBsInstaller ***");
+LteBsInstaller::DoInstall(NodeContainer container, NetDeviceContainer createdDevices) {
+    NS_LOG_INFO("*** LteBsInstaller ***");
 
-  uint32_t index = 0;
+    uint32_t index = 0;
 
-  for (NodeContainer::Iterator it = container.Begin (); it != container.End (); it++)
-    {
-      
-      // Check if the base station has the object LteBsMgnt already installed  //TODO implement
-      Ptr<LteBsMgnt> lteBsMg = (*it)->GetObject <LteBsMgnt> ();
-      if (lteBsMg  == NULL)
-      {
-    	  Ptr<NetDevice> device = (createdDevices).Get(index);
-    	  lteBsMg = CreateObject <LteBsMgnt> ();
-    	  lteBsMg->SetNode(*it);
-    	  lteBsMg->SetNetDevice(device);
-    	  (*it)->AggregateObject(lteBsMg);
-    	  NS_LOG_INFO ("The object LteBsMgnt has been installed in the base station");
-      }
+    for (NodeContainer::Iterator it = container.Begin(); it != container.End(); it++) {
 
-      Ptr<IPCIUFacilities> facilities = (*it)->GetObject <IPCIUFacilities> ();
-      if (facilities == NULL)
-      {
-    	  IPCIUFacilitiesHelper facilitiesHelper;
-    	  facilitiesHelper.SetServiceListHelper(m_servListHelper);
-    	  facilitiesHelper.Install(*it);
-    	  NS_LOG_INFO ("The object IPCIUFacilities has been installed in the vehicle");
-      }
+        // Check if the base station has the object LteBsMgnt already installed  //TODO implement
+        Ptr<LteBsMgnt> lteBsMg = (*it)->GetObject <LteBsMgnt> ();
+        if (lteBsMg  == NULL) {
+            Ptr<NetDevice> device = (createdDevices).Get(index);
+            lteBsMg = CreateObject <LteBsMgnt> ();
+            lteBsMg->SetNode(*it);
+            lteBsMg->SetNetDevice(device);
+            (*it)->AggregateObject(lteBsMg);
+            NS_LOG_INFO("The object LteBsMgnt has been installed in the base station");
+        }
 
-     index++ ;
+        Ptr<IPCIUFacilities> facilities = (*it)->GetObject <IPCIUFacilities> ();
+        if (facilities == NULL) {
+            IPCIUFacilitiesHelper facilitiesHelper;
+            facilitiesHelper.SetServiceListHelper(m_servListHelper);
+            facilitiesHelper.Install(*it);
+            NS_LOG_INFO("The object IPCIUFacilities has been installed in the vehicle");
+        }
+
+        index++ ;
     }
-    
+
 }
 
 } // namespace ns3

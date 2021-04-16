@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2009-2010, CBT, EU FP7 iTETRIS project
@@ -37,88 +54,82 @@ class UmtsMacLayer;
 class UmtsRrcLayerUE;
 class Node;
 
-class UMTSChannelHelper
-{
+class UMTSChannelHelper {
 public:
 
-  UMTSChannelHelper ();
-  static UMTSChannelHelper Default (void);  
-  Ptr<UMTSChannel> Create (void) const;
+    UMTSChannelHelper();
+    static UMTSChannelHelper Default(void);
+    Ptr<UMTSChannel> Create(void) const;
 
 };
 
 
-class UMTSPhyHelper
-{
+class UMTSPhyHelper {
 public:
-  ~UMTSPhyHelper ();
-  void SetNodeType(std::string type);
-  Ptr<Object> Create (std::string type) const;
-   static UMTSPhyHelper Default ();
-  void SetChannel (Ptr<UMTSChannel> channel);
-  void Set (std::string name, const AttributeValue &v);
+    ~UMTSPhyHelper();
+    void SetNodeType(std::string type);
+    Ptr<Object> Create(std::string type) const;
+    static UMTSPhyHelper Default();
+    void SetChannel(Ptr<UMTSChannel> channel);
+    void Set(std::string name, const AttributeValue& v);
 
 private:
 
-  ObjectFactory m_phy;
-  Ptr<UMTSChannel> m_channel;
+    ObjectFactory m_phy;
+    Ptr<UMTSChannel> m_channel;
 };
 
 
-class UMTSMacHelper
-{
+class UMTSMacHelper {
 public:
-  ~UMTSMacHelper ();
-  Ptr<Object> Create (std::string type) const;
-   static UMTSMacHelper Default (void);
+    ~UMTSMacHelper();
+    Ptr<Object> Create(std::string type) const;
+    static UMTSMacHelper Default(void);
 private:
 
-  ObjectFactory m_mac;
+    ObjectFactory m_mac;
 };
 
-class UMTSRlcHelper
-{
+class UMTSRlcHelper {
 public:
-  UMTSRlcHelper();
-  ~UMTSRlcHelper ();
-  Ptr<Object> Create (std::string type) const;
-   static UMTSRlcHelper Default (void);
+    UMTSRlcHelper();
+    ~UMTSRlcHelper();
+    Ptr<Object> Create(std::string type) const;
+    static UMTSRlcHelper Default(void);
 private:
 
-  ObjectFactory m_rlc;
+    ObjectFactory m_rlc;
 
 };
 
-class UMTSRrcHelper
-{
+class UMTSRrcHelper {
 public:
-  ~UMTSRrcHelper ();
-  Ptr<Object> Create (std::string type) const;
-   static UMTSRrcHelper Default (void);
+    ~UMTSRrcHelper();
+    Ptr<Object> Create(std::string type) const;
+    static UMTSRrcHelper Default(void);
 private:
 
-  ObjectFactory m_rrc;
+    ObjectFactory m_rrc;
 
 };
 
 
 
-class UMTSHelper
-{
+class UMTSHelper {
 public:
 
-  UMTSHelper ();
+    UMTSHelper();
 
-  static UMTSHelper Default (void);
-  
-  NetDeviceContainer Install (const UMTSPhyHelper &phyHelper,std::string nodeType,NodeContainer c) const;
-  NetDeviceContainer Install (const UMTSPhyHelper &phy, std::string nodeType, Ptr<Node> node) const;
-  NetDeviceContainer Install (const UMTSPhyHelper &phy,std::string nodeType, std::string nodeName) const;
-  NetDeviceContainer Install (NodeContainer c,std::string nodeType,Ptr<UMTSChannel> broadcastChannel) ;
+    static UMTSHelper Default(void);
 
-  Ptr<UMTSNetDevice>  NetDeviceInstall(NodeContainer c,Ptr<UMTSChannel> broadcastChannel,std::string nodeType);
-  
-  
+    NetDeviceContainer Install(const UMTSPhyHelper& phyHelper, std::string nodeType, NodeContainer c) const;
+    NetDeviceContainer Install(const UMTSPhyHelper& phy, std::string nodeType, Ptr<Node> node) const;
+    NetDeviceContainer Install(const UMTSPhyHelper& phy, std::string nodeType, std::string nodeName) const;
+    NetDeviceContainer Install(NodeContainer c, std::string nodeType, Ptr<UMTSChannel> broadcastChannel) ;
+
+    Ptr<UMTSNetDevice>  NetDeviceInstall(NodeContainer c, Ptr<UMTSChannel> broadcastChannel, std::string nodeType);
+
+
 };
 
 } // namespace ns3

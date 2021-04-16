@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2009-2010, Uwicore Laboratory (www.uwicore.umh.es),
@@ -26,51 +43,45 @@
 // Specific objects for Wifi BSs
 #include "ns3/wifi-bs-mgnt.h"
 
-NS_LOG_COMPONENT_DEFINE ("WifiBsInstaller");
+NS_LOG_COMPONENT_DEFINE("WifiBsInstaller");
 
-namespace ns3
-{
+namespace ns3 {
 
-NS_OBJECT_ENSURE_REGISTERED (WifiBsInstaller);
+NS_OBJECT_ENSURE_REGISTERED(WifiBsInstaller);
 
-TypeId WifiBsInstaller::GetTypeId (void)
-{
-  static TypeId tid = TypeId ("ns3::WifiBsInstaller")
-    .SetParent<Object> ()     
-    .AddConstructor<WifiBsInstaller> ()             
-    ;
-  return tid;
-}
-    
-void
-WifiBsInstaller::Install (NodeContainer container) 
-{
-  NetDeviceContainer netDevices = wifi.Install (wifiPhy, wifiMac, container);
-  m_ipAddressHelper.Assign (netDevices);
-  AddInterfacesToIpInterfaceList (container);
-  ConfigureDerivedWifiStation (container, netDevices);
+TypeId WifiBsInstaller::GetTypeId(void) {
+    static TypeId tid = TypeId("ns3::WifiBsInstaller")
+                        .SetParent<Object> ()
+                        .AddConstructor<WifiBsInstaller> ()
+                        ;
+    return tid;
 }
 
 void
-WifiBsInstaller::ConfigureDerivedWifiStation (NodeContainer container, NetDeviceContainer devices)
-{
-  NS_LOG_INFO ("WifiBsInstaller");
-  uint32_t index = 0;
+WifiBsInstaller::Install(NodeContainer container) {
+    NetDeviceContainer netDevices = wifi.Install(wifiPhy, wifiMac, container);
+    m_ipAddressHelper.Assign(netDevices);
+    AddInterfacesToIpInterfaceList(container);
+    ConfigureDerivedWifiStation(container, netDevices);
+}
 
-  for (NodeContainer::Iterator i = container.Begin (); i != container.End (); i++)
-    {
-      // Check if the base station has the object WifiBsMgnt already installed
-      Ptr<IpBaseStaMgnt> wifiBsMgnt = (*i)->GetObject <WifiBsMgnt> ();
-      if (wifiBsMgnt == NULL)
-	{
-          Ptr<NetDevice> device = devices.Get(index);
-          wifiBsMgnt = CreateObject <WifiBsMgnt> ();
-          wifiBsMgnt->SetNode (*i);
-          wifiBsMgnt->SetNetDevice (device);
-          (*i)->AggregateObject (wifiBsMgnt);
-          NS_LOG_INFO ("The object WifiBsMgnt has been installed in the base station");
+void
+WifiBsInstaller::ConfigureDerivedWifiStation(NodeContainer container, NetDeviceContainer devices) {
+    NS_LOG_INFO("WifiBsInstaller");
+    uint32_t index = 0;
+
+    for (NodeContainer::Iterator i = container.Begin(); i != container.End(); i++) {
+        // Check if the base station has the object WifiBsMgnt already installed
+        Ptr<IpBaseStaMgnt> wifiBsMgnt = (*i)->GetObject <WifiBsMgnt> ();
+        if (wifiBsMgnt == NULL) {
+            Ptr<NetDevice> device = devices.Get(index);
+            wifiBsMgnt = CreateObject <WifiBsMgnt> ();
+            wifiBsMgnt->SetNode(*i);
+            wifiBsMgnt->SetNetDevice(device);
+            (*i)->AggregateObject(wifiBsMgnt);
+            NS_LOG_INFO("The object WifiBsMgnt has been installed in the base station");
         }
-      index ++;
+        index ++;
     }
 }
 

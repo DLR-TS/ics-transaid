@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    Edge.cpp
 /// @author  Pasquale Cataldi (EURECOM)
@@ -54,17 +71,19 @@ const vector<roadElementID_t>& Edge::getLaneIDs() const {
     return laneIDs;
 }
 
-void Edge::setLaneIDs(vector<roadElementID_t> *pLaneIDs) {
-    if (!laneIDs.empty())
+void Edge::setLaneIDs(vector<roadElementID_t>* pLaneIDs) {
+    if (!laneIDs.empty()) {
         laneIDs.clear();
+    }
     laneIDs = *pLaneIDs;
     return;
 }
 
 bool Edge::containsLane(roadElementID_t laneID) {
-    for (unsigned int i=0; i<laneIDs.size(); i++) {
-        if (laneIDs[i] == laneID)
+    for (unsigned int i = 0; i < laneIDs.size(); i++) {
+        if (laneIDs[i] == laneID) {
             return true;
+        }
     }
     return false;
 }

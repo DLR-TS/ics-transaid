@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    iCSGeoUtils.cpp
 /// @author  Pasquale Cataldi (EURECOM)
@@ -43,7 +60,7 @@ using namespace GeographicLib;
  \param[out] vector containing the latitude, longitude and altitude coordinates, respectively.
  */
 std::vector <double>
-GeoCentrToGeoConvert (double x, double y, double z) {
+GeoCentrToGeoConvert(double x, double y, double z) {
     std::vector<double> result;
     Math::real lat, lon, h;
     const Geocentric& ec = Geocentric::WGS84();
@@ -61,7 +78,7 @@ GeoCentrToGeoConvert (double x, double y, double z) {
  \param[out] std::vector containing the latitude, longitude and altitude coordinates, respectively.
  */
 std::vector <double>
-LocToGeoConvert (double x, double y, double z, double localLat, double localLon, double localAlt) {
+LocToGeoConvert(double x, double y, double z, double localLat, double localLon, double localAlt) {
     std::vector<double> result;
     Math::real lat, lon, h;
 
@@ -81,15 +98,15 @@ LocToGeoConvert (double x, double y, double z, double localLat, double localLon,
  */
 std::vector <double>
 GeoToLocConvert(double lat, double lon, double h,  double localLat, double localLon, double localAlt) {
-  std::vector<double> result;
-  double x, y, z;
-  const LocalCartesian lc(localLat, localLon, localAlt);
-  lc.Forward(lat, lon, h, x, y, z);
+    std::vector<double> result;
+    double x, y, z;
+    const LocalCartesian lc(localLat, localLon, localAlt);
+    lc.Forward(lat, lon, h, x, y, z);
 
-  result.push_back(x);
-  result.push_back(y);
-  result.push_back(z);
-  return result;
+    result.push_back(x);
+    result.push_back(y);
+    result.push_back(z);
+    return result;
 }
 
 /*! \fn std::vector <double> GeoToGeoCentrConvert(double lat, double lon, double h)
@@ -99,13 +116,13 @@ GeoToLocConvert(double lat, double lon, double h,  double localLat, double local
  */
 std::vector <double>
 GeoToGeoCentrConvert(double lat, double lon, double h) {
-  std::vector<double> result;
-  double x, y, z;
-  const Geocentric& ec = Geocentric::WGS84();
+    std::vector<double> result;
+    double x, y, z;
+    const Geocentric& ec = Geocentric::WGS84();
 
-  ec.Forward(lat, lon, h, x, y, z);
-  result.push_back(x);
-  result.push_back(y);
-  result.push_back(z);
-  return result;
+    ec.Forward(lat, lon, h, x, y, z);
+    result.push_back(x);
+    result.push_back(y);
+    result.push_back(z);
+    return result;
 }

@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    Point2D.h
 /// @author  Pasquale Cataldi (EURECOM)
@@ -41,10 +58,10 @@ class Point2D {
 
 public:
     Point2D() : 				/**< Void constructor. */
-            myX(0.0), myY(0.0) {}
+        myX(0.0), myY(0.0) {}
 
     Point2D(float x, float y):	/**< Alternative constructor. */
-            myX(x), myY(y) {}
+        myX(x), myY(y) {}
 
     ~Point2D() {}				/**< Destructor. */
 
@@ -92,7 +109,7 @@ public:
      \brief Set the values of the point given the address of another point.
      \param[in] &pos address of the input point.
     */
-    void set(const Point2D &pos) {
+    void set(const Point2D& pos) {
         myX = pos.myX;
         myY = pos.myY;
     }
@@ -120,7 +137,7 @@ public:
      \brief Add the coordinates of a point to the current point.
      \param[in] &pos Address of the input point to be added.
     */
-    void add(const Point2D &pos) {
+    void add(const Point2D& pos) {
         myX += pos.myX;
         myY += pos.myY;
     }
@@ -139,7 +156,7 @@ public:
      \brief Subtract the coordinates of a point to the current point.
      \param[in] &pos Address of the input point to be subtracted.
     */
-    void sub(const Point2D &pos) {
+    void sub(const Point2D& pos) {
         myX -= pos.myX;
         myY -= pos.myY;
     }
@@ -158,7 +175,7 @@ public:
     	 \brief Normalize the coordinates of the point to be between 0 and 1.
     */
     void norm() {
-        float val = sqrt(myX*myX + myY*myY);
+        float val = sqrt(myX * myX + myY * myY);
         myX = myX / val;
         myY = myY / val;
     }
@@ -179,7 +196,7 @@ public:
     /*! \fn friend std::ostream &operator<<(std::ostream &os, const Point2D &p)
      \brief Print the coordinates of the point.
     */
-    friend std::ostream &operator<<(std::ostream &os, const Point2D &p) {
+    friend std::ostream& operator<<(std::ostream& os, const Point2D& p) {
         os << p.x() << "," << p.y();
         return os;
     }
@@ -188,16 +205,16 @@ public:
      \brief Overloading of the 'equal to' operator for the class Point2D.
      \return Output of the operator 'equal to'.
     */
-    bool operator==(const Point2D &p2) const {
-        return myX==p2.myX && myY==p2.myY;
+    bool operator==(const Point2D& p2) const {
+        return myX == p2.myX && myY == p2.myY;
     }
 
     /*! \fn bool operator!=(const Point2D &p2) const
      \brief Overloading of the 'not equal to' operator for the class Point2D.
      \return Output of the operator 'not equal to'.
     */
-    bool operator!=(const Point2D &p2) const {
-        return myX!=p2.myX || myY!=p2.myY;
+    bool operator!=(const Point2D& p2) const {
+        return myX != p2.myX || myY != p2.myY;
     }
 
     /*! \fn bool almostSame(const Point2D &p2, float maxDiv=POSITION_EPS) const
@@ -206,8 +223,8 @@ public:
      \param[in] maxDiv Maximum difference value.
      \return true if the points are the (almost) same, false otherwise.
     */
-    bool almostSame(const Point2D &p2, float maxDiv=POSITION_EPS) const {
-        return fabs(myX-p2.myX)<maxDiv && fabs(myY-p2.myY)<maxDiv;
+    bool almostSame(const Point2D& p2, float maxDiv = POSITION_EPS) const {
+        return fabs(myX - p2.myX) < maxDiv && fabs(myY - p2.myY) < maxDiv;
     }
 
     /*! \fn inline float distanceTo(const Point2D &p2) const
@@ -215,7 +232,7 @@ public:
      \param[in] &p2 Address of the reference point.
      \return Distance.
     */
-    inline float distanceTo(const Point2D &p2) const {
+    inline float distanceTo(const Point2D& p2) const {
         return sqrt(distanceSquaredTo(p2));
     }
 
@@ -224,8 +241,8 @@ public:
      \param[in] &p2 Address of the reference point.
      \return Quadratic distance.
     */
-    inline float distanceSquaredTo(const Point2D &p2) const {
-        return (myX-p2.myX)*(myX-p2.myX) + (myY-p2.myY)*(myY-p2.myY);
+    inline float distanceSquaredTo(const Point2D& p2) const {
+        return (myX - p2.myX) * (myX - p2.myX) + (myY - p2.myY) * (myY - p2.myY);
     }
 
 
@@ -234,7 +251,7 @@ public:
      \return Arc tangent in radians.
     */
     inline float originAtan(void) const {
-        return atan(myY/myX);
+        return atan(myY / myX);
     }
 
     /*! \fn inline float shiftedAtan(const Point2D &p2) const
@@ -242,8 +259,8 @@ public:
      \param[in] &p2 Address of the reference point.
      \return Referred arc tangent in radians.
     */
-    inline float shiftedAtan(const Point2D &p2) const {
-        return atan((myY-p2.myY)/(myX-p2.myX));
+    inline float shiftedAtan(const Point2D& p2) const {
+        return atan((myY - p2.myY) / (myX - p2.myX));
     }
 
 private:

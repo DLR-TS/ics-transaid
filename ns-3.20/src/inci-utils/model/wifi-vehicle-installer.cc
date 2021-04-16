@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2009-2010, Uwicore Laboratory (www.uwicore.umh.es),
@@ -29,80 +46,70 @@
 #include "ns3/c2c-facilities-helper.h"
 #include "ns3/iTETRISns3Facilities.h"
 
-NS_LOG_COMPONENT_DEFINE ("WifiVehicleInstaller");
+NS_LOG_COMPONENT_DEFINE("WifiVehicleInstaller");
 
-namespace ns3
-{
+namespace ns3 {
 
-NS_OBJECT_ENSURE_REGISTERED (WifiVehicleInstaller);
+NS_OBJECT_ENSURE_REGISTERED(WifiVehicleInstaller);
 
-TypeId WifiVehicleInstaller::GetTypeId (void)
-{
-  static TypeId tid = TypeId ("ns3::WifiVehicleInstaller")
-    .SetParent<Object> ()     
-    .AddConstructor<WifiVehicleInstaller> ()             
-    ;
-  return tid;
-}
-    
-void
-WifiVehicleInstaller::Install (NodeContainer container) 
-{
-  NetDeviceContainer netDevices = wifi.Install (wifiPhy, wifiMac, container);
-  m_ipAddressHelper.Assign (netDevices);
-  AddInterfacesToIpInterfaceList (container);
-  ConfigureDerivedWifiStation (container, netDevices);
+TypeId WifiVehicleInstaller::GetTypeId(void) {
+    static TypeId tid = TypeId("ns3::WifiVehicleInstaller")
+                        .SetParent<Object> ()
+                        .AddConstructor<WifiVehicleInstaller> ()
+                        ;
+    return tid;
 }
 
 void
-WifiVehicleInstaller::ConfigureDerivedWifiStation (NodeContainer container, NetDeviceContainer devices)
-{
-  NS_LOG_INFO ("WifiVehicleInstaller");
-  uint32_t index = 0;
+WifiVehicleInstaller::Install(NodeContainer container) {
+    NetDeviceContainer netDevices = wifi.Install(wifiPhy, wifiMac, container);
+    m_ipAddressHelper.Assign(netDevices);
+    AddInterfacesToIpInterfaceList(container);
+    ConfigureDerivedWifiStation(container, netDevices);
+}
 
-  for (NodeContainer::Iterator i = container.Begin (); i != container.End (); i++)
-    {
-      Ptr<NetDevice> device = devices.Get(index);
+void
+WifiVehicleInstaller::ConfigureDerivedWifiStation(NodeContainer container, NetDeviceContainer devices) {
+    NS_LOG_INFO("WifiVehicleInstaller");
+    uint32_t index = 0;
 
-      // Check if the NetDevice has the object WifiScanMngr already installed
-      Ptr<VehicleScanMngr> vehicleScanMngr = device->GetObject <WifiVehicleScanMngr> ();
-      if (vehicleScanMngr == NULL)
-	{
-          vehicleScanMngr = CreateObject <WifiVehicleScanMngr> ();
-          vehicleScanMngr->SetNetDevice (device);
-          NS_LOG_INFO ("The object WifiScanMngr has been attached to the NetDevice");
+    for (NodeContainer::Iterator i = container.Begin(); i != container.End(); i++) {
+        Ptr<NetDevice> device = devices.Get(index);
+
+        // Check if the NetDevice has the object WifiScanMngr already installed
+        Ptr<VehicleScanMngr> vehicleScanMngr = device->GetObject <WifiVehicleScanMngr> ();
+        if (vehicleScanMngr == NULL) {
+            vehicleScanMngr = CreateObject <WifiVehicleScanMngr> ();
+            vehicleScanMngr->SetNetDevice(device);
+            NS_LOG_INFO("The object WifiScanMngr has been attached to the NetDevice");
         }
 
-      // Check if the vehicle has the object VehicleStaMgnt already installed
-      Ptr<VehicleStaMgnt> vehicleStaMgnt = (*i)->GetObject <VehicleStaMgnt> ();
-      if (vehicleStaMgnt == NULL)
-	{
-          vehicleStaMgnt = CreateObject <VehicleStaMgnt> ();
-          vehicleStaMgnt->SetNode (*i);
-          (*i)->AggregateObject (vehicleStaMgnt);
-          NS_LOG_INFO ("The object VehicleStaMgnt has been installed in the vehicle");
+        // Check if the vehicle has the object VehicleStaMgnt already installed
+        Ptr<VehicleStaMgnt> vehicleStaMgnt = (*i)->GetObject <VehicleStaMgnt> ();
+        if (vehicleStaMgnt == NULL) {
+            vehicleStaMgnt = CreateObject <VehicleStaMgnt> ();
+            vehicleStaMgnt->SetNode(*i);
+            (*i)->AggregateObject(vehicleStaMgnt);
+            NS_LOG_INFO("The object VehicleStaMgnt has been installed in the vehicle");
         }
-      vehicleStaMgnt->AddIpTechnology ("Wifi",device, vehicleScanMngr);
+        vehicleStaMgnt->AddIpTechnology("Wifi", device, vehicleScanMngr);
 
-       // Check if the vehicle has the Facilities already installed
-      Ptr<iTETRISns3Facilities> facilities = (*i)->GetObject <iTETRISns3Facilities> ();
-      if (facilities == NULL)
-	{
-          C2CFacilitiesHelper facilitiesHelper;
-          facilitiesHelper.AddDefaultServices (m_servListHelper);
-          facilitiesHelper.Install (*i);
-          NS_LOG_INFO ("The object iTETRISns3Facilities has been installed in the vehicle");
-        }
-      else
-        {
-          C2CFacilitiesHelper facilitiesHelper;
-          facilitiesHelper.SetServiceListHelper (m_servListHelper);
-          facilitiesHelper.AddServices (facilities, *i);
-          NS_LOG_INFO ("New services have been installed in the vehicle");
+        // Check if the vehicle has the Facilities already installed
+        Ptr<iTETRISns3Facilities> facilities = (*i)->GetObject <iTETRISns3Facilities> ();
+        if (facilities == NULL) {
+            C2CFacilitiesHelper facilitiesHelper;
+            facilitiesHelper.AddDefaultServices(m_servListHelper);
+            facilitiesHelper.Install(*i);
+            NS_LOG_INFO("The object iTETRISns3Facilities has been installed in the vehicle");
+        } else {
+            C2CFacilitiesHelper facilitiesHelper;
+            facilitiesHelper.SetServiceListHelper(m_servListHelper);
+            facilitiesHelper.AddServices(facilities, *i);
+            NS_LOG_INFO("New services have been installed in the vehicle");
         }
 
 
-      index ++;
+        index ++;
     }
 }
 

@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    subs-app-message-send.h
 /// @author  Pasquale Cataldi (EURECOM)
@@ -32,8 +49,7 @@
 #include "../../utils/ics/iCStypes.h"
 #include "foreign/tcpip/storage.h"
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // class definitions
@@ -42,8 +58,7 @@ namespace ics
 * @class SubsAppMessageSend
 * @brief Manages the subscriptions to send application messages from a station.
 */
-class SubsAppMessageSend: public ics::Subscription
-{
+class SubsAppMessageSend: public ics::Subscription {
 public:
 
     /**
@@ -173,7 +188,7 @@ private:
     */
     bool push(SyncManager* syncManager);
 
-    std::vector<unsigned char> * readGenericContainerAndExtrea(string & extra);
+    std::vector<unsigned char>* readGenericContainerAndExtrea(string& extra);
 };
 
 }

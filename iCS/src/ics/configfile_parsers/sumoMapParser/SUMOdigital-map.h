@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    SUMOdigital-map.h
 /// @author  Pasquale Cataldi (EURECOM)
@@ -100,7 +117,7 @@ struct SUMOPhase {
     string state;                                    /**< Traffic light program's state. */
 
     SUMOPhase():                                         /**< Initializer */
-            duration(0), state("") {};
+        duration(0), state("") {};
 };
 
 /*! \struct SUMOLogicitem
@@ -113,7 +130,7 @@ struct SUMOLogicitem {
     bool cont;                                        /**<  */
 
     SUMOLogicitem():                                    /**< Initializer. */
-            request(0), response(""), foes(""), cont(false) {};
+        request(0), response(""), foes(""), cont(false) {};
 };
 
 
@@ -140,8 +157,8 @@ public:
     float width;
     SVCPermissions permissions;
     vector<Point2D> shape;                            /**< Shape of the lane, defined by a set of points. */
-    vector<SUMOLane *> nextSUMOLanes;                        /**< Vector of pointers to the next lanes. */
-    vector<SUMOLane *> prevSUMOLanes;                        /**< Vector of pointers to the previous lanes. */
+    vector<SUMOLane*> nextSUMOLanes;                         /**< Vector of pointers to the next lanes. */
+    vector<SUMOLane*> prevSUMOLanes;                         /**< Vector of pointers to the previous lanes. */
 };
 
 /*! \class SUMOEdge
@@ -159,7 +176,7 @@ public:
     SumoXMLEdgeFunc funct;                      /**< function of the edge. */
     bool inner;                               /**< indicates that the edge is inside of a junction. */
     map<string, SUMOLane> lanes;                /**< Set of lanes contained by the edge.*/
-}; 
+};
 
 /*! \class SUMOJunction
  \brief Class that contains the information about a junction.
@@ -226,13 +243,13 @@ struct SUMOTrafficlight {
     string tlID;                   /**< Traffic light ID for this signal. */
     short linkIndex;               /**< ID of the traffic light in the map. */
     Point2D pos;                   /**< 2D-position of the traffic light. */
-    SUMOLane *controlled;          /**< Pointer to the controlled lane. */
-    SUMOLane *via;                 /**< Pointer to the lane of the junction that connects the controlled lane to the next one (succ). */
-    SUMOLane *succ;                /**< Pointer to the next lane. */
+    SUMOLane* controlled;          /**< Pointer to the controlled lane. */
+    SUMOLane* via;                 /**< Pointer to the lane of the junction that connects the controlled lane to the next one (succ). */
+    SUMOLane* succ;                /**< Pointer to the next lane. */
     char direction;                /**< direction indicated by the traffic light. */
 
     SUMOTrafficlight():                                 /**< Initializer. */
-            icsID(-1), direction(' ') {};
+        icsID(-1), direction(' ') {};
 };
 
 
@@ -262,7 +279,7 @@ public:
 
     // Public functions
     bool loadMap(string filename);                 /**< load the topology map contained in the file 'filename'. */
-    SUMOLane *findSUMOLane(const std::string &laneID);                /**< returns the pointer to the SUMOLane object given the lane id. */
+    SUMOLane* findSUMOLane(const std::string& laneID);                /**< returns the pointer to the SUMOLane object given the lane id. */
 
 
 protected:

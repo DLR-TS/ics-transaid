@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    ICSFacilities.h
 /// @author  Pasquale Cataldi (EURECOM)
@@ -43,150 +60,148 @@
 #include <string>
 using namespace std;
 
-namespace ics_facilities
-{
+namespace ics_facilities {
 
-class ICSFacilities
-{
+class ICSFacilities {
 public:
 
-  /**
-   * @brief Constructor.
-   */
-  ICSFacilities();
+    /**
+     * @brief Constructor.
+     */
+    ICSFacilities();
 
-  /**
-   * @brief Destructor.
-   */
-  virtual ~ICSFacilities();
+    /**
+     * @brief Destructor.
+     */
+    virtual ~ICSFacilities();
 
-  // ===============================================================
-  // ====================== Configuration      =====================
-  // ===============================================================
+    // ===============================================================
+    // ====================== Configuration      =====================
+    // ===============================================================
 
-  bool configureMap(string mapFilename);
-  void configureLocalCoordinates(latitude_t lat0, longitude_t lon0, altitude_t alt0);
-  bool configureStations(string stationFilename);
-  bool configureRelevanceRules(string relevFilename);
+    bool configureMap(string mapFilename);
+    void configureLocalCoordinates(latitude_t lat0, longitude_t lon0, altitude_t alt0);
+    bool configureStations(string stationFilename);
+    bool configureRelevanceRules(string relevFilename);
 
-  // ===============================================================
-  // ====================== Map related       ======================
-  // ===============================================================
+    // ===============================================================
+    // ====================== Map related       ======================
+    // ===============================================================
 
-  const Lane* getLane(roadElementID_t laneID) const;
-  const Edge* getEdge(roadElementID_t edgeID) const;
-  const Junction* getJunction(roadElementID_t junctionID) const;
-  const TrafficLight* getTrafficLight(trafficLightID_t trafficLightID) const;
-  const Edge* getEdgeFromLane(roadElementID_t laneID) const;
-  const Junction* getJunctionFromLane(roadElementID_t laneID) const;
+    const Lane* getLane(roadElementID_t laneID) const;
+    const Edge* getEdge(roadElementID_t edgeID) const;
+    const Junction* getJunction(roadElementID_t junctionID) const;
+    const TrafficLight* getTrafficLight(trafficLightID_t trafficLightID) const;
+    const Edge* getEdgeFromLane(roadElementID_t laneID) const;
+    const Junction* getJunctionFromLane(roadElementID_t laneID) const;
 
-  const Lane* convertPoint2Map(Point2D& pos) const;
-  const Junction* getClosestJunction(Point2D pos) const;
-  const vector<roadElementID_t> getNeighboringJunctions(roadElementID_t junctionID) const;
-  vector<const Edge*>* getEdgesFromJunction(roadElementID_t junctionID_A, roadElementID_t junctionID_B);
-  vector<const Lane*>* getLanesFromJunctions(roadElementID_t junctionID_A, roadElementID_t junctionID_B);
-  vector<const Junction*>* getJunctionsFromEdge(roadElementID_t edgeID);
+    const Lane* convertPoint2Map(Point2D& pos) const;
+    const Junction* getClosestJunction(Point2D pos) const;
+    const vector<roadElementID_t> getNeighboringJunctions(roadElementID_t junctionID) const;
+    vector<const Edge*>* getEdgesFromJunction(roadElementID_t junctionID_A, roadElementID_t junctionID_B);
+    vector<const Lane*>* getLanesFromJunctions(roadElementID_t junctionID_A, roadElementID_t junctionID_B);
+    vector<const Junction*>* getJunctionsFromEdge(roadElementID_t edgeID);
 
-  void setLaneStatus(roadElementID_t laneID, laneStatus newStatus);
-  void setLaneWeight(roadElementID_t laneID, laneWeight_t newWeight);
+    void setLaneStatus(roadElementID_t laneID, laneStatus newStatus);
+    void setLaneWeight(roadElementID_t laneID, laneWeight_t newWeight);
 
-  void updateTrafficLightDynamicInformation(const trafficLightID_t &tlID, std::string& state);
+    void updateTrafficLightDynamicInformation(const trafficLightID_t& tlID, std::string& state);
 
-  Area2D* getWholeArea(vector<Area2D*> areas);
-  Circle getCircleFromArea(Area2D* area);
+    Area2D* getWholeArea(vector<Area2D*> areas);
+    Circle getCircleFromArea(Area2D* area);
 
-  latitude_t getLat0();
-  longitude_t getLon0();
-  altitude_t getAlt0();
+    latitude_t getLat0();
+    longitude_t getLon0();
+    altitude_t getAlt0();
 
-  // ===============================================================
-  // ====================== Stations related  ======================
-  // ===============================================================
+    // ===============================================================
+    // ====================== Stations related  ======================
+    // ===============================================================
 
-  const Station* getStation(stationID_t stationID) const;
-  const MobileStation* getMobileStation(stationID_t mobileStationID);
-  const FixedStation* getFixedStation(stationID_t fixedStationID);
-  const map<stationID_t, Station*>& getAllStations() const;
-  map<stationID_t, const MobileStation*>* getAllMobileStations();
-  map<stationID_t, const FixedStation*>* getAllFixedStations();
-  void updateMobileStationDynamicInformation(stationID_t stationId, TMobileStationDynamicInfo info);
+    const Station* getStation(stationID_t stationID) const;
+    const MobileStation* getMobileStation(stationID_t mobileStationID);
+    const FixedStation* getFixedStation(stationID_t fixedStationID);
+    const map<stationID_t, Station*>& getAllStations() const;
+    map<stationID_t, const MobileStation*>* getAllMobileStations();
+    map<stationID_t, const FixedStation*>* getAllFixedStations();
+    void updateMobileStationDynamicInformation(stationID_t stationId, TMobileStationDynamicInfo info);
 
-  map<stationID_t, const Station*>* getStationsInArea(GeometricShape &area);
-  map<stationID_t, const Station*>* getStationsInArea(vector<RoadElement*> &area);
-  map<stationID_t, const MobileStation*>* getMobileStationsInArea(GeometricShape &area);
-  map<stationID_t, const MobileStation*>* getMobileStationsInArea(vector<RoadElement*> &area);
-  map<stationID_t, const FixedStation*>* getFixedStationsInArea(GeometricShape &area);
-  map<stationID_t, const FixedStation*>* getFixedStationsInArea(vector<RoadElement*> &area);
+    map<stationID_t, const Station*>* getStationsInArea(GeometricShape& area);
+    map<stationID_t, const Station*>* getStationsInArea(vector<RoadElement*>& area);
+    map<stationID_t, const MobileStation*>* getMobileStationsInArea(GeometricShape& area);
+    map<stationID_t, const MobileStation*>* getMobileStationsInArea(vector<RoadElement*>& area);
+    map<stationID_t, const FixedStation*>* getFixedStationsInArea(GeometricShape& area);
+    map<stationID_t, const FixedStation*>* getFixedStationsInArea(vector<RoadElement*>& area);
 
-  bool enableRAT(stationID_t stationID, RATID RATtoBeEnabled);
-  bool disableRAT(stationID_t stationID, RATID RATtoBeDisabled);
-  bool enableRATAllStations(RATID RATtoBeEnabled);
-  bool disableRATAllStations(RATID RATtoBeDisabled);
+    bool enableRAT(stationID_t stationID, RATID RATtoBeEnabled);
+    bool disableRAT(stationID_t stationID, RATID RATtoBeDisabled);
+    bool enableRATAllStations(RATID RATtoBeEnabled);
+    bool disableRATAllStations(RATID RATtoBeDisabled);
 
-  const map<RATID, float>& getDefaultPenetrationRates() const;
-  const map<RATID, string>& getDefaultCommunicationProfiles() const;
+    const map<RATID, float>& getDefaultPenetrationRates() const;
+    const map<RATID, string>& getDefaultCommunicationProfiles() const;
 
-  // ===============================================================
-  // ====================== LDM related       ======================
-  // ===============================================================
+    // ===============================================================
+    // ====================== LDM related       ======================
+    // ===============================================================
 
-  bool storeMessage(actionID_t actionID, vector<stationID_t> receivers);
+    bool storeMessage(actionID_t actionID, vector<stationID_t> receivers);
 
-  actionID_t createCAMpayload(stationID_t stationID);
+    actionID_t createCAMpayload(stationID_t stationID);
 
-  actionID_t createDENMpayload(stationID_t stationID, icstime_t expiryTime, icstime_t frequency,
-      denmReliability_t reliability, bool negation, denmSituationCause_t causeCode, denmSituationSeverity_t severity,
-      latitude_t latitude, longitude_t longitude, vector<Area2D*> relevanceArea);
+    actionID_t createDENMpayload(stationID_t stationID, icstime_t expiryTime, icstime_t frequency,
+                                 denmReliability_t reliability, bool negation, denmSituationCause_t causeCode, denmSituationSeverity_t severity,
+                                 latitude_t latitude, longitude_t longitude, vector<Area2D*> relevanceArea);
 
-  actionID_t createApplicationMessagePayload(stationID_t stationID, messageType_t comType,
-      TApplicationMessageDestination destination, unsigned char preferredTechnologies, unsigned short messageLength,
-      unsigned char communicationProfile, int applicationId, unsigned char applicationMessageType,
-      int messageSequenceNumber, string &extra);
+    actionID_t createApplicationMessagePayload(stationID_t stationID, messageType_t comType,
+            TApplicationMessageDestination destination, unsigned char preferredTechnologies, unsigned short messageLength,
+            unsigned char communicationProfile, int applicationId, unsigned char applicationMessageType,
+            int messageSequenceNumber, string& extra);
 
-  ReceivedMessage* getReceivedMessage(actionID_t actionID) const;
-  FacilityMessagePayload* getReceivedMessagePayload(actionID_t actionID) const;
-  map<actionID_t, ReceivedMessage*>* getLDM(stationID_t stationID);
-  map<actionID_t, ReceivedMessage*>* getLastMessages(icstime_t startTime);
-  map<actionID_t, ReceivedMessage*>* getAllSpecificMessages(messageType_t messageType);
-  map<actionID_t, ReceivedMessage*>* getMessagesFromSender(stationID_t senderID);
+    ReceivedMessage* getReceivedMessage(actionID_t actionID) const;
+    FacilityMessagePayload* getReceivedMessagePayload(actionID_t actionID) const;
+    map<actionID_t, ReceivedMessage*>* getLDM(stationID_t stationID);
+    map<actionID_t, ReceivedMessage*>* getLastMessages(icstime_t startTime);
+    map<actionID_t, ReceivedMessage*>* getAllSpecificMessages(messageType_t messageType);
+    map<actionID_t, ReceivedMessage*>* getMessagesFromSender(stationID_t senderID);
 
-  vector<CAMPayloadGeneral*>* getGeneratedCAMsFromStationInTable(stationID_t stationID);
-  CAMPayloadGeneral* getLastGeneratedCAM(stationID_t stationID);
-  vector<CAMPayloadGeneral*>* getLastCAMsReceivedByStation(stationID_t stationID);
+    vector<CAMPayloadGeneral*>* getGeneratedCAMsFromStationInTable(stationID_t stationID);
+    CAMPayloadGeneral* getLastGeneratedCAM(stationID_t stationID);
+    vector<CAMPayloadGeneral*>* getLastCAMsReceivedByStation(stationID_t stationID);
 
-  // Relevant Check settings (get and set methods)
-  const vector<Area2D*>& getRelevantArea();
-  map<icsstationtype_t, bool>* getRelevantStationTypes() const;
-  map<messageType_t, bool>* getRelevantMessageTypes() const;
-  direction_t getRelevantDirection() const;
-  direction_t getRelevantDirectionAccuracy() const;
-  icstime_t getDefaultMessageLifeInterval() const;
-  void setRelevantStationTypes(map<icsstationtype_t, bool> &relevStaTypes);
-  void setRelevantDirection(direction_t relevDirection, direction_t relevDirectionAccuracy);
-  void setDefaultMessageLifeInterval(icstime_t defMesLifeInterval);
-  void setRelevantArea(vector<Area2D*>& areas);
-  void addRelevantArea(Area2D *relevArea);
-  void deleteRelevantArea(Area2D *relevArea);
-  void clearRelevantArea();
+    // Relevant Check settings (get and set methods)
+    const vector<Area2D*>& getRelevantArea();
+    map<icsstationtype_t, bool>* getRelevantStationTypes() const;
+    map<messageType_t, bool>* getRelevantMessageTypes() const;
+    direction_t getRelevantDirection() const;
+    direction_t getRelevantDirectionAccuracy() const;
+    icstime_t getDefaultMessageLifeInterval() const;
+    void setRelevantStationTypes(map<icsstationtype_t, bool>& relevStaTypes);
+    void setRelevantDirection(direction_t relevDirection, direction_t relevDirectionAccuracy);
+    void setDefaultMessageLifeInterval(icstime_t defMesLifeInterval);
+    void setRelevantArea(vector<Area2D*>& areas);
+    void addRelevantArea(Area2D* relevArea);
+    void deleteRelevantArea(Area2D* relevArea);
+    void clearRelevantArea();
 
-  void updateClock(icstime_t newSimTime);
-  bool hasStationEverSentMessages(stationID_t stationID);
-  seqNo_t getLastSeqNoForStation(stationID_t stationID);
-  icstime_t getReceivedMessageDeletionTimeFromTable(actionID_t actionID);
+    void updateClock(icstime_t newSimTime);
+    bool hasStationEverSentMessages(stationID_t stationID);
+    seqNo_t getLastSeqNoForStation(stationID_t stationID);
+    icstime_t getReceivedMessageDeletionTimeFromTable(actionID_t actionID);
 
-  map<stationID_t, Point2D>* getMobileStationsPositionsAroundStations(stationID_t receiverID);
-  map<stationID_t, Point2D>* getMobileStationsPositionsAroundStationsInTemporalWindow(stationID_t receiverID,
-      icstime_t start, icstime_t stop);
-  map<stationID_t, Point2D>* getFixedStationsPositionsAroundStations(stationID_t receiverID);
-  map<stationID_t, Point2D>* getFixedStationsPositionsAroundStationsInTemporalWindow(stationID_t receiverID,
-      icstime_t start, icstime_t stop);
+    map<stationID_t, Point2D>* getMobileStationsPositionsAroundStations(stationID_t receiverID);
+    map<stationID_t, Point2D>* getMobileStationsPositionsAroundStationsInTemporalWindow(stationID_t receiverID,
+            icstime_t start, icstime_t stop);
+    map<stationID_t, Point2D>* getFixedStationsPositionsAroundStations(stationID_t receiverID);
+    map<stationID_t, Point2D>* getFixedStationsPositionsAroundStationsInTemporalWindow(stationID_t receiverID,
+            icstime_t start, icstime_t stop);
 
-  Point2D  getStationPositionsFromMobilityHistory(icstime_t time, stationID_t stationId);
+    Point2D  getStationPositionsFromMobilityHistory(icstime_t time, stationID_t stationId);
 
 private:
-  MapFacilities* mapFac;
-  StationFacilities* staFac;
-  LDMLogic* LDMtable;
+    MapFacilities* mapFac;
+    StationFacilities* staFac;
+    LDMLogic* LDMtable;
 };
 
 }

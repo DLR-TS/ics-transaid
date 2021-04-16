@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    iCSGeoUtils.h
 /// @author  Pasquale Cataldi (EURECOM)
@@ -40,7 +57,7 @@
  \param[in] local coordinates values (x, y, z).
  \param[out] vector containing the latitude, longitude and altitude coordinates, respectively.
  */
-std::vector <double> GeoCentrToGeoConvert (double x, double y, double z);
+std::vector <double> GeoCentrToGeoConvert(double x, double y, double z);
 
 /*! \fn std::vector <double> LocToGeoConvert (double x, double y, double z, double localLat, double localLon, double localAlt)
  \brief Convert local coordinates to geodetic coordinates.
@@ -52,7 +69,7 @@ std::vector <double> GeoCentrToGeoConvert (double x, double y, double z);
  \param[in] local coordinates values (x, y, z) and local geodetic coordinates (lat, lon, alt) of the origin point (x,y,z)=(0,0,0).
  \param[out] std::vector containing the latitude, longitude and altitude coordinates, respectively.
  */
-std::vector <double> LocToGeoConvert (double x, double y, double z, double localLat, double localLon, double localAlt);
+std::vector <double> LocToGeoConvert(double x, double y, double z, double localLat, double localLon, double localAlt);
 
 /*! \fn std::vector <double> GeoToLocConvert(double lat, double lon, double h)
  \brief Convert geodetic coordinates to local coordinates.

@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    stations-configfile-parser.cpp
 /// @author  Pasquale Cataldi (EURECOM)
@@ -123,19 +140,22 @@ throw(std::runtime_error) {
 
     struct stat fileStatus;
 
-    if (stat(configFile.c_str(), &fileStatus)<0) {
-        if (errno == ENOENT)
-            throw(std::runtime_error("Could not find stations configuration file '" + configFile + "'."));
-        else if (errno == ENOTDIR)
-            throw(std::runtime_error("A component of the path is not a directory."));
+    if (stat(configFile.c_str(), &fileStatus) < 0) {
+        if (errno == ENOENT) {
+            throw (std::runtime_error("Could not find stations configuration file '" + configFile + "'."));
+        } else if (errno == ENOTDIR) {
+            throw (std::runtime_error("A component of the path is not a directory."));
+        }
 #ifndef _MSC_VER
-        else if (errno == ELOOP)
-            throw(std::runtime_error("Too many symbolic links encountered while traversing the path."));
+        else if (errno == ELOOP) {
+            throw (std::runtime_error("Too many symbolic links encountered while traversing the path."));
+        }
 #endif
-        else if (errno == EACCES)
-            throw(std::runtime_error("Permission denied."));
-        else if (errno == ENAMETOOLONG)
-            throw(std::runtime_error("File can not be read\n"));
+        else if (errno == EACCES) {
+            throw (std::runtime_error("Permission denied."));
+        } else if (errno == ENAMETOOLONG) {
+            throw (std::runtime_error("File can not be read\n"));
+        }
     }
 
     // Configure DOM parser.
@@ -154,7 +174,9 @@ throw(std::runtime_error) {
         // Get the top-level element: NAme is "root". No attributes for "root"
 
         DOMElement* elementRoot = xmlDoc->getDocumentElement();
-        if (!elementRoot) throw(std::runtime_error("empty XML document"));
+        if (!elementRoot) {
+            throw (std::runtime_error("empty XML document"));
+        }
 
         DOMNodeList* def = elementRoot->getElementsByTagName(TAG_Default);
         XMLSize_t nodeCountDef = def->getLength();
@@ -193,22 +215,22 @@ throw(std::runtime_error) {
                                     DOMElement* currentElement = dynamic_cast< xercesc::DOMElement* >(currentNode);
 
                                     const XMLCh* xmlch_MobRATtype = currentElement->getAttribute(ATTR_MobRATtype);
-                                    char *type_ch = XMLString::transcode(xmlch_MobRATtype);
+                                    char* type_ch = XMLString::transcode(xmlch_MobRATtype);
                                     int type = (bool)StringUtils::toInt(type_ch);
                                     XMLString::release(&type_ch);
 
                                     const XMLCh* xmlch_PenetrationRate = currentElement->getAttribute(ATTR_PenetrationRate);
-                                    char *penRate_ch = XMLString::transcode(xmlch_PenetrationRate);
+                                    char* penRate_ch = XMLString::transcode(xmlch_PenetrationRate);
                                     float penRate = (float)StringUtils::toDouble(penRate_ch);
                                     XMLString::release(&penRate_ch);
-                                    defaultPenetrationRates.insert(pair<int, float>(type,penRate));
+                                    defaultPenetrationRates.insert(pair<int, float>(type, penRate));
 
                                     const XMLCh* xmlch_commProfile = currentElement->getAttribute(ATTR_MobileCommunicationProfile);
-                                    char *profile_ch = XMLString::transcode(xmlch_commProfile);
+                                    char* profile_ch = XMLString::transcode(xmlch_commProfile);
                                     string profile = profile_ch;
                                     XMLString::release(&profile_ch);
 
-                                    mobileCommunicationProfiles.insert(pair<int, string>(type,profile));
+                                    mobileCommunicationProfiles.insert(pair<int, string>(type, profile));
 
 #ifdef _DEB_STATIONS
                                     cout << "(MobRATtype, penRate)     = (" << type << ", " << penRate << ")" << endl;
@@ -271,7 +293,7 @@ throw(std::runtime_error) {
             }
         }
 
-        delete(m_ConfigFileParser);
+        delete (m_ConfigFileParser);
 
         XMLPlatformUtils::Terminate();
 

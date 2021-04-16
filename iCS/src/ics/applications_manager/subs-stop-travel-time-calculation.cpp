@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    subs-stop-travel-time-calculation.cpp
 /// @author
@@ -31,14 +48,12 @@
 using namespace std;
 using namespace ics_types;
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // member method definitions
 // ===========================================================================
-SubsStopTravelTimeCalculation::SubsStopTravelTimeCalculation(int appId, stationID_t stationId, vector<Point2D> vertex, float frequency, float msgRegenerationTime, int msgLifeTime) : Subscription(stationId)
-{
+SubsStopTravelTimeCalculation::SubsStopTravelTimeCalculation(int appId, stationID_t stationId, vector<Point2D> vertex, float frequency, float msgRegenerationTime, int msgLifeTime) : Subscription(stationId) {
     m_id = ++m_subscriptionCounter;
     m_name = "STOP TRAVEL TIME CALCULATION";
     m_appId = appId;
@@ -76,20 +91,17 @@ SubsStopTravelTimeCalculation::SubsStopTravelTimeCalculation(int appId, stationI
     CreateGeobroadcastArea();
 }
 
-SubsStopTravelTimeCalculation::~SubsStopTravelTimeCalculation()
-{
+SubsStopTravelTimeCalculation::~SubsStopTravelTimeCalculation() {
     m_geobroadcastArea = NULL;
 }
 
 V2xGeobroadcastArea*
-SubsStopTravelTimeCalculation::GetGeobroadcastArea()
-{
+SubsStopTravelTimeCalculation::GetGeobroadcastArea() {
     return m_geobroadcastArea;
 }
 
 int
-SubsStopTravelTimeCalculation::CreateGeobroadcastArea()
-{
+SubsStopTravelTimeCalculation::CreateGeobroadcastArea() {
     if (m_geobroadcastArea != NULL) {
 #ifdef LOG_ON
         IcsLog::LogLevel("CreateGeobroadcastArea() Geobroadcast area already created for the subscription.", kLogLevelInfo);
@@ -105,8 +117,7 @@ SubsStopTravelTimeCalculation::CreateGeobroadcastArea()
 }
 
 int
-SubsStopTravelTimeCalculation::ProcessReceivedGeobroadcastMessage(ScheduledGeobroadcastMessageData message, SyncManager* syncManager)
-{
+SubsStopTravelTimeCalculation::ProcessReceivedGeobroadcastMessage(ScheduledGeobroadcastMessageData message, SyncManager* syncManager) {
     int receiverId; //message.receiver;
     receiverId = message.receiverIcsID;
     if (AddStoppedTravelTimeStation(receiverId) == EXIT_FAILURE) {
@@ -116,8 +127,7 @@ SubsStopTravelTimeCalculation::ProcessReceivedGeobroadcastMessage(ScheduledGeobr
 }
 
 int
-SubsStopTravelTimeCalculation::AddStoppedTravelTimeStation(stationID_t nodeId)
-{
+SubsStopTravelTimeCalculation::AddStoppedTravelTimeStation(stationID_t nodeId) {
     for (vector<stationID_t>::iterator it = m_stationsReceivedStopCommand.begin() ; it != m_stationsReceivedStopCommand.end() ; ++it) {
         if ((*it) == nodeId) {   // Do not add to the collection if the ID already exists
             return EXIT_SUCCESS;
@@ -131,8 +141,7 @@ SubsStopTravelTimeCalculation::AddStoppedTravelTimeStation(stationID_t nodeId)
 }
 
 int
-SubsStopTravelTimeCalculation::ProcessReceivedUnicastMessage(ScheduledUnicastMessageData message)
-{
+SubsStopTravelTimeCalculation::ProcessReceivedUnicastMessage(ScheduledUnicastMessageData message) {
 //    message.receiverIcsID;
 #ifdef LOG_ON
     IcsLog::LogLevel("ProcessReceivedUnicastMessage() SubsCalculateTravelTime not based on Unicasting", kLogLevelWarning);

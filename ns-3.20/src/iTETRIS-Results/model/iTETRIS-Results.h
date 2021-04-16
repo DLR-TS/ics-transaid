@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2009-2010, Uwicore Laboratory (www.uwicore.umh.es),
@@ -42,94 +59,92 @@
 #include "ns3/wifi-module.h"
 #include "ns3/wifi-80211p-helper.h"
 
-namespace ns3
-{
-    class NodeContainer;
+namespace ns3 {
+class NodeContainer;
 
 #define N_STEPS_METRIC 100
 #define N_LAST_STEP 99
 #define N_LAST_DISTANCE_STEP 990
 
 
-    struct PDRdata{
-        uint32_t countTx[N_STEPS_METRIC] = {0};
-        uint32_t countRx[N_STEPS_METRIC] = {0};
-    };
+struct PDRdata {
+    uint32_t countTx[N_STEPS_METRIC] = {0};
+    uint32_t countRx[N_STEPS_METRIC] = {0};
+};
 
-    struct NARdata{
-        std::map <int,double> detectedVehicles;
-        std::map <int,double> totalVehicles;
-    };
+struct NARdata {
+    std::map <int, double> detectedVehicles;
+    std::map <int, double> totalVehicles;
+};
 
-    struct NIRdata{
-        std::map <int,double> detectedVehicles;
-    };
-
-
-    struct LatencyData{
-        int latency [200] =  {0} ;
-        uint32_t countTotal = 0;
-    };
-
-    struct IPRTdata{
-        std::map <int,double> initial_time;
-    };
-
-    struct IPRTdataDistance{
-        double IPRT[N_STEPS_METRIC] = {0};
-        uint32_t countRx[N_STEPS_METRIC] = {0};
-    };
+struct NIRdata {
+    std::map <int, double> detectedVehicles;
+};
 
 
-	class iTETRISResults : public Object
-	{
-		public:
+struct LatencyData {
+    int latency [200] =  {0} ;
+    uint32_t countTotal = 0;
+};
 
-           iTETRISResults(int initial_x, int initial_y, int end_x , int end_y);
-			virtual ~iTETRISResults();
+struct IPRTdata {
+    std::map <int, double> initial_time;
+};
 
-         void LogPacketsTx(std::string context, Ptr<const Packet> packet , double distanceTxRx, uint32_t sendernodeId);
-         void LogPacketsRx(std::string context, Ptr<const Packet> packet , double distanceTxRx, uint32_t sendernodeId);
-         void PhyStateTracer (std::string context, Time start, Time duration, enum WifiPhy::State state);
-
-
-         void LogAwarenessRatio(const NodeContainer& m_NodeContainer);
-
-         void writeResults();
+struct IPRTdataDistance {
+    double IPRT[N_STEPS_METRIC] = {0};
+    uint32_t countRx[N_STEPS_METRIC] = {0};
+};
 
 
-		private:
+class iTETRISResults : public Object {
+public:
 
-        void ResetCounters ();
+    iTETRISResults(int initial_x, int initial_y, int end_x, int end_y);
+    virtual ~iTETRISResults();
 
-        PDRdata m_PDRdataCAM;
-        PDRdata m_PDRdataCPM;
-        PDRdata m_PDRdataMCM;
-        PDRdata m_PDRdata;
+    void LogPacketsTx(std::string context, Ptr<const Packet> packet, double distanceTxRx, uint32_t sendernodeId);
+    void LogPacketsRx(std::string context, Ptr<const Packet> packet, double distanceTxRx, uint32_t sendernodeId);
+    void PhyStateTracer(std::string context, Time start, Time duration, enum WifiPhy::State state);
 
-        LatencyData m_LatencyData;
 
-        std::map<int, NARdata> m_NARdataMap;
+    void LogAwarenessRatio(const NodeContainer& m_NodeContainer);
 
-        std::map<int, NIRdata> m_NIRdataMap;
+    void writeResults();
 
-        std::map<int, double> m_CBRdataMap;
 
-        std::map<int, IPRTdata> m_IPRTdataMapCAM;
+private:
 
-        IPRTdataDistance m_IPRT_CAM;
+    void ResetCounters();
 
-        std::map<int, int> m_MessagesRxMap;
+    PDRdata m_PDRdataCAM;
+    PDRdata m_PDRdataCPM;
+    PDRdata m_PDRdataMCM;
+    PDRdata m_PDRdata;
 
-        int m_interval;
+    LatencyData m_LatencyData;
 
-        int m_initial_x;
-        int m_initial_y;
-        int m_end_x;
-        int m_end_y;
+    std::map<int, NARdata> m_NARdataMap;
 
-        const NodeContainer * m_TransAIDNodes;
-	};
+    std::map<int, NIRdata> m_NIRdataMap;
+
+    std::map<int, double> m_CBRdataMap;
+
+    std::map<int, IPRTdata> m_IPRTdataMapCAM;
+
+    IPRTdataDistance m_IPRT_CAM;
+
+    std::map<int, int> m_MessagesRxMap;
+
+    int m_interval;
+
+    int m_initial_x;
+    int m_initial_y;
+    int m_end_x;
+    int m_end_y;
+
+    const NodeContainer* m_TransAIDNodes;
+};
 
 } // namespace ns3
 

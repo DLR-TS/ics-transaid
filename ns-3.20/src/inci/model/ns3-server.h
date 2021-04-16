@@ -1,8 +1,25 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2009-2010, EU FP7 iTETRIS project
  *                          CBT
- *                          Uwicore Laboratory (www.uwicore.umh.es), University Miguel Hernandez 
+ *                          Uwicore Laboratory (www.uwicore.umh.es), University Miguel Hernandez
  *                          EURECOM (www.eurecom.fr), EU FP7 iTETRIS project
  *
  * This program is free software; you can redistribute it and/or modify
@@ -34,28 +51,26 @@
 #include "ns3/vector.h"
 #include "ns3/nstime.h"
 #include "ns3/iTETRISNodeManager.h"
-#include "ns3/packet-manager.h" 
+#include "ns3/packet-manager.h"
 #include <fstream>
 #include "ns3/iTETRIS-Results.h"
 #include "ns3/random-variable.h" // A Correa
 
 
-namespace ns3
-{
+namespace ns3 {
 
 class Ns3Commands;
 class MessageScheduleUnicast;
 class MessageScheduleGeoBroadcast;
 
-class Ns3Server
-{
-  friend class MessageScheduleUnicast;
-  friend class MessageScheduleGeoBroadcast;
-  public:
+class Ns3Server {
+    friend class MessageScheduleUnicast;
+    friend class MessageScheduleGeoBroadcast;
+public:
     Ns3Server();
-    Ns3Server(int port, iTETRISNodeManager *node_manager, PacketManager *packetManager);
+    Ns3Server(int port, iTETRISNodeManager* node_manager, PacketManager* packetManager);
 
-    /** 
+    /**
      * @brief Singleton instance of the server
      */
     static Ns3Server* instance_;
@@ -68,10 +83,10 @@ class Ns3Server
     static bool closeConnection_;
     tcpip::Storage myInputStorage;
     tcpip::Storage myOutputStorage;
-    bool myDoingSimStep;  
+    bool myDoingSimStep;
     Ns3Commands* commands;
-    static void processCommandsUntilSimStep();    
-    static void processCommandsUntilSimStep(int port, std::string logfile, iTETRISNodeManager *node_manager, PacketManager *packetManager);    
+    static void processCommandsUntilSimStep();
+    static void processCommandsUntilSimStep(int port, std::string logfile, iTETRISNodeManager* node_manager, PacketManager* packetManager);
     static std::ofstream myfile;
     static int targetTime_;
     static bool Log(const char* message);
@@ -83,7 +98,7 @@ class Ns3Server
     /// @name communication KPI logging
     /// @{
     // Log Results TransAID // Added by A Correa
-    iTETRISResults * my_resultsManager;
+    iTETRISResults* my_resultsManager;
     static std::ofstream outfileLogPacketsPDR;
     static std::ofstream outfileLogPacketsPDRCAM;
     static std::ofstream outfileLogPacketsPDRCPM;
@@ -102,123 +117,123 @@ class Ns3Server
 
 
 private:
-    static std::string CAM_TYPE; 
+    static std::string CAM_TYPE;
     static std::string DNEM_TYPE;
     int dispatchCommand();
     bool RunSimStep(int time);
 
-    /** 
+    /**
      * @brief Update node's position
      */
     bool UpdateNodePosition();
 
-    /** 
+    /**
      * @brief Update node's position, speed, heading and laneId
      */
-    bool UpdateNodePosition2 (); 
+    bool UpdateNodePosition2();
 
-    /** 
+    /**
      * @brief Start sending CAM in the nodes indicated in a list of nodes
      */
     bool StartSendingCam();
 
-    /** 
+    /**
      * @brief Stop sending CAM in the nodes indicated in a list of nodes
      */
     bool StopSendingCam();
 
-    /** 
+    /**
      * @brief Retrieve the messages that have been received by the simulated nodes
      */
     bool GetReceivedMessages();
 
     /**
-		 * @brief Retrieve all the messages that have been received by the all the simulated nodes
-		 */
+    	 * @brief Retrieve all the messages that have been received by the all the simulated nodes
+    	 */
     bool GetAllReceivedMessages();
 
-    /** 
+    /**
      * @brief Create a new node (vehicle or CIU) specifying its initial position
      */
-    bool CreateNode(); 
+    bool CreateNode();
 
-    /** 
+    /**
      * @brief Create a new node (vehicle or CIU) specifying its initial position, speed, heading and laneId
      */
-    bool CreateNode2 (); 
+    bool CreateNode2();
     bool Close();
-    void writeStatusCmd(int commandId, int status, std::string description);  
-    int CalculateStringListByteSize(std::vector<std::string> list);    
+    void writeStatusCmd(int commandId, int status, std::string description);
+    int CalculateStringListByteSize(std::vector<std::string> list);
 
-    /** 
+    /**
      * @brief Activate a topobroadcast transmision using WAVE and the C2C stack
      */
-    bool StartTopoTxon (void);
+    bool StartTopoTxon(void);
 
-    /** 
+    /**
      * @brief Activate a transmision based on the destination node ID. This txon mode can be used to active a unicast or broadcast transmision in a vehicle or a RSU. It works with different radio access technologies (if a vehicle is the sender, e.g. WAVE, UMTS, etc.) and the C2C and IP stacks.
      */
-    bool StartIdBasedTxon (void);
+    bool StartIdBasedTxon(void);
 
     /**
      * @brief Activate a transmision from the TMC based on a geographic area. This txon mode can be used to activate any kind of transmission supported by the Technology Selector according the ServiceID rules.
     */
-    bool StartMWTxon (void);
+    bool StartMWTxon(void);
 
-    /** 
+    /**
      * @brief Activate a transmision based on the destination node ID. This txon mode can be used to active a unicast, broadcast or multicast transmision in a IP-based base station or CIU (e.g. UMTS base stations, WiMAX base station, etc.)
      */
-    bool StartIpCiuTxon (void);
+    bool StartIpCiuTxon(void);
 
-    /** 
+    /**
      * @brief Activate a geobroadcast txon in a WAVE vehicle or RSU. The geodestination area is a circle defined by its radius (Lat and Lon coordinates) and center point (meters).
      */
-    bool StartGeobroadcastTxon (void);
+    bool StartGeobroadcastTxon(void);
 
-    /** 
+    /**
      * @brief Activate a geoanycast txon in a WAVE vehicle or RSU. The geodestination area is a circle defined by its radius (Lat and Lon coordinates) and center point (meters).
      */
-    bool StartGeoanycastTxon (void);
+    bool StartGeoanycastTxon(void);
 
-    /** 
+    /**
      * @brief Deactivate the txon of a service running in a vehicle or a RSU.
      */
-    bool StopServiceTxon (void);
+    bool StopServiceTxon(void);
 
-    /** 
+    /**
      * @brief Deactivate the txon of a service running in IP-based base station or CIU.
      */
-    bool StopIpCiuServiceTxon (void);
+    bool StopIpCiuServiceTxon(void);
 
     /**
      * @brief Deactivate the MWtxon of a MW service running on a TMC.
      */
-    bool StopMWServiceTxon (void);
-
-    /** 
-     * @brief Activate a node and all its communication modules, e.g. PHY layer 
-     */
-    bool ActivateNode (void);
-
-    /** 
-     * @brief Deactivate a node and all its communication modules, e.g. PHY layer 
-     */
-    bool DeactivateNode (void);
+    bool StopMWServiceTxon(void);
 
     /**
- * @brief Pointer to iTETRISNodeManager object which is responsible for the creation, the initial placement, and the position updates of the nodes in ns-3
- */
-    iTETRISNodeManager *my_nodeManagerPtr; // Made public by A Correa
+     * @brief Activate a node and all its communication modules, e.g. PHY layer
+     */
+    bool ActivateNode(void);
+
+    /**
+     * @brief Deactivate a node and all its communication modules, e.g. PHY layer
+     */
+    bool DeactivateNode(void);
+
+    /**
+    * @brief Pointer to iTETRISNodeManager object which is responsible for the creation, the initial placement, and the position updates of the nodes in ns-3
+    */
+    iTETRISNodeManager* my_nodeManagerPtr; // Made public by A Correa
 
 
-    /** 
+    /**
      * @brief Pointer to PacketManager object which is responsible for the the activation and deactivation of packet transmissions in ns-3
      */
-    PacketManager *my_packetManagerPtr; 
+    PacketManager* my_packetManagerPtr;
 
-    std::string Int2String (int n);
+    std::string Int2String(int n);
 
-    std::string Double2String (double n);
+    std::string Double2String(double n);
 
 
     RandomVariable  m_rndOffset; // A Correa

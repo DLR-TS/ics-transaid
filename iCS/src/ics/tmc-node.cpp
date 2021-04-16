@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    tmc.cpp
 /// @author  Julen Maneros
@@ -27,8 +44,7 @@
 #include "tmc-node.h"
 #include <stdio.h>
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // static member definitions
@@ -39,10 +55,10 @@ TmcNode* TmcNode::tmcNode_ = NULL;
 // static method definitions
 // ===========================================================================
 TmcNode*
-TmcNode::GetInstance()
-{
-    if (!tmcNode_)
+TmcNode::GetInstance() {
+    if (!tmcNode_) {
         tmcNode_ = new TmcNode;
+    }
 
     return tmcNode_;
 }
@@ -50,8 +66,7 @@ TmcNode::GetInstance()
 // ===========================================================================
 // member method definitions
 // ===========================================================================
-TmcNode::TmcNode()
-{
+TmcNode::TmcNode() {
     m_icsId = 0;
     m_nsId = -1;
     m_tsId = "-1";

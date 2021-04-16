@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    app-result-container.h
 /// @author  Julen Maneros
@@ -32,108 +49,101 @@
 #include <map>
 #include <vector>
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // class declarations
 // ===========================================================================
-	class SyncManager;
-	class ApplicationHandler;
+class SyncManager;
+class ApplicationHandler;
 
 // ===========================================================================
 // class definitions
 // ===========================================================================
-	/**
-	 * @class ResultContainer
-	 * @brief Manages the results obtained from the applications' executions.
-	 */
-	class ResultContainer
-	{
+/**
+ * @class ResultContainer
+ * @brief Manages the results obtained from the applications' executions.
+ */
+class ResultContainer {
 
-		public:
-			/// @brief True if the container of results is empty.
-			bool m_containerIsEmpty;
+public:
+    /// @brief True if the container of results is empty.
+    bool m_containerIsEmpty;
 
-			/**
-			 * @brief Reads the information relative to the execution of the application.
-			 * @param[in,out] &storage Data from the application to be processed.
-			 * @return True: If the operation finishes successfully.
-			 * @return False: If an error occurs.
-			 */
-			virtual bool ProcessResult(tcpip::Storage& storage) = 0;
+    /**
+     * @brief Reads the information relative to the execution of the application.
+     * @param[in,out] &storage Data from the application to be processed.
+     * @return True: If the operation finishes successfully.
+     * @return False: If an error occurs.
+     */
+    virtual bool ProcessResult(tcpip::Storage& storage) = 0;
 
-			/**
-			 * @brief Triggers the actions necesary to apply the result of the application.
-			 * @param[in] syncManager To get necessary info from the environment.
-			 * @return EXIT_SUCCESS if the operation result applied successfuly EXIT_FAILURE.
-			 */
-			virtual int ApplyResult(SyncManager* syncManager) = 0;
+    /**
+     * @brief Triggers the actions necesary to apply the result of the application.
+     * @param[in] syncManager To get necessary info from the environment.
+     * @return EXIT_SUCCESS if the operation result applied successfuly EXIT_FAILURE.
+     */
+    virtual int ApplyResult(SyncManager* syncManager) = 0;
 
-			/**
-			 * @brief Determines if the container of results is empty or not.
-			 * @return True: If the container is empty.
-			 * @return False: If the container isn't empty.
-			 */
-			bool ResultContainerIsEmpty()
-			{
-				return m_containerIsEmpty;
-			}
-			;
+    /**
+     * @brief Determines if the container of results is empty or not.
+     * @return True: If the container is empty.
+     * @return False: If the container isn't empty.
+     */
+    bool ResultContainerIsEmpty() {
+        return m_containerIsEmpty;
+    }
+    ;
 
-			///@brief The station the result belong to. Does not mean applys to.
-			ics_types::stationID_t m_ownerStation;
+    ///@brief The station the result belong to. Does not mean applys to.
+    ics_types::stationID_t m_ownerStation;
 
-			///@brief The ID of the Application Handler the result belongs to.
-			int m_applicationHandlerId;
+    ///@brief The ID of the Application Handler the result belongs to.
+    int m_applicationHandlerId;
 
-			///@brief typedef for maps of types <unsigned char, map> and <string, vector<unsigned char>>
-			typedef std::map<std::string, std::vector<unsigned char> > inMap;
-			typedef std::map<unsigned char, inMap> containerMap;
+    ///@brief typedef for maps of types <unsigned char, map> and <string, vector<unsigned char>>
+    typedef std::map<std::string, std::vector<unsigned char> > inMap;
+    typedef std::map<unsigned char, inMap> containerMap;
 
-			///@brief a map containing a set of <CMD, MAP<TAG,result>> provided by an application
-			containerMap m_resultMap;
+    ///@brief a map containing a set of <CMD, MAP<TAG,result>> provided by an application
+    containerMap m_resultMap;
 
-			///@brief generic method accessing the result map and returning the result value
-			inline bool push(unsigned char CMD_TYPE, std::string TAG, std::vector<unsigned char> result)
-			{
-				containerMap::iterator it = m_resultMap.find(CMD_TYPE);
-				if (it != m_resultMap.end())
-				{
-					inMap resultsMap = it->second;
+    ///@brief generic method accessing the result map and returning the result value
+    inline bool push(unsigned char CMD_TYPE, std::string TAG, std::vector<unsigned char> result) {
+        containerMap::iterator it = m_resultMap.find(CMD_TYPE);
+        if (it != m_resultMap.end()) {
+            inMap resultsMap = it->second;
 
-					resultsMap.insert(make_pair(TAG, result));
-				} else
-				{
-					inMap resultsMap;
-					resultsMap.insert(make_pair(TAG, result));
-					m_resultMap.insert(make_pair(CMD_TYPE, resultsMap));
-				}
-				return true;
-			}
+            resultsMap.insert(make_pair(TAG, result));
+        } else {
+            inMap resultsMap;
+            resultsMap.insert(make_pair(TAG, result));
+            m_resultMap.insert(make_pair(CMD_TYPE, resultsMap));
+        }
+        return true;
+    }
 
-			///@brief generic method accessing the result map and returning the result value
-			inline std::vector<unsigned char> pull(unsigned char CMD_TYPE, std::string TAG)
-			{
-				containerMap::iterator it = m_resultMap.find(CMD_TYPE);
-				inMap resultsMap = it->second;
+    ///@brief generic method accessing the result map and returning the result value
+    inline std::vector<unsigned char> pull(unsigned char CMD_TYPE, std::string TAG) {
+        containerMap::iterator it = m_resultMap.find(CMD_TYPE);
+        inMap resultsMap = it->second;
 
-				inMap::iterator it2 = resultsMap.find(TAG);
-				return it2->second;
-			}
+        inMap::iterator it2 = resultsMap.find(TAG);
+        return it2->second;
+    }
 
-			///@brief Factory method
-			static ResultContainer* CreateResultContainer(int type, ics_types::stationID_t nodeId, int handlerId);
+    ///@brief Factory method
+    static ResultContainer* CreateResultContainer(int type, ics_types::stationID_t nodeId, int handlerId);
 
-			///@brief Correct use if polymorphism...
-			int CheckMessage(int appMessageId);
-			///@brief Correct use if polymorphism...
-			int CheckMessage(int appMessageId, ics_types::stationID_t receiverId, SyncManager* syncManager);
-			///@brief Correct use if polymorphism...
-			void GetReceivedMessages(std::vector<std::pair<int, ics_types::stationID_t> >&);
-			///@brief Correct use if polymorphism...
-			bool AskSendMessageStatus();
-	};
+    ///@brief Correct use if polymorphism...
+    int CheckMessage(int appMessageId);
+    ///@brief Correct use if polymorphism...
+    int CheckMessage(int appMessageId, ics_types::stationID_t receiverId, SyncManager* syncManager);
+    ///@brief Correct use if polymorphism...
+    void GetReceivedMessages(std::vector<std::pair<int, ics_types::stationID_t> >&);
+    ///@brief Correct use if polymorphism...
+    bool AskSendMessageStatus();
+};
 
 }
 #endif

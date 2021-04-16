@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    app-result-traffic-jam-detection.cpp
 /// @author  Ramon Bauza
@@ -42,21 +59,18 @@
 using namespace tcpip;
 using namespace std;
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // member method definitions
 // ===========================================================================
-ResultTrafficJamDetection::ResultTrafficJamDetection(stationID_t owner, int appHandlerId)
-{
+ResultTrafficJamDetection::ResultTrafficJamDetection(stationID_t owner, int appHandlerId) {
     m_ownerStation = owner;
     m_applicationHandlerId = appHandlerId;
 }
 
 bool
-ResultTrafficJamDetection::ProcessResult(Storage& storage)
-{
+ResultTrafficJamDetection::ProcessResult(Storage& storage) {
     if (storage.size() == 0) {
         cout << "iCS --> #Error: There is no data from the application to be processed." << endl;
         return false;
@@ -81,23 +95,23 @@ ResultTrafficJamDetection::ProcessResult(Storage& storage)
                 int status = storage.readInt();
                 switch (status) {
 
-                case APP_RESULT_TO_SCHEDULE: {
-                    result.m_frequency = storage.readInt();
-                    result.m_payloadLength = storage.readInt();
-                    result.m_msgRegenerationTime = storage.readFloat();
-                    result.m_messageStatus = kToBeScheduled;
+                    case APP_RESULT_TO_SCHEDULE: {
+                        result.m_frequency = storage.readInt();
+                        result.m_payloadLength = storage.readInt();
+                        result.m_msgRegenerationTime = storage.readFloat();
+                        result.m_messageStatus = kToBeScheduled;
 #ifdef LOG_ON
-                    stringstream log;
-                    log << "[INFO] ProcessResult() Node Id: " <<result.m_nodeId << " Message Id: " <<result.m_messageId << " received from App to be SCHEDULED";
-                    IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+                        stringstream log;
+                        log << "[INFO] ProcessResult() Node Id: " << result.m_nodeId << " Message Id: " << result.m_messageId << " received from App to be SCHEDULED";
+                        IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 #endif
-                    m_cteMessages.push_back(result); // The message is new so it has to be included in the collection
-                    break;
-                }
+                        m_cteMessages.push_back(result); // The message is new so it has to be included in the collection
+                        break;
+                    }
 
-                default:
-                    cout << "iCS --> [ERROR] ProcessResult() Application returned result status does not exist: " << status << endl;
-                    return false;
+                    default:
+                        cout << "iCS --> [ERROR] ProcessResult() Application returned result status does not exist: " << status << endl;
+                        return false;
                 }
             }
         } else {
@@ -113,9 +127,8 @@ ResultTrafficJamDetection::ProcessResult(Storage& storage)
 }
 
 int
-ResultTrafficJamDetection::ApplyResult(SyncManager* syncManager)
-{
-    vector<TCteMessage>::iterator it=m_cteMessages.begin();
+ResultTrafficJamDetection::ApplyResult(SyncManager* syncManager) {
+    vector<TCteMessage>::iterator it = m_cteMessages.begin();
     while (it != m_cteMessages.end()) {
         TCteMessage msg = *it;
         ITetrisNode* node = syncManager->GetNodeByIcsId(msg.m_nodeId);
@@ -128,48 +141,48 @@ ResultTrafficJamDetection::ApplyResult(SyncManager* syncManager)
             ++it;
         } else { // Check the status of the message
             switch (msg.m_messageStatus) {
-            case kToBeScheduled: { // Message has to be scheduled in ns-3
-                unsigned char appMessageType = 0x01;
-                unsigned char commProfile = 0xFF;
-                unsigned char preferredRATs = 0xFF;
-                short numHops = 1;
-                unsigned int msgLifetime = 2;
-                if (syncManager->ScheduleV2xTopobroadcastMessages(
-                            m_ownerStation,
-                            m_applicationHandlerId,
-                            msg.m_messageId,
-                            msg.m_frequency,
-                            msg.m_payloadLength,
-                            msg.m_msgRegenerationTime,
-                            appMessageType,
-                            commProfile,
-                            preferredRATs,
-                            numHops,
-                            msgLifetime) == EXIT_FAILURE) {
+                case kToBeScheduled: { // Message has to be scheduled in ns-3
+                    unsigned char appMessageType = 0x01;
+                    unsigned char commProfile = 0xFF;
+                    unsigned char preferredRATs = 0xFF;
+                    short numHops = 1;
+                    unsigned int msgLifetime = 2;
+                    if (syncManager->ScheduleV2xTopobroadcastMessages(
+                                m_ownerStation,
+                                m_applicationHandlerId,
+                                msg.m_messageId,
+                                msg.m_frequency,
+                                msg.m_payloadLength,
+                                msg.m_msgRegenerationTime,
+                                appMessageType,
+                                commProfile,
+                                preferredRATs,
+                                numHops,
+                                msgLifetime) == EXIT_FAILURE) {
+                        return EXIT_FAILURE;
+                    }
+                    msg.m_messageStatus = kScheduled;
+                    (*it).m_messageStatus = kScheduled;
+                    (*it).m_schedulingTime = syncManager->m_simStep;
+                    ++it;
+                    break;
+                }
+                case kScheduled: {
+                    ++it;
+                    break;
+                }
+                case kArrived: {
+                    ++it;
+                    break;
+                }
+                case kToBeDiscarded: {
+                    it = m_cteMessages.erase(it);
+                    break;
+                }
+                default : {
+                    cout << "iCS --> [ApplyResult] The message result status is undefined. Node iCS ID: " << msg.m_nodeId << " Status: " << msg.m_messageStatus << endl;
                     return EXIT_FAILURE;
                 }
-                msg.m_messageStatus = kScheduled;
-                (*it).m_messageStatus = kScheduled;
-                (*it).m_schedulingTime = syncManager->m_simStep;
-                ++it;
-                break;
-            }
-            case kScheduled: {
-                ++it;
-                break;
-            }
-            case kArrived: {
-                ++it;
-                break;
-            }
-            case kToBeDiscarded: {
-                it = m_cteMessages.erase(it);
-                break;
-            }
-            default : {
-                cout << "iCS --> [ApplyResult] The message result status is undefined. Node iCS ID: " << msg.m_nodeId << " Status: " << msg.m_messageStatus << endl;
-                return EXIT_FAILURE;
-            }
             }
         }
     }
@@ -178,10 +191,9 @@ ResultTrafficJamDetection::ApplyResult(SyncManager* syncManager)
 }
 
 int
-ResultTrafficJamDetection::CheckMessage(int appMessageId, ics_types::stationID_t receiverId)
-{
+ResultTrafficJamDetection::CheckMessage(int appMessageId, ics_types::stationID_t receiverId) {
     // Loop the msgs for the different vehicles
-    for (vector<TCteMessage>::iterator it=m_cteMessages.begin() ; it<m_cteMessages.end() ; it++) {
+    for (vector<TCteMessage>::iterator it = m_cteMessages.begin() ; it < m_cteMessages.end() ; it++) {
         TCteMessage msg = *it;
         if (msg.m_messageId == appMessageId) {
             (*it).m_messageStatus = kArrived;
@@ -194,11 +206,10 @@ ResultTrafficJamDetection::CheckMessage(int appMessageId, ics_types::stationID_t
 }
 
 int
-ResultTrafficJamDetection::CheckMessage(int appMessageId, ics_types::stationID_t receiverId, SyncManager* syncManager)
-{
+ResultTrafficJamDetection::CheckMessage(int appMessageId, ics_types::stationID_t receiverId, SyncManager* syncManager) {
     // Loop the msgs for the different vehicles
     int result = EXIT_FAILURE;
-    for (vector<TCteMessage>::iterator it=m_cteMessages.begin() ; it<m_cteMessages.end() ; it++) {
+    for (vector<TCteMessage>::iterator it = m_cteMessages.begin() ; it < m_cteMessages.end() ; it++) {
         TCteMessage msg = *it;
         if (msg.m_messageId == appMessageId) {
             (*it).m_messageStatus = kArrived;
@@ -213,18 +224,17 @@ ResultTrafficJamDetection::CheckMessage(int appMessageId, ics_types::stationID_t
     return result;
 }
 
-void ResultTrafficJamDetection::GetReceivedMessages(vector<pair<int,stationID_t> > & messages)
-{
-    for (vector<TCteMessage>::iterator it=m_cteMessages.begin() ; it<m_cteMessages.end() ; it++) {
+void ResultTrafficJamDetection::GetReceivedMessages(vector<pair<int, stationID_t> >& messages) {
+    for (vector<TCteMessage>::iterator it = m_cteMessages.begin() ; it < m_cteMessages.end() ; it++) {
         TCteMessage msg = *it;
         if (msg.m_messageStatus == kArrived) {
 
-            for (vector<int>::iterator iterReceivers = msg.m_listOfReceiverIds.begin(); iterReceivers!= msg.m_listOfReceiverIds.end(); iterReceivers++) {
-                pair<int,stationID_t> message = make_pair(msg.m_messageId, (*iterReceivers)); // Store receiverId instead of senderId
+            for (vector<int>::iterator iterReceivers = msg.m_listOfReceiverIds.begin(); iterReceivers != msg.m_listOfReceiverIds.end(); iterReceivers++) {
+                pair<int, stationID_t> message = make_pair(msg.m_messageId, (*iterReceivers)); // Store receiverId instead of senderId
                 messages.push_back(message);
 
                 stringstream log;
-                log << "[INFO] GetReceivedMessage() Message Id: " << msg.m_messageId << " arrived. SenderId="<<msg.m_nodeId<<" ReceiverId="<<(*iterReceivers);
+                log << "[INFO] GetReceivedMessage() Message Id: " << msg.m_messageId << " arrived. SenderId=" << msg.m_nodeId << " ReceiverId=" << (*iterReceivers);
                 IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
 
             }
@@ -240,9 +250,8 @@ void ResultTrafficJamDetection::GetReceivedMessages(vector<pair<int,stationID_t>
     }
 }
 
-bool ResultTrafficJamDetection::AskSendMessageStatus()
-{
-	return true;
+bool ResultTrafficJamDetection::AskSendMessageStatus() {
+    return true;
 }
 
 }

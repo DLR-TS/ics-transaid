@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    app-result-open-buslanes.cpp
 /// @author  Daniel Krajzewicz
@@ -36,8 +53,7 @@
 using namespace tcpip;
 using namespace std;
 
-namespace ics
-{
+namespace ics {
 
 std::map<ics_types::stationID_t, bool> ResultOpenBuslanes::m_knownInfo;
 
@@ -45,14 +61,12 @@ std::map<ics_types::stationID_t, bool> ResultOpenBuslanes::m_knownInfo;
 // member method definitions
 // ===========================================================================
 ResultOpenBuslanes::ResultOpenBuslanes(stationID_t owner, int appHandlerId)
-        : m_runningMessageID(0)
-{
+    : m_runningMessageID(0) {
     m_applicationHandlerId = appHandlerId;
 }
 
 bool
-ResultOpenBuslanes::ProcessResult(Storage& storage)
-{
+ResultOpenBuslanes::ProcessResult(Storage& storage) {
     if (storage.size() == 0) {
         cout << "[ERROR] ProcessResult() There is no data from the application to be processed." << endl;
         return false;
@@ -63,10 +77,10 @@ ResultOpenBuslanes::ProcessResult(Storage& storage)
         storage.readUnsignedByte();
         // read the command id
         storage.readUnsignedByte();
-        bool amMobile = storage.readUnsignedByte()!=0;
+        bool amMobile = storage.readUnsignedByte() != 0;
         // reads if the application execution status
         if (!amMobile) {
-            m_areOpen = storage.readUnsignedByte()!=0;
+            m_areOpen = storage.readUnsignedByte() != 0;
         }
     } catch (std::invalid_argument e) {
         cout << "[ERROR] ProcessResult() an exception was thrown while reading result state message" << endl;
@@ -77,11 +91,10 @@ ResultOpenBuslanes::ProcessResult(Storage& storage)
 }
 
 int
-ResultOpenBuslanes::ApplyResult(SyncManager* syncManager)
-{
-    ITetrisNode *node = syncManager->GetNodeByIcsId(m_ownerStation);
+ResultOpenBuslanes::ApplyResult(SyncManager* syncManager) {
+    ITetrisNode* node = syncManager->GetNodeByIcsId(m_ownerStation);
     if ((int) node->m_type == (int) STATION_MOBILE) {
-        if (m_knownInfo.find(m_ownerStation)!=m_knownInfo.end()) {
+        if (m_knownInfo.find(m_ownerStation) != m_knownInfo.end()) {
             if (m_knownInfo.find(m_ownerStation)->second) {
                 syncManager->m_trafficSimCommunicator->ReRoute(*node);
             }
@@ -107,12 +120,11 @@ ResultOpenBuslanes::ApplyResult(SyncManager* syncManager)
 }
 
 int
-ResultOpenBuslanes::CheckMessage(int appMessageId, ics_types::stationID_t receiverId, SyncManager* syncManager)
-{
+ResultOpenBuslanes::CheckMessage(int appMessageId, ics_types::stationID_t receiverId, SyncManager* syncManager) {
     // Loop the msgs for the different vehicles
     int result = EXIT_FAILURE;
-    for (vector<OpenBuslanesMessage>::iterator i=m_messages.begin() ; i<m_messages.end();) {
-        OpenBuslanesMessage &msg = *i;
+    for (vector<OpenBuslanesMessage>::iterator i = m_messages.begin() ; i < m_messages.end();) {
+        OpenBuslanesMessage& msg = *i;
         if (msg.sendingTime + 2 <  syncManager->m_simStep) {
             i = m_messages.erase(i);
             continue;
@@ -127,27 +139,26 @@ ResultOpenBuslanes::CheckMessage(int appMessageId, ics_types::stationID_t receiv
     return result;
 }
 
-vector<pair<int,stationID_t> >
-ResultOpenBuslanes::GetReceivedMessages()
-{
+vector<pair<int, stationID_t> >
+ResultOpenBuslanes::GetReceivedMessages() {
     std::set<ics_types::stationID_t> doubleCheck;
-    vector<pair<int,stationID_t> > messages;
-    for (std::vector<OpenBuslanesMessage>::const_iterator i=m_messages.begin(); i!=m_messages.end(); ++i) {
-        const OpenBuslanesMessage &msg = *i;
-        for (std::vector<ics_types::stationID_t>::const_reverse_iterator j=(*i).receiver.rbegin(); j!=(*i).receiver.rend(); ++j) {
-            if (doubleCheck.find(*j)!=doubleCheck.end()) {
+    vector<pair<int, stationID_t> > messages;
+    for (std::vector<OpenBuslanesMessage>::const_iterator i = m_messages.begin(); i != m_messages.end(); ++i) {
+        const OpenBuslanesMessage& msg = *i;
+        for (std::vector<ics_types::stationID_t>::const_reverse_iterator j = (*i).receiver.rbegin(); j != (*i).receiver.rend(); ++j) {
+            if (doubleCheck.find(*j) != doubleCheck.end()) {
                 continue;
             }
             doubleCheck.insert(*j);
-            pair<int,stationID_t> message = make_pair(msg.messageID, (*j));
+            pair<int, stationID_t> message = make_pair(msg.messageID, (*j));
             messages.push_back(message);
         }
     }
-/*#ifdef LOG_ON
-    stringstream log;
-    log << "[INFO] GetReceivedMessage() Message Id: " << m_travelTime.m_messageId << " checked as arrived.";
-    IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
-#endif*/
+    /*#ifdef LOG_ON
+        stringstream log;
+        log << "[INFO] GetReceivedMessage() Message Id: " << m_travelTime.m_messageId << " checked as arrived.";
+        IcsLog::LogLevel((log.str()).c_str(), kLogLevelInfo);
+    #endif*/
     return messages;
 }
 

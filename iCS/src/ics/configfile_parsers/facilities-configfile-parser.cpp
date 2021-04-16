@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    facilities-configfile-parser.cpp
 /// @author  Pasquale Cataldi (EURECOM)
@@ -116,19 +133,22 @@ throw(std::runtime_error) {
 
     struct stat fileStatus;
 
-    if (stat(configFile.c_str(), &fileStatus)<0) {
-        if (errno == ENOENT)
-            throw(std::runtime_error("Could not find facilities configuration file '" + configFile + "'."));
-        else if (errno == ENOTDIR)
-            throw(std::runtime_error("A component of the path is not a directory."));
+    if (stat(configFile.c_str(), &fileStatus) < 0) {
+        if (errno == ENOENT) {
+            throw (std::runtime_error("Could not find facilities configuration file '" + configFile + "'."));
+        } else if (errno == ENOTDIR) {
+            throw (std::runtime_error("A component of the path is not a directory."));
+        }
 #ifndef _MSC_VER
-        else if (errno == ELOOP)
-            throw(std::runtime_error("Too many symbolic links encountered while traversing the path."));
+        else if (errno == ELOOP) {
+            throw (std::runtime_error("Too many symbolic links encountered while traversing the path."));
+        }
 #endif
-        else if (errno == EACCES)
-            throw(std::runtime_error("Permission denied."));
-        else if (errno == ENAMETOOLONG)
-            throw(std::runtime_error("File can not be read\n"));
+        else if (errno == EACCES) {
+            throw (std::runtime_error("Permission denied."));
+        } else if (errno == ENAMETOOLONG) {
+            throw (std::runtime_error("File can not be read\n"));
+        }
     }
 
     // Configure DOM parser.
@@ -147,7 +167,9 @@ throw(std::runtime_error) {
         // Get the top-level element: Name is "root". No attributes for "root"
 
         DOMElement* elementRoot = xmlDoc->getDocumentElement();
-        if (!elementRoot) throw(std::runtime_error("empty XML document"));
+        if (!elementRoot) {
+            throw (std::runtime_error("empty XML document"));
+        }
 
         DOMNodeList* item = elementRoot->getElementsByTagName(TAG_MapConfig);
         XMLSize_t nodeCount = item->getLength();
@@ -189,8 +211,9 @@ throw(std::runtime_error) {
                     char* tmpString = XMLString::transcode(xmlch_altitude);
                     referenceAltitude = StringUtils::toDouble(tmpString);
                     XMLString::release(&tmpString);
-                } else
-                    referenceAltitude = -10000;     // Clearly you cannot be -10000 meters below the see level!
+                } else {
+                    referenceAltitude = -10000;    // Clearly you cannot be -10000 meters below the see level!
+                }
             }
         }
 

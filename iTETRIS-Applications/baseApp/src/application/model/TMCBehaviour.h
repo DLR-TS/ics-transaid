@@ -1,4 +1,21 @@
 /*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+/*
  * TMCBehaviour.h
  *
  *  Created on: Mar 25, 2019
@@ -32,7 +49,7 @@ public:
 
     /// @brief To be called, when a message is received at an RSU
     /// @note  The payload pointer will be deleted externally after this call.
-    virtual void ReceiveMessage(int rsuID, server::Payload * payload, double snr, bool mobileNode = false) = 0;
+    virtual void ReceiveMessage(int rsuID, server::Payload* payload, double snr, bool mobileNode = false) = 0;
 
     /// @brief Add a new RSU to be controlled by this TMC
     /// @brief Execute() is called once per simulation step, when the last RSU has been executed.
@@ -52,7 +69,7 @@ protected:
     /// @brief Controller (iCSInterface) of an arbitrary RSU (currently the first RSU added to the TMC).
     /// @note Should be used for generic interactions with the application/iCS
     /// @todo Handle rsu-deletion
-    iCSInterface * iface;
+    iCSInterface* iface;
 };
 
 } /* namespace application */

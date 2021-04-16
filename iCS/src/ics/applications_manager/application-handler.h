@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    application-handler.h
 /// @author  Julen Maneros
@@ -49,8 +66,7 @@
 #include "../../utils/ics/iCStypes.h"
 #include "../sync-manager.h"
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // class declarations
@@ -80,8 +96,7 @@ struct ServiceId {
 * @class ApplicationHandler
 * @brief Manages the execution of the applications.
 */
-class ApplicationHandler
-{
+class ApplicationHandler {
 private:
     /// @brief Counters for ID.
     static int m_idCounter;
@@ -151,21 +166,21 @@ public:
     * @return True: If the function executes successfully.
     * @return False: If an error occurs.
     */
-    bool AskForNewSubscriptions(int nodeId, std::vector<Subscription*> *subscriptions);
+    bool AskForNewSubscriptions(int nodeId, std::vector<Subscription*>* subscriptions);
 
     /**
      * @brief Informs the applications of the creation of a new node.
      * @param[in] node The node created.
      * @return True If the function executes successfully, False otherwise.
      */
-    bool CreateVehicleNodeApplication(VehicleNode *node);
+    bool CreateVehicleNodeApplication(VehicleNode* node);
 
     /**
      * @brief Informs the applications of the removal of a node.
      * @param[in] node The node removed.
      * @return True If the function executes successfully, False otherwise.
      */
-    bool RemoveVehicleNode(VehicleNode *node);
+    bool RemoveVehicleNode(VehicleNode* node);
 
     /**
     * @brief Asks a node if it wants to execute an unsubscription.

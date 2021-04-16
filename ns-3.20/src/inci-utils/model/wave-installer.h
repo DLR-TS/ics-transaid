@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2009-2010, Uwicore Laboratory (www.uwicore.umh.es),
@@ -42,46 +59,44 @@
 #include <libxml/encoding.h>
 #include <libxml/xmlreader.h>
 
-namespace ns3
-{
+namespace ns3 {
 
 class YansWifiChannel;
 class CAMmanageHelper;
 class C2CIPHelper;
 class ServiceListHelper;
 
-class WaveInstaller : public CommModuleInstaller
-{
+class WaveInstaller : public CommModuleInstaller {
 
-  public:
+public:
 
-    static TypeId GetTypeId (void);
+    static TypeId GetTypeId(void);
     WaveInstaller();
-    ~WaveInstaller ();
-    void Install (NodeContainer container); 
-    void Configure (std::string filename);
-    void RelateInstaller (Ptr<CommModuleInstaller> installer);
-    Ptr<YansWifiChannel> GetWaveCch (void);
-    Ptr<YansWifiChannel> GetWaveSch (void);
-    void CreateAndAggregateObjectFromTypeId (Ptr<Node> node, const std::string typeId);
+    ~WaveInstaller();
+    void Install(NodeContainer container);
+    void Configure(std::string filename);
+    void RelateInstaller(Ptr<CommModuleInstaller> installer);
+    Ptr<YansWifiChannel> GetWaveCch(void);
+    Ptr<YansWifiChannel> GetWaveSch(void);
+    void CreateAndAggregateObjectFromTypeId(Ptr<Node> node, const std::string typeId);
 
-  protected:
+protected:
 
     typedef struct {
-      std::string name;
-      AttributeValue* value;
+        std::string name;
+        AttributeValue* value;
     } AttributesChannel;
 
-    virtual void DoInstall (NodeContainer container, NetDeviceContainer cchDevices, NetDeviceContainer schDevices) = 0;
-    void SetAntennaHeightInNodes (NodeContainer container);
+    virtual void DoInstall(NodeContainer container, NetDeviceContainer cchDevices, NetDeviceContainer schDevices) = 0;
+    void SetAntennaHeightInNodes(NodeContainer container);
 
     // Functions to read XML configuration file
-    void ProcessApplicationInstall (xmlTextReaderPtr reader);
+    void ProcessApplicationInstall(xmlTextReaderPtr reader);
 
     // Functions and members to configure the CCH and SCH channels
-    void SetChannelType (NetDeviceContainer devices, ChannelType channel);
-    void ConfigureWaveChannel (void);
-    std::vector<AttributesChannel>::iterator GetFirstEmptyElement (void);
+    void SetChannelType(NetDeviceContainer devices, ChannelType channel);
+    void ConfigureWaveChannel(void);
+    std::vector<AttributesChannel>::iterator GetFirstEmptyElement(void);
     std::vector <AttributesChannel> m_attributesChannel;
     std::string m_channelName;
     Ptr<YansWifiChannel> m_waveCch;
@@ -98,10 +113,10 @@ class WaveInstaller : public CommModuleInstaller
     ObjectFactory m_visibilityObject;
     ObjectFactory m_shadowingObject;
     ObjectFactory m_fadingObject;
-    bool FADING; 
-    float m_interferenceRangeV;         
-    float m_interferenceRangeC;   
- 
+    bool FADING;
+    float m_interferenceRangeV;
+    float m_interferenceRangeC;
+
 
     // Application helpers
     CAMmanageHelper* m_camHelper;

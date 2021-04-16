@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    V2X-message-manager.cpp
 /// @author  Julen Maneros
@@ -55,65 +72,55 @@
 // ===========================================================================
 using namespace std;
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // member method definitions
 // ===========================================================================
-V2xMessageManager::V2xMessageManager()
-{
+V2xMessageManager::V2xMessageManager() {
     m_v2xCamAreaCollection = new vector<V2xCamArea*>();
     m_v2xGeobroadcastAreaCollection = new vector<V2xGeobroadcastArea*>();
 }
 
-V2xMessageManager::~V2xMessageManager()
-{
+V2xMessageManager::~V2xMessageManager() {
     delete m_v2xCamAreaCollection;
     delete m_v2xGeobroadcastAreaCollection;
 }
 
 bool
-V2xMessageManager::CreateV2xCamArea(int subscriptionId, float frequency, unsigned int payloadLenght)
-{
+V2xMessageManager::CreateV2xCamArea(int subscriptionId, float frequency, unsigned int payloadLenght) {
     m_v2xCamAreaCollection->push_back(new V2xCamArea(subscriptionId, frequency, payloadLenght));
     return true;
 }
 
 bool
-V2xMessageManager::CreateV2xGeobroadcastArea(int subscriptionId, float frequency, unsigned int payloadLenght)
-{
+V2xMessageManager::CreateV2xGeobroadcastArea(int subscriptionId, float frequency, unsigned int payloadLenght) {
     m_v2xGeobroadcastAreaCollection->push_back(new V2xGeobroadcastArea(subscriptionId, frequency, payloadLenght));
     return true;
 }
 
 void
-V2xMessageManager::InsertCamRow(vector<ScheduledCamMessageData> &table, ScheduledCamMessageData data)
-{
+V2xMessageManager::InsertCamRow(vector<ScheduledCamMessageData>& table, ScheduledCamMessageData data) {
     table.push_back(data);
 }
 
 void
-V2xMessageManager::InsertUnicastRow(vector<ScheduledUnicastMessageData> &table, ScheduledUnicastMessageData data)
-{
+V2xMessageManager::InsertUnicastRow(vector<ScheduledUnicastMessageData>& table, ScheduledUnicastMessageData data) {
     table.push_back(data);
 }
 
 void
-V2xMessageManager::InsertGeobroadcastRow(vector<ScheduledGeobroadcastMessageData> &table, ScheduledGeobroadcastMessageData data)
-{
+V2xMessageManager::InsertGeobroadcastRow(vector<ScheduledGeobroadcastMessageData>& table, ScheduledGeobroadcastMessageData data) {
     table.push_back(data);
 }
 
 void
-V2xMessageManager::InsertTopobroadcastRow(vector<ScheduledTopobroadcastMessageData> &table, ScheduledTopobroadcastMessageData data)
-{
+V2xMessageManager::InsertTopobroadcastRow(vector<ScheduledTopobroadcastMessageData>& table, ScheduledTopobroadcastMessageData data) {
     table.push_back(data);
 }
 
 bool
-V2xMessageManager::CompareCamRows(ScheduledCamMessageData rowReceived, ScheduledCamMessageData rowTable)
-{
+V2xMessageManager::CompareCamRows(ScheduledCamMessageData rowReceived, ScheduledCamMessageData rowTable) {
     bool coincidence;
 
     coincidence = false;
@@ -131,15 +138,14 @@ V2xMessageManager::CompareCamRows(ScheduledCamMessageData rowReceived, Scheduled
 }
 
 bool
-V2xMessageManager::CompareUnicastRows(ScheduledUnicastMessageData rowReceived, ScheduledUnicastMessageData rowTable, int resolution)
-{
+V2xMessageManager::CompareUnicastRows(ScheduledUnicastMessageData rowReceived, ScheduledUnicastMessageData rowTable, int resolution) {
     bool coincidence;
 
     coincidence = false;
     if (rowReceived.senderNs3ID == rowTable.senderNs3ID) {
         if (rowReceived.receiverNs3ID == rowTable.receiverNs3ID) {
             if (rowReceived.messageType == rowTable.messageType) {
-              if (rowReceived.timeStep == rowTable.timeStep || rowReceived.timeStep == rowTable.timeStep + resolution || rowReceived.timeStep == rowTable.timeStep - resolution) {
+                if (rowReceived.timeStep == rowTable.timeStep || rowReceived.timeStep == rowTable.timeStep + resolution || rowReceived.timeStep == rowTable.timeStep - resolution) {
                     if (rowReceived.sequenceNumber == rowTable.sequenceNumber) {
                         coincidence = true;
                     }
@@ -152,8 +158,7 @@ V2xMessageManager::CompareUnicastRows(ScheduledUnicastMessageData rowReceived, S
 }
 
 bool
-V2xMessageManager::CompareGeobroadcastRows(ScheduledGeobroadcastMessageData rowReceived, ScheduledGeobroadcastMessageData rowTable, int resolution)
-{
+V2xMessageManager::CompareGeobroadcastRows(ScheduledGeobroadcastMessageData rowReceived, ScheduledGeobroadcastMessageData rowTable, int resolution) {
     bool coincidence;
 
     coincidence = false;
@@ -171,8 +176,7 @@ V2xMessageManager::CompareGeobroadcastRows(ScheduledGeobroadcastMessageData rowR
 }
 
 bool
-V2xMessageManager::CompareTopobroadcastRows(ScheduledTopobroadcastMessageData rowReceived, ScheduledTopobroadcastMessageData rowTable)
-{
+V2xMessageManager::CompareTopobroadcastRows(ScheduledTopobroadcastMessageData rowReceived, ScheduledTopobroadcastMessageData rowTable) {
     bool coincidence;
 
     coincidence = false;
@@ -190,8 +194,7 @@ V2xMessageManager::CompareTopobroadcastRows(ScheduledTopobroadcastMessageData ro
 }
 
 void
-V2xMessageManager::UpdateIdentifiersTable(vector<IdentifiersStorageStruct> &table, actionID_t actionID, stationID_t senderID, stationID_t receiverID)
-{
+V2xMessageManager::UpdateIdentifiersTable(vector<IdentifiersStorageStruct>& table, actionID_t actionID, stationID_t senderID, stationID_t receiverID) {
     bool exists = true;
 
     if (table.size() > 0) {
@@ -234,8 +237,7 @@ V2xMessageManager::UpdateIdentifiersTable(vector<IdentifiersStorageStruct> &tabl
 }
 
 vector<stationID_t>
-V2xMessageManager::GroupReceivers(std::vector<IdentifiersStorageStruct> &table, actionID_t actionID, stationID_t senderID)
-{
+V2xMessageManager::GroupReceivers(std::vector<IdentifiersStorageStruct>& table, actionID_t actionID, stationID_t senderID) {
     vector<IdentifiersStorageStruct>::iterator i = table.begin();
     vector<stationID_t> vReceivers;
 

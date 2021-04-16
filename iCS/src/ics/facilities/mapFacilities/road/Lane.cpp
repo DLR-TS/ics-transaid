@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    Lane.cpp
 /// @author  Pasquale Cataldi (EURECOM)
@@ -94,8 +111,9 @@ trafficLightID_t        Lane::getTrafficLightID() const {
 }
 
 void Lane::setShape(vector<Point2D> Shape) {
-    if (!shape.empty())
+    if (!shape.empty()) {
         shape.clear();
+    }
     shape = Shape;
     return;
 }
@@ -117,14 +135,16 @@ void Lane::setLength(laneLength_t length) {
 }
 
 void Lane::setPrevlanes(vector<Lane*> prevLanes) {
-    if (!this->prevLanes.empty())
+    if (!this->prevLanes.empty()) {
         this->prevLanes.clear();
+    }
     this->prevLanes = prevLanes;
 }
 
 void Lane::setNextLanes(vector<Lane*> nextLanes) {
-    if (!this->nextLanes.empty())
+    if (!this->nextLanes.empty()) {
         this->nextLanes.clear();
+    }
     this->nextLanes = nextLanes;
 }
 
@@ -146,17 +166,25 @@ Rectangle* Lane::createRectangleFromShape() {
     float maxX = FLT_MIN;
     float maxY = FLT_MIN;
     for (unsigned int i = 0; i < shape.size(); i++) {
-        if (shape[i].x() < minX) minX = shape[i].x();
-        if (shape[i].y() < minY) minY = shape[i].y();
-        if (shape[i].x() > maxX) maxX = shape[i].x();
-        if (shape[i].y() > maxY) maxY = shape[i].y();
+        if (shape[i].x() < minX) {
+            minX = shape[i].x();
+        }
+        if (shape[i].y() < minY) {
+            minY = shape[i].y();
+        }
+        if (shape[i].x() > maxX) {
+            maxX = shape[i].x();
+        }
+        if (shape[i].y() > maxY) {
+            maxY = shape[i].y();
+        }
     }
     vector<Point2D> verts;
     verts.push_back(Point2D(minX, minY));
     verts.push_back(Point2D(maxX, minY));
     verts.push_back(Point2D(maxX, maxY));
     verts.push_back(Point2D(minX, maxY));
-    Rectangle *rect = new Rectangle(verts);
+    Rectangle* rect = new Rectangle(verts);
     return rect;
 }
 

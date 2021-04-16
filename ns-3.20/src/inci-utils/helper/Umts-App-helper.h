@@ -1,6 +1,23 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
- * Copyright (c) 
+ * Copyright (c)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
@@ -23,7 +40,7 @@
 
 #include "ns3/node-container.h"
 #include "ns3/application-container.h"
-#include "ns3/object-factory.h" 
+#include "ns3/object-factory.h"
 #include "ns3/application-helper.h"
 #include "ns3/net-device.h"
 
@@ -34,62 +51,61 @@ namespace ns3 {
  * This class creates one or multiple instances of ns3::UMTS-App and associates
  * it/them to one/multiple node(s).
  *
- * @author 
+ * @author
  *
  */
-class UMTSAppHelper :public ApplicationHelper
-{
+class UMTSAppHelper : public ApplicationHelper {
 public:
-  /**
-   * Create a UMTSAppHelper which is used to make life easier for people wanting
-   * to use UMTS.
-   */
-  UMTSAppHelper ();
-  
-  virtual ~UMTSAppHelper(); // added by Andrea
+    /**
+     * Create a UMTSAppHelper which is used to make life easier for people wanting
+     * to use UMTS.
+     */
+    UMTSAppHelper();
 
-  void SetAttribute (std::string name, const AttributeValue &value);
-  
-  void SetApplicationNodeType(std::string umtsNodeType);
+    virtual ~UMTSAppHelper(); // added by Andrea
 
-  /**
-   * Install UMTS-App on each Node in the provided NodeContainer.
-   *
-   * \param nodes The NodeContainer containing all of the nodes on which the UMTS-App has to be installed.
-   *
-   * \returns A list of UMTS-App, one for each input node
-   */
- ApplicationContainer Install (NodeContainer nodes) const;
+    void SetAttribute(std::string name, const AttributeValue& value);
 
-  /**
-   * Install UMTS-App on the provided Node.  The Node is specified
-   * directly by a Ptr<Node>
-   *
-   * \param node The node to install UMTS on.
-   *
-   * \returns An ApplicationContainer holding the UMTS manager created.
-   */
- ApplicationContainer Install (Ptr<Node> node) const;
+    void SetApplicationNodeType(std::string umtsNodeType);
 
-  /**
-   * Install UMTS-App on the provided Node.  The Node is specified
-   * by a string that must have previously been associated with a Node using the
-   * Object Name Service.
-   *
-   * \param nodeName The node to install UMTS on.
-   *
-   * \returns An ApplicationContainer holding the UMTS created.
-   */
-  ApplicationContainer Install (std::string nodeName) const;
+    /**
+     * Install UMTS-App on each Node in the provided NodeContainer.
+     *
+     * \param nodes The NodeContainer containing all of the nodes on which the UMTS-App has to be installed.
+     *
+     * \returns A list of UMTS-App, one for each input node
+     */
+    ApplicationContainer Install(NodeContainer nodes) const;
+
+    /**
+     * Install UMTS-App on the provided Node.  The Node is specified
+     * directly by a Ptr<Node>
+     *
+     * \param node The node to install UMTS on.
+     *
+     * \returns An ApplicationContainer holding the UMTS manager created.
+     */
+    ApplicationContainer Install(Ptr<Node> node) const;
+
+    /**
+     * Install UMTS-App on the provided Node.  The Node is specified
+     * by a string that must have previously been associated with a Node using the
+     * Object Name Service.
+     *
+     * \param nodeName The node to install UMTS on.
+     *
+     * \returns An ApplicationContainer holding the UMTS created.
+     */
+    ApplicationContainer Install(std::string nodeName) const;
 
 private:
-  /**
-   * \internal
-   */
-  Ptr<Application> InstallPriv (Ptr<Node> node) const;
-  ObjectFactory m_factory;
-  std::string m_protocol;
-  std::string m_nodeType;
+    /**
+     * \internal
+     */
+    Ptr<Application> InstallPriv(Ptr<Node> node) const;
+    ObjectFactory m_factory;
+    std::string m_protocol;
+    std::string m_nodeType;
 };
 
 } // namespace ns3

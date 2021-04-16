@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    Ellipse.cpp
 /// @author  Pasquale Cataldi (EURECOM)
@@ -23,24 +40,20 @@
 #include <cmath>
 using namespace std;
 
-namespace ics_types
-{
+namespace ics_types {
 
-Ellipse::Ellipse()
-{
+Ellipse::Ellipse() {
     shapeType = ELLIPSE;
     area2DType = GEOMETRICSHAPE;
 }
 
-Ellipse::Ellipse(Point2D focus1, Point2D focus2, float eccentricity)
-{
+Ellipse::Ellipse(Point2D focus1, Point2D focus2, float eccentricity) {
     shapeType = ELLIPSE;
     area2DType = GEOMETRICSHAPE;
     initEllipse(focus1, focus2, eccentricity);
 }
 
-Ellipse::Ellipse(Point2D center, float majorAxis, float minorAxis, float rotationAngleRadians)
-{
+Ellipse::Ellipse(Point2D center, float majorAxis, float minorAxis, float rotationAngleRadians) {
     shapeType = ELLIPSE;
     area2DType = GEOMETRICSHAPE;
     initEllipse(center, majorAxis, minorAxis, rotationAngleRadians);
@@ -49,72 +62,62 @@ Ellipse::Ellipse(Point2D center, float majorAxis, float minorAxis, float rotatio
 Ellipse::~Ellipse() { }
 
 
-void        Ellipse::initEllipse(Point2D focus1, Point2D focus2, float eccentricity)
-{
+void        Ellipse::initEllipse(Point2D focus1, Point2D focus2, float eccentricity) {
     this->focus1 = focus1;
     this->focus2 = focus2;
     this->eccentricity = eccentricity;
 
-    center.set((focus1.x()+focus2.x())/2.0, (focus1.y()+focus2.y())/2.0);
-    majorAxis = 2.0*center.distanceTo(focus1)/eccentricity;
+    center.set((focus1.x() + focus2.x()) / 2.0, (focus1.y() + focus2.y()) / 2.0);
+    majorAxis = 2.0 * center.distanceTo(focus1) / eccentricity;
     minorAxis = majorAxis * sqrt(1.0 - eccentricity * eccentricity);
-    angle = atan((focus2.x()-focus1.x())/(focus1.y()-focus1.y()));
+    angle = atan((focus2.x() - focus1.x()) / (focus1.y() - focus1.y()));
 }
 
-void        Ellipse::initEllipse(Point2D center, float majorAxis, float minorAxis, float rotationAngleRadians)
-{
+void        Ellipse::initEllipse(Point2D center, float majorAxis, float minorAxis, float rotationAngleRadians) {
     this->center = center;
     this->majorAxis = majorAxis;
     this->minorAxis = minorAxis;
     eccentricity = sqrt(1.0 - (minorAxis * majorAxis));
 
-    focus1.set(-eccentricity*majorAxis/2.0, 0.0);
+    focus1.set(-eccentricity * majorAxis / 2.0, 0.0);
     focus1.reshiftRotate(center.x(), center.y(), rotationAngleRadians);
-    focus2.set(eccentricity*majorAxis/2.0, 0.0);
+    focus2.set(eccentricity * majorAxis / 2.0, 0.0);
     focus2.reshiftRotate(center.x(), center.y(), rotationAngleRadians);
     angle = rotationAngleRadians;
 }
 
-Point2D     Ellipse::getCenter() const
-{
+Point2D     Ellipse::getCenter() const {
     return center;
 }
 
-float       Ellipse::getOrientationAngle() const
-{
+float       Ellipse::getOrientationAngle() const {
     return angle;
 }
 
-bool        Ellipse::isInternal(Point2D pos) const
-{
+bool        Ellipse::isInternal(Point2D pos) const {
     return (pos.distanceTo(focus1) + pos.distanceTo(focus2) <= majorAxis);
 }
 
-float       Ellipse::getArea() const
-{
-    return majorAxis*minorAxis/4.0*M_PI;
+float       Ellipse::getArea() const {
+    return majorAxis * minorAxis / 4.0 * M_PI;
 }
 
-ShapeType   Ellipse::getShapeType() const
-{
+ShapeType   Ellipse::getShapeType() const {
     return shapeType;
 }
 
-Area2DType  Ellipse::getArea2DType() const
-{
+Area2DType  Ellipse::getArea2DType() const {
     return area2DType;
 }
 
-Rectangle   Ellipse::getCircumscribedRectangle()
-{
-    Point2D pointA(center.x() + majorAxis*cos(angle), center.y() + majorAxis*sin(angle));
-    Point2D pointB(center.x() - majorAxis*cos(angle), center.y() - majorAxis*sin(angle));
+Rectangle   Ellipse::getCircumscribedRectangle() {
+    Point2D pointA(center.x() + majorAxis * cos(angle), center.y() + majorAxis * sin(angle));
+    Point2D pointB(center.x() - majorAxis * cos(angle), center.y() - majorAxis * sin(angle));
     Rectangle rect(pointA, pointB, minorAxis);
     return rect;
 }
 
-Circle      Ellipse::getCircumscribedCircle()
-{
+Circle      Ellipse::getCircumscribedCircle() {
     Circle circle(center, majorAxis);
     return circle;
 }

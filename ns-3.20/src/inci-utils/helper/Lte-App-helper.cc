@@ -1,6 +1,23 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
- * Copyright (c) 
+ * Copyright (c)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
@@ -25,82 +42,73 @@
 #include "ns3/string.h"
 #include "ns3/lte-net-device.h"
 #include "ns3/log.h"
-#include "ns3/callback.h" 
+#include "ns3/callback.h"
 #include "ns3/inci-packet-list.h"
 #include "ns3/application-helper.h"
-NS_LOG_COMPONENT_DEFINE ("LTEAppHelper");
+NS_LOG_COMPONENT_DEFINE("LTEAppHelper");
 
 namespace ns3 {
 
-LTEAppHelper::LTEAppHelper ()
-{
-  m_factory.SetTypeId("ns3::LteApp");
+LTEAppHelper::LTEAppHelper() {
+    m_factory.SetTypeId("ns3::LteApp");
 }
 
 
-LTEAppHelper::~LTEAppHelper ()
-{
+LTEAppHelper::~LTEAppHelper() {
 }
 
 void
-LTEAppHelper::SetApplicationNodeType(std::string lteNodeType)
-{
-  m_nodeType=lteNodeType;
+LTEAppHelper::SetApplicationNodeType(std::string lteNodeType) {
+    m_nodeType = lteNodeType;
 }
 
 
 ApplicationContainer
-LTEAppHelper::Install (NodeContainer c) const
-{
-  ApplicationContainer apps;
-  for (NodeContainer::Iterator i = c.Begin (); i != c.End (); i++)
-    {
-      apps.Add (InstallPriv (*i));
+LTEAppHelper::Install(NodeContainer c) const {
+    ApplicationContainer apps;
+    for (NodeContainer::Iterator i = c.Begin(); i != c.End(); i++) {
+        apps.Add(InstallPriv(*i));
     }
 
-  return apps;
+    return apps;
 }
 
 Ptr<Application>
-LTEAppHelper::InstallPriv (Ptr<Node> node) const
-{
-  NS_LOG_INFO("[ns3][LTE-App Helper] install LTE-APP application on node " << node->GetId() <<" --------\n");
-  NS_LOG_INFO(m_factory.GetTypeId()<<" \n ");
-  
-  Ptr<iTETRISApplication> app = m_factory.Create<iTETRISApplication> ();
-  uint32_t app_index =node->AddApplication (app);
-  app->SetServiceIndex(app_index);
-  app->SetNode(node);
-  app->SetSockets();
-  app->SetServiceType (m_apptype);    
-  Ptr<InciPacketList> packetList = node->GetObject <InciPacketList> ();
-  // set the callback for the application to communicate to the inci when a packet is received at facilities level
-  app->SetReceiveCallback (MakeCallback (&InciPacketList::ReceiveFromApplication, packetList));
- 
-  
-  return app;
-/****jin: extra '}' here****/
+LTEAppHelper::InstallPriv(Ptr<Node> node) const {
+    NS_LOG_INFO("[ns3][LTE-App Helper] install LTE-APP application on node " << node->GetId() << " --------\n");
+    NS_LOG_INFO(m_factory.GetTypeId() << " \n ");
+
+    Ptr<iTETRISApplication> app = m_factory.Create<iTETRISApplication> ();
+    uint32_t app_index = node->AddApplication(app);
+    app->SetServiceIndex(app_index);
+    app->SetNode(node);
+    app->SetSockets();
+    app->SetServiceType(m_apptype);
+    Ptr<InciPacketList> packetList = node->GetObject <InciPacketList> ();
+    // set the callback for the application to communicate to the inci when a packet is received at facilities level
+    app->SetReceiveCallback(MakeCallback(&InciPacketList::ReceiveFromApplication, packetList));
+
+
+    return app;
+    /****jin: extra '}' here****/
 //}
 
-} 
+}
 
 void
-LTEAppHelper::SetAttribute (std::string name, const AttributeValue &value)
-{
-  m_factory.Set (name, value);
+LTEAppHelper::SetAttribute(std::string name, const AttributeValue& value) {
+    m_factory.Set(name, value);
 }
 
 ApplicationContainer
-LTEAppHelper::Install (Ptr<Node> node) const
-{
-  return ApplicationContainer (InstallPriv (node));
+LTEAppHelper::Install(Ptr<Node> node) const {
+    return ApplicationContainer(InstallPriv(node));
 }
 
 ApplicationContainer
-LTEAppHelper::Install (std::string nodeName) const
-{
-  Ptr<Node> node = Names::Find<Node> (nodeName);
-  return ApplicationContainer (InstallPriv (node));
+LTEAppHelper::Install(std::string nodeName) const {
+    Ptr<Node> node = Names::Find<Node> (nodeName);
+    return ApplicationContainer(InstallPriv(node));
 }
 
 /****jin : this part is repeated as before, commented***/
@@ -122,21 +130,21 @@ LTEAppHelper::InstallPriv (Ptr<Node> node) const
 {
   NS_LOG_INFO("[ns3][LTE-App Helper] install LTE-APP application on node " << node->GetId() <<" --------\n");
   NS_LOG_INFO(m_factory.GetTypeId()<<" \n ");
-  
+
   Ptr<iTETRISApplication> app = m_factory.Create<iTETRISApplication> ();
   uint32_t app_index =node->AddApplication (app);
   app->SetServiceIndex(app_index);
   app->SetNode(node);
   app->SetSockets();
-  app->SetServiceType (m_apptype);    
+  app->SetServiceType (m_apptype);
   Ptr<InciPacketList> packetList = node->GetObject <InciPacketList> ();
   // set the callback for the application to communicate to the inci when a packet is received at facilities level
   app->SetReceiveCallback (MakeCallback (&InciPacketList::ReceiveFromApplication, packetList));
- 
-  
+
+
   return app;
 }
 
 */
-} 
+}
 

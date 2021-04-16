@@ -1,7 +1,24 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2009-2010, EU FP7 iTETRIS project
- *                          Uwicore Laboratory (www.uwicore.umh.es), University Miguel Hernandez 
+ *                          Uwicore Laboratory (www.uwicore.umh.es), University Miguel Hernandez
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
@@ -36,62 +53,60 @@
 #include "ns3/bs-command-manager-container.h"
 #include "ns3/ss-command-manager-container.h"
 
-namespace ns3
-{
+namespace ns3 {
 
-class WimaxInstaller : public CommModuleInstaller
-{
-  public:
-    static TypeId GetTypeId (void);
-    WimaxInstaller(void);    
-    void Install (NodeContainer container); 
-    void Configure (std::string filename);
+class WimaxInstaller : public CommModuleInstaller {
+public:
+    static TypeId GetTypeId(void);
+    WimaxInstaller(void);
+    void Install(NodeContainer container);
+    void Configure(std::string filename);
     void AssignIpAddress(NetDeviceContainer devices);
     ~WimaxInstaller();
-    virtual NetDeviceContainer DoInstall (NodeContainer container) = 0;
+    virtual NetDeviceContainer DoInstall(NodeContainer container) = 0;
 
-  protected:
+protected:
 
     struct WimaxParameters {
-      uint32_t frequency; // in KHz
-      uint32_t bandwidth;
-      double txPower;
-      double txGain;
-      double rxGain;
-      double noiseFigure;
-      double coverageRange;
-      double bsAntennaHeight;
-      double ssAntennaHeight;
+        uint32_t frequency; // in KHz
+        uint32_t bandwidth;
+        double txPower;
+        double txGain;
+        double rxGain;
+        double noiseFigure;
+        double coverageRange;
+        double bsAntennaHeight;
+        double ssAntennaHeight;
     };
 
     WimaxParameters m_wimaxParameters;
 
-    void ProcessApplicationInstall (xmlTextReaderPtr reader);
-    virtual void DoProcessApplicationInstall (std::string appName) {};
-    void SetWimaxParameters (NetDeviceContainer devices);
-    virtual void DoSetWimaxParameters (NetDeviceContainer devices) {}; 
-    uint32_t ConvertToInt (std::string cadena);
-    double ConvertToDouble (std::string cadena);
-      
-    void AddInterfacesToIpInterfaceList (NodeContainer container);
-    void AddServiceFlow (NetDeviceContainer netDevices);
+    void ProcessApplicationInstall(xmlTextReaderPtr reader);
+    virtual void DoProcessApplicationInstall(std::string appName) {};
+    void SetWimaxParameters(NetDeviceContainer devices);
+    virtual void DoSetWimaxParameters(NetDeviceContainer devices) {};
+    uint32_t ConvertToInt(std::string cadena);
+    double ConvertToDouble(std::string cadena);
+
+    void AddInterfacesToIpInterfaceList(NodeContainer container);
+    void AddServiceFlow(NetDeviceContainer netDevices);
 
     static WimaxHelper m_wimax;
     static WimaxCommandManagerHelper m_commandMgnr;
     static BsCommandManagerContainer m_bsMgnrCont;
     static SsCommandManagerContainer m_ssMgnrCont;
-    
+
     static Ipv4AddressHelper m_ipAddressHelper;
     static NodeContainer m_vehicleContainer;
     static NodeContainer m_baseStationContainer;
     static NetDeviceContainer m_baseStationDeviceContainer;
     static NetDeviceContainer m_vehicleDeviceContainer;
-    
+
     std::string m_nodeType;
     ServiceListHelper* m_servListHelper;
     static Ptr<SimpleOfdmWimaxChannel> m_channel;
     WimaxAppHelper* m_wimaxAppHelper;
- 
+
 };
 
 }

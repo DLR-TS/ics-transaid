@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    subs-start-travel-time-calculation.cpp
 /// @author  Julen Maneros
@@ -37,14 +54,12 @@
 using namespace std;
 using namespace ics_types;
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // member method definitions
 // ===========================================================================
-SubsStartTravelTimeCalculation::SubsStartTravelTimeCalculation(int appId, stationID_t stationId, vector<Point2D> vertex, float frequency, float msgRegenerationTime, int msgLifeTime) : Subscription(stationId)
-{
+SubsStartTravelTimeCalculation::SubsStartTravelTimeCalculation(int appId, stationID_t stationId, vector<Point2D> vertex, float frequency, float msgRegenerationTime, int msgLifeTime) : Subscription(stationId) {
     m_id = ++m_subscriptionCounter;
     m_name = "START TRAVEL TIME CALCULATION";
     m_appId = appId;
@@ -82,20 +97,17 @@ SubsStartTravelTimeCalculation::SubsStartTravelTimeCalculation(int appId, statio
     CreateGeobroadcastArea();
 }
 
-SubsStartTravelTimeCalculation::~SubsStartTravelTimeCalculation()
-{
+SubsStartTravelTimeCalculation::~SubsStartTravelTimeCalculation() {
     m_geobroadcastArea = NULL;
 }
 
 V2xGeobroadcastArea*
-SubsStartTravelTimeCalculation::GetGeobroadcastArea()
-{
+SubsStartTravelTimeCalculation::GetGeobroadcastArea() {
     return m_geobroadcastArea;
 }
 
 int
-SubsStartTravelTimeCalculation::CreateGeobroadcastArea()
-{
+SubsStartTravelTimeCalculation::CreateGeobroadcastArea() {
     if (m_geobroadcastArea != NULL) {
 #ifdef LOG_ON
         IcsLog::LogLevel("CreateGeobroadcastArea() Geobroadcast area already created for the subscription.", kLogLevelInfo);
@@ -111,8 +123,7 @@ SubsStartTravelTimeCalculation::CreateGeobroadcastArea()
 }
 
 int
-SubsStartTravelTimeCalculation::ProcessReceivedGeobroadcastMessage(ScheduledGeobroadcastMessageData message, SyncManager* syncManager)
-{
+SubsStartTravelTimeCalculation::ProcessReceivedGeobroadcastMessage(ScheduledGeobroadcastMessageData message, SyncManager* syncManager) {
 #ifdef LOG_ON
     IcsLog::LogLevel("ProcessReceivedGeobroadcastMessage() SubsStartTravelTimeCalculation not based on Unicasting", kLogLevelInfo);
 #endif
@@ -120,8 +131,7 @@ SubsStartTravelTimeCalculation::ProcessReceivedGeobroadcastMessage(ScheduledGeob
 }
 
 int
-SubsStartTravelTimeCalculation::AddNewTravelTimeStation(stationID_t nodeId)
-{
+SubsStartTravelTimeCalculation::AddNewTravelTimeStation(stationID_t nodeId) {
     for (vector<stationID_t>::iterator it = m_stationsReceivedStartCommand.begin() ; it != m_stationsReceivedStartCommand.end() ; ++it) {
         if ((*it) == nodeId) {   // Do not add to the collection if the ID already exists
             return EXIT_SUCCESS;
@@ -134,8 +144,7 @@ SubsStartTravelTimeCalculation::AddNewTravelTimeStation(stationID_t nodeId)
     return EXIT_SUCCESS;
 }
 int
-SubsStartTravelTimeCalculation::ProcessReceivedUnicastMessage(ScheduledUnicastMessageData message)
-{
+SubsStartTravelTimeCalculation::ProcessReceivedUnicastMessage(ScheduledUnicastMessageData message) {
 #ifdef LOG_ON
     IcsLog::LogLevel("[WARNING] ProcessReceivedUnicastMessage() SubsStartTravelTimeCalculation not based on Unicasting", kLogLevelInfo);
 #endif

@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    MapFacilities.h
 /// @author  Pasquale Cataldi (EURECOM)
@@ -173,7 +190,7 @@ public:
     * @param[in] tlSignal signal of the traffic light
     * @param[in] info Information associated to it.
     */
-    void updateTrafficLightDynamicInformation(const trafficLightID_t &tlID, std::string& state);
+    void updateTrafficLightDynamicInformation(const trafficLightID_t& tlID, std::string& state);
 
     /**
     * @brief Returns the Latitude of the origin coordinate of the map.
@@ -254,7 +271,7 @@ private:
     * @param[out] &outIntersection Reference to the intersection point (output).
     * @return Distance
     */
-    float closestDistancePointLine(const Point2D &point, const Point2D &lineStart, const Point2D &lineEnd, Point2D &outIntersection);
+    float closestDistancePointLine(const Point2D& point, const Point2D& lineStart, const Point2D& lineEnd, Point2D& outIntersection);
 
     /**
     * @brief Considers the lane shape and returns a rectangle (positioned parallel to the axes) that contains the lane.

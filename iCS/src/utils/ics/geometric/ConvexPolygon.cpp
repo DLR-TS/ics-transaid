@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    ConvexPolygon.cpp
 /// @author  Pasquale Cataldi (EURECOM)
@@ -26,42 +43,38 @@
 #include <vector>
 #include <cfloat>
 
-namespace ics_types
-{
+namespace ics_types {
 
 typedef std::pair<float, Point2D> convexPolygon_pair;
 
 bool    sort_pred(const convexPolygon_pair& left, const convexPolygon_pair& right);
 float   computeTriangleArea(Point2D p0, Point2D p1, Point2D p2);
 
-ConvexPolygon::ConvexPolygon()
-{
+ConvexPolygon::ConvexPolygon() {
     shapeType = CONVEXPOLIGON;
     area2DType = GEOMETRICSHAPE;
 }
 
-ConvexPolygon::ConvexPolygon(std::vector<Point2D> verts)
-{
+ConvexPolygon::ConvexPolygon(std::vector<Point2D> verts) {
     shapeType = CONVEXPOLIGON;
     area2DType = GEOMETRICSHAPE;
 
     if (!initConvexPolygon(verts)) {
         std::cerr << "[facilities] WARNING: the polygon [ " ;
-        for (unsigned int i=0; i < verts.size(); i++)
+        for (unsigned int i = 0; i < verts.size(); i++) {
             std::cerr << "(" << verts[i] << ") ";
+        }
         std::cerr << " ] is not convex!" << std::endl;
         abort();
     }
     shapeType = CONVEXPOLIGON;
 }
 
-ConvexPolygon::~ConvexPolygon()
-{
+ConvexPolygon::~ConvexPolygon() {
 
 }
 
-bool    ConvexPolygon::initConvexPolygon(std::vector<Point2D> verts)
-{
+bool    ConvexPolygon::initConvexPolygon(std::vector<Point2D> verts) {
     bool convexityFlag = true;
 
     if (verts.empty()) {
@@ -69,8 +82,9 @@ bool    ConvexPolygon::initConvexPolygon(std::vector<Point2D> verts)
         abort();
     }
 
-    if (!vertices.empty())
+    if (!vertices.empty()) {
         vertices.clear();
+    }
 
 #ifdef _CHECK_CONVEXITY
     // If the polygon is not convex
@@ -81,31 +95,36 @@ bool    ConvexPolygon::initConvexPolygon(std::vector<Point2D> verts)
     std::vector<convexPolygon_pair>::iterator it;
     std::vector<convexPolygon_pair> angles;
 
-    for (itP=verts.begin(); itP!=verts.end(); ++itP)
+    for (itP = verts.begin(); itP != verts.end(); ++itP) {
         angles.push_back(convexPolygon_pair(itP->x(), *itP));
+    }
 
 #ifdef _CHECK_CONVEXITY
     std::cout << "[facilities] Unordered vertices:" << std::endl;
-    for (itP=verts.begin(); itP!=verts.end(); ++itP)
+    for (itP = verts.begin(); itP != verts.end(); ++itP) {
         std::cout << "(" << *itP << ")" << std::endl;
+    }
     std::cout << std::endl;
 #endif
 
     std::sort(angles.begin(), angles.end(), sort_pred);
 
 
-    for (it=angles.begin(); it!=angles.end(); ++it)
+    for (it = angles.begin(); it != angles.end(); ++it) {
         it->first = (it->second).shiftedAtan((angles.begin())->second);
+    }
 
-    std::sort(angles.begin()+1, angles.end(), sort_pred);
+    std::sort(angles.begin() + 1, angles.end(), sort_pred);
 
-    for (it=angles.begin(); it!=angles.end(); ++it)
+    for (it = angles.begin(); it != angles.end(); ++it) {
         vertices.push_back(it->second);
+    }
 
 #ifdef _CHECK_CONVEXITY
     std::cout << "[facilities] Counterclockwise ordered vertices:" << std::endl;
-    for (itP=vertices.begin(); itP!=vertices.end(); ++itP)
+    for (itP = vertices.begin(); itP != vertices.end(); ++itP) {
         std::cout << "(" << *itP << ")" << std::endl;
+    }
     std::cout << std::endl;
 #endif
 
@@ -114,110 +133,111 @@ bool    ConvexPolygon::initConvexPolygon(std::vector<Point2D> verts)
     return convexityFlag;
 }
 
-bool    ConvexPolygon::isInternal(Point2D pos) const
-{
+bool    ConvexPolygon::isInternal(Point2D pos) const {
     bool internalFlag = true;
     std::vector<Point2D>::const_iterator it;
     std::vector<Point2D>::const_iterator itp1;
     for (it = vertices.begin(); it < vertices.end(); it++) {
         itp1 = it + 1;
-        if (itp1 == vertices.end())
+        if (itp1 == vertices.end()) {
             itp1 = vertices.begin();
+        }
 
-        internalFlag &= (computeTriangleArea(*it, *itp1 ,pos) >= 0);
+        internalFlag &= (computeTriangleArea(*it, *itp1, pos) >= 0);
     }
     return internalFlag;
 }
 
 // $ A = \frac{1}{2} \sum_{i = 0}^{n - 1}( x_i y_{i + 1} - x_{i + 1} y_i) $
-float   ConvexPolygon::getArea() const
-{
+float   ConvexPolygon::getArea() const {
     float area = 0.0;
     std::vector<Point2D>::const_iterator it;
     std::vector<Point2D>::const_iterator itp1;
     for (it = vertices.begin(); it < vertices.end(); it++) {
         itp1 = it + 1;
-        if (itp1 == vertices.end())
+        if (itp1 == vertices.end()) {
             itp1 = vertices.begin();
+        }
 
         area += (it->x() * itp1->y() - itp1->x() * it->y());
     }
-    return (area/2.0);
+    return (area / 2.0);
 }
 
-ShapeType   ConvexPolygon::getShapeType() const
-{
+ShapeType   ConvexPolygon::getShapeType() const {
     return shapeType;
 }
 
-Area2DType  ConvexPolygon::getArea2DType() const
-{
+Area2DType  ConvexPolygon::getArea2DType() const {
     return area2DType;
 }
 
-unsigned int ConvexPolygon::getNumberOfVertices() const
-{
+unsigned int ConvexPolygon::getNumberOfVertices() const {
     return vertices.size();
 }
 
-Rectangle   ConvexPolygon::getCircumscribedRectangle()
-{
+Rectangle   ConvexPolygon::getCircumscribedRectangle() {
     float minX = FLT_MAX;
     float minY = FLT_MAX;
     float maxX = FLT_MIN;
     float maxY = FLT_MIN;
 
     for (unsigned int j = 0; j < vertices.size(); j++) {
-        if (vertices[j].x() < minX) minX = vertices[j].x();
-        if (vertices[j].y() < minY) minY = vertices[j].y();
-        if (vertices[j].x() > maxX) maxX = vertices[j].x();
-        if (vertices[j].x() > maxY) maxY = vertices[j].y();
+        if (vertices[j].x() < minX) {
+            minX = vertices[j].x();
+        }
+        if (vertices[j].y() < minY) {
+            minY = vertices[j].y();
+        }
+        if (vertices[j].x() > maxX) {
+            maxX = vertices[j].x();
+        }
+        if (vertices[j].x() > maxY) {
+            maxY = vertices[j].y();
+        }
     }
 
     std::vector<Point2D> rectVerts;
-    rectVerts.push_back(Point2D(minX,minY));
-    rectVerts.push_back(Point2D(maxX,minY));
-    rectVerts.push_back(Point2D(maxX,maxY));
-    rectVerts.push_back(Point2D(minX,maxY));
+    rectVerts.push_back(Point2D(minX, minY));
+    rectVerts.push_back(Point2D(maxX, minY));
+    rectVerts.push_back(Point2D(maxX, maxY));
+    rectVerts.push_back(Point2D(minX, maxY));
     Rectangle rect(rectVerts);
     return rect;
 }
 
-Circle      ConvexPolygon::getCircumscribedCircle()
-{
+Circle      ConvexPolygon::getCircumscribedCircle() {
     Rectangle rect = getCircumscribedRectangle();
     std::vector<Point2D> rectVerts = rect.getVertices();
     Point2D rectCenter = rect.getCenter();
     float maxDistance = 0;
     for (unsigned int i = 0; i < vertices.size(); i++) {
         float currVert2rectCenterDistance = rectCenter.distanceTo(vertices[i]);
-        if (currVert2rectCenterDistance > maxDistance)
+        if (currVert2rectCenterDistance > maxDistance) {
             maxDistance = currVert2rectCenterDistance;
+        }
     }
     Circle circle(rectCenter, maxDistance);
     return circle;
 }
 
-void        ConvexPolygon::printVertices()
-{
-    for (unsigned int i=0; i<vertices.size(); i++)
+void        ConvexPolygon::printVertices() {
+    for (unsigned int i = 0; i < vertices.size(); i++) {
         std::cout << "(" << vertices[i] << ") ";
+    }
 }
 
-const std::vector<Point2D> ConvexPolygon::getVertices() const
-{
+const std::vector<Point2D> ConvexPolygon::getVertices() const {
     return vertices;
 }
 
 // ================== Internal functions ========================
 
-bool sort_pred(const convexPolygon_pair& left, const convexPolygon_pair& right)
-{
+bool sort_pred(const convexPolygon_pair& left, const convexPolygon_pair& right) {
     return left.first < right.first;
 }
 
-float computeTriangleArea(Point2D p0, Point2D p1, Point2D p2)
-{
+float computeTriangleArea(Point2D p0, Point2D p1, Point2D p2) {
     return (p1.x() * p2.y() -
             p1.y() * p2.x() -
             p0.x() * p2.y() +

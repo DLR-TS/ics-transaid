@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2009-2010, CBT, EU FP7 iTETRIS project
@@ -36,7 +53,7 @@
 #include "ns3/simulator.h"
 #include "ns3/names.h"
 
-NS_LOG_COMPONENT_DEFINE ("DvbhHelper");
+NS_LOG_COMPONENT_DEFINE("DvbhHelper");
 
 namespace ns3 {
 
@@ -44,85 +61,70 @@ DvbhPhyHelper::~DvbhPhyHelper()
 {}
 
 DvbhPhyHelper
-DvbhPhyHelper::Default (void)
-{
-  DvbhPhyHelper helper;
- 
-  return helper;
+DvbhPhyHelper::Default(void) {
+    DvbhPhyHelper helper;
+
+    return helper;
 }
 
-Ptr<Object> 
-DvbhPhyHelper::Create (std::string type) const
-{
-  if(type=="NodeUE")
-  {      
-      Ptr<DVBHPhyLayerUserEquip> phy = CreateObject<DVBHPhyLayerUserEquip> ();
-      
-      return phy;
-  }
-  else
-  {
-    Ptr<DVBHPhyLayerBaseStation> phy = CreateObject<DVBHPhyLayerBaseStation> ();
+Ptr<Object>
+DvbhPhyHelper::Create(std::string type) const {
+    if (type == "NodeUE") {
+        Ptr<DVBHPhyLayerUserEquip> phy = CreateObject<DVBHPhyLayerUserEquip> ();
 
-      return phy;
-  }
-       
-}
+        return phy;
+    } else {
+        Ptr<DVBHPhyLayerBaseStation> phy = CreateObject<DVBHPhyLayerBaseStation> ();
 
-void 
-DvbhPhyHelper::Set (std::string name, const AttributeValue &v)
-{  
-  m_phy.Set (name, v);
+        return phy;
+    }
+
 }
 
 void
-DvbhPhyHelper::SetNodeType(std::string type)
-{
-  if(type=="NodeUE")
-  {
-    m_phy.SetTypeId ("ns3::PhyNodeUE"); 
-  }
-  else if(type=="NodeB")
-  {
-    m_phy.SetTypeId ("ns3::PhyNodeB"); 
-  }
-   
+DvbhPhyHelper::Set(std::string name, const AttributeValue& v) {
+    m_phy.Set(name, v);
 }
 
-void 
-DvbhPhyHelper::SetChannel (Ptr<DVBHChannel> channel)
-{
-  m_channel = channel;
+void
+DvbhPhyHelper::SetNodeType(std::string type) {
+    if (type == "NodeUE") {
+        m_phy.SetTypeId("ns3::PhyNodeUE");
+    } else if (type == "NodeB") {
+        m_phy.SetTypeId("ns3::PhyNodeB");
+    }
+
 }
 
-DvbhOfdmLayerHelper::DvbhOfdmLayerHelper()
-{
- m_ofdm.SetTypeId ("ns3::DVBHOfdmLayer"); 
+void
+DvbhPhyHelper::SetChannel(Ptr<DVBHChannel> channel) {
+    m_channel = channel;
 }
-DvbhOfdmLayerHelper::~DvbhOfdmLayerHelper ()
+
+DvbhOfdmLayerHelper::DvbhOfdmLayerHelper() {
+    m_ofdm.SetTypeId("ns3::DVBHOfdmLayer");
+}
+DvbhOfdmLayerHelper::~DvbhOfdmLayerHelper()
 {}
 
 DvbhOfdmLayerHelper
-DvbhOfdmLayerHelper::Default (void)
-{
-  DvbhOfdmLayerHelper helper;
- 
-  return helper;
+DvbhOfdmLayerHelper::Default(void) {
+    DvbhOfdmLayerHelper helper;
+
+    return helper;
 }
 
-void 
-DvbhOfdmLayerHelper::Set (std::string name, const AttributeValue &v)
-{
-  m_ofdm.Set (name, v);
+void
+DvbhOfdmLayerHelper::Set(std::string name, const AttributeValue& v) {
+    m_ofdm.Set(name, v);
 }
 
 
-Ptr<DVBHOfdmLayer> 
-DvbhOfdmLayerHelper::Create () const
-{
-  Ptr<DVBHOfdmLayer> ofdm = m_ofdm.Create<DVBHOfdmLayer> ();
+Ptr<DVBHOfdmLayer>
+DvbhOfdmLayerHelper::Create() const {
+    Ptr<DVBHOfdmLayer> ofdm = m_ofdm.Create<DVBHOfdmLayer> ();
 
-  return ofdm;
+    return ofdm;
 }
 
 
@@ -130,28 +132,23 @@ DvbhLinkLayerHelper::~DvbhLinkLayerHelper()
 {}
 
 DvbhLinkLayerHelper
-DvbhLinkLayerHelper::Default (void)
-{
-  DvbhLinkLayerHelper helper;
- 
-  return helper;
+DvbhLinkLayerHelper::Default(void) {
+    DvbhLinkLayerHelper helper;
+
+    return helper;
 }
 
-Ptr<Object> 
-DvbhLinkLayerHelper::Create (std::string type) const
-{
-  if(type=="NodeUE")
-  {      
-      Ptr<DVBHLinkLayerUserEquip> linkLayer = CreateObject<DVBHLinkLayerUserEquip> ();
-      
-      return linkLayer;
-  }
-  else
-  {
-    Ptr<DVBHLinkLayerBaseStation> linkLayer= CreateObject<DVBHLinkLayerBaseStation> ();
+Ptr<Object>
+DvbhLinkLayerHelper::Create(std::string type) const {
+    if (type == "NodeUE") {
+        Ptr<DVBHLinkLayerUserEquip> linkLayer = CreateObject<DVBHLinkLayerUserEquip> ();
 
-      return linkLayer;
-  }
+        return linkLayer;
+    } else {
+        Ptr<DVBHLinkLayerBaseStation> linkLayer = CreateObject<DVBHLinkLayerBaseStation> ();
+
+        return linkLayer;
+    }
 
 }
 
@@ -159,47 +156,44 @@ DvbhHelper::DvbhHelper()
 {}
 
 DvbhHelper
-DvbhHelper::Default (void)
-{
-  DvbhHelper helper;
- 
-  return helper;
+DvbhHelper::Default(void) {
+    DvbhHelper helper;
+
+    return helper;
 }
 
-NetDeviceContainer 
-DvbhHelper::Install (const DvbhOfdmLayerHelper &ofdmHelper,NodeContainer c,std::string nodeType/*,Ptr<DVBHChannel> broadcastChannel*/) const
-{
-  NetDeviceContainer devices;
-  for (NodeContainer::Iterator i = c.Begin (); i != c.End (); ++i)
-    {
-   
-      Ptr<Node> node = *i;
-      Ptr<DvbhNetDevice> device = CreateObject<DvbhNetDevice> ();
-      device->SetAddress(Mac48Address::Allocate ());
-      device->SetNodeType(nodeType);
-      
-      Ptr<DVBHOfdmLayer> ofdm=ofdmHelper.Create();
-      
-      Ptr<DVBHChannel> broadcastChannel=Create<DVBHChannel>();
-      
-      ofdm->SetChannel(broadcastChannel);      
-      DvbhPhyHelper phyHelper;
-      Ptr<Object> phy = phyHelper.Create (nodeType);
-	  
-      DvbhLinkLayerHelper linklayerHelper;
-      Ptr<Object> linkLayer=linklayerHelper.Create(nodeType);
-	      
-      device->SetOfdmLayer(ofdm); 
-      
-      device->SetPhyLayer(phy);
-      device->SetLinkLayer(linkLayer);
-             
-      device->SetManager();
-      
-      node->AddDevice (device);
-      devices.Add (device);
+NetDeviceContainer
+DvbhHelper::Install(const DvbhOfdmLayerHelper& ofdmHelper, NodeContainer c, std::string nodeType/*,Ptr<DVBHChannel> broadcastChannel*/) const {
+    NetDeviceContainer devices;
+    for (NodeContainer::Iterator i = c.Begin(); i != c.End(); ++i) {
+
+        Ptr<Node> node = *i;
+        Ptr<DvbhNetDevice> device = CreateObject<DvbhNetDevice> ();
+        device->SetAddress(Mac48Address::Allocate());
+        device->SetNodeType(nodeType);
+
+        Ptr<DVBHOfdmLayer> ofdm = ofdmHelper.Create();
+
+        Ptr<DVBHChannel> broadcastChannel = Create<DVBHChannel>();
+
+        ofdm->SetChannel(broadcastChannel);
+        DvbhPhyHelper phyHelper;
+        Ptr<Object> phy = phyHelper.Create(nodeType);
+
+        DvbhLinkLayerHelper linklayerHelper;
+        Ptr<Object> linkLayer = linklayerHelper.Create(nodeType);
+
+        device->SetOfdmLayer(ofdm);
+
+        device->SetPhyLayer(phy);
+        device->SetLinkLayer(linkLayer);
+
+        device->SetManager();
+
+        node->AddDevice(device);
+        devices.Add(device);
     }
-  return devices;
+    return devices;
 }
 
 } // namespace ns3

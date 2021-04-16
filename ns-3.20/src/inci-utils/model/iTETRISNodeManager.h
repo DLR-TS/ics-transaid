@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2009-2010, Uwicore Laboratory (www.uwicore.umh.es),
@@ -32,97 +49,95 @@
 #include "ns3/itetris-types.h"
 #include <map>
 
-namespace ns3
-{
+namespace ns3 {
 
 class NodeContainer;
 class Node;
 
 /**
- * @class iTETRISNodeManager 
+ * @class iTETRISNodeManager
  * @brief The class iTETRISNodeManager manages the creation, the initial placement, and the position updates of ns3 nodes. The additions of communication modules (technologies, protocols stacks, etc.) is perfomed through installers.
  */
-class iTETRISNodeManager
-{
-  public:
-    iTETRISNodeManager (void);
+class iTETRISNodeManager {
+public:
+    iTETRISNodeManager(void);
 
     /**
      * @brief Create a single node
      */
-    void CreateItetrisNode (void);
-    void CreateItetrisNode(uint32_t numNodes); 
-    uint32_t CreateItetrisNode (Vector position); 
-    uint32_t CreateItetrisNode (const Vector &position, const float &speed, const float & heading, const std::string &laneId); 
-    void CreateItetrisTMC (void);
+    void CreateItetrisNode(void);
+    void CreateItetrisNode(uint32_t numNodes);
+    uint32_t CreateItetrisNode(Vector position);
+    uint32_t CreateItetrisNode(const Vector& position, const float& speed, const float& heading, const std::string& laneId);
+    void CreateItetrisTMC(void);
 
     /**
      * @brief Get all the iTETRIS nodes
      */
-    const NodeContainer & GetItetrisNodes () const;
+    const NodeContainer& GetItetrisNodes() const;
 
     /**
      * @brief Get a NodeContainer pointer of the nodes with the corresponding communication module (typeOfModule)
      */
-    NodeContainer* GetItetrisTechNodes (std::string typeOfModule);
+    NodeContainer* GetItetrisTechNodes(std::string typeOfModule);
 
     /**
      * @brief Attach a new communication module Installer to the NodeManager
      */
-    void AttachInstaller (std::string typeOfModule, Ptr<CommModuleInstaller> installer); 
+    void AttachInstaller(std::string typeOfModule, Ptr<CommModuleInstaller> installer);
 
     /**
      * @brief Install a new communication module ('typeOfModule') in the last node that has been created
      */
-    NodeContainer* InstallCommunicationModule (std::string typeOfModule);
+    NodeContainer* InstallCommunicationModule(std::string typeOfModule);
 
     /**
      * @brief Install a new communication module ('typeOfModule') in the last node that has been created
      */
     //IP-case
-    NodeContainer* InstallCommunicationModule (std::string typeOfModule, STACK stack);  
+    NodeContainer* InstallCommunicationModule(std::string typeOfModule, STACK stack);
 
     /**
-     * @brief Get the installer for the communication module ('typeOfModule') 
+     * @brief Get the installer for the communication module ('typeOfModule')
      */
-    Ptr<CommModuleInstaller> GetInstaller (std::string typeOfModule);
+    Ptr<CommModuleInstaller> GetInstaller(std::string typeOfModule);
 
     /**
      * @brief Set the default modules that will be installed in each new node that is created
      */
-    void SetDefaultModule (std::string typeOfModule);
+    void SetDefaultModule(std::string typeOfModule);
 
     /**
      * @brief Update node's position
      */
-    void UpdateNodePosition(uint32_t nodeId, Vector position); 
-    void UpdateNodePosition (uint32_t nodeId, const Vector &position, const float &speed, const float & heading, const std::string &laneId); 
+    void UpdateNodePosition(uint32_t nodeId, Vector position);
+    void UpdateNodePosition(uint32_t nodeId, const Vector& position, const float& speed, const float& heading, const std::string& laneId);
 
-    Ptr<Node> GetItetrisNode (uint32_t nodeId);
+    Ptr<Node> GetItetrisNode(uint32_t nodeId);
 
-    bool ActivateNode (uint32_t nodeId);
-    bool DeactivateNode (uint32_t nodeId);
-    bool IsNodeActive (uint32_t nodeId);
+    bool ActivateNode(uint32_t nodeId);
+    bool DeactivateNode(uint32_t nodeId);
+    bool IsNodeActive(uint32_t nodeId);
 
-    void SetKPIFilePrefix (const std::string& runID);
-    const std::string& GetKPIFilePrefix (void) const;
-    void SetKPILogging (bool on);
+    void SetKPIFilePrefix(const std::string& runID);
+    const std::string& GetKPIFilePrefix(void) const;
+    void SetKPILogging(bool on);
     inline bool KPILogOn() const {
-    	return m_logKPIs;
+        return m_logKPIs;
     }
-    void SetInitialX ( int initial_x);
-    void SetInitialY ( int initial_y);
-    void SetEndX ( int end_x);
-    void SetEndY ( int end_y);
+    void SetInitialX(int initial_x);
+    void SetInitialY(int initial_y);
+    void SetEndX(int end_x);
+    void SetEndY(int end_y);
 
-    int GetInitialX (void) ;
-    int GetInitialY (void) ;
-    int GetEndX (void) ;
-    int GetEndY (void) ;
+    int GetInitialX(void) ;
+    int GetInitialY(void) ;
+    int GetEndX(void) ;
+    int GetEndY(void) ;
 
 private:
 
-    std::string GetEdgeId (std::string laneId);
+    std::string GetEdgeId(std::string laneId);
 
     /**
      * @brief Node container with all the iTETRIS nodes

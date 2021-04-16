@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    subs-get-received-cam-info.cpp
 /// @author  Pasquale Cataldi
@@ -24,21 +41,19 @@
 #include "../sync-manager.h"
 #include "../../utils/ics/log/ics-log.h"
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // static member definitions
 // ===========================================================================
 int
-SubsGetReceivedCamInfo::Delete(ics_types::stationID_t stationID, std::vector<Subscription*>* subscriptions)
-{
+SubsGetReceivedCamInfo::Delete(ics_types::stationID_t stationID, std::vector<Subscription*>* subscriptions) {
     if (subscriptions == NULL) {
         return EXIT_FAILURE;
     }
 
     vector<Subscription*>::iterator it;
-    for (it=subscriptions->begin() ; it<subscriptions->end(); it++) {
+    for (it = subscriptions->begin() ; it < subscriptions->end(); it++) {
         Subscription* sub = *it;
         const type_info& typeinfo = typeid(sub);
         if (typeinfo == typeid(SubsGetReceivedCamInfo*)) {
@@ -56,8 +71,7 @@ SubsGetReceivedCamInfo::Delete(ics_types::stationID_t stationID, std::vector<Sub
 // ===========================================================================
 // member method definitions
 // ===========================================================================
-SubsGetReceivedCamInfo::SubsGetReceivedCamInfo(int appId, ics_types::stationID_t stationId) : Subscription(stationId)
-{
+SubsGetReceivedCamInfo::SubsGetReceivedCamInfo(int appId, ics_types::stationID_t stationId) : Subscription(stationId) {
     m_id = ++m_subscriptionCounter;
 
     m_name = "RETURN INFORMATION ABOUT RECEIVED CAM MESSAGES";
@@ -68,8 +82,7 @@ SubsGetReceivedCamInfo::SubsGetReceivedCamInfo(int appId, ics_types::stationID_t
 SubsGetReceivedCamInfo::~SubsGetReceivedCamInfo() { }
 
 std::vector<ics_types::TCamInformation>*
-SubsGetReceivedCamInfo::getInformationFromLastReceivedCAMs()
-{
+SubsGetReceivedCamInfo::getInformationFromLastReceivedCAMs() {
     std::vector<ics_types::TCamInformation>* info = NULL;
     info = SyncManager::m_facilitiesManager->getInfoFromLastCAMsReceivedByStation(m_nodeId);
 

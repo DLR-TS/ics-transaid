@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    V2X-message-manager.h
 /// @author  Julen Maneros
@@ -49,8 +66,7 @@
 
 using namespace ics_types;
 
-namespace ics
-{
+namespace ics {
 
 // ===========================================================================
 // class declarations
@@ -175,8 +191,7 @@ struct ScheduledTopobroadcastMessageData {
  * @brief Keeps track of the messages and the information attached
  * scheduled in the Wireless Communications Simulator.
  */
-class V2xMessageManager
-{
+class V2xMessageManager {
 public:
     /// @brief Constructor.
     V2xMessageManager();
@@ -209,28 +224,28 @@ public:
      * @param[in] &table Table that contains the scheduled  CAM messages
      * @param[in] data New information to store in the table
      */
-    void InsertCamRow(std::vector<ScheduledCamMessageData> &table, ScheduledCamMessageData data);
+    void InsertCamRow(std::vector<ScheduledCamMessageData>& table, ScheduledCamMessageData data);
 
     /**
      * @brief Inserts a new row in the table that stores the scheduled UNICAST messages
      * @param[in] &table Table that contains the scheduled UNICAST messages
      * @param[in] data New information to store in the table
      */
-    void InsertUnicastRow(std::vector<ScheduledUnicastMessageData> &table, ScheduledUnicastMessageData data);
+    void InsertUnicastRow(std::vector<ScheduledUnicastMessageData>& table, ScheduledUnicastMessageData data);
 
     /**
      * @brief Inserts a new row in the table that stores the scheduled GEOBROADCAST messages
      * @param[in] &table Table that contains the scheduled  GEOBROADCAST messages
      * @param[in] data New information to store in the table
      */
-    void InsertGeobroadcastRow(std::vector<ScheduledGeobroadcastMessageData> &table, ScheduledGeobroadcastMessageData data);
+    void InsertGeobroadcastRow(std::vector<ScheduledGeobroadcastMessageData>& table, ScheduledGeobroadcastMessageData data);
 
     /**
      * @brief Inserts a new row in the table that stores the scheduled TOPOBROADCAST messages
      * @param[in] &table Table that contains the scheduled  TOPOBROADCAST messages
      * @param[in] data New information to store in the table
      */
-    void InsertTopobroadcastRow(std::vector<ScheduledTopobroadcastMessageData> &table, ScheduledTopobroadcastMessageData data);
+    void InsertTopobroadcastRow(std::vector<ScheduledTopobroadcastMessageData>& table, ScheduledTopobroadcastMessageData data);
 
     /**
       * @brief Compares two structures that contain information about two scheduled CAM messages
@@ -275,7 +290,7 @@ public:
     * @param[in] senderID Identifier of the node that sent the message
     * @param[in] receiverID Idenfitier of the node that received the message
     */
-    void UpdateIdentifiersTable(std::vector<IdentifiersStorageStruct> &table, actionID_t actionID, stationID_t senderID, stationID_t receiverID);
+    void UpdateIdentifiersTable(std::vector<IdentifiersStorageStruct>& table, actionID_t actionID, stationID_t senderID, stationID_t receiverID);
 
     /**
     * @brief Groups the receivers of a certain message
@@ -285,7 +300,7 @@ public:
     * @param[in] receiverID Idenfitier of the node that received the message
     * @return Group of receivers related to a certain message
     */
-    std::vector<stationID_t> GroupReceivers(std::vector<IdentifiersStorageStruct> &table, actionID_t actionID, stationID_t senderID);
+    std::vector<stationID_t> GroupReceivers(std::vector<IdentifiersStorageStruct>& table, actionID_t actionID, stationID_t senderID);
 
     /// @brief Collection of existing CAM areas.
     std::vector<V2xCamArea*>* m_v2xCamAreaCollection;

@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /****************************************************************************/
 /// @file    UtilExceptions.h
 /// @author  Daniel Krajzewicz
@@ -41,12 +58,11 @@
  * Thrown when an argument was not proper in the current context
  * A message will be supplied
  */
-class InvalidArgument : public std::runtime_error
-{
+class InvalidArgument : public std::runtime_error {
 public:
     /** constructor */
-    InvalidArgument(const std::string &message)
-            : std::runtime_error(message) {}
+    InvalidArgument(const std::string& message)
+        : std::runtime_error(message) {}
 
 };
 
@@ -57,16 +73,15 @@ public:
  * longer able to proceed due to any reason. The reason itself is mostly
  * reported before throwing the exception
  */
-class ProcessError : public std::runtime_error
-{
+class ProcessError : public std::runtime_error {
 public:
     /** constructor */
     ProcessError()
-            : std::runtime_error("Process Error") {}
+        : std::runtime_error("Process Error") {}
 
     /** constructor */
-    ProcessError(const std::string &msg)
-            : std::runtime_error(msg) {}
+    ProcessError(const std::string& msg)
+        : std::runtime_error(msg) {}
 
 };
 
@@ -75,12 +90,11 @@ public:
  * EmptyData
  * Thrown when data required by a method is missing
  */
-class EmptyData : public std::runtime_error
-{
+class EmptyData : public std::runtime_error {
 public:
     /** constructor */
     EmptyData()
-            : std::runtime_error("Empty Data") {}
+        : std::runtime_error("Empty Data") {}
 
 };
 
@@ -91,12 +105,11 @@ public:
  * numerical representation has any other characters then
  * digits and a dot
  */
-class NumberFormatException : public std::runtime_error
-{
+class NumberFormatException : public std::runtime_error {
 public:
     /** constructor */
     NumberFormatException()
-            : std::runtime_error("Number Format") {}
+        : std::runtime_error("Number Format") {}
 
 };
 
@@ -106,12 +119,11 @@ public:
  * Thrown when the string that shall be converted into a
  * boolean does not match
  */
-class BoolFormatException : public std::runtime_error
-{
+class BoolFormatException : public std::runtime_error {
 public:
     /** constructor */
     BoolFormatException()
-            : std::runtime_error("Bool Format") {}
+        : std::runtime_error("Bool Format") {}
 
 };
 
@@ -121,12 +133,11 @@ public:
  * Thrown when an array element out of the array's
  * bounderies is accessed
  */
-class OutOfBoundsException : public std::runtime_error
-{
+class OutOfBoundsException : public std::runtime_error {
 public:
     /** constructor */
     OutOfBoundsException()
-            : std::runtime_error("Out Of Bounds") {}
+        : std::runtime_error("Out Of Bounds") {}
 
 };
 
@@ -136,26 +147,24 @@ public:
  * Thrown when a named element is tried to be accesed
  * which is not known to the container
  */
-class UnknownElement : public std::runtime_error
-{
+class UnknownElement : public std::runtime_error {
 public:
     /** constructor */
     UnknownElement()
-            : std::runtime_error("Unknown Element") {}
+        : std::runtime_error("Unknown Element") {}
 
     /** constructor */
-    UnknownElement(const std::string &msg)
-            : std::runtime_error(msg) {}
+    UnknownElement(const std::string& msg)
+        : std::runtime_error(msg) {}
 
 };
 
 
-class IOError : public ProcessError
-{
+class IOError : public ProcessError {
 public:
     /** constructor */
-    IOError(const std::string &message)
-            : ProcessError(message) {}
+    IOError(const std::string& message)
+        : ProcessError(message) {}
 
 };
 

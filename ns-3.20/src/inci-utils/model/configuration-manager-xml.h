@@ -1,3 +1,20 @@
+/*
+ * This file is part of the iTETRIS Control System (https://github.com/DLR-TS/ics-transaid)
+ * Copyright (c) 2008-2021 iCS development team and contributors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 /*
  * Copyright (c) 2009-2010, Uwicore Laboratory (www.uwicore.umh.es),
@@ -31,41 +48,40 @@ namespace ns3 {
 class iTETRISNodeManager;
 
 /**
- * @class ConfigurationManagerXml 
+ * @class ConfigurationManagerXml
  * @brief This class is used to read the configuration file where the simulation scenario is described. Based on the technologies and communication modules specified in the configuration file, the ConfigurationManagerXml attaches the corresponding communication module installers to the iTETRISNodeManager.
  */
-class ConfigurationManagerXml 
-{
+class ConfigurationManagerXml {
 public:
-  /**
-   * The configuration file contains a line per communication module installer. 
-   * The following tags can be employed:
-   *  type -> ns-3 communication module installer
-   *  name -> name used in iTETRIS (ns-3 and iCS) to reference the installer
-   *  file -> path to the file which configures a given communication module 
-   *          (i.e.see wave-installer.{h.cc})
-   *  relatedInstaller -> indicate a related installer that can be used within the installer 
-   *                      being defined, e.g. this tag is used in the RSU WaveInstaller to 
-   *			  specify that the wireless channels employed for Wave vehicles must be
-   *                      also used for RSUs. 
-   *  default -> tag indicating that the communication module must be installed in
-   *         all the nodes.
-   */
-  ConfigurationManagerXml (std::string fileName);
-  virtual ~ConfigurationManagerXml ();
- 
-  void ReadFile (iTETRISNodeManager* nodeManager);
-  int GetSeed (void);
-  int GetRunNumber (void);
-  const std::string & GetRunID (void) const;
+    /**
+     * The configuration file contains a line per communication module installer.
+     * The following tags can be employed:
+     *  type -> ns-3 communication module installer
+     *  name -> name used in iTETRIS (ns-3 and iCS) to reference the installer
+     *  file -> path to the file which configures a given communication module
+     *          (i.e.see wave-installer.{h.cc})
+     *  relatedInstaller -> indicate a related installer that can be used within the installer
+     *                      being defined, e.g. this tag is used in the RSU WaveInstaller to
+     *			  specify that the wireless channels employed for Wave vehicles must be
+     *                      also used for RSUs.
+     *  default -> tag indicating that the communication module must be installed in
+     *         all the nodes.
+     */
+    ConfigurationManagerXml(std::string fileName);
+    virtual ~ConfigurationManagerXml();
+
+    void ReadFile(iTETRISNodeManager* nodeManager);
+    int GetSeed(void);
+    int GetRunNumber(void);
+    const std::string& GetRunID(void) const;
 
 
 private:
-  std::string m_filename;
-  void SetSeed (int seed);
-  void SetRunNumber (int runNumber);
-  int m_seed;
-  int m_runNumber;
+    std::string m_filename;
+    void SetSeed(int seed);
+    void SetRunNumber(int runNumber);
+    int m_seed;
+    int m_runNumber;
 };
 
 } // namespace ns3
