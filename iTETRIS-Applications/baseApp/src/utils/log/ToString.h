@@ -20,18 +20,6 @@
 /// @author  Christian Roessel
 /// @date    Wed, 23 Sep 2002
 /// @version $Id: ToString.h 8236 2010-02-10 11:16:41Z behrisch $
-///
-// -------------------
-/****************************************************************************/
-// SUMO, Simulation of Urban MObility; see http://sumo.sourceforge.net/
-// Copyright 2001-2010 DLR (http://www.dlr.de/) and contributors
-/****************************************************************************/
-//
-//   This program is free software; you can redistribute it and/or modify
-//   it under the terms of the GNU General Public License as published by
-//   the Free Software Foundation; either version 2 of the License, or
-//   (at your option) any later version.
-//
 /****************************************************************************/
 #ifndef ToString_h
 #define ToString_h
