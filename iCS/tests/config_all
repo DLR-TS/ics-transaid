@@ -1,13 +1,8 @@
 home_operating_system:posix
 #config_module:default
 
-batch_result_repository:$ICS_BATCH_RESULT
-historical_report_location:$ICS_REPORT
-smtp_server:$SMTP_SERVER
-#batch_use_collection:true
-#batch_mail_on_failure_only:true
-#batch_sender:"$FILEPREFIX" <sumo-tests@dlr.de>
-#batch_recipients:sumo-tests@dlr.de
+batch_result_repository:ics_result
+historical_report_location:ics_report
 
 [run_dependent_text]
 output:Version
