@@ -31,7 +31,7 @@ jobs:
 
     - name: Running Tests
       run: |
-      . setenv.sh
-      cd iCS/tests
-      texttest -b linux
-      texttest -b linux -coll >> $TESTLOG 2>&1
+        . setenv.sh
+        cd iCS/tests
+        texttest -b linux
+        texttest -b linux -coll >> $TESTLOG 2>&1
