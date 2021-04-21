@@ -36,3 +36,12 @@ jobs:
         cd iCS/tests
         texttest -b linux || true
         texttest -b linux -coll
+
+    - name: Deploying Test results to GitHub Pages
+      uses: Cecilapp/GitHub-Pages-deploy@v3
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        email: github-actions[bot]@users.noreply.github.com
+        branch: gh-pages
+        build_dir: iCS/tests/ics_report
