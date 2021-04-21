@@ -1,0 +1,37 @@
+name: linux-master
+
+on:
+  push:            # run on push events
+    branches:
+      - '**'
+    tags:
+      - '*'
+  pull_request:    # run on pull requests
+  schedule:
+    - cron:  '0 0 * * FRI'
+
+jobs:
+  Wildau:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Cloning iCS
+      uses: actions/checkout@v2
+      submodules: 'recursive'
+
+    - name: Preparing Build System
+      run: |
+        sudo apt-get update
+        sudo apt-get install psmisc vim git cmake autoconf automake libtool libxerces-c-dev libfox-1.6-dev libgl1-mesa-dev libglu1-mesa-dev libgdal-dev libproj-dev libgeographic-dev python3-pip
+        sudo pip3 install texttest
+
+    - name: Building
+      run: |
+        ./build_all.sh
+
+    - name: Running Tests
+      run: |
+      . setenv.sh
+      cd iCS/tests
+      texttest -b linux
+      texttest -b linux -coll >> $TESTLOG 2>&1
