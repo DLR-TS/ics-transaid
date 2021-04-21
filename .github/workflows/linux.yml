@@ -1,4 +1,4 @@
-name: linux-master
+name: linux
 
 on:
   push:            # run on push events
@@ -11,13 +11,14 @@ on:
     - cron:  '0 0 * * FRI'
 
 jobs:
-  Wildau:
+  build:
     runs-on: ubuntu-latest
 
     steps:
     - name: Cloning iCS
       uses: actions/checkout@v2
-      submodules: 'recursive'
+      with:
+        submodules: 'recursive'
 
     - name: Preparing Build System
       run: |
